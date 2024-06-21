@@ -6,7 +6,7 @@ email: jasuchung@gmail.com
 description: "Always be passionate🌱"
 keyword: "Machine Learning, TimeSeries, Anomaly Detection, NLP, Vision, AI/ML, MLOps, AIOps"
 url: "https://euisuk-chung.github.io"              # your host, for absolute URL
-baseurl: "https://euisuk-chung.github.io"  # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""  # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
