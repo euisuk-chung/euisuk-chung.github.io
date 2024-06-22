@@ -1,17 +1,16 @@
 ---
 layout: page
 title: "About"
-description: "「他单纯只想把日子过得不浪费」"
+description: "「🔎 서쿠 그는 누구인가?」"
 header-img: "img/bg-me-2022.jpg"
 header-mask: 0.3
 multilingual: true
 ---
 
 {% include multilingual-sel.html %}
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
+<!-- Korean Version -->
+<div class="kr post-container">
+    {% capture about_kr %}{% include about/kr.md %}{% endcapture %}
     {{ about_zh | markdownify }}
 </div>
 
@@ -20,6 +19,12 @@ multilingual: true
     {% capture about_en %}{% include about/en.md %}{% endcapture %}
     {{ about_en | markdownify }}
 </div>
+
+<!-- Chinese Version -->
+<!-- <div class="zh post-container">
+    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
+    {{ about_zh | markdownify }}
+</div> -->
 
 
 {% if site.disqus_username %}

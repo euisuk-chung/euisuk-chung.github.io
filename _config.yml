@@ -90,8 +90,8 @@ page-mathjax: false
 friends:
   [
     { title: "My Velog", href: "https://velog.io/@euisuk-chung" },
-    { title: "My YouTube", href: "www.youtube.com/@loading_700" },
-    { title: "LGSW YouTube", href: "www.youtube.com/@lgsw" },
-    { title: "DSBA Youtube", href: "www.youtube.com/@dsba2979" },
-    { title: "DMQA Youtube", href: "www.youtube.com/@user-yu5qs4ct2b" }
+    { title: "My YouTube", href: "https://www.youtube.com/@loading_700" },
+    { title: "LGSW YouTube", href: "https://www.youtube.com/@lgsw" },
+    { title: "DSBA Youtube", href: "https://www.youtube.com/@dsba2979" },
+    { title: "DMQA Youtube", href: "https://www.youtube.com/@user-yu5qs4ct2b" }
   ]
