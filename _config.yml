@@ -57,7 +57,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: chung_es
+# disqus_username: your_disqus_shortname
 
 # Netease settings
 netease_comment: false
