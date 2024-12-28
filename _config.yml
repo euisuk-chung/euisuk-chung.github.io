@@ -95,3 +95,7 @@ friends:
     { title: "DSBA Youtube", href: "https://www.youtube.com/@dsba2979" },
     { title: "DMQA Youtube", href: "https://www.youtube.com/@user-yu5qs4ct2b" }
   ]
+
+# 새로 추가할 부분
+include:
+  - "ads.txt"
