@@ -37,6 +37,7 @@ layout: default
                         </a>
                     </li>
                     {% endif %}
+
                     {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
@@ -45,21 +46,22 @@ layout: default
                         </a>
                     </li>
                     {% endif %}
+                    
                 </ul>
                 <hr style="visibility: hidden;">
+                  <!-- REMOVED COMMENTS -->
+                  {% if site.disqus_username %}
+                  <!-- Disqus comment section start -->
+                  <!-- <div class="comment">
+                      <div id="disqus_thread" class="disqus-thread"></div>
+                  </div> -->
+                  <!-- Disqus comment section end -->
+                  {% endif %}
 
-                {% if site.disqus_username %}
-                <!-- Disqus comment section start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- Disqus comment section end -->
-                {% endif %}
-
-                {% if site.netease_comment %}
-                <!-- NetEase Cloud Comment section start -->
-                <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-                <!-- NetEase Cloud Comment section end -->
+                  {% if site.netease_comment %}
+                  <!-- NetEase Cloud Comment section start -->
+                  <!-- <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div> -->
+                  <!-- NetEase Cloud Comment section end -->
                 {% endif %}
             </div>  
 
