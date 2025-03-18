@@ -49,17 +49,17 @@ layout: default
                 <hr style="visibility: hidden;">
 
                 {% if site.disqus_username %}
-                <!-- disqus 评论框 start -->
+                <!-- Disqus comment section start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- disqus 评论框 end -->
+                <!-- Disqus comment section end -->
                 {% endif %}
 
                 {% if site.netease_comment %}
-                <!-- 网易云跟帖 评论框 start -->
+                <!-- NetEase Cloud Comment section start -->
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-                <!-- 网易云跟帖 评论框 end -->
+                <!-- NetEase Cloud Comment section end -->
                 {% endif %}
             </div>  
 
@@ -96,13 +96,13 @@ layout: default
     </div>
 </article>
 
-<!-- add support for mathjax by voleking-->
+<!-- Add support for MathJax by Voleking -->
 {% if page.mathjax %}
   {% include mathjax_support.html %}
 {% endif %}
 
 {% if site.netease_comment %}
-<!-- 网易云跟帖JS代码 start -->
+<!-- NetEase Cloud Comment JS script start -->
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 <script>
   var cloudTieConfig = {
@@ -114,12 +114,12 @@ layout: default
   var yunManualLoad = true;
   Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
-<!-- 网易云跟帖JS代码 end -->
+<!-- NetEase Cloud Comment JS script end -->
 {% endif %}
 
 
 {% if site.disqus_username %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!-- Disqus public JS script start (only needed once per page) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -132,12 +132,12 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+<!-- Disqus public JS script end -->
 {% endif %}
 
 
 {% if site.anchorjs %}
-<!-- async load function -->
+<!-- Async load function -->
 <script>
     function async(u, c) {
       var d = document, t = 'script',
@@ -148,7 +148,7 @@ layout: default
       s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- AnchorJS, Documentation: http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
@@ -160,7 +160,7 @@ layout: default
     })
 </script>
 <style>
-    /* place left on bigger screen */
+    /* Place on the left for larger screens */
     @media all and (min-width: 800px) {
         .anchorjs-link{
             position: absolute;

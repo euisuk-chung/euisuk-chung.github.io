@@ -19,7 +19,7 @@ multilingual: false
     {{ about_en | markdownify }}
 </div> -->
 
-<!-- Chinese Version -->
+<!-- Previous Chinese Version (Replaced with English Comment) -->
 <!-- <div class="zh post-container">
     {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
     {{ about_zh | markdownify }}
@@ -27,15 +27,15 @@ multilingual: false
 
 
 {% if site.disqus_username %}
-<!-- disqus 评论框 start -->
+<!-- disqus comment section start -->
 <div class="comment">
     <div id="disqus_thread" class="disqus-thread">
 
     </div>
 </div>
-<!-- disqus 评论框 end -->
+<!-- disqus comment section end -->
 
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!-- disqus public JS script start (only needed once per page) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -48,5 +48,5 @@ multilingual: false
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+<!-- disqus public JS script end -->
 {% endif %}
