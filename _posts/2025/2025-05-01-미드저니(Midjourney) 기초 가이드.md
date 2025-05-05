@@ -600,8 +600,6 @@ V6은 현재는 잘 쓰이지 않지만, 특정 스타일이나 실험적 작업
 /imagine prompt: anime girl in cherry blossom park, --niji 6
 ```
 
-🧙 사용자는 [niji journey 사이트](https://niji.midjourney.com)와 전용 Discord에서 더 많은 기능을 활용할 수 있습니다.
-
 ### 📊 버전 기능 비교 요약
 
 | 기능 | V6 | V6.1 (기본) | V7 (최신) | Niji 6 |
