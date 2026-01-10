@@ -11,3 +11,8 @@ node_modules
 .jekyll-cache
 */.DS_Store
 */*/.DS_Store
+.claude/
+.claude-logs/
+.claude-cache/
+.gemini/
+.codex/
