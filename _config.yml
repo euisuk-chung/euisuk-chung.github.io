@@ -41,7 +41,11 @@ anchorjs: true # if you want to customize anchor. check out line:181 of `post.ht
 # from PR#40, to support local preview for Jekyll 3.0
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -97,6 +101,18 @@ friends:
     { title: "DMQA Youtube", href: "https://www.youtube.com/@user-yu5qs4ct2b" }
   ]
 
-# 새로 추가할 부분
+# Include files
 include:
   - "ads.txt"
+  - "robots.txt"
+
+# SEO settings
+author: "Euisuk Chung"
+twitter:
+  username: euisuk_chung
+social:
+  name: Euisuk Chung
+  links:
+    - https://github.com/euisuk-chung
+    - https://www.linkedin.com/in/euisuk-chung
+    - https://www.youtube.com/@loading_700
