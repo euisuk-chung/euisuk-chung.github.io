@@ -105,6 +105,7 @@ friends:
 include:
   - "ads.txt"
   - "robots.txt"
+  - "google35d12b88d96acbcd.html"
 
 # SEO settings
 author: "Euisuk Chung"
