@@ -1,4 +1,4 @@
----
+﻿---
 title: "[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편"
 date: "2021-10-09"
 tags:
@@ -9,13 +9,11 @@ year: "2021"
 
 # [머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편
 
-원본 게시글: https://velog.io/@euisuk-chung/머신러닝시계열-AR-MA-ARMA-ARIMA의-모든-것-실습편
 
 
 
 본 포스팅은 실제 데이터를 활용한 시계열 분석의 전반적인 프로세스 과정을 담고 있습니다. 분석 팁이나 피드백은 언제나 환영입니다!! 🙇‍♂️
 
-분석의 순서는 아래와 같습니다. 해당 분석은 앞에서 다룬 시계열 개념을 기반으로 분석을 수행한 것이므로 개념을 찾아보고 싶다면 제 이전 [포스트](https://velog.io/@euisuk-chung/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%8B%9C%EA%B3%84%EC%97%B4-AR-MA-ARMA-ARIMA%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83-%EA%B0%9C%EB%85%90%ED%8E%B8)에서 확인하실 수 있습니다.
 
 0. 참고
 1. 데이터 선정 및 전처리

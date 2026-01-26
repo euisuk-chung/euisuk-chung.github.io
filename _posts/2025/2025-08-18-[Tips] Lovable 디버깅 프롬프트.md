@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Tips] Lovable 디버깅 프롬프트"
 date: "2025-08-18"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [Tips] Lovable 디버깅 프롬프트
 
-원본 게시글: https://velog.io/@euisuk-chung/Tips-Lovable-디버깅-프롬프트
 
 Lovable 디버깅 프롬프트: AI 기반 개발에서의 체계적 문제 해결 가이드
 ===========================================

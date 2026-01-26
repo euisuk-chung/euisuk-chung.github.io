@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Tips] Lovable 프롬프트 라이브러리"
 date: "2025-08-18"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [Tips] Lovable 프롬프트 라이브러리
 
-원본 게시글: https://velog.io/@euisuk-chung/Tips-Lovable-프롬프트-라이브러리
 
 Lovable 프롬프트 라이브러리: AI 기반 개발을 위한 완벽 가이드
 =======================================

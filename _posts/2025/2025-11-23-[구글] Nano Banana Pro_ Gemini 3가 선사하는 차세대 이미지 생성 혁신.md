@@ -1,4 +1,4 @@
----
+﻿---
 title: "[구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신"
 date: "2025-11-23"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # [구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신
 
-원본 게시글: https://velog.io/@euisuk-chung/구글-Nano-Banana-Pro-Gemini-3가-선사하는-차세대-이미지-생성-혁신
 
 > <https://youtu.be/UQsJIo46ZR8>
 

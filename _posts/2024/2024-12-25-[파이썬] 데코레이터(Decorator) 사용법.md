@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] 데코레이터(Decorator) 사용법"
 date: "2024-12-25"
 tags:
@@ -8,7 +8,6 @@ year: "2024"
 
 # [파이썬] 데코레이터(Decorator) 사용법
 
-원본 게시글: https://velog.io/@euisuk-chung/Python-Decorator-Intro
 
 
 

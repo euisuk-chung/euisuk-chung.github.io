@@ -1,4 +1,4 @@
----
+﻿---
 title: "OpenAI, 개발자용 API GPT 4.1 공개"
 date: "2025-04-15"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # OpenAI, 개발자용 API GPT 4.1 공개
 
-원본 게시글: https://velog.io/@euisuk-chung/OPENAI-GPT-4.1-개발자용-API-공개
 
 
 

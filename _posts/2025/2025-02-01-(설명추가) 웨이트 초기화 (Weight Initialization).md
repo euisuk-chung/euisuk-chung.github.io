@@ -1,4 +1,4 @@
----
+﻿---
 title: "(설명추가) 웨이트 초기화 (Weight Initialization)"
 date: "2025-02-01"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # (설명추가) 웨이트 초기화 (Weight Initialization)
 
-원본 게시글: https://velog.io/@euisuk-chung/설명추가-웨이트-초기화-Weight-Initialization
 
 
 

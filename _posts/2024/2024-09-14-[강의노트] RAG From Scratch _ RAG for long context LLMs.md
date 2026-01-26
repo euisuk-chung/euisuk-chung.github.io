@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] RAG From Scratch : RAG for long context LLMs"
 date: "2024-09-14"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : RAG for long context LLMs
 
-원본 게시글: https://velog.io/@euisuk-chung/RAG는-정말로-끝났을까
 
 
 

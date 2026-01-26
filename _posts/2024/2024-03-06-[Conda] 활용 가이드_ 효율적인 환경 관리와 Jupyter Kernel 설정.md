@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정"
 date: "2024-03-06"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정
 
-원본 게시글: https://velog.io/@euisuk-chung/Conda-활용-가이드-효율적인-환경-관리와-Jupyter-Kernel-설정
 
 
 

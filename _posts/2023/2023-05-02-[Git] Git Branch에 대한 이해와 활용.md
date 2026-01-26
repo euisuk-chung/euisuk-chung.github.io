@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Git] Git Branch에 대한 이해와 활용"
 date: "2023-05-02"
 tags:
@@ -10,7 +10,6 @@ year: "2023"
 
 # [Git] Git Branch에 대한 이해와 활용
 
-원본 게시글: https://velog.io/@euisuk-chung/Git-Branch에-대한-이해와-활용
 
 
 

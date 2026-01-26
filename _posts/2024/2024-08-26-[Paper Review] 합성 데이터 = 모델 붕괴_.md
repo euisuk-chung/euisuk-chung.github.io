@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] 합성 데이터 = 모델 붕괴?"
 date: "2024-08-26"
 tags:
@@ -8,7 +8,6 @@ year: "2024"
 
 # [Paper Review] 합성 데이터 = 모델 붕괴?
 
-원본 게시글: https://velog.io/@euisuk-chung/리뷰-인공-데이터로-모델을-학습하면-모델-붕괴가-일어난다고
 
 
 

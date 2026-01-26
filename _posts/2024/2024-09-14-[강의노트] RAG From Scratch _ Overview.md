@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] RAG From Scratch : Overview"
 date: "2024-09-14"
 tags:
@@ -9,11 +9,9 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : Overview
 
-원본 게시글: https://velog.io/@euisuk-chung/RAG-From-Scratch-Overview
 
 
 
-* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 1 - 4 내용을 다루고 있습니다.
 
 | **비디오** | **요약** | **강의 링크** | **슬라이드** |
 | --- | --- | --- | --- |
@@ -118,7 +116,6 @@ os.environ['LANGCHAIN_API_KEY'] = <your-api-key>
 
 # Load Documents
 loader = WebBaseLoader(
-    web_paths=("<https://velog.io/@euisuk-chung/꿀팁-Velog-글씨를-내-마음대로-색상-형광펜>",),
     bs_kwargs=dict(
         parse_only=bs4.SoupStrainer(
             class_=("post-content", "post-title", "post-header")

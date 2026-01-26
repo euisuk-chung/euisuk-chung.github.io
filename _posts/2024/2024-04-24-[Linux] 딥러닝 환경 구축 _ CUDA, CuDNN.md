@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Linux] 딥러닝 환경 구축 : CUDA, CuDNN"
 date: "2024-04-24"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [Linux] 딥러닝 환경 구축 : CUDA, CuDNN
 
-원본 게시글: https://velog.io/@euisuk-chung/환경구축-CUDA-CuDNN아-나-좀-그만-괴롭혀라-ㅠ
 
 
 

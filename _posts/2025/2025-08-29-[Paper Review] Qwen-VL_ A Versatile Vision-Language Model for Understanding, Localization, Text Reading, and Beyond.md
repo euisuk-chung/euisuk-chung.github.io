@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond"
 date: "2025-08-29"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Qwen-VL-A-Versatile-Vision-Language-Model-for-Understanding-Localization-Text-Reading-and-Beyond
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/019b662c-e53d-4068-9c38-0f6f33ddd422/image.png)
 

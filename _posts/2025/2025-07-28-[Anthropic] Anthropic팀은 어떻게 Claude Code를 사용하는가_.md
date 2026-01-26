@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Anthropic] Anthropic팀은 어떻게 Claude Code를 사용하는가?"
 date: "2025-07-28"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [Anthropic] Anthropic팀은 어떻게 Claude Code를 사용하는가?
 
-원본 게시글: https://velog.io/@euisuk-chung/Anthropic-Claude-Code-케이스-스터디
 
 해당 글은 Anthropic의 공식 블로그에 게시된 케이스 스터디 **[“How Anthropic teams use Claude Code”](https://www.anthropic.com/news/how-anthropic-teams-use-claude-code)**를 기반으로 내용을 정리한 것입니다.
 

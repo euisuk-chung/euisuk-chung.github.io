@@ -1,4 +1,4 @@
----
+﻿---
 title: "ChatGPT Tasks: 혁신적인 작업 관리 도구"
 date: "2025-01-18"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # ChatGPT Tasks: 혁신적인 작업 관리 도구
 
-원본 게시글: https://velog.io/@euisuk-chung/ChatGPT-Tasks-혁신적인-작업-관리-도구
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[컨퍼][CIO] '24년 CIO SUMMIT 후기"
 date: "2024-02-24"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [컨퍼][CIO] '24년 CIO SUMMIT 후기
 
-원본 게시글: https://velog.io/@euisuk-chung/컨퍼CIO-CIO-SUMMIT-2024
 
 
 

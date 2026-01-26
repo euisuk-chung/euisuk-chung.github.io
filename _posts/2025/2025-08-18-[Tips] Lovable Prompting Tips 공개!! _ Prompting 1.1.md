@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Tips] Lovable Prompting Tips 공개!! : Prompting 1.1"
 date: "2025-08-18"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [Tips] Lovable Prompting Tips 공개!! : Prompting 1.1
 
-원본 게시글: https://velog.io/@euisuk-chung/Tips-Lovable-Prompting-101
 
 Lovable 프롬프트 전략
 ===============

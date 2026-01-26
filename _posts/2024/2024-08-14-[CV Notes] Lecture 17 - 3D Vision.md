@@ -1,4 +1,4 @@
----
+﻿---
 title: "[CV Notes] Lecture 17 - 3D Vision"
 date: "2024-08-14"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [CV Notes] Lecture 17 - 3D Vision
 
-원본 게시글: https://velog.io/@euisuk-chung/Notes-Computer-Vision-Lecture-17
 
 
 

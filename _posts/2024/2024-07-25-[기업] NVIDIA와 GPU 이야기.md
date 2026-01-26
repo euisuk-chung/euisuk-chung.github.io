@@ -1,4 +1,4 @@
----
+﻿---
 title: "[기업] NVIDIA와 GPU 이야기"
 date: "2024-07-25"
 tags:
@@ -8,7 +8,6 @@ year: "2024"
 
 # [기업] NVIDIA와 GPU 이야기
 
-원본 게시글: https://velog.io/@euisuk-chung/기업-NVIDIA-혁신과-비전의-이야기
 
 
 

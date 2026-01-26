@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대"
 date: "2025-10-14"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대
 
-원본 게시글: https://velog.io/@euisuk-chung/Lovable-Cloud-AI-완전-가이드-풀스택-개발의-패러다임-전환
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/294a5194-e5ae-44b5-93c8-39df8b93e4b7/image.png)
 
@@ -99,7 +98,6 @@ Lovable Cloud의 혁신성을 이해하려면, 먼저 **웹 애플리케이션�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6c88d42b-03e9-44c4-bd81-5638b4835a45/image.png)
 
-> [https://velog.io/@osw7875/프론트엔드-개발자와-역할은?🤔](https://velog.io/@osw7875/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%99%80-%EC%97%AD%ED%95%A0%EC%9D%80?%F0%9F%A4%94)
 
 ### 프론트엔드 (Frontend)
 

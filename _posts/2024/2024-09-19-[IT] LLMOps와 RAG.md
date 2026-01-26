@@ -1,4 +1,4 @@
----
+﻿---
 title: "[IT] LLMOps와 RAG"
 date: "2024-09-19"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [IT] LLMOps와 RAG
 
-원본 게시글: https://velog.io/@euisuk-chung/IT-LLMOps와-RAG
 
 
 
@@ -19,7 +18,6 @@ year: "2024"
 
 출처 : Databricks ([링크](https://www.databricks.com/kr/glossary/llmops))
 
-이전에 [AIops vs MLops](https://velog.io/@euisuk-chung/MLOps-vs-AIOps) 라는 내용을 주제로 글을 작성한 적이 있었는데요. 거기에 LLMOps를 추가하자면, 다음과 같은 특징을 가지고 있습니다:
 
 **LLMOps (Large Language Model Operations)**는 대규모 언어 모델(LLM)의 개발, 배포, 관리에 특화된 운영 방식입니다.
 

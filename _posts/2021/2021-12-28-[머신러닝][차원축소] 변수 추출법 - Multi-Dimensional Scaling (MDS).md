@@ -1,4 +1,4 @@
----
+﻿---
 title: "[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)"
 date: "2021-12-28"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)
 
-원본 게시글: https://velog.io/@euisuk-chung/머신러닝차원축소-변수-추출법-Multi-Dimensional-Scaling-MDS
 
 
 
@@ -23,7 +22,6 @@ Supervised Variable Extraction
 
 **차원축소**는, 모델링을 하기 위해 내가 가진 데이터의 정보를 최대한 보존하면서, 훨씬 더 compact하게 데이터셋을 구성하는 것을 목적으로 하며, 크게 변수선택(Variable Selection, 변수들의 부분 집합 선택)과 변수추출(Variable Extraction, 변수들을 요약하는 새로운 변수 생성)이 있다.
 
-이전 [포스트](https://velog.io/@euisuk-chung/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C-%EB%B3%80%EC%88%98-%EC%84%A0%ED%83%9D%EB%B2%95-16)에서는 아래 표에서 Supervised Variable Selection을 살펴보았다. 오늘은 Supervised Variable Extraction에 대해 이야기를 풀어보도록 하겠다.
 
 ![Supervised Variable Selection](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F423cc1da-966e-4a89-8c91-f317b6415aa8%2Fimage.png)
 
@@ -35,7 +33,6 @@ Multi-Dimensional Scaling(MDS), 다차원척도법이란, D-차원 공간 상의
 
 > Distance matrix를 통해서 저-차원 상의 각각의 객체들이 갖는 좌표 시스템을 찾는 것이 목적
 
-지난번에 다루었던 PCA([링크](https://velog.io/@euisuk-chung/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C-%EB%B3%80%EC%88%98-%EC%B6%94%EC%B6%9C%EB%B2%95-Principal-Component-Analysis-PCA))와 MDS를 비교하면 다음과 같이 표로 정리할 수 있다.
 
 ![PCA-MDS](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Ff6e8baa9-5016-48dd-aca7-272191b40b69%2Fimage.png)
 

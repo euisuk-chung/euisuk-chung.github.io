@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 2] Reinforcement Fine-Tuning (RFT) 소개"
 date: "2024-12-07"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 2] Reinforcement Fine-Tuning (RFT) 소개
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-2-OpenAI-Reinforcement-Fine-Tuning
 
 
 

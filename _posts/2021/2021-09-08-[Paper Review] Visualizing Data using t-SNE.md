@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Visualizing Data using t-SNE"
 date: "2021-09-08"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [Paper Review] Visualizing Data using t-SNE
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Visualizing-Data-using-t-SNE
 
 
 

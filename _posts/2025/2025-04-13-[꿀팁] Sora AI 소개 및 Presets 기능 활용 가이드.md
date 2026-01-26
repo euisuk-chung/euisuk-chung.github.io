@@ -1,4 +1,4 @@
----
+﻿---
 title: "[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드"
 date: "2025-04-13"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드
 
-원본 게시글: https://velog.io/@euisuk-chung/꿀팁-Sora-AI-소개-및-Presets-기능-활용-가이드
 
 
 

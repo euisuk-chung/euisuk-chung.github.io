@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)"
 date: "2024-06-09"
 tags:
@@ -11,7 +11,6 @@ year: "2024"
 
 # [파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)
 
-원본 게시글: https://velog.io/@euisuk-chung/꿀팁-vs-code-keymapping-오류해결하기-shiftenter-ctrlenter-등
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리"
 date: "2025-12-26"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리
 
-원본 게시글: https://velog.io/@euisuk-chung/토크-LLM-완벽-입문-가이드-Andrej-Karpathy-강의-정리
 
 > **원본 강의**: **Intro to Large Language Models** - Andrej Karpathy (<https://youtu.be/zjkBMFhNj_g>)  
 > **Slides as PDF**: <https://drive.google.com/file/d/1pxx_ZI7O-Nwl7ZLNk5hI3WzAsTLwvNU7/view> (42MB)

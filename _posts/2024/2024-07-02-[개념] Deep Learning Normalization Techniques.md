@@ -1,4 +1,4 @@
----
+﻿---
 title: "[개념] Deep Learning Normalization Techniques"
 date: "2024-07-02"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [개념] Deep Learning Normalization Techniques
 
-원본 게시글: https://velog.io/@euisuk-chung/개념정리-Deep-Learning-Normalization
 
 
 

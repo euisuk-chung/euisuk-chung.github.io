@@ -1,4 +1,4 @@
----
+﻿---
 title: "[CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang"
 date: "2025-01-09"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang
 
-원본 게시글: https://velog.io/@euisuk-chung/CES-2025-Keynote-NVIDIA-Founder-and-CEO-Jensen-Huang
 
 
 

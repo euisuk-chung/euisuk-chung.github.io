@@ -1,4 +1,4 @@
----
+﻿---
 title: "GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임"
 date: "2025-09-29"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임
 
-원본 게시글: https://velog.io/@euisuk-chung/GPT-5-Codex-완벽-가이드-AI-코딩-에이전트의-새로운-패러다임
 
 목차
 --

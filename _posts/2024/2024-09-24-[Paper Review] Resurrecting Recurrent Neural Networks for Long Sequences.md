@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences"
 date: "2024-09-24"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Resurrecting-Recurrent-Neural-Networks-for-Long-Sequences
 
 
 
@@ -64,7 +63,6 @@ Transformer는 **주의(attention)** 메커니즘을 사용하여 시퀀스의 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2da671ca-adfe-4ef1-86d3-173de0c41f55/image.png)
 
-S4 모델은 **Long Range Arena(LRA)**라는 긴 시퀀스를 다루는 벤치마크에서 뛰어난 성능을 보여주며, 특히 긴 시퀀스를 효율적으로 처리할 수 있는 능력을 가지고 있습니다. SSM은 시퀀스 간의 상호작용을 순차적으로 처리하면서도 병렬 처리가 가능하고, 추론 속도도 빠릅니다. *(다음 [paper-review](https://velog.io/@euisuk-chung/Structured-State-Space-Models-for-Deep-Sequence-Modeling)에서 정리해볼게요!)*
 
 이는 RNN과 유사한 방식으로 작동하면서도, 학습 속도와 성능 면에서 Transformer보다 효율적입니다.
 

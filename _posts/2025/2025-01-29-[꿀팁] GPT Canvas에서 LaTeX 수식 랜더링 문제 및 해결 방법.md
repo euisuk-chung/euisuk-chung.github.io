@@ -1,4 +1,4 @@
----
+﻿---
 title: "[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법"
 date: "2025-01-29"
 tags:
@@ -9,14 +9,12 @@ year: "2025"
 
 # [꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법
 
-원본 게시글: https://velog.io/@euisuk-chung/꿀팁-GPT-Canvas에서-LaTeX-수식-랜더링-문제-및-해결-방법
 
 
 
 (복습) GPT Canvas란?
 -----------------
 
-> **참고 링크**: <https://velog.io/@euisuk-chung/Day-4-Improvements-in-Canvas>
 
 **캔버스(Canvas)**는 **2024년 12days of OpenAI**에 ChatGPT에 통합된 혁신적인 협업 도구로, 글쓰기, 코딩, 창작 작업을 더욱 직관적이고 효율적으로 수행할 수 있도록 돕는 플랫폼입니다.
 

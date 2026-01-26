@@ -1,4 +1,4 @@
----
+﻿---
 title: "[정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra"
 date: "2024-12-25"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra
 
-원본 게시글: https://velog.io/@euisuk-chung/정리-24년-AI-Summit-라마-개발-리더가-설명하는-LLM-Small-Models-최신-기법-Soumya-Batra
 
 
 

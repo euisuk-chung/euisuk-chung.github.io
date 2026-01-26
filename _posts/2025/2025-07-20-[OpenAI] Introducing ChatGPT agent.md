@@ -1,4 +1,4 @@
----
+﻿---
 title: "[OpenAI] Introducing ChatGPT agent"
 date: "2025-07-20"
 tags:
@@ -10,7 +10,6 @@ year: "2025"
 
 # [OpenAI] Introducing ChatGPT agent
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-Introducing-ChatGPT-agent
 
 Introducing ChatGPT agent 리뷰
 ============================

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개"
 date: "2025-09-30"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개
 
-원본 게시글: https://velog.io/@euisuk-chung/Antrophic-Claude-Sonnet-4.5-차세대-AI-모델-공개
 
 TL;DR
 -----

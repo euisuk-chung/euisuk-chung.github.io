@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 6] Santa Mode & Video in Advanced Voice"
 date: "2024-12-13"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 6] Santa Mode & Video in Advanced Voice
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-6-Santa-Mode-Video-in-Advanced-Voice
 
 
 

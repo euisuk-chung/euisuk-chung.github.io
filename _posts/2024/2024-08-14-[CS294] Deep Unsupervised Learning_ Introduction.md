@@ -1,4 +1,4 @@
----
+﻿---
 title: "[CS294] Deep Unsupervised Learning: Introduction"
 date: "2024-08-14"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [CS294] Deep Unsupervised Learning: Introduction
 
-원본 게시글: https://velog.io/@euisuk-chung/비지도-Deep-Unsupervised-Learning-Intro
 
 
 

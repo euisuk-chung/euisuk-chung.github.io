@@ -1,4 +1,4 @@
----
+﻿---
 title: "[OpenAI] ChatGPT GPT-5.1 출시: 더 똑똑하고 따뜻한 대화형 AI의 진화"
 date: "2025-11-13"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [OpenAI] ChatGPT GPT-5.1 출시: 더 똑똑하고 따뜻한 대화형 AI의 진화
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-ChatGPT-GPT-5.1-출시-더-똑똑하고-따뜻한-대화형-AI의-진화
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9319714b-6592-4e07-9412-1ffaf06a6107/image.png)
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기"
 date: "2024-02-27"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기
 
-원본 게시글: https://velog.io/@euisuk-chung/컨퍼CIO-스스로-탐구하는-AGI와-GPU-인프라-이야기
 
 
 

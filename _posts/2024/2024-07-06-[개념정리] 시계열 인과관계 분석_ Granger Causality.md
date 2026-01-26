@@ -1,4 +1,4 @@
----
+﻿---
 title: "[개념정리] 시계열 인과관계 분석: Granger Causality"
 date: "2024-07-06"
 tags:
@@ -9,11 +9,9 @@ year: "2024"
 
 # [개념정리] 시계열 인과관계 분석: Granger Causality
 
-원본 게시글: https://velog.io/@euisuk-chung/개념정리-시계열-분석-인과관계-분석
 
 
 
-안녕하세요😊 지난 번 포스트에서 "인과관계와 상관관계의 개념"([링크](https://velog.io/@euisuk-chung/%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC-%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84-vs-%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84))에 대해서 살펴보았는데요.
 
 오늘은 시계열 분석의 핵심 개념 중 하나인 '그랜저 인과관계(Granger causality)'에 대해 알아보고, 이를 실제 데이터에 적용해보는 시간을 가져보겠습니다.
 

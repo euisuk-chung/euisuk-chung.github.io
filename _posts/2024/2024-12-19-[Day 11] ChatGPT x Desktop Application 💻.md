@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 11] ChatGPT x Desktop Application 💻"
 date: "2024-12-19"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [Day 11] ChatGPT x Desktop Application 💻
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-11-ChatGPT-x-Desktop-Application
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 8] Introducing ChatGPT Search"
 date: "2024-12-16"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [Day 8] Introducing ChatGPT Search
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-8-Introducing-ChatGPT-Search
 
 
 

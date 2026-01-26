@@ -1,4 +1,4 @@
----
+﻿---
 title: "[개념] CPU, GPU, 그리고 GPU 원리"
 date: "2021-09-11"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [개념] CPU, GPU, 그리고 GPU 원리
 
-원본 게시글: https://velog.io/@euisuk-chung/개념-CPU와-GPU
 
 
 

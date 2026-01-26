@@ -1,4 +1,4 @@
----
+﻿---
 title: "[인터뷰] NVIDIA CEO 젠슨황이 말하는 AI의 미래"
 date: "2025-03-15"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [인터뷰] NVIDIA CEO 젠슨황이 말하는 AI의 미래
 
-원본 게시글: https://velog.io/@euisuk-chung/인터뷰-젠슨황이-말하는-AI의-미래
 
 
 

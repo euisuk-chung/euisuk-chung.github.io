@@ -1,4 +1,4 @@
----
+﻿---
 title: "Anthropic 社의 Prompt Engineering 완벽 가이드"
 date: "2025-07-25"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # Anthropic 社의 Prompt Engineering 완벽 가이드
 
-원본 게시글: https://velog.io/@euisuk-chung/Anthropic-Prompt-Engineering-완벽-가이드
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/df1c424d-216b-445b-b5b3-f6481f5697f0/image.png)
 

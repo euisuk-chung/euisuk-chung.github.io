@@ -1,4 +1,4 @@
----
+﻿---
 title: "[SPL] Splunk & SPL 개요"
 date: "2023-05-08"
 tags:
@@ -9,7 +9,6 @@ year: "2023"
 
 # [SPL] Splunk & SPL 개요
 
-원본 게시글: https://velog.io/@euisuk-chung/Splunk-SPL-language
 
 
 

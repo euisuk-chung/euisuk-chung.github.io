@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)"
 date: "2021-08-15"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation
 
 
 
@@ -95,7 +94,6 @@ Inductive Bias란, 데이터와 무관하게 일반화 동작에 영향을 미�
 
 ![새로운 방법론](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F72b1b2ce-2ee9-4d5c-ac8f-332089c3e35a%2Fimage.png)
 
-Inductive Bias에 대해 더 궁금하신 분들은 제 이전 [포스트](https://velog.io/@euisuk-chung/Inductive-Bias%EB%9E%80)를 참고하시면 될 것 같습니다.
 
 논문 개요
 -----

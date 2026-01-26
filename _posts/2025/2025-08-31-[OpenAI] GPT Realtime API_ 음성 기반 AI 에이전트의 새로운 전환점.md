@@ -1,4 +1,4 @@
----
+﻿---
 title: "[OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점"
 date: "2025-08-31"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-GPT-Realtime-API
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f8335bf1-fe46-41f6-be88-b1336ec10916/image.png)
 

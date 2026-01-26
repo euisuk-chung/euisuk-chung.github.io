@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 5] ChatGPT x Apple Intelligence"
 date: "2024-12-12"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 5] ChatGPT x Apple Intelligence
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-5-ChatGPT-x-Apple-Intelligence
 
 
 

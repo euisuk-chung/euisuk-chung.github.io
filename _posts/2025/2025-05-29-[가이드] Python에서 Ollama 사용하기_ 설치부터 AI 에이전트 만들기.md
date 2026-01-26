@@ -1,4 +1,4 @@
----
+﻿---
 title: "[가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기"
 date: "2025-05-29"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기
 
-원본 게시글: https://velog.io/@euisuk-chung/가이드-Python에서-Ollama-사용하기-설치부터-AI-에이전트-만들기
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1a9d8ab3-c111-45f4-83c1-94dbcd9fd443/image.png)
 

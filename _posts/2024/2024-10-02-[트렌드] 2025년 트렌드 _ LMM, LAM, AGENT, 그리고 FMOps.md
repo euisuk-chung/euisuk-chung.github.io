@@ -1,4 +1,4 @@
----
+﻿---
 title: "[트렌드] 2025년 트렌드 : LMM, LAM, AGENT, 그리고 FMOps"
 date: "2024-10-02"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [트렌드] 2025년 트렌드 : LMM, LAM, AGENT, 그리고 FMOps
 
-원본 게시글: https://velog.io/@euisuk-chung/2025년-AI-트렌드-LMM-LAM-온디바이스-AI-AI-에이전트-임베디드-AI-그리고-FMOps
 
 
 

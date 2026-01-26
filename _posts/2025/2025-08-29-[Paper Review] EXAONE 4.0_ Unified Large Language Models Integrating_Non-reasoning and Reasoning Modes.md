@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] EXAONE 4.0: Unified Large Language Models Integrating
 Non-reasoning and Reasoning Modes"
 date: "2025-08-29"
@@ -8,7 +8,6 @@ year: "2025"
 # [Paper Review] EXAONE 4.0: Unified Large Language Models Integrating
 Non-reasoning and Reasoning Modes
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-EXAONE-4.0-Unified-Large-Language-Models-IntegratingNon-reasoning-and-Reasoning-Modes
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e106b46f-38f9-428c-82e7-d8872d22e773/image.png)
 

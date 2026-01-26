@@ -1,4 +1,4 @@
----
+﻿---
 title: "[꿀팁] Confluence 단축키📖 (북마크 추천!!)"
 date: "2024-05-31"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [꿀팁] Confluence 단축키📖 (북마크 추천!!)
 
-원본 게시글: https://velog.io/@euisuk-chung/꿀팁-Confluence-단축키-북마크-추천
 
 
 

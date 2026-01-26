@@ -1,4 +1,4 @@
----
+﻿---
 title: "[컨퍼][CIO] GenAI, First!"
 date: "2024-02-25"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [컨퍼][CIO] GenAI, First!
 
-원본 게시글: https://velog.io/@euisuk-chung/GenAI-First
 
 
 

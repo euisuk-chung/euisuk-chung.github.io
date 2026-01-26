@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)"
 date: "2021-11-26"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)
 
-원본 게시글: https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-기초편-DataLoader-사용법
 
 
 

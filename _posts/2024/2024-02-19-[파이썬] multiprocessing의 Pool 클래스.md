@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] multiprocessing의 Pool 클래스"
 date: "2024-02-19"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [파이썬] multiprocessing의 Pool 클래스
 
-원본 게시글: https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Pool
 
 
 

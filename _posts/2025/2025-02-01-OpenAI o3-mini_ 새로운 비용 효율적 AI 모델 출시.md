@@ -1,4 +1,4 @@
----
+﻿---
 title: "OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시"
 date: "2025-02-01"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시
 
-원본 게시글: https://velog.io/@euisuk-chung/openAI-o3-mini-release
 
 
 

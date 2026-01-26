@@ -1,4 +1,4 @@
----
+﻿---
 title: "[정리] SK AI SUMMIT 키노트 정리 - Day1 오후"
 date: "2024-11-09"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [정리] SK AI SUMMIT 키노트 정리 - Day1 오후
 
-원본 게시글: https://velog.io/@euisuk-chung/SKAISUMMIT2024DAY1-오후
 
 
 

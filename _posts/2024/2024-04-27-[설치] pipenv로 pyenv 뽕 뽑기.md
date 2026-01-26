@@ -1,4 +1,4 @@
----
+﻿---
 title: "[설치] pipenv로 pyenv 뽕 뽑기"
 date: "2024-04-27"
 tags:
@@ -9,11 +9,9 @@ year: "2024"
 
 # [설치] pipenv로 pyenv 뽕 뽑기
 
-원본 게시글: https://velog.io/@euisuk-chung/pipenv-너도-같이-오고-pyenv-pipenv
 
 
 
-지난 번 포스팅에서는 `pyenv`에 대해서 살펴보고 이를 리눅스 환경(+Window환경)에 설치하는 방법에 대해서 살펴봤는데요([링크](https://velog.io/@euisuk-chung/Goodbye-Conda-Hello-PyENV)) 이번 포스팅에서는 pyenv의 효과를 극대화할 수 있는 pipenv에 대해서 살펴보고, 이를 어떻게 사용할지 알아보도록 하겠습니다 🤗
 
 ### 1. pipenv란?
 

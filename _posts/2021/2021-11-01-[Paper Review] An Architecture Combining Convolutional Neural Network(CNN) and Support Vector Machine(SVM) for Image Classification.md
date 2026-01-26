@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification"
 date: "2021-11-01"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-An-Architecture-Combining-Convolutional-Neural-NetworkCNN-and-Support-Vector-Machine-SVM-for-Image-Classification
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명"
 date: "2025-01-27"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # (설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명
 
-원본 게시글: https://velog.io/@euisuk-chung/설명추가-Perplexity와-BLEU-스코어에-대한-상세-정리
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet"
 date: "2024-09-06"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [Pandas] 실무에서 쓰려고 정리해둔 Code Snippet
 
-원본 게시글: https://velog.io/@euisuk-chung/Pandas-실무에서-쓰려고-정리해둔-Code-Snippet
 
 
 

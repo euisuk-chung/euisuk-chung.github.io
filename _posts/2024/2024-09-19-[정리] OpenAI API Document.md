@@ -1,4 +1,4 @@
----
+﻿---
 title: "[정리] OpenAI API Document"
 date: "2024-09-19"
 tags:
@@ -8,7 +8,6 @@ year: "2024"
 
 # [정리] OpenAI API Document
 
-원본 게시글: https://velog.io/@euisuk-chung/정리-OpenAI-API-Document
 
 
 

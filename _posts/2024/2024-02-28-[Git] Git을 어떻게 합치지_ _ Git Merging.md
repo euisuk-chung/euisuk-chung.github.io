@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Git] Git을 어떻게 합치지? : Git Merging"
 date: "2024-02-28"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Git] Git을 어떻게 합치지? : Git Merging
 
-원본 게시글: https://velog.io/@euisuk-chung/깃-머징과-패스트포워딩-이해와-활용
 
 
 

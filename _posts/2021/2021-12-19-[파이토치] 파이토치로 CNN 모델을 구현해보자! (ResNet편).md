@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)"
 date: "2021-12-19"
 tags:
@@ -9,11 +9,9 @@ year: "2021"
 
 # [파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)
 
-원본 게시글: https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-ResNet편
 
 
 
-안녕하세요! 지난번 포스트인 [VGGNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-VGGNet%ED%8E%B8)과 [GoogleNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-GoogleNet%ED%8E%B8) 이후로 오늘은 `ResNet` 관련 포스트입니다.
 
 2번에 걸친 포스팅에서 소개드렸다시피 컴퓨터 비전 대회 중에 `ILSVRC (Imagenet Large Scale Visual Recognition Challenges)`이라는 대회가 있는데, 본 대회는 거대 이미지를 1000개의 서브이미지로 분류하는 것을 목적으로 합니다. 아래 그림은 CNN구조의 대중화를 이끌었던 초창기 모델들로 AlexNet (2012) - VGGNet (2014) - GoogleNet (2014) - ResNet (2015) 순으로 계보를 이어나갔습니다.
 

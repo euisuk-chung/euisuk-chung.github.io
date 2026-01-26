@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] Text Splitting For Retrieval"
 date: "2024-09-16"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [강의노트] Text Splitting For Retrieval
 
-원본 게시글: https://velog.io/@euisuk-chung/The-5-Levels-Of-Text-Splitting-For-Retrieval-강의요약
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)"
 date: "2021-11-07"
 tags:
@@ -10,7 +10,6 @@ year: "2021"
 
 # [Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-An-Image-Is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-Vision-Transformer
 
 
 

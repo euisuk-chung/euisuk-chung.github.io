@@ -1,4 +1,4 @@
----
+﻿---
 title: "[SPL] stats와 eventstats 차이점 이해하기"
 date: "2023-05-08"
 tags:
@@ -9,7 +9,6 @@ year: "2023"
 
 # [SPL] stats와 eventstats 차이점 이해하기
 
-원본 게시글: https://velog.io/@euisuk-chung/SPL-stats와-eventstats-차이점-이해하기
 
 
 

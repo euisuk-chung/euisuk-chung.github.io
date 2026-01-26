@@ -1,4 +1,4 @@
----
+﻿---
 title: "Google NotebookLM: 나만의 AI 지식 비서"
 date: "2025-04-11"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # Google NotebookLM: 나만의 AI 지식 비서
 
-원본 게시글: https://velog.io/@euisuk-chung/Google-NotebookLM-나만의-AI-지식-비서
 
 
 

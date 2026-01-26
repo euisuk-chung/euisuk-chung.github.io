@@ -1,4 +1,4 @@
----
+﻿---
 title: "OpenAI, o3 & o4-mini 공개: AI 추론의 진화"
 date: "2025-04-17"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # OpenAI, o3 & o4-mini 공개: AI 추론의 진화
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-o3-o4-mini-공개-AI-추론의-진화
 
 
 

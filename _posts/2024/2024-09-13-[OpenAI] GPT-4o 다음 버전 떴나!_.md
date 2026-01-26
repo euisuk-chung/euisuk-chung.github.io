@@ -1,4 +1,4 @@
----
+﻿---
 title: "[OpenAI] GPT-4o 다음 버전 떴나!?"
 date: "2024-09-13"
 tags:
@@ -8,7 +8,6 @@ year: "2024"
 
 # [OpenAI] GPT-4o 다음 버전 떴나!?
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-GPT-4o-다음-버전-떴나
 
 
 

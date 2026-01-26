@@ -1,4 +1,4 @@
----
+﻿---
 title: "[머신러닝] 로지스틱 회귀 모델 (Logistic Regression)"
 date: "2025-03-07"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # [머신러닝] 로지스틱 회귀 모델 (Logistic Regression)
 
-원본 게시글: https://velog.io/@euisuk-chung/머신러닝-로지스틱-회귀-모델-Logistic-Regression
 
 
 

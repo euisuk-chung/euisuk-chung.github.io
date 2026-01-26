@@ -1,4 +1,4 @@
----
+﻿---
 title: "(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해"
 date: "2025-01-31"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # (설명추가) Q-Learning: 강화학습의 핵심 개념과 이해
 
-원본 게시글: https://velog.io/@euisuk-chung/설명추가-Q-Learning-강화학습의-핵심-개념과-이해
 
 
 

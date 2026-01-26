@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Conda] Miniforge를 이용한 분석 환경 설정하기 (OS: Ubuntu)"
 date: "2024-03-06"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Conda] Miniforge를 이용한 분석 환경 설정하기 (OS: Ubuntu)
 
-원본 게시글: https://velog.io/@euisuk-chung/Conda-Miniconda-그리고-Miniforge를-이용한-분석-환경-설정하기-OS-Ubuntu
 
 
 

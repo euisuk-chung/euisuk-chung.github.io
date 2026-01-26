@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 7] Introducing Projects"
 date: "2024-12-14"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 7] Introducing Projects
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-7-Introducing-Projects
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리"
 date: "2025-07-01"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # 🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리
 
-원본 게시글: https://velog.io/@euisuk-chung/내가-보려고-작성한-args-kwargs-그리고-varsargs-파이썬-함수-인자-정리
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/55d70d64-25c2-480f-9502-58d3ce0fc76e/image.png)
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Git] SSH로 GitHub Repository Clone하기 🔑"
 date: "2024-05-28"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Git] SSH로 GitHub Repository Clone하기 🔑
 
-원본 게시글: https://velog.io/@euisuk-chung/Git-SSH로-GitHub-Repository-Clone
 
 
 

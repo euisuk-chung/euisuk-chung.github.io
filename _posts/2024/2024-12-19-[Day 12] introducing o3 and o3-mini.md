@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 12] introducing o3 and o3-mini"
 date: "2024-12-19"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 12] introducing o3 and o3-mini
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-12-introducing-o3-o3mini
 
 
 

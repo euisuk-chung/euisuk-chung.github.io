@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] 쉽게 설명한 Process vs Thread"
 date: "2024-02-19"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [파이썬] 쉽게 설명한 Process vs Thread
 
-원본 게시글: https://velog.io/@euisuk-chung/파이썬-Process-vs-Thread
 
 
 ### 프로세스(Process)란?

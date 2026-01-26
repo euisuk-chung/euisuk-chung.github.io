@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 1] OpenAI o1 and o1 pro mode in ChatGPT"
 date: "2024-12-06"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 1] OpenAI o1 and o1 pro mode in ChatGPT
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-1-OpenAI-o1-and-o1-pro-mode
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
 date: "2024-09-29"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Mamba-Linear-Time-Sequence-Modeling-with-Selective-State-Spaces
 
 
 

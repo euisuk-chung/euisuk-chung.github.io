@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] RAG From Scratch : Query Indexing 기법"
 date: "2024-09-14"
 tags:
@@ -9,13 +9,11 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : Query Indexing 기법
 
-원본 게시글: https://velog.io/@euisuk-chung/RAG-From-Scratch-12-14
 
 
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0b04bf7c-efee-4f4b-b89d-8e0dc4d27c48/image.png)
 
-* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 12 - 14 내용을 다루고 있습니다.
 
 | **비디오** | **요약** | **강의 링크** | **슬라이드** |
 | --- | --- | --- | --- |

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Git] Credential Helper로 GitHub 인증하기 🔑"
 date: "2024-05-28"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [Git] Credential Helper로 GitHub 인증하기 🔑
 
-원본 게시글: https://velog.io/@euisuk-chung/Git-Credential-Helper로-GitHub-인증하기
 
 
 

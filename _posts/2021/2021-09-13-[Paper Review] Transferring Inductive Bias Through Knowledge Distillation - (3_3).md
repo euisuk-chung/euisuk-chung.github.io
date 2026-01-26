@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)"
 date: "2021-09-13"
 year: "2021"
@@ -6,7 +6,6 @@ year: "2021"
 
 # [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-33
 
 
 
@@ -14,9 +13,7 @@ year: "2021"
 
 이전 포스트가 궁금하신 분은 아래 링크들을 통해 확인하실 수 있습니다.  
 
-1. 논문에 필요한 개념: Knowledge Distillation & Inductive Bias [(링크)](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation)  
 
-2. 논문 시나리오 1 : RNNs vs Transformers [(링크)](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-23)
 
 논문의 목적(복습)
 ----------

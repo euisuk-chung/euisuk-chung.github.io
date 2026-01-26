@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)"
 date: "2021-08-27"
 year: "2021"
@@ -6,13 +6,11 @@ year: "2021"
 
 # [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-23
 
 
 
 안녕하세요 :) 오늘은 지난번 포스팅에 이어서 "Transferring Inductive Bias Through Knowledge Distillation" 논문에 대한 정리를 이어나가 보도록 하겠습니다. 이전 포스팅에서 본 논문에서 다루게 될 주요 개념들인 `Knowledge Distillation`과 `Inductive Bias`에 대한 설명을 해보았는데요. 이번 포스팅에서는 해당 기법들을 적용하여 저자가 수행한 실험들 중 첫번째 시나리오에 대해서 이갸기를 풀어가보도록 하겠습니다.
 
-이전 포스트가 궁금하신 분은 [여기](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation)를 통해 확인해 보실 수 있습니다.
 
 논문의 목적(복습)
 ----------

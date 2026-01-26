@@ -1,4 +1,4 @@
----
+﻿---
 title: "[GPU] nvidia-smi의 시대는 갔다?"
 date: "2024-09-13"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [GPU] nvidia-smi의 시대는 갔다?
 
-원본 게시글: https://velog.io/@euisuk-chung/nvidia-smi의-시대는-갔다
 
 
 

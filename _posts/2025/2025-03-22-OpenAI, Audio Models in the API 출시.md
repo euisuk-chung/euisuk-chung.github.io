@@ -1,4 +1,4 @@
----
+﻿---
 title: "OpenAI, Audio Models in the API 출시"
 date: "2025-03-22"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # OpenAI, Audio Models in the API 출시
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-Audio-Models-in-the-API-출시
 
 
 

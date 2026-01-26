@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] RAG From Scratch : Query Retrieval 기법"
 date: "2024-09-14"
 tags:
@@ -9,13 +9,11 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : Query Retrieval 기법
 
-원본 게시글: https://velog.io/@euisuk-chung/RAG-From-Scratch-15-18
 
 
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/21bc5399-1580-45bb-bae4-5349f9a8fde3/image.png)
 
-* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 15 - 18 내용을 다루고 있습니다.
 * 별도의 강좌 내용이 보이지 않아서 실습 코드를 바탕으로 `Reverse Enginneering`해서 자료를 정리한 내용입니다. 참고 부탁드립니다!
 
 ### 1. **Re-ranking** (재정렬)

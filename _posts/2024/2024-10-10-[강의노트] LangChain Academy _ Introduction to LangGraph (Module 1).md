@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 1)"
 date: "2024-10-10"
 year: "2024"
@@ -6,7 +6,6 @@ year: "2024"
 
 # [강의노트] LangChain Academy : Introduction to LangGraph (Module 1)
 
-원본 게시글: https://velog.io/@euisuk-chung/강의-LangChain-Academy-Introduction-to-LangGraph
 
 
 

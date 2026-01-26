@@ -1,4 +1,4 @@
----
+﻿---
 title: "[컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래"
 date: "2024-02-25"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래
 
-원본 게시글: https://velog.io/@euisuk-chung/컨퍼CIO-Workday-AIML-솔루션과-Generative-AI의-미래
 
 
 

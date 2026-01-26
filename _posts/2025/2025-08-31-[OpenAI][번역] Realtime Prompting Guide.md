@@ -1,4 +1,4 @@
----
+﻿---
 title: "[OpenAI][번역] Realtime Prompting Guide"
 date: "2025-08-31"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [OpenAI][번역] Realtime Prompting Guide
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-Realtime-Prompting-Guide
 
 OpenAI Realtime API 프롬프팅 가이드
 ============================

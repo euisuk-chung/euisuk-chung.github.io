@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Lovable] 코딩 없이 웹/앱 만들기 : Lovable 완전 가이드"
 date: "2025-06-08"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [Lovable] 코딩 없이 웹/앱 만들기 : Lovable 완전 가이드
 
-원본 게시글: https://velog.io/@euisuk-chung/꿀툴-코딩-없이-웹앱-만들기-Lovable-완전-가이드
 
 🎨 마치 그림 그리듯, 말로만 설명하면 웹사이트가 완성된다면 어떨까요?
 

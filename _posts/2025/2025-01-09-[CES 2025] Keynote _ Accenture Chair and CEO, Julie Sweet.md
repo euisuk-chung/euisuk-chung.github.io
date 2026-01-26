@@ -1,4 +1,4 @@
----
+﻿---
 title: "[CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet"
 date: "2025-01-09"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet
 
-원본 게시글: https://velog.io/@euisuk-chung/CES-2025-Keynote-Accenture-Chair-and-CEO-Julie-Sweet
 
 
 

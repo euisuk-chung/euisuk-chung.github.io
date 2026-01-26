@@ -1,4 +1,4 @@
----
+﻿---
 title: "[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)"
 date: "2024-07-04"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)
 
-원본 게시글: https://velog.io/@euisuk-chung/용어정리-빈도주의Frequentist-VS-베이지안Baysian
 
 
 

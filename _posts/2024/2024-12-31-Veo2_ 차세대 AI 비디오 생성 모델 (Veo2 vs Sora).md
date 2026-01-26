@@ -1,4 +1,4 @@
----
+﻿---
 title: "Veo2: 차세대 AI 비디오 생성 모델 (Veo2 vs Sora)"
 date: "2024-12-31"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # Veo2: 차세대 AI 비디오 생성 모델 (Veo2 vs Sora)
 
-원본 게시글: https://velog.io/@euisuk-chung/Veo2-차세대-AI-비디오-생성-모델-Veo2-vs-Sora
 
 
 

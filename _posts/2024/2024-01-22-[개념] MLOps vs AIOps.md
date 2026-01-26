@@ -1,4 +1,4 @@
----
+﻿---
 title: "[개념] MLOps vs AIOps"
 date: "2024-01-22"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [개념] MLOps vs AIOps
 
-원본 게시글: https://velog.io/@euisuk-chung/MLOps-vs-AIOps
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] EXAONE Deep: Reasoning Enhanced Language Models"
 date: "2025-08-30"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [Paper Review] EXAONE Deep: Reasoning Enhanced Language Models
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-EXAONE-Deep-Reasoning-Enhanced-Language-Models
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c1e891a2-0fa5-4248-a5ec-c5ed04376818/image.png)
 

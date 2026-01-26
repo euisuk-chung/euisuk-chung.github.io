@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기"
 date: "2024-06-09"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기
 
-원본 게시글: https://velog.io/@euisuk-chung/파이썬-우분투에서-한글-폰트-설치하고-matplotlib에-사용하기
 
 
 

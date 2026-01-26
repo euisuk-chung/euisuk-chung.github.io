@@ -1,4 +1,4 @@
----
+﻿---
 title: "[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud"
 date: "2025-09-15"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud
 
-원본 게시글: https://velog.io/@euisuk-chung/지금-주목할-LLM-기술-트렌드와-생성형-AI-적용-전략-Naver-Cloud
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a85e728a-4754-442d-a86e-5ff670d3bba0/image.png)
 

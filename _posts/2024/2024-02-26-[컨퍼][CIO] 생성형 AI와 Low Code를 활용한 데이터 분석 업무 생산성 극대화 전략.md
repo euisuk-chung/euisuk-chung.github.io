@@ -1,4 +1,4 @@
----
+﻿---
 title: "[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략"
 date: "2024-02-26"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략
 
-원본 게시글: https://velog.io/@euisuk-chung/컨퍼CIO-생성형-AI와-Low-Code를-활용한-데이터-분석-업무-생산성-극대화-전략
 
 
 

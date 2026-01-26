@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Structured State Space Models for Deep Sequence Modeling"
 date: "2024-09-25"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [Paper Review] Structured State Space Models for Deep Sequence Modeling
 
-원본 게시글: https://velog.io/@euisuk-chung/Structured-State-Space-Models-for-Deep-Sequence-Modeling
 
 
 

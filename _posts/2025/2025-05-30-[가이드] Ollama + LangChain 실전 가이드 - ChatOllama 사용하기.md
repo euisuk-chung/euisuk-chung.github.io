@@ -1,4 +1,4 @@
----
+﻿---
 title: "[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기"
 date: "2025-05-30"
 tags:
@@ -10,13 +10,11 @@ year: "2025"
 
 # [가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기
 
-원본 게시글: https://velog.io/@euisuk-chung/가이드-Ollama-LangChain-실전-가이드-ChatOllama-사용하기
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/646c14e5-e1a7-4742-8124-9a1c1e236f7c/image.png)
 
 이전 포스트에서는 Python 코드에서 Ollama 명령어를 활용하여 로컬에서 LLM을 호출하는 방법을 알아보았습니다.
 
-* [이전 포스트 <Python에서 Ollama 사용하기> 보러가기](https://velog.io/@euisuk-chung/%EA%B0%80%EC%9D%B4%EB%93%9C-Python%EC%97%90%EC%84%9C-Ollama-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%84%A4%EC%B9%98%EB%B6%80%ED%84%B0-AI-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
 이번에는 **LangChain의 `ChatOllama`를 중심으로**, LLM을 하나의 대화형 컴포넌트로 사용하는 법을 구체적으로 다뤄보겠습니다.
 

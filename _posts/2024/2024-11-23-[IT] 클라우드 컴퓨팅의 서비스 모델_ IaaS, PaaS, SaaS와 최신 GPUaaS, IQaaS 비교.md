@@ -1,4 +1,4 @@
----
+﻿---
 title: "[IT] 클라우드 컴퓨팅의 서비스 모델: IaaS, PaaS, SaaS와 최신 GPUaaS, IQaaS 비교"
 date: "2024-11-23"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [IT] 클라우드 컴퓨팅의 서비스 모델: IaaS, PaaS, SaaS와 최신 GPUaaS, IQaaS 비교
 
-원본 게시글: https://velog.io/@euisuk-chung/IT-클라우드-컴퓨팅의-서비스-모델-IaaS-PaaS-SaaS와-최신-GPUaaS-IQaaS-비교
 
 
 

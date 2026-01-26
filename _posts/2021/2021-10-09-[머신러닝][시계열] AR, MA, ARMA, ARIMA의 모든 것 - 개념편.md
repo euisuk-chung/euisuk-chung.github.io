@@ -1,4 +1,4 @@
----
+﻿---
 title: "[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 개념편"
 date: "2021-10-09"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 개념편
 
-원본 게시글: https://velog.io/@euisuk-chung/머신러닝시계열-AR-MA-ARMA-ARIMA의-모든-것-개념편
 
 
 

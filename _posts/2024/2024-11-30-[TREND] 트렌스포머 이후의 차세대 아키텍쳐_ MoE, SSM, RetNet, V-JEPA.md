@@ -1,4 +1,4 @@
----
+﻿---
 title: "[TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA"
 date: "2024-11-30"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA
 
-원본 게시글: https://velog.io/@euisuk-chung/트렌드-트렌스포머-이후의-차세대-아키텍쳐-MoE-SSM-RetNet-V-JEPA
 
 
 

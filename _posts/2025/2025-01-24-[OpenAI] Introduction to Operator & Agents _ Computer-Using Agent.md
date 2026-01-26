@@ -1,4 +1,4 @@
----
+﻿---
 title: "[OpenAI] Introduction to Operator & Agents : Computer-Using Agent"
 date: "2025-01-24"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [OpenAI] Introduction to Operator & Agents : Computer-Using Agent
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-Introduction-to-Operator-Agents-Computer-Using-Agent
 
 
 

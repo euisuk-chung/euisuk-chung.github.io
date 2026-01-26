@@ -1,4 +1,4 @@
----
+﻿---
 title: "파이썬 마스터하기 : apply(), map(), applymap() 함수"
 date: "2023-05-09"
 tags:
@@ -10,7 +10,6 @@ year: "2023"
 
 # 파이썬 마스터하기 : apply(), map(), applymap() 함수
 
-원본 게시글: https://velog.io/@euisuk-chung/파이썬-마스터하기-apply-map-applymap-함수
 
 
 

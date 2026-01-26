@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Tips] Lovable 프롬프트 및 통합 전략"
 date: "2025-08-18"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [Tips] Lovable 프롬프트 및 통합 전략
 
-원본 게시글: https://velog.io/@euisuk-chung/Tips-Lovable-프롬프트-및-통합-전략
 
 Lovable 프롬프트 및 통합: 강력한 내장 통합으로 앱 기능 향상하기
 ========================================

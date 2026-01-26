@@ -1,4 +1,4 @@
----
+﻿---
 title: "[꿀팁] 미드저니(Midjourney) 기초 가이드"
 date: "2025-05-01"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [꿀팁] 미드저니(Midjourney) 기초 가이드
 
-원본 게시글: https://velog.io/@euisuk-chung/Midjourney-기초-가이드
 
 
 

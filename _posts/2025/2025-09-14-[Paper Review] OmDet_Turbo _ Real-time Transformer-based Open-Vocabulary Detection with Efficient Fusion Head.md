@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head"
 date: "2025-09-14"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # [Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-OmDetTurbo-Real-time-Transformer-기반-Efficient-Fusion-Head를-활용한-Open-Vocabulary-Detection
 
 > <https://arxiv.org/pdf/2403.06892>
 

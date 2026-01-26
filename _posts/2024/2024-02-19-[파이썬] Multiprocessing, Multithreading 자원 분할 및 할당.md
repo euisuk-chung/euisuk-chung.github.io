@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] Multiprocessing, Multithreading 자원 분할 및 할당"
 date: "2024-02-19"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [파이썬] Multiprocessing, Multithreading 자원 분할 및 할당
 
-원본 게시글: https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Multithreading-자원-분할-및-할당
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석"
 date: "2024-12-25"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석
 
-원본 게시글: https://velog.io/@euisuk-chung/정리-24년-AI-Summit-쉽게-이해하는-RAG와-에이전트-AI-기술의-현재와-미래-Microsoft
 
 
 

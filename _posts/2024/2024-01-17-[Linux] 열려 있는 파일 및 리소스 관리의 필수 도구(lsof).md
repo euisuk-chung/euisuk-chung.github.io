@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Linux] 열려 있는 파일 및 리소스 관리의 필수 도구(lsof)"
 date: "2024-01-17"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Linux] 열려 있는 파일 및 리소스 관리의 필수 도구(lsof)
 
-원본 게시글: https://velog.io/@euisuk-chung/uqqb19in
 
 
 

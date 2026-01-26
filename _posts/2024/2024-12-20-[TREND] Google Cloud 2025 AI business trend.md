@@ -1,4 +1,4 @@
----
+﻿---
 title: "[TREND] Google Cloud 2025 AI business trend"
 date: "2024-12-20"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [TREND] Google Cloud 2025 AI business trend
 
-원본 게시글: https://velog.io/@euisuk-chung/TREND-Google-Cloud-2025-AI-business-trend
 
 
 

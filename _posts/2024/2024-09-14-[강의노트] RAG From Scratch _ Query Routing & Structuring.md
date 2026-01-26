@@ -1,4 +1,4 @@
----
+﻿---
 title: "[강의노트] RAG From Scratch : Query Routing & Structuring"
 date: "2024-09-14"
 tags:
@@ -9,13 +9,11 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : Query Routing & Structuring
 
-원본 게시글: https://velog.io/@euisuk-chung/RAG-From-Scratch-10-11
 
 
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/13495766-bce9-47a8-9053-6fded6eaa055/image.png)
 
-* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 10 - 11 내용을 다루고 있습니다.
 
 | **비디오** | **요약** | **강의 링크** | **슬라이드** |
 | --- | --- | --- | --- |

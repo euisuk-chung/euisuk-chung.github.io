@@ -1,4 +1,4 @@
----
+﻿---
 title: "[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항"
 date: "2024-02-19"
 tags:
@@ -9,11 +9,9 @@ year: "2024"
 
 # [파이썬] Multiprocessing, Multithreading 사용 시 고려 사항
 
-원본 게시글: https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Multithreading-사용-시-고려-사항-예시-코드-포함
 
 
 
-`멀티프로세싱`과 `멀티스레딩`을 선택할 때 고려해야 하는 작업의 특성에 대해 더 자세히 설명하겠습니다. `자원 분할 및 할당`에 대해서 궁금하신 분을 다음 [게시글](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%EC%8D%AC-Multiprocessing-Multithreading-%EC%9E%90%EC%9B%90-%EB%B6%84%ED%95%A0-%EB%B0%8F-%ED%95%A0%EB%8B%B9)에서 확인하실 수 있습니다.
 
 ### 멀티프로세싱(Multiprocessing)
 

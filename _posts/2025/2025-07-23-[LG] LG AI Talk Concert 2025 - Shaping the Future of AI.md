@@ -1,4 +1,4 @@
----
+﻿---
 title: "[LG] LG AI Talk Concert 2025 - Shaping the Future of AI"
 date: "2025-07-23"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [LG] LG AI Talk Concert 2025 - Shaping the Future of AI
 
-원본 게시글: https://velog.io/@euisuk-chung/LG-AI-Talk-Concert-2025-Shaping-the-Future-of-AI
 
 최근 LG AI 연구원이 진행한 '**AI Talk Concert 2025**' 영상을 흥미롭게 시청했습니다. 'AI의 미래를 만들다(Shaping the Future of AI)'라는 슬로건 아래, LG AI 연구원의 지난 여정과 눈부신 성과, 그리고 앞으로 나아갈 방향에 대한 심도 깊은 이야기가 펼쳐졌습니다.
 

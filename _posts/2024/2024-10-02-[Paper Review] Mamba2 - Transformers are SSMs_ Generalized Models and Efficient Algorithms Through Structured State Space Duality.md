@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
 date: "2024-10-02"
 tags:
@@ -10,7 +10,6 @@ year: "2024"
 
 # [Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-Transformers-are-SSMs-Generalized-Models-and-Efficient-Algorithms-Through-Structured-State-Space-Duality
 
 
 

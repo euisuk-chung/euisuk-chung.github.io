@@ -1,4 +1,4 @@
----
+﻿---
 title: "[사이트] 이모티콘🤗으로 글에 생명 불어넣기 : EmojiCombos"
 date: "2024-03-17"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [사이트] 이모티콘🤗으로 글에 생명 불어넣기 : EmojiCombos
 
-원본 게시글: https://velog.io/@euisuk-chung/사이트-이모티콘으로-글에-생명-불어넣기-EmojiCombos
 
 
 

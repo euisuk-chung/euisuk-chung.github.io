@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Tips] Lovable Vibe-Coding Best Practices"
 date: "2025-08-18"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [Tips] Lovable Vibe-Coding Best Practices
 
-원본 게시글: https://velog.io/@euisuk-chung/Tips-Lovable-Vibe-Coding-Best-Practices
 
 Lovable을 최대한 활용하는 방법
 ====================

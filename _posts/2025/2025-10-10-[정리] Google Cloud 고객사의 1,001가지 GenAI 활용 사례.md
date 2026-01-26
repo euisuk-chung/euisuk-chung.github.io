@@ -1,4 +1,4 @@
----
+﻿---
 title: "[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례"
 date: "2025-10-10"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # [정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례
 
-원본 게시글: https://velog.io/@euisuk-chung/Google-Cloud-고객사의-1001가지-GenAI-활용-사례
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/630cbe25-b142-4ecc-99aa-b6ada985d3f6/image.png)
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약"
 date: "2023-11-29"
 tags:
@@ -9,7 +9,6 @@ year: "2023"
 
 # [컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약
 
-원본 게시글: https://velog.io/@euisuk-chung/컨퍼OpenAI-2023-DevDay-New-Products-A-Deep-Dive-요약
 
 
 

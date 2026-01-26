@@ -1,4 +1,4 @@
----
+﻿---
 title: "OpenAI, Deep Research 기능 공개"
 date: "2025-02-04"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # OpenAI, Deep Research 기능 공개
 
-원본 게시글: https://velog.io/@euisuk-chung/OpenAI-Deep-Research-기능-공개
 
 
 

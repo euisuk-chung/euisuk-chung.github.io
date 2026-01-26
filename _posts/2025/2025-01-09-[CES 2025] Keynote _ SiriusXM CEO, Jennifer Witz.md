@@ -1,4 +1,4 @@
----
+﻿---
 title: "[CES 2025] Keynote : SiriusXM CEO, Jennifer Witz"
 date: "2025-01-09"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # [CES 2025] Keynote : SiriusXM CEO, Jennifer Witz
 
-원본 게시글: https://velog.io/@euisuk-chung/CES-2025-Keynote-SiriusXM-CEO-Jennifer-Witz
 
 
 ### **1. 행사 개요**

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[구글] Defying Gravity~ 구글 Antigravity 어서오고👋"
 date: "2025-11-25"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 
 # [구글] Defying Gravity~ 구글 Antigravity 어서오고👋
 
-원본 게시글: https://velog.io/@euisuk-chung/구글-Defying-Gravity-구글-Antigravity-어서오고
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6df06472-148f-4244-bad6-19360ccffeec/image.png)
 

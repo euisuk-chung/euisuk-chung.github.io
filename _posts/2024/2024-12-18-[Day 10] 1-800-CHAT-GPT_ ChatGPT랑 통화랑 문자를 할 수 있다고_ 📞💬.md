@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬"
 date: "2024-12-18"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬
 
-원본 게시글: https://velog.io/@euisuk-chung/Day-10-1-800-CHAT-GPT-ChatGPT-talk-with-ChatGPT
 
 
 

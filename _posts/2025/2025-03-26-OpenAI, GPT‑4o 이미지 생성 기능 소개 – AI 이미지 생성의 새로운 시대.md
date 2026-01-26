@@ -1,4 +1,4 @@
----
+﻿---
 title: "OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대"
 date: "2025-03-26"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 
 # OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대
 
-원본 게시글: https://velog.io/@euisuk-chung/GPT4o-이미지-생성-기능-소개-AI-이미지-생성의-새로운-시대
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "[Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision"
 date: "2025-08-30"
 year: "2025"
@@ -6,7 +6,6 @@ year: "2025"
 
 # [Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision
 
-원본 게시글: https://velog.io/@euisuk-chung/Paper-Review-EXAONE-Path-2.0-Pathology-Foundation-Model-with-End-to-End-Supervision
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/874933a3-887a-4e87-9945-f80c83bb4fa2/image.png)
 

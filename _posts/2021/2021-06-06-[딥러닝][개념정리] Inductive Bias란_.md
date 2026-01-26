@@ -1,4 +1,4 @@
----
+﻿---
 title: "[딥러닝][개념정리] Inductive Bias란?"
 date: "2021-06-06"
 tags:
@@ -9,7 +9,6 @@ year: "2021"
 
 # [딥러닝][개념정리] Inductive Bias란?
 
-원본 게시글: https://velog.io/@euisuk-chung/Inductive-Bias란
 
 
 

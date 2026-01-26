@@ -1,4 +1,4 @@
----
+﻿---
 title: "[꿀팁] Cursor AI - AI 기반 코드 편집기"
 date: "2024-12-14"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [꿀팁] Cursor AI - AI 기반 코드 편집기
 
-원본 게시글: https://velog.io/@euisuk-chung/Cursor-AI-AI기반-코드-편집기
 
 
 

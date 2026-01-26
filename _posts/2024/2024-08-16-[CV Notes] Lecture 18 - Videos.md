@@ -1,4 +1,4 @@
----
+﻿---
 title: "[CV Notes] Lecture 18 - Videos"
 date: "2024-08-16"
 tags:
@@ -9,7 +9,6 @@ year: "2024"
 
 # [CV Notes] Lecture 18 - Videos
 
-원본 게시글: https://velog.io/@euisuk-chung/CV-Notes-Lecture-18-Videos
 
 
 
