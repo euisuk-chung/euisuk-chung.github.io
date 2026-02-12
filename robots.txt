@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
 Sitemap: https://euisuk-chung.github.io/sitemap.xml

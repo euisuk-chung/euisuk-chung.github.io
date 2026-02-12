@@ -44,7 +44,11 @@
         
     {% endcase %}
     
+    {% if site.sidebar-avatar contains 'http' %}
+    <meta property="og:image" content="{{ site.sidebar-avatar }}">
+    {% else %}
     <meta property="og:image" content="{{ site.url }}{{ site.sidebar-avatar }}">
+    {% endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.SEOTitle }}">
 
@@ -81,5 +85,58 @@
     <!-- ga & ba script hoook -->
     <script></script>
 
+    <!-- JSON-LD Structured Data -->
+    {% if page.layout == 'post' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ page.title | escape }}",
+      "description": "{{ page.excerpt | strip_html | truncate: 200 | escape }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      {% if page.last_modified_at %}
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+      {% else %}
+      "dateModified": "{{ page.date | date_to_xmlschema }}",
+      {% endif %}
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author }}",
+        "url": "{{ site.url }}/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.sidebar-avatar }}"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      }
+      {% if page.header-img %},
+      "image": "{{ site.url }}/{{ page.header-img }}"
+      {% endif %}
+    }
+    </script>
+    {% else %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description | escape }}",
+      "url": "{{ site.url }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author }}",
+        "url": "{{ site.url }}/about"
+      }
+    }
+    </script>
+    {% endif %}
 
 </head>
