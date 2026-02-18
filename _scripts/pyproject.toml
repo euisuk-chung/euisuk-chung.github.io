@@ -1,0 +1,20 @@
+[project]
+name = "blog-crawler"
+version = "0.1.0"
+description = "Velog blog crawler for converting posts to markdown"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.9.3",
+    "markdown>=3.3.4",
+    "pandas>=2.0.0",
+    "requests>=2.26.0",
+    "selenium>=4.1.0",
+    "numpy>=1.24.0",
+    "webdriver-manager>=4.0.0",
+    "markdownify>=0.11.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

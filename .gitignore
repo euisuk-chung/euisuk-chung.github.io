@@ -1,6 +1,6 @@
 _site
 _posts/_draft
-_posts/_archive
+_posts/_archived
 _archive
 node_modules
 .vscode
@@ -16,3 +16,7 @@ node_modules
 .claude-cache/
 .gemini/
 .codex/
+error_log.txt
+error_logs.txt
+post_html.txt
+!_scripts/uv.lock
