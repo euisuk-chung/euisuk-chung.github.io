@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[강의노트] RAG From Scratch : Query Retrieval 기법"
 date: "2024-09-14"
 tags:
@@ -9,11 +9,9 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : Query Retrieval 기법
 
-
-
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/21bc5399-1580-45bb-bae4-5349f9a8fde3/image.png)
 
+* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 15 - 18 내용을 다루고 있습니다.
 * 별도의 강좌 내용이 보이지 않아서 실습 코드를 바탕으로 `Reverse Enginneering`해서 자료를 정리한 내용입니다. 참고 부탁드립니다!
 
 ### 1. **Re-ranking** (재정렬)
@@ -65,7 +63,6 @@ def reciprocal_rank_fusion(results, k=60):
 # RRF를 적용한 재정렬
 reranked_results = reciprocal_rank_fusion(results)
 print("Reranked results:", reranked_results)
-
 ```
 
 **코드 부연 설명:**
@@ -129,7 +126,6 @@ def corrective_rag(question):
 question = "What are AI agents?"
 corrected_docs = corrective_rag(question)
 print(corrected_docs)
-
 ```
 
 **코드 부연 설명:**
@@ -192,7 +188,6 @@ def self_rag(question):
 question = "What are the types of AI agents?"
 answer = self_rag(question)
 print(answer)
-
 ```
 
 **코드 부연 설명:**
@@ -242,7 +237,6 @@ def active_rag(question):
 question = "What is LLM task decomposition?"
 final_answer = active_rag(question)
 print(final_answer)
-
 ```
 
 **코드 부연 설명:**
@@ -293,7 +287,6 @@ def adaptive_rag(question):
 question = "What are the types of LLM agents?"
 adaptive_answer = adaptive_rag(question)
 print(adaptive_answer)
-
 ```
 
 **코드 부연 설명:**

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Veo2: 차세대 AI 비디오 생성 모델 (Veo2 vs Sora)"
 date: "2024-12-31"
 tags:
@@ -8,9 +8,6 @@ year: "2024"
 ---
 
 # Veo2: 차세대 AI 비디오 생성 모델 (Veo2 vs Sora)
-
-
-
 
 Veo2: 차세대 AI 비디오 생성 모델
 ======================
@@ -22,7 +19,6 @@ Veo2: 차세대 AI 비디오 생성 모델
 * **Veo2 링크**: [Veo2 공식 페이지](https://deepmind.google/technologies/veo/veo-2/)
 
 저도 베타 테스트를 신청했지만, 아직 선정 소식이 없어 아쉬워하고 있던 차에 제가 즐겨 구독하는 유튜버 **김그륜**([링크](https://www.youtube.com/@kimgryun))님께서 베타 테스터로 선정되셨다는 소식을 접했습니다. 그륜님의 상세한 후기 덕분에 이렇게 Veo2 관련 포스트를 작성할 수 있게 되었습니다!  
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/da1e0e7d-f4a1-4cf8-884c-0165007a2e9e/image.png)
 
 * **Youtube 링크**: [AI로 만든 영상이라곤 진짜 믿을 수 없는... Veo2 직접 사용해 본 후기!](https://youtu.be/Eyj-i0euL9M)
@@ -35,11 +31,9 @@ Veo2 소개 및 주요 특징
 **Veo2**는 Google DeepMind에서 개발한 차세대 AI 비디오 생성 모델로, 텍스트 프롬프트와 참조 이미지를 입력으로 받아 고품질의 비디오를 자동으로 생성합니다. Veo2는 비디오 제작의 혁신을 선도하며, 기존 방식에서 소요되는 시간과 비용을 획기적으로 줄이는 데 기여합니다. 현재 베타 테스트 중이며, **Google Vertex AI 플랫폼**에 통합될 예정입니다.
 
 > ❓ **Google Vertex AI**  
-> 
 > Google Vertex AI는 Google Cloud Platform에서 제공하는 통합 머신러닝 플랫폼입니다. 이 플랫폼은 데이터 과학자와 ML 엔지니어가 머신러닝 모델을 빠르게 구축, 배포, 확장할 수 있도록 설계되었습니다.
-> 
+>
 > * Vertex AI는 AutoML과 AI Platform을 포함한 Google Cloud의 다양한 ML 서비스를 하나의 통합된 플랫폼으로 제공합니다. 이를 통해 사용자는 데이터 준비부터 모델 배포까지 전체 ML 워크플로를 관리할 수 있습니다.  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/bebb9134-6b45-42d7-a2ee-e930c42a7007/image.png)
 
 Veo2는 디지털 마케팅, 교육 콘텐츠 제작, 창작 분야에서 큰 잠재력을 보이며, 텍스트 기반 콘텐츠 생성 모델의 새로운 기준을 제시합니다. 이 모델은 OpenAI의 **DALL-E**와 유사하게 동작하지만, 비디오 시퀀스 생성에 특화되어 시간적 요소를 다루는 데 뛰어난 성능을 자랑합니다.
@@ -113,13 +107,9 @@ Veo2는 각 프롬프트를 통해 다양한 비주얼 스타일과 상황을 �
 > **Prompt**: An extreme close-up shot focuses on the face of a female DJ, her beautiful, voluminous black curly hair framing her features as she becomes completely absorbed in the music. Her eyes are closed, lost in the rhythm, and a slight smile plays on her lips. The camera captures the subtle movements of her head as she nods and sways to the beat, her body instinctively responding to the music pulsating through her headphones and out into the crowd. The shallow depth of field blurs the background. She’s surrounded by vibrant neon colors. The close-up emphasizes her captivating presence and the power of music to transport and transcend.
 
 **프롬프트 특징:**  
-
 1. **클로즈업과 인물 중심**: 극단적인 클로즈업 샷을 통해 인물의 표정과 감정에 초점을 맞춥니다. 이는 Veo2의 디테일한 얼굴 표현과 감정 전달 능력을 강조합니다.  
-
 2. **네온 컬러와 몰입감**: 네온 조명과 음악에 몰입한 인물의 움직임은 현대적인 클럽 분위기와 음악의 에너지를 효과적으로 전달합니다.  
-
 3. **얕은 피사계 심도**: 배경을 흐릿하게 처리하여 인물의 존재감을 강조하고 시각적 집중을 유도합니다.  
-
 4. **미세한 움직임 포착**: 머리의 미묘한 움직임과 리듬에 맞춘 자연스러운 동작 표현이 가능합니다.
 
 **Veo2의 강점:**
@@ -138,11 +128,8 @@ Veo2는 각 프롬프트를 통해 다양한 비주얼 스타일과 상황을 �
 > **Prompt**: This medium shot, with a shallow depth of field, portrays a cute cartoon girl with wavy brown hair, sitting upright in a 1980s kitchen. Her hair is medium length and wavy. She has a small, slightly upturned nose, and small, rounded ears. She is very animated and excited as she talks to the camera.
 
 **프롬프트 특징:**  
-
 1. **애니메이션 스타일**: 1980년대 부엌 배경의 만화 캐릭터를 묘사하며 Veo2의 애니메이션 제작 능력을 시연합니다.  
-
 2. **얕은 피사계 심도**: 배경 흐림 처리를 통해 인물의 생동감을 강조합니다.  
-
 3. **인물 디테일**: 만화 캐릭터의 얼굴 형태와 표정을 정교하게 표현하여 애니메이션 제작에서의 활용성을 보여줍니다.
 
 **Veo2의 강점:**
@@ -161,13 +148,9 @@ Veo2는 각 프롬프트를 통해 다양한 비주얼 스타일과 상황을 �
 > **Prompt**: The sun rises slowly behind a perfectly plated breakfast scene. Thick, golden maple syrup pours in slow motion over a stack of fluffy pancakes, each one releasing a soft, warm steam cloud. A close-up of crispy bacon sizzles, sending tiny embers of golden grease into the air. Coffee pours in smooth, swirling motion into a crystal-clear cup, filling it with deep brown layers of crema. Scene ends with a camera swoop into a fresh-cut orange, revealing its bright, juicy segments in stunning macro detail.
 
 **프롬프트 특징:**  
-
 1. **슬로우 모션**: 팬케이크 위로 메이플 시럽이 흐르는 장면을 슬로우 모션으로 연출하여 디테일을 강조합니다.  
-
 2. **질감 표현**: 증기, 기름 방울, 크레마 층 등의 세부적인 질감을 사실적으로 표현합니다.  
-
 3. **매크로 디테일**: 오렌지 조각과 같은 작은 디테일을 극대화하여 생동감과 리얼리즘을 극대화합니다.  
-
 4. **따뜻한 조명**: 아침 햇살과 같은 자연광을 활용하여 따뜻하고 포근한 분위기를 조성합니다.
 
 **Veo2의 강점:**
@@ -186,13 +169,9 @@ Veo2는 각 프롬프트를 통해 다양한 비주얼 스타일과 상황을 �
 > **Prompt**: Low-angle tracking shot, 18mm lens. The car drifts, leaving trails of light and tire smoke, creating a visually striking and abstract composition. The camera tracks low, capturing the sleek, olive green muscle car as it approaches a corner. As the car executes a dramatic drift, the shot becomes more stylized. The spinning wheels and billowing tire smoke, illuminated by the surrounding city lights and lens flare, create streaks of light and color against the dark asphalt. The cityscape – yellow cabs, neon signs, and pedestrians – becomes a blurred, abstract backdrop. Volumetric lighting adds depth and atmosphere, transforming the scene into a visually striking composition of motion, light, and urban energy.
 
 **프롬프트 특징:**  
-
 1. **로우 앵글과 동적 카메라**: 낮은 각도에서 자동차를 따라가는 촬영으로 역동성을 강조합니다.  
-
 2. **볼류메트릭 조명**: 도시의 네온 조명과 렌즈 플레어를 활용하여 장면에 깊이와 분위기를 더합니다.  
-
 3. **추상적 구성**: 드리프트 중 발생하는 연기와 빛의 흔적이 추상적이고 시각적으로 인상적인 구도를 만듭니다.  
-
 4. **도시의 에너지**: 배경의 흐릿한 도시 풍경이 장면에 생동감을 더합니다.
 
 **Veo2의 강점:**
@@ -234,83 +213,79 @@ Veo2의 장점과 활용성을 한눈에 이해할 수 있는 유용한 프롬�
 ### 실험 사례
 
 > (참고사항)
-> 
+>
 > * 아래 영문 프롬프트 예시는 제가 임의로 프롬프트를 쓴 것이기 때문에 그륜님께서 하신 정도의 퀄리티가 나오려면 좀 더 길고 자세하게 묘사해야 합니다.
 > * 아래 첨부한 이미지들은 그륜님께서 Veo2 베타테스터로 선정되신 뒤에 만드신 영상 캡쳐 이미지 자료입니다.
 > * 이미지 출처 : [AI로 만든 영상이라곤 진짜 믿을 수 없는... Veo2 직접 사용해 본 후기!](https://youtu.be/Eyj-i0euL9M)
 
 1. **프레스기 실험**:
-   
+
    * 단단한 물체(예: 대리석, 유리)의 압력에 따른 깨짐과 구부러짐을 자연스럽게 표현.
    * 고무 오리 인형이 프레스기로 눌렸을 때 내부의 물이 튀어나오는 장면까지 사실적으로 구현.
-   
+
    **프롬프트 예시**:
-   
+
    * "A rubber duck being pressed by a hydraulic press, with water squirting out naturally."
-   
+
    ![](https://velog.velcdn.com/images/euisuk-chung/post/7dc4022e-f3aa-4304-a265-0be9206f136c/image.png)
 
 2. **창의적인 표현**:
-   
+
    * 선글라스를 쓴 고양이가 도심에서 스케이트를 타는 장면과 같은 독창적이고 현실감 있는 장면을 손쉽게 생성.
    * 얼음 위에 불이 붙는 비현실적인 상황도 자연스럽게 표현.
-   
+
    **프롬프트 예시**:
-   
+
    * "A cat wearing sunglasses skateboarding in a bustling urban environment."
    * "Fire burning on ice in a surreal but realistic manner."
-   
+
    ![](https://velog.velcdn.com/images/euisuk-chung/post/84b5d485-4408-4e81-833b-f6d97a808e7a/image.png)
 
 3. **스타일과 세부 묘사**:
-   
+
    * 레고 장난감으로 크리스마스 스토리 스톱 모션을 생성해 단편 애니메이션 제작 가능성을 시연.
    * 나초 광고에서 재질 및 움직임을 실사처럼 표현해 상업적 활용 가능성을 확인.
-   
+
    **프롬프트 예시**:
-   
+
    * "A stop-motion Christmas story featuring LEGO characters in a snowy village."
    * "A close-up of nachos with melted cheese dripping and steam rising in a cinematic style."
-   
+
    ![](https://velog.velcdn.com/images/euisuk-chung/post/bd873d1d-f4e2-4746-9bab-d004a70d60e8/image.png)
 
 4. **복합적 상황 묘사**:
-   
+
    * 파란 수영 고글을 쓴 펭귄이 다양한 색의 풍선을 매고 도시 광장을 활보하는 장면.
    * 분수에서 뛰어드는 펭귄의 역동적인 모습까지 구현.
-   
+
    **프롬프트 예시**:
-   
+
    * "A playful penguin wearing blue swimming goggles and carrying colorful balloons, jumping into a fountain in a lively city square."
-   
+
    ![](https://velog.velcdn.com/images/euisuk-chung/post/f5313022-4268-4ec9-b688-be980a4f83f1/image.png)
-   
+
    * 위에 예시로 제가 저렇게 쓰긴 했지만, 실제로 그륜님이 위 영상 제작에 사용한 프롬프트를 가져오면 다음과 같습니다:
-     
+
      > 🎥 **프롬프트**:   
      >   
-     > 
      > "**35mm 렌즈로 촬영**된 **중간 높이의 전방 추적 샷**.   
      >   
-     > 
      > **밝은 파란 수영 고글**을 쓰고, 다양한 색의 풍선이 달린 작은 **노란 배낭을 맨 장난기 가득한 펭귄**이 활기찬 도시 광장을 자신감 있게 걸어가며 **카메라를 향해 다가옵**니다.   
      >   
-     > 
      > 펭귄의 발걸음에 따라 **가방이 리듬감 있게 흔들리며**, 분수의 물줄기를 피하다가 힘차게 뛰어올라 얕은 분수로 뛰어듭니다.   
      >   
-     > 
      > **물방울이 사방으로 튀며 생동감 넘치는 장면**이 연출됩니다."
    * 이처럼 **세부 디테일 강조**, **동작 및 카메라 연출** 등의 상세한 표사를 통해서 더욱 더 완벽한 영상을 생성해낼 수 있습니다.
 
 5. **자연 풍경 시뮬레이션**:
-   
+
    * 드론 시점에서 촬영한 등대와 파도의 움직임을 표현.
    * 파도의 거품이 바위에 부딪히는 디테일까지 사실적으로 구현.
-   
+
    **프롬프트 예시**:
-   
+
    * "Waves crashing against a lighthouse, seen from a drone's perspective with cinematic lighting."
-   
+
    ![](https://velog.velcdn.com/images/euisuk-chung/post/0a35fa5c-5be1-458e-9b3a-470f825c0f53/image.png)
 
 Veo2의 장점과 한계
@@ -377,16 +352,13 @@ Veo2 vs Sora
 ![](https://velog.velcdn.com/images/euisuk-chung/post/488cf35d-71c8-4ed6-8587-280be6bc3f1c/image.png)
 
 **프롬프트**:  
-
 *"This medium shot, with a shallow depth of field, portrays a cute cartoon girl with wavy brown hair, sitting upright in a 1980s kitchen. Her hair is medium length and wavy. She has a small, slightly upturned nose, and small, rounded ears. She is very animated and excited as she talks to the camera."*
 
 **평가**:
 
 * **Veo2 결과**:  
-  
   Veo2는 캐릭터의 디테일과 애니메이션 품질이 뛰어났으며, 1980년대의 따뜻하고 복고풍의 주방 배경을 충실히 구현했습니다. 특히, 얕은 심도로 인해 캐릭터가 배경에서 부드럽게 분리되었으며, 표정과 동작에서 자연스러운 생동감을 표현했습니다.
 * **Sora 결과**:  
-  
   Sora는 캐릭터의 디테일과 애니메이션 품질이 비교적 단조롭고, 배경의 디테일에서 부족함이 드러났습니다. 특히 1980년대 주방의 정서를 전달하는데 실패했으며, 캐릭터의 움직임도 덜 생동감 있었습니다.
 
 **결론**: Veo2의 우위. 캐릭터와 배경 모두 프롬프트의 요구사항에 훨씬 잘 부합했습니다.
@@ -396,16 +368,13 @@ Veo2 vs Sora
 ![](https://velog.velcdn.com/images/euisuk-chung/post/858ebeec-7fb5-4d0d-8dd5-db458d51354b/image.png)
 
 **프롬프트**:  
-
 *"The sun rises slowly behind a perfectly plated breakfast scene. Thick, golden maple syrup pours in slow motion over a stack of fluffy pancakes, each one releasing a soft, warm steam cloud. A close-up of crispy bacon sizzles, sending tiny embers of golden grease into the air. Coffee pours in smooth, swirling motion into a crystal-clear cup, filling it with deep brown layers of crema. Scene ends with a camera swoop into a fresh-cut orange, revealing its bright, juicy segments in stunning macro detail."*
 
 **평가**:
 
 * **Veo2 결과**:  
-  
   Veo2는 팬케이크, 메이플 시럽, 베이컨 등 아침 식사 요소의 텍스처를 매우 사실적으로 표현했습니다. 특히, 슬로우 모션으로 시럽이 흐르는 장면과 증기가 나오는 디테일은 몰입감을 높였으며, 오렌지의 매크로 샷에서도 색감과 디테일이 매우 뛰어났습니다.
 * **Sora 결과**:  
-  
   Sora는 메이플 시럽과 팬케이크를 표현하는 데 있어 디테일이 부족했으며, 슬로우 모션 효과나 증기 표현에서 부드럽지 못했습니다. 오렌지 샷도 Veo2에 비해 덜 사실적이었고, 카메라 움직임도 덜 매끄러웠습니다.
 
 **결론**: Veo2의 압승. Sora는 텍스처와 디테일에서 부족함을 드러냈습니다.
@@ -415,27 +384,22 @@ Veo2 vs Sora
 ![](https://velog.velcdn.com/images/euisuk-chung/post/367b195d-c409-4ef4-bb50-d8550291f4a6/image.png)
 
 **프롬프트**:  
-
 *"The camera floats gently through rows of pastel-painted wooden beehives, buzzing honeybees gliding in and out of frame. The motion settles on the refined farmer standing at the center, his pristine white beekeeping suit gleaming in the golden afternoon light. He lifts a jar of honey, tilting it slightly to catch the light. Behind him, tall sunflowers sway rhythmically in the breeze, their petals glowing in the warm sunlight. The camera tilts upward to reveal a retro farmhouse with mint-green shutters, its walls dappled with shadows from swaying trees."*
 
 **평가**:
 
 * **Veo2 결과**:  
-  
   Veo2는 햇빛 아래의 양봉가와 벌통의 디테일을 훌륭하게 표현했으며, 카메라 움직임이 부드럽고 일관적이었습니다. 특히, 꿀 병에 반사되는 빛과 해바라기의 움직임이 매우 자연스러웠습니다. 레트로 스타일의 농가도 프롬프트의 요구사항을 충실히 반영했습니다.
 * **Sora 결과**:  
-  
   Sora는 벌통과 농부의 디테일에서 부족함이 있었으며, 꿀 병의 반사 효과가 덜 자연스러웠습니다. 해바라기와 배경의 조화도 부족하여 전체적인 영상의 몰입도가 떨어졌습니다.
 
 **결론**: Veo2의 우위. 자연 풍경과 햇빛 효과에서 높은 품질을 보여주었습니다.
 
 > 💡 **종합 평가**  
-> 
 > Veo2는 모든 프롬프트에서 프롬프트 적응성(prompt adherence), 디테일, 자연스러운 움직임에서 Sora를 압도했습니다. Sora는 단순한 비디오 생성에는 적합하지만, 높은 수준의 디테일과 사실적인 표현이 요구되는 장면에서는 Veo2에 비해 부족함이 두드러졌습니다.
-> 
+>
 > * **Veo2 추천**: 광고, 영화, 고품질 콘텐츠 제작에 적합.
 > * **Sora 활용 가능성**: 간단한 스타일의 애니메이션 또는 짧은 비디오 제작에 적합.  
->   
 >   물론 Veo2에 최적화된 프롬프트를 사용했기에 그럴수도 있지만, 그럼에도 불구하고 사실성을 요구하는 영상에서의 성능은 떨어지는 것을 볼 수 있었습니다.
 
 Veo2는 사실감과 창의적인 연출 모두를 제공하며, AI 비디오 생성의 새로운 기준을 제시합니다.
@@ -457,20 +421,19 @@ Veo2는 현재 **Google Labs Early Access 프로그램**을 통해 신청 가능
 
 * Veo2는 현재 **Google Labs Early Access 프로그램**을 통해 제공되며, **VideoFX 플랫폼**에서 기능을 체험할 수 있습니다.
 * 접근 방법:
-  
+
   1. Google Labs 사이트에서 신청 후 초대 승인.
   2. VideoFX 툴에서 Text to Video 또는 Text to Image to Video 기능 사용 가능.
 * 베타 사용자 피드백:
-  
+
   + Veo2는 사용자의 피드백을 수집하여 기능 개선과 오류 수정을 진행하고 있습니다.
   + 향후 정식 버전 출시를 목표로 합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/81753995-33fe-479c-92eb-0fdd9f8e999a/image.png)
 
 > **Text to Video 기능:**  
-> 
 > 사용자가 입력한 텍스트 프롬프트를 기반으로 비디오를 생성합니다.
-> 
+>
 > * 프롬프트에 다양한 세부사항(예: 스타일, 카메라 각도, 조명 조건 등)을 포함하여 원하는 비디오의 시각적 특성을 지정할 수 있습니다.
 > * 이 기능은 포토리얼리즘을 지원하며, 35mm 필름 같은 영화적인 스타일도 선택 가능합니다.
 > * 또한, 다양한 버전의 비디오가 생성되어 비교 후 가장 적합한 결과물을 선택할 수 있습니다.
@@ -483,9 +446,8 @@ Veo2는 현재 **Google Labs Early Access 프로그램**을 통해 신청 가능
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3bd2450a-ff75-4095-9e2f-dd21285de554/image.png)
 
 > **Text to Image to Video 기능**:  
-> 
 > 텍스트를 이미지로 변환한 후, 해당 이미지를 기반으로 비디오를 생성하는 프로세스를 제공합니다.
-> 
+>
 > * 이를 통해 사용자는 특정 장면을 먼저 이미지로 구체화한 후, 이를 비디오로 확장할 수 있습니다.
 > * 정적인 이미지에 자연스러운 움직임을 추가하여 더욱 사실적인 결과를 얻을 수 있으며, 독특한 스타일의 애니메이션 비디오 제작에 적합합니다.
 
@@ -493,7 +455,6 @@ Veo2는 현재 **Google Labs Early Access 프로그램**을 통해 신청 가능
 
 * **예시**:
   + 텍스트 입력:  
-    
     *"A penguin in a bustling city square, surrounded by pigeons and street performers. The penguin pauses at a fountain, shaking off water droplets before glancing directly at the camera."*
   + 생성 과정:
     1. 펭귄과 도시 광장의 정적인 이미지를 생성.
@@ -515,4 +476,3 @@ Veo2는 기술적 한계를 극복하기 위한 지속적인 발전이 예상됩
 추가적으로 Veo2는 AI 비디오 제작 기술을 넘어 다양한 창작 환경에 활용될 수 있습니다. 예를 들어, 게임 디자인, 가상현실 콘텐츠 제작, 교육용 영상 등 다양한 분야에서 잠재력을 가지고 있습니다. 이러한 발전은 창작자들이 더욱 창의적이고 혁신적인 작업을 할 수 있도록 지원할 것입니다.
 
 Veo2는 AI 비디오 생성 기술의 새로운 장을 열었으며, 창작자들에게 혁신적인 도구로 자리 잡을 잠재력을 가지고 있습니다. 앞으로 Veo2의 진화와 활용 가능성은 영상 제작 업계에 큰 변화를 가져올 것으로 기대됩니다.
-

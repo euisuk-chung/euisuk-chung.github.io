@@ -1,11 +1,13 @@
-﻿---
+---
 title: "[Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases"
 date: "2025-08-30"
+tags:
+  - "EXAONE"
+  - "paper-review"
 year: "2025"
 ---
 
 # [Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases
-
 
 > <https://arxiv.org/pdf/2412.04862>
 

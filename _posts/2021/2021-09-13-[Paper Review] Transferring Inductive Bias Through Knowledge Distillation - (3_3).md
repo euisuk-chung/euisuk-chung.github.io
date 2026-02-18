@@ -1,19 +1,19 @@
-﻿---
+---
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)"
 date: "2021-09-13"
+tags:
+  - "Distillation"
+  - "paper-review"
 year: "2021"
 ---
 
 # [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)
 
-
-
-
 안녕하세요 :) 오늘은 지난번 포스팅에 이어서 "Transferring Inductive Bias Through Knowledge Distillation" 논문에 대한 정리를 이어나가 보도록 하겠습니다. 이전 포스팅에서 본 논문에서 다루게 될 주요 개념들인 `Knowledge Distillation`과 `Inductive Bias`에 대한 설명과 `RNNs vs Transformers`에 대하 실험을 진행한 Scenario 1에 대해 이야기를 풀어봤는데요.
 
 이전 포스트가 궁금하신 분은 아래 링크들을 통해 확인하실 수 있습니다.  
-
-
+1. 논문에 필요한 개념: Knowledge Distillation & Inductive Bias [(링크)](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation)  
+2. 논문 시나리오 1 : RNNs vs Transformers [(링크)](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-23)
 
 논문의 목적(복습)
 ----------
@@ -52,7 +52,6 @@ Pooling Layer는 앞의 Convolution Layer의 출력 값(Feature Map)를 입력�
 ![단층 Perceptron](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F4131dc66-939f-445f-bc5a-ae2ff66c2bf7%2Fimage.png)
 
 단층 퍼셉트론은 OR/AND/XOR 중 OR과 AND문제를 풀 수 있었지만 XOR문제는 풀 수가 없었습니다.  
-
 ![OR/AND/XOR](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F30fea0a3-0f01-4daa-82c5-7164d30192e6%2Fimage.png)
 
 단층 퍼셉트론으로는 해결할 수 없자 이제 해결책으로 제시된 방법이 두개의 퍼셉트론을 결합한 중 퍼셉트론 (2-layer Perceptron)인데, 이렇게 층이 여러개인 퍼셉트론을 다층 퍼셉트론(Multilayer Perceptron)이라고 칭합니다. 이러한 다층 퍼셉트론이 우리가 알고 있는 인공신경망(ANN, Artificial Neural Network)가 되게됩니다.
@@ -76,19 +75,16 @@ Pooling Layer는 앞의 Convolution Layer의 출력 값(Feature Map)를 입력�
 * **시그모이드 함수(Sigmoid Function)** : 시그모이드(sigmoid)는 S자 형태라는 의미로, 식은 아래와 같습니다.
 
 ![Sigmoid1](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F0ab981bc-f194-49d7-86e9-de2294ecbaff%2Fimage.png)  
-
 ![Sigmoid2](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F220a3eb1-1aec-4a9c-bb8c-640354a6af79%2Fimage.png)
 
 * **tanh 함수(Hyperbolic tangent function)** : tanh(Hyperbolic tangent)는 쌍곡선 함수의 일종으로, 식은 아래와 같습니다.
 
 ![tanh1](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F3d494fe6-4be3-46b8-9dbc-fd8339534c2f%2Fimage.png)  
-
 ![tanh2](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F7ed57ca5-9750-4ec2-a550-59742613a1e0%2Fimage.png)
 
 * **Rectified Linear Unit(ReLU)** : Gradient Vanishing 현상을 막기 위해 제안된 함수로, x 가 양수면 Gradient가 1로 일정하게 되므로 Gradient가 죽는 것을 방지할 수 있도록 설계하였습니다. 식은 아래와 같습니다.
 
 ![ReLU1](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fabd540e4-8349-489d-8456-eb3bd683b992%2Fimage.png)  
-
 ![ReLU2](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F1b3c35d9-9136-4bbf-85cd-94ad4284d442%2Fimage.png)
 
 ### CNNs VS MLPs
@@ -98,7 +94,6 @@ Pooling Layer는 앞의 Convolution Layer의 출력 값(Feature Map)를 입력�
 ![CNNvsMLP](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F601d2977-f390-4040-801b-c14fa592a76b%2Fimage.png)
 
 CNN의 Inductive Bias로는 크게 두가지를 들 수 있습니다. 이는 바로 Translation Invariance와  
-
 Scale Invariance입니다. Translation Invariance는 물체를 이동(translate) 시켜도 출력 값인 Logit 값은 변하지 않는다는 것이고, Scale Invariance는 물체의 스케일(scale)을 아무리 바꾸어도 출력 값인 Logit 값은 변하지 않는다는 것을 의미합니다.
 
 ![Translate & Scale](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fb5d65e9c-9cce-414a-befc-1aa73e776fd8%2Fimage.png)
@@ -145,4 +140,3 @@ Scale Invariance입니다. Translation Invariance는 물체를 이동(translate)
 흥미롭게 읽었던 논문을 무려 3차례에 걸쳐서 자세하게 한번 다루어보았는데요. 이렇게 자세하게 논문을 리뷰하는 방식은 어땠는지 구독자들의 의견 또한 궁금하네요 🙂
 
 긴 글 읽어주셔서 감사합니다 ^~^
-

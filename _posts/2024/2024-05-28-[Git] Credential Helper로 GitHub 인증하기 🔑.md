@@ -1,13 +1,13 @@
-﻿---
+---
 title: "[Git] Credential Helper로 GitHub 인증하기 🔑"
 date: "2024-05-28"
+tags:
+  - "git"
+  - "환경"
 year: "2024"
 ---
 
 # [Git] Credential Helper로 GitHub 인증하기 🔑
-
-
-
 
 Credential Helper로 GitHub 인증하기
 ------------------------------
@@ -36,6 +36,7 @@ Git의 설정 정보는 `git config` 명령어를 통해 관리할 수 있습니
 ```
 git config --global --list
 ```
+
 #### 사용자 이름과 이메일 설정
 
 ```
@@ -51,6 +52,7 @@ git config --global user.email "your_email@example.com"
 git config --unset --global user.name
 git config --unset --global user.email
 ```
+
 ### 3. Credential Helper - Cache
 
 #### Cache 설정하기
@@ -88,22 +90,23 @@ git config --global credential.helper osxkeychain
 ```
 
 1. **새로운 토큰 등록하기**
-   
+
    * `Launchpad` -> `기타(폴더)` -> `키체인 접근`
    * 또는 `Finder` -> `응용 프로그램` -> `유틸리티` -> `키체인 접근.app` 실행
    * 수동으로 `github.com` 항목을 찾아 삭제 (`인터넷 암호` 항목 클릭)
 2. **사용자 이름과 이메일 설정**
-   
+
    ```
    git config --global user.name "Your Name"
    git config --global user.email "your_email@example.com"
    ```
 3. **새로 등록된 계정으로 Git 명령어 실행**
-   
+
    ```
    git commit -m "Your commit message"
    git push
    ```
+
    * push 명령어 실행 시, 아이디와 패스워드(토큰)를 입력합니다.
    * 이후 자동으로 키체인에 새로운 계정 정보가 등록됩니다.
 
@@ -116,15 +119,16 @@ git config --global credential.helper wincred
 Windows의 경우, "자격 증명 관리자(Credential Manager)"에서 등록된 정보를 확인할 수 있습니다. 만약 remote repo의 비밀번호를 수정했다면(token이 만료되는 등으로 갱신했다면) 정보를 삭제하고 새로 등록해주어야 합니다.
 
 1. **Credential Manager 열기**
-   
+
    * `제어판` -> `자격 증명 관리자`를 엽니다.
    * `Windows 자격 증명`에서 `github.com` 항목을 찾아 삭제합니다.
 2. **새로 등록된 계정으로 Git 명령어 실행**
-   
+
    ```
    git commit -m "Your commit message"
    git push
    ```
+
    * push 명령어 실행 시, 아이디와 패스워드(토큰)를 입력합니다.
    * 이후 자동으로 Credential Manager에 새로운 계정 정보가 등록됩니다.
 
@@ -137,11 +141,13 @@ Windows의 경우, "자격 증명 관리자(Credential Manager)"에서 등록된
 ```
 git config --unset --global credential.helper
 ```
+
 #### Store 설정 삭제하기
 
 ```
 git config --unset --global credential.helper
 ```
+
 #### Keychain 설정 삭제하기
 
 Mac에서는 키체인 접근 앱에서 `github.com` 항목을 삭제합니다.
@@ -154,4 +160,3 @@ Windows에서는 자격 증명 관리자에서 `github.com` 항목을 삭제합�
 이제 Git Credential Helper를 이용해 GitHub 인증 정보를 보다 편리하게 관리할 수 있습니다. 개인 컴퓨터에서는 `Store`를 사용하고, 공용 컴퓨터에서는 `Cache`를 사용하는 것을 추천합니다. Keychain 시스템을 이용하면 더욱 안전하게 인증 정보를 관리할 수 있습니다.
 
 오늘도 긴 글 읽어주셔서 감사합니다⭐
-

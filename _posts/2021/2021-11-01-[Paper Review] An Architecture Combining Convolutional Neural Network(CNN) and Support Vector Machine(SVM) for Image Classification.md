@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification"
 date: "2021-11-01"
 tags:
@@ -8,9 +8,6 @@ year: "2021"
 ---
 
 # [Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification
-
-
-
 
 오늘 `리뷰/번역/구현`할 논문은 "Abien Fred M. Agarap" 저자가 쓴 논문으로, "Yichuan Tang"의 "Deep Learning using Linear Support Vector Machines"을 보고 inspired되어 연구하게 되었다고 한다. 하단의 참고 논문 소스에 해당 논문 링크와 이번 논문의 링크를 첨부였다.
 
@@ -26,23 +23,22 @@ Abstract
 
 * CNN(합성곱신경망)은 Hidden layer들과 learnable parameter들로 구성되어 있으며, 각 뉴런에서는 input을 받으면 이를 내적하고, 비선형성을 더해준다. Raw Image와 해당 class score를 이어주는 매개체의 역할을 수행한다. (주로 CNN 마지막 단에는 softmax함수가 이용이 된다.
 * 하지만, 몇몇 논문들은 위와 같은 방법론에 문제를 제기하였다:
-  
+
   + Abien Fred Agarap. 2017. A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data. arXiv preprint arXiv:1709.03082 (2017).
   + Abdulrahman Alalshekmubarak and Leslie S Smith. 2013. A novel approach combining recurrent neural network and support vector machines for time series classification. In Innovations in Information Technology (IIT), 2013 9th International Conference on. IEEE, 42–47
   + Yichuan Tang. 2013. Deep learning using linear support vector machines. arXiv preprint arXiv:1306.0239 (2013).
 * 위에서 보여준 논문들은 공통적으로 linear SVM을 이용하는 것을 제안한다. 이에 저자는 ***CNN단에 Softmax 대신 SVM을 이용하여 분석을 수행***한다.
 * MNIST
-  
+
   + CNN-SVM : 99.04%
   + CNN-Softmax : 99.23%
 * MNIST-Fasion
-  
+
   + CNN-SVM : 90.72%
   + CNN-Softmax : 91.86%
 * 저자는 성능은 비록 조금 낮을 수 있을지라도, 좀 더 고도화된 CNN을 이용하면 성능을 더욱 더 향상시킬 수 있을 것이라고 주장한다.
 
 > 💡 **리뷰 논문 선정 이유**  
-> 
 > 해당 논문에서는 이를 이용하여 State-of-the-art(SOTA)를 찍지는 않지만, 후에 다양한 Vision 분야에서 마지막 단에 SVM Classifier를 사용하기에 근간이 된 논문을 선정하게 되었다. 최근 연구에 있어서 모델에 간단한 변화를 (더해)줌으로써 모델의 성능을 향상시킬 수 있을까 하는 고민에 찾아보고 정리해보게 되었다.
 
 ---
@@ -106,7 +102,6 @@ transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean
 ![Fashion-MNIST](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fc828ddae-c49b-4d63-ac54-97a705706678%2Fimage.png)
 
 ![Table 1](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fb42795a5-c851-49ae-b73e-0b6279cbde57%2Fimage.png)  
-
 Table 1: Dataset distribution for both MNIST and Fashion-MNIST
 
 ### Import fashion-MINIST
@@ -120,6 +115,7 @@ fashion_trainloader = torch.utils.data.DataLoader(fashion_trainset, batch_size=1
 fashion_testset = datasets.FashionMNIST('~/.pytorch/F_MNIST_data/', download=True, train=False, transform=transform)
 fashion_testloader = torch.utils.data.DataLoader(fashion_testset, batch_size=128, shuffle=True)
 ```
+
 ### Import MINIST
 
 ```
@@ -140,11 +136,9 @@ mnist_testloader = torch.utils.data.DataLoader(mnist_testset, batch_size=128, sh
 * Support Vector Machine(SVM)은 C. Cortes and V. Vapnik에 의해 개발된 이진분류 방법론으로, 최적의 초평면(***f (w, x) = w · x + b***)을 찾는 데에 의의를 둔다. 초평면은 서로 다른 두 class를 분류해준다.
 * SVM은 해당 식을 최적화하여 W parameter를 학습한다.
   + L1-SVM  
-    
     ![L1-SVM](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F3bc89ea6-8acc-4841-854f-e92d14de9e41%2Fimage.png)
   + wTww^{T}wwTw는 Manhattan norm(L1 norm), C는 penalty parameter, y'는 실제 y값, wTww^{T}wwTw+b는 예측 y값이다.
   + L2-SVM  
-    
     ![L2-SVM](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F6672f586-2591-44a6-8d16-ec50b60b387f%2Fimage.png)
   + ∣w∣2|w|^{2}∣w∣2는 Euclidean norm(L2 norm), C는 penalty parameter, y'는 실제 y값, wTww^{T}wwTw+b는 예측 y값이다.
 
@@ -190,20 +184,16 @@ class SVM:
   + 5x5x1 size filter
   + 2x2 max pooling
   + RELU as activation function (threshold = 0)  
-    
     ![RELU](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F33b4def9-68a1-491e-9586-35e63038d8ed%2Fimage.png)
   + 10번째 layer단에서 convolutional softmax 대신 **L2-SVM**을 이용한다. ( y ∈ {-1, +1}, adam optimizer 이용)
 
 ![모델 구조1](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F137a4713-bc86-444f-abf6-b2e79fe857f1%2Fimage.png)  
-
 저자가 이용한 모델 구조(직접 제작)
 
 ![모델 구조2](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fa14846ef-7caf-4d82-9fb1-7e3a3fcaa5d0%2Fimage.png)  
-
 저자가 이용한 모델 구조(논문 수록)
 
 ![모델 구조3](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F7534242e-2f59-4fe4-98ec-174eed194efa%2Fimage.png)  
-
 저자가 이용한 모델 구조(직접 구현)
 
 ### CNN model
@@ -248,6 +238,7 @@ class CNN(torch.nn.Module):
         out = self.fc2(out)
         return out
 ```
+
 ### CNN + SVM model (multi-Class Hinge Loss)
 
 ```
@@ -288,11 +279,11 @@ class multiClassHingeLoss(nn.Module):
 
         return loss
 ```
+
 > 💡 잠깐!! **hinge loss란?**
-> 
+>
 > * 학습데이터 각각의 범주를 구분하면서 데이터와의 거리가 가장 먼 결정경계(decision boundary)를 찾기 위해 고안된 손실함수의 한 부류. 이로써 데이터와 경계 사이의 마진(margin)이 최대화된다.
 > * 이진 분류문제에서 모델의 예측값 y′(스칼라), 학습데이터의 실제값 y (-1 또는 1) 사이의 hinge loss는 아래와 같이 정의된다.  
->   
 >   loss=max(0,1−(y′×y))loss=max( 0, 1 − (y' × y))loss=max(0,1−(y′×y))
 
 2.5 Data Analysis
@@ -307,7 +298,6 @@ class multiClassHingeLoss(nn.Module):
 * 아래 그림은 각각의 데이터셋에 대하여 설정해준 Hyper parameter 정보들이다.
 
 ![Hyper-parameters](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fb88bc082-19c0-47a7-83d0-943869fd668d%2Fimage.png)  
-
 Table 2: Hyper-parameters used for CNN-Softmax and CNNSVM models.
 
 ### Set hyper-parameter
@@ -319,6 +309,7 @@ training_epochs = 50
 # 해당 논문에서는 만번의 epoch를 수행했지만 computation power로 인해 epoch 50회 수행
 batch_size = 128
 ```
+
 ### Make Model for MNIST Data (CNN)
 
 ```
@@ -331,6 +322,7 @@ optimizer = torch.optim.Adam(mnist_model.parameters(), lr=learning_rate)
 total_batch = len(mnist_trainloader)
 print('총 배치의 수 : {}'.format(total_batch))
 ```
+
 ### Make Model for MNIST Data (CNN + SVM)
 
 ```
@@ -343,6 +335,7 @@ optimizer = torch.optim.Adam(minst_SVM_model.parameters(), lr=learning_rate)
 total_batch = len(mnist_trainloader)
 print('총 배치의 수 : {}'.format(total_batch))
 ```
+
 ### Make Model for fashion-MNIST Data (CNN)
 
 ```
@@ -355,6 +348,7 @@ optimizer = torch.optim.Adam(fashion_model.parameters(), lr=learning_rate)
 total_batch = len(fashion_trainloader)
 print('총 배치의 수 : {}'.format(total_batch))
 ```
+
 ### Make Model for fashion-MNIST Data (CNN + SVM)
 
 ```
@@ -367,6 +361,7 @@ optimizer = torch.optim.Adam(fashion_SVM_model.parameters(), lr=learning_rate)
 total_batch = len(fashion_trainloader)
 print('총 배치의 수 : {}'.format(total_batch))
 ```
+
 ### Train Models
 
 ```
@@ -406,6 +401,7 @@ for epoch in range(training_epochs):
 
     print('[Epoch: {:>4}] cost = {:>.9}'.format(epoch + 1, avg_cost))
 ```
+
 ```
 # fashion_model(CNN)
 for epoch in range(training_epochs):
@@ -443,6 +439,7 @@ for epoch in range(training_epochs):
 
     print('[Epoch: {:>4}] cost = {:>.9}'.format(epoch + 1, avg_cost))
 ```
+
 ### Test Models
 
 ```
@@ -474,6 +471,7 @@ with torch.no_grad():
 
 print('Test Accuracy of the model on the 10000 test images: {} %'.format(100 * correct / total))
 ```
+
 ```
 # fashion_model(CNN)
 with torch.no_grad():
@@ -506,16 +504,12 @@ print('Test Accuracy of the model on the 10000 test images: {} %'.format(100 * c
 
 * 밑의 그림은 데이터 분석의 결과표이다.
   + Figure2 : CNN-Softmax와 CNN-SVM의 Training Accuracy를 시각화한 표  
-    
     (MNIST)
   + Figure3 : CNN-Softmax와 CNN-SVM의 Training loss를 시각화한 표  
-    
     (MNIST)
   + Figure4 : CNN-Softmax와 CNN-SVM의 Training Accuracy를 시각화한 표  
-    
     (fashion-MNIST)
   + Figure5 : CNN-Softmax와 CNN-SVM의 Training loss를 시각화한 표  
-    
     (fashion-MNIST)
 
 ![2/5](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F5090722f-b5ae-4db0-b3f8-9fa1966d26b3%2Fimage.png)
@@ -525,7 +519,6 @@ print('Test Accuracy of the model on the 10000 test images: {} %'.format(100 * c
 * **모델 성능 (epoch = 10000)**
 
 ![Table 3](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fffadbe78-f169-410e-9645-bc35e6b14934%2Fimage.png)  
-
 Table 3: Test accuracy of CNN-Softmax and CNN-SVM on image classification using MNIST and Fashion-MNIST
 
 * **직접 구현한 모델 성능 (epoch = 50)**

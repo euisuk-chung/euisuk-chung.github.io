@@ -1,23 +1,17 @@
-﻿---
+---
 title: "OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대"
 date: "2025-03-26"
-tags:
-  - "OpenAI"
-  - "chatGPT"
 year: "2025"
 ---
 
 # OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대
-
-
-
 
 안녕하세요! 오늘 나온 기능은 제가 **정말정말 기다렸던 기능**인데요!! 🙌
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/08b714ac-2a5f-41dc-93e1-8220710b38fa/image.png)
 
 > **참고 링크**
-> 
+>
 > * <https://openai.com/index/introducing-4o-image-generation>
 > * <https://youtu.be/2f3K43FHRKo>
 
@@ -26,7 +20,7 @@ year: "2025"
 바로바로 오늘의 썸네일처럼 **"내가 직접 넣어주거나, 사진의 스타일을 바꿔보거나, 그림에 텍스트를 정확하게 넣는 거"**가 드디어 가능할 것으로 보입니다!!
 
 > 😄 사실 이거, 예전에는 너무 하고 싶었지만 늘 한계가 있었죠.
-> 
+>
 > * 특히 **텍스트의 소문자/대문자 구분도 정확히 안 되고**, 이미지에서 생성된 글씨가 깨지는 것이 아쉬웠는데요…
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/bb13245a-e14a-406c-96bb-720e06effdf6/image.png)
@@ -61,22 +55,16 @@ OpenAI는 GPT‑4o에 가장 진보된 이미지 생성기를 통합하며 이�
 ℹ️ **신규 기능 요약**
 
 * 🎨 **멀티턴 이미지 생성 (Multi-turn Generation)**  
-  
   채팅을 이어가며 이미지 수정/개선 가능. 캐릭터 디자인, 장면 구성에 유리.
 * 📐 **정밀한 인스트럭션 반영**  
-  
   텍스트 기반 복잡한 지시사항 (10~20개 객체 배치 등)도 충실히 반영.
 * 🧠 **인컨텍스트 학습 (In-context Learning)**  
-  
   업로드된 이미지에서 스타일/구성 학습 후 새로운 이미지 생성.
 * 🌍 **월드 지식 연결 (World Knowledge)**  
-  
   텍스트 모델의 지식을 활용해 이미지를 더 똑똑하게 생성.
 * ✍️ **정확한 텍스트 렌더링 (Text Rendering)**  
-  
   표지판, 메뉴판, 인포그래픽 등 텍스트 포함 이미지도 정확하고 깔끔하게 생성.
 * 🎭 **다양한 스타일 & 포토리얼리즘**  
-  
   만화, 수채화, 디지털 페인팅, 실사 스타일 등 폭넓은 스타일 지원.
 
 본 블로그 포스트는 **OpenAI Youtube Demo(Part1)**와 **OpenAI Blog 내용(Part2)**로 나뉩니다.
@@ -143,15 +131,15 @@ The text reads:
 이미지 생성 요청 프롬프트는 다음과 같은 `3단 구성`을 따릅니다:
 
 * **장면 설정** (Scene Setting)
-  
+
   + 공간(낡은 로프트)과 시점(POV, 나의 시선)을 명확히 설정
   + 인물 구성(촬영팀, 나를 바라보는 상태)
 * **초점 대상 설정** (Focal Object)
-  
+
   + 이미지의 중심: 책상 위 종이
   + "focus on paper", "background out of focus"는 Depth-of-Field(심도 표현)을 명시함
 * **텍스트 삽입 지시** (Embedded Text Instruction)
-  
+
   + 종이에 적힌 내용을 그대로 명시 ("The text reads:" 이후의 문장들)
 
 > 위 프롬프트를 직역해서 한글로 요청하면, 아직까지 한글은 완벽(?)하진 않은 것을 볼 수 있습니다.
@@ -288,7 +276,7 @@ GPT‑4o는 **사진 스타일을 모사하면서도, 지정된 텍스트와 숫
 ![](https://velog.velcdn.com/images/euisuk-chung/post/40a42ea4-d143-4dbf-b79d-9ae82ae4b672/image.png)
 
 > 아래 질문들도 추가적으로 질의해서 이미지를 원하는 방향으로 업데이트해 볼 수도 있겠군요!!
-> 
+>
 > * "뒷면 디자인도 만들어줘"
 > * "이름마다 색상 다르게 적용해줘"
 > * "이 부분만 수정해줘"
@@ -314,7 +302,6 @@ PART 2. OpenAI Blog 내용 소개
 아래는 **GPT-4o의 이미지 생성 기능**을 6가지 핵심 기능별로 정리하고, 각 기능에 맞는 **예시 Prompt**를 자세하게 추가한 내용입니다. 실무 활용을 위한 프롬프트 작성에 유용하도록 구성하였습니다.
 
 아래 예시들의 프롬프트와 이미지는 **OpenAI Blog에 나온 공식 사례들**입니다.  
-
 (조금씩 추가/변경한 내용도 존재합니다)
 
 ---
@@ -331,7 +318,6 @@ PART 2. OpenAI Blog 내용 소개
 * 복잡한 장면 구성을 단계적으로 발전
 
 **🎨 예시 Prompt**  
-
 CAT (Image)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f813014b-3eca-4d1b-ba64-deef928fcbcf/image.png)
@@ -349,7 +335,6 @@ CAT (Image)
 ```
 
 → AAA급 **게임 스타일**로 변환, **UI 오버레이** 추가  
-
 → `게임 HUD`, `일관된 아이콘`, `해상도/스타일` **업그레이드**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/8422a5d8-d829-4dd9-89f3-d7132b3b4b9d/image.png)
@@ -359,7 +344,6 @@ CAT (Image)
 ```
 
 → 화면 비율 변경(16:9), 시점 변경(3인칭), 배경 설정 추가  
-
 → 스팀펑크 맨해튼 배경, 컬러톤 조절, 조명 효과 등 고급 조정
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a22125ab-3c25-4432-8b60-6e966bd5e784/image.png)
@@ -382,7 +366,6 @@ CAT (Image)
 -------------------------------------------
 
 > GPT-4o는 긴 prompt와 복잡한 객체 지시사항을 정확히 따릅니다.  
-> 
 > (최대 10~20개의 객체도 처리 가능.)
 
 **📐 예시 Prompt**
@@ -414,7 +397,6 @@ Go from left to right, top to bottom. Here's the list:
 ![](https://velog.velcdn.com/images/euisuk-chung/post/fd0433ed-6520-410e-b219-06ff55d5557c/image.png)
 
 **🧩 추가 예시**  
-
 섬세한 요청 사항까지 수행해주는 GPT‑4o’s image generation.
 
 ```
@@ -422,7 +404,6 @@ show me a wine glass with only the tiniest drop of red wine in it.
 ```
 
 → 매우 정밀한 디테일도 구현 가능.  
-
 → "tiniest drop"이라는 수량적 표현도 시각화됨.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/308cd1f9-91c9-4390-97a7-6b9e93048a45/image.png)
@@ -435,7 +416,6 @@ show me a wine glass with only the tiniest drop of red wine in it.
 > 참조 이미지 기반으로 스타일, 구성, 아이디어를 학습해 새로운 이미지에 반영합니다.
 
 **🖼 예시 Prompt**  
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/4c2ec6dd-2522-47ce-976d-09ebcf7806fd/image.png)
 
 ```
@@ -445,7 +425,6 @@ Label the front and back wheels, and at the bottom write:
 ```
 
 → 전송된 참조 이미지를 바탕으로 차량 형태 구성  
-
 → “TRIANGLE WHEELED VEHICLE. English Patent. 2025. OPENAI.” 텍스트 포함
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/105c9010-69b8-4bfa-a07c-13191687dfae/image.png)
@@ -470,7 +449,6 @@ an photorealistic image of a blue chainsaw
 **🍹 예시 Prompt**
 
 ```
-
 Make me a professionally shot photorealistic diagram of the top selling cocktails in my bar with recipes labeled on each drink.
 
 put the recipes on handwritten cards in front of each drink.
@@ -483,7 +461,6 @@ Title is "4 most popular cocktails"
 ```
 
 → 칵테일 구성, 레시피, 사진 촬영 스타일 등을 통합한 이미지 생성  
-
 → 손글씨 카드, 음료 위주 배열, 배경 등 복합 조건 만족
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/bb317524-ab39-4819-ac40-2deccfe984d4/image.png)
@@ -550,7 +527,6 @@ The reflection is that of a tiger, realistically distorted by ripples in the wat
 ```
 
 → 메타포적 표현까지 정교하게 구현  
-
 → 물결 반사 효과까지 포토리얼하게 묘사
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/530cc3fc-f7aa-4f73-87f3-39dc263d76bf/image.png)
@@ -578,7 +554,6 @@ streets + parked cars + buildings -> street sign -> witches. Characters must be 
 ```
 
 → 복잡한 간판 구성 및 실제 텍스트 렌더링 완벽 반영  
-
 → "Broom Parking for Witches..." 같은 유머 요소까지 현실적 표지판 형식으로 표현
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3590630d-d5ac-4e18-a743-f8326ef4f45d/image.png)
@@ -586,30 +561,28 @@ streets + parked cars + buildings -> street sign -> witches. Characters must be 
 **🧩 추가 예시**
 
 ```
-
 I'm opening a traditional concept restaurant in Marin called Haein. It focuses on Korean food cooked with organic, farm-fresh ingredients, with a rotating menu based on what's seasonal. I want you to design an image - a menu incorporating the following menu items - lean into the traditional/rustic style while keeping it feeling upscale and sleek. Please also include illustrations of each dish in an elegant, peter rabbit style. Make sure all the text is rendered correctly, with a white background.
 
 (Top)
 
-Doenjang Jjigae (Fermented Soybean Stew) – $18 House-made doenjang with local mushrooms, tofu, and seasonal vegetables served with rice.
+Doenjang Jjigae (Fermented Soybean Stew) – \$18 House-made doenjang with local mushrooms, tofu, and seasonal vegetables served with rice.
 
-Galbi Jjim (Braised Short Ribs) – $34 Slow-braised local grass-fed beef ribs with pear and black garlic glaze, seasonal root vegetables, and jujube.
+Galbi Jjim (Braised Short Ribs) – \$34 Slow-braised local grass-fed beef ribs with pear and black garlic glaze, seasonal root vegetables, and jujube.
 
-Grilled Seasonal Fish – Market Price ($22-$30) Whole or fillet of local, sustainable fish grilled over charcoal, served with perilla leaf ssam and house-made sauces.
+Grilled Seasonal Fish – Market Price (\$22-\$30) Whole or fillet of local, sustainable fish grilled over charcoal, served with perilla leaf ssam and house-made sauces.
 
-Bibimbap – $19 Heirloom rice with a rotating selection of farm-fresh vegetables, house-fermented gochujang, and pasture-raised egg.
+Bibimbap – \$19 Heirloom rice with a rotating selection of farm-fresh vegetables, house-fermented gochujang, and pasture-raised egg.
 
-Bossam (Heritage Pork Wraps) – $28 Slow-cooked pork belly with napa cabbage wraps, oyster kimchi, perilla, and seasonal condiments.
+Bossam (Heritage Pork Wraps) – \$28 Slow-cooked pork belly with napa cabbage wraps, oyster kimchi, perilla, and seasonal condiments.
 
-(Bottom) Dessert & Drinks Seasonal Makgeolli (Rice Wine) – $12/glass
+(Bottom) Dessert & Drinks Seasonal Makgeolli (Rice Wine) – \$12/glass
 
 Rotating flavors based on seasonal fruits and flowers (persimmon, citrus, elderflower, etc.).
 
-Hoddeok (Korean Sweet Pancake) – $9 Pan-fried cinnamon-stuffed pancake with black sesame ice cream.
+Hoddeok (Korean Sweet Pancake) – \$9 Pan-fried cinnamon-stuffed pancake with black sesame ice cream.
 ```
 
 → 고급 전통 스타일의 한식 메뉴판 시각화  
-
 → Peter Rabbit 스타일 일러스트 포함, 텍스트 오타 없음
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/8cae9d58-9a15-41c4-82dc-e35e0ce6d494/image.png)
@@ -632,8 +605,6 @@ OpenAI의 CEO 샘 알트만은 이번 업데이트가 **속도는 다소 느려�
 > 🎨 프롬프트에 어떤 상상을 담아보셨나요?
 
 직접 실험해보고, 나만의 작품을 만들어보는 것도 큰 재미입니다.  
-
 재미있는 시도나 결과물이 있다면 댓글이나 링크로 함께 공유해주세요! 🎨
 
 오늘도 읽어주셔서 감사합니다!😊
-

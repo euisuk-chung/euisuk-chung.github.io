@@ -1,11 +1,10 @@
-﻿---
+---
 title: "[OpenAI] 언어모델 환각(Hallucination) 현상: 왜 AI는 확신에 찬 거짓말을 할까?"
 date: "2025-09-07"
 year: "2025"
 ---
 
 # [OpenAI] 언어모델 환각(Hallucination) 현상: 왜 AI는 확신에 찬 거짓말을 할까?
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/cbf178f3-65f5-4aa6-9f51-dfaba5a283f6/image.png)
 

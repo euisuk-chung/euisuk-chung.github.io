@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models"
 date: "2025-12-12"
 tags:
@@ -7,7 +7,6 @@ year: "2025"
 ---
 
 # [Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/544908e7-c545-4f9b-b1fc-2ae9a671dd01/image.png)
 

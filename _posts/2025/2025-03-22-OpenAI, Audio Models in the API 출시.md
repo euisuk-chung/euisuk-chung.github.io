@@ -1,4 +1,4 @@
-﻿---
+---
 title: "OpenAI, Audio Models in the API 출시"
 date: "2025-03-22"
 tags:
@@ -9,9 +9,6 @@ year: "2025"
 
 # OpenAI, Audio Models in the API 출시
 
-
-
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1feabe7a-a279-46f9-bf02-a80c4fbbb81c/image.png)
 
 최근 OpenAI는 텍스트 기반의 에이전트에서 더 나아가, 음성 기반의 자연스럽고 직관적인 소통을 가능하게 하는 **음성 AI 모델**을 새롭게 선보였습니다. 이번 출시는 **음성-텍스트 변환(STT, Speech-to-Text) 모델**과 **텍스트-음성 변환(TTS, Text-to-Speech) 모델**을 포함하며, 개발자들이 더욱 강력하고 맞춤화된 음성 에이전트를 손쉽게 구축할 수 있도록 지원합니다.
@@ -21,25 +18,23 @@ year: "2025"
 ![](https://velog.velcdn.com/images/euisuk-chung/post/781b9a66-ac9c-44b6-9d77-978698c20115/image.png)
 
 > 🔗 **Reference Links**
-> 
+>
 > * [Blog Link](https://openai.com/index/introducing-our-next-generation-audio-models/)
 > * [Youtube Link](https://www.youtube.com/watch?v=lXb0L16ISAc&t=66s)
 
 OpenAI는 **음성으로 말하면, AI가 음성으로 답하는 'Voice Agent' 시대**를 본격적으로 열고자 합니다.
 
 * **Voice Agent**란 쉽게 말해, 음성으로 사용자와 대화할 수 있는 **음성 기반의 AI 시스템**입니다. 사용자의 말을 듣고, 그 의미를 이해한 뒤, 다시 말로 응답하는 구조를 가지고 있죠.
-  
+
   + 단순한 `음성 인식 기술(STT)`이나 `음성 합성 기술(TTS)`을 넘어서, **실제로 대화를 나누는 에이전트**를 의미합니다.
 
 OpenAI는 이 Voice Agent를 누구나 손쉽게 만들 수 있도록 하기 위해, 이번 발표를 통해 **새로운 음성 모델들**을 공개하는 한편, 기존의 텍스트 기반 에이전트를 **음성 기반 에이전트로 손쉽게 확장할 수 있는 개발자 도구인 Agents SDK**도 함께 제공했습니다.
 
 * 이번 발표에서 OpenAI는 먼저 `Voice Agent`를 만드는 **두 가지 주요 방식**을 소개합니다.
-  
+
   1. **Speech-to-Speech 방식**: 사용자의 음성을 바로 인식해, 실시간으로 음성으로 응답하는 구조입니다. 한번에 빠르고 자연스러운 대화를 지원하지만, 모델 간 커스터마이징이 어렵습니다.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/f5ebad52-68e0-4ed5-a6ff-8830f3f5ab70/image.png)
   2. **Chained 방식**: 사용자의 음성을 텍스트로 바꾸고(STT), 텍스트 기반 LLM이 답을 생성한 뒤, 다시 음성으로 바꾸는(TTS) 모듈형 구조입니다. 각 구성 요소를 자유롭게 조합할 수 있어 많은 개발자들이 선호하는 방식입니다.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/986606d0-b31c-4da7-bbf2-88fc2f371d14/image.png)
 
 OpenAI는 많은 개발자들이 이 Chained 방식을 중심으로 Voice Agent를 구현할 것으로 보고, 여기에 최적화된 **새로운 Speech-to-Text(STT) 모델과 Text-to-Speech(TTS) 모델**을 발표했습니다.
@@ -57,10 +52,10 @@ OpenAI는 GPT-4o 기반의 새로운 음성-텍스트 모델 `두 가지`를 출
 이 모델들은 `Whisper 시리즈`의 후속작으로, 더 많은 데이터와 개선된 학습 기법을 통해 다양한 언어와 환경에서 더 낮은 오류율과 더 빠른 응답 속도를 보여줍니다.
 
 > (참고) Whisper는 OpenAI에서 개발한 모델로, 대규모 데이터셋을 활용해 훈련되었습니다. 약 68만 시간 이상의 음성 데이터를 기반으로 학습되었으며, 이 중 약 2/3가 영어이고 나머지는 한국어, 일본어, 중국어 등 다양한 언어로 구성되어 있습니다.
-> 
+>
 > * <https://github.com/openai/whisper>
 > * [Colab 실습 Code](https://colab.research.google.com/github/openai/whisper/blob/master/notebooks/LibriSpeech.ipynb)
-> 
+>
 > 1. 초기 버전 (2022년 9월 출시)
 > 2. Whisper large-v2 (2022년 12월)
 > 3. Whisper large-v3 (2023년 11월)
@@ -86,14 +81,14 @@ OpenAI가 진행한 **FLEURS(Few-shot Learning Evaluation of Universal Represent
 > 타사 제품과 비교
 
 * **WER (Word Error Rate)**:
-  
+
   + **낮을수록 성능이 좋은 것**을 의미합니다 (즉, 오류가 적음)
 * **파란색 계열**:
-  
+
   + `gpt-4o-transcribe` (진한 파랑)
   + `gpt-4o-mini-transcribe` (중간 파랑)
 * **회색 계열** (경쟁사 모델):
-  
+
   + `gemini-2.0-flash` (회색)
   + `scribe-v1` (짙은 회색)
   + `nova-2 & nova-3` (밝은 회색)
@@ -250,7 +245,7 @@ voice_pipeline = VoicePipeline(workflow=workflow)
 ---
 
 > 🔧 전체 흐름 요약
-> 
+>
 > ```
 > [사용자 음성] → [청크 수신 및 버퍼링] 
 > → [완료된 오디오 → 텍스트 변환] 
@@ -274,7 +269,7 @@ Voice Agent를 구축하면서 “*정확히 어떤 음성을 인식했고, 어�
 ![](https://velog.velcdn.com/images/euisuk-chung/post/15d3f027-265f-41e8-807c-13576ac86258/image.png)
 
 * **Tracing UI**를 통해 에이전트의 동작 흐름, 음성 입력, 처리 단계, 오류 발생 등을 시각적으로 분석 가능
-  
+
   + 음성 입력 내용 (재생 가능)
   + STT 결과 텍스트
   + LLM 호출 내역 및 사용된 툴
@@ -284,7 +279,7 @@ Voice Agent를 구축하면서 “*정확히 어떤 음성을 인식했고, 어�
 * 위와 같은 기능들을 시각적으로 확인할 수 있어, **음성 기반 UX의 디버깅과 테스트**가 매우 쉬워집니다.
 
 > ✅ 정리
-> 
+>
 > * 이처럼 Agents SDK의 새로운 음성 기능을 활용하면,
 >   + 기존 텍스트 기반 LLM 서비스에 **불과 몇 줄의 코드로** 음성 입출력을 추가할 수 있고,
 >   + 복잡한 음성 처리 로직을 직접 구현하지 않고도,
@@ -326,4 +321,3 @@ OpenAI의 최신 음성 모델은 API를 통해 누구나 사용할 수 있으�
 이번 업데이트도 재밌게 잘 봤는데요! 과연 단순히 whisper보다 좋은 stt 모듈에서 끝날지 아님 재밌는 시나리오가 더 나올지 궁금하군요!!🤔
 
 읽어주셔서 감사합니다 :)
-

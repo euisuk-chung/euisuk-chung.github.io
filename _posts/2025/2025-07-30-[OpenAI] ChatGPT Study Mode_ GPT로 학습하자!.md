@@ -1,11 +1,13 @@
-﻿---
+---
 title: "[OpenAI] ChatGPT Study Mode: GPT로 학습하자!"
 date: "2025-07-30"
+tags:
+  - "OpenAI"
+  - "chatGPT"
 year: "2025"
 ---
 
 # [OpenAI] ChatGPT Study Mode: GPT로 학습하자!
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b0a70812-721d-4906-8260-845c1c7504f6/image.png)
 

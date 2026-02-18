@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[정리] OpenAI API Document"
 date: "2024-09-19"
 tags:
@@ -7,9 +7,6 @@ year: "2024"
 ---
 
 # [정리] OpenAI API Document
-
-
-
 
 OpenAI는 최신 인공지능(AI) 모델과 API를 제공하여 개발자들이 다양한 AI 기능을 쉽게 애플리케이션에 통합할 수 있도록 지원합니다. 다음은 아래 `platform.openai.com`에서 제공하는 문서를 훑어보면서 정리한 내용입니다.
 
@@ -36,7 +33,7 @@ OpenAI API는 **사전 학습된 AI 모델**을 호출하여 다양한 작업을
 **엔드포인트**는 OpenAI 서버와 상호작용하는 URL로, 특정 AI 모델을 호출하거나 기능을 수행할 때 사용하는 경로입니다.
 
 * 예를 들어, GPT 모델을 호출하려면 `/v1/completions` 엔드포인트로 요청을 보내야 합니다.
-  
+
   + `openai.ChatCompletion.create()`와 같은 함수 호출은 내부적으로 OpenAI API의 `/v1/completions` 엔드포인트로 요청을 보내는 방식입니다.
   + `OpenAI 라이브러리`를 사용할 때, 이런 함수들은 각각의 엔드포인트와 매핑되어 있어서, 개발자는 API의 엔드포인트 **URL을 신경 쓰지 않고도 편리하게 AI 기능을 사용**할 수 있습니다.
 
@@ -69,6 +66,7 @@ response = openai.ChatCompletion.create(
 
 print(response.choices[0].message['content'])
 ```
+
 ### 3.2 Fine-tuning 엔드포인트
 
 * **URL**: `/v1/fine-tuning`
@@ -88,6 +86,7 @@ response = openai.FineTune.create(
 
 print(response)
 ```
+
 ### 3.3 Batch 엔드포인트
 
 * **URL**: `/v1/batch`
@@ -107,6 +106,7 @@ response = openai.Batch.create(
 
 print(response)
 ```
+
 ### 3.4 Image Generation 엔드포인트 (DALL·E)
 
 * **URL**: `/v1/images/generations`
@@ -128,6 +128,7 @@ response = openai.Image.create(
 image_url = response['data'][0]['url']
 print("Generated image URL:", image_url)
 ```
+
 ### 3.5 Text to Speech 엔드포인트
 
 * **URL**: `/v1/audio/generations`
@@ -147,6 +148,7 @@ response = openai.Audio.create(
 
 print(response['data'])
 ```
+
 ### 3.6 Speech to Text 엔드포인트 (Whisper)
 
 * **URL**: `/v1/audio/transcriptions`
@@ -167,6 +169,7 @@ response = openai.Audio.transcribe(
 
 print("Transcribed text:", response['text'])
 ```
+
 ### 3.7 Embeddings 엔드포인트
 
 * **URL**: `/v1/embeddings`
@@ -187,6 +190,7 @@ response = openai.Embedding.create(
 embedding_vector = response['data'][0]['embedding']
 print("Embedding vector:", embedding_vector)
 ```
+
 ### 3.8 Moderation 엔드포인트
 
 * **URL**: `/v1/moderations`
@@ -228,6 +232,7 @@ response = openai.Completion.create(
 
 print(response.choices[0].text.strip())
 ```
+
 ### 4.2 이미지 처리 (Vision)
 
 OpenAI의 **DALL·E** 모델은 텍스트 설명을 기반으로 이미지를 생성하는 데 사용됩니다. 이 기능을 사용하여 창의적이고 독창적인 이미지를 만들 수 있습니다.
@@ -244,6 +249,7 @@ response = openai.Image.create(
 image_url = response['data'][0]['url']
 print("Generated image URL:", image_url)
 ```
+
 ### 4.3 함수 호출 (Function Calling)
 
 OpenAI 모델은 외부 API나 내부 함수 호출을 지원합니다. 이를 통해 모델이 특정 작업에 필요한 데이터를 실시간으로 호출하여 사용할 수 있습니다.
@@ -277,7 +283,6 @@ print(response.choices[0].message['content'])
 ```
 
 * **추가 예시**:  
-  
   아래 코드는 DuckDuckGo 검색과 OpenAI의 함수 호출(Function Calling) 기능을 결합하여 사용자 질문에 답변하는 과정을 보여줍니다.
   + 여기서 functions 파라미터를 통해 duck\_search 함수를 정의하고, messages에 시스템 지시와 사용자 질문을 포함시킵니다.
 
@@ -325,6 +330,7 @@ completion = client.chat.completions.create(
 
 print(completion)
 ```
+
 ### 4.4 구조화된 출력 (Structured Outputs)
 
 OpenAI 모델은 JSON과 같은 구조화된 데이터를 출력할 수 있습니다. 이를 통해 특정 형식으로 데이터를 받을 수 있어, 프로그램에서 데이터를 더 쉽게 처리할 수 있습니다.
@@ -346,6 +352,7 @@ response = openai.ChatCompletion.create(
 
 print(response.choices[0].message['content'])
 ```
+
 ### 4.5 복잡한 추론 (Reasoning)
 
 OpenAI 모델은 복잡한 문제에 대해 논리적으로 추론할 수 있습니다. 수학 문제 해결, 코드 디버깅 등 다양한 추론 작업을 수행할 수 있습니다.
@@ -361,6 +368,7 @@ response = openai.Completion.create(
 
 print(response.choices[0].text.strip())
 ```
+
 ### 4.6 고급 사용법 (Advanced Usage)
 
 OpenAI API는 토큰 제한 설정, 스트리밍 응답, 모델의 온도 조절과 같은 고급 기능을 제공합니다. 이를 통해 사용자는 모델의 응답 스타일을 세밀하게 조정할 수 있습니다.
@@ -417,4 +425,3 @@ OpenAI API는 다양한 AI 기능을 제공하며, 텍스트 생성, 이미지 �
 이번 포스팅에서는 OpenAI API의 기본 사용법과 각 엔드포인트, 주요 기능에 대한 전반적인 가이드를 제공합니다. 이를 바탕으로 AI 솔루션을 더욱 효과적으로 구축할 수 있을 것입니다.
 
 계속해서 Documents 보면서 추가되는 내용이 있으면 추가해보겠습니다 :)
-

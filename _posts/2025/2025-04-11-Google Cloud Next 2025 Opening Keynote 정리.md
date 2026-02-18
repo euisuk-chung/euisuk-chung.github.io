@@ -1,11 +1,10 @@
-﻿---
+---
 title: "Google Cloud Next 2025 Opening Keynote 정리"
 date: "2025-04-11"
 year: "2025"
 ---
 
 # Google Cloud Next 2025 Opening Keynote 정리
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3e8c4bdc-2911-42cd-9c0b-9bcf2a77898b/image.png)
 
@@ -131,7 +130,7 @@ Sundar Pichai (Google & Alphabet CEO)
 
 **1. CAPEX 투자 규모 (2025 계획)**
 
-* 총 투자 규모: **$75 Billion (약 100조 원)**
+* 총 투자 규모: **\$75 Billion (약 100조 원)**
 * 투자 영역:
   + 데이터 센터 확장
   + AI 전용 연산 인프라 (TPU, GPU)

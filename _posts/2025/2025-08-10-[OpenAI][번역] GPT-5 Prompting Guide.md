@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[OpenAI][번역] GPT-5 Prompting Guide"
 date: "2025-08-10"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 ---
 
 # [OpenAI][번역] GPT-5 Prompting Guide
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/aa92d106-f35c-44ea-a8d4-5a1eea74ac60/image.png)
 

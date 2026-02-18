@@ -1,4 +1,4 @@
-﻿---
+---
 title: "OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시"
 date: "2025-02-01"
 tags:
@@ -8,9 +8,6 @@ year: "2025"
 ---
 
 # OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시
-
-
-
 
 1. 개요
 -----
@@ -30,13 +27,9 @@ year: "2025"
 (번역) Sam Altman's X post
 
 > o3-mini 출시! 스마트하고 빠른 모델.  
-> 
 > ChatGPT 및 API로 제공됩니다.  
-> 
 > 웹을 검색하면 생각을 알 수 있습니다.  
-> 
 > 무료 계층 사용자에게 제공됩니다! "**이유**" 버튼을 클릭하세요.  
-> 
 > ChatGPT 플러스를 사용하면 더 열심히 생각하고 더 나은 답변을 제공하는 "o3-mini-high"를 선택할 수 있습니다.
 
 *"무료 계층 사용자에게 제공됩니다! "**이유**" 버튼을 클릭하세요."*에서 말하는 기능은 아래 그림에서 설명하는 **Reason**💡 버튼입니다.
@@ -64,6 +57,7 @@ STEM 역량은 **Science**, **Technology**, **Engineering**, and **Mathematics**
   + 리더십: 다른 사람들에게 영향을 미치고, 협상하며, 갈등에 대처할 수 있는 능력
 
   
+
 ### o3-mini chatGPT 제공 옵션
 
 ChatGPT에서 **o3-mini**는 기본적으로 **중간(Medium) reasoning effort**을 사용하여 속도와 정확성 간의 균형을 제공합니다.
@@ -77,6 +71,7 @@ ChatGPT에서 **o3-mini**는 기본적으로 **중간(Medium) reasoning effort**
 ![](https://velog.velcdn.com/images/euisuk-chung/post/cb21445a-4097-4db8-b5cf-2a6b159519b1/image.png)
 
   
+
 ### **Reasoning Effort API 옵션**
 
 OpenAI o3-mini는 API 호출 시 **세 가지 reasoning effort 수준(Low, Medium, High)**을 조절할 수 있도록 설계되었습니다.
@@ -84,13 +79,13 @@ OpenAI o3-mini는 API 호출 시 **세 가지 reasoning effort 수준(Low, Mediu
 이를 통해 사용자는 작업의 특성에 맞춰 모델의 연산량과 응답 품질을 최적화할 수 있습니다.
 
 * **Low Reasoning Effort**:
-  
+
   + 빠른 응답이 필요한 경우 적합 (예: 단순 요약, 기본적인 코드 생성).
 * **Medium Reasoning Effort (기본값)**:
-  
+
   + 속도와 정확성의 균형을 유지하며, 일반적인 AI 활용에 적합 (예: 중간 난이도의 수학 문제 해결, 논리적인 질문 응답).
 * **High Reasoning Effort**:
-  
+
   + 복잡한 문제 해결을 위해 더 깊이 있는 추론 수행 (예: 고급 알고리즘 문제 해결, 과학적 분석, 논리적 사고 요구).
 
 유료 사용자들은 기본적으로 **o3-mini(Medium reasoning effort)**을 사용하게 되며, 필요에 따라 **o3-mini-high을 선택하여 더욱 정밀한 AI 추론 결과**를 얻을 수 있습니다.
@@ -100,6 +95,7 @@ OpenAI o3-mini는 API 호출 시 **세 가지 reasoning effort 수준(Low, Mediu
 API를 통해 reasoning effort 옵션을 조절하면 **복잡한 작업에서는 더 강력한 추론 성능을 발휘하고, 빠른 작업에서는 응답 속도를 최적화**할 수 있습니다.
 
   
+
 ### o3-mini 특징 정리
 
 OpenAI의 최신 AI 모델 **o3-mini**의 특징을 정리하면 아래와 같습니다:
@@ -114,6 +110,7 @@ OpenAI의 최신 AI 모델 **o3-mini**의 특징을 정리하면 아래와 같�
 * **무료 사용자도 'Reason' 모드 선택을 통해 사용 가능**, 이는 OpenAI reasoning 모델 중 처음으로 무료 사용자에게 제공됨.
 
   
+
 ### o1, o1-mini, o3, o3-mini 비교
 
 OpenAI는 다양한 AI 모델을 개발해왔으며, 각 모델은 성능과 효율성 측면에서 차별점을 가집니다.
@@ -266,7 +263,7 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 ### 2.5 일반 지식 및 수학 지식 (General Knowledge)
 
 > (참고) General Knowledge 평가에는 여러 서브테스크가 포함되며, 주요 평가 항목은 다음과 같습니다.
-> 
+>
 > * **General**(MMLU): 다양한 분야의 일반 지식을 평가하는 벤치마크
 > * **Math**(Math) : 기초 및 고급 수학 문제 해결 능력
 > * **Math**(MGSM) : Multi-step math 문제 해결 능력
@@ -290,7 +287,7 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 ### 2.6 인간 평가 결과 (Human Preference Evaluation)
 
 > (참고) Human Preference Evaluation은 실제 (인간) 사용자들이 **AI 모델이 생성한 응답을 비교하여 어느 모델이 더 나은 결과를 제공하는지 평가하는 벤치마크**입니다.
-> 
+>
 > * 이 테스크는 단순한 수치 기반 평가(MAE, BLEU, Pass@k 등)와 달리, 실제 사용자의 주관적인 선호도 및 이해도를 반영하여 AI 모델을 평가하는 것이 특징입니다.
 
 | 평가 항목 | 평가 기준 | o1-mini | o3-mini (medium) |
@@ -313,7 +310,7 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 ### 2.7 코드 생성 및 컴플리션 성능 (LiveBench Coding)
 
 > (참고) LiveBench Coding 테스크는 AI 모델이 실제 코드를 생성(Generation)하고 완성(Completion)하는 능력을 평가하는 벤치마크입니다.
-> 
+>
 > * 일반적인 코드 생성(Code Generation)뿐만 아니라, 논리적 추론(Reasoning)과 복잡한 코드 작성 능력을 테스트하는 것이 특징입니다.
 > * 아래 3가지 항목에 대해서 테스트를 수행합니다:
 >   + **Average Score** : 전반적인 코드 생성 및 완성 성능
@@ -338,7 +335,7 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 ### 2.8 소프트웨어 엔지니어링 성능 (SWE-bench Verified)
 
 > (참고) SWE-bench Verified는 AI 모델의 소프트웨어 엔지니어링(Software Engineering) 문제 해결 능력을 평가하는 벤치마크입니다.
-> 
+>
 > * 이 테스크는 AI가 실제 코드 베이스에서 버그를 수정하고, 기능을 개선하며, 문제 해결을 수행하는 능력을 측정하는 것이 특징입니다.
 
 | 모델 | 정확도 |
@@ -398,4 +395,3 @@ OpenAI의 새로운 AI 모델인 **o3-mini**는 기존 모델(o1-mini, o1)과 �
 결과적으로, o3-mini는 AI 경쟁 구도 속에서 비용 대비 성능이 뛰어난 모델로 자리 잡으며, 다양한 사용자들에게 효과적인 AI 도구로 활용될 전망입니다.
 
 읽어주셔서 감사합니다 😎
-

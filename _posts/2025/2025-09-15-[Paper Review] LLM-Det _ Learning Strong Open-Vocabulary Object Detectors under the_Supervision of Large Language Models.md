@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the
 Supervision of Large Language Models"
 date: "2025-09-15"
@@ -9,7 +9,6 @@ year: "2025"
 
 # [Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the
 Supervision of Large Language Models
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b8ddb32e-934c-44c5-ad3a-6c1e07dee1de/image.png)
 

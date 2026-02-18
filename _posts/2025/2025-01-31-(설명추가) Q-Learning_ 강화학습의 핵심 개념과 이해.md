@@ -1,4 +1,4 @@
-﻿---
+---
 title: "(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해"
 date: "2025-01-31"
 tags:
@@ -8,9 +8,6 @@ year: "2025"
 ---
 
 # (설명추가) Q-Learning: 강화학습의 핵심 개념과 이해
-
-
-
 
 혁펜하임님의『Easy! 딥러닝』책을 보다보면 엄청 중요한 내용들이 쉽게 풀이되어 있습니다. 처음 배우시는 분들도 쉽게 따라오실 수 있습니다.
 
@@ -51,7 +48,6 @@ year: "2025"
 * **에이전트(agent)**는 **환경(environment)**과 상호작용하면서 **상태(state)**를 관찰하고, 가능한 **행동(action)** 중 하나를 선택하여 보상을 받습니다.
 
 위와 같은 과정을 반복하면서 최적의 정책(policy)을 학습하게 됩니다.  
-
 (*보다 쉬운 이해를 위해서는 책을 참고해주세요* )
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3b8c4996-5eb5-4f0c-9907-14aa0448c214/image.png)
@@ -68,7 +64,6 @@ year: "2025"
 6. **State-Action Value Function (행동 가치 함수, Q(S,A)Q(S,A)Q(S,A))**: 특정 상태에서 특정 행동을 수행했을 때 기대되는 장기적인 보상을 나타냅니다.
 
 **Q-Learning**은 책에서 소개하는 핵심 강화학습 기법 중 하나로, **Q-Table**이라는 구조를 사용하여 각 상태에서의 행동 가치를 학습합니다.  
-
 (For more. Q-Table은 **"6. Q-Table이란?"**을 참고해주세요)
 
 ---
@@ -109,8 +104,9 @@ Q(S,A)=0∀S,AQ(S, A) = 0 \quad \forall S, AQ(S,A)=0∀S,A
 ✔️ **Step 3: 보상 관찰 및 Q-값 업데이트**
 
 * Q-값은 아래 **벨만 방정식(Bellman Equation)**을 이용해 갱신됩니다.
-  
+
   Q(S,A)←Q(S,A)+α[R+γmax⁡a′Q(S′,a′)−Q(S,A)]Q(S, A) \leftarrow Q(S, A) + \alpha \Big[ R + \gamma \max\_{a'} Q(S', a') - Q(S, A) \Big]Q(S,A)←Q(S,A)+α[R+γa′max​Q(S′,a′)−Q(S,A)]
+
   + Q(S,A)Q(S, A)Q(S,A) : 현재 상태 SSS에서 행동 AAA를 했을 때의 Q-값
   + α\alphaα: 학습률 (Learning Rate, 0~1) → 업데이트 비율을 조절
   + γ\gammaγ: 할인율 (Discount Factor, 0~1)
@@ -120,7 +116,7 @@ Q(S,A)=0∀S,AQ(S, A) = 0 \quad \forall S, AQ(S,A)=0∀S,A
 이 과정을 충분히 반복하면 Q-값이 수렴하고, 최적 정책을 찾을 수 있습니다.
 
 > ❓ (참고) **벨만 방정식 (Bellman Equation) 설명**
-> 
+>
 > * `벨만 방정식(Bellman Equation)`은 **최적 정책(Optimal Policy)**을 찾기 위해 `상태(State)`와 `행동(Action)` 간의 관계를 수식화한 식입니다.
 >   + 이는 Q-Learning과 같은 강화학습에서 **Q-값을 업데이트하는 핵심 원리**로 작용합니다.
 >   + 벨만 방정식은 **현재 상태**에서의 **최적 Q-값**을 **미래의 기대 보상(Discounted Future Reward)으로 표현**한 재귀 방정식입니다.
@@ -137,11 +133,11 @@ Q-Learning에서는 **탐색(Exploration)과 활용(Exploitation)의 균형이 �
 이를 해결하기 위해 **ϵ\epsilonϵ-greedy** 전략이 사용됩니다.
 
 * **탐색(Exploration)**:
-  
+
   + 새로운 행동을 시도하여 더 나은 보상을 찾음.
   + 미지의 영역을 탐험하며, 새로운 전략을 발견할 가능성을 높임.
 * **활용(Exploitation)**:
-  
+
   + 현재까지 학습한 Q-값을 기반으로 최적의 행동을 선택함.
   + 지금까지의 경험을 바탕으로 가장 높은 보상을 주는 선택지를 취함.
 
@@ -156,9 +152,8 @@ Q-Learning에서는 **탐색(Exploration)과 활용(Exploitation)의 균형이 �
 * 초반에는 탐색을 더 많이 수행하도록 설정하고, 학습이 진행될수록 활용 비율을 점진적으로 증가시키는 방식이 일반적입니다.
 
 > (참고) **ϵ-greedy 기법은 on-policy인가?**  
-> 
 > => 결론부터 말하자면, **NO!!** ϵ-greedy 기법은 off-policy기법입니다.
-> 
+>
 > * RL(강화학습)에서 말하는 **Policy(정책, π\piπ)**는 에이전트가 특정 상태(SSS)에서 특정 행동(AAA)을 선택하는 규칙입니다.
 >   + 즉, **"현재 상태에서 어떤 행동을 해야 하는가?"**를 결정하는 함수입니다.
 > * ϵ\epsilonϵ-greedy는 특정한 방식으로 행동을 선택하는 방법론이지, 정책 자체를 학습하는 방식이 아닙니다.
@@ -179,7 +174,7 @@ Q-Learning에서는 **탐색(Exploration)과 활용(Exploitation)의 균형이 �
 Q-Learning에서는 미래 보상의 가치를 현재 보상과 비교할 때 **할인율(Discount Factor, γ\gammaγ)**을 적용합니다.
 
 * 할인율이 높을수록 먼 미래의 보상까지 고려하는 반면, 낮을수록 가까운 보상을 더 중요하게 여깁니다.
-  
+
   + γ\gammaγ 값이 1에 가까울수록 → **장기적인 보상**을 중시 (예: 마라톤 경기 전략 수립)
   + γ\gammaγ 값이 0에 가까울수록 → **즉각적인 보상**을 중시 (예: 당장 이득을 얻는 도박 전략)
 
@@ -283,7 +278,7 @@ Q-Learning은 **Model-Free RL(모델이 없는 강화학습)** 기법입니다.
 **Q-Learning이 Model-Free인 이유**
 
 * Q-Learning은 환경의 동작 모델(전이 확률 및 보상 함수)을 **직접 학습하지 않고**, 환경과의 상호작용을 통해 최적의 행동을 찾습니다.
-  
+
   + (1) 경험을 통해 **Q-값을 업데이트하는 방식**을 사용.
   + (2) 환경 모델을 따로 구축하지 않으므로 **학습이 더 유연하고 단순**.
 * 반면, Model-Based RL에서는 **환경의 전이 확률과 보상을 모델링하여 미리 예측**할 수 있으므로, **실제 환경과의 상호작용 없이도 학습을 진행**할 수 있습니다.
@@ -302,7 +297,7 @@ Q-Learning은 **Model-Free RL(모델이 없는 강화학습)** 기법입니다.
 이러한 단점을 극복하기 위해 다양한 연구들이 진행되었으며, 한가지로 **함수 근사(Function Approximation)** 사용하는 것을 예로 들 수 있습니다.
 
 > 💡 **함수 근사(Function Approximation)란?**
-> 
+>
 > * 신경망(Neural Network) 또는 선형 회귀(Linear Regression) 등을 활용하여 **Q-Table을 직접 저장하는 대신 함수로 근사**하는 방법입니다.
 >   + `대표적인 알고리즘`: **Deep Q-Network (DQN)**
 >     - **장점:** 상태 공간이 크더라도 메모리 사용량을 줄이고 일반화 가능
@@ -313,7 +308,7 @@ Q-Learning은 **Model-Free RL(모델이 없는 강화학습)** 기법입니다.
 > 이미지 출처 : [이것저것 테크 블로그 - DQN](https://ai-com.tistory.com/entry/RL-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-1-DQN-Deep-Q-Network)
 
 > (참고) **Q-Learning은 고전 강화학습(classic reinforcement learning) 기법** 중 하나로 간주됩니다.
-> 
+>
 > * (WHY?) 왜냐하면 Q-learning은 강화학습이 본격적으로 연구되기 시작한 **1980~1990년대**에 등장한 알고리즘이며, 비교적 단순한 방법으로 상태-행동(State-Action) 값(Q-Value)을 학습하는 방식이기 때문입니다.
 
 > 💡 **Q-Learning과 Deep Q-Network의 차이**
@@ -353,4 +348,3 @@ Q-Learning을 충분히 이해하고 나면, 최근 강화학습의 꽃인 심�
 이를 바탕으로 더욱 깊이 있는 학습을 진행해 보시길 바랍니다!
 
 읽어주셔서 감사합니다 😎
-

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[꿀팁] Confluence 단축키📖 (북마크 추천!!)"
 date: "2024-05-31"
 tags:
@@ -9,9 +9,6 @@ year: "2024"
 
 # [꿀팁] Confluence 단축키📖 (북마크 추천!!)
 
-
-
-
 Confluence 단축키 완벽 가이드
 =====================
 
@@ -20,7 +17,6 @@ Confluence 단축키 완벽 가이드
 이번 가이드에서는 이런 Confluence의 단축키들을 정리해보았습니다! 키보드 단축키를 활용하면 작업 효율성을 크게 향상시킬 수 있습니다. 전에도 한번 정리해보려고 했었다가 실패했었는데 알고보니까 Confluence는 `Cloud`와 `On-Premise` 버전 간의 단축키 차이점이 있더라고요!! 😵
 
 ![Confluence](https://velog.velcdn.com/images/euisuk-chung/post/47008992-e8c4-4d12-ad3a-5102220c4345/image.gif)  
-
 Source: <https://www.atlassian.com/ko/software/confluence/premium>
 
 본 게시글은 `Cloud와 On-Premise 버전 간의 단축키 차이점`과 `페이지 뷰(View) 모드 및 페이지 편집(Edit) 모드`에서 사용하는 단축키를 구분하여 설명합니다. 아마 해당 제품을 사용하시는 기업들은 대부분 Cloud 모드를 사용하고 있으리라고 생각합니다!! (지극히 개인적인 생각 🤗)
@@ -118,4 +114,3 @@ Confluence Cloud와 On-Premise 버전 간에는 일부 단축키의 차이가 �
 더 이상 노가다로 하나하나 컨텐츠 추가하지 맙시다 🥲🥲
 
 해당 글로 도움이 되셨길 바랍니다!! 🥰
-

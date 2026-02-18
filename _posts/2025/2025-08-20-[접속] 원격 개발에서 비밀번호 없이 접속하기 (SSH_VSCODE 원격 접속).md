@@ -1,11 +1,12 @@
-﻿---
+---
 title: "[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)"
 date: "2025-08-20"
+tags:
+  - "환경"
 year: "2025"
 ---
 
 # [접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)
-
 
 ![SSH Remote Connection](https://velog.velcdn.com/images/euisuk-chung/post/fa875e0d-fcc0-48d7-8010-c81e7d9ae51c/image.png)
 

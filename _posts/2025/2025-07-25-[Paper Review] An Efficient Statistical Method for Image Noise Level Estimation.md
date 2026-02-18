@@ -1,11 +1,12 @@
-﻿---
+---
 title: "[Paper Review] An Efficient Statistical Method for Image Noise Level Estimation"
 date: "2025-07-25"
+tags:
+  - "paper-review"
 year: "2025"
 ---
 
 # [Paper Review] An Efficient Statistical Method for Image Noise Level Estimation
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9b2cb147-70b6-4e21-a0c3-1f9003ba35c0/image.png)
 

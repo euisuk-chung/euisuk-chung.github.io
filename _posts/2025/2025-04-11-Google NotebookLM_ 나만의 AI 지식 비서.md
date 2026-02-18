@@ -1,16 +1,10 @@
-﻿---
+---
 title: "Google NotebookLM: 나만의 AI 지식 비서"
 date: "2025-04-11"
-tags:
-  - "NotebookLM"
-  - "google"
 year: "2025"
 ---
 
 # Google NotebookLM: 나만의 AI 지식 비서
-
-
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a8d39129-d08c-4361-83dd-613f3cb6f180/image.png)
 
@@ -163,4 +157,3 @@ NotebookLM은 AI와 문서가 실시간으로 상호작용하는 **차세대 지
 연구자, 직장인, 학생, 콘텐츠 제작자 등 누구나 **자신만의 맞춤형 지식 비서**를 만들 수 있으며, 정보를 다루는 방식 자체를 바꿔주는 도구입니다.
 
 지금 바로 사용해보고, NotebookLM이 어떻게 학습, 분석, 커뮤니케이션 방식을 향상시킬 수 있는지 직접 체험해 보시기 바랍니다. 😎
-

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[OpenAI] GPT-4o 다음 버전 떴나!?"
 date: "2024-09-13"
 tags:
@@ -7,9 +7,6 @@ year: "2024"
 ---
 
 # [OpenAI] GPT-4o 다음 버전 떴나!?
-
-
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1f694bcf-bbd4-41d7-a032-1e6268fd2038/image.png)
 
@@ -60,6 +57,7 @@ oyfjdnisdr rtqwainr acxz mynzbhhx -> Think step by step
 
 oyekaijzdf aaptcg suaokybhai ouow aqht mynznvaatzacdfoulxxz -> Think step by step
 ```
+
 #### GPT-4o의 답변:
 
 * GPT-4o는 이 문제를 푸는 데 어려움을 겪으며, 해독 과정에서 확실한 규칙을 찾지 못하고 추가 정보나 규칙을 요구하는 경향이 있었습니다.
@@ -105,13 +103,14 @@ Final decoded message: "THERE ARE THREE R'S IN STRAWBERRY"
 ```
 Write a bash script that takes a matrix represented as a string with format '[1,2],[3,4],[5,6]' and prints the transpose in the same format.
 ```
+
 #### GPT-4o의 답변:
 
 * GPT-4o는 문제를 해결하는 과정에서 코드가 복잡하고, 효율성이 떨어지는 방식으로 접근합니다. 결과적으로 실행은 가능하지만, 최적화된 코드라고 보기 어렵습니다.
 
 ```
 #!/bin/bash
-matrix_string=$1
+matrix_string=\$1
 matrix_string=$(echo "$matrix_string" | tr -d '[]')
 IFS=',' read -r -a rows <<< "$matrix_string"
 num_columns=$(echo "${rows[0]}" | awk -F',' '{print NF}')
@@ -135,7 +134,7 @@ echo "$(IFS=','; echo "${transpose[*]}")"
 
 ```
 #!/bin/bash
-input="$1"
+input="\$1"
 matrix=($(echo $input | sed 's/[][]//g' | tr ',' ' '))
 rows=(${#matrix[@]}/2)
 for ((i=0; i<2; i++)); do
@@ -161,6 +160,7 @@ echo
 ```
 Let n be an even positive integer. Let p(x) = x²ⁿ + a₂ₙ₋₁x²ⁿ₋₁ + ⋯ + a₁x + a₀. Find all real numbers x for which p(1/x) = x²p(1/x).
 ```
+
 #### GPT-4o의 답변:
 
 * GPT-4o는 문제의 일부를 풀어내지만, 결과적으로 전체적인 해답에 이르지 못하고 불완전한 추론을 보여줍니다.
@@ -199,4 +199,3 @@ GPT-o1은 단순한 답변 생성에 그치지 않고, **사고 과정 자체를
 ![](https://velog.velcdn.com/images/euisuk-chung/post/fc141168-a7bb-46de-b51d-affd3aaadaaa/image.png)
 
 읽어주셔서 감사합니다! 📖
-

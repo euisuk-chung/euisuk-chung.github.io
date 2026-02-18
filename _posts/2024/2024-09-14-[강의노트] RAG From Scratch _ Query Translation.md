@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[강의노트] RAG From Scratch : Query Translation"
 date: "2024-09-14"
 tags:
@@ -9,11 +9,9 @@ year: "2024"
 
 # [강의노트] RAG From Scratch : Query Translation
 
-
-
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e2749238-5885-4d38-8441-d29c7180d541/image.png)
 
+* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 5 - 9 내용을 다루고 있습니다.
 
 | **비디오** | **요약** | **강의 링크** | **슬라이드** |
 | --- | --- | --- | --- |
@@ -37,10 +35,6 @@ year: "2024"
     2. **Sub-questions(하위 질문 생성)**: 복잡하거나 추상적인 질문을 더 작고 구체적인 하위 질문으로 분해하는 방법입니다. 이를 통해 더 정확하고 세부적인 문서를 검색할 수 있습니다. Google의 "least-to-most" 기법은 복잡한 질문을 더 작은 단계로 나누어 해결하는 대표적인 방식입니다.
     3. **Abstract Query(추상적인 질문 생성)**: 질문을 더 높은 수준으로 추상화하여, 일반적이거나 광범위한 문서를 검색하는 방법입니다. "Stepback prompting" 기법은 질문을 한 단계 더 높은 추상화 수준으로 변환하여 보다 넓은 범위의 문서를 검색하는 것을 목표로 합니다.
 
-  
-  
-
-
 * 본 강의는 **“1. Query Rewriting(쿼리 재작성)”** 기법 중 하나에 속하는 `Multi-query(다중 쿼리)`에 중점을 두고 설명합니다.
   + 여기서 다루는 핵심 개념은 **사용자의 질문을 여러 형태로 변환하여 문서 검색 성능을 개선**하는 방법입니다.
 
@@ -59,14 +53,14 @@ year: "2024"
 * 이 방식은 **여러 재작성된 질문을 독립적으로 검색**한 후, 각 검색 결과를 통합하여 더 신뢰성 있는 검색 결과를 도출하는 방식입니다.
 
 1. **블로그 문서 로드 및 벡터 스토어 생성/검색 준비**
-   
+
    ```
    import bs4
    from langchain_community.document_loaders import WebBaseLoader
    from langchain.text_splitter import RecursiveCharacterTextSplitter
    from langchain_openai import OpenAIEmbeddings
    from langchain_community.vectorstores import Chroma
-   
+
    loader = WebBaseLoader(
        web_paths=("https://lilianweng.github.io/posts/2023-06-23-agent/",),
        bs_kwargs=dict(
@@ -75,21 +69,22 @@ year: "2024"
            )
        ),
    )
-   
+
    blog_docs = loader.load()
-   
+
    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
        chunk_size=300,
        chunk_overlap=50
    )
-   
+
    splits = text_splitter.split_documents(blog_docs)
-   
+
    vectorstore = Chroma.from_documents(documents=splits,
                                        embedding=OpenAIEmbeddings())
-   
+
    retriever = vectorstore.as_retriever()
    ```
+
    * 블로그 데이터를 웹에서 가져와 `bs4`를 이용해 파싱한 후, 해당 데이터를 분할하여 벡터 스토어에 인덱싱합니다.
    * 분할된 문서를 벡터 스토어에 저장하고, 검색을 위한 설정을 수행합니다.
 
@@ -141,37 +136,30 @@ question = "What is task decomposition for LLM agents?"
 docs = retrieval_chain.invoke({"question":question})
 
 len(docs)
-
 ```
 
 * 생성된 여러 질문을 이용해 독립적인 검색을 수행하고, 그 결과를 통합하여 중복되지 않는 문서를 반환합니다.
-  
+
   1. **generate\_queries**: 주어진 질문에 대해 여러 관점의 쿼리를 생성합니다.  
-     
      a. ChatOpenAI 모델을 통해 프롬프트를 처리합니다.  
-     
      b. StrOutputParser로 모델의 출력을 파싱합니다.  
-     
      c. 결과를 개행 문자(\n)로 분할하여 여러 쿼리로 만듭니다.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/01b67473-aa52-4e93-acfb-fff027d487c8/image.png)
   2. **retriever**: 생성된 쿼리를 사용하여 문서를 검색합니다.  
-     
      a. **`retriever.map()`**을 사용하여 각 생성된 쿼리에 대해 문서를 검색합니다.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/cd277842-c886-4857-b471-48dec0ab2bb1/image.png)
-     
+
      ```
-       
+
      ```
   3. **get\_unique\_union**: 검색된 문서들 중 중복을 제거합니다.
-     
+
      a. **`get_unique_union`** 함수를 사용하여 검색된 모든 문서에서 중복을 제거합니다.
-     
+
      + `unique_docs = list(set(flattened_docs))` : 집합(set)을 사용해 중복을 제거한 후, 다시 원래 형식으로 변환합니다.
-     
+
      b. **`dumps`**와 **`loads`**를 사용함으로써, Document 객체의 내용을 기반으로 중복을 제거하고, 다시 원래의 객체 형태로 복원할 수 있습니다.
-     
+
      + 이는 특히 복잡한 객체 구조를 가진 Document 클래스를 다룰 때 유용합니다.
 
 4. **최종 RAG(질문 + 문서)**:
@@ -202,7 +190,6 @@ final_rag_chain = (
 )
 
 final_rag_chain.invoke({"question":question})
-
 ```
 
 * 검색된 문서를 바탕으로 질문에 대한 답을 생성하는 최종 RAG 체인을 정의합니다.
@@ -263,11 +250,11 @@ RRF는 검색 결과를 "점수"가 아닌 "순위"에 기반해 통합합니다
 2. **RRF 점수 계산 방식**
 
 * RRF에서 각 문서의 점수는 다음과 같이 계산됩니다:
-  
+
   score=∑1k+rank(d)score = \sum \frac{1}{k + rank(d)}score=∑k+rank(d)1​
 * 여기서 **k**는 작은 상수(일반적으로 60 정도), `rank(d)`는 문서 **d**가 각 검색 결과에서 차지한 순위입니다. 순위가 높을수록, 즉 더 상위에 랭크된 문서일수록 점수가 높아집니다.
 * 이 공식이 어떻게 작동하는지 예를 들어보겠습니다:
-  
+
   + 검색 결과에서 어떤 문서가 첫 번째 순위에 있으면, 점수는 160+1\frac{1}{60 + 1}60+11​ , 즉 약 0.016입니다.
   + 두 번째 순위라면, 점수는160+2\frac{1}{60 + 2}60+21​ , 즉 약 0.0157이 됩니다.
   + 이처럼 순위가 낮아질수록 점수가 줄어드는 것을 알 수 있습니다. 그래서 상위에 랭크된 문서가 더 큰 영향을 미치게 됩니다.
@@ -297,7 +284,6 @@ generate_queries = (
     | StrOutputParser()
     | (lambda x: x.split("\n"))
 )
-
 ```
 
 1. 다중 쿼리 생성:
@@ -377,7 +363,6 @@ final_rag_chain = (
 )
 
 final_rag_chain.invoke({"question":question})
-
 ```
 
 * 검색된 문서를 바탕으로 질문에 대한 답을 생성하는 최종 RAG 체인을 정의합니다.
@@ -495,7 +480,7 @@ questions = generate_queries_decomposition.invoke({"question":question})
 ![](https://velog.velcdn.com/images/euisuk-chung/post/38cb1bea-0454-4826-abdf-be7fff84d181/image.png)
 
 * 위 예시를 보면, generate\_queries\_decomposition를 통해서 “**LLM 기반 자율 에이전트 시스템의 주요 구성 요소는 무엇인가요?**” 이라는 질문이 아래와 같이 3가지 질문으로 분해되는 것을 확인할 수 있습니다:
-  
+
   + '1. 대형 언어 모델(LLM)의 핵심 요소는 무엇인가요?
   + '2. 자율 에이전트는 어떻게 LLM을 아키텍처에 통합하나요?'
   + '3. LLM 기반 자율 에이전트 시스템의 주요 기능은 무엇인가요?'
@@ -553,56 +538,53 @@ for q in questions:
     answer = rag_chain.invoke({"question": q, "q_a_pairs": q_a_pairs})
     q_a_pair = format_qa_pair(q, answer)
     q_a_pairs = q_a_pairs + "\n---\n" + q_a_pair
-    
-
 ```
 
 * 위에서 생성된 3개의 하위 질문에 대해 순차적으로 검색을 수행하고, **이전 질문의 답변을 다음 질문에 활용**하여 점진적으로 해결해 나갑니다.
-  
+
   + `q_a_pair = format_qa_pair(q, answer)` 를 통해 이전 답변을 감싸고, rag\_chain.invoke({"question": q, "q\_a\_pairs": `q_a_pairs`}) 시에 넣어줌으로써 이전 답변을 현재 답변을 해줄때 참고할 수 있게 해줍니다.
 * (예시) 2번째 프롬프트 Input
-  
+
   ```
   # 2번 질문의 답변을 위해 q_a_pair로 1번 Question과 Answer를 참고하고 있음
   {
     "question": 
   "2. How do autonomous agents integrate LLMs into their architecture?",
-  
+
     "q_a_pairs": 
   "\n---\nQuestion: 1. What are the core elements of a large language model (LLM)?\n
   Answer: The core elements of a large language model (LLM) include:\n\n1. **Architecture**: The foundational design of the LLM, typically involving layers of neural networks such as transformers. This architecture determines how the model processes and generates language.\n\n2. **Training Data**: The corpus of text data used to train the model. This data is crucial for the model to learn language patterns, grammar, facts, and even some reasoning capabilities.\n\n3. **Training Process**: The method by which the model learns from the training data, often involving techniques like supervised learning, unsupervised learning, or reinforcement learning. This process includes fine-tuning and adjusting the model's parameters to improve its performance.\n\n4. **Tokenization**: The process of breaking down text into smaller units (tokens) that the model can understand and process. Tokenization is essential for handling different languages, special characters, and various text structures.\n\n5. **Context Handling**: The mechanism by which the model understands and maintains the context of a conversation or text. This includes managing the finite context length and using techniques like attention mechanisms to focus on relevant parts of the input.\n\n6. **Memory**: Systems that allow the model to store and recall information beyond the immediate context window. This can involve techniques like vector stores and retrieval systems to access a larger knowledge pool.\n\n7. **Inference Mechanism**: The process by which the model generates responses based on the input it receives. This includes the model's ability to perform tasks like text generation, translation, summarization, and more.\n\n8. **Optimization and Planning**: For advanced applications, LLMs may include components for planning, breaking down tasks into subgoals, and refining actions based on self-reflection and feedback.\n\nThese elements work together to enable the LLM to perform a wide range of language-related tasks effectively."
   }
   ```
 * **최종 답변**: 1 → 2 → 3에 대해서 순차적으로 답변 해가면서 고도화해간 답변입니다.
-  
+
   + 내용을 보니 얼추 맞는 것 같습니다.
-    
+
     ```
     The essential technologies supporting an LLM-powered autonomous agent include:
-    
     ```
   1. Large Language Models (LLMs):
-     
+
      + Natural Language Interface: LLMs serve as the core controller or "brain" of the system, enabling the agent to understand, generate, and parse instructions and responses through natural language interactions. This interface facilitates communication between the LLM and external components such as memory systems, planning modules, and tools.
   2. Planning Technologies:
-     
+
      + Task Decomposition: Techniques like Chain of Thought (CoT) and Tree of Thoughts (ToT) are used to break down complex tasks into smaller, manageable subgoals. This helps the agent plan and execute tasks step-by-step.
      + Reflection and Refinement: The agent performs self-criticism and self-reflection to learn from past actions, refine strategies, and improve the quality and efficiency of its outputs.
   3. Memory Systems:
-     
+
      + Finite Context Length Handling: Due to the finite context length limitation of LLMs, mechanisms such as vector stores and retrieval are employed to access a larger knowledge pool and overcome context capacity constraints.
      + Retrieval Models: These models surface relevant context based on factors like recency, importance, and relevance to inform the agent's behavior and decision-making processes.
      + Reflection Mechanism: This involves synthesizing memories into higher-level inferences that guide future behavior, generating summaries of past events for better decision-making.
   4. Inter-Agent Communication:
-     
+
      + The LLM generates natural language statements to facilitate communication between different agents within the system, triggering new actions and responses based on the shared information.
   5. Environment Interaction:
-     
+
      + The LLM translates reflections and environmental information into actionable plans, considering relationships between agents and observations to optimize both immediate and long-term actions.
   6. Proof-of-Concept Implementations:
-     
+
      + Examples like AutoGPT, GPT-Engineer, and BabyAGI demonstrate the potential of LLM-powered autonomous agents, highlighting the integration of LLMs with other system components to handle complex tasks and improve over time through continuous learning and refinement.
-     
+
      Together, these technologies enable LLM-powered autonomous agents to plan, learn, adapt, and interact effectively, supporting their function as powerful general problem solvers.
 
 **3. 하위 질문별로 답변 생성 및 연속적인 처리**
@@ -643,7 +625,6 @@ final_chain = (
 # Invoke the chain to get the final answer
 final_answer = final_chain.invoke({"original_question": question, "q_a_pairs": q_a_pairs})
 print("Final Answer:\n", final_answer)
-
 ```
 
 **답변:**
@@ -740,7 +721,6 @@ final_rag_chain = (
 )
 
 final_rag_chain.invoke({"context":context,"question":question})
-
 ```
 
 **답변:** 관점이 다르게 답하지만 전 이전 버전의 대답이 좀 더 제 취향인걸로😎
@@ -782,27 +762,27 @@ Together, these hardware and software components form a cohesive system that sup
 ![](https://velog.velcdn.com/images/euisuk-chung/post/4aa3d9e3-ebfd-49b1-9db9-4c9845a24dc4/image.png)
 
 * Figure 2는 두 가지 작업(물리학 문제와 시간 기반 질문)에 대해 Step-Back Prompting을 어떻게 적용하는지를 보여줍니다. 각각의 예시에서 모델은 문제를 해결하기 위해 "Step-Back" 질문을 생성하고, 이를 바탕으로 추론을 진행합니다.
-  
+
   1. 물리학 문제 (MMLU 물리학 예시)
-     
+
      **문제**: "이상 기체의 압력 P는 온도가 2배로 증가하고 부피가 8배로 증가하면 어떻게 변하는가?"
-     
+
      + **원래 접근 방식**: 모델이 처음에 문제를 직관적으로 풀려고 시도합니다. 여기서 Chain-of-Thought(CoT) 방식으로 중간 단계에서 몇 가지 오류가 발생할 수 있습니다.
      + **Step-Back Prompting의 적용**: Step-Back Prompting은 먼저 "**① 이 문제의 기본 물리 법칙은 무엇인가?**"라는 추상적인 질문을 하도록 유도합니다.
        - 이 질문을 통해 모델은 **② 이상 기체 법칙 (Ideal gas law, PV=nRT)을 회상**하게 되고, 이를 바탕으로 문제를 해결하는 과정을 이어갑니다.
          1. **추상화 단계**: "이상 기체 법칙"이라는 물리학의 기본 원리를 추출합니다.
          2. **추론 단계**: 이상 기체 법칙을 적용하여, 온도와 부피 변화에 따른 압력 변화를 계산합니다. 결과적으로 압력은 16분의 1로 줄어듭니다.
-     
+
      이 과정에서 Step-Back Prompting을 통해 모델은 세부적인 계산에서 오류를 피하고, 추상적인 원리로부터 올바른 답을 도출할 수 있게 됩니다.
   2. 시간 기반 질문 (TimeQA 예시)
-     
+
      **문제**: "Estella Leopold는 1954년 8월에서 11월 사이에 어느 학교에 다녔는가?"
-     
+
      + **원래 접근 방식**: 모델은 주어진 특정 시간 범위 내에서 Estella Leopold의 교육 기록을 바로 찾으려고 시도합니다. CoT 방식으로 중간 단계에서 시간 범위 제한으로 인해 오류가 발생할 수 있습니다.
      + **Step-Back Prompting의 적용**: Step-Back Prompting은 먼저 "Estella Leopold의 교육 기록은 무엇인가?"라는 보다 추상적인 질문을 생성하게 합니다. 이를 통해 모델은 그녀의 전반적인 교육 기록을 회상하고, 이를 바탕으로 특정 시간 범위에 대한 정답을 추론합니다.
        1. **추상화 단계**: "Estella Leopold의 전반적인 교육 이력"이라는 고수준 개념을 도출합니다.
        2. **추론 단계**: 이 추상화된 교육 이력을 기반으로, 1954년 8월부터 11월까지 그녀가 Yale University에서 박사 과정을 밟고 있었다는 결론을 도출합니다.
-     
+
      이 예시에서 Step-Back Prompting은 세부적인 시간 제한에서 발생할 수 있는 오류를 피하고, 보다 넓은 관점에서 문제를 해결할 수 있도록 도와줍니다.
 
 **Step Back 기법의 직관**
@@ -876,7 +856,6 @@ generate_queries_step_back.invoke({"question": question})
   + 이 방식으로 Step-Back 질문을 적용하면 세부적인 작업 분해(task decomposition)의 구체적인 방법보다는, 전체적인 작업 처리 방식에 대한 답변을 도출할 가능성이 높습니다.
 
 ```
-
 response_prompt_template = """
 You are an expert of world knowledge. I am going to ask you a question. 
 Your response should be comprehensive and not contradicted with the following context if they are relevant. 
@@ -905,7 +884,6 @@ chain = (
 )
 
 chain.invoke({"question": question})
-
 ```
 
 * 원래 질문을 기반으로 **추상적인 질문**을 생성한 후, 그 질문을 바탕으로 검색을 수행합니다.
@@ -974,7 +952,6 @@ generate_docs_for_retrieval = (
 question = "What is task decomposition for LLM agents?"
 
 generate_docs_for_retrieval.invoke({"question":question})
-
 ```
 
 * 질문을 바탕으로 **가상의 과학적 문서**를 생성하는 프롬프트를 정의합니다.
@@ -1023,7 +1000,6 @@ Keywords: Task decomposition, Large Language Models, LLM agents, modularity, hie
 retrieval_chain = generate_docs_for_retrieval | retriever
 retireved_docs = retrieval_chain.invoke({"question":question})
 retireved_docs
-
 ```
 
 * 생성된 가상의 문서를 바탕으로 해당 문서와 관련이 높은 문서들을 검색합니다.
@@ -1051,7 +1027,6 @@ final_rag_chain = (
 
 # 최종 RAG 체인 실행
 final_rag_chain.invoke({"context":retireved_docs,"question":question})
-
 ```
 
 * 검색된 문서들을 바탕으로 원래 질문에 대한 최종 답변을 생성합니다.
@@ -1065,4 +1040,3 @@ final_rag_chain.invoke({"context":retireved_docs,"question":question})
 * 이 방식은 특히 질문이 짧거나 구조가 명확하지 않은 경우에 유용하며, **도메인에 맞게 가상 문서 생성 프롬프트를 조정**할 수 있다는 장점이 있습니다.
 
 ---
-

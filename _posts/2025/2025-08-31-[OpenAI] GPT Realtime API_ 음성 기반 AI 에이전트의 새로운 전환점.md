@@ -1,14 +1,10 @@
-﻿---
+---
 title: "[OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점"
 date: "2025-08-31"
-tags:
-  - "OpenAI"
-  - "chatGPT"
 year: "2025"
 ---
 
 # [OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f8335bf1-fe46-41f6-be88-b1336ec10916/image.png)
 
@@ -256,9 +252,9 @@ Customer: "Yeah, my daughter Rachel dropped her phone in the lake and I just nee
 
 AI: "Oh, no. I'm sorry that happened. Let's make sure we get a solid replacement quickly. Are you looking for something with stronger water resistance?"
 
-Customer: "Honestly, I'm just looking for something cheap, something under $300."
+Customer: "Honestly, I'm just looking for something cheap, something under \$300."
 
-AI: "Got it. Let me show you some options under $300..."
+AI: "Got it. Let me show you some options under \$300..."
 
 Customer: "Yeah, this Revel 8 phone from T-Mobile, is that compatible with T-Mobile satellite services?"
 
@@ -317,9 +313,9 @@ GPT-Realtime은 기존 대비 **20% 가격 인하**를 제공합니다:
 
 | 항목 | 가격 |
 | --- | --- |
-| 오디오 입력 토큰 | $32 / 1M 토큰 |
-| 캐시된 입력 토큰 | $0.40 / 1M 토큰 |
-| 오디오 출력 토큰 | $64 / 1M 토큰 |
+| 오디오 입력 토큰 | \$32 / 1M 토큰 |
+| 캐시된 입력 토큰 | \$0.40 / 1M 토큰 |
+| 오디오 출력 토큰 | \$64 / 1M 토큰 |
 
 > GPT-Realtime의 가격 모델에서 오디오는 초당 24토큰으로 계산되므로, 긴 대화에서는 토큰 사용량이 급격히 증가할 수 있습니다.
 

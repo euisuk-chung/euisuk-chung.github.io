@@ -1,8 +1,6 @@
 ---
 title: "[OpenAI] Town Hall 요약: Sam Altman이 말하는 AI 시대의 미래"
 date: "2026-01-28"
-tags:
-  - "OpenAI"
 year: "2026"
 ---
 

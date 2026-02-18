@@ -1,16 +1,14 @@
-﻿---
+---
 title: "[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기"
 date: "2024-06-09"
 tags:
   - "python"
   - "visualization"
+  - "환경"
 year: "2024"
 ---
 
 # [파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기
-
-
-
 
 안녕하세요😛 오늘은 우분투에서 한글 폰트 설치하고 matplotlib에서 해당 폰트를 사용하는 방법을 정리해보겠습니다!
 
@@ -135,22 +133,49 @@ plt.show()
 귀찮으시다고요?! 저도 귀찮아서 주피터노트북에서 한번에 실행할 수 있게 코드를 짰습니다 😝
 
 ```
-# 한글 폰트가 없을 때
-! sudo apt-get install fonts-nanum*
-
-import matplotlib
+"""
+Matplotlib 한글 폰트 설정 - 간단 버전
+"""
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 import subprocess
+import glob
+import shutil
+from pathlib import Path
 
-mpl_file = matplotlib.__file__
-mpl_file_loc = '/'.join(mpl_file.split('/')[:-1]) + '/mpl-data/fonts/ttf/'
-print(matplotlib.__file__)
-print(mpl_file_loc)
+# 1. 폰트 설치 (없을 경우)
+try:
+    subprocess.run(['sudo', 'apt-get', 'install', '-y', 'fonts-nanum'], 
+                   capture_output=True, check=True)
+except: pass
 
-# 폰트 복사
-subprocess.run(['cp', '/usr/share/fonts/truetype/nanum/Nanum*', mpl_file_loc], shell=True)
+# 2. matplotlib 폰트 디렉토리에 복사
+try:
+    import matplotlib
+    mpl_font_dir = Path(matplotlib.__file__).parent / 'mpl-data' / 'fonts' / 'ttf'
+    font_files = glob.glob('/usr/share/fonts/truetype/nanum/*.ttf')
+    
+    for font_file in font_files:
+        shutil.copy(font_file, mpl_font_dir)
+    
+    print(f"✅ {len(font_files)}개 폰트 복사 완료")
+except Exception as e:
+    print(f"⚠️ 폰트 복사 실패: {e}")
+
+# 3. 폰트 캐시 재생성 및 설정
+try:
+    fm._rebuild()
+except: pass
+
+# 4. matplotlib 설정
+plt.rcParams['font.family'] = 'NanumGothic'
+plt.rcParams['axes.unicode_minus'] = False
+
+print("✅ 한글 폰트 설정 완료: NanumGothic")
 ```
+
+![](https://velog.velcdn.com/images/euisuk-chung/post/486a4646-9c1e-4ad4-b3d2-0b76784de085/image.png)
 
 가상환경을 사용하시는 분의 경우 가상환경마다 설정을 해줘야하는 번거로움이 있긴하지만, 한글 사용이 필수적이라면 위에 소개해드린 단계를 따라 폰트를 설정해보세요!!
 
 감사합니다 😛
-

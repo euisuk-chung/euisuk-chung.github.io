@@ -1,11 +1,12 @@
-﻿---
+---
 title: "[Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
 date: "2025-08-29"
+tags:
+  - "paper-review"
 year: "2025"
 ---
 
 # [Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/886942db-9c26-422a-831a-3dd7e89263a4/image.png)
 

@@ -1,16 +1,13 @@
-﻿---
+---
 title: "[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약"
 date: "2023-11-29"
 tags:
   - "Conference"
-  - "Conference | OpenAI"
+  - "OpenAI"
 year: "2023"
 ---
 
 # [컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약
-
-
-
 
 OpenAI DevDay Opening KeyNote
 =============================
@@ -72,4 +69,3 @@ OpenAI DevDay Opening KeyNote
 ---
 
 이 요약은 영상의 주요 내용을 간략하게 정리한 것입니다. 영상에서 다루는 각 주제에 대한 더 자세한 내용과 분석은 직접 영상을 시청하여 확인하시는 것이 좋습니다.
-

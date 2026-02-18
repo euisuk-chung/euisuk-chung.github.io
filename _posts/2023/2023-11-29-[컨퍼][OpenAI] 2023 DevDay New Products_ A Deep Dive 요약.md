@@ -1,16 +1,13 @@
-﻿---
+---
 title: "[컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약"
 date: "2023-11-29"
 tags:
   - "Conference"
-  - "Conference | OpenAI"
+  - "OpenAI"
 year: "2023"
 ---
 
 # [컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약
-
-
-
 
 OpenAI DevDay: 새로운 API와 기능 소개
 =============================
@@ -60,4 +57,3 @@ OpenAI DevDay: 새로운 API와 기능 소개
 ---
 
 이 영상은 OpenAI의 새로운 기능과 API에 대한 심층적인 소개를 제공하며, 개발자들이 이를 활용하여 더 효율적이고 강력한 애플리케이션을 구축할 수 있도록 돕습니다.
-

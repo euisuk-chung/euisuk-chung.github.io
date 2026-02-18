@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head"
 date: "2025-09-14"
 tags:
@@ -7,7 +7,6 @@ year: "2025"
 ---
 
 # [Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head
-
 
 > <https://arxiv.org/pdf/2403.06892>
 

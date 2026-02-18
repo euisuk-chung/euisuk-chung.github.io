@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[강의노트] RAG From Scratch : Coursework"
 date: "2024-09-14"
 tags:
@@ -8,9 +8,6 @@ year: "2024"
 ---
 
 # [강의노트] RAG From Scratch : Coursework
-
-
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a2375913-1244-4a82-b3cd-c278e98e252c/image.png)
 
@@ -56,4 +53,3 @@ RAG From Scratch 비디오 시리즈는 Retrieval Augmented Generation에 대한
 RAG 분야는 계속 진화하고 있으며, 최신 발전과 모범 사례에 대한 지속적인 업데이트가 중요합니다. RAG From Scratch 시리즈는 질문 응답, 콘텐츠 생성, 정보 검색 등 다양한 도메인에서 RAG 기술을 탐구하고 적용하고자 하는 모든 사람들에게 훌륭한 기초 자료가 됩니다.
 
 이 시리즈에서 얻은 통찰을 활용하고 논의된 실용적 응용 사례를 고려함으로써, 조직들은 RAG의 힘을 활용하여 AI 시스템을 강화하고 사용자 경험을 개선하며, 대형 언어 모델과 외부 지식 소스를 결합하여 잠재력을 극대화할 수 있습니다.
-

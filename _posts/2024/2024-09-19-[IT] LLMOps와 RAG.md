@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[IT] LLMOps와 RAG"
 date: "2024-09-19"
 tags:
@@ -9,15 +9,12 @@ year: "2024"
 
 # [IT] LLMOps와 RAG
 
-
-
-
 최근 몇 년간 대규모 언어 모델(LLM)의 발전은 다양한 산업에서 큰 변화를 일으키고 있습니다. LLM은 사람과 유사한 방식으로 텍스트를 생성하거나 질문에 답변할 수 있으며, 고객 지원, 의료, 법률, 콘텐츠 생성 등 수많은 분야에서 널리 활용되고 있습니다. 그러나 LLM의 성능을 극대화하고 지속적으로 개선하기 위해서는 **LLMOps**와 같은 체계적인 운영 관리가 필수적입니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f7421784-bc9b-44b4-81cc-2d7e6a6a3503/image.png)  
-
 출처 : Databricks ([링크](https://www.databricks.com/kr/glossary/llmops))
 
+이전에 [AIops vs MLops](https://velog.io/@euisuk-chung/MLOps-vs-AIOps) 라는 내용을 주제로 글을 작성한 적이 있었는데요. 거기에 LLMOps를 추가하자면, 다음과 같은 특징을 가지고 있습니다:
 
 **LLMOps (Large Language Model Operations)**는 대규모 언어 모델(LLM)의 개발, 배포, 관리에 특화된 운영 방식입니다.
 
@@ -31,7 +28,6 @@ year: "2024"
 참고로, 최근에 Foundation Model이 인기가 많아지면서, FMOps라는 용어도 거론이 많이 되는데, 개념만 살짝 언급하고 넘어가겠습니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e87f2843-bf2f-4c34-a06a-a80338cb4a23/image.png)  
-
 출처: Nvidia 블로그 ([링크](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblogs.nvidia.co.kr%2Fblog%2Fwhat-are-foundation-models%2F&psig=AOvVaw0xK3j4rURg-Ie0_-mvj8aT&ust=1726824755990000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCIiLldLZzogDFQAAAAAdAAAAABAI))
 
 **FMOps (Foundation Model Operations)**는 파운데이션 모델의 개발, 배포, 관리, 모니터링을 효율적으로 수행하기 위한 프레임워크와 프로세스입니다.
@@ -126,9 +122,7 @@ LLM의 성공은 학습 데이터의 품질에 크게 좌우됩니다. 따라서
 ### 2.1 RAG의 동작 원리
 
 RAG는 두 가지 주요 단계를 통해 작동합니다:  
-
 1. **정보 검색(Retrieval)**: 사용자가 입력한 쿼리와 유사한 정보를 벡터 데이터베이스에서 검색합니다. 이때 벡터화된 문서와 쿼리를 비교하여 관련성이 높은 정보를 찾습니다.  
-
 2. **정보 생성(Generation)**: 검색된 정보와 사용자 쿼리를 결합하여 LLM이 최종 텍스트를 생성합니다. 이 과정에서 RAG는 외부 데이터를 실시간으로 활용하여 더 정확한 응답을 제공할 수 있습니다.
 
 ### 2.2 구조화된 데이터와 비구조화된 데이터
@@ -148,7 +142,6 @@ RAG는 **구조화된 데이터**와 **비구조화된 데이터** 모두를 처
 * **처리 방법**: 구조화된 데이터는 쿼리 요청을 통해 신속하게 검색되고, 필요한 정보가 반환됩니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0b3efe7e-116a-4b18-ad61-9be23ea6082f/image.png)  
-
 출처: 정보통신기술협회 용어사전 ([링크](https://terms.tta.or.kr/dictionary/dictionaryView.do?subject=%EB%B9%84%EC%A0%95%ED%98%95+%EB%8D%B0%EC%9D%B4%ED%84%B0))
 
 ### 2.3 RAG 데이터 파이프라인
@@ -163,7 +156,6 @@ RAG 시스템에서 데이터는 검색이 가능한 형식으로 전처리되�
 4. **벡터 검색**: 사용자의 쿼리도 벡터화한 후 벡터 데이터베이스에서 유사성을 기준으로 관련 문서나 청크를 검색합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/72f68722-5d68-4600-ac8f-c6ebacd918ae/image.png)  
-
 출처 : Databricks ([링크](https://docs.databricks.com/en/generative-ai/retrieval-augmented-generation.html#requirements))
 
 ---
@@ -183,7 +175,6 @@ RAG 시스템에서 데이터는 검색이 가능한 형식으로 전처리되�
 6. **후처리**: 생성된 응답에 비즈니스 규칙을 적용하거나 추가적인 검증 단계를 거쳐 최종 응답을 제공합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/22a79fab-e762-4fcb-aecd-ded3ae5ca077/image.png)  
-
 출처 : Databricks ([링크](https://docs.databricks.com/en/generative-ai/retrieval-augmented-generation.html#requirements))
 
 ---
@@ -206,7 +197,6 @@ RAG 시스템의 성능을 유지하고 지속적으로 개선하기 위해서�
 고객의 질문에 실시간으로 관련 정보를 검색하고, 정확한 답변을 제공하는 챗봇을 RAG 기반으로 구현할 수 있습니다. 예를 들어, 고객이 특정 제품에 대한 정보를 요청하면, RAG 시스템은 회사 내부의 매뉴얼, FAQ 등을 검색하여 고객에게 적절한 답변을 제공합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/16717c4a-c476-4385-93e1-d98bb2f7fbcc/image.png)  
-
 출처 : LG CNS ([링크](https://www.google.com/imgres?q=%EC%B1%97%EB%B4%87&imgurl=https%3A%2F%2Fwww.lgcns.com%2Fwp-content%2Fuploads%2F2022%2F04%2FIMG_AI%25EB%25B9%2585%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B004_%25EC%25B1%2597%25EB%25B4%258703.png&imgrefurl=https%3A%2F%2Fwww.lgcns.com%2Fbusiness%2Faibigdata%2Fchatbot%2F&docid=E8zKuI3Ikh7HoM&tbnid=JCWvzy09H5q4TM&vet=12ahUKEwjR97Tr386IAxX7dPUHHTiQGwIQM3oFCIABEAA..i&w=1099&h=474&hcb=2&ved=2ahUKEwjR97Tr386IAxX7dPUHHTiQGwIQM3oFCIABEAA))
 
 ### 5.2 법률 및 의료 분야
@@ -214,7 +204,6 @@ RAG 시스템의 성능을 유지하고 지속적으로 개선하기 위해서�
 RAG는 법률 및 의료 분야에서도 매우 유용하게 활용될 수 있습니다. 법률 문서나 의료 논문에서 관련 정보를 검색하고, 이를 기반으로 법률 상담이나 진료 정보를 제공할 수 있습니다. 이때 RAG는 최신 판례나 의료 지침을 실시간으로 검색하여 신뢰성 있는 정보를 제공합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/15c15c94-4ebe-4821-aee0-e534c39c63b7/image.png)  
-
 출처 : (논문) How Does NLP Benefit Legal System: A Summary of Legal Artificial Intelligence?
 
 ---
@@ -234,58 +223,43 @@ LLMOps와 RAG는 LLM을 보다 효과적으로 운영하고, 그 한계를 극�
 아래 주요 용어를 통해 개념을 쉽게 이해하고, 이러한 기술들이 다양한 응용 분야에서 어떻게 사용될 수 있는지 명확하게 파악할 수 있습니다.
 
 **1. LLM (Large Language Model)**  
-
 대규모 언어 모델로, 수십억 개의 매개변수를 학습하여 인간과 유사한 텍스트를 생성할 수 있는 모델입니다. 번역, 요약, 질문 응답 등 다양한 자연어 처리(NLP) 태스크에서 사용되며, OpenAI의 GPT나 Google의 BERT 같은 모델이 대표적입니다.
 
 **2. RAG (Retrieval-Augmented Generation)**  
-
 RAG는 외부 데이터베이스에서 실시간으로 관련 정보를 검색하고, 이를 바탕으로 LLM이 더 정확한 응답을 생성할 수 있도록 돕는 프레임워크입니다. 이는 LLM이 학습한 데이터 외에도 최신 정보나 특정 도메인 지식을 활용할 수 있게 해줍니다.
 
 **3. RLHF (Reinforcement Learning from Human Feedback)**  
-
 RLHF는 인간의 피드백을 바탕으로 모델을 학습시켜 성능을 향상시키는 기법입니다. 이를 통해 모델은 더 인간적인 답변을 생성하거나, 특정 상황에서 불필요한 오류를 줄일 수 있습니다.
 
 **4. 프롬프트 체이닝 (Prompt Chaining)**  
-
 프롬프트 체이닝은 여러 개의 프롬프트를 순차적으로 연결하여 복잡한 작업을 단계적으로 수행하는 방법입니다. 이 기술을 통해 모델은 더 복잡한 문제를 해결하고, 단계적인 논리적 프로세스를 따를 수 있습니다.
 
 **5. 가드레일 (Guardrails)**  
-
 가드레일은 모델의 출력을 제어하고 안전성을 보장하는 장치로, 윤리적 문제를 방지하거나 잘못된 응답을 제한하는 역할을 합니다. 이를 통해 모델의 출력이 비즈니스 규칙이나 규제 요구 사항을 준수할 수 있습니다.
 
 **6. 토크나이저 (Tokenizer)**  
-
 텍스트를 모델이 처리할 수 있는 작은 단위인 '토큰'으로 분할하는 도구입니다. 모델의 입력을 텍스트에서 토큰으로 변환하고, 출력된 토큰을 다시 텍스트로 변환하는 과정에서 핵심적인 역할을 합니다.
 
 **7. 임베딩 (Embedding)**  
-
 임베딩은 텍스트, 이미지, 오디오 등의 데이터를 고차원 벡터 공간으로 변환하는 기술입니다. 이를 통해 텍스트의 의미를 수치화하여 모델이 처리할 수 있는 형식으로 만들고, 유사한 의미를 가진 데이터는 벡터 공간에서 가까운 위치에 놓이게 됩니다.
 
 **8. 파인튜닝 (Fine-tuning)**  
-
 파인튜닝은 사전 학습된 LLM을 특정 도메인이나 태스크에 맞게 추가로 학습시키는 과정입니다. 예를 들어, 의료나 법률과 같은 특정 분야에 특화된 모델을 만들기 위해 파인튜닝을 사용합니다.
 
 **9. 프롬프트 엔지니어링 (Prompt Engineering)**  
-
 프롬프트 엔지니어링은 LLM에 효과적인 지시를 주기 위해 입력 텍스트(프롬프트)를 설계하고 최적화하는 과정입니다. 이 과정은 모델이 주어진 작업에서 최상의 성능을 발휘하도록 도와줍니다.
 
 **10. 벡터 데이터베이스 (Vector Database)**  
-
 벡터 데이터베이스는 텍스트, 이미지, 오디오 등의 데이터를 벡터로 변환하여 저장하고 빠르게 검색할 수 있는 특수한 데이터베이스입니다. RAG 시스템에서 검색된 정보를 기반으로 LLM이 더욱 정교한 응답을 생성할 수 있도록 도와줍니다. 벡터화된 데이터는 유사성을 기준으로 검색되므로, 벡터 데이터베이스는 대규모 데이터에서 효율적인 검색을 가능하게 합니다.
 
 **11. 제로샷/퓨샷 학습 (Zero-shot/Few-shot Learning)**  
-
 제로샷 학습은 모델이 특정 태스크에 대해 추가 학습 없이 수행할 수 있는 능력을 의미하며, 퓨샷 학습은 적은 수의 예시만으로 태스크를 수행하는 능력을 의미합니다. 이를 통해 모델은 새로운 작업에 대한 적응력을 높일 수 있습니다.
 
 **12. 모델 압축 (Model Compression)**  
-
 모델 압축은 대규모 LLM을 더 작고 효율적인 모델로 변환하는 기술입니다. 이는 모델의 배포 및 실행 속도를 개선하고, 자원 사용을 줄이기 위해 필요합니다.
 
 **13. 연속 학습 (Continuous Learning)**  
-
 연속 학습은 모델을 지속적으로 업데이트하여 새로운 데이터와 트렌드를 반영하는 과정입니다. 이를 통해 모델은 최신 정보를 반영하고, 시간이 지남에 따라 성능을 유지하거나 향상시킬 수 있습니다.
 
 **14. 파싱 (Parsing)**  
-
 파싱은 데이터를 분석하여 구조화된 형식으로 변환하는 과정입니다. 자연어 처리에서는 텍스트를 문법적 단위로 분석하여 의미를 파악하고, 컴퓨터 과학에서는 프로그램의 소스 코드를 구문 분석하여 실행 가능한 코드로 변환합니다. 예를 들어, JSON 파일을 파싱하여 키-값 쌍으로 데이터를 추출하는 것이 그 예입니다.
-

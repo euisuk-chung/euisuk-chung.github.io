@@ -1,16 +1,17 @@
-﻿---
+---
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)"
 date: "2021-08-27"
+tags:
+  - "Distillation"
+  - "paper-review"
 year: "2021"
 ---
 
 # [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)
 
-
-
-
 안녕하세요 :) 오늘은 지난번 포스팅에 이어서 "Transferring Inductive Bias Through Knowledge Distillation" 논문에 대한 정리를 이어나가 보도록 하겠습니다. 이전 포스팅에서 본 논문에서 다루게 될 주요 개념들인 `Knowledge Distillation`과 `Inductive Bias`에 대한 설명을 해보았는데요. 이번 포스팅에서는 해당 기법들을 적용하여 저자가 수행한 실험들 중 첫번째 시나리오에 대해서 이갸기를 풀어가보도록 하겠습니다.
 
+이전 포스트가 궁금하신 분은 [여기](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation)를 통해 확인해 보실 수 있습니다.
 
 논문의 목적(복습)
 ----------
@@ -58,28 +59,23 @@ Scenerio 1
 자! 이제 문법 공부가 끝났으니 본격적으로 모델에 대해 이야기 해볼까요? RNN(Recurrent Neural Network)은 시퀀스(Sequence) 모델입니다. 즉, 그 말은 입력과 출력을 시퀀스 단위로 처리를 한다는 의미인데요. 여기서 비교 모델로 사용하는 LSTM 역시 이러한 RNN을 근본으로 하는 모델이므로, 가볍게 RNN에 대한 개념과 RNN의 Inductive Bias(귀납적 편향)에 대해 이야기하고 넘어가도록 하겠습니다.
 
 아래 그림을 참고하면서 설명드리도록 하겠습니다. 해당 그림에서 공통적인 부분에 대해 먼저 설명드리자면, 빨간색 박스는 **input**, 파란색 박스는 **output**, 초록색 박스는 **(hidden) state**입니다.  
-
 ![RNN Process](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F49d30656-0b96-4dcc-aa2f-769a48cfd967%2Fimage.png)
 
 > Picture from CS231n
 
 1. `one-to-one` : Vanila Neural Network  
-   
    우리가 통상적으로 알고 있는 뉴럴네트워크로, 하나의 input에 하나의 output이 대응되는 구조입니다.
 2. `one-to-many` : Recurrent Neural Network  
-   
    하나의 input에 여러 개의 output이 대응되는 구조로, 대표적인 예시로 이미지가 하나가 들어갔을 때 이를 설명하는 문장(sequence of words)이 결과로 나오는 Image Captioning Task가 존재합니다.
 
 ![Image Captioning](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F963d7ee2-63ca-460e-99b5-5728ca2f1a33%2Fimage.png)
 
 3. `many-to-one` : Recurrent Neural Network  
-   
    여러 개의 input에 하나의 output이 대응되는 구조로, 대표적인 예시로 문장이 들어갔을 때 해당 문장의 어조(감성)을 분류하는 Sentiment Analysis가 존재합니다.
 
 ![Sentiment Analysis](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F21357065-145e-4e36-a126-d2c92d622a4b%2Fimage.png)
 
 4. `many-to-many` : Recurrent Neural Network  
-   
    여러 개의 input에 여러 개의 output이 대응되는 구조로, 대표적인 예시로 영어 문장이 들어갔을 때 이를 한국어 문장으로 번역하는 Machine Translation이 존재합니다.
 
 ![Machine Translation](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fb475aff3-1efa-4849-a862-422f732d08d1%2Fimage.png)
@@ -136,22 +132,14 @@ Transformer의 경우, RNN에 비해 제약 또는 Inductive Bias가 훨씬 약�
 **각각의 Objective에 따른 실험 모델군**
 
 * Language Modelling (LM) Setup :  
-  
   1. `LSTM` : Base LSTM  
-  
   2. `Small LSTM` : LSTM with smaller parameter  
-  
   3. `Transformer` : Base Transformer  
-  
   4. `Small Transformer` : Transformer with smaller parameter
 * Classification Setup :  
-  
   1. `LSTM` : Base LSTM (Sequentiality + Memory bottleneck + Recursion)  
-  
   2. `Transformer`: Base Transformer (No Inductive Bias)  
-  
   3. `Transformer-seq`: Base Transformer에 Sequentiality를 강제로 추가해준 모델 (Sequentiality)  
-  
   4. `Universal Transformer-seq`: Transformer-seq에 Recursion을 강제로 추가해준 모델 (Sequentiality + Recursion)
 
 ![Classification Settings](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F9b88bd21-0e94-46c8-aa9c-12c77466a26e%2Fimage.png)
@@ -176,7 +164,6 @@ Transformer의 경우, RNN에 비해 제약 또는 Inductive Bias가 훨씬 약�
 ![CLS setup result](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F1281b41f-2e78-4e07-9ade-2d0e97f5afa5%2Fimage.png)
 
 * Inductive Bias가 하나씩 추가될때마다 평가지표의 성능이 좋아지는 것을 확인할 수 있습니다.  
-  
   - Accuracy의 증가
   + Expected Calibration Error(ECE)의 감소
 
@@ -192,11 +179,9 @@ Transformer의 경우, RNN에 비해 제약 또는 Inductive Bias가 훨씬 약�
 * 또한, 기존의 Tranformer의 perplexity는 teacher model에 근사하게 된 것을 알 수 있습니다.
 
 **Language Modelling(LM) Setup**  
-
 ![LM Setup](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fca65ab04-0d32-47ea-a79c-9aa8f96cbad7%2Fimage.png)
 
 **Classification Setup**  
-
 ![Classification Setup](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F01878288-e02d-4ed1-900e-a4f3f9c57e7d%2Fimage.png)
 
 * 좀 더 강한 inductive bias를 가지고 있는 모델을 Teacher 모델로 한 Student Model은 Distillation을 수행하지 않은 모델에 비해 성능이 향상(Acc ↑, ECE ↓)된 것을 확인할 수 있습니다.
@@ -210,4 +195,3 @@ Transformer의 경우, RNN에 비해 제약 또는 Inductive Bias가 훨씬 약�
 오늘은 시나리오 1에 대하여 자세하게 다루어보았는데요. 빠른 시일 내에 시나리오 2까지 업로드하도록 하겠습니다 :D
 
 긴 글 읽어주셔서 감사합니다 ㅎㅎㅎ
-

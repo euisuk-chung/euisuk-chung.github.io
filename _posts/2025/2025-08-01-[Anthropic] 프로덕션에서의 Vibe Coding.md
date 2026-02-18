@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Anthropic] 프로덕션에서의 Vibe Coding"
 date: "2025-08-01"
 tags:
@@ -9,7 +9,6 @@ year: "2025"
 ---
 
 # [Anthropic] 프로덕션에서의 Vibe Coding
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6a3b3b3b-86f5-41cb-a7e3-07bca03060dd/image.png)
 

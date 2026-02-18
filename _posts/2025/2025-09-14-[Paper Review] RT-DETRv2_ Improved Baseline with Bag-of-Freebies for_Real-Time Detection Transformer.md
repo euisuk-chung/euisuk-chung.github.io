@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for
 Real-Time Detection Transformer"
 date: "2025-09-14"
@@ -7,7 +7,6 @@ year: "2025"
 
 # [Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for
 Real-Time Detection Transformer
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/ebd7095d-0c76-4ebd-bc20-9fedf1c8971b/image.png)
 

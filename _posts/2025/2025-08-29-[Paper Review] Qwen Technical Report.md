@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] Qwen Technical Report"
 date: "2025-08-29"
 tags:
@@ -7,7 +7,6 @@ year: "2025"
 ---
 
 # [Paper Review] Qwen Technical Report
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/579f08e9-44bf-44e2-ad07-7d9ab9c8c731/image.png)
 

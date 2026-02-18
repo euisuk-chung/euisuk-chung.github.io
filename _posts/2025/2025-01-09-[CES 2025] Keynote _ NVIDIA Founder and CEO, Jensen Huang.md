@@ -1,16 +1,13 @@
-﻿---
+---
 title: "[CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang"
 date: "2025-01-09"
 tags:
+  - "CES"
   - "Conference"
-  - "Conference | CES"
 year: "2025"
 ---
 
 # [CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang
-
-
-
 
 CES 2025 엔비디아 CEO 기조연설
 ----------------------
@@ -20,7 +17,7 @@ CES 2025 엔비디아 CEO 기조연설
 연설은 토큰의 개념에서 시작하여 엔비디아의 기술적 진화, GPU와 AI 융합, 산업 디지털화, 그리고 물리적 AI에 대한 심도 있는 논의를 포함하고 있습니다. 아래는 연설의 주요 내용을 상세히 정리한 내용입니다.
 
 > **링크** : <https://youtu.be/k82RwXqZHY8>
-> 
+>
 > * **Timeline**
 >   + 0:00:00 CES 2025 Keynote Introduction
 >   + 0:09:33 GeForce RTX
@@ -57,21 +54,16 @@ CES 2025 엔비디아 CEO 기조연설
 젠슨 황은 엔비디아의 역사와 GPU의 발전 과정을 소개하며, 회사의 기술적 진화가 AI 혁신에 미친 영향을 설명했습니다.
 
 * **1993년:** NV1 출시로 PC에서 게임 콘솔 기능 구현.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/5f938fa4-437d-44b0-94c9-3738db5d27c2/image.png)
 * **1999년:** 프로그래머블 GPU 발명으로 현대 컴퓨터 그래픽의 기반 마련.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/b6cde8b1-4242-47b4-b42e-c5f0ed447091/image.png)
 * **2006년:** CUDA 출시로 GPU의 프로그래밍 가능성을 확장, AI 및 과학적 계산에 활용.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/b95f202a-d707-4048-846a-747312d421f8/image.png)
 * **2012년:** AlexNet이 CUDA를 사용하여 딥러닝 혁명을 촉발.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/0d78bfab-27d4-4f24-923d-7b7bea7598e1/image.png)
 * **2018년:** 구글의 Transformer 모델 발표로 AI와 컴퓨팅 전체의 패러다임 전환.
-  
+
   + Transformer는 텍스트, 이미지, 소리뿐 아니라 물리적 데이터까지 이해 및 생성 가능.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/2dde611f-bc62-42ff-9484-7952168cdbf0/image.png)
 
 ---
@@ -91,7 +83,6 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 > **트랜지스터와 연산 성능**
 
 `Blackwell`은 **92억 개(92B)의 트랜지스터**와 **4,000 AI TOPS 이상의 연산 성능**을 지원하며, 이전 세대 대비 약 **3배의 성능 향상**을 달성했습니다. 이로써 AI 워크로드와 고성능 그래픽 처리에서 크게 진화된 퍼포먼스를 제공합니다.  
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e2730168-6ec3-4ebf-a837-47a21199f4f8/image.png)
 
 **용어정리**
@@ -122,11 +113,9 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 ![](https://velog.velcdn.com/images/euisuk-chung/post/29dd6f59-ca54-41e1-ac6f-e3991cb7418c/image.png)
 
 > 💌 **이전 DLSS Versions 정리**  
-> 
 > **DLSS**는 Subpixel Deformation(하위 픽셀 변형)을 통해 이전 이미지의 데이터를 사용하여 미세한 디테일을 생성하고 신호 처리 과정에서 발생하는 신호 왜곡 현상, 에일리어싱 현상을 줄이는 TAAU(템포럴 안티 에일리어싱 업샘플링)를 실행하는 것입니다. (이미지 출처 : <https://www.nvidia.com/en-us/geforce/news/dlss3-ai-powered-neural-graphics-innovations/>)
-> 
+>
 > * **DLSS 2.0** 💻  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/4945bd96-33df-4ce2-88fb-b0088d028147/image.png)
 >   + **특징**:
 >     - 저해상도 원시 입력, 모션 벡터, 노출/밝기 정보를 사용.
@@ -139,7 +128,6 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 >   + **제한사항**:
 >     - 완벽한 템포럴 솔루션이 아니며, 일부 아티팩트(예: 고스트 현상)가 여전히 발생.
 > * **DLSS 3.0** 💻  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/39d7d984-1d7f-4bd2-b357-a67c9eadd9a5/image.png)
 >   + **특징**:
 >     - **광학 흐름 가속기**를 활용한 모션 보간 기능 도입.
@@ -152,7 +140,6 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 >   + **제한사항**:
 >     - RTX 40 시리즈 이상에서만 사용 가능.
 > * **DLSS 3.5** 💻  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/5b8725d6-1f3b-4e66-811f-12f98544a5c2/image.png)
 >   + **특징**:
 >     - **광선 재구성 기능(Ray Reconstruction)** 도입.
@@ -167,33 +154,27 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 차세대 DLSS, **DLSS Multi Frame Generation**의 `프레임 페이싱 요구 사항`을 지원하기 위해 Blackwell 아키텍처는 향상된 하드웨어 플립 미터링 기능으로 구축되어 원활한 고품질 경험에 필요한 속도와 정확성을 제공합니다.
 
 * **AI 기반 DLSS 4(Deep Learning Super Sampling)**:  
-  
   최신 버전인 **DLSS 4**는 **멀티 프레임 생성(Multi Frame Generation)** 기능을 도입하여 기존 렌더링된 한 프레임당 최대 **3개의 추가 프레임**을 AI로 생성합니다. 이를 통해 **최대 8배의 성능 향상**을 이루며, 4K 해상도에서도 **240fps**의 완벽한 레이 트레이싱 게임 경험을 제공합니다.
 * **업스케일링 및 효율성**:  
-  
   DLSS 4는 낮은 해상도로 렌더링된 이미지를 **AI를 통해 고해상도로 업스케일링**하여 프레임 레이트를 크게 개선합니다. 렌더링해야 할 픽셀 수를 약 6%로 줄이며, AI가 나머지를 생성하여 **리소스 효율을 극대화**합니다.
 * **지원 게임**:  
-  
   **Cyberpunk 2077**, **Alan Wake 2**를 포함한 **75개 이상의 게임과 애플리케이션**에서 DLSS 4를 지원합니다.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/86c15b0c-c09a-4927-bf0f-07359b02a593/image.png)
 
 > **AI와 GPU의 융합**
 
 * **AI 연산 통합**:  
-  
   Blackwell GPU는 **셰이더 코어**와 **텐서 코어**를 활용하여 뉴럴 네트워크 연산을 지원하며, 복잡한 AI 알고리즘과 그래픽 렌더링을 실시간으로 처리할 수 있는 성능을 제공합니다.
 * **Neural Compression 기술**:  
-  
   Blackwell은 **Neural Texture Compression**과 **Neural Material Shading** 기술을 통해 고품질 텍스처와 머티리얼을 효율적으로 생성 및 압축합니다. 이러한 기술은 그래픽 디테일과 현실감을 극대화하며, 그래픽 리소스를 절약하는 데 기여합니다.
 
 > **GeForce RTX 50 시리즈 주요 모델**
 
 * NVIDIA의 차세대 GPU 라인업으로, 고성능 AI 연산 및 그래픽 렌더링을 지원하는 **Blackwell 아키텍처**를 기반으로 설계되었습니다.
-  
+
   + **출시 일정**: 2024년 1월부터 순차적으로 출시될 예정.
   + **RTX 5090**: 최고의 AI 및 그래픽 성능을 제공하며, 하이엔드 사용자를 위한 선택지로 자리 잡을 전망.
-  
+
   ![](https://velog.velcdn.com/images/euisuk-chung/post/15a2fea6-87ad-4617-9630-a2b2ae3ecf33/image.png)
 
 > 😵 새 RTX 5070 시리즈는 RTX 4090시리즈의 Performance라고 ㄷㄷ
@@ -201,10 +182,9 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 ![](https://velog.velcdn.com/images/euisuk-chung/post/d3f229a7-74c3-478e-b137-277766f1faf8/image.png)
 
 **RTX 5070 Laptop**  
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6f373780-be25-4264-ae03-5448969ca387/image.png)
 
-* 가격: $1,299부터 시작.
+* 가격: \$1,299부터 시작.
 * 성능: **RTX 4090급 성능**을 노트북에서도 구현.
 * 기술: AI 기반 DLSS를 통해 전력 효율과 휴대성을 극대화.
 
@@ -217,26 +197,24 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 젠슨 황은 AI 발전을 위한 **세 가지 주요 스케일링 법칙**을 설명했습니다.
 
 * **프리트레이닝(Pre-training):**
-  
+
   + 대규모 데이터를 학습하여 모델 생성.
   + 텍스트, 이미지, 소리를 포함한 다양한 데이터 형태 처리 가능.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/5f147b2b-8a3b-4797-ace9-06a113cfdb4f/image.png)
 * **포스트트레이닝(Post-training):**
-  
+
   + 강화 학습(RLHF, 인간 피드백 강화학습)과 인간 피드백을 통해 특정 도메인에서 성능을 세분화하고 정교화.
   + 예: 인공 데이터 생성, 수학 문제 해결 능력 향상.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/1d63b6b1-0645-44e6-a282-c633fa745e6e/image.png)
 * **테스트타임 스케일링(Test-time Scaling):**
-  
+
   + AI가 실시간으로 문제 해결에 필요한 자원을 동적으로 할당.
   + 문제를 단계별로 나누고 여러 아이디어를 생성 및 평가.
   + 예. Agentic AI, 사고(Reasoning) -> 추론 연산량 폭발적 증가  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/ad8c19ce-a42e-460b-8db9-6a15281660db/image.png)
 
 ---
+
 
 
 ---
@@ -256,7 +234,7 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 ![](https://velog.velcdn.com/images/euisuk-chung/post/403e05a5-5e6e-49d1-a97f-1425137a6e92/image.png)
 
 > 💬 **NVLink 72의 하드웨어 특징**
-> 
+>
 > * **구성**:
 >   + **36개의 Grace CPU**
 >   + **72개의 Blackwell GPU**
@@ -277,7 +255,7 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 * 만약 실제로 이러한 크기의 칩을 단일로 제작한다면 생산 수율과 제조 공정의 어려움이 커지지만, NVIDIA는 **NVLink와 HBM 메모리**를 활용하여 이를 여러 GPU와 메모리를 결합한 하나의 모듈처럼 구성했습니다.
 
 > 💬 **NVLink 72 기술적 구현의 특징**
-> 
+>
 > * **NVLink Spine 구조**
 >   + GPU 간 초고속 데이터 전송을 위한 중앙 연결 구조
 >   + 모든 GPU가 마치 단일 칩처럼 작동하도록 설계
@@ -320,7 +298,6 @@ NVIDIA가 제공하고자 하는 핵심은 **엔터프라이즈 및 AI 활용 �
 **1) NVIDIA NIM (AI Microservices):**
 
 * AI 기능을 마이크로서비스 형태로 제공하여 언어, 시각, 음성, 애니메이션, 디지털 바이올로지 데이터를 처리합니다.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/48341a2a-acc7-4ba8-b849-b071d5826a76/image.png)
 * **특징**:
   + 컨테이너 형태로 배포되어 클라우드와 온프레미스에서 동일한 환경에서 실행 가능.
@@ -334,7 +311,6 @@ NVIDIA가 제공하고자 하는 핵심은 **엔터프라이즈 및 AI 활용 �
 **2) NVIDIA NeMo:**
 
 * 기업 맞춤형 AI 에이전트(디지털 직원)를 온보딩, 훈련, 검증, 가드레일 설정까지 지원하는 플랫폼입니다.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/e129d702-3159-48d8-b7e6-e8af27b21c01/image.png)
 * **세부 기능**:
   + 기업 고유의 언어, 프로세스, 정책을 반영한 세분화 및 미세 조정.
@@ -345,11 +321,10 @@ NVIDIA가 제공하고자 하는 핵심은 **엔터프라이즈 및 AI 활용 �
 * **NVIDIA AI Blueprints**는 Agentic AI를 보다 쉽게 배포하고 활용할 수 있도록 설계된 템플릿입니다.
   + 다양한 AI 애플리케이션의 베스트 프랙티스를 포함.
   + 빠른 개발과 배포를 가능하게 하여 기업의 AI 도입 장벽을 낮춤.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/67df1b68-9e03-41ce-8bec-9189dbc2b633/image.png)
 
 > 🦾 **Llama Nemotron 모델:**
-> 
+>
 > * Meta의 Llama 3.1 기반으로 엔터프라이즈 환경에 최적화된 언어 모델 라인업을 제공합니다.
 >   + **다양한 크기의 모델**:
 >     - `Nano(소형)`: 빠른 응답성과 저지연성을 필요로 하는 PC 및 엣지 장치에 적합.
@@ -362,10 +337,9 @@ NVIDIA가 제공하고자 하는 핵심은 **엔터프라이즈 및 AI 활용 �
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3a34e9de-f448-4f05-bb9e-d1fc4470bd96/image.png)
 
 > 💻 **NVIDIA의 에코시스템과 파트너십**
-> 
+>
 > * NVIDIA는 다양한 산업과 IT 생태계에서 Agentic AI의 확산과 실질적인 활용을 위해 폭넓은 파트너십을 구축하고 있습니다.
 > * 이를 통해 기업과 조직이 AI 기반의 도구와 플랫폼을 더 쉽게 통합하고 활용할 수 있도록 돕고 있습니다.  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/47d66821-c28e-4df6-b413-b4e6aeedb851/image.png)
 
 **3. AI on Windows (WSL2)**
@@ -400,19 +374,18 @@ NVIDIA의 발표에서 **Windows WSL2(Windows Subsystem for Linux 2)** 기반으
 **Physical AI 개념**
 
 * **Physical AI**는 텍스트 기반의 입력 대신, **센서 데이터**(예: 자율주행 차량이나 로봇의 센서 데이터)와 **행동(Action) 토큰**을 활용하여 물리적 세계와 상호작용할 수 있는 AI 시스템을 의미합니다.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/04bb3c1c-71f9-4486-b802-fcfa84f34b8b/image.png)
 
 1. **입력(Input)**:
-   
+
    * 로봇, 자율주행 차량 등에서 생성된 **센서 데이터** 및 **행동 데이터**.
    * 기존 텍스트 기반 입력과 달리 물리적 세계의 데이터를 직접 활용.
 2. **출력(Output)**:
-   
+
    * 로봇과 같은 물리적 시스템이 수행할 **구체적 행동(Action) 토큰**을 생성.
    * 예: "토스터에서 빵을 꺼내 접시에 올려놔" 같은 물리적 명령 수행.
 3. (Preliminaries, 사전 조건) **물리 세계의 이해**:
-   
+
    * AI가 **중력, 마찰, 관성** 같은 물리 법칙을 이해하고, 이를 기반으로 현실적이고 예측 가능한 동작을 수행.
    * **객체 영속성**(Object Permanence): 물체가 시야에서 사라져도 존재한다고 인식.
    * **원인과 결과**: 물체를 밀거나 떨어뜨릴 때 발생할 수 있는 결과를 예측.
@@ -426,27 +399,24 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
 **Cosmos 모델의 주요 특징**
 
 1. **WFM (World Foundation Model)**:
-   
+
    * 텍스트, 이미지, 비디오를 입력받아 **물리적으로 일관된 시뮬레이션 데이터**를 생성.
    * **2000만 시간 분량의 비디오 데이터**를 학습하여 중력, 마찰, 관성 등 물리적 법칙과 환경 조건을 이해.
    * AI가 **객체 영속성(Object Permanence)** 및 **물리적 행동 패턴**을 학습할 수 있도록 지원.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/b28d770a-6258-49be-bed2-ddf0d8b666be/image.png)
 2. **고급 합성 데이터 생성**:
-   
+
    * Cosmos는 현실적인 환경 조건(조명, 날씨, 시간대 등)을 고려한 **고품질 시뮬레이션 데이터**를 생성.
    * 자율주행, 로봇공학 등에서 중요한 **엣지 케이스(극단적인 시나리오)** 데이터를 효율적으로 생성.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/c22add67-1155-43e3-8d53-02765bf46ff5/image.png)
 
 3. **실시간 생성 및 다중 센서 뷰**:
-   
+
    * **실시간 토큰 생성**을 통해 AI 모델이 여러 미래 시나리오를 시뮬레이션하고 최적의 경로를 선택하도록 지원.
    * 다양한 센서 데이터를 통합하여 **멀티 센서 뷰** 기반의 데이터 생성.  
-     
      ![](https://velog.velcdn.com/images/euisuk-chung/post/b22ab03d-5477-4edd-8727-cb85405638dc/image.png)
 4. **Comos 내부 World Foundation Models**:
-   
+
    * **Auto-regressive Model**:
      + 실시간 물리적 데이터 생성에 사용.
      + 연속적인 데이터 생성이 필요한 경우 활용.
@@ -457,26 +427,21 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
   + 이미지와 비디오를 텍스트 토큰화하여 **물리적 행동의 의미**를 명확히 전달.
 * **Video Processing & Curation Pipeline**:
   + 페타바이트급의 대규모 비디오 데이터를 처리하기 위한 고속 파이프라인 활용.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/21aa15fb-4b56-4b1c-8b02-fe6bf6e2711e/image.png)
 
 **Omniverse와 Cosmos의 결합**
 
 * **Omniverse**:
-  
+
   + NVIDIA의 실시간 3D 시뮬레이션 엔진인 Omniverse와 Cosmos를 결합하여, 가상 환경에서 물리적 세계의 정확한 시뮬레이션을 가능하게 합니다.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/a699b318-5c29-4042-8497-d727540562a0/image.png)
   + **Ground Truth 데이터 생성**:  
-    
     - Cosmos는 AI 모델에 필요한 고품질의 그라운드 트루스 데이터를 생성하여 로봇 및 AI 시스템의 정확도를 향상.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/b1439022-6402-4015-a70c-6e48a49546af/image.png)
 * **멀티버스 시뮬레이션**:
-  
+
   + Cosmos와 Omniverse는 다양한 시나리오에서 AI를 검증할 수 있는 **Multiverse Playground**를 제공합니다.
   + 로봇의 물리적 행동을 디지털로 시뮬레이션하며 실제 환경에 적용하기 전 검증 및 최적화 가능.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/021e0b2c-b42e-4d6b-b3b2-75b647982288/image.png)
 
 ---
@@ -521,7 +486,7 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
 ![](https://velog.velcdn.com/images/euisuk-chung/post/054427cf-523c-4749-948d-8b677891af12/image.png)
 
 > 🔀 **솔루션 워크플로우**
-> 
+>
 > * **DGX → Omniverse with Cosmos**:
 >   + 훈련된 AI 모델을 Omniverse 및 Cosmos 환경에서 시뮬레이션하여 성능 검증.
 >   + 다양한 시나리오를 테스트하고 모델의 안정성을 높임.
@@ -532,19 +497,17 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6c4f60a3-2f33-4756-8803-4144223356d9/image.png)
 
 > 💡 **사례 소개** : KION & Accenture: 디지털 트윈을 활용한 창고 관리 혁신 사례
-> 
+>
 > * `KION`과 `Accenture`는 NVIDIA와 협력하여 창고 관리 및 물류 운영을 혁신하기 위한 **디지털 트윈 솔루션**을 개발했습니다.
 > * 이 솔루션은 NVIDIA의 **Omniverse와 Cosmos 플랫폼을 활용**하여 창고 환경을 디지털로 복제하고, 다양한 **시뮬레이션 및 최적화를 통해 운영 효율성을 극대화**하는 것을 목표로 했습니다.  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/f24e31aa-642b-42f2-a3f0-5e211eec3a9e/image.png)
 > * KION과 Accenture는 디지털 트윈을 통해 다양한 산업 시나리오에 솔루션을 확장할 예정이며, 이를 통해 더 많은 공장과 창고에서 스마트 팩토리를 구현하고자 합니다.
 
 > 🔍 (심화) **디지털 트윈 구축 과정**
-> 
+>
 > * (1) **Omniverse를 활용한 창고 환경의 디지털화**
 >   + CAD, 포인트 클라우드 데이터, 생성된 3D 데이터를 기반으로 창고의 실제 환경을 디지털로 복제.
 >   + 창고 내부의 **로봇, 물류 흐름, 선반 배치 등**을 디지털 트윈 모델로 구현.  
->     
 >     ![](https://velog.velcdn.com/images/euisuk-chung/post/13fa8b2d-3744-49e7-a841-84e861fd459d/image.png)
 > * (2) **Cosmos를 통한 시뮬레이션 및 최적화**
 >   + **Cosmos 플랫폼**에서 다양한 물리적 환경과 물류 시나리오를 시뮬레이션.
@@ -559,9 +522,8 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
 ![](https://velog.velcdn.com/images/euisuk-chung/post/604bc519-bb58-4da1-8206-3185f2397717/image.png)
 
 > ⚡ **Thor 프로세서**: 범용 로봇 프로세서
-> 
+>
 > * NVIDIA의 Thor 프로세서는 자율주행차와 범용 로봇의 핵심 프로세서로 설계되었습니다. 이는 차량과 로봇에 필요한 방대한 센서 데이터를 처리하고 AI 기반 의사결정을 수행할 수 있도록 강력한 성능과 효율성을 제공합니다.  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/57a170ab-b2c7-43c1-b5d9-e2192350a795/image.png)
 
 **주요 특징**:
@@ -572,44 +534,39 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
   + CPU와 GPU가 통합되어 단일 칩으로 높은 컴퓨팅 효율성 제공.
 * **센서 데이터 처리**:
   + 12개의 카메라, 9개의 레이더, 1개의 LiDAR, 12개의 초음파 센서를 포함한 센서 데이터 처리 가능.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/d4d2b373-da94-436e-b7c4-e0900fca192c/image.png)
 * **AI 모델 학습 및 추론**:
   + Transformer 모델을 활용해 실시간 경로 예측 및 복잡한 의사결정을 지원.
 * **안전성**:
   + ISO 26262 ASIL-D 인증을 획득하여 차량 및 로봇의 안전 기준 충족.  
-    
     ![](https://velog.velcdn.com/images/euisuk-chung/post/a6122c3e-d390-4428-a9ec-aebeff4f6eda/image.png)
 
 **활용 분야**:
 
 * **자율주행차**: NVIDIA Drive Hyperion 9 플랫폼에서 핵심 컴퓨팅 역할 수행.
 * **범용 로봇**: 제조 및 물류 로봇, 서비스 로봇의 주요 AI 프로세서로 활용.  
-  
   ![](https://velog.velcdn.com/images/euisuk-chung/post/365ca653-e8c3-4098-bba6-eb144ea5a3cb/image.png)
 
 > 🌳 **NVIDIA Isaac Groot**: 로봇 학습 및 개발의 핵심 플랫폼
-> 
+>
 > * Isaac Groot는 물리적 AI 기반 로봇의 학습과 개발을 지원하기 위한 NVIDIA의 포괄적 플랫폼입니다.  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/bb6170f7-a0f3-46da-8dd2-3b8b354bb944/image.png)
 
 **주요 기능**:
 
 1. **로봇 데이터 증강**:
-   
+
    * 소수의 인간 시연 데이터를 기반으로 대규모 합성 데이터를 생성.
    * Omniverse와 Cosmos를 활용해 **물리적으로 기반이 된 시뮬레이션 데이터**를 제공.
    * 다양한 환경과 시나리오에서 테스트 가능.
 2. **시뮬레이션 기반 학습**:  
-   
    ![](https://velog.velcdn.com/images/euisuk-chung/post/2bb8d93a-8422-4088-969e-5a71b2bf97aa/image.png)
-   
+
    * Groot Teleop: VR을 활용해 디지털 트윈 환경에서 로봇 조작 데이터를 수집.
    * Groot Mimic: 수집된 데이터를 기반으로 대규모 합성 데이터 생성.
    * Groot Gen: 도메인 랜덤화 및 3D 확장을 통해 다양한 환경을 학습.
 3. **소프트웨어 검증**:
-   
+
    * Omniverse와 Cosmos 기반의 멀티버스 시뮬레이션 엔진을 통해 로봇 정책을 학습.
    * 소프트웨어-인-루프 테스트를 통해 실제 환경에서 검증 전에 정확도를 확인.
 
@@ -657,4 +614,3 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
 특히, Blackwell 아키텍처와 Cosmos 플랫폼, 그리고 Agentic AI와 같은 새로운 기술들은 AI 생태계 전반에 걸쳐 더욱 강력하고 실질적인 활용 사례를 제공할 것으로 기대됩니다. 엔비디아의 이번 발표는 단순한 기술 소개를 넘어, AI 기반의 미래를 구체화하고 실현하려는 의지를 보여준 자리였습니다.
 
 다음 Keynote들도 이어서 정리해보겠습니다 💌
-

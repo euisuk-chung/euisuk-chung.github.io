@@ -1,11 +1,13 @@
-﻿---
+---
 title: "[OpenAI][번역] Realtime Prompting Guide"
 date: "2025-08-31"
+tags:
+  - "OpenAI"
+  - "chatGPT"
 year: "2025"
 ---
 
 # [OpenAI][번역] Realtime Prompting Guide
-
 
 OpenAI Realtime API 프롬프팅 가이드
 ============================
@@ -774,7 +776,7 @@ Do NOT use when: outage is unconfirmed; route to Diagnose → check_outage first
 Use when: repeated failures after reboot and outage status = false.
 Do NOT use when: outage status = true (send status + ETA instead).
 ## escalate_to_human(account_id, reason)
-Use when: user seems very frustrated, abuse/harassment, repeated failures, billing disputes >$50, or user requests escalation.
+Use when: user seems very frustrated, abuse/harassment, repeated failures, billing disputes >\$50, or user requests escalation.
 ```
 
 **한국어 번역**:
@@ -795,7 +797,7 @@ Use when: user seems very frustrated, abuse/harassment, repeated failures, billi
 사용 시기: 재부팅 후 반복적인 실패가 있고 중단 상태 = false일 때.
 사용하지 말아야 할 때: 중단 상태 = true일 때 (대신 상태 + ETA 전송).
 ## escalate_to_human(account_id, reason)
-사용 시기: 사용자가 매우 좌절한 것 같거나, 학대/괴롭힘, 반복적인 실패, $50을 초과하는 청구 분쟁, 또는 사용자가 에스컬레이션을 요청할 때.
+사용 시기: 사용자가 매우 좌절한 것 같거나, 학대/괴롭힘, 반복적인 실패, \$50을 초과하는 청구 분쟁, 또는 사용자가 에스컬레이션을 요청할 때.
 ```
 
 > 🌠 **팁**: 도구 호출이 예측할 수 없이 실패할 수 있다면 모델이 우아하게 응답할 수 있도록 명확한 실패 처리 지시사항을 추가하세요.
@@ -832,7 +834,7 @@ Use when: reboot + line checks fail AND outage=false.
 Windows: "10am–12pm ET" or "2pm–4pm ET".  
 Confirmation phrase: "I can schedule a technician to visit—should I book that for you?"
 ## escalate_to_human(account_id, reason) — PREAMBLES
-Use when: harassment, threats, self-harm, repeated failure, billing disputes > $50, caller is frustrated, or caller requests escalation.  
+Use when: harassment, threats, self-harm, repeated failure, billing disputes > \$50, caller is frustrated, or caller requests escalation.  
 Preamble: "Let me connect you to a senior agent who can assist further."
 ```
 
@@ -859,7 +861,7 @@ Preamble: "Let me connect you to a senior agent who can assist further."
 시간대: "오전 10시–12시 ET" 또는 "오후 2시–4시 ET".
 확인 구문: "기술자 방문을 예약할 수 있습니다—예약해 드릴까요?"
 ## escalate_to_human(account_id, reason) — PREAMBLES
-사용 시기: 괴롭힘, 위협, 자해, 반복적인 실패, $50을 초과하는 청구 분쟁, 발신자가 좌절하거나 에스컬레이션을 요청할 때.
+사용 시기: 괴롭힘, 위협, 자해, 반복적인 실패, \$50을 초과하는 청구 분쟁, 발신자가 좌절하거나 에스컬레이션을 요청할 때.
 서문: "추가로 도움을 드릴 수 있는 상급 에이전트에게 연결해 드리겠습니다."
 ```
 

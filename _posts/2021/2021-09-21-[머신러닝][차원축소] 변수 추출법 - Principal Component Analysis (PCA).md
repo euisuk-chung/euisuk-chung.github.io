@@ -1,18 +1,14 @@
-﻿---
+---
 title: "[머신러닝][차원축소] 변수 추출법 - Principal Component Analysis (PCA)"
 date: "2021-09-21"
-tags:
-  - "머신러닝"
-  - "차원축소"
 year: "2021"
 ---
 
 # [머신러닝][차원축소] 변수 추출법 - Principal Component Analysis (PCA)
 
+본 포스트는 `고려대학교 강필성 교수님`의 강의를 수강 후 정리를 한 것입니다.
 
-
-
-본 포스트는 `고려대학교 강필성 교수님`의 강의를 수강 후 정리를 한 것입니다. 작성 및 설명의 편의를 위해 아래는 편하게 작성한 점 양해부탁드립니다.
+작성 및 설명의 편의를 위해 아래는 편하게 작성한 점 양해부탁드립니다.
 
 Dimensionality Reduction
 ========================
@@ -22,6 +18,7 @@ Supervised Variable Extraction
 
 **차원축소**는, 모델링을 하기 위해 내가 가진 데이터의 정보를 최대한 보존하면서, 훨씬 더 compact하게 데이터셋을 구성하는 것을 목적으로 하며, 크게 변수선택(Variable Selection, 변수들의 부분 집합 선택)과 변수추출(Variable Extraction, 변수들을 요약하는 새로운 변수 생성)이 있다.
 
+이전 [포스트](https://velog.io/@euisuk-chung/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C-%EB%B3%80%EC%88%98-%EC%84%A0%ED%83%9D%EB%B2%95-16)에서는 아래 표에서 Supervised Variable Selection을 살펴보았다. 오늘은 Supervised Variable Extraction에 대해 이야기를 풀어보도록 하겠다.
 
 ![Supervised Variable Selection](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F423cc1da-966e-4a89-8c91-f317b6415aa8%2Fimage.png)
 
@@ -44,35 +41,27 @@ Principal Component Analysis (PCA)는 변수추출의 대표적인 기법으로,
 ### (참고) Covariance Matrix
 
 * **정의 :**  
-  
   두 변수 이상의 다변량 값들 간의 공분산들을 행렬로 표현한 것을 의미한다.
 
 > **💡 공분산 수식**  
-> 
 > ![Covariance formulas](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fb0c7bcd5-96ac-4ce7-8175-29622df86aea%2Fimage.png)
 
 > **💡 2변량, 3변량 공분산 행렬**  
-> 
 > ![Covariance Matrixs](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F38e9a27e-85ed-45a2-80d8-0c0515746aca%2Fimage.png)
 
 * **표기 :**
-  
+
   + X:X :X: column-wise 데이터셋 (d x n ; d는 변수의 수, n은 record의 수)
   + Cov⁡(X):1n(X−Xˉ)(X−Xˉ)T,( d×n)∗(n×d)=(d×d)\operatorname{Cov}(X):\frac{1}{n}(X-\bar{X})(X-\bar{X})^{T}, (\mathrm{~d} \times n) \*(n \times \mathrm{d})=(\mathrm{d} \times \mathrm{d})Cov(X):n1​(X−Xˉ)(X−Xˉ)T,( d×n)∗(n×d)=(d×d)
 * **특징 :**  
-  
   1. 대칭행렬  
-  
   Cov⁡(Xij)=Cov⁡(Xji)\operatorname{Cov}(X\_{ij}) = \operatorname{Cov}(X\_{ji})Cov(Xij​)=Cov(Xji​)  
-  
   2. 데이터셋의 총 분산량 = 대각행렬의 합  
-  
   tr⁡(Cov⁡(X))=Cov⁡(X)11+Cov⁡(X)22+⋯+Cov⁡(X)dd\operatorname{tr}(\operatorname{Cov}(X))=\operatorname{Cov}(X)\_{11}+\operatorname{Cov}(X)\_{22}+\cdots+\operatorname{Cov}(X)\_{d d}tr(Cov(X))=Cov(X)11​+Cov(X)22​+⋯+Cov(X)dd​
 
 ### (참고) Projection
 
 * **정의 :**  
-  
   한 점에서 한 직선 또는 한 평면에 수선의 발을 내릴 때 이를 Projection(사영)한다고 한다.
 
 ![Projection](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F5e264c12-fd8b-4a73-aaa7-1f5ffb05f5ac%2Fimage.png)
@@ -88,13 +77,11 @@ Ax=λx→(A−λI)x=0\mathbf{A x}=\lambda \mathbf{x} \quad \rightarrow \quad(\ma
 ![선형변환(linear transformation)](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F799333b4-c537-4582-818b-45b6264f369c%2Fimage.png)
 
 * 행렬 A (dxd)가 역행렬이 존재한다면, 고유값과 고유벡터는 다음 성질을 갖는다.
-  
+
   ![A (dxd)](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F6d333088-1617-467e-bec8-8e585e957eee%2Fimage.png)
-  
+
   ① d개의 고유값과 고유벡터 쌍을 갖는다.  
-  
   ② 고유벡터들은 서로 직교한다. (eii⋅ei=0, if ei≠ej)\left(e\_{i}{ }\_{i} \cdot e\_{i}=0, \text { if } e\_{i} \neq e\_{j}\right)(ei​i​⋅ei​=0, if ei​​=ej​)  
-  
   ③ tr⁡(A)=λ1+λ2+λ3+⋯+λd=∑i=1dλi\operatorname{tr}(A)=\lambda\_{1}+\lambda\_{2}+\lambda\_{3}+\cdots+\lambda\_{d}=\sum\_{i=1}^{d} \lambda\_{i}tr(A)=λ1​+λ2​+λ3​+⋯+λd​=∑i=1d​λi​
 
 ### PCA Procedure
@@ -125,16 +112,14 @@ max⁡wTSw s.t. wTw=1\begin{gathered} \max \mathbf{w}^{\mathrm{T}} \mathbf{S} 
 * 위에서 구한 최적화식은 바로 풀 수가 없으므로, **Lagrange Multiplier(라그랑주 승수법)**을 이용하여 풀 수 있다.
 
 > 💡 **여기서 잠깐! Lagrange Multiplier란?**  
-> 
 > ㅤ라그랑주 승수법 (Lagrange multiplier method)은 기본 가정은 "제약 조건 g(x,y) = c를 만족하는 f(x,y)의 최솟값 또는 최댓값은 f(x,y)와 g(x,y)가 접하는 지점에 존재할 수도 있다."는 것이다. 이때, f(x,y)와 g(x,y)가 접하는 지점을 찾기 위해 gradient vector(▽)을 이용한다. 어떠한 지점에서 접선 벡터와 gradient vector의 내적은 0이 되게 된다. 따라서, 두 함수 f와 g가 접한다는 것은 두 함수의 gradient vector는 서로 상수배의 관계에 있다고 할 수 있다. 다음 그림을 보면 이를 확인할 수 있다. 이를 식으로 나타내면 다음과 같다: ▽f=λ▽g  
-> 
 > ![Lagrange Multiplier](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fe81feed5-9a93-4f60-bbda-d5eeee02e175%2Fimage.png)  
-> 
 > ㅤ라그랑주 승수법에서는 다음과 같이 함수를 정의하고, L(x,y,λ)=λ(g(x,y)-c) 로 정의하고, 함수 L의 gradient vector가 영벡터가 되는 점을 찾으면 두 함수 f와 g가 접하게 되는 점을 찾을 수 있게 된다.  
-> 
 > ㅤ위에서 정의한 식을 풀어보면, 함수 L의 gradient vector가 영벡터가 되는 점을 찾으면 두 함수 f와 g가 접하는 점을 찾을 수 있다. 함수 L을 x와 y에 대해 편미분하면 총 2개의 식을 얻을 수 있으며, 여기에 제약 조건인 g(x,y)=c를 이용하면 미지수가 3개(x,y,λ)인 문제의 해 (solution)를 구할 수 있다. 여기에서 구한 x와 y는 제약 조건 g를 만족하는 함수 f의 최적점이 될 가능성이 있게 된다.
 
-* 위에서 도출한 maximize 목적함수와 제약식을 이용하여 Lagrange Multiplier(라그랑주 승수법)을 적용하면 다음과 같은 식이 나오게 된다.L=wTSw−λ(wTw−1)L=\mathbf{w}^{T} \mathbf{S} \mathbf{w}-\lambda\left(\mathbf{w}^{T} \mathbf{w}-1\right)L=wTSw−λ(wTw−1)
+* 위에서 도출한 maximize 목적함수와 제약식을 이용하여 Lagrange Multiplier(라그랑주 승수법)을 적용하면 다음과 같은 식이 나오게 된다.
+
+  L=wTSw−λ(wTw−1)L=\mathbf{w}^{T} \mathbf{S} \mathbf{w}-\lambda\left(\mathbf{w}^{T} \mathbf{w}-1\right)L=wTSw−λ(wTw−1)
 
 ∂L∂w=0⇒Sw−λw=0⇒(S−λI)w=0\frac{\partial L}{\partial \mathbf{w}}=0 \Rightarrow \mathbf{S} \mathbf{w}-\lambda \mathbf{w}=0 \Rightarrow(\mathbf{S}-\lambda \mathbf{I}) \mathbf{w}=0∂w∂L​=0⇒Sw−λw=0⇒(S−λI)w=0
 
@@ -152,35 +137,95 @@ max⁡wTSw s.t. wTw=1\begin{gathered} \max \mathbf{w}^{\mathrm{T}} \mathbf{S} 
 * 이 중 가장 큰 eigenvalue를 λ1, 갖는 eigen vector를 w1이라고 하면, 해당 w1에 projection된 분산량(variation)을 다음과 같이 구할 수 있다.
 
 v=(w1TX)(w1TX)T=w1TXXTw1=w1TSw1\mathbf{v}=\left(\mathbf{w}\_{1}^{T} \mathbf{X}\right)\left(\mathbf{w}\_{1}^{T} \mathbf{X}\right)^{T}=\mathbf{w}\_{1}^{T} \mathbf{X} \mathbf{X}^{T} \mathbf{w}\_{1}=\mathbf{w}\_{1}^{T} \mathbf{S} \mathbf{w}\_{1}v=(w1T​X)(w1T​X)T=w1T​XXTw1​=w1T​Sw1​
+
 Since,ㅤSw1=λ1w1,w1TSw1=w1Tλ1w1=λ1w1Tw1=λ1Since,ㅤ\mathbf{S w}\_{1}=\lambda\_{1} \mathbf{w}\_{1}, \quad \mathbf{w}\_{1}^{T} \mathbf{S} \mathbf{w}\_{1}=\mathbf{w}\_{1}^{T} \lambda\_{1} \mathbf{w}\_{1}=\lambda\_{1} \mathbf{w}\_{1}^{T} \mathbf{w}\_{1}=\lambda\_{1}Since,ㅤSw1​=λ1​w1​,w1T​Sw1​=w1T​λ1​w1​=λ1​w1T​w1​=λ1​
 
-* 따라서, 이렇게 w1에 사영시킨 variation(v)의 값이 λ1인 것을 확인했고, 얼만큼 해당 PC(principal component)가 original variance를 보존하는 가는 다음식을 통해 확인할 수 있다. 이를 통해 해당 주성분은 2차원 데이터를 사영하면 원-데이터의 분산의 96%를 보존한다는 것을 확인할 수 있다.λ1λ1+λ2=1.28401.2840+0.0491=0.9632…\frac{λ\_{1}}{λ\_{1}+λ\_{2}}=\frac{1.2840}{1.2840+0.0491}=0.9632…λ1​+λ2​λ1​​=1.2840+0.04911.2840​=0.9632…
+* 따라서, 이렇게 w1에 사영시킨 variation(v)의 값이 λ1인 것을 확인했고, 얼만큼 해당 PC(principal component)가 original variance를 보존하는 가는 다음식을 통해 확인할 수 있다. 이를 통해 해당 주성분은 2차원 데이터를 사영하면 원-데이터의 분산의 96%를 보존한다는 것을 확인할 수 있다.
+
+  λ1λ1+λ2=1.28401.2840+0.0491=0.9632…\frac{λ\_{1}}{λ\_{1}+λ\_{2}}=\frac{1.2840}{1.2840+0.0491}=0.9632…λ1​+λ2​λ1​​=1.2840+0.04911.2840​=0.9632…
 
 **[6] Extraction and Reconstruction**
 
 * 주성분(기저)을 이용해 새로운 변수 생성 및 이를 다시 복원할 수 있다.  
-  
   (2차원 -> 1차원 -> 2차원)
 * 이때, 완벽하게는 복원되지는 않는다. 재구축 오차가 존재하는데, 뒤에 anomaly detection에서 사용할 수 있다.
 
 ![2차원_1차원_2차원](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F596a42f6-667a-4d7b-9ba6-20e03bacb4d6%2Fimage.png)
 
 * 그렇다면 몇 개의 Principal Component(PC)가 최적일까? (정확한 답은 없다ㅠ)  
-  
   ① “정성적으로 도메인 전문가가 몇 개가 좋아!”하고 PC의 개수를 정해줄 수 있다.  
-  
   ② “정량적으로 원래 변수의 몇 퍼센트가 보존되었는가”를 기준으로 PC의 개수를 정할 수 있다.
 
 ![Scree Plot/Elbow](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F042bf8c2-8325-4ec1-88b4-76ebca814f78%2Fimage.png)
 
 * Scree Plot을 도시화하여, ① 각각의 PC에 대한 variance를 구하여 elbow point(급격하게 감소하는 구간)를 찾거나, ② 누적 설명력 N%기준 설정을 통해 최적의 PC의 개수를 구할 수 있다.
 
+### 예시를 통해 이해해보자!
+
+PCA가 직관적으로 어떻게 동작하는지 쉽게 이해하기 위해 간단한 예시를 들어보자.
+
+📌 **예제: 학생들의 성적 데이터**
+
+어떤 학교에서 학생들의 성적 데이터를 분석한다고 가정하자. 데이터는 다음과 같이 여러 개의 과목 점수(국어, 수학, 영어, 과학 등)로 구성되어 있다.
+
+| 학생 | 국어 | 수학 | 영어 | 과학 |
+| --- | --- | --- | --- | --- |
+| A | 90 | 85 | 88 | 92 |
+| B | 78 | 75 | 80 | 85 |
+| C | 85 | 80 | 82 | 88 |
+| D | 70 | 65 | 72 | 78 |
+| E | 95 | 90 | 92 | 96 |
+
+이 데이터를 분석해 보면, 과목별 점수들이 서로 어느 정도 상관관계를 가지고 있다는 것을 알 수 있다. 예를 들어, 수학과 과학 점수가 비슷한 패턴을 보이고, 국어와 영어 점수도 유사한 경향을 가진다면, 꼭 4개의 개별 과목 점수(차원)를 모두 사용할 필요가 없을 수도 있다.
+
+📌 **PCA 적용**
+
+이제 PCA를 적용해 보자.
+
+1️⃣ **데이터 표준화 (Data Centering & Scaling)**
+
+* 평균을 0으로 만들고, 분산을 맞춰준다.
+* 즉, 과목별 점수 차이를 보정하여 비교할 수 있도록 한다.
+
+2️⃣ **공분산 행렬 계산**
+
+* 과목 간의 상관관계를 분석하기 위해 공분산 행렬을 구한다.
+* 만약 국어와 영어, 수학과 과학이 강한 양의 상관관계를 가진다면, PCA는 이들을 합쳐 하나의 새로운 축(주성분)으로 표현할 수 있도록 한다.
+
+3️⃣ **고유값(Eigenvalues)과 고유벡터(Eigenvectors) 계산**
+
+* PCA는 데이터에서 가장 분산이 큰 방향을 찾아 새로운 기저(Principal Components, 주성분)를 만든다.
+* 예를 들어, 첫 번째 주성분(PC1)은 학생들의 전반적인 성적 수준을 나타낼 수 있고, 두 번째 주성분(PC2)은 특정 과목에서의 차이를 강조할 수 있다.
+
+4️⃣ **주성분 선택 및 차원 축소**
+
+* 만약 첫 번째 주성분(PC1)이 전체 데이터의 90% 이상의 정보를 설명한다면, 우리는 4개의 과목 점수 대신 하나의 주성분 값만 사용해도 학생들의 성적 패턴을 충분히 분석할 수 있다.
+
+📌 **결과 해석**
+
+이제 원래 4차원의 데이터를 2차원으로 축소하면 다음과 같은 형태가 될 수 있다.
+
+| 학생 | PC1 (전반적 성적 수준) | PC2 (과목별 편차) |
+| --- | --- | --- |
+| A | 1.45 | 0.12 |
+| B | -0.85 | 0.32 |
+| C | 0.12 | -0.45 |
+| D | -1.20 | -0.25 |
+| E | 1.78 | 0.26 |
+
+* **PC1이 크면 성적이 전반적으로 높음**
+* **PC2는 특정 과목에서의 편차를 반영 (예: 국어 점수는 높은데 수학은 낮은 경우)**
+
+이제 우리는 4개의 점수를 다루는 대신, 두 개의 값만 사용하여 학생들의 성적 패턴을 분석할 수 있다. 이는 데이터의 차원을 줄이면서도 중요한 정보를 유지하는 PCA의 핵심 원리와 일치한다.
+
+> 📖 이렇게 PCA를 적용하면, 원래 4개의 변수(과목 점수)를 모두 다루는 대신 핵심적인 2개의 주성분만으로 데이터를 요약할 수 있다. 이를 통해 데이터 시각화, 클러스터링, 머신러닝 모델링 시 계산량을 줄이면서도 핵심 정보를 유지할 수 있다는 장점이 있다.
+
 ### PCA Limitation
 
 1. 통계적으로 출발한 모델이기 때문에 **가우시안 분포를 가정**한다. 그렇기 때문에 가우시안 분포가 아닌 데이터에는 잘 작동되지 않을 수 있다.
-2. 분산을 최대한 보존하는 방식으로 학습을 진행하므로, 분류 모델에는 적당하지 않다. (아래 그림 참고)
+2. 분산을 최대한 보존하는 방식으로 학습을 진행하므로, 분류 모델에는 적당하지 않다.  
+   (아래 그림 참고)
 
 ![PCA/LDA](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F94e352b3-8793-4bba-86dc-e89237751fa2%2Fimage.png)
 
 긴 글 읽어주셔서 감사합니다 ^~^
-

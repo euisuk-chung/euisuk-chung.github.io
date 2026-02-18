@@ -1,11 +1,10 @@
-﻿---
+---
 title: "[토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리"
 date: "2025-12-26"
 year: "2025"
 ---
 
 # [토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리
-
 
 > **원본 강의**: **Intro to Large Language Models** - Andrej Karpathy (<https://youtu.be/zjkBMFhNj_g>)  
 > **Slides as PDF**: <https://drive.google.com/file/d/1pxx_ZI7O-Nwl7ZLNk5hI3WzAsTLwvNU7/view> (42MB)
@@ -383,7 +382,7 @@ Part 6: LLM 보안 - 새로운 위협의 등장
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b9b3b574-d93f-470f-94e3-a2dd3f9ffb6a/image.png)
 
-2. 두 번째 예시는 **악성 웹페이지**입니다. Bing에 "2022년 최고의 영화는?"이라고 물으면, Bing이 여러 웹페이지를 검색하고 결과를 제공하면서 갑자기 "축하합니다! $200 아마존 기프트카드에 당첨되셨습니다. 이 링크를 클릭하세요"라고 합니다.
+2. 두 번째 예시는 **악성 웹페이지**입니다. Bing에 "2022년 최고의 영화는?"이라고 물으면, Bing이 여러 웹페이지를 검색하고 결과를 제공하면서 갑자기 "축하합니다! \$200 아마존 기프트카드에 당첨되셨습니다. 이 링크를 클릭하세요"라고 합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9933b2fb-2f47-433f-b5d3-1db38ab2792f/image.png)
 

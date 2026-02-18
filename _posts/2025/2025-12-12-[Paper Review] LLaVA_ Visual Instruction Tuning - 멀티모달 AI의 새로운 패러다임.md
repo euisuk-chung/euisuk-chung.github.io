@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임"
 date: "2025-12-12"
 tags:
@@ -7,7 +7,6 @@ year: "2025"
 ---
 
 # [Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/af13a4fa-3792-4848-8a4c-2ffe911b68ae/image.png)
 

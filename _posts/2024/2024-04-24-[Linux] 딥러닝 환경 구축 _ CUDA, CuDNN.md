@@ -1,17 +1,10 @@
-﻿---
+---
 title: "[Linux] 딥러닝 환경 구축 : CUDA, CuDNN"
 date: "2024-04-24"
-tags:
-  - "linux"
-  - "꿀팁"
-  - "환경"
 year: "2024"
 ---
 
 # [Linux] 딥러닝 환경 구축 : CUDA, CuDNN
-
-
-
 
 오늘 회사 로컬 서버가 다운되면서 기존에 오래된 파일들을 밀고 새롭게 다시 설치할 기회가 왔다!!! 파일은 다행히 복원을 완료해서 지금에서야 웃으면서 쓰지만... 정말이지 끔찍한 8시간이었다...ㅎㅎ
 
@@ -101,18 +94,14 @@ sudo apt install nvidia-driver-550
 * **`sudo apt install nvidia-driver-550`**: 지정된 버전의 NVIDIA 그래픽 드라이버를 설치한다. 이 드라이버는 GPU와 운영 체제 간의 효율적인 통신을 가능하게 하고, 최적화된 성능을 제공해준다.
 
 > 💡 **무슨 드라이버를 설치해야하는지 모르겠다고?**  
-> 
 > 위에 예시에는 직접 원하는 수동 버전의 드라이버를 설치하는 예시를 제시하고 있다.  
-> 
 > 하지만, 권장 드라이버를 자동으로 설치해주는 함수 또한 존재한다.  
-> 
 > ✍️ `sudo ubuntu-drivers autoinstall`
 
 2. **CUDA 및 CUDA Toolkit 설치**
 -----------------------------
 
 필자는 파이토치를 사용할 것이므로 토치에서 요구하고 있는 cuda11.8을 설치해볼 예정이다.  
-
 (참고: 이전 버전의 파이토치를 설치하려면? => <https://pytorch.org/get-started/previous-versions/>)
 
 ![torch](https://velog.velcdn.com/images/euisuk-chung/post/7005bf65-0d30-4ad2-894a-6c25360ad3ff/image.png)
@@ -134,20 +123,18 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 * **`sudo sh cuda_11.8.0_520.61.05_linux.run`**: 다운 받은 실행 파일을 쉘에서 실행하여 다운 받는다.
 
 1. 실행하면 아래와 같은 다운로드 창이 나온다. (`ACCEPT`)  
-   
    ![ACCEPT](https://velog.velcdn.com/images/euisuk-chung/post/83895203-b7c5-497b-8d70-fc0ac97b60a0/image.png)
 2. 이미 앞에서 Driver 설치를 완료했으므로, Driver체크는 해제하고, CUDA설치를 진행한다.  
-   
    ![CUDA설치](https://velog.velcdn.com/images/euisuk-chung/post/5c108775-6eba-4fc8-b741-255c3edc8e48/image.png)
 
 > 어? CUDA를 설치했음에도 다음과 같은 에러가 발생하는데요?  
-> 
 > ![error](https://velog.velcdn.com/images/euisuk-chung/post/04fe2130-5d47-4679-96f4-a9a298e401b0/image.png)
-> 
+>
 > ```
 > # 접속 후 아래 코드 추가 (본인 CUDA버전에 맞게 설정할 것)
-> vim ~/.bashrc 
+> vim ~/.bashrc
 > ```
+>
 > ```
 > # https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions%5B/url%5D
 > export export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
@@ -199,9 +186,11 @@ sudo apt-get --purge remove "cudnn*"
 아래 두 코드 라인으로 각각 설치되어 있는 CUDA 및 CUDNN 버전을 확인할 수 있다.
 
 * CUDA 버전 확인
+
   ```
   nvcc --version
   ```
+
   ```
   # 결과
   nvcc: NVIDIA (R) Cuda compiler driver
@@ -211,9 +200,11 @@ sudo apt-get --purge remove "cudnn*"
   Build cuda_11.8.r11.8/compiler.31833905_0
   ```
 * CUDNN 버전 확인
+
   ```
   cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
   ```
+
   ```
   # 결과
   #define CUDNN_MAJOR 8

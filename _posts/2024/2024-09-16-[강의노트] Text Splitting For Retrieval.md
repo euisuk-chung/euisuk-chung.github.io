@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[강의노트] Text Splitting For Retrieval"
 date: "2024-09-16"
 tags:
@@ -8,9 +8,6 @@ year: "2024"
 ---
 
 # [강의노트] Text Splitting For Retrieval
-
-
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/cef4d420-1a78-40ab-a375-adbe72c50e60/image.png)
 
@@ -23,7 +20,6 @@ Introduction
 * `영상 링크` : <https://youtu.be/8OJC21T2SL4>
 
 이번 포스트에서는 **5가지의 텍스트 분할(Levels of Text Splitting)** 방법을 소개합니다.  
-
 (\*해당 글은 위 Youtube 영상 자료를 공부 후에 정리하였습니다.)
 
 Background
@@ -65,7 +61,6 @@ chunk_size = 35
 for i in range(0, len(text), chunk_size):
     chunk = text[i:i + chunk_size]
     chunks.append(chunk)
-
 ```
 
 **장점:**
@@ -92,7 +87,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=20)
 texts = text_splitter.split_text(text)
-
 ```
 
 **장점:**
@@ -149,7 +143,6 @@ js_splitter = RecursiveCharacterTextSplitter.from_language(
 )
 
 js_splitter.create_documents([javascript_text])
-
 ```
 
 **PDF 분할 예시**:
@@ -249,11 +242,10 @@ class AgenticChunker:
 * 실험적인 기법으로, 아직 일반적인 프로덕션 환경에서는 사용되지 않습니다.
 
 > **AgenticChunker에 대한 보충 설명**:  
-> 
 > `AgenticChunker` 클래스는 문장을 논리적으로 분류하여 청크를 생성하고, 각 청크의 내용을 요약하고 제목을 생성하는 작업을 수행하는 시스템입니다. 이 시스템은 사용자가 문서를 세부적으로 분할하고 관리하는 데 적합하며, 특히 큰 문서나 여러 문장이 있는 데이터를 처리할 때 유용합니다.
 
 > `AgenticChunker`는 다음과 같은 중요한 기능을 포함하고 있습니다:
-> 
+>
 > * 문장을 청크에 추가할지 새로운 청크를 생성할지 판단.
 > * GPT-4를 통해 각 청크의 요약과 제목을 자동으로 생성 및 갱신.
 > * Proposition이 추가될 때마다 의미를 평가하고 청크를 동적으로 관리.
@@ -268,4 +260,3 @@ Conclusion
 이번 포스트에서는 "The 5 Levels Of Text Splitting For Retrieval" 강의에서 소개하는 5단계의 텍스트 분할 방법들에 대해서 간단하게 소개합니다. 이러한 방법들은 각기 다른 방식으로 텍스트를 나누며, 문서의 특성, 의미, 그리고 작업의 목적에 맞는 분할 전략을 선택하는 것이 중요합니다.
 
 기본적인 캐릭터 분할에서부터 의미적 분할, 그리고 에이전트 기반의 분할까지 다양한 옵션을 실험해보면서, 여러분의 애플리케이션에 맞는 최적의 방법을 찾을 수 있기를 바랍니다. 더 나아가, 텍스트 분할 외에도 **멀티벡터 인덱싱(Multi-Vector Indexing)**이나 **그래프 구조 추출**과 같은 고급 기법들을 활용하여 더욱 정교한 정보 검색 시스템을 구축할 수 있습니다.
-

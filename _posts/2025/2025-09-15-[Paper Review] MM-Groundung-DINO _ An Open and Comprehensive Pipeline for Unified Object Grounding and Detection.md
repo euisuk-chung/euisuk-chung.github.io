@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection"
 date: "2025-09-15"
 tags:
@@ -7,7 +7,6 @@ year: "2025"
 ---
 
 # [Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/4094b5ba-29f7-4428-9d80-eafe7468dce4/image.png)
 

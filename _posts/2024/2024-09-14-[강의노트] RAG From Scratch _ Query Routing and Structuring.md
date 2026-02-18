@@ -1,19 +1,14 @@
-﻿---
+---
 title: "[강의노트] RAG From Scratch : Query Routing & Structuring"
 date: "2024-09-14"
-tags:
-  - "rag"
-  - "강의노트"
 year: "2024"
 ---
 
 # [강의노트] RAG From Scratch : Query Routing & Structuring
 
-
-
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/13495766-bce9-47a8-9053-6fded6eaa055/image.png)
 
+* 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 10 - 11 내용을 다루고 있습니다.
 
 | **비디오** | **요약** | **강의 링크** | **슬라이드** |
 | --- | --- | --- | --- |
@@ -27,7 +22,7 @@ year: "2024"
 ![](https://velog.velcdn.com/images/euisuk-chung/post/eb186c45-0d53-4341-8f72-0b15471682d1/image.png)
 
 * 위 그림의 단계에 따라 각 과정의 역할과 개념을 간략하게 설명하겠습니다:
-  
+
   1. **Question** (질문) : 사용자가 시스템에 입력하는 자연어 형태의 질문입니다. 이는 전체 프로세스의 시작점이 됩니다.
   2. **Query Translation** (쿼리 번역) : 사용자의 자연어 질문을 시스템이 이해할 수 있는 형식으로 변환하는 과정입니다. 이는 자연어 처리 기술을 활용하여 수행됩니다.
   3. **Routing** (라우팅, 이번 챕터📌) : 변환된 쿼리를 적절한 처리 경로나 데이터 소스로 안내하는 과정입니다. 질문의 특성에 따라 최적의 처리 방법을 결정합니다.
@@ -42,10 +37,10 @@ year: "2024"
 **1. 라우팅 개념**
 
 * **라우팅(Routing)**은 질문을 적절한 데이터 소스로 전달하는 프로세스를 의미합니다.
-  
+
   + RAG(질문-답변 생성 모델)에서 라우팅은 ***특정 질문을 처리하기 위해 적절한 데이터베이스나 프롬프트에 연결하는 역할***을 합니다.
 * 다르게 정의해본다면, **라우팅**을 아래와 같이 정의해볼 수 있습니다:
-  
+
   + `정의`: 입력된 쿼리나 작업을 적절한 모델이나 처리 경로로 안내하는 과정입니다.
   + `목적`: 주어진 입력에 가장 적합한 LLM이나 처리 모듈을 선택합니다.
   + `작동 방식`: 입력의 특성을 분석하여 미리 정의된 규칙이나 학습된 알고리즘을 통해 최적의 처리 경로를 결정합니다.
@@ -68,11 +63,8 @@ year: "2024"
 * 질문이 명확히 구분 가능한 주제나 데이터베이스와 관련이 있을 때 매우 적합한 방법입니다.
 
 **과정**  
-
 1. 사용자가 질문을 입력합니다.  
-
 2. LLM이 그 질문을 분석하여 미리 설정된 데이터 소스 목록(예: Python 문서, JS 문서 등) 중에서 가장 적합한 소스를 결정합니다.  
-
 3. 선택된 데이터 소스를 바탕으로 답변을 생성합니다.
 
 **코드 설명**
@@ -173,11 +165,8 @@ full_chain.invoke({"question": question})  # 'chain for python_docs'
 * 질문이 단순한 정보 조회가 아니라, 의미적으로 유사한 여러 가능성을 고려해야 할 때 적합합니다.
 
 **과정**  
-
 1. 사용자가 질문을 입력하면 시스템이 그 질문을 임베딩(벡터화)합니다.  
-
 2. 시스템은 여러 프롬프트 중에서 질문과 가장 유사한 프롬프트를 선택합니다.  
-
 3. 선택된 프롬프트에 따라 답변을 제공합니다.
 
 **코드 설명**
@@ -270,7 +259,7 @@ They are fascinating objects that challenge our understanding of physics, partic
 ![](https://velog.velcdn.com/images/euisuk-chung/post/8439e5e2-993d-4a61-b53e-1796adc96ead/image.png)
 
 * 위 그림의 단계에 따라 각 과정의 역할과 개념을 간략하게 설명하겠습니다:
-  
+
   1. **Question** (질문) : 사용자가 시스템에 입력하는 자연어 형태의 질문입니다. 이는 전체 프로세스의 시작점이 됩니다.
   2. **Query Translation** (쿼리 번역) : 사용자의 자연어 질문을 시스템이 이해할 수 있는 형식으로 변환하는 과정입니다. 이는 자연어 처리 기술을 활용하여 수행됩니다.
   3. **Routing** (라우팅) : 변환된 쿼리를 적절한 처리 경로나 데이터 소스로 안내하는 과정입니다. 질문의 특성에 따라 최적의 처리 방법을 결정합니다.
@@ -291,12 +280,12 @@ They are fascinating objects that challenge our understanding of physics, partic
 **2.1. 자연어 질문 → 구조화된 쿼리**:
 
 * 사용자가 자연어로 질문을 입력하면, LLM이 해당 질문을 분석하여 메타데이터 필터(예: 날짜, 조회수, 비디오 길이)를 사용해 데이터베이스 검색에 적합한 구조화된 쿼리로 변환합니다.
-  
+
   + **예시**: 유튜브 비디오 데이터를 로드하고 메타데이터 필터 적용
   + 링크 : Self-reflective RAG with LangGraph: Self-RAG and CRAG
-  
+
   ![](https://velog.velcdn.com/images/euisuk-chung/post/3b16b086-4d59-4ebe-a691-8760e978ebbf/image.png)
-  
+
   ```
     from langchain_community.document_loaders import YoutubeLoader
     # https://youtu.be/pbAd8O1Lvm4
@@ -308,15 +297,16 @@ They are fascinating objects that challenge our understanding of physics, partic
     
     docs[0].metadata
   ```
+
   + 위 코드는 YouTube에서 비디오를 로드하고 해당 비디오의 메타데이터(예: 제목, 조회수, 게시일)를 가져오는 예시입니다.
 
 **2.2. 메타데이터 필터 사용**:
 
 * 벡터 스토어에서 사용 가능한 메타데이터 필터를 기반으로 자연어 질문을 처리합니다.
 * 필터로는 **조회수, 게시일, 비디오 길이** 등이 있으며, 이를 통해 보다 세밀한 검색을 할 수 있습니다. (`view_count`, `publish_date`, `length` 등을 필터로 사용하여 검색할 수 있습니다.)
-  
+
   + 아래는 위에서 호출한 영상의 정보입니다.
-    
+
     ```
     {'source': 'pbAd8O1Lvm4',
      'title': 'Self-reflective RAG with LangGraph: Self-RAG and CRAG',
@@ -331,15 +321,15 @@ They are fascinating objects that challenge our understanding of physics, partic
 **2.3. LLM과 함수 호출**:
 
 * **구조화된 쿼리의 스키마**: 이 스키마는 검색할 비디오의 메타데이터 필터(예: 조회수, 게시일, 비디오 길이)를 정의합니다.
-  
+
   ```
   import datetime
   from typing import Literal, Optional, Tuple
   from langchain_core.pydantic_v1 import BaseModel, Field
-  
+
   class TutorialSearch(BaseModel):
       """Search over a database of tutorial videos about a software library."""
-  
+
       content_search: str = Field(
           ...,
           description="Similarity search query applied to video transcripts.",
@@ -376,7 +366,7 @@ They are fascinating objects that challenge our understanding of physics, partic
           None,
           description="Maximum video length in seconds, exclusive. Only use if explicitly specified.",
       )
-  
+
       def pretty_print(self) -> None:
           for field in self.__fields__:
               if getattr(self, field) is not None and getattr(self, field) != getattr(
@@ -384,40 +374,42 @@ They are fascinating objects that challenge our understanding of physics, partic
               ):
                   print(f"{field}: {getattr(self, field)}")
   ```
+
   + LLM은 함수 호출을 사용하여 자연어 질문을 처리하고, 이를 **JSON** 형식의 구조화된 객체로 변환하여 반환합니다. 이 객체는 검색 쿼리로 바로 사용할 수 있습니다.
-    
+
     - `structured_llm = llm.with_structured_output(TutorialSearch)`에 앞에 설정해둔 TutorialSearch으로 출력하도록 정의해둡니다.
+
   ```
   from langchain_core.prompts import ChatPromptTemplate
   from langchain_openai import ChatOpenAI
-  
+
   # Create the Prompt Template:
   system = """You are an expert at converting user questions into database queries.
   You have access to a database of tutorial videos about a software library for building LLM-powered applications.
   Given a question, return a database query optimized to retrieve the most relevant results."""
-  
+
   prompt = ChatPromptTemplate.from_messages([("system", system), ("human", "{question}")])
-  
+
   # Initialize the Language Model (LLM)
   llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
   structured_llm = llm.with_structured_output(TutorialSearch)
-  
+
   # Prompt and LLM into a Query Analyzer
   query_analyzer = prompt | structured_llm
-  
   ```
 
 **2.4. User Question 처리**:
 
 * 앞에서 정의한 `prompt`와 `query_analyzer`를 바탕으로 User Question을 처리합니다.
-  
+
   + prompt = ChatPromptTemplate.from\_messages([("system", system), ("human", "{question}")])
   + query\_analyzer = prompt | structured\_llm
 * 아래와 같은 형태로 question을 처리해줍니다.
-  
+
   ```
     query_analyzer.invoke({"question": "your question"}).pretty_print()
   ```
+
   1. `프롬프트 생성`: 사용자 질문을 프롬프트에 삽입합니다.
   2. `LLM 처리`: LLM이 프롬프트를 읽고 TutorialSearch 구조에 맞는 출력을 생성합니다.
   3. `구조화된 출력`: 결과를 TutorialSearch 객체로 파싱하고 출력합니다.
@@ -429,7 +421,7 @@ They are fascinating objects that challenge our understanding of physics, partic
 ```
 
 * 이 자연어 질문을 LLM(대형 언어 모델)과 쿼리 분석 체인(query analyzer)을 사용해, `TutorialSearch`와 같은 데이터 모델로 변환할 수 있습니다.
-  
+
   ```
   class TutorialSearch(BaseModel):
       content_search: str = None
@@ -442,7 +434,7 @@ They are fascinating objects that challenge our understanding of physics, partic
       max_view_count: Optional[int] = None
   ```
 * 여기서 사용자 질문을 변환하면 다음과 같은 `TutorialSearch` 객체가 생성될 수 있습니다:
-  
+
   ```
   TutorialSearch(
       content_search='LangChain',
@@ -452,7 +444,7 @@ They are fascinating objects that challenge our understanding of physics, partic
   )
   ```
 * 이 구조화된 쿼리는 이제 메타데이터 필터링에 사용됩니다. 예를 들어:
-  
+
   + **`earliest_publish_date` 필드**는 `2023년 6월 1일 이후에 게시된 영상`만 필터링합니다.
   + **`max_length_sec` 필드**는 `10분 이하의 영상`만 필터링합니다.
   + **`content_search`와 `title_search` 필드**는 LangChain이라는 키워드가 포함된 콘텐츠나 제목을 찾습니다.
@@ -462,12 +454,14 @@ They are fascinating objects that challenge our understanding of physics, partic
 
 1. **자연어 질문**: "2023년에 게시된 chat langchain 비디오"
    * **질의문**:
+
      ```
      query_analyzer.invoke(
          {"question": "videos on chat langchain published in 2023"}
      ).pretty_print()
      ```
    * **구조화된 쿼리 출력**:
+
      ```
      content_search: chat langchain
      title_search: 2023
@@ -476,12 +470,14 @@ They are fascinating objects that challenge our understanding of physics, partic
      ```
 2. **자연어 질문**: "2024년 이전에 게시된 chat langchain 비디오"
    * **질의문**:
+
      ```
      query_analyzer.invoke(
          {"question": "videos that are focused on the topic of chat langchain that are published before 2024"}
      ).pretty_print()
      ```
    * **구조화된 쿼리 출력**:
+
      ```
      content_search: chat langchain
      title_search: chat langchain
@@ -489,12 +485,14 @@ They are fascinating objects that challenge our understanding of physics, partic
      ```
 3. **자연어 질문**: "5분 이하의 멀티모달 모델 관련 비디오"
    * **질의문**:
+
      ```
      query_analyzer.invoke(
          {"question": "how to use multi-modal models in an agent, only videos under 5 minutes"}
      ).pretty_print()
      ```
    * **구조화된 쿼리 출력**:
+
      ```
      content_search: multi-modal models agent
      title_search: multi-modal models agent
@@ -502,4 +500,3 @@ They are fascinating objects that challenge our understanding of physics, partic
      ```
 
 ---
-

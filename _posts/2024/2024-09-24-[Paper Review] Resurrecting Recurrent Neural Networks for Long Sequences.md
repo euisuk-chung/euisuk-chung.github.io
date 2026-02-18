@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences"
 date: "2024-09-24"
 tags:
@@ -9,9 +9,6 @@ year: "2024"
 ---
 
 # [Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences
-
-
-
 
 논문 *"Resurrecting Recurrent Neural Networks for Long Sequences"*는 25 Apr 2023에 publish되었으며, **ICML 2023 OralPoster**에 발표된 논문입니다.
 
@@ -35,11 +32,11 @@ year: "2024"
 ![](https://velog.velcdn.com/images/euisuk-chung/post/10e53235-d163-4644-b10c-a4075eccbc4a/image.png)
 
 * `기울기 소실` 문제는 네트워크의 초기 층이나 깊은 층에서 기울기가 매우 작아져서, 가중치 업데이트가 이루어지지 않거나 매우 느리게 이루어지는 현상입니다.
-  
+
   + 비선형 활성화 함수: 입력값이 비선형 함수의 극한에 도달할 때 해당 함수의 기울기가 0이 되기 때문에, 그 이후의 층으로 전달되는 기울기가 모두 0에 가까워진다.
   + 층이 깊어질수록: RNN은 시간에 따라 연속적으로 여러 층을 쌓아 나가기 때문에, 각 단계에서 신호가 전파될 때 기울기가 곱해져서 감소하게 된다.
 * `기울기 폭발` 문제는 기울기가 너무 커져서 가중치 업데이트가 극심해지는 현상입니다. 이로 인해 모델이 학습 중에 발산하게 될 수 있습니다.
-  
+
   + 기울기 조합: RNN 모델에서 여러 층의 가중치가 곱해지면서 기울기가 지수적으로 증가할 수 있습니다.
   + 부적절한 초기화: 가중치를 잘못 초기화하면 훈련 중에 기울기가 큰 값을 가지게 되면서, 업데이트도 비정상적으로 커지게 됩니다.
 
@@ -63,6 +60,7 @@ Transformer는 **주의(attention)** 메커니즘을 사용하여 시퀀스의 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2da671ca-adfe-4ef1-86d3-173de0c41f55/image.png)
 
+S4 모델은 **Long Range Arena(LRA)**라는 긴 시퀀스를 다루는 벤치마크에서 뛰어난 성능을 보여주며, 특히 긴 시퀀스를 효율적으로 처리할 수 있는 능력을 가지고 있습니다. SSM은 시퀀스 간의 상호작용을 순차적으로 처리하면서도 병렬 처리가 가능하고, 추론 속도도 빠릅니다. *(다음 [paper-review](https://velog.io/@euisuk-chung/Structured-State-Space-Models-for-Deep-Sequence-Modeling)에서 정리해볼게요!)*
 
 이는 RNN과 유사한 방식으로 작동하면서도, 학습 속도와 성능 면에서 Transformer보다 효율적입니다.
 
@@ -78,7 +76,7 @@ Transformer는 **주의(attention)** 메커니즘을 사용하여 시퀀스의 �
 
 * **Linear Recurrences (선형 재귀)**: 기존의 tanh 또는 ReLU 활성화를 사용하는 RNN 계층 대신 비선형성을 제거하고 선형 재귀(*선형적으로 반복되는 구조*)를 사용하여 성능이 크게 향상된다는 것을 발견했습니다. 여기서 선형적으로 반복되는 구조란, 예를 들어 tanh나 ReLU와 같은 활성화 함수를 사용하지 않고 단순히 행렬 곱셈과 덧셈만을 통해 상태를 갱신하는 방식입니다. 선형 재귀를 사용하면 gradient의 소실 또는 폭발을 직접 제어할 수 있으며, 병렬화된 훈련이 가능해집니다.
 * **Complex Diagonal Recurrent Matrices (복소수 대각 재귀 행렬)**: 밀집 선형 RNN 계층을 복소수 대각 형태로 재구성하는 것으로도 성능이 향상됩니다. 밀집 선형 RNN 레이어는 네트워크의 표현력을 손상시키지 않으면서 복잡한 대각 형태로 재매개변수화할 수 있습니다. 이를 통해 초기화에서의 특성도 유지됩니다. 대각 행렬은 반복적인 과정을 병렬로 풀 수 있게 해주어 훈련 속도를 크게 향상시킵니다.
-  
+
   + 대각행렬들은 곱셈 연산에서 결합법칙을 만족하기 때문에, 각 연산을 병렬화할 수 있습니다. 이를 통해 RNN과 같은 모델의 훈련 속도를 크게 개선할 수 있습니다. (Martin & Cundy, 2017).
   + (참고) `대각 행렬 곱셈의 특성` : 대각 행렬은 비대각선 요소가 모두 0이기 때문에, 곱셈 연산이 각 대각선 요소끼리만 이루어집니다. 즉, 각각의 요소가 독립적이기 때문에, 병렬로 연산이 가능해집니다.
   + (참고) `결합법칙` : 대각 행렬의 곱셈은 결합법칙을 만족합니다. 즉, A×(B×C)=(A×B)×C와 같은 방식으로 연산 순서에 상관없이 동일한 결과를 얻을 수 있습니다. 이는 병렬 처리에 매우 유리한 특성입니다.
@@ -123,6 +121,7 @@ xk=σ(Axk−1+Buk),yk=Cxk+Dukx\_k = \sigma(Ax\_{k-1} + Bu\_k), \quad y\_k = Cx\_
 이는 수학적으로는 다음과 같이 설명됩니다:
 
 ddtxct(t)=A~xct(t)+B~uct(t)\frac{d}{dt}x\_{ct}(t) = Ã x\_{ct}(t) + B̃ u\_{ct}(t)dtd​xct​(t)=A~xct​(t)+B~uct​(t)
+
 yct(t)=R(C~xct(t))+D~uct(t)y\_{ct}(t) = \mathcal{R}(C̃ x\_{ct}(t)) + D̃ u\_{ct}(t)yct​(t)=R(C~xct​(t))+D~uct​(t)
 
 이 모델에서 입력 신호 uctu\_{ct}uct​는 연속 시간에서 샘플링된 시그널로 간주됩니다. 이 상태 공간 모델은 긴 시퀀스에서도 안정적인 계산을 보장하며, 특히 복잡한 상호작용을 효율적으로 처리할 수 있습니다.
@@ -132,7 +131,6 @@ yct(t)=R(C~xct(t))+D~uct(t)y\_{ct}(t) = \mathcal{R}(C̃ x\_{ct}(t)) + D̃ u\_{ct
 * `S4`는 위의 SSM을 기반으로 설계된 딥러닝 모델로, 긴 시퀀스 모델링에서 뛰어난 성능을 발휘합니다. 이 모델은 **복소수 행렬을 사용하여 RNN보다 더 효율적으로 학습**할 수 있으며, **병렬화가 가능**하다는 장점이 있습니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3bff2b1c-5132-4b86-aafc-26487a33b8ba/image.png)  
-
 이미지 출처 : A Visual Guide to Mamba and State Space Models ([링크](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state?utm_campaign=post&utm_medium=web))
 
 S4는 상태 공간 모델을 기반으로 한 매우 효율적인 모델입니다. S4는 복잡한 긴 시퀀스를 처리할 수 있는 능력으로 주목받고 있으며, 다음과 같은 특징을 가지고 있습니다:
@@ -153,73 +151,72 @@ S4는 RNN과 비교했을 때 긴 시퀀스를 더 효율적으로 처리하며,
 **(Left) Deep Linear Recurrent Unit (LRU) Architecture**
 
 * 왼쪽 그림은 **LRU** 의 세부 구조를 보여줍니다.
-  
+
   ![](https://velog.velcdn.com/images/euisuk-chung/post/4f43f825-9eee-466e-ab39-bf20d6f2c1c3/image.png)
-  
+
   + **Linear Encoder (선형 인코더)** :
-    
+
     - 입력 시퀀스를 선형 인코더에 통과시킵니다.
-      
+
       * 이 인코더는 모든 타임스텝에 대해 동일하게 적용되며, 입력 데이터를 적절한 형태로 변환합니다.
     - 차원 축소 또는 변환을 통해 모델이 처리할 수 있는 형태로 데이터를 전달합니다.
   + **Linear Recurrent Unit (LRU)** :
-    
+
     - **LRU 블록** 은 여러 개의 층으로 쌓인 구조를 가지며, 각 층 사이에는 **MLP/GLU** 블록이 삽입되어 비선형성을 추가합니다.
-      
+
       * 여기서 MLP는 **Multi-Layer Perceptron** 을 의미하고, GLU는 **Gated Linear Unit** 을 의미합니다.
     - LRU는 RNN의 기본적인 순환 신경망 구조를 따르고 있지만, 몇 가지 중요한 변형을 통해 성능을 개선한 버전입니다.
-      
+
       * 특히, 비선형성을 제거하고, 복소수 대각 행렬을 사용하는 등, RNN의 효율성을 높이기 위한 여러 개선 사항을 포함하고 있습니다.
       * 하지만 순환적인 상태 전이와 시퀀스 처리라는 RNN의 핵심 특성은 유지하고 있기 때문에 LRU도 RNN의 한 형태라고 할 수 있습니다.
     - LRU의 핵심은 **선형 반복** 을 사용하며, 이를 통해 RNN의 비선형성을 제거하면서도 강력한 성능을 유지할 수 있습니다. 이 구조는 병렬화가 가능하며, 학습 속도를 향상시킵니다.
     - `LRU의 반복 수식`은 아래와 같습니다:
-      
+
       xk=diag(λ)xk−1+γ⊙Bukx\_k = \text{diag}(\lambda) x\_{k-1} + \gamma \odot B u\_kxk​=diag(λ)xk−1​+γ⊙Buk​
+
       * diag(λ)diag(λ)diag(λ) : 복소수 대각 행렬로, 이는 상태 전이를 더 효율적으로 계산할 수 있게 해줍니다.
       * γγγ : 학습 가능한 정규화 파라미터로, 이는 각 시퀀스 타임스텝에서 상태 정보를 조정하는 역할을 합니다.
       * BukB u\_kBuk​ : 입력 데이터 uku\_kuk​ 에 대해 가중치 BBB 를 곱하여 다음 상태로 전달합니다.
     - 세부 파라미터를 좀 더 살펴보겠습니다.  
-      
       ![](https://velog.velcdn.com/images/euisuk-chung/post/025d3b8d-d6b4-4717-a05f-29883c545505/image.png)
     - **Normalization (정규화, γj\gamma\_jγj​)** :
-      
+
       * LRU 내부에서는 **Pre-Layer Normalization** 또는 **Batch Normalization** 이 적용되어 긴 시퀀스 학습 중 발생할 수 있는 기울기 소실 문제를 완화합니다.
       * 정규화는 각 층에서 발생하는 은닉 상태의 스케일을 조정하여 학습을 안정화시킵니다.
-        
+
         γj=(1−∣λj∣2)1/2\gamma\_j = (1 - |λ\_j|^2)^{1/2}γj​=(1−∣λj​∣2)1/2
-    - **Stable Exponential Parameterization (안정적인 지수 매개변수화, λjλ\_jλj​)** 
-      
+    - **Stable Exponential Parameterization (안정적인 지수 매개변수화, λjλ\_jλj​)**
+
       * RNN의 반복 행렬을 매개변수화할 때, 학습 과정에서 안정성을 보장하기 위해 수행됩니다.
       * 이는 모델이 학습하는 동안 기울기 소실(vanishing gradient) 또는 **기울기 폭발(exploding gradient)**을 방지하여, 특히 긴 시퀀스에서 오버플로우 또는 언더플로우 문제를 해결하는 데 중요한 역할을 합니다.
-        
+
         λj=exp(−exp(νjlog)+iexp(θjlog))λ\_j = exp(-exp(ν\_j^log) + i exp(θ\_j^log))λj​=exp(−exp(νjl​og)+iexp(θjl​og))
+
         + λ는 복소수 고유값이며, 이는 학습 중에 매개변수화되어 안정성을 보장합니다.
         + 고유값의 크기와 위상을 각각 매개변수화하여 학습 성능을 높입니다.
 
 * **Skip Connection** :
-  
+
   + 각 층 사이에는 **Skip Connection** 이 포함되어 있습니다. 이는 모델이 깊어질수록 발생할 수 있는 정보 손실을 방지하고, 더 깊은 네트워크에서 효과적인 학습을 가능하게 합니다.
 * **Linear Layer (선형 출력 레이어)** :
-  
+
   + 마지막으로, 타임스텝과 관련된 출력을 위해 **선형 레이어** 가 사용됩니다. 이는 모델의 최종 출력으로 이어지며, 클래스 예측이나 기타 시퀀스 모델링 작업에 사용됩니다.
 
 **(Right) Test accuracy on LRA tasks**   
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/16b00dfd-3fe3-45a3-80c5-94d5b45358bd/image.png)  
-
 오른쪽 그래프는 **Long Range Arena (LRA)** 벤치마크에서 수행한 테스트 결과를 시각적으로 보여줍니다. 이 그래프는 RNN 구조에서 **tanh** 활성화 함수를 사용하는 기본 RNN에서 시작하여, LRU 구조로 변경해가면서 성능이 어떻게 변화하는지를 나타냅니다.
 
 1. **Recurrent Block Variants (RNN 블록 변형)** :
-   
+
    * X축은 반복 모듈의 여러 변형을 나타냅니다. 초기 **tanh** 활성화 RNN에서 시작하여, **선형 활성화** , **대각선화(복소수 대각 행렬)** , **안정적인 지수 매개변수화** , 그리고 최종적으로 **γ 정규화** 를 포함하는 LRU까지 발전합니다.
    * 각 단계에서 RNN이 어떻게 개선되고 있는지 확인할 수 있습니다.
 2. **Efficiency Boost (효율성 향상)** :
-   
+
    * 그래프에서 주목할 점은 선형 대각 행렬과 안정적인 지수 매개변수화를 도입한 시점에서 성능이 크게 향상되었다는 것입니다. 이는 병렬화 및 효율적인 계산을 통해 학습 속도와 성능이 동시에 개선된 것을 나타냅니다.
 3. **Performance on LRA tasks (LRA 과제에서의 성능)** :
-   
+
    * 그래프의 Y축은 테스트 정확도를 나타내며, 각 색상과 기호는 서로 다른 과제를 의미합니다.
-     
+
      + **sCIFAR** (오렌지색 원), **ListOps** (초록색 삼각형), **PathFinder** (갈색 사각형), **PathX** (노란색 다이아몬드)
    * S4와 S5 모델의 성능은 대시 선으로 나타내어, 각 과제에서 LRU가 S4/S5와 동등한 성능을 발휘하고 있음을 보여줍니다.
 
@@ -296,4 +293,3 @@ S4는 RNN과 비교했을 때 긴 시퀀스를 더 효율적으로 처리하며,
 결론적으로, 이 논문은 S4 모델과 그 변형들이 높은 성능을 달성하는 데 필요한 다양한 기하학적 및 계산적 요소들을 분석하고, 기존의 가정이 더 간단한 방법으로도 검증될 수 있음을 제시하고 있습니다.
 
 이러한 인사이트는 향후 RNN 및 SSM 모델 개발에 중요한 방향성을 제공할 것으로 기대된다고 하며 글을 마무리합니다.
-

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Tips] Lovable Prompting Tips 공개!! : Prompting 1.1"
 date: "2025-08-18"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 ---
 
 # [Tips] Lovable Prompting Tips 공개!! : Prompting 1.1
-
 
 Lovable 프롬프트 전략
 ===============

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)"
 date: "2021-12-19"
 tags:
@@ -9,9 +9,7 @@ year: "2021"
 
 # [파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)
 
-
-
-
+안녕하세요! 지난번 포스트인 [VGGNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-VGGNet%ED%8E%B8)과 [GoogleNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-GoogleNet%ED%8E%B8) 이후로 오늘은 `ResNet` 관련 포스트입니다.
 
 2번에 걸친 포스팅에서 소개드렸다시피 컴퓨터 비전 대회 중에 `ILSVRC (Imagenet Large Scale Visual Recognition Challenges)`이라는 대회가 있는데, 본 대회는 거대 이미지를 1000개의 서브이미지로 분류하는 것을 목적으로 합니다. 아래 그림은 CNN구조의 대중화를 이끌었던 초창기 모델들로 AlexNet (2012) - VGGNet (2014) - GoogleNet (2014) - ResNet (2015) 순으로 계보를 이어나갔습니다.
 
@@ -32,7 +30,6 @@ ResNet 개요
 ResNet이 소개된 논문의 제목은 Going Deeper with Convolutions로, 다음 링크에서 확인해보실 수 있습니다. [(링크)](https://arxiv.org/abs/1512.03385)
 
 ResNet의 저자들은 일정 수준 이상의 깊이가 되면 오히려 얕은 모델보다 깊은 모델의 성능이 더 떨어진다는 것을 아래 그림과 같이 확인할 수 있었습니다.  
-
 ![26_56_plot](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fbe79795b-2ee1-4067-884b-61fa8f745e71%2Fimage.png)
 
 > Plane network 20-layer와 56-layer의 train error와 test error (논문 발췌)
@@ -78,7 +75,6 @@ Plain Network은 다음과 같은 규칙에 따라 만들어졌습니다:
 ### Residual Network
 
 **Residual Network**  
-
 Residual Network(ResNet)의 기본적인 조건은 위의 plain network와 동일합니다. 한가지 다른 점은 각각의 block들이 끝날때마다 shortcut connection 추가된다는 점입니다.
 
 ![Identity/Projection](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fa0d1d05b-3f9e-4461-a175-53c8ca386757%2Fimage.png)
@@ -106,7 +102,6 @@ Table 3을 보면 3가지 옵션 모두 Plain Network보다 성능이 좋으며,
 A, B, C에서의 작은 차이를 통해 알 수 있는 것은 Projection Shortcut은 본 논문에서 문제 삼고 있는 degradation 문제를 address 하는 것의 본질이 아니라는 것을 보여줍니다. 또한, extra parameter가 추가되는 C는 memory & time complexity 를 줄이기 위해 사용되지 않았습니다.
 
 **Deeper Bottleneck Architecture**  
-
 본 논문에서 저자들은 Layer 가 깊어지면 training time 이 증가하는 것을 발견하였고, 이를 고려하여 Residual Block을 아래와 같이 1x1 Convolution을 활용하여 개선한 Bottleneck Block을 제안하였습니다.
 
 ![Bottleneck Block](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fac17b16c-b707-48c6-a183-d020ed6539de%2Fimage.png)
@@ -133,11 +128,9 @@ Bottleneck Block은 1x1, 3x3, 1x1 convolution으로 구성된 3개의 Layer를 �
 각각 PASCAL VOC 2007/2012 데이터와 MS COCO 데이터를 사용한 Object Detection에 있어서도 VGGNet을 사용한 것보다 ResNet을 사용한 것이 더 좋은 성능이 나오는 것을 확인할 수 있습니다.
 
 **PASCAL VOC 2007/2012**  
-
 ![PASCAL VOC](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F439f0496-a155-480f-9f48-03ae5d8e1fe2%2Fimage.png)
 
 **MS COCO**  
-
 ![MS COCO](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F2f8c6bc4-d752-49b8-8104-f4d8b4e29280%2Fimage.png)
 
 코드
@@ -165,6 +158,7 @@ import matplotlib.pyplot as plt
 import tqdm
 from tqdm.auto import trange
 ```
+
 ### 하이퍼파라미터
 
 ```
@@ -172,6 +166,7 @@ batch_size = 50
 learning_rate = 0.0002
 num_epoch = 100
 ```
+
 ### Load CIFAR-10
 
 ```
@@ -188,6 +183,7 @@ test_loader = DataLoader(cifar10_test,batch_size=batch_size, shuffle=False, num_
 # define classes
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 ```
+
 ### Basic Module
 
 ```
@@ -208,6 +204,7 @@ def conv_block_3(in_dim,out_dim, activation, stride=1):
     )
     return model
 ```
+
 ### Bottleneck Module
 
 ```
@@ -250,6 +247,7 @@ class BottleNeck(nn.Module):
             out = out + x
         return out
 ```
+
 ### Define ResNet-50
 
 ```
@@ -303,6 +301,7 @@ class ResNet(nn.Module):
         
         return out
 ```
+
 ### Train
 
 ```
@@ -327,13 +326,11 @@ for i in trange(num_epoch):
         print(loss)
         loss_arr.append(loss.cpu().detach().numpy())
 ```
+
 ### 성능 (epoch = 100)
 
 **Train Loss**  
-
 ![Train Loss](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F81edcc96-6520-40e2-8b88-c03b2bea59a2%2Fimage.png)
 
 **Test Accuracy**  
-
 Accuracy of Test Data: 74.33999633789062%
-

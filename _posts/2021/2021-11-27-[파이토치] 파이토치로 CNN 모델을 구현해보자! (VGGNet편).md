@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)"
 date: "2021-11-27"
 tags:
@@ -8,9 +8,6 @@ year: "2021"
 ---
 
 # [파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)
-
-
-
 
 안녕하세요! 오늘 포스팅부터 다음다음 포스팅까지는 CNN 모델의 뼈대가 되는 모델들인 VGGNet, GoogleNet, ResNet을 소개하고 이를 구현해보는 시간을 갖도록 하겠습니다! :) 이번 포스팅은 `VGGNet` 관련 포스트입니다.
 
@@ -48,7 +45,6 @@ VGGNet은 신경망의 깊이가 모델의 성능에 미치는 영향을 조사�
 * Activation function : ReLU
 
 > 📢 여기서 잠깐!  
-> 
 > 위 표에서 conv3-64라고 써있는 것은 3x3의 window\_size를 갖고 사용한 window의 개수가 64개임을 의미합니다.
 
 ### 성능
@@ -68,7 +64,6 @@ VGGNet 구현
 * 3x3 합성곱 연산 x3 (채널 512)
 * 3x3 합성곱 연산 x3 (채널 512)
 * FC layer x3  
-  
   - FC layer 4096
   + FC layer 4096
   + FC layer 1000
@@ -90,6 +85,7 @@ def conv_2_block(in_dim,out_dim):
     )
     return model
 ```
+
 ### conv\_3\_block
 
 ```
@@ -105,6 +101,7 @@ def conv_3_block(in_dim,out_dim):
     )
     return model
 ```
+
 ### Define VGG16
 
 ```
@@ -139,6 +136,7 @@ class VGG(nn.Module):
         x = self.fc_layer(x)
         return x
 ```
+
 ### model, loss, optimizer 선언
 
 ```
@@ -152,6 +150,7 @@ model = VGG(base_dim=64).to(device)
 loss_func = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 ```
+
 ### load CIFAR10 dataset
 
 * CIFAR10은 ‘비행기(airplane)’, ‘자동차(automobile)’, ‘새(bird)’, ‘고양이(cat)’, ‘사슴(deer)’, ‘개(dog)’, ‘개구리(frog)’, ‘말(horse)’, ‘배(ship)’, ‘트럭(truck)’로 10개의 클래스로 구성되어 있는 데이터셋입니다.
@@ -177,7 +176,6 @@ cifar10_train = datasets.CIFAR10(root="../Data/", train=True, transform=transfor
 cifar10_test = datasets.CIFAR10(root="../Data/", train=False, transform=transform, target_transform=None, download=True)
 
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
-
 ```
 
 **TRAIN 데이터셋 시각화**
@@ -205,6 +203,7 @@ imshow(torchvision.utils.make_grid(images))
 # 정답(label) 출력
 print(' '.join('%5s' % classes[labels[j]] for j in range(batch_size)))
 ```
+
 > Source : <https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html>
 
 ![시각화](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F006eb0ee-0f82-4852-bb97-aae9a61ae5cd%2Fimage.png)
@@ -278,7 +277,7 @@ with torch.no_grad():
     # 정확도 도출
     print("Accuracy of Test Data: {}%".format(100*correct/total))
 ```
+
 > Accuracy of Test Data: 82.33999633789062%
 
 긴 글 읽어주셔서 감사합니다 ^~^
-

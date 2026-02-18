@@ -1,13 +1,10 @@
-﻿---
+---
 title: "제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊"
 date: "2025-01-05"
 year: "2025"
 ---
 
 # 제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊
-
-
-
 
 안녕하세요! 오늘은 AI 창작의 최전선에서 열린 ‘**2025 제1회 AI FC(AI Fight Club)**’ 대회 소개 및 제가 참여한 작품에 대해 이야기하려고 합니다.
 
@@ -34,15 +31,12 @@ AI FC 대회
 ### AI FC 대회 참여 방법
 
 1. **접속 및 로그인**: [AIKive 웹사이트](https://aikive.com/community?c=6)에 접속하여 로그인합니다.
-   
+
    ![](https://velog.velcdn.com/images/euisuk-chung/post/ae54b56d-d076-47c0-b90a-d039b744a7b0/image.png)
 2. **AI FC 공모전 카테고리 이동**: 커뮤니티 내 “[AI FC 공모전]” 카테고리를 클릭합니다.  
-   
    ![](https://velog.velcdn.com/images/euisuk-chung/post/30183305-8bc1-45ba-bc00-54ad9532d75c/image.png)  
-   
    ![](https://velog.velcdn.com/images/euisuk-chung/post/4d083d35-3f1d-427c-a14f-ef4e5b10a086/image.png)
 3. **작품 업로드**: 화면 상단의 “AI 작품 업로드” 버튼을 클릭한 후 필요한 정보를 입력하고 제출하면 완료됩니다.  
-   
    ![](https://velog.velcdn.com/images/euisuk-chung/post/3d4d5155-193a-4fe6-982c-65c09452c8f0/image.png)
 
 참가자들은 생성형 AI를 활용해 주제에 맞는 이미지를 제출하며, “나만의 FANTASY”를 AI 이미지로 표현하는 것이 핵심입니다.
@@ -56,20 +50,19 @@ AI FC 대회
 심사는 **심사위원 평가**와 **대중 평가**로 나뉘어 진행됩니다.
 
 1. **1차 심사**:
-   
+
    * 심사위원단 평가: 50%
    * 대중 평가(AI-Kive 인기도): 50%
 2. **본선 및 결승**:
-   
+
    * 1차 심사 결과: 30%
    * 대중 평가: 70%
 
 특히 결승에서는 대중 평가가 70%로, 참가작이 얼마나 대중의 관심을 받는지가 중요한 요소가 됩니다. 심사위원으로는 권한슬 감독, 큐티코, 리액터, AI 오프너 등 다양한 전문가들이 참여해 수준 높은 평가를 진행합니다.
 
 > 📃 **대회 포스터**
-> 
+>
 > * 링크 : <https://aikive.com/community/263>  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/fbe165eb-6ec7-417d-96bc-e54bde2b5db5/image.png)
 
 ---
@@ -120,4 +113,3 @@ AIKive 플랫폼에서 많은 관심과 추천을 받을 수 있다면, 저도 �
 **AI 창작의 새로운 장을 여는 이 대회에 여러분도 도전해 보세요!**
 
 읽어주셔서 감사합니다 💻
-

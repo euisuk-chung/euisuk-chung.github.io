@@ -1,13 +1,13 @@
-﻿---
+---
 title: "[CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet"
 date: "2025-01-09"
+tags:
+  - "CES"
+  - "Conference"
 year: "2025"
 ---
 
 # [CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet
-
-
-
 
 연설 개요
 -----
@@ -19,9 +19,8 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 기조연설자로 초대된 Julie Sweet는 Accenture의 기술 리더십과 AI, 데이터, 디지털 전환, 지속 가능성 등의 분야에서의 성과를 공유했습니다. CNBC의 Julia Borston과 함께한 인터뷰 형식의 발표에서는 Accenture의 AI 솔루션, 기업 혁신, 신기술 활용 전략에 대해 심층적으로 논의했습니다. 더불어 Accenture의 새로운 기술 도입 사례와 조직 내 문화 변화가 전 세계 기업들에게 줄 수 있는 시사점도 다뤘습니다.
 
 > ❓ **Accenture는 어떤 곳인가?**
-> 
+>
 > * <https://www.accenture.com/us-en>  
->   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/2091cc08-1bc4-4e5d-ae7f-839f8d4bc7c5/image.png)
 > * Accenture는 세계적인 경영 컨설팅 및 전문 서비스 기업으로, 디지털 혁신과 첨단 기술 솔루션을 통해 글로벌 기업들이 성장과 변화를 이룰 수 있도록 지원합니다.
 > * 주요 사업 영역으로는 경영 컨설팅, IT 서비스, 아웃소싱, 디지털 마케팅 등이 있으며, 클라우드 컴퓨팅, AI, 데이터 분석 등 최신 기술을 활용한 서비스를 제공합니다.
@@ -68,7 +67,7 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 ### 2. AI 신뢰 구축과 변화 관리
 
 * **신뢰의 중요성**
-  
+
   + AI 활용에 대한 신뢰는 두 가지 차원으로 나뉨: 기술적 신뢰와 정서적 신뢰.
     - `기술적 신뢰`: AI의 작동 여부 및 학습 능력.
     - `정서적 신뢰`: AI가 일자리를 위협하지 않는다는 안심감.
@@ -77,7 +76,7 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
   + 기업들이 신뢰를 쌓기 위해서는 **AI를 인간 중심적으로 설계**하고, 기술의 **윤리적 사용을 보장하는 프레임워크**를 채택해야 합니다.
     - 이는 단순히 기술적 문제를 해결하는 데 그치지 않고, 조직 내 문화적 변화를 촉진하는 데 기여합니다.
 * **인력 관리 및 재교육**
-  
+
   + AI는 주로 업무의 "태스크"를 대체하며, 새로운 기술과 직무가 필요함.
   + Accenture는 자체적으로 스킬 데이터베이스를 구축해 직원의 기술 격차를 분석하고 재교육.
   + AI 도입 초기부터 역할과 기술 변화 분석.
@@ -90,7 +89,7 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 ### 3. 물리적 AI와 디지털 트윈
 
 * **물리적 AI(Physical AI)**
-  
+
   + NVIDIA 및 KION Group과의 협력을 통해 AI 기반 디지털 트윈과 창고 솔루션 개발.
   + 창고 운영에서 수작업 50% 감소, 운영 비용 50% 절감 예상.
   + 안전성과 최적화 향상.
@@ -102,7 +101,7 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 > 출처 : Transforming Warehouse Operations: KION, Accenture, and NVIDIA Showcase at CES 2025
 
 * **디지털 트윈 기술**
-  
+
   + AI를 물리적 세계에 적용해 공급망 효율성 향상.
   + AI를 통해 블랙프라이데이와 같은 높은 수요 시기에도 원활한 운영 가능.
   + 디지털 트윈은 실시간 데이터 피드백을 통해 지속적인 최적화가 가능하며, 산업 설비의 유지보수에도 혁신적인 변화를 가져옵니다.
@@ -117,14 +116,14 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 ### 4. AI와 보안
 
 * **AI를 활용한 보안 강화**
-  
+
   + AI는 데이터 보호와 기업 보안을 강화하는 도구.
   + 인간의 실수로 인한 보안 사고를 예방.
   + 기업들은 AI를 보안 강화에 활용하는 전략 필요.
   + Accenture는 클라우드 보안과 AI 기반 사이버 보안 시스템을 결합해 고객들에게 포괄적인 보안 솔루션을 제공하고 있습니다.
   + 보안 솔루션은 위협 탐지, 실시간 대응, 사전 예방적 조치를 통해 조직의 사이버 복원력을 강화합니다. 이를 통해 기업은 보안 위협을 신속하게 식별하고, 비즈니스 연속성을 유지할 수 있습니다.
 * **AI 규제**
-  
+
   + 혁신과 보호의 균형을 맞추는 규제가 필요.
   + 글로벌 및 일관된 규제 환경의 중요성 강조.
   + AI 규제는 데이터 프라이버시, 알고리즘 공정성, 그리고 윤리적 사용을 보장하기 위한 초석으로 간주됩니다.
@@ -142,6 +141,4 @@ CES 2025에서 Accenture의 Julie Sweet는 기술이 단순히 혁신의 도구�
 기술 혁신의 시대에, 우리가 할 수 있는 가장 큰 도전은 바로 "변화에 대한 용기"를 가지는 것입니다. Julie Sweet의 메시지는 우리가 더 크고 담대한 꿈을 꿀 때, 진정한 혁신이 가능하다는 점을 상기시킵니다.
 
 이것으로 CES 2025의 메인 키노트 리뷰를 마쳐보겠습니다!  
-
 읽어주셔서 감사합니다 💌
-

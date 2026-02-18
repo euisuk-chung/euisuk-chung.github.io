@@ -1,13 +1,10 @@
-﻿---
+---
 title: "[Paper Review] A generic non-invasive neuromotor interface for human-computer interaction"
 date: "2025-07-31"
-tags:
-  - "paper-review"
 year: "2025"
 ---
 
 # [Paper Review] A generic non-invasive neuromotor interface for human-computer interaction
-
 
 메타(Meta)가 손목 밴드를 착용하고 손목이나 손가락의 작은 움직임만으로도 마우스 조작과 키보드 입력이 가능한 혁신적인 기술을 발표했습니다. 이 기술은 우리 몸이 만들어내는 아주 미세한 전기신호를 읽어내 컴퓨터와 소통하는 방식을 근본적으로 바꿀 잠재력을 가지고 있는데요. 손가락으로 허공이나 책상 위에 글씨를 쓰면 그대로 화면에 입력되는 미래가 현실로 다가온 것입니다.
 

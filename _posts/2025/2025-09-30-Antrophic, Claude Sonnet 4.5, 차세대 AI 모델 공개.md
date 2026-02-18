@@ -1,11 +1,10 @@
-﻿---
+---
 title: "Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개"
 date: "2025-09-30"
 year: "2025"
 ---
 
 # Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개
-
 
 TL;DR
 -----
@@ -16,7 +15,7 @@ TL;DR
 * **컴퓨터 사용 능력 대폭 향상**: OSWorld 61.4% (4개월 전 42.2%에서 상승)
 * **추론 및 수학 능력 대폭 강화**: 다양한 벤치마크에서 최고 성능
 * **가장 정렬된 frontier 모델**: Misaligned behavior score 13.4%로 업계 최저 수준
-* **가격 동일 유지**: Claude Sonnet 4와 동일한 $3/$15 per million tokens
+* **가격 동일 유지**: Claude Sonnet 4와 동일한 \$3/\$15 per million tokens
 * **Claude Agent SDK 출시**: 개발자가 Claude Code 수준의 에이전트 구축 가능
 * **제품 생태계 대폭 강화**: Checkpoints, VS Code 확장, 코드 실행, 파일 생성 등  
   **즉시 사용 가능**: API에서 `claude-sonnet-4-5` 모델 스트링으로 접근
@@ -268,16 +267,16 @@ Claude 4 패밀리의 가격은 모델별로 차등화되어 있으며, 입력 �
 
 | 모델 | 기본 입력 토큰 | 5분 캐시 쓰기 | 1시간 캐시 쓰기 | 캐시 히트 & 갱신 | 출력 토큰 |
 | --- | --- | --- | --- | --- | --- |
-| Claude Opus 4.1 | $15 | $18.75 | $30 | $1.50 | $75 |
-| Claude Opus 4 | $15 | $18.75 | $30 | $1.50 | $75 |
-| Claude Sonnet 4.5 | $3 | $3.75 | $6 | $0.30 | $15 |
-| Claude Sonnet 4 | $3 | $3.75 | $6 | $0.30 | $15 |
+| Claude Opus 4.1 | \$15 | \$18.75 | \$30 | \$1.50 | \$75 |
+| Claude Opus 4 | \$15 | \$18.75 | \$30 | \$1.50 | \$75 |
+| Claude Sonnet 4.5 | \$3 | \$3.75 | \$6 | \$0.30 | \$15 |
+| Claude Sonnet 4 | \$3 | \$3.75 | \$6 | \$0.30 | \$15 |
 
 **가격 정책의 특징:**
 
-* **Opus 계열**: 가장 높은 성능을 제공하는 만큼 입력 $15/MTok, 출력 $75/MTok로 최고가
-* **Sonnet 계열**: 균형잡힌 성능과 가격으로 입력 $3/MTok, 출력 $15/MTok (Opus 대비 1/5 수준)
-* **Prompt Caching**: 캐시 히트 시 입력 비용을 약 90% 절감 가능 (예: Sonnet의 경우 $3 → $0.30, Opus의 경우 $15 → $1.50)
+* **Opus 계열**: 가장 높은 성능을 제공하는 만큼 입력 \$15/MTok, 출력 \$75/MTok로 최고가
+* **Sonnet 계열**: 균형잡힌 성능과 가격으로 입력 \$3/MTok, 출력 \$15/MTok (Opus 대비 1/5 수준)
+* **Prompt Caching**: 캐시 히트 시 입력 비용을 약 90% 절감 가능 (예: Sonnet의 경우 \$3 → \$0.30, Opus의 경우 \$15 → \$1.50)
 
 ### 접근 방법 및 플랫폼
 

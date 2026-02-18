@@ -1,13 +1,13 @@
-﻿---
+---
 title: "[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기"
 date: "2024-02-27"
+tags:
+  - "CIO"
+  - "Conference"
 year: "2024"
 ---
 
 # [컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기
-
-
-
 
 본 내용은 CIO SUMMIT 2024에서 발표된 내용을 기반으로 제가 더 조사 및 정리해서 작성한 글입니다. 본 게시글은 발표 내용을 정리한 것이지 특정 회사를 옹호•홍보할 목적이 아님을 밝힙니다. 틀린 내용이 있다면 편하게 댓글 달아주세요!! 🤗
 
@@ -53,11 +53,9 @@ GPT-4을 기점으로 기술 혁신이 이루어지고 있습니다. GPT-4이전
 Source: 스스로 탐구하는 AGI, 효성인포메이션시스템
 
 > **❓ AGI(인공 일반 지능)이란?**  
-> 
 > 인공 일반 지능(AGI)은 인간과 유사한 지능과 스스로 학습할 수 있는 능력을 갖춘 소프트웨어를 만들려는 이론적 AI 연구 영역입니다. 이는 소프트웨어가 교육을 받지 않거나, 개발되지 않은 작업을 수행할 수 있도록 하는 것을 목표로 합니다.
 
 > **📝 지금은 AGI에 어느정도의 수준일까?**  
-> 
 > Morris, Meredith Ringel, et al. "Levels of AGI: Operationalizing Progress on the Path to AGI." (2023), 다음 논문은 다양한 지능의 정도에서 나타나는 AI 연구의 현황을 파악하고, 어떤 모델이 실제 상황에서 다양한 문제에 대응할 수 있는 AGI에 가까운가를 조사하고 이를 아래와 같이 테이블 형태로 정의했습니다.
 
 ![CIO_SUMMIT](https://velog.velcdn.com/images/euisuk-chung/post/b88ee60e-62d5-4856-8dfa-ed35beb1fe64/image.png)
@@ -67,15 +65,10 @@ Source: Morris, Meredith Ringel, et al. "Levels of AGI: Operationalizing Progres
 위 Matrix는 AGI를 Narrow(특정 도메인에 국한되어 있거나), General(국한되어 있지 않은) 관점으로 분석을 수행하였고, 각 AGI의 단계를 다음과 같이 정의하였습니다:
 
 ✅ Level 0 - No AI: 인공지능이 아님  
-
 ✅ Level 1 - Emerging AGI: 숙련되지 않은 인간과 동등하거나 약간 더 우수함  
-
 ✅ Level 2 - Competent AGI: 인공지능은 숙련된 성인의 50번째 백분위 이상의 기술을 가짐  
-
 ✅ Level 3 - Expert AGI: 인공지능은 숙련된 성인의 90번째 백분위 이상의 기술을 가짐  
-
 ✅ Level 4 - Virtuoso AGI: 인공지능은 숙련된 성인의 99번째 백분위 이상의 기술을 가짐  
-
 ✅ Level 5 - Artificial Super Intelligence ASI: 인공지능은 100%의 인간을 능가함
 
 \*본 논문에서는 현재의 ChatGPT를 General 관점에서 아직 Level1 수준으로 정의하고 있습니다.
@@ -95,4 +88,3 @@ Source: AI 고도화로 인한 연산량 증가, 효성인포메이션시스템
 Source: GPU 장비 선택의 중요성, 효성인포메이션시스템
 
 아직 제가 미숙하여 장비에 대해서 자세하게 알지 못하여 설명드리지는 못할 것 같습니다😿 허나, LLM의 대두로 GPU자원의 중요성과 최적화는 반드시 필요해진 영역이라고 생각합니다. 최근에는 이러한 무한정 리소스가 필요하다는 문제에서 벗어나기 위해 sLLM이나 LLM distillation 기술들도 많이 나오고 있는데 시간이 난다면 공부 해보고 싶네요 🤣
-

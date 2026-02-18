@@ -1,11 +1,13 @@
-﻿---
+---
 title: "[Tips] Lovable 디버깅 프롬프트"
 date: "2025-08-18"
+tags:
+  - "Lovable"
+  - "vibe coding"
 year: "2025"
 ---
 
 # [Tips] Lovable 디버깅 프롬프트
-
 
 Lovable 디버깅 프롬프트: AI 기반 개발에서의 체계적 문제 해결 가이드
 ===========================================

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[Tips] Lovable 바이브-코딩 용어집"
 date: "2025-08-20"
 tags:
@@ -8,7 +8,6 @@ year: "2025"
 ---
 
 # [Tips] Lovable 바이브-코딩 용어집
-
 
 Lovable 개발 용어집
 ==============

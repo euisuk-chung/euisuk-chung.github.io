@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[설치] pipenv로 pyenv 뽕 뽑기"
 date: "2024-04-27"
 tags:
@@ -9,9 +9,7 @@ year: "2024"
 
 # [설치] pipenv로 pyenv 뽕 뽑기
 
-
-
-
+지난 번 포스팅에서는 `pyenv`에 대해서 살펴보고 이를 리눅스 환경(+Window환경)에 설치하는 방법에 대해서 살펴봤는데요([링크](https://velog.io/@euisuk-chung/Goodbye-Conda-Hello-PyENV)) 이번 포스팅에서는 pyenv의 효과를 극대화할 수 있는 pipenv에 대해서 살펴보고, 이를 어떻게 사용할지 알아보도록 하겠습니다 🤗
 
 ### 1. pipenv란?
 
@@ -20,35 +18,37 @@ year: "2024"
 ### 2. pipenv 설치 방법
 
 * **pipenv 설치**:
+
   ```
   pip install pipenv
   ```
+
   이 명령은 시스템에 pipenv를 설치합니다. 특정 사용자에 국한하지 않고 시스템 전체에 설치됩니다.
 
 ### 3. pipenv 가상 환경 생성 및 관리
 
 * (참고) 내 PyENV 환경에 설치된 파이썬 버전 리스트 확인하기
-  
+
   ```
   pyenv versions # check installed envs
   ```
 * **가상 환경 생성**:
-  
+
   ```
   mkdir MyProject
   cd MyProject
   pipenv --python 3.9.1
   ```
-  
+
   이 명령은 프로젝트 디렉토리 내에 `Pipfile`을 생성하고 지정된 파이썬 버전으로 가상 환경을 초기화합니다.
 * **가상 환경 활성화 및 비활성화**:
-  
+
   ```
   pipenv shell   # 활성화
   exit           # 비활성화
   ```
 * **pyenv와의 연동**:
-  
+
   + 시스템에 원하는 파이썬 버전이 없는 경우, pipenv는 pyenv를 통해 자동으로 해당 버전을 설치하도록 요청할 수 있습니다.
 
 ### 4. Pipfile?
@@ -58,16 +58,16 @@ year: "2024"
 * Pipfile의 위치: Pipfile은 프로젝트 폴더 안에 위치합니다. 예를 들어, 프로젝트 폴더가 MyProject라면, MyProject/Pipfile에 위치하게 됩니다.
 * Pipfile의 확장자: Pipfile은 확장자 없이 그냥 Pipfile로 저장됩니다. 이와는 별개로, 의존성을 고정하는 Pipfile.lock 파일도 같은 폴더에 생성되며, 이 파일 역시 확장자가 없습니다.
 * **Pipfile과 Pipfile.lock의 사용**:
-  
+
   + `Pipfile`: 프로젝트에 필요한 패키지와 파이썬 버전을 선언적으로 명시합니다.
   + `Pipfile.lock`: `pipenv lock` 명령을 실행하여 생성되며, 이 파일은 `Pipfile`의 선언된 의존성에 대한 구체적인 버전 정보와 해시값을 포함합니다. 이 파일을 통해 프로젝트가 다른 시스템에서 동일하게 재현될 수 있습니다.
 * **Lock 파일 생성 및 사용 예시**:
-  
+
   ```
   pipenv install numpy  # numpy 설치
   pipenv lock           # Pipfile.lock 생성 및 업데이트
   ```
-  
+
   프로젝트를 배포하거나 다른 개발 환경에서 작업을 재개할 때 `Pipfile.lock`을 사용하여 정확히 같은 의존성을 설치합니다.
 
 ### 5. pipenv lock?
@@ -78,14 +78,13 @@ year: "2024"
 * **환경 재현:** `Pipfile.lock`은 프로젝트를 다른 시스템이나 다른 개발자에게 전달할 때 동일한 종속성을 확실하게 재현할 수 있게 해줍니다. 이는 모든 사용자가 동일한 환경에서 작업할 수 있도록 보장합니다.
 
 > 💡 **Q.** `pipenv install numpy` 만 수행해도, pipfile은 업데이트가 될텐데, 굳이 lock을 해주는 이유가 뭘까요?  
-> 
 > 📖 **A.** `pipenv install` 명령어를 사용하면 자동으로 Pipfile이 업데이트되며, 필요한 패키지가 설치됩니다. 그런데 pipenv lock 명령어를 실행하는 것은 추가적인 목적을 가지고 있습니다.
 
 ✔️ **`pipenv install`과 `pipenv lock`의 차이**
 
 * **`pipenv install`:** 이 명령은 `Pipfile`에 명시된 패키지를 설치하고 자동으로 `Pipfile.lock`을 업데이트합니다. 이 과정에서 새로운 패키지가 설치되거나 업데이트될 때마다 `Pipfile.lock`이 갱신되어 현재 환경을 반영합니다.
 * **`pipenv lock`:** 이 명령은 실제로 패키지를 설치하지 않고, 현재 `Pipfile`의 상태를 바탕으로 `Pipfile.lock`만을 갱신합니다. 이는 패키지를 실제로 설치하지 않고도 종속성을 정확히 잠그고 싶을 때 유용합니다. `pipenv lock` 명령을 사용해야 하는 몇 가지 특별한 경우를 살펴보겠습니다:
-  
+
   1. **종속성 파일(Pipfile)의 수동 변경**: 개발자가 `Pipfile`을 수동으로 편집하여 패키지 버전을 변경하거나 새 패키지를 추가하는 경우, `Pipfile.lock`을 갱신해야 그 변경사항이 정확하게 반영됩니다. 이는 `Pipfile`의 상태가 `Pipfile.lock`과 동기화되도록 하는 데 필요합니다.
   2. **하위 종속성(패키지)의 업데이트**: 패키지의 하위 종속성이 업데이트되었을 경우, `pipenv lock` 명령을 실행하여 이러한 변경사항을 `Pipfile.lock`에 반영할 수 있습니다. 이는 하위 패키지의 버전 변동이 상위 패키지의 기능성에 영향을 미칠 수 있기 때문입니다.
   3. **보안 패치 업데이트**: 보안 취약점이 발견되어 해당 패키지의 새로운 버전이 출시되었을 때, `pipenv lock`을 사용하여 최신 보안 패치가 적용된 버전으로 종속성을 갱신할 수 있습니다. 이는 프로젝트의 보안을 강화하는 데 중요합니다.
@@ -96,7 +95,7 @@ year: "2024"
 
 * 가상 환경은 프로젝트 디렉토리에 기반하여 자동으로 이름이 생성되며, 관리는 `~/.local/share/virtualenvs` 디렉토리에서 이루어집니다.
 * **TensorFlow와 PyTorch 프로젝트 예시**:
-  
+
   ```
   # Tensorflow_ObjectDetection 프로젝트 생성
   mkdir Tensorflow_ObjectDetection
@@ -105,6 +104,7 @@ year: "2024"
   pipenv install tensorflow
   pipenv shell # 프로젝트 가상환경 실행
   ```
+
   ```
   # PyTorch_AnomalyDetection 프로젝트 생성
   mkdir PyTorch_AnomalyDetection
@@ -150,16 +150,16 @@ year: "2024"
 ### 유첨1
 
 > 🤔 그렇다면 기존 pip 중에 **-U** 또는 **-q** 파라미터가 붙은 것들은 어떻게 할까요?
-> 
+>
 > ```
 > pip install -q -U bitsandbytes
 > pip install -q -U git+https://github.com/huggingface/transformers.git
 > pip install -q -U git+https://github.com/huggingface/peft.git
 > pip install -q -U git+https://github.com/huggingface/accelerate.git
 > ```
-> 
+>
 > pipenv는 기본적으로 종속성 관리를 위해 항상 가능한 최신 버전의 패키지를 설치하려고 하기 때문에 -U가 없습니다. pip → pipenv로 변경만 해주면 완료! 🚩
-> 
+>
 > ```
 > pipenv install -q git+https://github.com/huggingface/transformers.git
 > pipenv install -q git+https://github.com/huggingface/peft.git
@@ -167,9 +167,7 @@ year: "2024"
 > ```
 
 > ✍️ (참고) pip 명령어에서 사용하는 -q와 -U 옵션의 의미  
-> 
 > **-q (Quiet)** : `-q` 옵션은 "quiet" 모드로 설치를 수행하는 것을 의미합니다. 즉, 명령어 실행 시 출력되는 메시지의 양을 줄여줍니다. 보통은 설치 과정 중의 상세한 정보를 최소화하고 싶을 때 사용합니다. -qq로 지정하면 출력을 더욱 줄일 수 있습니다.  
-> 
 > **-U (Upgrade)** : `-U` 옵션은 "upgrade"의 약자로, 지정된 패키지를 최신 버전으로 업그레이드하라는 지시입니다. 만약 해당 패키지가 이미 시스템에 설치되어 있다면, -U 옵션을 통해 최신 버전으로 업데이트할 수 있습니다. 패키지가 설치되어 있지 않은 경우에는 새로 설치합니다.
 
 ### 유첨2
@@ -190,6 +188,7 @@ requests = "*"  # 최신 버전을 사용하고자 할 때
 flask = "==1.1.2"  # 특정 버전을 명시하고자 할 때
 numpy = ">=1.18.5"  # 최소 버전 요구사항을 명시하고자 할 때
 ```
+
 #### 3. `Pipfile.lock` 업데이트
 
 수동으로 `Pipfile`을 편집한 후, `Pipfile.lock`을 업데이트해야 종속성이 올바르게 반영됩니다. 터미널에서 다음 명령을 실행합니다. 이 명령은 `Pipfile`의 변경사항을 바탕으로 `Pipfile.lock`을 새롭게 생성합니다:
@@ -197,6 +196,7 @@ numpy = ">=1.18.5"  # 최소 버전 요구사항을 명시하고자 할 때
 ```
 pipenv lock
 ```
+
 #### 4. 패키지 설치
 
 수정된 `Pipfile`을 바탕으로 필요한 패키지를 설치하려면 다음 명령을 사용합니다. 이 명령은 `Pipfile`에 명시된 모든 패키지를 설치하고, `Pipfile.lock`과 일치시킵니다:
@@ -204,10 +204,10 @@ pipenv lock
 ```
 pipenv install
 ```
+
 #### 주의사항
 
 * **버전 호환성**: 패키지 버전을 수동으로 지정할 때는 호환성을 고려해야 합니다. 설치하려는 패키지가 프로젝트에 이미 있는 다른 패키지와 호환되는지 확인해야 합니다.
 * **문법 오류**: `Pipfile`을 편집할 때 문법을 정확하게 지켜야 합니다. TOML 문법 오류는 `pipenv` 명령을 실행할 때 문제를 일으킬 수 있습니다.
 
 오늘도 긴 글 읽어주셔서 감사합니다 ✌
-
