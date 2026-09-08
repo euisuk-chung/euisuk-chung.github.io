@@ -1,0 +1,41 @@
+// Mixins
+
+.transition-all() {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.monospace () {
+    font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.serif() {
+	font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.sans-serif () {
+	/* Font stack, in order:
+     *   Pretendard    - Korean-first webfont, loaded in _includes/head.html (SIL OFL 1.1)
+     *   System font   - https://www.webkit.org/blog/3709/using-the-system-font-in-web-content/
+     *   Latin         - Helvetica Neue (OSX) / Segoe UI (Win)
+     *   Korean        - Apple SD Gothic Neo (OSX) / Malgun Gothic (Win) / Noto Sans KR
+     *   CJK fallback  - PingFang SC, Microsoft YaHei (for the zh about page)
+     *
+     * Note: less v4 rejects `//` comments inside a multi-line value, so the
+     * per-font annotations live here instead of inline.
+     */
+	font-family: "Pretendard Variable", Pretendard, -apple-system,
+		BlinkMacSystemFont, system-ui, "Helvetica Neue", "Segoe UI",
+		"Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+		"PingFang SC", "Microsoft YaHei", sans-serif;
+
+	line-height: 1.7;
+}

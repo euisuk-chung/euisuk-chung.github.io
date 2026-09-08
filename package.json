@@ -1,0 +1,25 @@
+{
+    "name": "euisuk-chung-blog",
+    "title": "서쿠 개발노트",
+    "description": "Euisuk Chung's dev log, built with Jekyll.",
+    "author": "Euisuk Chung <jasuchung@gmail.com>",
+    "version": "2.0.0",
+    "license": "Apache-2.0",
+    "private": true,
+    "homepage": "https://euisuk-chung.github.io",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/euisuk-chung/euisuk-chung.github.io"
+    },
+    "bugs": "https://github.com/euisuk-chung/euisuk-chung.github.io/issues",
+    "devDependencies": {
+        "esbuild": "^0.25.0",
+        "less": "^4.2.2"
+    },
+    "scripts": {
+        "build": "node build.mjs",
+        "watch": "node build.mjs --watch",
+        "start": "bundle exec jekyll serve",
+        "dev": "npm run build && (npm run watch & npm start)"
+    }
+}

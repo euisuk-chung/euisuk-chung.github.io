@@ -1,0 +1,22 @@
+{
+  "name": "서쿠 개발노트",
+  "short_name": "서쿠 개발노트",
+  "description": "Euisuk Chung의 개발 블로그 — AI/ML, MLOps, 시계열 이상탐지",
+  "icons": [
+    {
+      "src": "icons/128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

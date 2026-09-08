@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+{% include head.html %}
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    {% include nav.html %}
+    {% include search.html %}
+
+    {{ content }}
+
+    {% comment %}
+    {% include comments.html %}
+    {% endcomment %}
+    {% include footer.html %}
+
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
