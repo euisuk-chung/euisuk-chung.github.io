@@ -301,13 +301,19 @@ def remove_hr_before_heading(lines: list[str], report: BodyReport) -> list[str]:
             continue
         if i > 0 and lines[i - 1].strip():
             continue  # 앞 줄이 비어있지 않으면 setext 밑줄이므로 건너뜀
+        if i in drop:
+            continue
+        # 연속된 `---` (빈 줄로 구분) 는 하나의 규칙 묶음으로 본다
         j = i + 1
-        while j < len(lines) and not lines[j].strip():
+        hr_count = 1
+        while j < len(lines) and (not lines[j].strip() or (not mask[j] and HR_RE.match(lines[j]))):
+            if lines[j].strip():
+                hr_count += 1
             j += 1
         if j < len(lines) and not mask[j] and ATX_RE.match(lines[j]):
             for k in range(i, j):
                 drop.add(k)
-            report.hr_removed += 1
+            report.hr_removed += hr_count
     return [ln for k, ln in enumerate(lines) if k not in drop]
 
 
