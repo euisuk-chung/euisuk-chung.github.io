@@ -1,0 +1,18 @@
+---
+layout: page
+---
+{%- comment -%}
+    Tag concept page: rendered for each okf/_concepts/*.md document.
+    `page.title` must equal the tag string used in post front matter.
+{%- endcomment -%}
+{%- assign tag_posts = site.posts | where_exp: "p", "p.tags contains page.title" -%}
+<section class="tag-page">
+  {% if content contains "<" %}
+  <div class="tag-description">{{ content }}</div>
+  {% endif %}
+  <p class="tag-count">
+    {{ tag_posts.size }} posts
+    &middot; <a href="{{ site.baseurl }}/archive/?tag={{ page.title | url_encode }}">아카이브에서 필터로 보기</a>
+  </p>
+  {% for post in tag_posts %}{% include post-card.html post=post %}{% endfor %}
+</section>

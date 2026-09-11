@@ -33,6 +33,9 @@ exclude:
     "README.zh.md",
     "_scripts",
     "processed_posts.csv",
+    "AGENTS.md",
+    "okf/index.md",
+    "okf/log.md",
   ]
 
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
@@ -60,6 +63,22 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "concepts"
+    values:
+      layout: "tag"
+
+# OKF 번들 루트. 포스트(okf/_posts)와 태그 사전(okf/_concepts)이 이 아래에 있다.
+# okf/index.md, okf/log.md 는 OKF 예약 파일이라 위 exclude 로 사이트 빌드에서 뺀다.
+collections_dir: okf
+
+# 태그 사전(concept) 컬렉션. 파일 하나가 태그 하나를 정의하고 /tags/<slug>/ 페이지가 된다.
+# 컬렉션 이름을 `tags`로 두면 Jekyll 내장 site.tags(포스트 태그 집계)에 가려져 템플릿에서 읽을 수 없다.
+collections:
+  concepts:
+    output: true
+    permalink: /tags/:slug/
 
 # Markdown settings
 # replace redcarpet to kramdown,
