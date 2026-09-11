@@ -1,14 +1,26 @@
 ---
-title: "[Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the
-Supervision of Large Language Models"
+type: "Paper Review"
+title: "[Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the Supervision of Large Language Models"
+description: "상세 캡션과 grounding 라벨을 함께 담은 GroundingCap-1M을 구축하고, MM Grounding DINO를 LLM 캡션 생성 loss와 co-training해 zero-shot 검출 성능을 끌어올린 LLMDet을 리뷰한다."
 date: "2025-09-15"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Computer Vision"
+  - "NLP"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Learning-Strong-Open-Vocabulary-Object-Detectors-under-theSupervision-of-Large-Language-Models"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:11:14Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Learning-Strong-Open-Vocabulary-Object-Detectors-under-theSupervision-of-Large-Language-Models"
+    title: "[Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the Supervision of Large Language Models"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-15"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the
-Supervision of Large Language Models
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b8ddb32e-934c-44c5-ad3a-6c1e07dee1de/image.png)
 
@@ -16,8 +28,7 @@ Supervision of Large Language Models
 
 *본 리뷰는 원문을 최대한 직역한 내용입니다. 여기서 "우리는"은 저자를 지칭합니다. 참고 부탁드립니다.*
 
-Abstract
---------
+## Abstract
 
 최근 open-vocabulary detector들은 풍부한 region-level 주석 데이터로 유망한 성능을 달성하고 있습니다.
 
@@ -41,8 +52,7 @@ Abstract
 
 Large language model을 활용하여 각 관심 영역에 대한 region-level 짧은 caption과 전체 이미지에 대한 image-level 긴 caption을 모두 생성합니다. Large language model의 지도하에 결과로 나온 detector인 LLMDet은 기준선을 명확한 차이로 능가하며, 뛰어난 open-vocabulary 능력을 보여줍니다. 또한 개선된 LLMDet이 더 강력한 large multi-modal model을 구축하여 상호 이익을 달성할 수 있음을 보여줍니다.
 
-1. Introduction
----------------
+## 1. Introduction
 
 Open-vocabulary object detection은 사용자 입력의 텍스트 레이블을 기반으로 임의의 클래스를 탐지하는 것을 목표로 하며, 이는 전통적인 closed-set object detection보다 더 일반적인 탐지 작업입니다.
 
@@ -74,8 +84,7 @@ Open-vocabulary object detection은 사용자 입력의 텍스트 레이블을 �
 
 * 반면, 풍부한 세부사항과 이미지에 대한 포괄적 이해를 포함하는 긴 image-level caption은 짧은 region-level 설명보다 더 많은 정보를 제공합니다.
 
-2. Related Work
----------------
+## 2. Related Work
 
 ### 2.1. Open-Vocabulary Object Detection
 
@@ -91,8 +100,7 @@ Open-vocabulary object detection은 사용자 입력의 텍스트 레이블을 �
 
 일반적인 large vision-language model은 세 부분으로 구성됩니다: (1) vision token을 추출하는 `vision foundation model`, (2) vision feature를 language 공간으로 매핑하는 `projector`, 그리고 (3) 시각적 및 텍스트 입력을 모두 이해하는 `large language model`입니다.
 
-3. GroundingCap-1M 데이터셋
------------------------
+## 3. GroundingCap-1M 데이터셋
 
 ### Data Formulation
 
@@ -155,8 +163,7 @@ Caption이 object 유형, 질감, 색상, object의 부분, object 동작, 정�
 
 후처리 후 각 caption은 평균 약 115단어를 포함합니다.
 
-4. Large Language Model의 지도하에 LLMDet 훈련
----------------------------------------
+## 4. Large Language Model의 지도하에 LLMDet 훈련
 
 ### 전체 시스템 구조
 
@@ -253,8 +260,7 @@ TotalLoss=Lalign+Lbox+Llmimage+LlmregionTotal Loss = L\_{align} + L\_{box} + L\_
 * LlmimageL\_{lm}^{image}Llmimage​: 전체적인 맥락 이해 능력 향상
 * LlmregionL\_{lm}^{region}Llmregion​: 정확한 영역-단어 매핑 능력 향상
 
-5. Experiment
--------------
+## 5. Experiment
 
 ### 5.1. Implementation Details
 
@@ -314,8 +320,7 @@ Large language model은 LLaVA-OneVision-0.5b-ov에서 초기화됩니다. 메모
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f65ee82c-cf0e-4c12-b1b3-6a3d41081eb9/image.png)
 
-6. Conclusion
--------------
+## 6. Conclusion
 
 본 연구에서는 기존 open-vocabulary detector의 성능을 향상시키는 새로운 훈련 목표를 탐구했습니다. Large language model을 활용하여 image-level 상세 caption과 region-level 거친 grounding phrase를 모두 생성함으로써 detector는 상세한 caption으로부터 더 많은 정보와 이미지에 대한 포괄적 이해를 받고 풍부한 vision-language 표현을 구축합니다.
 

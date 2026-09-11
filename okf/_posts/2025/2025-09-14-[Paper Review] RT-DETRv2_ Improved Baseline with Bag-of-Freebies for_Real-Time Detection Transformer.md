@@ -1,12 +1,26 @@
 ---
-title: "[Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for
-Real-Time Detection Transformer"
+type: "Paper Review"
+title: "[Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer"
+description: "RT-DETR의 deformable attention에 스케일별 sampling point 수와 discrete sampling을 도입하고, 동적 데이터 증강과 스케일 적응형 하이퍼파라미터로 속도 손실 없이 성능을 높인 RT-DETRv2를 리뷰한다."
 date: "2025-09-14"
+tags:
+  - "Paper Review"
+  - "Computer Vision"
+  - "Transformer"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-RT-DETRv2-Improved-Baseline-with-Bag-of-Freebies-forReal-Time-Detection-Transformer"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:12:17Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-RT-DETRv2-Improved-Baseline-with-Bag-of-Freebies-forReal-Time-Detection-Transformer"
+    title: "[Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-14"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for
-Real-Time Detection Transformer
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/ebd7095d-0c76-4ebd-bc20-9fedf1c8971b/image.png)
 
@@ -14,8 +28,7 @@ Real-Time Detection Transformer
 
 *본 리뷰는 원문을 최대한 직역한 내용입니다. 여기서 "우리는"은 저자를 지칭합니다. 참고 부탁드립니다.*
 
-초록
---
+## 초록
 
 이 보고서에서는 개선된 실시간 Detection Transformer인 **RT-DETRv2**를 제시합니다. RT-DETRv2는 기존의 최신 실시간 detector인 RT-DETR을 기반으로 구축되었으며, 유연성과 실용성을 위한 `bag-of-freebies`를 도입하고 훈련 전략을 최적화하여 향상된 성능을 달성했습니다.
 
@@ -23,8 +36,7 @@ Real-Time Detection Transformer
 
 훈련 전략 측면에서는 속도 손실 없이 성능을 향상시키기 위해 **dynamic data augmentation**과 **scale-adaptive hyperparameter** 커스터마이징을 제안합니다. 소스 코드와 사전 훈련된 모델은 [https://github.com/lyuwenyu/RT-DETR에서](https://github.com/lyuwenyu/RT-DETR%EC%97%90%EC%84%9C) 제공될 예정입니다.
 
-1. 서론
------
+## 1. 서론
 
 **객체 탐지(Object detection)**는 이미지에서 객체를 식별하고 위치를 파악하는 기본적인 컴퓨터 비전 작업입니다. 그 중에서도 실시간 객체 탐지는 자율주행과 같은 광범위한 응용 분야를 가진 중요한 영역입니다. 지난 몇 년간의 발전을 통해 **YOLO detector**들은 의심의 여지없이 이 분야에서 **가장 권위 있는 프레임워크**가 되었습니다. 그 이유는 YOLO detector들이 달성한 합리적인 균형(reasonable balance) 때문입니다.
 
@@ -51,8 +63,7 @@ Real-Time Detection Transformer
 
 * 결과는 RT-DETRv2가 RT-DETR을 위한 bag-of-freebies와 함께 개선된 baseline을 제공하고, 유연성과 실용성을 증가시키며, 제안된 훈련 전략이 성능과 훈련 비용을 최적화함을 보여줍니다.
 
-2. 방법론
-------
+## 2. 방법론
 
 RT-DETRv2의 프레임워크는 RT-DETR과 동일하게 유지되며, decoder의 deformable attention module에만 수정사항이 있습니다.
 
@@ -127,8 +138,7 @@ Detection Heads
 * 가벼운 detector(예: ResNet18)의 사전 훈련된 backbone이 더 낮은 feature 품질을 가진다는 점을 고려하여 학습률을 증가시킵니다.
 * 반대로, 큰 detector(예: ResNet101)의 사전 훈련된 backbone은 더 높은 feature 품질을 가지므로 학습률을 감소시킵니다.
 
-3. 실험
------
+## 3. 실험
 
 ### 3.1 구현 세부사항
 
@@ -179,7 +189,6 @@ grid\_sample을 제거하고 discrete\_sample로 대체하는 ablation을 수행
 
 **표 4: Discrete Sampling에 대한 Ablation**
 
-4. 결론
------
+## 4. 결론
 
 이 보고서에서는 개선된 실시간 detection Transformer인 RT-DETRv2를 제안했습니다. RT-DETRv2는 RT-DETR의 유연성과 실용성을 증가시키기 위한 bag-of-freebies를 제공하고, 속도 손실 없이 향상된 성능을 달성하기 위해 훈련 전략을 최적화합니다. 우리는 이 보고서가 DETR family에 대한 통찰을 제공하고 RT-DETR 응용의 범위를 넓히기를 희망합니다.

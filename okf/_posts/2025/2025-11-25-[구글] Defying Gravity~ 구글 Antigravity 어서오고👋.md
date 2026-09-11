@@ -1,19 +1,32 @@
 ---
+type: "Product Update"
 title: "[구글] Defying Gravity~ 구글 Antigravity 어서오고👋"
+description: "Google의 에이전틱 개발 플랫폼 Antigravity의 Agent Manager, Browser Agent, Artifacts 피드백 구조와 Trust·Autonomy·Feedback·Self-improvement 4대 원칙, 설치 방법과 지원 모델을 소개한다."
 date: "2025-11-25"
 tags:
-  - "google"
+  - "Google"
+  - "AI Agent"
+  - "Tools"
+  - "Gemini"
+resource: "https://velog.io/@euisuk-chung/구글-Defying-Gravity-구글-Antigravity-어서오고"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:21:34Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/구글-Defying-Gravity-구글-Antigravity-어서오고"
+    title: "[구글] Defying Gravity~ 구글 Antigravity 어서오고👋"
+    author: "human:euisuk-chung"
+    last_modified: "2025-11-25"
+status: "stable"
 year: "2025"
 ---
-
-# [구글] Defying Gravity~ 구글 Antigravity 어서오고👋
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6df06472-148f-4244-bad6-19360ccffeec/image.png)
 
 > <https://antigravity.google/>
 
-서론: AI 기반 소프트웨어 개발의 새로운 시대
---------------------------
+## 서론: AI 기반 소프트웨어 개발의 새로운 시대
 
 소프트웨어 개발 환경은 빠르게 진화하고 있습니다. 불과 몇 년 전만 해도 IDE(Integrated Development Environment)는 단순히 코드를 작성하고 디버깅하는 도구에 불과했습니다. 하지만 대규모 언어 모델(Large Language Model)의 등장과 함께, 개발자들은 AI 어시스턴트와 협업하는 새로운 개발 방식을 경험하게 되었습니다.
 
@@ -23,10 +36,7 @@ Google은 자사의 최신 모델인 **Gemini 3**의 에이전틱 코딩(Agentic
 
 이 글에서는 Antigravity의 핵심 철학, 주요 기능, 그리고 개발자 워크플로우에 미칠 영향을 심층적으로 살펴보겠습니다.
 
----
-
-Antigravity가 등장한 배경
--------------------
+## Antigravity가 등장한 배경
 
 ### 기존 AI 코딩 도구의 한계
 
@@ -45,10 +55,7 @@ Gemini 3와 같은 최신 모델들은 사용자의 개입 없이도 장시간 �
 
 Google은 약 4개월 전, Windsurf의 CEO와 팀원들을 약 24억 달러(한화 약 3조 원 이상)를 투입하여 영입했습니다. Antigravity는 바로 이 영입의 결과물로, Google이 공개하는 **최초의 자체 IDE**입니다. 기존 Cursor, Windsurf 등의 경험을 흡수하면서도, Google만의 강점인 브라우저 제어와 이미지 생성 역량을 결합한 것이 특징입니다.
 
----
-
-핵심 용어 정리
---------
+## 핵심 용어 정리
 
 Antigravity를 이해하기 위해 먼저 핵심 용어들을 정리하겠습니다:
 
@@ -71,10 +78,7 @@ Antigravity를 이해하기 위해 먼저 핵심 용어들을 정리하겠습니
 * **Tab** : 텍스트 에디터 내의 AI 모달리티로, 더 강력한 "자동완성" 기능입니다.
 * **Command** : 인라인 지시형 AI 모달리티로, 자연어로 코드 작성을 명령할 수 있습니다.
 
----
-
-Antigravity의 주요 기능
-------------------
+## Antigravity의 주요 기능
 
 ### 1. AI-powered IDE: 익숙하면서도 강력한 개발 환경
 
@@ -186,10 +190,7 @@ Antigravity의 에이전트는 **에디터, 터미널, 브라우저**를 동시�
 * 리서치(Research)
 * 리포트 생성(Generating Reports)
 
----
-
-Artifacts: 에이전트와 사용자 간의 커뮤니케이션
-------------------------------
+## Artifacts: 에이전트와 사용자 간의 커뮤니케이션
 
 ### Artifacts의 정의와 역할
 
@@ -224,10 +225,7 @@ Artifact의 핵심 개념 중 하나는 **피드백(Feedback)**입니다. 사용
 
 Artifact는 에이전트가 **Planning Mode**에 있을 때 생성되며, Agent Manager와 Editor 뷰 모두에서 확인할 수 있습니다. 단, Agent Manager가 Artifact 표시, 정리, 관리에 최적화되어 있습니다.
 
----
-
-Antigravity의 4대 핵심 원칙
----------------------
+## Antigravity의 4대 핵심 원칙
 
 Google은 Antigravity를 설계할 때 4가지 핵심 원칙을 기반으로 했습니다:
 
@@ -247,10 +245,7 @@ Gemini 3급 모델의 등장으로, 에이전트가 여러 표면에서 동시�
 
 Antigravity는 **학습(Learning)**을 핵심 요소로 취급합니다. 에이전트의 액션은 지식 베이스에서 정보를 검색하고, 동시에 새로운 지식을 기여합니다. 이를 통해 에이전트는 과거 작업에서 학습하며, 유용한 코드 스니펫, 아키텍처 정보, 특정 하위 작업을 성공적으로 완료한 단계들을 축적합니다.
 
----
-
-실제 사용 사례: 개발자 커뮤니티의 반응
-----------------------
+## 실제 사용 사례: 개발자 커뮤니티의 반응
 
 ### 사례 1: 동시 다발적 프로젝트 개발
 
@@ -272,10 +267,7 @@ Antigravity는 **학습(Learning)**을 핵심 요소로 취급합니다. 에이�
 
 로고 제작이 필요한 상황에서 "로고를 만들어서 적용해줘, 투명 배경으로"라고 요청하자, **Nano Banana** 이미지 생성 모델이 자동으로 호출되어 SVG 및 PNG 로고를 생성했습니다. Claude Code 등 다른 도구에서 이미지 생성 기능이 제한적이었던 것과 비교하면, Google의 이미지 생성 역량이 Antigravity에 자연스럽게 통합된 점이 큰 장점입니다.
 
----
-
-Agent 커스터마이징
-------------
+## Agent 커스터마이징
 
 Antigravity의 Agent는 다양한 방식으로 커스터마이징할 수 있습니다:
 
@@ -285,10 +277,7 @@ Antigravity의 Agent는 다양한 방식으로 커스터마이징할 수 있습�
 | **MCP (Model Context Protocol)** | 외부 도구 및 서비스와의 통합 |
 | **Rules / Workflows** | 사용자 정의 규칙 및 워크플로우 설정 |
 
----
-
-Nano Banana Pro: 향상된 이미지 생성 역량
-------------------------------
+## Nano Banana Pro: 향상된 이미지 생성 역량
 
 Antigravity에는 **Nano Banana Pro**(Gemini 3 Pro 기반)가 롤아웃되고 있습니다. 이 모델은 기존 Nano Banana 대비 여러 측면에서 개선되었습니다:
 
@@ -308,10 +297,7 @@ Antigravity의 에이전트는 적절한 시점에 이미지 생성 모델을 �
 
 Nano Banana Pro는 점진적으로 롤아웃 중이며, 아직 접근 권한이 없는 사용자의 경우 에이전트가 기존 Nano Banana를 사용합니다.
 
----
-
-시작하기: 다운로드 및 설치
----------------
+## 시작하기: 다운로드 및 설치
 
 ### 다운로드
 
@@ -361,10 +347,7 @@ Antigravity 설정은 Agent, Browser, Editor 등 다양한 영역에서 구성�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2452ab80-c829-4d9a-b632-ee9d18577a37/image.png)
 
----
-
-지원 모델
------
+## 지원 모델
 
 Antigravity는 개발자에게 **모델 선택권**을 제공합니다:
 
@@ -382,10 +365,7 @@ Antigravity는 개발자에게 **모델 선택권**을 제공합니다:
 
 Google의 모델링에 따르면, 극소수의 파워 유저만이 5시간당 사용량 제한에 도달할 것으로 예상됩니다.
 
----
-
-현재 한계점과 개선 방향
--------------
+## 현재 한계점과 개선 방향
 
 얼리 어답터들의 피드백에 따르면, 현재 Antigravity는 다음과 같은 개선점이 있습니다:
 
@@ -395,10 +375,7 @@ Google의 모델링에 따르면, 극소수의 파워 유저만이 5시간당 �
 
 그러나 이러한 초기 단계의 불안정함에도 불구하고, **Agent Manager**와 같은 혁신적인 개념의 도입으로 인해 많은 개발자들이 적극적으로 사용해보고 있습니다. Google의 빠른 업데이트와 개선이 기대됩니다.
 
----
-
-결론: 에이전트 중심 개발의 미래
-------------------
+## 결론: 에이전트 중심 개발의 미래
 
 Google Antigravity는 단순한 AI 코딩 어시스턴트가 아닙니다. 이는 소프트웨어 개발의 패러다임을 **에이전트 중심(Agent-First)**으로 전환하려는 Google의 비전을 담은 플랫폼입니다.
 

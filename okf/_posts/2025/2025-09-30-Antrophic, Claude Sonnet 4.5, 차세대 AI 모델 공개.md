@@ -1,13 +1,27 @@
 ---
+type: "Product Update"
 title: "Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개"
+description: "Claude Sonnet 4.5의 SWE-bench 77.2%·OSWorld 61.4% 성능과 13.4% misaligned behavior 점수, ASL-3 안전장치, Claude Agent SDK의 구성 요소와 가격·모델 ID 체계를 정리한다."
 date: "2025-09-30"
+tags:
+  - "Claude"
+  - "Anthropic"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/Antrophic-Claude-Sonnet-4.5-차세대-AI-모델-공개"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:10:13Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Antrophic-Claude-Sonnet-4.5-차세대-AI-모델-공개"
+    title: "Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-30"
+status: "stable"
 year: "2025"
 ---
 
-# Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개
-
-TL;DR
------
+## TL;DR
 
 **핵심 요약:**
 
@@ -26,15 +40,13 @@ TL;DR
 
 > <https://www.anthropic.com/news/claude-sonnet-4-5>
 
-서론: 새로운 Claude Model의 등장
-------------------------
+## 서론: 새로운 Claude Model의 등장
 
 코드는 모든 곳에 존재합니다. 우리가 사용하는 모든 애플리케이션, 스프레드시트, 소프트웨어 도구를 구동하는 핵심 요소입니다. 이러한 도구들을 사용하고 복잡한 문제를 해결하는 능력이야말로 현대 업무가 이루어지는 방식입니다.
 
 **Claude Sonnet 4.5**는 바로 이것을 가능하게 만듭니다. 이는 세계 최고의 코딩 모델이자, 복잡한 에이전트 구축에 가장 강력한 모델이며, 컴퓨터 사용에 최적화된 모델입니다. 동시에 추론과 수학 분야에서 상당한 개선을 보여줍니다.
 
-제품 생태계의 혁신적 발전
---------------
+## 제품 생태계의 혁신적 발전
 
 ### Claude Code의 진화
 
@@ -59,8 +71,7 @@ Claude 앱에는 **코드 실행**과 **파일 생성** 기능(스프레드시�
 
 개발자들에게는 Claude Code를 만드는 데 사용된 동일한 구성 요소를 제공합니다. 이를 **Claude Agent SDK**라고 부릅니다. 최고 수준의 제품을 구동하고 완전한 잠재력을 발휘할 수 있게 하는 인프라가 이제 개발자들이 구축할 수 있는 도구로 제공됩니다.
 
-Frontier Intelligence: 최첨단 성능 지표
---------------------------------
+## Frontier Intelligence: 최첨단 성능 지표
 
 ### 코딩 능력의 새로운 기준
 
@@ -110,8 +121,7 @@ Claude Sonnet 4.5는 컴퓨터 사용 분야에서 상당한 발전을 이루었
 
 > STEM - 과학(Science), 기술(Technology), 공학(Engineering), 수학(Mathematics)
 
-지금까지 가장 정렬된 모델
---------------
+## 지금까지 가장 정렬된 모델
 
 ### 안전성과 능력의 동시 향상
 
@@ -141,8 +151,7 @@ Claude Sonnet 4.5는 가장 강력한 모델일 뿐만 아니라 지금까지 �
 
 * 모델의 에이전트 및 컴퓨터 사용 능력에서 사용자에게 가장 심각한 위험 중 하나인 prompt injection 공격에 대한 방어 능력이 상당히 향상되었습니다.
 
-ASL-3 보호 체계와 안전장치
------------------
+## ASL-3 보호 체계와 안전장치
 
 ### 다층적 보안 시스템
 
@@ -159,8 +168,7 @@ Claude Sonnet 4.5는 모델의 능력 수준에 맞는 적절한 안전장치를
 * false positive 감소에 있어서 상당한 진전을 이뤘으며, 처음 이 시스템을 공개했을 때와 비교해 10배, 5월 Claude Opus 4 출시 이후로는 2배 감소시켰습니다.
 * 분류기의 정확도를 더욱 높이기 위한 개선 작업을 지속적으로 진행하고 있습니다.
 
-Claude Agent SDK: 6개월의 노하우를 공개
-------------------------------
+## Claude Agent SDK: 6개월의 노하우를 공개
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/514636cd-cbed-4622-a3e9-ef0a59643d21/image.png)
 
@@ -237,8 +245,7 @@ Anthropic은 Claude Code에 업데이트를 제공하는 데 6개월 이상을 �
 * **오류 처리 (Error handling)**: 에이전트가 작업을 수행하다가 예상치 못한 문제(예: 웹사이트 접속 실패, 파일 없음)가 발생했을 때, 시스템이 멈추지 않고 오류를 적절하게 처리하고 복구를 시도하거나 사용자에게 상황을 알리도록 합니다.
 * **모니터링 (Monitoring)**: 에이전트의 작동 상태, 도구 사용 빈도, 발생한 오류 등을 실시간으로 추적하고 기록합니다. 개발자는 이 로그 데이터를 분석하여 에이전트의 성능을 개선하고 잠재적인 문제를 미리 파악할 수 있습니다.
 
-"Imagine with Claude": 연구 프리뷰
------------------------------
+## "Imagine with Claude": 연구 프리뷰
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c8094ada-c1eb-4e48-af6a-28725fd493ad/image.png)
 
@@ -256,8 +263,7 @@ Claude Sonnet 4.5와 함께 "**Imagine with Claude**"라는 임시 연구 프리
 
 > <https://claude.ai/imagine/>
 
-가격 정책 및 접근성
------------
+## 가격 정책 및 접근성
 
 ### 모델별 가격 체계
 
@@ -353,8 +359,7 @@ Claude 4 모델은 다양한 플랫폼을 통해 접근 가능하며, 각 플랫
 * 높은 처리량과 낮은 대기 시간 보장
 * 프로덕션 수준의 안정성 제공
 
-결론
---
+## 결론
 
 Claude Sonnet 4.5는 AI 기술 발전에 있어 새로운 이정표를 세웠습니다. 세계 최고 수준의 코딩 능력, 혁신적인 컴퓨터 사용 능력, 강화된 추론 및 수학 능력과 함께, 13.4%라는 업계 최저 수준의 misaligned behavior score를 통해 안전성과 정렬성에서도 새로운 기준을 제시했습니다.
 

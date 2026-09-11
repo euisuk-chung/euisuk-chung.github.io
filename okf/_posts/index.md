@@ -21,32 +21,32 @@
 
 ## 2025
 
-* [[토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리](2025/2025-12-26-[토크] LLM 완벽 입문 가이드_ Andrej Karpathy 강의 정리.md)
-* [AI 에이전트의 핵심 개념 20가지: 문제와 해결책으로 배우는 실전 가이드](2025/2025-12-19-AI 에이전트의 핵심 개념 20가지_ 문제와 해결책으로 배우는 실전 가이드.md)
-* [[Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임](2025/2025-12-12-[Paper Review] LLaVA_ Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임.md)
-* [[Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2025/2025-12-12-[Paper Review] LLaVA-PruMerge_ Adaptive Token Reduction for Efficient Large Multimodal Models.md)
-* [F-Lab AI 역량 진단 테스트 - 정답 및 해설](2025/2025-12-12-F-Lab AI 역량 진단 테스트 - 정답 및 해설.md)
-* [[구글] Defying Gravity~ 구글 Antigravity 어서오고👋](2025/2025-11-25-[구글] Defying Gravity~ 구글 Antigravity 어서오고👋.md)
-* [[구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신](2025/2025-11-23-[구글] Nano Banana Pro_ Gemini 3가 선사하는 차세대 이미지 생성 혁신.md)
-* [[구글] Gemini 3: 구글의 차세대 AI 모델, 무엇이 달라졌나?](2025/2025-11-23-[구글] Gemini 3_ 구글의 차세대 AI 모델, 무엇이 달라졌나_.md)
-* [[OpenAI] ChatGPT GPT-5.1 출시: 더 똑똑하고 따뜻한 대화형 AI의 진화](2025/2025-11-13-[OpenAI] ChatGPT GPT-5.1 출시_ 더 똑똑하고 따뜻한 대화형 AI의 진화.md)
-* [Chrome에서 "조직에서 관리" 문구가 뜬다면...😈](2025/2025-11-06-Chrome에서 _조직에서 관리_ 문구가 뜬다면...😈.md)
-* [Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대](2025/2025-10-14-Lovable Cloud and AI_ 자연어만으로 풀스택 앱을 만드는 시대.md)
-* [[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례](2025/2025-10-10-[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례.md)
-* [공식 Sora 2 프롬프팅 가이드: 성공적인 비디오 생성을 위한 실전 전략](2025/2025-10-08-공식 Sora 2 프롬프팅 가이드_ 성공적인 비디오 생성을 위한 실전 전략.md)
-* [OpenAI DevDay 2025 전체 발표 정리](2025/2025-10-08-OpenAI DevDay 2025 전체 발표 정리.md)
-* [Sora 2 출시: 영상 생성 AI의 새로운 패러다임](2025/2025-10-01-Sora 2 출시_ 영상 생성 AI의 새로운 패러다임.md)
-* [Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개](2025/2025-09-30-Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개.md)
-* [GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임](2025/2025-09-29-GPT-5-Codex 완벽 가이드_ AI 코딩 에이전트의 새로운 패러다임.md)
-* [[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud](2025/2025-09-15-[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud.md)
-* [[Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection](2025/2025-09-15-[Paper Review] MM-Groundung-DINO _ An Open and Comprehensive Pipeline for Unified Object Grounding and Detection.md)
-* [[Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the Supervision of Large Language Models](2025/2025-09-15-[Paper Review] LLM-Det _ Learning Strong Open-Vocabulary Object Detectors under the_Supervision of Large Language Models.md)
-* [[Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer](2025/2025-09-14-[Paper Review] RT-DETRv2_ Improved Baseline with Bag-of-Freebies for_Real-Time Detection Transformer.md)
-* [[Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head](2025/2025-09-14-[Paper Review] OmDet_Turbo _ Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head.md)
-* [[정리] 구글의 나노바나나 프롬프트 공식 공개하다](2025/2025-09-09-[정리] 구글의 나노바나나 프롬프트 공식 공개하다.md)
-* [[OpenAI] 언어모델 환각(Hallucination) 현상: 왜 AI는 확신에 찬 거짓말을 할까?](2025/2025-09-07-[OpenAI] 언어모델 환각(Hallucination) 현상_ 왜 AI는 확신에 찬 거짓말을 할까_.md)
-* [[정리] AI가 창출하는 5가지 새로운 직업과 전문가 되는 방법](2025/2025-09-06-[정리] AI가 창출하는 5가지 새로운 직업과 전문가 되는 방법.md)
-* [[정리] GPT-5 ‘원사이즈 핏’의 착각과 골디락스 프롬프트](2025/2025-09-05-[정리] GPT-5 ‘원사이즈 핏’의 착각과 골디락스 프롬프트.md)
+* [[토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리](2025/2025-12-26-[토크] LLM 완벽 입문 가이드_ Andrej Karpathy 강의 정리.md) - Andrej Karpathy 강의를 바탕으로 LLM의 두 파일 구조, 사전학습·미세조정·RLHF, Scaling Laws, Tool Use, LLM OS 개념과 Jailbreak·Prompt Injection·Data Poisoning 보안 위협을 정리한다.
+* [AI 에이전트의 핵심 개념 20가지: 문제와 해결책으로 배우는 실전 가이드](2025/2025-12-19-AI 에이전트의 핵심 개념 20가지_ 문제와 해결책으로 배우는 실전 가이드.md) - Tom Yeh의 Agentic AI Problem Set을 바탕으로 Agent Loop, ReAct, MCP, Graph RAG, Reflection, Tree of Thought 등 에이전트 개념 20가지를 문제 상황·해결책·기업 사례로 설명한다.
+* [[Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임](2025/2025-12-12-[Paper Review] LLaVA_ Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임.md) - LLaVA 논문의 GPT-4 기반 158K 멀티모달 instruction 데이터 생성, CLIP-Projection-Vicuna 구조와 2단계 학습, LLaVA-Bench·ScienceQA 결과를 정리하고 공식 코드 구현을 분석한다.
+* [[Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2025/2025-12-12-[Paper Review] LLaVA-PruMerge_ Adaptive Token Reduction for Efficient Large Multimodal Models.md) - LLaVA-PruMerge 논문의 [CLS] 어텐션 IQR 이상치 기반 적응적 토큰 선택, 키 유사도 k-NN 클러스터링 병합, PruMerge+의 공간 균등 샘플링과 최대 14배 토큰 압축 시 벤치마크·효율성 결과를 정리한다.
+* [F-Lab AI 역량 진단 테스트 - 정답 및 해설](2025/2025-12-12-F-Lab AI 역량 진단 테스트 - 정답 및 해설.md) - F-Lab AI 역량 진단 테스트 25문항을 LLM 한계, Temperature, RAG 청킹·하이브리드 검색·리랭킹, Function Calling, 가드레일, 에이전트 메모리, 멀티모달 RAG 관점에서 정답과 오답 이유까지 해설한다.
+* [[구글] Defying Gravity~ 구글 Antigravity 어서오고👋](2025/2025-11-25-[구글] Defying Gravity~ 구글 Antigravity 어서오고👋.md) - Google의 에이전틱 개발 플랫폼 Antigravity의 Agent Manager, Browser Agent, Artifacts 피드백 구조와 Trust·Autonomy·Feedback·Self-improvement 4대 원칙, 설치 방법과 지원 모델을 소개한다.
+* [[구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신](2025/2025-11-23-[구글] Nano Banana Pro_ Gemini 3가 선사하는 차세대 이미지 생성 혁신.md) - Gemini 3 Pro 기반 이미지 생성 모델 Nano Banana Pro의 텍스트 렌더링, 검색 그라운딩, 스튜디오급 제어 기능과 분야별 프롬프트 예시, API 파라미터, SynthID 워터마크 정책을 정리한다.
+* [[구글] Gemini 3: 구글의 차세대 AI 모델, 무엇이 달라졌나?](2025/2025-11-23-[구글] Gemini 3_ 구글의 차세대 AI 모델, 무엇이 달라졌나_.md) - Gemini 3 Pro의 벤치마크 성능과 Deep Think 모드, 멀티모달·공간 추론 능력, thinking_level·media_resolution·thought signature 등 새 API 파라미터와 Antigravity·AI Studio 활용법을 정리한다.
+* [[OpenAI] ChatGPT GPT-5.1 출시: 더 똑똑하고 따뜻한 대화형 AI의 진화](2025/2025-11-13-[OpenAI] ChatGPT GPT-5.1 출시_ 더 똑똑하고 따뜻한 대화형 AI의 진화.md) - GPT-5.1 Instant의 적응형 추론과 지시 준수 개선, Thinking 모델의 동적 사고 시간 조정과 따뜻한 톤 변화, 8종 톤 프리셋과 세부 특성 조정 기능, 출시 일정과 API 모델명을 정리한다.
+* [Chrome에서 "조직에서 관리" 문구가 뜬다면...😈](2025/2025-11-06-Chrome에서 _조직에서 관리_ 문구가 뜬다면...😈.md) - 개인 PC의 Chrome에 뜬 '조직에서 관리' 메시지가 레지스트리 정책 주입 악성코드일 때의 감염 경로와 chrome://policy 자가진단, 확장프로그램 점검부터 레지스트리 정리·Windows 재설치까지의 제거 절차를 정리한다.
+* [Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대](2025/2025-10-14-Lovable Cloud and AI_ 자연어만으로 풀스택 앱을 만드는 시대.md) - Lovable Cloud가 Supabase 기반 DB·인증·스토리지·Edge Functions를 자연어로 자동 구성하는 방식과 Lovable AI의 Gemini·GPT 모델 선택, 영수증 OCR 재무 앱 구축 과정과 사용량 기반 요금을 설명한다.
+* [[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례](2025/2025-10-10-[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례.md) - Google Cloud가 공개한 1,001건의 생성형 AI 고객 사례를 14개 산업별로 정리하고, 고객·직원·코드·데이터·크리에이티브 에이전트 유형으로 분류해 산업별 인사이트를 도출한다.
+* [공식 Sora 2 프롬프팅 가이드: 성공적인 비디오 생성을 위한 실전 전략](2025/2025-10-08-공식 Sora 2 프롬프팅 가이드_ 성공적인 비디오 생성을 위한 실전 전략.md) - OpenAI Cookbook의 Sora 2 프롬프팅 가이드를 재구성해 API 파라미터, 카메라 프레이밍·피사계 심도·액션 비트·조명 팔레트·피사체 고정의 5요소, 대화·Remix 활용법과 프롬프트 템플릿을 설명한다.
+* [OpenAI DevDay 2025 전체 발표 정리](2025/2025-10-08-OpenAI DevDay 2025 전체 발표 정리.md) - OpenAI DevDay 2025의 Apps SDK, AgentKit(Agent Builder·ChatKit·Evals), Codex 정식 출시와 SDK, GPT-5 Pro·Sora 2 API·GPT-Realtime-Mini 발표와 라이브 데모를 순서대로 정리한다.
+* [Sora 2 출시: 영상 생성 AI의 새로운 패러다임](2025/2025-10-01-Sora 2 출시_ 영상 생성 AI의 새로운 패러다임.md) - Sora 2의 물리 시뮬레이션·오디오 동시 생성 능력과 본인 동의 기반 Cameo 기능, AI 소셜 앱의 설계 철학과 워터마크·C2PA 출처 표시, 기본·심화 프롬프트 구조 분석을 다룬다.
+* [Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개](2025/2025-09-30-Antrophic, Claude Sonnet 4.5, 차세대 AI 모델 공개.md) - Claude Sonnet 4.5의 SWE-bench 77.2%·OSWorld 61.4% 성능과 13.4% misaligned behavior 점수, ASL-3 안전장치, Claude Agent SDK의 구성 요소와 가격·모델 ID 체계를 정리한다.
+* [GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임](2025/2025-09-29-GPT-5-Codex 완벽 가이드_ AI 코딩 에이전트의 새로운 패러다임.md) - GPT-5-Codex의 에이전트형 코딩 특성과 'Less is More' 프롬프팅 원칙, Codex CLI 설치법과 시스템 프롬프트 섹션별 분석, SWE-bench 성능 지표와 기업 도입 사례를 정리한다.
+* [[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud](2025/2025-09-15-[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud.md) - NAVER Cloud AI DevDay 2025 강지나 수석의 발표를 정리해 LLM의 하드웨어 진출, 탐색 기법 기반 Agentic AI 설계 요소, MCP와 A2A 프로토콜, 보안 등 ROI가 높은 생성형 AI 적용 영역을 살펴본다.
+* [[Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection](2025/2025-09-15-[Paper Review] MM-Groundung-DINO _ An Open and Comprehensive Pipeline for Unified Object Grounding and Detection.md) - MMDetection으로 Grounding-DINO를 재현·공개한 MM-Grounding-DINO의 구조와 OVD·PG·REC 데이터셋 구성, COCO·LVIS·ODinW zero-shot 결과, GRIT 데이터 분석을 정리한다.
+* [[Paper Review] LLM-Det : Learning Strong Open-Vocabulary Object Detectors under the Supervision of Large Language Models](2025/2025-09-15-[Paper Review] LLM-Det _ Learning Strong Open-Vocabulary Object Detectors under the_Supervision of Large Language Models.md) - 상세 캡션과 grounding 라벨을 함께 담은 GroundingCap-1M을 구축하고, MM Grounding DINO를 LLM 캡션 생성 loss와 co-training해 zero-shot 검출 성능을 끌어올린 LLMDet을 리뷰한다.
+* [[Paper Review] RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer](2025/2025-09-14-[Paper Review] RT-DETRv2_ Improved Baseline with Bag-of-Freebies for_Real-Time Detection Transformer.md) - RT-DETR의 deformable attention에 스케일별 sampling point 수와 discrete sampling을 도입하고, 동적 데이터 증강과 스케일 적응형 하이퍼파라미터로 속도 손실 없이 성능을 높인 RT-DETRv2를 리뷰한다.
+* [[Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head](2025/2025-09-14-[Paper Review] OmDet_Turbo _ Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head.md) - OmDet과 Grounding-DINO의 병목을 분석하고 Efficient Fusion Head와 language cache로 TensorRT 100 FPS를 달성한 실시간 open-vocabulary 검출기 OmDet-Turbo를 리뷰한다.
+* [[정리] 구글의 나노바나나 프롬프트 공식 공개하다](2025/2025-09-09-[정리] 구글의 나노바나나 프롬프트 공식 공개하다.md) - Google 공식 가이드를 바탕으로 Gemini 2.5 Flash Image의 사진·스티커·텍스트 렌더링·제품 목업 프롬프트 템플릿과 인페인팅·스타일 전환·다중 이미지 합성 기법, 직접 생성한 예시를 정리한다.
+* [[OpenAI] 언어모델 환각(Hallucination) 현상: 왜 AI는 확신에 찬 거짓말을 할까?](2025/2025-09-07-[OpenAI] 언어모델 환각(Hallucination) 현상_ 왜 AI는 확신에 찬 거짓말을 할까_.md) - OpenAI의 'Why Language Models Hallucinate' 논문을 따라 환각을 Is-It-Valid 이진 분류로 환원하는 이론, 이진 채점 벤치마크가 추측을 보상한다는 사회기술적 분석, 명시적 신뢰도 목표 제안을 정리한다.
+* [[정리] AI가 창출하는 5가지 새로운 직업과 전문가 되는 방법](2025/2025-09-06-[정리] AI가 창출하는 5가지 새로운 직업과 전문가 되는 방법.md) - Roc Search의 LinkedIn 글을 바탕으로 AI 컨설턴트, 프롬프트 엔지니어, 고객경험 전문가, 윤리 전문가, 보안 전문가 다섯 직업의 주요 업무와 필요 역량, 준비 과정을 정리한다.
+* [[정리] GPT-5 ‘원사이즈 핏’의 착각과 골디락스 프롬프트](2025/2025-09-05-[정리] GPT-5 ‘원사이즈 핏’의 착각과 골디락스 프롬프트.md) - 강수진 박사의 티타임즈TV 강연을 바탕으로 GPT-5의 원사이즈 핏 실험과 자동 라우팅 실패, 톤 변화, 한국어 부정문 처리 취약점을 짚고 긍정문 위주의 프롬프트 작성 원칙을 정리한다.
 * [[OpenAI][번역] Realtime Prompting Guide](2025/2025-08-31-[OpenAI][번역] Realtime Prompting Guide.md) - OpenAI Realtime API 프롬프팅 가이드를 번역해 역할·톤·언어 제약·발음 규칙 등 프롬프트 구조, 도구 호출 서문과 도구별 동작 규칙, 상태 머신 기반 대화 흐름과 에스컬레이션 설계를 다룬다.
 * [[OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점](2025/2025-08-31-[OpenAI] GPT Realtime API_ 음성 기반 AI 에이전트의 새로운 전환점.md) - OpenAI가 정식 출시한 Speech-to-Speech 모델 gpt-realtime과 Realtime API의 오디오 품질·함수 호출 벤치마크, MCP 서버·이미지 입력·SIP 지원, T-Mobile 활용 사례와 가격 정책을 정리한다.
 * [[Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision](2025/2025-08-30-[Paper Review] EXAONE Path 2.0_ Pathology Foundation Model with End-to-End Supervision.md) - 슬라이드 수준 지도학습으로 patch 표현을 end-to-end 학습하는 병리 파운데이션 모델 EXAONE Path 2.0의 3단계 HIPT 구조, 커리큘럼 학습, 멀티태스크 학습과 10개 바이오마커 예측 벤치마크 결과를 정리한다.

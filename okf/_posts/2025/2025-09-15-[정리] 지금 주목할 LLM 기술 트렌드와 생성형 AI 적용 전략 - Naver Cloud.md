@@ -1,12 +1,26 @@
 ---
+type: "Conference Recap"
 title: "[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud"
+description: "NAVER Cloud AI DevDay 2025 강지나 수석의 발표를 정리해 LLM의 하드웨어 진출, 탐색 기법 기반 Agentic AI 설계 요소, MCP와 A2A 프로토콜, 보안 등 ROI가 높은 생성형 AI 적용 영역을 살펴본다."
 date: "2025-09-15"
 tags:
+  - "Conference"
   - "Naver"
+  - "AI Agent"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/지금-주목할-LLM-기술-트렌드와-생성형-AI-적용-전략-Naver-Cloud"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:11:38Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/지금-주목할-LLM-기술-트렌드와-생성형-AI-적용-전략-Naver-Cloud"
+    title: "[정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-15"
+status: "stable"
 year: "2025"
 ---
-
-# [정리] 지금 주목할 LLM 기술 트렌드와 생성형 AI 적용 전략 - Naver Cloud
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a85e728a-4754-442d-a86e-5ff670d3bba0/image.png)
 
@@ -18,13 +32,11 @@ year: "2025"
 
 > [https://clova.ai/tech-blog/ai-dev-day-지금-꼭-알아야-할-llm-실전-인사이트](https://clova.ai/tech-blog/ai-dev-day-%EC%A7%80%EA%B8%88-%EA%BC%AD-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-llm-%EC%8B%A4%EC%A0%84-%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8)
 
-서론
---
+## 서론
 
 2025년 현재, 대규모 언어 모델(LLM)을 중심으로 한 인공지능 기술은 단순한 텍스트 생성을 넘어 물리적 세계와의 융합, 자율적 추론 능력, 그리고 시스템 간 상호 운용성을 중심으로 급격히 진화하고 있습니다. 네이버클라우드의 강지나 수석이 제시한 최신 기술 동향을 바탕으로, 현재 LLM 산업을 주도하는 세 가지 핵심 트렌드와 실무진들이 알아야 할 생성형 AI 적용 전략을 심층 분석해보겠습니다.
 
-LLM 기술의 물리적 세계 진출
------------------
+## LLM 기술의 물리적 세계 진출
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/24eaba11-6fb5-4534-893b-ab08c4911cb5/image.png)
 
@@ -54,8 +66,7 @@ Google은 이미 Gemini 모델을 다양한 하드웨어 플랫폼에 통합하�
 
 이러한 발전은 LLM이 우리 일상 속에 더욱 자연스럽게 침투하는 새로운 패러다임을 제시하고 있습니다.
 
-Agentic AI: 자율적 추론의 시대
-----------------------
+## Agentic AI: 자율적 추론의 시대
 
 ### Agentic AI의 핵심 특징
 
@@ -209,8 +220,7 @@ Agentic AI 외에도 목적에 따라 다른 접근 방식을 고려할 수 있�
 * 각 에이전트의 전문성 활용
 * 복잡한 업무의 분산 처리
 
-상호 운용성(Interoperability): 연결의 시대
---------------------------------
+## 상호 운용성(Interoperability): 연결의 시대
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/818dd538-c2c3-4a2c-bfb3-1bc2d3f1ff7f/image.png)
 
@@ -242,8 +252,7 @@ Google이 파트너사들과 함께 개발한 표준 프로토콜로, 특화된 
 
 이는 인간의 팀워크와 유사한 방식으로, 각자의 전문 영역에서 최고의 성능을 발휘하면서도 전체적으로 조화로운 결과를 만들어내는 시스템입니다.
 
-ROI 관점에서의 생성형 AI 적용 전략
-----------------------
+## ROI 관점에서의 생성형 AI 적용 전략
 
 ### 가장 효과적인 적용 영역
 
@@ -286,8 +295,7 @@ Deloitte의 연구 결과에 따르면, 기업들이 기대 수준 이상의 ROI
 * 새로운 기술과 프레임워크의 적용 가능성 평가
 * 경쟁력과 효율성 제고를 위한 지속적 업데이트
 
-결론
---
+## 결론
 
 LLM 기술은 물리적 세계로의 확장, Agentic AI의 자율적 추론 능력, 그리고 시스템 간 상호 운용성을 중심으로 급속히 발전하고 있습니다. 특히 **Agentic AI는 단순한 트렌드를 넘어 모든 조직이 고려해야 할 필수 기술**로 자리잡았습니다.
 

@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-11
+* **Update**: Migrated 26 posts of batch 2025c ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: sora.
 * **Update**: Migrated 39 posts of batch 2025b ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: qwen.
 * **Update**: Migrated 46 posts of batch 2025a ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: mcp,reinforcement-learning.
 * **Update**: Migrated 37 posts of batch 2024c ([2024](_posts/2024/)) to OKF front matter and ATX headings.

@@ -1,17 +1,30 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head"
+description: "OmDet과 Grounding-DINO의 병목을 분석하고 Efficient Fusion Head와 language cache로 TensorRT 100 FPS를 달성한 실시간 open-vocabulary 검출기 OmDet-Turbo를 리뷰한다."
 date: "2025-09-14"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Computer Vision"
+  - "Transformer"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-OmDetTurbo-Real-time-Transformer-기반-Efficient-Fusion-Head를-활용한-Open-Vocabulary-Detection"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:12:00Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-OmDetTurbo-Real-time-Transformer-기반-Efficient-Fusion-Head를-활용한-Open-Vocabulary-Detection"
+    title: "[Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-14"
+status: "stable"
 year: "2025"
 ---
 
-# [Paper Review] OmDet_Turbo : Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head
-
 > <https://arxiv.org/pdf/2403.06892>
 
-초록
---
+## 초록
 
 **End-to-end transformer 기반 detector** (DETRs)는 언어 modality 통합을 통해 `closed-set`과 `open-vocabulary object detection (OVD)` 작업 모두에서 뛰어난 성능을 보여주었습니다. 그러나 **높은 연산 요구사항**으로 인해 실시간 object detection (OD) 시나리오에서의 실용적인 적용이 제한되어 왔습니다.
 
@@ -31,8 +44,7 @@ COCO와 LVIS 데이터셋의 zero-shot 시나리오에서 OmDet-Turbo는 현재 
 > **Keywords**:  
 > *Multi-Dataset Pre-Training, Zero/Few-Shot Detection, Task-Conditioned Detection, Deep Fusion Mechanism, language-aware object detection, Continual Learning*
 
-1. 서론
------
+## 1. 서론
 
 Object Detection (OD)은 다양한 deep neural network의 통합을 통해 상당한 진전을 이룬 컴퓨터 비전 분야의 기본 작업입니다. 전통적인 close-set OD 방법들은 광범위한 연구를 거쳐 점차 안정화되었으며, 주로 **두 방향에 초점**을 맞추고 있습니다: **더 높은 정확도를 달성하기 위한 detector 구조 개선과 더 빠른 추론 속도를 가진 실시간 detector 개발**입니다.
 
@@ -96,8 +108,7 @@ OVDEval 벤치마크에서 최고 성능을 보이는 OVD 모델들 중에서, *
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/384aa6fd-8c68-45b0-9e59-397e5cfe8387/image.png)
 
-2. 관련 연구
---------
+## 2. 관련 연구
 
 ### 2.1 Transformer 기반 Detection
 
@@ -129,8 +140,7 @@ YOLO-World는 실시간 open-vocabulary object detection의 시도입니다. YOL
 
 본 논문은 open-vocabulary object detection 작업에서 강력한 성능과 효율성을 달성하는 최초의 실시간 transformer 기반 end-to-end OVD 방법을 제시합니다.
 
-3. 제안된 방법: OmDet-Turbo
-----------------------
+## 3. 제안된 방법: OmDet-Turbo
 
 ### 3.1 모델 구조
 
@@ -222,8 +232,7 @@ Open-vocabulary detection 작업에 대한 이전 연구들은 object detection�
 
 그러나 분류 작업에서는 각 query embedding과 텍스트 특징의 dot product를 취한 후 focalloss를 직접 사용하지 않습니다. 대신 positive sample의 분류와 localization 간의 일관성을 유지하기 위해 RT-DETR에서 효과적임이 입증된 IoU-aware Query Selection을 도입했습니다.
 
-4. 실험
------
+## 4. 실험
 
 ### 4.1 실험 설정
 
@@ -279,8 +288,7 @@ OmDet-Turbo는 모든 구성요소에서 다른 두 모델을 일관되게 능�
 
 OmDet-Turbo는 hybrid encoder를 구현하여 이 병목현상을 해결하고, Grounding-DINO와 비교하여 encoder/FPN 과정에서 약 10배 속도 향상을 달성합니다. Decoder/head 구성요소와 관련하여, OmDet의 원래 MDN은 feature 추출을 위해 시간이 많이 소요되는 ROIAlign에 의존합니다. OmDet-Turbo는 ELA-Decoder를 도입하여 ROI operation의 필요성을 제거하고 decoder/head 구성요소를 상당히 가속화합니다.
 
-5. 결론
------
+## 5. 결론
 
 결론적으로, 본 논문은 효율성과 성능 모두에서 뛰어난 실시간 transformer 기반 open-vocabulary object detection 모델인 OmDet-Turbo를 소개합니다. 높은 detection 정확도를 유지하면서 open-vocabulary 시나리오의 도전과제를 해결함으로써, OmDet-Turbo는 실제 object detection 작업을 위한 매력적인 솔루션으로 돋보입니다.
 

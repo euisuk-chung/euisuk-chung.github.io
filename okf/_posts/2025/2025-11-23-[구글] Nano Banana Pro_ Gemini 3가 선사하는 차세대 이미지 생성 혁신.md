@@ -1,17 +1,29 @@
 ---
+type: "Product Update"
 title: "[구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신"
+description: "Gemini 3 Pro 기반 이미지 생성 모델 Nano Banana Pro의 텍스트 렌더링, 검색 그라운딩, 스튜디오급 제어 기능과 분야별 프롬프트 예시, API 파라미터, SynthID 워터마크 정책을 정리한다."
 date: "2025-11-23"
 tags:
-  - "google"
+  - "Gemini"
+  - "Google"
+  - "Prompt Engineering"
+resource: "https://velog.io/@euisuk-chung/구글-Nano-Banana-Pro-Gemini-3가-선사하는-차세대-이미지-생성-혁신"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:06:57Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/구글-Nano-Banana-Pro-Gemini-3가-선사하는-차세대-이미지-생성-혁신"
+    title: "[구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신"
+    author: "human:euisuk-chung"
+    last_modified: "2025-11-23"
+status: "stable"
 year: "2025"
 ---
 
-# [구글] Nano Banana Pro: Gemini 3가 선사하는 차세대 이미지 생성 혁신
-
 > <https://youtu.be/UQsJIo46ZR8>
 
-소개
---
+## 소개
 
 2025년 11월, Google DeepMind는 이미지 생성 기술의 새로운 지평을 여는 Nano Banana Pro(Gemini 3 Pro Image)를 공개했습니다. 불과 몇 달 전 출시된 Nano Banana(Gemini 2.5 Flash Image)의 뒤를 이어, 이번 모델은 Gemini 3 Pro의 강력한 추론 능력과 실세계 지식을 기반으로 구축되었습니다.
 
@@ -27,8 +39,7 @@ year: "2025"
 
 이 포스팅에서는 **Nano Banana Pro**의 핵심 기술적 특징, 실제 활용 사례, 그리고 개발자들이 이 모델을 어떻게 활용할 수 있는지 상세히 살펴보겠습니다.
 
-배경: 이미지 생성 AI의 진화
------------------
+## 배경: 이미지 생성 AI의 진화
 
 ### 1세대에서 3세대까지
 
@@ -48,8 +59,7 @@ Nano Banana Pro는 이러한 발전의 정점에 있으며, 다음과 같은 세
 > * **SynthID**: Google이 개발한 AI 생성 이미지 식별용 디지털 워터마크 기술
 > * **Multimodal Reasoning**: 텍스트, 이미지 등 여러 형태의 입력을 통합적으로 이해하고 처리하는 능력
 
-Nano Banana Pro의 핵심 기능
-----------------------
+## Nano Banana Pro의 핵심 기능
 
 ### 1. 향상된 추론과 실세계 지식 활용
 
@@ -241,8 +251,7 @@ Combine these images into one appropriately arranged cinematic image in 16:9 for
 이 이미지들을 적절히 배열된 하나의 영화 이미지로 16:9 형식으로 결합합니다
 ```
 
-기술적 우수성: 벤치마크 성과
-----------------
+## 기술적 우수성: 벤치마크 성과
 
 Nano Banana Pro는 Text-to-Image AI 벤치마크에서 최고 수준의 성능을 보여줍니다. 주요 경쟁 모델들과 비교했을 때:
 
@@ -256,8 +265,7 @@ Nano Banana Pro는 Text-to-Image AI 벤치마크에서 최고 수준의 성능�
 
 > <https://deepmind.google/models/gemini-image/pro/>
 
-실전 활용: Nano Banana Pro 최대한 활용하기
--------------------------------
+## 실전 활용: Nano Banana Pro 최대한 활용하기
 
 Nano Banana Pro의 강력한 기능을 제대로 활용하려면 **효과적인 프롬프팅 전략**이 필요합니다. (~~그냥도 좋긴한데, 더 잘하기 위해~~)
 
@@ -341,8 +349,7 @@ Nano Banana Pro의 강력한 기능을 제대로 활용하려면 **효과적인 
 
 > Made with Nano-banana Pro (헉..잘한다.. 🤤)
 
-카테고리별 실전 프롬프트 예시
-----------------
+## 카테고리별 실전 프롬프트 예시
 
 ### 1. 실세계 지식 활용 (Real-world Knowledge)
 
@@ -1010,8 +1017,7 @@ futuristic, carved from a single, seamless piece of material
 * 미니멀리스트 조각적 건축 스타일의 나선형 계단 공간이 생성됩니다.
 * 청록색 또는 녹청색 콘크리트로 보이는 단일 재질이 벽, 바닥, 천장을 덮고 있으며, 따뜻한 빛이 계단을 비추고 위의 원형 천창에서 부드러운 빛이 내려와 고요한 웅장함과 신비로움을 연출합니다.
 
-개발자를 위한 실용 가이드
---------------
+## 개발자를 위한 실용 가이드
 
 ### API 접근
 
@@ -1086,8 +1092,7 @@ Google Antigravity에서 코딩 에이전트가 Nano Banana Pro를 활용하는 
 
 Adobe와 Figma 같은 크리에이티브 플랫폼에서도 통합이 진행 중이며, 디자이너들은 워크플로우 내에서 직접 Nano Banana Pro를 활용할 수 있게 됩니다.
 
-제한사항과 주의사항
-----------
+## 제한사항과 주의사항
 
 모든 기술이 그렇듯, Nano Banana Pro도 완벽하지는 않습니다. 사용 시 다음 사항들을 고려해야 합니다:
 
@@ -1127,8 +1132,7 @@ Adobe와 Figma 같은 크리에이티브 플랫폼에서도 통합이 진행 중
 * 액세서리나 의상 디테일이 변할 수 있음
 * 계속해서 개선 중인 영역
 
-안전성과 윤리적 고려사항
--------------
+## 안전성과 윤리적 고려사항
 
 ### SynthID 워터마크
 
@@ -1149,8 +1153,7 @@ Google은 AI 생성 이미지의 출처를 명확히 하기 위해 **SynthID 기
 * **Red Teaming**: 아동 안전, 편향성 등에 대한 지속적인 평가
 * **표현성 검토**: 다양한 인구 집단의 공정한 표현 보장
 
-결론
---
+## 결론
 
 Nano Banana Pro는 이미지 생성 AI의 새로운 기준을 제시합니다. Gemini 3 Pro의 고급 추론 능력, 정확한 텍스트 렌더링, 실세계 지식 통합, 그리고 스튜디오급 제어 기능이 결합되어, 단순한 "이미지 생성기"를 넘어 **진정한 크리에이티브 파트너**로 자리매김합니다.
 

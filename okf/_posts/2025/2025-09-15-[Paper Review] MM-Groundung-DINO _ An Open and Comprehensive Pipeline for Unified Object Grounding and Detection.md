@@ -1,12 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection"
+description: "MMDetection으로 Grounding-DINO를 재현·공개한 MM-Grounding-DINO의 구조와 OVD·PG·REC 데이터셋 구성, COCO·LVIS·ODinW zero-shot 결과, GRIT 데이터 분석을 정리한다."
 date: "2025-09-15"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Computer Vision"
+  - "Transformer"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-MM-Groundung-DINO-An-Open-and-Comprehensive-Pipeline-for-Unified-Object-Grounding-and-Detection"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:10:56Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-MM-Groundung-DINO-An-Open-and-Comprehensive-Pipeline-for-Unified-Object-Grounding-and-Detection"
+    title: "[Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-15"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] MM-Groundung-DINO : An Open and Comprehensive Pipeline for Unified Object Grounding and Detection
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/4094b5ba-29f7-4428-9d80-eafe7468dce4/image.png)
 
@@ -14,8 +28,7 @@ year: "2025"
 
 *본 리뷰는 원문을 최대한 직역한 내용입니다. 여기서 "우리는"은 저자를 지칭합니다. 참고 부탁드립니다.*
 
-초록
---
+## 초록
 
 **Grounding-DINO**는 `Open-Vocabulary Detection (OVD)`, `Phrase Grounding (PG)`, `Referring Expression Comprehension (REC)`을 포함한 다양한 비전 작업을 다루는 최첨단 **open-set detection 모델**입니다.
 
@@ -36,8 +49,7 @@ year: "2025"
 
 > <https://github.com/open-mmlab/mmdetection/tree/main/configs/mm_grounding_dino>
 
-1. 서론
------
+## 1. 서론
 
 객체 detection 작업은 일반적으로 이미지를 모델에 입력하여 제안을 얻은 다음, 이를 multi-modal alignment를 통해 텍스트와 매칭하는 것을 포함하며, 이는 대부분의 최첨단 multi-modal 이해 아키텍처의 핵심 구성 요소입니다.
 
@@ -56,8 +68,7 @@ year: "2025"
 
 * 이러한 심층 융합 접근법은 open-set 맥락에서 객체 detection을 크게 향상시키며, DETR 기반 구조는 하드코딩된 모듈 없이 end-to-end 네트워크로 만듭니다.
 
-2. 접근 방법
---------
+## 2. 접근 방법
 
 > 이 섹션에서는 모델과 데이터셋을 자세히 소개합니다. 달리 명시되지 않는 한, MM-G는 MM-Grounding-DINO를, G-DINO는 Grounding-DINO를 나타냅니다.
 
@@ -141,8 +152,7 @@ year: "2025"
 
 * 총 batch size 128로 30 epoch 동안 32개의 NVIDIA 3090 GPU에서 MM-G-Tiny를 훈련했습니다.
 
-3. 주요 결과
---------
+## 3. 주요 결과
 
 ### 3.1 Zero-shot Transfer
 
@@ -212,8 +222,7 @@ Table 10에서 보듯이, MM-G-T는 close-set fine-tuning과 open-set continuing
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f2e95ef8-0c2c-4c17-86db-3c7b14683124/image.png)
 
-4. 결론
------
+## 4. 결론
 
 이 논문에서 저희는 Grounding-DINO를 기반으로 하고 풍부한 비전 데이터셋으로 사전 훈련된 포괄적이고 오픈소스인 grounding baseline인 MM-Grounding-DINO를 제안했습니다. 이는 OVD, PG, REC 작업을 포괄적으로 다룹니다. OVD, PG, REC 평가를 위한 모든 사용 가능한 벤치마크를 확장했으며, 모든 평가 지표는 MMDetection에서 쉽게 사용할 수 있습니다.
 

@@ -1,19 +1,32 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임"
+description: "LLaVA 논문의 GPT-4 기반 158K 멀티모달 instruction 데이터 생성, CLIP-Projection-Vicuna 구조와 2단계 학습, LLaVA-Bench·ScienceQA 결과를 정리하고 공식 코드 구현을 분석한다."
 date: "2025-12-12"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Computer Vision"
+  - "NLP"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/LLaVA-Visual-Instruction-Tuning-멀티모달-AI의-새로운-패러다임"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-16T22:52:44Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/LLaVA-Visual-Instruction-Tuning-멀티모달-AI의-새로운-패러다임"
+    title: "[Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임"
+    author: "human:euisuk-chung"
+    last_modified: "2025-12-12"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] LLaVA: Visual Instruction Tuning - 멀티모달 AI의 새로운 패러다임
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/af13a4fa-3792-4848-8a4c-2ffe911b68ae/image.png)
 
 > <https://arxiv.org/pdf/2304.08485>
 
-논문 정보
------
+## 논문 정보
 
 * **제목**: Visual Instruction Tuning
 * **저자**: Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee
@@ -22,10 +35,7 @@ year: "2025"
 * **논문 링크**: <https://arxiv.org/abs/2304.08485>
 * **GitHub**: <https://github.com/haotian-liu/LLaVA>
 
----
-
-1. Introduction: Visual Instruction Tuning의 탄생
-----------------------------------------------
+## 1. Introduction: Visual Instruction Tuning의 탄생
 
 ### 연구 배경
 
@@ -68,10 +78,7 @@ year: "2025"
 * Unseen 이미지/명령에서 GPT-4와 유사한 멀티모달 행동 전시
 * **모든 데이터, 코드, 모델을 오픈소스로 공개**
 
----
-
-2. Related Work: 기존 연구와의 차별점
-----------------------------
+## 2. Related Work: 기존 연구와의 차별점
 
 ### Multimodal Instruction-Following Agents
 
@@ -136,10 +143,7 @@ NLP 분야에서 GPT-3가 InstructGPT로 발전하며 사용자 지시를 훨씬
 
 LLaVA는 바로 이 격차를 메우기 위해 등장했습니다. 기존 모델들이 놓치고 있던 visual instruction tuning을 체계적으로 연구하고, 이를 통해 멀티모달 태스크에서의 성능을 끌어올리는 것이 LLaVA의 핵심 목표입니다.
 
----
-
-3. GPT-assisted Visual Instruction Data Generation
---------------------------------------------------
+## 3. GPT-assisted Visual Instruction Data Generation
 
 ### 문제점: 멀티모달 Instruction 데이터 부족
 
@@ -220,10 +224,7 @@ A: They are facing the challenge of fitting all their luggage into the
    which suggests that the group has a significant amount of belongings...
 ```
 
----
-
-4. Visual Instruction Tuning
-----------------------------
+## 4. Visual Instruction Tuning
 
 ### 4.1 Architecture: 3-Component 설계
 
@@ -367,8 +368,6 @@ p(Xa∣Xv,Xinstruct)=∏i=1Lpθ(xi∣Xv,Xinstruct,<i,Xa,<i)p(X\_a|X\_v, X\_{inst
 
 > **결과**: LLM이 visual context를 이해하면서 다양한 instruction을 따르는 Multimodal Chatbot 능력 획득
 
----
-
 #### Use Case 1: Multimodal Chatbot
 
 **데이터**: 158K language-image instruction-following samples
@@ -405,10 +404,7 @@ p(Xa∣Xv,Xinstruct)=∏i=1Lpθ(xi∣Xv,Xinstruct,<i,Xa,<i)p(X\_a|X\_v, X\_{inst
 * Epochs: 12
 * 시간: 4시간 (8×A100)
 
----
-
-5. Experiments: 성능 검증
----------------------
+## 5. Experiments: 성능 검증
 
 ### 5.1 Multimodal Chatbot 평가
 
@@ -557,10 +553,7 @@ The man is drying his clothes on the hood of his car.
    * Pre-trained knowledge 보존
 4. **Model size**: 13B > 7B (1.08% 차이)
 
----
-
-6. 코드 구현 분석
------------
+## 6. 코드 구현 분석
 
 아래는 <https://github.com/haotian-liu/LLaVA> 코드를 분석 후 정리한 내용입니다.
 
@@ -668,8 +661,6 @@ def prepare_inputs_labels_for_multimodal(self, input_ids, images, labels, ...):
 출력: [텍스트 임베딩] + [이미지 256토큰] + [텍스트 임베딩]
 ```
 
----
-
 ### 6.3 Training Pipeline
 
 #### Stage 1 vs Stage 2 핵심 설정
@@ -709,8 +700,6 @@ def train():
     # 5) 모델 저장
     trainer.save_state()
 ```
-
----
 
 ### 6.4 Data Processing
 
@@ -757,8 +746,6 @@ labels: [    IGNORE_INDEX       ] [    실제 토큰 ID        ]
                 ↑                            ↑
         loss 계산 안 함              loss 계산 대상
 ```
-
----
 
 ### 6.5 Inference Pipeline
 
@@ -816,10 +803,7 @@ Assistant:
 LLM이 다음 토큰 생성 시작
 ```
 
----
-
-7. 주요 특징 및 혁신
--------------
+## 7. 주요 특징 및 혁신
 
 ### 7.1 Data-Centric Approach
 
@@ -863,10 +847,7 @@ LLM이 다음 토큰 생성 시작
 * Follow-up 질문 처리
 * Detailed explanations
 
----
-
-8. Limitations 및 향후 방향
-----------------------
+## 8. Limitations 및 향후 방향
 
 ### 현재 한계
 
@@ -897,10 +878,7 @@ LLM이 다음 토큰 생성 시작
    * 65B+ LLM variants
    * Larger vision encoders
 
----
-
-9. 사회적 영향 (Broader Impact)
---------------------------
+## 9. 사회적 영향 (Broader Impact)
 
 ### Risks
 
@@ -935,10 +913,7 @@ LLM이 다음 토큰 생성 시작
 * 다양한 vision-language 태스크 통합
 * User-friendly interface
 
----
-
-10. Conclusion
---------------
+## 10. Conclusion
 
 LLaVA는 **visual instruction tuning**이라는 새로운 패러다임을 제시했습니다:
 

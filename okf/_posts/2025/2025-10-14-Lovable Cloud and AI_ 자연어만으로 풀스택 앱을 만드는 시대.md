@@ -1,19 +1,30 @@
 ---
+type: "Product Update"
 title: "Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대"
+description: "Lovable Cloud가 Supabase 기반 DB·인증·스토리지·Edge Functions를 자연어로 자동 구성하는 방식과 Lovable AI의 Gemini·GPT 모델 선택, 영수증 OCR 재무 앱 구축 과정과 사용량 기반 요금을 설명한다."
 date: "2025-10-14"
 tags:
   - "Lovable"
+  - "Vibe Coding"
+resource: "https://velog.io/@euisuk-chung/Lovable-Cloud-AI-완전-가이드-풀스택-개발의-패러다임-전환"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:08:08Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Lovable-Cloud-AI-완전-가이드-풀스택-개발의-패러다임-전환"
+    title: "Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대"
+    author: "human:euisuk-chung"
+    last_modified: "2025-10-14"
+status: "stable"
 year: "2025"
 ---
-
-# Lovable Cloud & AI: 자연어만으로 풀스택 앱을 만드는 시대
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/294a5194-e5ae-44b5-93c8-39df8b93e4b7/image.png)
 
 > <https://lovable.dev/cloud>
 
-10살 아이가 풀스택 앱을 만든다고?
---------------------
+## 10살 아이가 풀스택 앱을 만든다고?
 
 "영수증 이미지를 업로드하면 AI가 자동으로 날짜, 상점명, 금액, 항목을 추출하고, 자동으로 지출과 수입을 분류해서 한 곳에서 추적하는 개인 재무 앱을 만들어줘."
 
@@ -23,10 +34,7 @@ year: "2025"
 
 > <https://youtu.be/kcOrTOT7Kko>
 
----
-
-Before & After: 무엇이 바뀌었나?
--------------------------
+## Before & After: 무엇이 바뀌었나?
 
 ### Before: 프론트엔드 중심의 제한적 개발
 
@@ -88,10 +96,7 @@ Lovable은 원래 React 기반 UI를 빠르게 생성하는 도구였습니다. 
 
 이는 단순한 기능 추가가 아닌, **개발 패러다임의 근본적 전환**을 의미합니다. Lovable은 더 이상 프론트엔드 빌더가 아닌, Supabase를 백그라운드에서 자동 제어하는 **완전한 풀스택 플랫폼**으로 진화했습니다.
 
----
-
-웹의 작동 원리: 프론트엔드와 백엔드
---------------------
+## 웹의 작동 원리: 프론트엔드와 백엔드
 
 Lovable Cloud의 혁신성을 이해하려면, 먼저 **웹 애플리케이션의 구조**를 명확히 이해해야 합니다.
 
@@ -185,10 +190,7 @@ Lovable Cloud의 혁신성을 이해하려면, 먼저 **웹 애플리케이션�
 
 복잡한 계산, 결제 처리, AI 분석 등은 강력한 서버 리소스가 필요합니다. 이를 사용자의 브라우저에서 실행하면 성능이 저하되고, 보안 위험도 증가합니다.
 
----
-
-Lovable Cloud: 자동화된 백엔드 인프라
----------------------------
+## Lovable Cloud: 자동화된 백엔드 인프라
 
 Lovable Cloud는 **Supabase 오픈소스 스택 기반의 완전 관리형 풀스택 플랫폼**입니다. 별도의 Supabase 설정 없이, Lovable이 백그라운드에서 모든 인프라를 자동으로 프로비저닝하고 관리합니다.
 
@@ -422,10 +424,7 @@ Lovable Cloud 이전에는, Supabase가 연결된 프로젝트를 다른 사람�
 
 이는 **재사용 가능한 템플릿 생태계**를 만들어, 개발 속도를 더욱 가속화합니다.
 
----
-
-Lovable AI: 별도 API 키 없는 AI 통합
------------------------------
+## Lovable AI: 별도 API 키 없는 AI 통합
 
 Lovable AI는 Lovable Cloud에 **내장된 AI 기능**으로, 별도 API 키 관리나 외부 서비스 연동 없이 앱에 AI를 통합할 수 있습니다.
 
@@ -657,10 +656,7 @@ Lovable AI는 시스템 안정성과 공정한 접근을 보장하기 위해 Rat
 * 앱 기능 일시 중단
 * Logs에서 확인 가능
 
----
-
-실전 활용: 개인 재무 관리 앱 구축
---------------------
+## 실전 활용: 개인 재무 관리 앱 구축
 
 공식 데모 영상에서 시연된 **영수증 OCR 재무 앱**을 단계별로 재현해보겠습니다.
 
@@ -1028,10 +1024,7 @@ Auto-filled fields:
 * **AI**: Lovable AI (이미지 분석)
 * **Hosting**: Lovable (자동 배포)
 
----
-
-가격 정책 및 사용량 관리
---------------
+## 가격 정책 및 사용량 관리
 
 Lovable Cloud와 AI는 **사용량 기반 과금(Pay-as-you-go)** 모델을 채택합니다.
 
@@ -1244,10 +1237,7 @@ Lovable Cloud와 AI는 **사용량 기반 과금(Pay-as-you-go)** 모델을 채�
   • 초과 시 UI 메시지
 ```
 
----
-
-결론: Prompt-to-Production의 시대
-----------------------------
+## 결론: Prompt-to-Production의 시대
 
 ### 패러다임의 근본적 전환
 
