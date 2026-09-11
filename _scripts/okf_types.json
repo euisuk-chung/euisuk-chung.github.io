@@ -1,11 +1,12 @@
 {
   "default": "Blog Post",
   "allowed": [
-    "Blog Post", "Paper Review", "Concept Note", "Lecture Note", "Conference Recap",
+    "Blog Post", "Paper Review", "Repo Review", "Concept Note", "Lecture Note", "Conference Recap",
     "Tip", "Guide", "Product Update", "Trend Report", "Book Review", "Tag"
   ],
   "prefix_map": {
     "Paper Review": "Paper Review",
+    "Repo Review": "Repo Review",
     "개념": "Concept Note", "개념정리": "Concept Note", "머신러닝": "Concept Note", "딥러닝": "Concept Note",
     "이탐": "Concept Note", "NLP": "Concept Note", "TS": "Concept Note", "Graph": "Concept Note",
     "파이토치": "Concept Note", "CV Notes": "Concept Note", "IT": "Concept Note", "알고리즘": "Concept Note", "트리": "Concept Note",

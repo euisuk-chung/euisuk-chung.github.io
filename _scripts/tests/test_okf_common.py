@@ -155,3 +155,10 @@ def test_consecutive_hrs_before_heading_removed_in_one_pass():
     assert out == "p\n\n### H\n" and rep.hr_removed == 2
     again, rep2 = oc.normalize_body(out, "T")
     assert again == out and rep2.hr_removed == 0
+
+
+def test_review_types_in_repository_config():
+    cfg = oc.load_types_config()
+    for kind in ("Paper Review", "Repo Review"):
+        assert kind in cfg["allowed"]
+        assert oc.derive_type(f"[{kind}] Example", cfg) == kind
