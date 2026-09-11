@@ -161,6 +161,19 @@ year: "2021"
 `aliases`에 옛 표기를 적어 두면 `okf_migrate.py`와 크롤러가 정규 `title`로 바꿔 줍니다.
 `parent`/`related`에는 다른 concept의 slug를 적습니다(온톨로지 확장용).
 
+concept 본문은 `description` 문장 하나와, `parent`가 있으면 `상위 개념: [제목](slug.md)` 링크 한 줄입니다.
+새 concept을 만들면 같은 PR에서 그 주제를 다루는 기존 글에도 태그를 붙입니다(제목·본문 grep).
+
+태그 정책:
+
+- `ChatGPT`는 ChatGPT 앱·제품이 주제일 때만. 모델·API·CLI·Cookbook 글은 `OpenAI`만 붙입니다.
+- 하위 concept과 상위 concept을 함께 붙입니다(`Gemini`+`Google`, `CES`+`Conference`). 아카이브 필터가 명시 태그를 읽습니다.
+- 벤더 프롬프팅 가이드의 번역·요약은 `type: Guide`입니다(Product Update 아님).
+- 카테고리성 태그(`개념정리`, `꿀팁`, `트렌드`, `강의노트`, `Paper Review`)는 전환기 동안 유지합니다. `강의노트`·`Paper Review`는 `type`과 1:1이라 아카이브에 type 필터가 생기면 퇴역 대상입니다.
+
+중복 글(크롤러가 같은 velog 글을 두 번 저장한 경우)은 `resource`가 있는 쪽을 남기고 다른 쪽을 지운 뒤,
+남긴 글 front matter에 지운 글의 URL을 `redirect_from`으로 적습니다(`jekyll-redirect-from` 활성).
+
 ### 도구 (`_scripts/`)
 
 ```bash
@@ -230,6 +243,7 @@ featured-condition-size: 1   # 이 값보다 많은 글을 가진 태그만 노�
 
 - `okf/_concepts/<slug>.md` 파일이 있는 태그 → `/tags/<slug>/` 전용 페이지(설명 + 해당 글 목록)
 - 없는 태그 → `/archive/?tag=<태그>` 클라이언트 필터로 폴백
+- `/tags/` → concept 전체 목록(`tags.html`, 태그별 글 수와 설명)
 
 concept 파일 규칙:
 
