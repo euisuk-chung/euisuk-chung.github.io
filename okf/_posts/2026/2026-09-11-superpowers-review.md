@@ -4,6 +4,7 @@ title: "[Repo Review] Superpowers 코드 리뷰: 코딩 에이전트의 개발 �
 description: "Superpowers 6.3.0의 세션 초기화, 스킬 선택, 계획 분해와 리뷰 흐름을 추적하고 코드가 보장하는 동작과 자연어 지침의 경계를 분석합니다."
 date: "2026-09-11"
 tags:
+  - "Repo Review"
   - "AI Agent"
   - "Prompt Engineering"
   - "Tools"
