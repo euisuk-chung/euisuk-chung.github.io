@@ -1,5 +1,5 @@
 ---
-type: "Concept Note"
+type: "Guide"
 title: "파이썬 마스터하기 : apply(), map(), applymap() 함수"
 description: "Pandas에서 혼동하기 쉬운 apply(), applymap(), map(), replace() 메소드의 차이를 열·원소·시리즈 단위 적용 예제와 람다 함수 활용 코드로 비교 설명한다."
 date: "2023-05-09"

@@ -5,7 +5,6 @@ description: "GPT-4.1·mini·nano 세 모델의 100만 토큰 컨텍스트, SWE-
 date: "2025-04-15"
 tags:
   - "OpenAI"
-  - "ChatGPT"
 resource: "https://velog.io/@euisuk-chung/OPENAI-GPT-4.1-개발자용-API-공개"
 generated:
   by: "process:velog-sync"

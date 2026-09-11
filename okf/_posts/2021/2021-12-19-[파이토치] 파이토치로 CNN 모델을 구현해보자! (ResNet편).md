@@ -38,7 +38,7 @@ year: "2021"
 
 ## 소개
 
-ResNet이 소개된 논문의 제목은 Going Deeper with Convolutions로, 다음 링크에서 확인해보실 수 있습니다. [(링크)](https://arxiv.org/abs/1512.03385)
+ResNet이 소개된 논문의 제목은 Deep Residual Learning for Image Recognition으로, 다음 링크에서 확인해보실 수 있습니다. [(링크)](https://arxiv.org/abs/1512.03385)
 
 ResNet의 저자들은 일정 수준 이상의 깊이가 되면 오히려 얕은 모델보다 깊은 모델의 성능이 더 떨어진다는 것을 아래 그림과 같이 확인할 수 있었습니다.  
 ![26_56_plot](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fbe79795b-2ee1-4067-884b-61fa8f745e71%2Fimage.png)

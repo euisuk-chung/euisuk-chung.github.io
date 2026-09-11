@@ -4,10 +4,10 @@ title: "[정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM :
 description: "Meta의 Soumya Batra 세션을 정리하며 SLM의 정의와 수요 배경, 지식 증류·프루닝·양자화 기반 LLM 압축, Chinchilla 스케일링 법칙을 넘어선 학습 전략과 LLM의 비효율성 논의를 다룬다."
 date: "2024-12-25"
 tags:
-  - "SK AI Summit"
   - "Conference"
   - "Distillation"
   - "NLP"
+  - "AI Summit Seoul"
 resource: "https://velog.io/@euisuk-chung/정리-24년-AI-Summit-라마-개발-리더가-설명하는-LLM-Small-Models-최신-기법-Soumya-Batra"
 generated:
   by: "process:velog-sync"

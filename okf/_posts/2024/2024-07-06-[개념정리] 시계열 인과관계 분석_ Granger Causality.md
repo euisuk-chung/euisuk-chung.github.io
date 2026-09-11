@@ -7,7 +7,7 @@ tags:
   - "시계열"
   - "개념정리"
   - "Python"
-  - "머신러닝"
+  - "데이터분석"
 resource: "https://velog.io/@euisuk-chung/개념정리-시계열-분석-인과관계-분석"
 generated:
   by: "process:velog-sync"

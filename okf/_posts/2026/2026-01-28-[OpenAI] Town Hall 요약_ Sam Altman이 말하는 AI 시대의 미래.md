@@ -6,6 +6,7 @@ date: "2026-01-28"
 tags:
   - "OpenAI"
   - "AI Agent"
+  - "Conference"
 resource: "https://velog.io/@euisuk-chung/OpenAI-Town-Hall-요약-Sam-Altman이-말하는-AI-시대의-미래"
 generated:
   by: "process:velog-sync"
@@ -24,7 +25,7 @@ year: "2026"
 
 ## 서론
 
-2024년, OpenAI는 개발자 및 빌더 커뮤니티와의 Town Hall을 통해 차세대 AI 도구의 방향성을 논의했습니다. Sam Altman CEO가 직접 참석하여 소프트웨어 엔지니어링의 미래, Agent 시스템, AI 안전성, 그리고 창작의 본질까지 폭넓은 주제에 대해 솔직한 견해를 밝혔습니다.
+2026년, OpenAI는 개발자 및 빌더 커뮤니티와의 Town Hall을 통해 차세대 AI 도구의 방향성을 논의했습니다. Sam Altman CEO가 직접 참석하여 소프트웨어 엔지니어링의 미래, Agent 시스템, AI 안전성, 그리고 창작의 본질까지 폭넓은 주제에 대해 솔직한 견해를 밝혔습니다.
 
 이 글에서는 Town Hall에서 다뤄진 핵심 주제들을 정리하고, AI 시대를 준비하는 개발자와 빌더들에게 실질적인 인사이트를 제공하고자 합니다.
 
