@@ -1,13 +1,28 @@
 ---
+type: "Guide"
 title: "Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)"
+description: "Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다."
 date: "2026-06-17"
+tags:
+  - "Claude"
+  - "환경설정"
+  - "Anthropic"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/Claude-Code에서-디폴트로-Auto-Mode-사용하기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-09-08T03:19:07Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Claude-Code에서-디폴트로-Auto-Mode-사용하기"
+    title: "Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)"
+    author: "human:euisuk-chung"
+    last_modified: "2026-06-17"
+status: "stable"
 year: "2026"
 ---
 
-# Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)
-
-들어가며
-----
+## 들어가며
 
 요즘은 AI Agent에게 작업 대부분을 맡기는 시대입니다. 코드를 읽고 고치는 일은 물론이고, 셸 명령을 실행하고 환경을 정리하는 일까지 Agent에게 위임하는 흐름이 점점 자연스러워지고 있습니다. Claude Code 역시 이런 흐름에 맞춰, 매번 권한을 확인받지 않고도 작업을 이어가는 Auto Mode를 제공합니다.
 
@@ -21,10 +36,7 @@ year: "2026"
 
 > <https://code.claude.com/docs/en/permission-modes#eliminate-prompts-with-auto-mode>
 
----
-
-1. Auto Mode란 무엇인가
-------------------
+## 1. Auto Mode란 무엇인가
 
 Claude Code는 파일을 수정하거나 셸 명령을 실행하거나 네트워크 요청을 보낼 때, 기본적으로 동작을 멈추고 사용자에게 승인을 요청합니다. 이 "멈추고 묻는" 빈도를 결정하는 것이 **Permission Mode**입니다.
 
@@ -40,10 +52,7 @@ Claude Code는 파일을 수정하거나 셸 명령을 실행하거나 네트워
 
 Auto Mode는 리서치 프리뷰(research preview) 단계입니다. 프롬프트를 줄여주지만 안전을 보장하지는 않으므로, 민감한 작업의 검토를 대체하는 용도로 쓰지 않는 것이 좋습니다.
 
----
-
-2. 그 외 Permission Mode 한눈에 보기
------------------------------
+## 2. 그 외 Permission Mode 한눈에 보기
 
 Auto Mode는 여러 Permission Mode 중 하나입니다. Auto Mode를 디폴트로 잡기 전에, 나머지 모드들이 각각 어떤 동작을 하고 어떻게 설정하는지 알아두면 선택 기준이 분명해집니다. 모드는 "묻지 않고 실행해 주는 범위"를 기준으로 나뉩니다.
 
@@ -68,10 +77,7 @@ Auto Mode는 여러 Permission Mode 중 하나입니다. Auto Mode를 디폴트�
 
 이처럼 권한을 통째로 건너뛰는 `bypassPermissions` 대신, 안전 검사를 유지하면서 프롬프트만 줄이는 절충안이 Auto Mode입니다. 다음 장부터는 이 Auto Mode를 디폴트로 만드는 구체적인 방법을 다룹니다.
 
----
-
-3. 디폴트로 켜기 전에: 사전 요구사항
-----------------------
+## 3. 디폴트로 켜기 전에: 사전 요구사항
 
 Auto Mode는 다음 조건을 "모두" 충족할 때만 사용할 수 있습니다. 디폴트 설정을 넣더라도 조건이 하나라도 빠지면 세션이 그냥 `default` 모드로 시작합니다.
 
@@ -87,10 +93,7 @@ Sonnet 4.5, Opus 4.5, Haiku, claude-3 계열 등 구형 모델은 어떤 Provide
 
 조건을 충족하면 `Shift+Tab`으로 모드를 순환할 때 Auto Mode가 나타나며, 처음 Auto로 전환하면 동의(opt-in) 프롬프트가 한 번 표시됩니다. 만약 Claude Code가 Auto Mode를 "사용 불가"로 보고한다면 이는 일시적 장애가 아니라 위 요구사항 중 하나가 충족되지 않았다는 의미입니다.
 
----
-
-4. Anthropic API 환경에서 디폴트로 설정하기
--------------------------------
+## 4. Anthropic API 환경에서 디폴트로 설정하기
 
 Anthropic API를 직접 사용하는 경우(가장 일반적인 경우), Auto Mode는 기본적으로 사용 가능하므로 디폴트 설정만 추가하면 됩니다.
 
@@ -117,10 +120,7 @@ Claude Code v2.1.142 이상은 `.claude/settings.json`이나 `.claude/settings.l
 
 증상으로 보면 이렇습니다. `defaultMode: "auto"`를 설정했는데도 오류 없이 세션이 `default` 모드로 시작한다면, 그 설정은 십중팔구 프로젝트·로컬 설정 파일에 들어 있는 것입니다. 해당 값을 사용자 설정 파일인 `~/.claude/settings.json`으로 옮기면 해결됩니다.
 
----
-
-5. Bedrock·Vertex AI·Foundry 환경에서 활성화하기
----------------------------------------
+## 5. Bedrock·Vertex AI·Foundry 환경에서 활성화하기
 
 Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry를 통해 사용하는 경우에는 한 단계가 더 필요합니다. 이 Provider들에서는 `CLAUDE_CODE_ENABLE_AUTO_MODE`를 `1`로 설정하기 전까지 Auto Mode가 `Shift+Tab` 순환 목록에 나타나지 않습니다. 이 환경 변수는 Claude Code v2.1.158 이상에서 동작하며, 지원 모델은 Opus 4.7과 Opus 4.8뿐입니다.
 
@@ -157,10 +157,7 @@ Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry를 통해 사용하는
 
 만약 LLM gateway를 `ANTHROPIC_BASE_URL`로 연결해 사용하는 경우라면, gateway가 요청을 Anthropic API로 라우팅하기 때문에 환경 변수 없이도 Auto Mode에 접근 가능할 수 있습니다.
 
----
-
-6. Windows·Linux 단계별 적용 절차
---------------------------
+## 6. Windows·Linux 단계별 적용 절차
 
 개념을 종합해 실제 적용 순서로 정리하면 다음과 같습니다.
 
@@ -182,10 +179,7 @@ Anthropic API 사용자는 `permissions.defaultMode`만 추가하면 되고, Bed
 claude auto-mode defaults
 ```
 
----
-
-7. Auto Mode에서 차단·허용되는 동작
--------------------------
+## 7. Auto Mode에서 차단·허용되는 동작
 
 Auto Mode의 classifier는 사용자의 작업 디렉터리(working directory)와 저장소에 설정된 remote는 신뢰하고, 그 외는 외부(external)로 간주합니다.
 
@@ -210,19 +204,13 @@ Auto Mode의 classifier는 사용자의 작업 디렉터리(working directory)�
 
 routine한 동작이 자꾸 차단된다면, 보통은 classifier가 사용자의 인프라에 대한 컨텍스트를 모르기 때문입니다. 이 경우 관리자가 신뢰할 저장소·버킷·서비스를 `autoMode.environment` 설정으로 추가할 수 있습니다.
 
----
-
-8. 대화로 설정하는 경계(Boundaries)
---------------------------
+## 8. 대화로 설정하는 경계(Boundaries)
 
 classifier는 사용자가 대화 중에 말한 경계를 차단 신호로 취급합니다. 예를 들어 "push 하지 마" 또는 "내가 검토할 때까지 배포하지 마"라고 말하면, 기본 규칙상 허용되는 동작이라도 classifier가 해당 동작을 차단합니다. 이 경계는 이후 메시지에서 사용자가 직접 해제하기 전까지 유지되며, Claude 스스로 "조건이 충족됐다"고 판단하는 것만으로는 해제되지 않습니다.
 
 다만 경계는 규칙(rule)으로 저장되는 것이 아니라 매 검사마다 대화 기록에서 다시 읽어들이는 방식입니다. 따라서 context compaction으로 해당 메시지가 사라지면 경계도 사라질 수 있습니다. 확실한 보장이 필요하다면 deny rule을 추가하는 편이 안전합니다.
 
----
-
-9. Auto Mode가 일반 모드로 되돌아가는 경우(Fallback)
----------------------------------------
+## 9. Auto Mode가 일반 모드로 되돌아가는 경우(Fallback)
 
 classifier가 어떤 동작을 차단하면 알림이 표시되고, 해당 항목은 `/permissions`의 "Recently denied" 탭에 기록됩니다. 여기서 `r`을 눌러 수동 승인으로 재시도할 수 있습니다.
 
@@ -230,19 +218,13 @@ classifier가 연속 3회 또는 누적 20회 차단하면 Auto Mode가 일시 �
 
 `-p` 플래그를 쓰는 비대화형 모드(non-interactive mode)에서는 프롬프트를 받을 사용자가 없으므로, 반복 차단 시 세션이 중단됩니다.
 
----
-
-10. 관리자 차원의 제어
---------------
+## 10. 관리자 차원의 제어
 
 조직에서 Auto Mode를 통제하려는 경우, 관리자는 managed settings에서 `permissions.disableAutoMode`를 `"disable"`로 설정해 Auto Mode를 잠글 수 있습니다. Bedrock·Vertex·Foundry에서는 이 설정이 `CLAUDE_CODE_ENABLE_AUTO_MODE` 환경 변수보다 우선 적용되어, 활성화 변수를 덮어씁니다.
 
 반대로 Team·Enterprise에서는 관리자가 Claude Code admin settings에서 먼저 활성화해야 일반 사용자가 Auto Mode를 켤 수 있습니다.
 
----
-
-마무리 (RECAP)
------------
+## 마무리 (RECAP)
 
 * Auto Mode는 루틴 권한 프롬프트를 없애는 대신, classifier 모델이 모든 동작을 실행 전에 검토하는 모드입니다.
 * 디폴트로 켜려면 먼저 버전·요금제·모델·Provider 요구사항을 충족시킨 뒤, `permissions.defaultMode`를 `"auto"`로 설정합니다.

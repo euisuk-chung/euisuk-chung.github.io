@@ -2,22 +2,22 @@
 
 ## 2026
 
-* [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md)
-* [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md)
-* [[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대](2026/2026-05-25-[구글] 2026 Google I_O Developer Keynote정리_ Agent가 주도하는 개발의 새 시대.md)
-* [첫 책이 나왔습니다 — <AI 바이브 코딩 마스터> 출간 후기](2026/2026-05-24-첫 책이 나왔습니다 — _AI 바이브 코딩 마스터_ 출간 후기.md)
-* [[HAI] AI Index Report 2026 정리: 기술은 가속하고, 시스템은 뒤따라가기 바쁘다](2026/2026-04-20-[HAI] AI Index Report 2026 정리_ 기술은 가속하고, 시스템은 뒤따라가기 바쁘다.md)
-* [NVIDIA GTC 2026 키노트 완벽 정리: Inference Inflection부터 Physical AI까지](2026/2026-03-17-NVIDIA GTC 2026 키노트 완벽 정리_ Inference Inflection부터 Physical AI까지.md)
-* [[Gemini 해커톤] Creator Hub: AI로 YouTube 악성 댓글을 자동 분석하는 풀스택 서비스](2026/2026-03-05-[Gemini 해커톤] Creator Hub_ AI로 YouTube 악성 댓글을 자동 분석하는 풀스택 서비스.md)
-* [[Paper Review] K-EXAONE Technical Report](2026/2026-02-16-[Paper Review] K-EXAONE Technical Report.md)
-* [[OpenAI] Prism: GPT-5.2 기반 과학 논문 작성을 위한 무료 AI 워크스페이스](2026/2026-01-29-[OpenAI] Prism_ GPT-5.2 기반 과학 논문 작성을 위한 무료 AI 워크스페이스.md)
-* [[OpenAI] Town Hall 요약: Sam Altman이 말하는 AI 시대의 미래](2026/2026-01-28-[OpenAI] Town Hall 요약_ Sam Altman이 말하는 AI 시대의 미래.md)
-* [BCG AI Radar 2026: CEO가 AI 투자의 중심에 서다](2026/2026-01-20-BCG AI Radar 2026_ CEO가 AI 투자의 중심에 서다.md)
-* [BCG AI Radar 2025: AI Impact Gap 해소를 위한 전략 보고서](2026/2026-01-20-BCG AI Radar 2025_ AI Impact Gap 해소를 위한 전략 보고서.md)
-* [[OpenAI] GPT-5.2 프롬프팅 가이드: 엔터프라이즈 AI 에이전트를 위한 최적화 전략](2026/2026-01-17-[OpenAI] GPT-5.2 프롬프팅 가이드_ 엔터프라이즈 AI 에이전트를 위한 최적화 전략.md)
-* [[OpenAI] : OpenAI 최신 프런티어 모델 GPT-5.2 출시](2026/2026-01-12-[OpenAI] _ OpenAI 최신 프런티어 모델 GPT-5.2 출시.md)
-* [[CS50] CS50x 2026 - Lecture 0 - Scratch](2026/2026-01-09-[CS50] CS50x 2026 - Lecture 0 - Scratch.md)
-* [[CES] CES 2026 젠슨 황 기조연설 정리](2026/2026-01-08-[CES] CES 2026 젠슨 황 기조연설 정리.md)
+* [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md) - Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다.
+* [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md) - Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다.
+* [[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대](2026/2026-05-25-[구글] 2026 Google I_O Developer Keynote정리_ Agent가 주도하는 개발의 새 시대.md) - Google I/O 2026 Developer Keynote의 Managed Agents, Antigravity 2.0과 CLI, Gemma 4 LoRA 파인튜닝 데모, Android CLI, WebMCP와 DevTools for Agents 발표를 정리합니다.
+* [첫 책이 나왔습니다 — <AI 바이브 코딩 마스터> 출간 후기](2026/2026-05-24-첫 책이 나왔습니다 — _AI 바이브 코딩 마스터_ 출간 후기.md) - 퇴근 후 반년간 공저로 집필한 첫 책 『AI 바이브 코딩 마스터』의 출간 소식과 함께 Lovable 기반 다섯 가지 실습 프로젝트, 배포·운영 파트 등 책의 구성과 집필 과정을 소개합니다.
+* [[HAI] AI Index Report 2026 정리: 기술은 가속하고, 시스템은 뒤따라가기 바쁘다](2026/2026-04-20-[HAI] AI Index Report 2026 정리_ 기술은 가속하고, 시스템은 뒤따라가기 바쁘다.md) - Stanford HAI AI Index Report 2026의 9개 챕터에서 R&D 집중도, 벤치마크 수렴, Responsible AI trade-off, 투자·노동시장, 과학·의료 응용, 정책과 여론 수치를 정리하고 ML 실무자 관점의 시사점을 도출합니다.
+* [NVIDIA GTC 2026 키노트 완벽 정리: Inference Inflection부터 Physical AI까지](2026/2026-03-17-NVIDIA GTC 2026 키노트 완벽 정리_ Inference Inflection부터 Physical AI까지.md) - Jensen Huang의 GTC 2026 키노트를 발표 순서대로 따라가며 CUDA Flywheel, Inference Inflection, Vera Rubin과 Groq 통합, OpenClaw·NemoClaw, Physical AI 로보틱스 발표를 정리합니다.
+* [[Gemini 해커톤] Creator Hub: AI로 YouTube 악성 댓글을 자동 분석하는 풀스택 서비스](2026/2026-03-05-[Gemini 해커톤] Creator Hub_ AI로 YouTube 악성 댓글을 자동 분석하는 풀스택 서비스.md) - Google Gemini 3 Seoul 해커톤에서 만든 Creator Hub의 기획 배경과 한국어 정규식 Rule 엔진·Gemini 2.5 Flash 이중 분석 파이프라인, 10대 독성 카테고리와 점수 산정 로직을 소개합니다.
+* [[Paper Review] K-EXAONE Technical Report](2026/2026-02-16-[Paper Review] K-EXAONE Technical Report.md) - LG AI연구원의 236B MoE 모델 K-EXAONE의 Hybrid Attention 구조, SuperBPE 토크나이저, AGAPO·GROUPER 학습 파이프라인과 K-AUT 안전성 프레임워크, 벤치마크 결과를 정리합니다.
+* [[OpenAI] Prism: GPT-5.2 기반 과학 논문 작성을 위한 무료 AI 워크스페이스](2026/2026-01-29-[OpenAI] Prism_ GPT-5.2 기반 과학 논문 작성을 위한 무료 AI 워크스페이스.md) - OpenAI가 공개한 GPT-5.2 기반 무료 과학 논문 워크스페이스 Prism의 문서 맥락 기반 작성·수정, 문헌 검색, 이미지-LaTeX 변환, 실시간 협업 기능과 Overleaf 대비 차별점을 정리한다.
+* [[OpenAI] Town Hall 요약: Sam Altman이 말하는 AI 시대의 미래](2026/2026-01-28-[OpenAI] Town Hall 요약_ Sam Altman이 말하는 AI 시대의 미래.md) - OpenAI Town Hall에서 Sam Altman이 밝힌 소프트웨어 엔지니어링의 미래, Agent 시스템과 보안 리스크, 지능 비용 하락, 개인 맞춤형 소프트웨어, AI 시대에 필요한 소프트 스킬 등 22개 주제를 정리한다.
+* [BCG AI Radar 2026: CEO가 AI 투자의 중심에 서다](2026/2026-01-20-BCG AI Radar 2026_ CEO가 AI 투자의 중심에 서다.md) - BCG AI Radar 2026 서베이를 바탕으로 매출 대비 AI 투자 급증, CIO에서 CEO로 옮겨간 AI 의사결정 주도권, Change Distance 현상, Followers·Pragmatists·Trailblazers 세 CEO 유형과 실행 가이드를 정리한다.
+* [BCG AI Radar 2025: AI Impact Gap 해소를 위한 전략 보고서](2026/2026-01-20-BCG AI Radar 2025_ AI Impact Gap 해소를 위한 전략 보고서.md) - BCG AI Radar 2025 보고서를 바탕으로 AI Impact Gap, Deploy·Reshape·Invent 가치 창출 단계, 10-20-70 원칙, AI Agent 도입 시 리더십 우선순위와 CEO 플레이북을 정리한다.
+* [[OpenAI] GPT-5.2 프롬프팅 가이드: 엔터프라이즈 AI 에이전트를 위한 최적화 전략](2026/2026-01-17-[OpenAI] GPT-5.2 프롬프팅 가이드_ 엔터프라이즈 AI 에이전트를 위한 최적화 전략.md) - OpenAI 공식 GPT-5.2 프롬프팅 가이드를 바탕으로 상세도 제어, 범위 이탈 방지, 긴 컨텍스트 처리, 환각 완화 프롬프트 패턴과 Compaction, reasoning_effort 기반 마이그레이션 전략을 정리한다.
+* [[OpenAI] : OpenAI 최신 프런티어 모델 GPT-5.2 출시](2026/2026-01-12-[OpenAI] _ OpenAI 최신 프런티어 모델 GPT-5.2 출시.md) - OpenAI의 GPT-5.2가 GDPval, SWE-bench Pro, ARC-AGI-2 등 벤치마크에서 거둔 성과와 코딩·비전·긴 컨텍스트·도구 호출 성능 개선, ChatGPT의 Instant/Thinking/Pro 구성과 API 모델 라인업을 정리한다.
+* [[CS50] CS50x 2026 - Lecture 0 - Scratch](2026/2026-01-09-[CS50] CS50x 2026 - Lecture 0 - Scratch.md) - 하버드 CS50 Lecture 0을 바탕으로 이진법과 ASCII·RGB 데이터 표현, 순차 탐색과 이진 탐색의 시간 복잡도, Scratch로 배우는 함수·루프·조건문·추상화, AI 시대에도 컴퓨터 과학 기본기가 필요한 이유를 정리한다.
+* [[CES] CES 2026 젠슨 황 기조연설 정리](2026/2026-01-08-[CES] CES 2026 젠슨 황 기조연설 정리.md) - 젠슨 황의 CES 2026 기조연설에서 발표된 Vera Rubin 슈퍼컴퓨터, Cosmos 월드 파운데이션 모델, Alpamayo 자율주행 AI, Physical AI의 3-컴퓨터 아키텍처와 NVIDIA의 오픈 모델·엔터프라이즈 파트너십 전략을 정리한다.
 
 ## 2025
 

@@ -1,19 +1,32 @@
 ---
+type: "Conference Recap"
 title: "[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화"
+description: "Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다."
 date: "2026-05-25"
 tags:
-  - "google"
+  - "Google"
+  - "Gemini"
+  - "AI Agent"
+  - "Conference"
+resource: "https://velog.io/@euisuk-chung/Google-IO-2026-KeyNote"
+generated:
+  by: "process:velog-sync"
+  at: "2026-06-01T10:54:45Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Google-IO-2026-KeyNote"
+    title: "[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화"
+    author: "human:euisuk-chung"
+    last_modified: "2026-05-25"
+status: "stable"
 year: "2026"
 ---
-
-# [구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/17f87a9c-8067-4be0-8504-32712abb9280/image.png)
 
 > <https://youtu.be/wYSncx9zLIU>
 
-들어가며
-----
+## 들어가며
 
 2026년 Google I/O 키노트는 AI 모델 발전을 넘어 **Agentic AI(에이전트 AI)의 실용화**가 본격 시작되었음을 알리는 자리였습니다. Sundar Pichai CEO는 지난 10년간 AI-first 회사로 전환한 이후 가장 강도 높은 한 해였다고 회고하며, Gemini 3.5 Flash, Gemini Omni, Antigravity 2.0, Gemini Spark, Intelligent Eyewear 등 차세대 기술 스택을 차례로 공개했습니다.
 
@@ -21,10 +34,7 @@ year: "2026"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0d31f49c-1aed-413d-bdc5-268e691f0fa3/image.png)
 
----
-
-1. Sundar Pichai의 Opening Remarks
----------------------------------
+## 1. Sundar Pichai의 Opening Remarks
 
 ### 1.1 풀스택 AI 전략
 
@@ -174,10 +184,7 @@ Google의 연간 CapEx(Capital Expenditure, 설비 투자)는 2022년 \$31B에�
 
 **JAX와 Pathways의 의미**가 특히 중요합니다. 기존에는 모델 학습이 단일 데이터센터의 물리적 한계(전력, 네트워크, 냉각)에 묶여 있었습니다. Pathways는 이를 추상화해 **여러 데이터센터에 걸쳐 100만 개 이상의 TPU를 하나의 학습 클러스터처럼** 사용할 수 있게 합니다. 이는 세계 최대 규모의 학습 클러스터로, "대형 모델을 몇 달이 아닌 몇 주 안에 학습 가능"하다는 것이 Pichai의 주장입니다. 분산 학습의 핵심 challenge는 **gradient synchronization 오버헤드**인데, Pathways는 이를 데이터센터 간 통신에 맞게 재설계한 것으로 보입니다.
 
----
-
-2. Gemini Omni: World Model의 다음 단계
-----------------------------------
+## 2. Gemini Omni: World Model의 다음 단계
 
 ### 2.1 World Model의 개념
 
@@ -277,10 +284,7 @@ OpenAI가 Google의 SynthID 표준을 채택했다는 것은 업계 표준으로
 
 > 💡 다만, 워터마크 기술은 본질적으로 **adversarial robustness 문제**를 안고 있어, 워터마크 제거 공격에 대응하기 위한 지속적인 연구가 필요합니다. 업계 전반의 채택이 늘어날수록 이 ecosystem의 가치는 기하급수적으로 증가합니다.
 
----
-
-3. Gemini 3.5 Flash와 Google Antigravity 2.0
--------------------------------------------
+## 3. Gemini 3.5 Flash와 Google Antigravity 2.0
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/18c1a9a3-9174-4e9b-b3a0-8ceb20224154/image.png)
 
@@ -418,10 +422,7 @@ Sundar는 흥미로운 경제적 비교를 제시했습니다. Google Cloud 상�
 
 > Gemini 3.5 Flash는 발표일에 모든 제품과 API에서 즉시 사용 가능하며, **Gemini 3.5 Pro는 다음 달 출시 예정**입니다.
 
----
-
-4. Gemini Spark: Consumer Agent의 시작
------------------------------------
+## 4. Gemini Spark: Consumer Agent의 시작
 
 ### 4.1 Gemini Spark의 위치
 
@@ -522,10 +523,7 @@ Spark는 이 음성 입력을 단일 thread로 받아 백그라운드에서 **3�
 * MCP를 통한 3rd party 도구 연동
 * Gemini Workspace 및 Gemini Enterprise 버전
 
----
-
-5. Search의 재발명
---------------
+## 5. Search의 재발명
 
 ### 5.1 핵심 메시지
 
@@ -754,10 +752,7 @@ AP2는 **두 가지 원칙**으로 작동합니다.
 
 이는 단순한 "함께 자주 사는 제품" 추천(collaborative filtering)이 아니라 제품 사양을 이해하고 추론하는 작업으로, 카메라 바디-렌즈 마운트, 자전거 프레임-그루셋, 가전제품 전압 규격 등 **부품들이 함께 작동해야 가치를 만드는 모든 카테고리**에 확장 가능합니다. 일반 쇼핑 카트가 "장바구니에 무엇이 있는가"만 추적한다면, Universal Cart는 "**그것들이 함께 작동하는가**"를 이해합니다.
 
----
-
-6. Gemini 앱의 전면 재설계
--------------------
+## 6. Gemini 앱의 전면 재설계
 
 Josh Woodward는 Gemini 앱의 세 가지 핵심 업데이트를 발표했습니다.
 
@@ -916,10 +911,7 @@ Antigravity로 빌드된 Mac용 네이티브 앱이 지난달 출시되었습니
 4. 이메일 본문에 표가 포함된 완성된 초안 생성
 5. 음성 정정("Thursday, 아니 Friday로")까지 자동 반영
 
----
-
-7. Generative Media: Pics, Stitch, Flow
----------------------------------------
+## 7. Generative Media: Pics, Stitch, Flow
 
 Suz Chamber는 creative tool 3가지를 발표했습니다.
 
@@ -1017,10 +1009,7 @@ Flow에서 보여준 동일한 creative control을 음악 창작으로 확장한
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3b53ae40-bd3b-4e5c-b282-969315882ccc/image.png)
 
----
-
-8. Intelligent Eyewear: Android XR의 본격화
----------------------------------------
+## 8. Intelligent Eyewear: Android XR의 본격화
 
 Shahram Izadi는 **Android XR** 플랫폼 위에서 동작하는 두 종류의 AI 안경을 발표했습니다. Android XR은 Samsung과 함께 빌드되고 Qualcomm Snapdragon에 최적화된 플랫폼입니다.
 
@@ -1105,10 +1094,7 @@ Gemini가 컨텍스트로부터 Redwood Grove Natural Preserve를 추론하고, 
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/96136a17-d3ab-4531-8fff-9cd02526011a/image.png)
 
----
-
-9. Closing: AGI, Science, 그리고 책임
---------------------------------
+## 9. Closing: AGI, Science, 그리고 책임
 
 Demis Hassabis가 다시 무대에 올라 키노트를 마무리했습니다.
 
@@ -1215,10 +1201,7 @@ Hassabis는 키노트를 다음과 같은 메시지로 마무리했습니다.
 
 AGI가 "몇 년 안에" 도래할 것이며, 이를 통해 과학적 발견이 디지털 속도로 가속화될 것이라는 전망입니다. "foothills of the singularity"(특이점의 산기슭)이라는 표현은 시적이면서도 의미심장합니다. 우리가 정상에 있는 것이 아니라, 그 험준한 등반의 시작점에 있다는 의미입니다. AGI 도달 자체보다, 거기까지의 여정에서 사회가 어떻게 변화에 적응하고 안전을 확보할 것인가가 더 중요한 화두임을 시사합니다.
 
----
-
-맺음말
----
+## 맺음말
 
 이번 키노트는 다음의 핵심 발표를 담고 있습니다.
 

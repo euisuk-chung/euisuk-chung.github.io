@@ -1,15 +1,28 @@
 ---
+type: "Product Update"
 title: "[OpenAI] : OpenAI 최신 프런티어 모델 GPT-5.2 출시"
+description: "OpenAI의 GPT-5.2가 GDPval, SWE-bench Pro, ARC-AGI-2 등 벤치마크에서 거둔 성과와 코딩·비전·긴 컨텍스트·도구 호출 성능 개선, ChatGPT의 Instant/Thinking/Pro 구성과 API 모델 라인업을 정리한다."
 date: "2026-01-12"
+tags:
+  - "OpenAI"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI-OpenAI-최신-프런티어-모델-GPT-5.2-출시"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-16T22:50:52Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-OpenAI-최신-프런티어-모델-GPT-5.2-출시"
+    title: "[OpenAI] : OpenAI 최신 프런티어 모델 GPT-5.2 출시"
+    author: "human:euisuk-chung"
+    last_modified: "2026-01-12"
+status: "stable"
 year: "2026"
 ---
 
-# [OpenAI] : OpenAI 최신 프런티어 모델 GPT-5.2 출시
-
 > <https://openai.com/ko-KR/index/introducing-gpt-5-2/>
 
-서론
---
+## 서론
 
 OpenAI가 전문 지식 업무에서 가장 뛰어난 성능을 제공하는 새로운 모델 시리즈 **GPT-5.2**를 공개했습니다. GPT-5.2는 전문 작업과 장시간 에이전트(Agent) 실행에 최적화된 최신 프런티어 모델로, 스프레드시트(Spreadsheet) 생성, 프레젠테이션 제작, 코드 작성, 이미지 인식, 긴 컨텍스트(Long Context) 이해, 도구 활용, 여러 단계에 걸친 복잡한 프로젝트 작업에서 강화된 성능을 제공합니다.
 
@@ -17,10 +30,7 @@ OpenAI가 전문 지식 업무에서 가장 뛰어난 성능을 제공하는 새
 
 > <https://openai.com/ko-KR/index/the-state-of-enterprise-ai-2025-report/>
 
----
-
-주요 벤치마크(Benchmark) 성과
----------------------
+## 주요 벤치마크(Benchmark) 성과
 
 GPT-5.2는 여러 벤치마크에서 새로운 최고 기록을 달성했습니다.
 
@@ -36,10 +46,7 @@ GPT-5.2는 여러 벤치마크에서 새로운 최고 기록을 달성했습니�
 | ARC-AGI-1 (Verified) | 추상적 추론 | **86.2%** | 72.8% |
 | ARC-AGI-2 (Verified) | 추상적 추론 | **52.9%** | 17.6% |
 
----
-
-모델 성능 상세
---------
+## 모델 성능 상세
 
 ### 경제 가치가 높은 작업
 
@@ -274,10 +281,7 @@ OpenAI는 GPT-5.2 Pro와 GPT-5.2 Thinking이 과학자의 연구를 지원하고
 
 일반적인 추론 능력을 측정하도록 설계된 벤치마크인 **ARC-AGI-1 (Verified)**에서 GPT-5.2는 **90%의 문턱을 넘은 최초의 모델**로 평가됩니다. 지난해 o3-preview가 기록한 87%에서 성능을 끌어올린 동시에 해당 성능을 달성하는 데 드는 비용을 **약 390배까지** 낮추는 성과를 달성했습니다.
 
----
-
-ChatGPT에 도입되는 GPT-5.2
----------------------
+## ChatGPT에 도입되는 GPT-5.2
 
 ChatGPT에서 GPT‑5.2를 일상적으로 이용하며 보다 향상된 모델 성능을 경험할 수 있습니다.
 
@@ -313,10 +317,7 @@ GPT-5.2 시리즈에는 총 **5가지 모델 변형(Variant)이 존재**하며, 
 | `gpt-5-mini` | 비용 최적화된 추론 및 대화; 속도·비용·성능의 균형 |
 | `gpt-5-nano` | 고처리량 작업, 특히 단순 지시 수행 또는 분류 |
 
----
-
-결론
---
+## 결론
 
 GPT-5.2는 일반 지능, 긴 컨텍스트 이해, 에이전트형 도구 호출, 비전 기능 전반에서 큰 폭의 발전을 이루었고 복잡한 실제 작업을 처음부터 끝까지 수행하는 능력도 이전 모델보다 크게 강화되었습니다.
 

@@ -1,20 +1,32 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] K-EXAONE Technical Report"
+description: "LG AI연구원의 236B MoE 모델 K-EXAONE의 Hybrid Attention 구조, SuperBPE 토크나이저, AGAPO·GROUPER 학습 파이프라인과 K-AUT 안전성 프레임워크, 벤치마크 결과를 정리합니다."
 date: "2026-02-16"
 tags:
   - "EXAONE"
-  - "paper-review"
+  - "LG"
+  - "Paper Review"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-K-EXAONE-LG-AI-Research가-개발한-Frontier급-MoE-기반-다국어-언어-모델"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-16T22:49:00Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-K-EXAONE-LG-AI-Research가-개발한-Frontier급-MoE-기반-다국어-언어-모델"
+    title: "[Paper Review] K-EXAONE Technical Report"
+    author: "human:euisuk-chung"
+    last_modified: "2026-02-16"
+status: "stable"
 year: "2026"
 ---
-
-# [Paper Review] K-EXAONE Technical Report
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0b6bf640-3ed9-46b2-b20c-aece9849290d/image.png)
 
 > <https://arxiv.org/abs/2601.01739>
 
-도입: 한국 AI 생태계의 도전과 K-EXAONE의 탄생
--------------------------------
+## 도입: 한국 AI 생태계의 도전과 K-EXAONE의 탄생
 
 글로벌 대규모 언어 모델(LLM) 개발 경쟁이 치열해지고 있습니다. Closed-Source 모델이 여전히 성능 우위를 점하고 있지만, Open-Weight 모델들이 수천억 파라미터를 넘어 조(trillion) 단위 스케일로 공격적으로 확장하며 그 격차를 빠르게 좁히고 있습니다.
 
@@ -22,8 +34,7 @@ year: "2026"
 
 K-EXAONE은 이전 모델인 EXAONE 4.0의 하이브리드 아키텍처(추론/비추론 통합)를 계승하면서, 세 가지 핵심 혁신을 도입합니다. 첫째, Mixture-of-Experts(MoE) 패러다임을 채택하여 총 236B 파라미터 중 추론 시 23B만 활성화하는 효율적 스케일링을 달성합니다. 둘째, 기존 3개 언어(한국어, 영어, 스페인어)에서 독일어, 일본어, 베트남어를 추가하여 6개 언어로 다국어 커버리지를 확장합니다. 셋째, 256K 토큰의 Context Window를 지원하여 실세계 Long-Context 애플리케이션에 대응합니다.
 
-모델 아키텍처 설계
-----------
+## 모델 아키텍처 설계
 
 ### Fine-Grained Sparse MoE: 표현력과 효율의 양립
 
@@ -84,8 +95,7 @@ K-EXAONE은 Tokenizer를 전면 재설계하여 Vocabulary Size를 기존 100K�
 
 결과적으로 Bytes per Token 기준으로 전 도메인에서 평균 약 30%의 토큰 효율성 향상을 달성합니다. 도메인별로는 다국어에서 +49.8%, 한국어에서 +29.0%, 코드에서 +26.7%, STEM에서 +20.1%, 영어에서 +19.6%의 개선을 보입니다.
 
-학습 파이프라인
---------
+## 학습 파이프라인
 
 ### Pre-training: 3단계 커리큘럼
 
@@ -151,8 +161,7 @@ GROUPER는 SimPER의 Hyperparameter-Free 특성과 GRPO의 Group-wise Sampling�
 
 AI 모델 개발에 필요한 대규모 데이터의 수집과 활용 과정에서 발생할 수 있는 저작권 침해, 지적재산권 침해, 개인정보 보호 위반 등의 법적 리스크를 최소화하기 위해, LG AI Research는 데이터 수집, AI 모델 학습, 정보 제공의 전 과정에 걸쳐 AI Compliance 리뷰를 수행합니다.
 
-평가 결과
------
+## 평가 결과
 
 ### 벤치마크와 평가 설정
 
@@ -200,8 +209,7 @@ EXAONE 4.0(32B Dense)에서 K-EXAONE(236B MoE, 23B Active)으로의 전환에서
 
 실험 결과에서 몇 가지 개선 여지가 확인됩니다. Agentic Coding(SWE-BENCH VERIFIED 49.4)에서 DeepSeek-V3.2(73.1)과 gpt-oss-120b(62.4)에 비해 상당한 격차가 존재합니다. HUMANITY'S LAST EXAM(13.6)에서 DeepSeek-V3.2(25.1)의 약 절반 수준으로, 최상위 난이도 지식 추론에서 한계를 보입니다.
 
-안전성 프레임워크: K-AUT와 KGC-SAFETY
-----------------------------
+## 안전성 프레임워크: K-AUT와 KGC-SAFETY
 
 K-EXAONE의 가장 두드러진 차별점 중 하나는 한국 사회문화적 맥락을 체계적으로 반영한 안전성 프레임워크입니다. 기존의 서구 중심 AI 위험 분류 체계가 한국 사회의 문화적 민감성과 맥락 특화 요구를 충분히 반영하지 못하는 한계를 극복하기 위해, Korea-Augmented Universal Taxonomy(K-AUT)를 제안합니다.
 
@@ -213,15 +221,13 @@ KGC-SAFETY 세부 결과에서 대부분의 모델이 Universal Human Values와 
 
 논문에서는 이 접근법이 다른 국가의 Sovereign AI 개발 시 modular하고 scalable한 blueprint으로 활용될 수 있다고 위치를 지정합니다. 보편적 윤리에 지역적 특수성을 체계적으로 통합하는 K-AUT의 구조는, 각국의 문화적 맥락에 맞게 확장 가능한 설계를 갖추고 있습니다.
 
-한계와 배포
-------
+## 한계와 배포
 
 K-EXAONE은 모든 LLM과 마찬가지로 몇 가지 한계를 가집니다. 개인적, 유해한, 편향된 정보를 포함하는 부적절한 응답이 생성될 수 있으며, 연령·성별·인종 등과 관련된 편향된 응답이 나올 수 있습니다. 학습 데이터의 통계에 크게 의존하여 의미적·구문적으로 부정확한 문장이 생성될 수 있고, 최신 정보를 반영하지 못하여 거짓이거나 모순된 응답을 할 수 있습니다.
 
 배포 측면에서 K-EXAONE은 비독점적, 비양도적, 전 세계적, 취소 불가 라이선스로 상업적·비상업적 목적의 접근, 다운로드, 설치, 수정, 사용, 배포, 파생 저작물 생성이 허용됩니다. 다만 상업적 목적의 배포, 서브라이선싱, 또는 제3자 제공은 별도 합의가 필요합니다.
 
-결론
---
+## 결론
 
 K-EXAONE은 한국의 AI 인프라 제약 속에서 정부-민간 협력을 통해 글로벌 경쟁력 있는 대규모 모델을 구축할 수 있음을 실증한 Sovereign AI 모델입니다. MoE 아키텍처를 통한 효율적 스케일링(236B/23B), Hybrid Attention 기반의 256K Long-Context 처리, SuperBPE Tokenizer의 평균 30% 효율 향상, AGAPO RL과 GROUPER Preference Learning을 통한 정렬, 그리고 K-AUT 프레임워크 기반의 한국 사회문화 특화 안전성이라는 다층적 혁신이 조화를 이루며, 추론, Agentic, 다국어, 안전성 등 다양한 평가에서 유사 규모 Open-Weight 모델들과 대등하거나 그 이상의 성능을 입증합니다.
 
