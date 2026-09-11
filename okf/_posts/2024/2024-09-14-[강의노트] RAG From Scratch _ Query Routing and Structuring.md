@@ -1,10 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : Query Routing & Structuring"
+description: "RAG From Scratch 10~11편을 정리하며 구조화 출력 기반 논리적 라우팅과 임베딩 유사도 기반 의미적 라우팅을 비교하고, 자연어 질문을 메타데이터 필터가 담긴 구조화 쿼리로 변환하는 방법을 코드로 설명한다."
 date: "2024-09-14"
+tags:
+  - "RAG"
+  - "LangChain"
+  - "강의노트"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-10-11"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:50:34Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-10-11"
+    title: "[강의노트] RAG From Scratch : Query Routing & Structuring"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] RAG From Scratch : Query Routing & Structuring
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/13495766-bce9-47a8-9053-6fded6eaa055/image.png)
 
@@ -14,8 +30,6 @@ year: "2024"
 | --- | --- | --- | --- |
 | **Part 10 (라우팅)** | 쿼리를 관련 데이터 소스로 유도하기 위한 논리적 및 의미적 쿼리 라우팅을 다룹니다. | 📌 [강의](https://www.youtube.com/watch?v=JChPi0CRnDY&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=10&pp=iAQB) | 📖 [슬라이드](https://docs.google.com/presentation/d/1kC6jFj8C_1ZXDYcFaJ8vhJvCYEwxwsVqk2VVeKKuyx4/edit?usp=sharing) |
 | **Part 11 (쿼리 구조화)** | 자연어 쿼리를 구조화된 쿼리로 변환하여 데이터베이스 상호작용을 효율화하는 방법을 다룹니다. | 📌 [강의](https://www.youtube.com/watch?v=JChPi0CRnDY&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=11&pp=iAQB) | 📖 [참고자료](https://blog.langchain.dev/query-construction/) |
-
----
 
 ### Part 10 (라우팅)
 
@@ -251,8 +265,6 @@ They are fascinating objects that challenge our understanding of physics, partic
 * 위 테이블 비교를 통해,
   + 논리적 라우팅은 **미리 설정된 규칙**에 따라 적절한 데이터 소스를 선택하는 반면,
   + 의미적 라우팅은 **질문의 의미적 유사성**을 기반으로 라우팅이 이루어진다는 차이점을 이해할 수 있습니다.
-
----
 
 ### Part 11 (쿼리 구조화)
 

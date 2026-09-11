@@ -172,48 +172,48 @@
 * [[트렌드] 2025년 트렌드 : LMM, LAM, AGENT, 그리고 FMOps](2024/2024-10-02-[트렌드] 2025년 트렌드 _ LMM, LAM, AGENT, 그리고 FMOps.md)
 * [[Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024/2024-10-02-[Paper Review] Mamba2 - Transformers are SSMs_ Generalized Models and Efficient Algorithms Through Structured State Space Duality.md)
 * [[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS](2024/2024-10-02-[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION_ FROM YOLOV1 TO YOLOV8 AND_YOLO-NAS.md)
-* [[Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2024/2024-09-29-[Paper Review] Mamba_ Linear-Time Sequence Modeling with Selective State Spaces.md)
-* [[Paper Review] Structured State Space Models for Deep Sequence Modeling](2024/2024-09-25-[Paper Review] Structured State Space Models for Deep Sequence Modeling.md)
-* [[개념] 인공지능을 위한 선형대수 : 행렬편](2024/2024-09-24-[개념] 인공지능을 위한 선형대수 _ 행렬편.md)
-* [[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences](2024/2024-09-24-[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences.md)
-* [[개념] 시스템, 미분방정식, 그리고 상태 공간 모델](2024/2024-09-20-[개념] 시스템, 미분방정식, 그리고 상태 공간 모델.md)
-* [[정리] OpenAI API Document](2024/2024-09-19-[정리] OpenAI API Document.md)
-* [[IT] LLMOps와 RAG](2024/2024-09-19-[IT] LLMOps와 RAG.md)
-* [[강의노트] Text Splitting For Retrieval](2024/2024-09-16-[강의노트] Text Splitting For Retrieval.md)
-* [[강의노트] RAG From Scratch : RAG for long context LLMs](2024/2024-09-14-[강의노트] RAG From Scratch _ RAG for long context LLMs.md)
-* [[강의노트] RAG From Scratch : Query Translation](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Translation.md)
-* [[강의노트] RAG From Scratch : Query Routing & Structuring](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Routing and Structuring.md)
-* [[강의노트] RAG From Scratch : Query Retrieval 기법](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Retrieval 기법.md)
-* [[강의노트] RAG From Scratch : Query Indexing 기법](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Indexing 기법.md)
-* [[강의노트] RAG From Scratch : Overview](2024/2024-09-14-[강의노트] RAG From Scratch _ Overview.md)
-* [[강의노트] RAG From Scratch : Coursework](2024/2024-09-14-[강의노트] RAG From Scratch _ Coursework.md)
-* [[OpenAI] GPT-4o 다음 버전 떴나!?](2024/2024-09-13-[OpenAI] GPT-4o 다음 버전 떴나!_.md)
-* [[GPU] nvidia-smi의 시대는 갔다?](2024/2024-09-13-[GPU] nvidia-smi의 시대는 갔다_.md)
-* [[파이썬] 정규표현식 활용  방법](2024/2024-09-11-[파이썬] 정규표현식 활용  방법.md)
-* [[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet](2024/2024-09-06-[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet.md)
-* [[개념] 데이터 기반 의사결정 방법](2024/2024-08-28-[개념] 데이터 기반 의사결정 방법.md)
-* [[Paper Review] 합성 데이터 = 모델 붕괴?](2024/2024-08-26-[Paper Review] 합성 데이터 = 모델 붕괴_.md)
-* [[꿀팁] 프롬프트 엔지니어링 (강의 요약)](2024/2024-08-24-[꿀팁] 프롬프트 엔지니어링 (강의 요약).md)
-* [[CV Notes] Lecture 18 - Videos](2024/2024-08-16-[CV Notes] Lecture 18 - Videos.md)
-* [[CV Notes] Lecture 17 - 3D Vision](2024/2024-08-14-[CV Notes] Lecture 17 - 3D Vision.md)
-* [[CS294] Deep Unsupervised Learning: Introduction](2024/2024-08-14-[CS294] Deep Unsupervised Learning_ Introduction.md)
-* [[NLP] 4. Natural Language Embeddings](2024/2024-07-29-[NLP] 4. Natural Language Embeddings.md)
-* [[NLP] 3. Natural Language Preprocessing](2024/2024-07-29-[NLP] 3. Natural Language Preprocessing.md)
-* [[NLP] 2. Steps of Text Analytics](2024/2024-07-28-[NLP] 2. Steps of Text Analytics.md)
-* [[NLP] 1. Introduction to Text Analytics](2024/2024-07-28-[NLP] 1. Introduction to Text Analytics.md)
-* [[기업] NVIDIA와 GPU 이야기](2024/2024-07-25-[기업] NVIDIA와 GPU 이야기.md)
-* [[Graph] 4장. Graph Neural Networks: Algorithms](2024/2024-07-18-[Graph] 4장. Graph Neural Networks_ Algorithms.md)
-* [[Graph] 3장. Graph Node Embedding Methods](2024/2024-07-18-[Graph] 3장. Graph Node Embedding Methods.md)
-* [[Graph] 2장. Graph Neural Networks](2024/2024-07-17-[Graph] 2장. Graph Neural Networks.md)
-* [[Graph] 1장. 그래프와 GNN](2024/2024-07-17-[Graph] 1장. 그래프와 GNN.md)
-* [Prophet을 활용한 시계열 예측🔭](2024/2024-07-12-Prophet을 활용한 시계열 예측🔭.md)
-* [[개념정리] 시계열 인과관계 분석: Granger Causality](2024/2024-07-06-[개념정리] 시계열 인과관계 분석_ Granger Causality.md)
-* [[개념정리] 상관관계 vs 인과관계](2024/2024-07-06-[개념정리] 상관관계 vs 인과관계.md)
-* [[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)](2024/2024-07-04-[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian).md)
-* [[개념] Deep Learning Normalization Techniques](2024/2024-07-02-[개념] Deep Learning Normalization Techniques.md)
-* [[트리] 트리 기반 ML 알고리즘](2024/2024-06-24-[트리] 트리 기반 ML 알고리즘.md)
-* [[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기](2024/2024-06-09-[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기.md)
-* [[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)](2024/2024-06-09-[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등).md)
+* [[Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2024/2024-09-29-[Paper Review] Mamba_ Linear-Time Sequence Modeling with Selective State Spaces.md) - Transformer의 이차 복잡도 한계를 배경으로 입력 의존적 파라미터 B, C, Δ를 도입한 선택적 SSM(S6), 커널 퓨전과 병렬 스캔 기반 하드웨어 최적화, Mamba 블록 구조와 언어·DNA·오디오 실험 결과를 정리한다.
+* [[Paper Review] Structured State Space Models for Deep Sequence Modeling](2024/2024-09-25-[Paper Review] Structured State Space Models for Deep Sequence Modeling.md) - SSM의 연속·재귀·합성곱 표현과 ZOH 이산화를 배경으로 HiPPO의 다항식 투영 메모리, LSSL의 세 가지 뷰, S4의 NPLR 파라미터화와 Cauchy 커널 기반 합성곱 계산까지 Albert Gu 연구 흐름을 정리한다.
+* [[개념] 인공지능을 위한 선형대수 : 행렬편](2024/2024-09-24-[개념] 인공지능을 위한 선형대수 _ 행렬편.md) - 행렬 곱셈, 역행렬, 전치 행렬부터 고윳값과 고유벡터, 기저, 대각화, 닮은 행렬, 직교 대각화, 특이값 분해(SVD)까지 딥러닝 논문 이해에 필요한 선형대수 개념을 예제 계산과 함께 정리한다.
+* [[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences](2024/2024-09-24-[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences.md) - ICML 2023 논문 LRU를 리뷰하며 선형 재귀, 복소수 대각 행렬, 안정적 지수 파라미터화, 정규화를 통해 deep RNN이 S4 같은 상태 공간 모델과 동등한 LRA 성능과 병렬 학습 속도를 달성하는 과정을 정리한다.
+* [[개념] 시스템, 미분방정식, 그리고 상태 공간 모델](2024/2024-09-20-[개념] 시스템, 미분방정식, 그리고 상태 공간 모델.md) - 동적 시스템과 상태(State)의 개념부터 선형 시불변 시스템의 상태 방정식, 상태 전이 행렬, 상미분방정식, 오일러 방법을 이용한 이산화까지 Mamba 이해에 필요한 상태 공간 모델의 기초를 단계별로 설명한다.
+* [[정리] OpenAI API Document](2024/2024-09-19-[정리] OpenAI API Document.md) - OpenAI 플랫폼 문서를 바탕으로 Chat Completions, Fine-tuning, Embeddings, Whisper 등 주요 엔드포인트와 Function Calling, Structured Outputs 등 핵심 기능을 파이썬 예제와 함께 정리한다.
+* [[IT] LLMOps와 RAG](2024/2024-09-19-[IT] LLMOps와 RAG.md) - LLMOps의 정의와 데이터 관리·학습·평가·배포·모니터링 라이프사이클을 MLOps, AIOps와 비교해 정리하고, RAG의 동작 원리와 데이터 파이프라인, 활용 사례, 주요 용어를 설명한다.
+* [[강의노트] Text Splitting For Retrieval](2024/2024-09-16-[강의노트] Text Splitting For Retrieval.md) - The 5 Levels of Text Splitting 영상을 바탕으로 문자 분할, 재귀적 문자 분할, 문서 특화 분할, 의미 기반 분할, 에이전트 기반 분할의 원리와 장단점을 예제 코드로 정리한다.
+* [[강의노트] RAG From Scratch : RAG for long context LLMs](2024/2024-09-14-[강의노트] RAG From Scratch _ RAG for long context LLMs.md) - Needle in a Haystack 실험과 최신성 편향을 근거로 장문 LLM이 RAG를 대체하기 어려운 이유를 살펴보고, 문서 중심 RAG, RAPTOR, Self-RAG, CRAG 등 장문 LLM 시대 RAG의 진화 방향을 정리한다.
+* [[강의노트] RAG From Scratch : Query Translation](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Translation.md) - RAG From Scratch 5~9편의 쿼리 변환 기법인 Multi-Query, RAG Fusion(RRF), Decomposition, Step-Back 프롬프팅, HyDE를 원리와 LangChain 구현 코드로 정리한다.
+* [[강의노트] RAG From Scratch : Query Routing & Structuring](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Routing and Structuring.md) - RAG From Scratch 10~11편을 정리하며 구조화 출력 기반 논리적 라우팅과 임베딩 유사도 기반 의미적 라우팅을 비교하고, 자연어 질문을 메타데이터 필터가 담긴 구조화 쿼리로 변환하는 방법을 코드로 설명한다.
+* [[강의노트] RAG From Scratch : Query Retrieval 기법](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Retrieval 기법.md) - RAG From Scratch 15~18편 실습 코드를 역으로 분석해 RRF 기반 재정렬, CRAG, Self-RAG, Active RAG, Adaptive RAG의 개념과 동작 방식을 예제 코드와 함께 설명한다.
+* [[강의노트] RAG From Scratch : Query Indexing 기법](2024/2024-09-14-[강의노트] RAG From Scratch _ Query Indexing 기법.md) - RAG From Scratch 12~14편의 인덱싱 기법인 다중 표현 인덱싱, RAPTOR의 재귀적 클러스터링 요약, ColBERT의 토큰 단위 late interaction 검색을 개념과 LangChain 코드로 정리한다.
+* [[강의노트] RAG From Scratch : Overview](2024/2024-09-14-[강의노트] RAG From Scratch _ Overview.md) - RAG From Scratch 1~4편을 따라 인덱싱·검색·생성의 기본 흐름을 정리하고, LangChain과 Chroma, OpenAI 임베딩, tiktoken으로 기본 RAG 체인을 구성하는 코드를 단계별로 설명한다.
+* [[강의노트] RAG From Scratch : Coursework](2024/2024-09-14-[강의노트] RAG From Scratch _ Coursework.md) - LangChain의 Lance Martin이 만든 RAG From Scratch 14편 강의 시리즈의 구성과 각 파트별 주제, 강의 영상과 슬라이드 링크를 한눈에 정리한 목차 글이다.
+* [[OpenAI] GPT-4o 다음 버전 떴나!?](2024/2024-09-13-[OpenAI] GPT-4o 다음 버전 떴나!_.md) - OpenAI가 2024년 9월 공개한 o1 모델이 Chain of Thought 추론으로 AIME·Codeforces·GPQA에서 GPT-4o를 능가한 성능과 안전성 향상, 암호 해독·코딩·수학 예시 답변을 정리한다.
+* [[GPU] nvidia-smi의 시대는 갔다?](2024/2024-09-13-[GPU] nvidia-smi의 시대는 갔다_.md) - nvidia-smi를 대체하는 NVIDIA GPU 모니터링 도구 nvtop과 nvitop의 주요 기능, apt·pip·conda 설치 방법, 단축키와 옵션 사용법, 프로세스 관리 측면의 차이를 비교한다.
+* [[파이썬] 정규표현식 활용 방법](2024/2024-09-11-[파이썬] 정규표현식 활용  방법.md) - 파이썬 re 모듈의 search·match·findall·sub·split 함수와 메타문자, 캡처·비캡처 그룹을 설명하고 이메일·URL·전화번호·IPv4·비밀번호·한글 검증 등 실전 패턴을 예제로 다룬다.
+* [[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet](2024/2024-09-06-[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet.md) - sort_values 정렬, 컬럼 이름·순서 변경, 조건 필터링, dropna·fillna·ffill·bfill 결측치 처리, apply와 lambda 변환, groupby 집계, 타입 변환 등 실무용 Pandas 코드 조각을 모았다.
+* [[개념] 데이터 기반 의사결정 방법](2024/2024-08-28-[개념] 데이터 기반 의사결정 방법.md) - 객관적 데이터로 비즈니스 결정을 내리는 데이터 기반 의사결정의 특징과 A/B 테스트, 퍼널 분석, 코호트 분석, 히트맵 분석의 작동 방식을 예시와 함께 설명한다.
+* [[Paper Review] 합성 데이터 = 모델 붕괴?](2024/2024-08-26-[Paper Review] 합성 데이터 = 모델 붕괴_.md) - Nature에 실린 두 논문을 바탕으로 생성 모델이 자체 생성 데이터를 재귀적으로 학습할 때 발생하는 모델 붕괴의 원인과 OPT-125m 실험 결과, 워터마크 등 대응책을 정리한다.
+* [[꿀팁] 프롬프트 엔지니어링 (강의 요약)](2024/2024-08-24-[꿀팁] 프롬프트 엔지니어링 (강의 요약).md) - 티타임즈TV 강수진 박사 패널 토크를 요약해 사실·견해 구분, 띄어쓰기, JSON 구조화, 자기 검증 지시 등 LLM 환각을 줄이는 프롬프트 작성 기법을 정리한다.
+* [[CV Notes] Lecture 18 - Videos](2024/2024-08-16-[CV Notes] Lecture 18 - Videos.md) - EECS 498 강의를 바탕으로 비디오 분류를 위한 Single Frame·Late/Early Fusion·3D CNN(C3D), Optical Flow 기반 Two-Stream, Nonlocal Block, I3D, SlowFast 모델을 비교 정리한다.
+* [[CV Notes] Lecture 17 - 3D Vision](2024/2024-08-14-[CV Notes] Lecture 17 - 3D Vision.md) - Justin Johnson의 EECS 498 강의를 바탕으로 깊이 맵, 표면 법선, 복셀, 암시적 표면, 포인트 클라우드, 메쉬 등 3D 형상 표현 방식과 IoU·Chamfer Distance·F1 평가 지표를 정리한다.
+* [[CS294] Deep Unsupervised Learning: Introduction](2024/2024-08-14-[CS294] Deep Unsupervised Learning_ Introduction.md) - Pieter Abbeel의 CS294 첫 강의를 바탕으로 라벨 상태·학습 목적·데이터 양에 따라 딥러닝 학습 방법론을 계층적으로 분류하고, Hinton과 LeCun의 관점에서 비지도학습의 중요성을 정리한다.
+* [[NLP] 4. Natural Language Embeddings](2024/2024-07-29-[NLP] 4. Natural Language Embeddings.md) - BoW, TF-IDF, N-gram 벡터화부터 NNLM·Word2Vec·GloVe·FastText 분산 표현, 평균 임베딩·PV-DM·PV-DBOW 문서 임베딩까지 gensim 코드와 함께 설명한다.
+* [[NLP] 3. Natural Language Preprocessing](2024/2024-07-29-[NLP] 3. Natural Language Preprocessing.md) - 음운론부터 담론까지 NLP 6개 영역의 발전 수준을 짚고, 토큰화·형태소 분석·품사 태깅·NER·구문 분석·언어 모델링을 NLTK와 spaCy 코드 예시로 정리한다.
+* [[NLP] 2. Steps of Text Analytics](2024/2024-07-28-[NLP] 2. Steps of Text Analytics.md) - 텍스트 분석 4단계를 따라 Level 0~2 전처리, BoW·TF-IDF·원핫·분산 표현 변환, LSA·LDA·Doc2Vec 특징 추출, 군집·분류·추출 알고리즘을 예시와 함께 설명한다.
+* [[NLP] 1. Introduction to Text Analytics](2024/2024-07-28-[NLP] 1. Introduction to Text Analytics.md) - 텍스트 분석의 정의와 응용 분야, 고차원·모호성 같은 도전 과제, 비구조·약구조·반구조 텍스트 데이터 유형, 텍스트 마이닝 유형과 4단계 분석 절차를 소개한다.
+* [[기업] NVIDIA와 GPU 이야기](2024/2024-07-25-[기업] NVIDIA와 GPU 이야기.md) - 1993년 창립부터 NV1 실패, GeForce 256과 CUDA, Quadro·Tesla·Jetson 제품군, Blackwell과 NIM까지 엔비디아의 역사와 GPU 모델 번호 읽는 법을 정리한다.
+* [[Graph] 4장. Graph Neural Networks: Algorithms](2024/2024-07-18-[Graph] 4장. Graph Neural Networks_ Algorithms.md) - GCN의 스펙트럴·공간 기반 합성곱, GGNN·Tree LSTM·Graph LSTM 같은 그래프 순환 신경망, GAT의 어텐션 메커니즘을 수식과 PyTorch 구현 예시로 정리한다.
+* [[Graph] 3장. Graph Node Embedding Methods](2024/2024-07-18-[Graph] 3장. Graph Node Embedding Methods.md) - 그래프 노드 임베딩의 네 가지 구성 요소와 변환적·귀납적 학습의 차이를 설명하고, DeepWalk, Node2Vec, GraphSAGE 알고리즘의 슈도코드와 작동 원리를 비교한다.
+* [[Graph] 2장. Graph Neural Networks](2024/2024-07-17-[Graph] 2장. Graph Neural Networks.md) - GNN의 그래프 필터링과 풀링 연산을 비교하고, 스펙트럴·공간 기반 필터(Cheby, GCN, GraphSAGE, GAT)와 평면·계층적 풀링, 노드·그래프 중심 프레임워크를 정리한다.
+* [[Graph] 1장. 그래프와 GNN](2024/2024-07-17-[Graph] 1장. 그래프와 GNN.md) - 그래프의 노드·에지 표현과 차수, 경로, 연결 성분, 중심성 지표를 정의하고 스펙트럴 그래프 이론, 그래프 푸리에 변환, 이질·이분·하이퍼그래프 등 복잡한 그래프 유형과 GNN 과업을 소개한다.
+* [Prophet을 활용한 시계열 예측🔭](2024/2024-07-12-Prophet을 활용한 시계열 예측🔭.md) - Facebook Prophet의 추세·계절성·휴일 효과 기능을 소개하고 파나마 전력 부하 데이터에 날씨 변수를 외생 회귀변수로 추가해 학습, 예측, Plotly·Matplotlib 시각화, MSE 평가까지 수행한다.
+* [[개념정리] 시계열 인과관계 분석: Granger Causality](2024/2024-07-06-[개념정리] 시계열 인과관계 분석_ Granger Causality.md) - 그랜저 인과관계의 정의와 F-검정 절차를 설명하고 statsmodels로 ADF 정상성 검정, 광고 예산과 매출 데이터의 인과 검정, VAR과 ARIMA 예측 성능 비교까지 실습한다.
+* [[개념정리] 상관관계 vs 인과관계](2024/2024-07-06-[개념정리] 상관관계 vs 인과관계.md) - 양·음·무상관의 유형과 인과관계의 시간 선후·일관성 조건을 정리하고, 방향 오해·숨겨진 제3 요인·우연의 일치 같은 흔한 오류와 A/B 테스트 등 구분 방법을 예시로 설명한다.
+* [[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)](2024/2024-07-04-[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian).md) - 확률을 장기 빈도로 보는 빈도주의와 믿음의 갱신으로 보는 베이지안 관점을 대수의 법칙, MLE, 베이즈 정리 등 핵심 이론과 동전 던지기, A/B 테스트 예시로 비교한다.
+* [[개념] Deep Learning Normalization Techniques](2024/2024-07-02-[개념] Deep Learning Normalization Techniques.md) - Batch, Layer, Instance, Group, RMS 정규화의 작동 원리와 수식을 PyTorch 구현 예시와 함께 설명하고 계산 단위, 장단점, 응용 모델을 표로 비교한다.
+* [[트리] 트리 기반 ML 알고리즘](2024/2024-06-24-[트리] 트리 기반 ML 알고리즘.md) - 의사결정나무부터 랜덤 포레스트, AdaBoost, XGBoost, LightGBM, CatBoost, HGBT까지 트리 기반 알고리즘의 역사와 원리를 장단점과 함께 정리하고 scikit-learn 예제로 성능을 비교한다.
+* [[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기](2024/2024-06-09-[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기.md) - 우분투에 나눔 폰트를 apt로 설치하고 matplotlib 폰트 디렉터리에 복사한 뒤 캐시를 지워 한글 그래프가 깨지지 않게 설정하는 과정과 주피터용 일괄 실행 스니펫을 소개한다.
+* [[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)](2024/2024-06-09-[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등).md) - VS Code에서 Shift+Enter, Ctrl+A 같은 단축키가 먹통이 될 때 Jupyter Keymap 확장 설치와 keybindings.json 직접 편집으로 해결하는 두 가지 방법을 정리한다.
 * [[꿀팁] Confluence 단축키📖 (북마크 추천!!)](2024/2024-05-31-[꿀팁] Confluence 단축키📖 (북마크 추천!!).md) - Confluence Cloud와 On-Premise 버전의 페이지 뷰 모드·편집 모드 단축키, 자동완성 문자, 블록 서식 단축키를 표로 비교 정리한 치트시트다.
 * [[개념] 신호처리 및 푸리에 변환](2024/2024-05-31-[개념] 신호처리 및 푸리에 변환.md) - 신호처리의 목적과 응용 분야를 소개한 뒤 푸리에 변환의 정의, 오일러 공식을 통한 실수부·허수부 해석, 진폭과 위상 계산, 역 푸리에 변환을 설명하고 NumPy FFT 예제로 확인한다.
 * [[꿀팁] Notion 단축키📖 (북마크 추천!!)](2024/2024-05-30-[꿀팁] Notion 단축키📖 (북마크 추천!!).md) - Notion의 Mac/Windows 키보드 단축키, Markdown 문법, 블록 편집과 이동, @·[[·+ 명령어와 슬래시 명령어를 표로 정리한 참고용 치트시트다.

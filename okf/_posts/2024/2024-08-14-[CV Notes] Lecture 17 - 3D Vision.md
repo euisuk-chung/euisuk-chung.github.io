@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[CV Notes] Lecture 17 - 3D Vision"
+description: "Justin Johnson의 EECS 498 강의를 바탕으로 깊이 맵, 표면 법선, 복셀, 암시적 표면, 포인트 클라우드, 메쉬 등 3D 형상 표현 방식과 IoU·Chamfer Distance·F1 평가 지표를 정리한다."
 date: "2024-08-14"
 tags:
-  - "CV"
+  - "Computer Vision"
   - "강의노트"
+  - "딥러닝"
+  - "CNN"
+resource: "https://velog.io/@euisuk-chung/Notes-Computer-Vision-Lecture-17"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:54:14Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Notes-Computer-Vision-Lecture-17"
+    title: "[CV Notes] Lecture 17 - 3D Vision"
+    author: "human:euisuk-chung"
+    last_modified: "2024-08-14"
+status: "stable"
 year: "2024"
 ---
-
-# [CV Notes] Lecture 17 - 3D Vision
 
 다음은 아래 Lecture에 대한 요약 및 필기 내용을 정리한 것입니다. 틀린 내용이 있다면 댓글 부탁드립니다 🙌
 
@@ -188,8 +201,6 @@ year: "2024"
     2. **Graph Unpooling Layer**은 좀 더 높은 resolution의 3D 결과를 학습할 수 있도록 정교화하는 단계
   + 아래는 이에 대해서 논문에서 찾아서 정리한 내용입니다.  
     ![](https://velog.velcdn.com/images/euisuk-chung/post/927ca100-b2e3-44ed-a77d-47e45edabbae/image.png)
-
----
 
 ### 4. 3D 모양 평가 방식
 

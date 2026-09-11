@@ -1,14 +1,27 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences"
+description: "ICML 2023 논문 LRU를 리뷰하며 선형 재귀, 복소수 대각 행렬, 안정적 지수 파라미터화, 정규화를 통해 deep RNN이 S4 같은 상태 공간 모델과 동등한 LRA 성능과 병렬 학습 속도를 달성하는 과정을 정리한다."
 date: "2024-09-24"
 tags:
+  - "Paper Review"
+  - "State Space Model"
+  - "딥러닝"
+  - "시계열"
   - "NLP"
-  - "Timeseries"
-  - "paper-review"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Resurrecting-Recurrent-Neural-Networks-for-Long-Sequences"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:48:17Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Resurrecting-Recurrent-Neural-Networks-for-Long-Sequences"
+    title: "[Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-24"
+status: "stable"
 year: "2024"
 ---
-
-# [Paper Review] Resurrecting Recurrent Neural Networks for Long Sequences
 
 논문 *"Resurrecting Recurrent Neural Networks for Long Sequences"*는 25 Apr 2023에 publish되었으며, **ICML 2023 OralPoster**에 발표된 논문입니다.
 
@@ -18,8 +31,7 @@ year: "2024"
 
 * 링크 : <https://proceedings.mlr.press/v202/orvieto23a/orvieto23a.pdf>
 
-1. Introduction
----------------
+## 1. Introduction
 
 * 논문의 서론은 `Recurrent Neural Networks(RNNs)`가 긴 시퀀스를 처리할 때 겪는 문제점과 그에 대한 해결책을 제시하며, 최근의 연구 동향을 설명하고 있습니다.
 
@@ -87,8 +99,7 @@ S4 모델은 **Long Range Arena(LRA)**라는 긴 시퀀스를 다루는 벤치�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/13671622-e2aa-44fa-a64c-d1c283b08357/image.png)
 
-2. Preliminaries
-----------------
+## 2. Preliminaries
 
 이 장에서는 전통적인 RNN과 최근의 S4와 같은 deepSSM의 주요 차이점을 설명합니다.
 
@@ -141,8 +152,7 @@ S4는 상태 공간 모델을 기반으로 한 매우 효율적인 모델입니�
 
 S4는 RNN과 비교했을 때 긴 시퀀스를 더 효율적으로 처리하며, RNN의 병목 현상(Sequential Processing)을 극복할 수 있는 성능을 보여줍니다.
 
-3. Designing Performant Deep RNNs
----------------------------------
+## 3. Designing Performant Deep RNNs
 
 이 장에서는 논문에서 제안하는 **성능이 뛰어난 깊은 RNN(Deep RNN)**을 설계하기 위한 주요 단계를 설명합니다. 연구진은 SSM(상태 공간 모델)의 뛰어난 성능을 재현하고자 RNN의 구조적 변형을 통해 SSM과 비슷한 성능을 달성할 수 있음을 보여줍니다.
 
@@ -260,8 +270,7 @@ S4는 RNN과 비교했을 때 긴 시퀀스를 더 효율적으로 처리하며,
 * **정규화의 역할**: RNN은 은닉 상태를 순차적으로 업데이트하며 학습을 진행하는데, 긴 시퀀스를 처리하는 과정에서 은닉 상태가 과도하게 커지거나 작아질 수 있습니다. 이로 인해 모델이 학습하기 어려워질 수 있으므로, **forward pass**에서 은닉 상태를 정규화하는 것이 필수적입니다.
 * **정규화와 성능 향상**: 정규화를 적절히 적용하면 긴 시퀀스에서 RNN이 더 안정적으로 학습할 수 있으며, 이는 논문에서 제안하는 LRU 구조가 **SSM과 유사한 성능**을 발휘할 수 있는 이유 중 하나입니다. 또한, 정규화는 **S4 모델**에서 사용되는 구조와도 연결되며, 이 과정이 SSM에서 성능을 극대화하는 데 기여합니다.
 
-4. Insights on S4 and Variants
-------------------------------
+## 4. Insights on S4 and Variants
 
 논문에서 언급되는 S4 모델과 그 변형들(S4 and Variants)에 대한 인사이트는 주로 S4 모델이 뛰어난 성능을 발휘하는 원인과 이 모델의 특징에 대한 이해를 바탕으로 하고 있습니다.
 

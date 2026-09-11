@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : Query Indexing 기법"
+description: "RAG From Scratch 12~14편의 인덱싱 기법인 다중 표현 인덱싱, RAPTOR의 재귀적 클러스터링 요약, ColBERT의 토큰 단위 late interaction 검색을 개념과 LangChain 코드로 정리한다."
 date: "2024-09-14"
 tags:
-  - "rag"
+  - "RAG"
+  - "LangChain"
   - "강의노트"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-12-14"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:50:18Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-12-14"
+    title: "[강의노트] RAG From Scratch : Query Indexing 기법"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] RAG From Scratch : Query Indexing 기법
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0b04bf7c-efee-4f4b-b89d-8e0dc4d27c48/image.png)
 
@@ -191,8 +204,6 @@ retrieved_docs[0].page_content[0:500]
 
 * **Multi-Representation Indexing**은 요약본을 통해 빠르게 문서를 검색하고, 검색된 요약본에 연결된 원본 문서를 반환하는 방식입니다. 이는 검색 성능을 최적화하고, 긴 문맥을 가진 문서도 효율적으로 처리할 수 있는 기법입니다. 이 방식은 특히 벡터 스토어를 활용한 문서 검색에서 매우 유용하며, LLM을 사용해 문서를 요약하고 검색하는 데 큰 도움이 됩니다.
 
----
-
 ### Part 13 (RAPTOR)
 
 * RAPTOR는 **계층적 인덱싱(hierarchical indexing)** 기법으로, 대규모 문서나 텍스트 데이터에서 효율적으로 정보를 검색하는 데 사용됩니다.
@@ -302,8 +313,6 @@ RATOR의 동작을 더 깊이 있게 설명하기 위해 위 코드의 작동 �
     ```
   + 질문을 입력받으면 검색된 문서의 내용과 질문을 결합하여 문서의 중요한 내용을 기반으로 답변을 생성합니다.
   + StrOutputParser는 생성된 텍스트를 후처리하여 구조화된 응답을 반환합니다.
-
----
 
 ### Part 14 (ColBERT)
 

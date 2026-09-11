@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[CV Notes] Lecture 18 - Videos"
+description: "EECS 498 강의를 바탕으로 비디오 분류를 위한 Single Frame·Late/Early Fusion·3D CNN(C3D), Optical Flow 기반 Two-Stream, Nonlocal Block, I3D, SlowFast 모델을 비교 정리한다."
 date: "2024-08-16"
 tags:
-  - "CV"
+  - "Computer Vision"
   - "강의노트"
+  - "딥러닝"
+  - "CNN"
+resource: "https://velog.io/@euisuk-chung/CV-Notes-Lecture-18-Videos"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:53:44Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CV-Notes-Lecture-18-Videos"
+    title: "[CV Notes] Lecture 18 - Videos"
+    author: "human:euisuk-chung"
+    last_modified: "2024-08-16"
+status: "stable"
 year: "2024"
 ---
-
-# [CV Notes] Lecture 18 - Videos
 
 다음은 아래 "Lecture 18. Videos"에 대한 요약 및 필기 내용을 정리한 것입니다. 틀린 내용이 있다면 댓글 부탁드립니다 🙌
 
@@ -273,8 +286,6 @@ Lecture 18의 내용은 비디오 데이터를 처리하고 이해하기 위한 
 
     - Self-Attention 기법은 비디오 분석에서 `장기적인 시간 의존성`과 `복잡한 공간적 관계`를 효과적으로 모델링할 수 있습니다.
 
----
-
 ### 5. **모델 최적화 및 최신 기술**
 
 #### Spatio-Temporal Self-Attention (Nonlocal Block)
@@ -315,8 +326,6 @@ Lecture 18의 내용은 비디오 데이터를 처리하고 이해하기 위한 
 
 이처럼 Spatio-Temporal Self-Attention (Nonlocal Block)  
 은 `3D-CNN`과 `Non-local block`의 조합을 통해 비디오 데이터를 계층적으로 처리합니다. 로컬 정보와 글로벌 정보를 모두 활용하여 비디오 이해의 정확성을 높히고, 이를 통해 비디오의 다양한 시공간적 패턴을 효과적으로 분석할 수 있게 됩니다.
-
----
 
 #### Inflated 2D Networks, I3D (2D 네트워크의 3D 확장)
 

@@ -1,12 +1,25 @@
 ---
+type: "Product Update"
 title: "[OpenAI] GPT-4o 다음 버전 떴나!?"
+description: "OpenAI가 2024년 9월 공개한 o1 모델이 Chain of Thought 추론으로 AIME·Codeforces·GPQA에서 GPT-4o를 능가한 성능과 안전성 향상, 암호 해독·코딩·수학 예시 답변을 정리한다."
 date: "2024-09-13"
 tags:
   - "OpenAI"
+  - "ChatGPT"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/OpenAI-GPT-4o-다음-버전-떴나"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:51:39Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-GPT-4o-다음-버전-떴나"
+    title: "[OpenAI] GPT-4o 다음 버전 떴나!?"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-13"
+status: "stable"
 year: "2024"
 ---
-
-# [OpenAI] GPT-4o 다음 버전 떴나!?
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1f694bcf-bbd4-41d7-a032-1e6268fd2038/image.png)
 
@@ -16,15 +29,13 @@ year: "2024"
 
 * 원문 : <https://openai.com/index/learning-to-reason-with-llms/>
 
-GPT-o1: 더 깊은 추론 능력
-------------------
+## GPT-o1: 더 깊은 추론 능력
 
 GPT-o1은 **추론 능력**이 크게 향상된 것이 특징입니다. 이전 모델인 GPT-4o와 달리 GPT-o1은 답변을 내리기 전 **내적 사고의 연쇄(Chain of Thought, CoT)**를 통해 문제를 단계적으로 분석합니다.
 
 이 과정을 통해 모델은 복잡한 문제를 여러 단계로 나누어 해결하며, 각 단계에서 실수를 인식하고 수정하는 능력을 배양했습니다. 그 결과 수학, 코딩, 과학 문제 등에서 **인간 전문가 수준**에 근접하는 성과를 보여주고 있습니다.
 
-성능 비교: GPT-4o vs GPT-o1
------------------------
+## 성능 비교: GPT-4o vs GPT-o1
 
 다양한 테스트 결과 GPT-o1은 GPT-4o에 비해 **추론 중심 작업**에서 월등한 성과를 기록했습니다.
 
@@ -34,15 +45,13 @@ GPT-o1은 **추론 능력**이 크게 향상된 것이 특징입니다. 이전 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/50500fc1-617d-4297-b36e-43612c7ba34f/image.png)
 
-CoT(Chain of Thought)로 인한 안전성 향상
---------------------------------
+## CoT(Chain of Thought)로 인한 안전성 향상
 
 GPT-o1의 추론 능력 향상은 **안전성**에서도 큰 차이를 만들어냈습니다. CoT를 통해 모델의 사고 과정을 모니터링하고, 안전 규칙을 더 효과적으로 적용할 수 있게 되었습니다. GPT-o1은 특히 **강제 접근 시도(jailbreaks)나 경계 상황**에서 GPT-4o보다 안전한 답변을 제공했습니다.
 
 * **유해한 프롬프트에 대한 안전한 완성도**: 일반적인 유해 프롬프트에서 GPT-4o는 99%의 안전한 답변을 제공한 반면, GPT-o1은 99.5%로 소폭 향상되었습니다. 특히 더욱 까다로운 프롬프트(예: 불법적 성적 콘텐츠)에 대한 대응에서는 GPT-4o보다 45% 높은 안전성을 보였습니다.
 
-실제 답변 예시
---------
+## 실제 답변 예시
 
 GPT-o1의 뛰어난 성능은 여러 실제 응용 분야에서 두드러지게 나타났습니다.
 
@@ -181,8 +190,7 @@ We are tasked with finding x such that p(1/x) = x²p(1/x). Let's start by rewrit
 
 **분석**: GPT-o1은 CoT를 통해 단계별로 문제를 해결하고, 조건을 충족하는 모든 해를 구체적으로 도출해냅니다. 이 과정에서 추론을 체계적으로 나누어 문제를 풀어나갑니다.
 
-결론
---
+## 결론
 
 GPT-o1은 **추론, 코딩, 과학** 등의 영역에서 GPT-4o를 크게 능가하는 성과를 보여주고 있으며, AI 모델의 새로운 가능성을 열고 있습니다. 앞으로 GPT-o1과 같은 모델은 다양한 산업에서 복잡한 문제 해결을 돕고, AI의 응용 범위를 넓히는 데 기여할 것입니다.
 

@@ -1,13 +1,26 @@
 ---
+type: "Concept Note"
 title: "[IT] LLMOps와 RAG"
+description: "LLMOps의 정의와 데이터 관리·학습·평가·배포·모니터링 라이프사이클을 MLOps, AIOps와 비교해 정리하고, RAG의 동작 원리와 데이터 파이프라인, 활용 사례, 주요 용어를 설명한다."
 date: "2024-09-19"
 tags:
   - "IT지식"
   - "개념정리"
+  - "RAG"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/IT-LLMOps와-RAG"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:48:52Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/IT-LLMOps와-RAG"
+    title: "[IT] LLMOps와 RAG"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-19"
+status: "stable"
 year: "2024"
 ---
-
-# [IT] LLMOps와 RAG
 
 최근 몇 년간 대규모 언어 모델(LLM)의 발전은 다양한 산업에서 큰 변화를 일으키고 있습니다. LLM은 사람과 유사한 방식으로 텍스트를 생성하거나 질문에 답변할 수 있으며, 고객 지원, 의료, 법률, 콘텐츠 생성 등 수많은 분야에서 널리 활용되고 있습니다. 그러나 LLM의 성능을 극대화하고 지속적으로 개선하기 위해서는 **LLMOps**와 같은 체계적인 운영 관리가 필수적입니다.
 
@@ -65,10 +78,7 @@ year: "2024"
 
 이번 포스트에서는 LLMOps와 RAG의 주요 개념, 이들이 함께 작동하는 방식, 그리고 실제 응용 사례를 통해 어떻게 이 두 기술이 LLM의 한계를 극복하고 새로운 가능성을 열어가는지 소개하고자 합니다.
 
----
-
-1. LLMOps: 대규모 언어 모델 운영의 모든 것
------------------------------
+## 1. LLMOps: 대규모 언어 모델 운영의 모든 것
 
 **LLMOps**는 대규모 언어 모델의 개발, 운영, 배포, 유지보수에 이르는 모든 과정을 체계적으로 관리하는 개념입니다. 이를 통해 LLM의 성능을 극대화하고, 실시간으로 문제를 해결하며, 지속적인 모델 개선을 가능하게 합니다.
 
@@ -112,10 +122,7 @@ LLM의 성공은 학습 데이터의 품질에 크게 좌우됩니다. 따라서
 * **피드백 수집**: 사용자의 피드백과 오류 보고를 수집하여, 모델을 지속적으로 개선합니다.
 * **지속적 학습(Continuous Learning)**: 새로운 데이터를 지속적으로 반영하여 모델을 학습시키고, 최신 트렌드와 정보에 맞춰 모델을 업데이트합니다.
 
----
-
-2. RAG: LLM의 정보 검색 기능 강화
-------------------------
+## 2. RAG: LLM의 정보 검색 기능 강화
 
 **RAG(Retrieval-Augmented Generation)**는 LLM이 학습된 데이터 내에서만 작동하는 한계를 극복하기 위해 설계된 프레임워크입니다. LLM이 기존에 학습하지 않은 외부 데이터 소스에서 정보를 검색한 후, 이를 바탕으로 더 정확하고 풍부한 응답을 생성할 수 있도록 합니다.
 
@@ -158,10 +165,7 @@ RAG 시스템에서 데이터는 검색이 가능한 형식으로 전처리되�
 ![](https://velog.velcdn.com/images/euisuk-chung/post/72f68722-5d68-4600-ac8f-c6ebacd918ae/image.png)  
 출처 : Databricks ([링크](https://docs.databricks.com/en/generative-ai/retrieval-augmented-generation.html#requirements))
 
----
-
-3. RAG 에이전트: 정보 검색과 응답 생성을 연결하는 중추
-----------------------------------
+## 3. RAG 에이전트: 정보 검색과 응답 생성을 연결하는 중추
 
 **RAG 에이전트**는 검색된 데이터를 LLM에 전달하여 최종
 
@@ -177,20 +181,14 @@ RAG 시스템에서 데이터는 검색이 가능한 형식으로 전처리되�
 ![](https://velog.velcdn.com/images/euisuk-chung/post/22a79fab-e762-4fcb-aecd-ded3ae5ca077/image.png)  
 출처 : Databricks ([링크](https://docs.databricks.com/en/generative-ai/retrieval-augmented-generation.html#requirements))
 
----
-
-4. 평가 및 모니터링: LLMOps와 RAG 시스템의 지속적 개선
--------------------------------------
+## 4. 평가 및 모니터링: LLMOps와 RAG 시스템의 지속적 개선
 
 RAG 시스템의 성능을 유지하고 지속적으로 개선하기 위해서는 **평가와 모니터링**이 필수적입니다.
 
 * **평가**: 모델이 학습되고 운영되기 전, 성능 지표를 평가하여 개선할 부분을 찾아냅니다. 검색된 데이터와 생성된 텍스트의 일관성과 정확성을 평가하는 것이 중요합니다.
 * **모니터링**: 운영 환경에서 실시간으로 성능을 모니터링하고, 필요시 즉각적으로 조치를 취합니다. LLM이 생성하는 응답의 품질과 검색 속도, 비용 등을 추적합니다.
 
----
-
-5. RAG와 LLMOps의 실제 응용 사례
-------------------------
+## 5. RAG와 LLMOps의 실제 응용 사례
 
 ### 5.1 고객 서비스 챗봇
 
@@ -206,19 +204,13 @@ RAG는 법률 및 의료 분야에서도 매우 유용하게 활용될 수 있�
 ![](https://velog.velcdn.com/images/euisuk-chung/post/15c15c94-4ebe-4821-aee0-e534c39c63b7/image.png)  
 출처 : (논문) How Does NLP Benefit Legal System: A Summary of Legal Artificial Intelligence?
 
----
-
-Conclusion
-----------
+## Conclusion
 
 LLMOps와 RAG는 LLM을 보다 효과적으로 운영하고, 그 한계를 극복할 수 있는 강력한 도구입니다. LLMOps는 모델의 전체 라이프사이클을 관리하고 최적화하는 데 필수적인 역할을 하며, RAG는 외부 정보를 실시간으로 검색하여 더 정확하고 유용한 답변을 제공할 수 있도록 도와줍니다.
 
 이 두 기술이 결합되면, 고객 서비스, 법률 상담, 의료 정보 제공 등 다양한 분야에서 더욱 발전된 인공지능 솔루션을 제공할 수 있습니다. 앞으로도 LLMOps와 RAG는 인공지능 운영의 핵심 기술로 자리 잡아, 다양한 산업에 혁신을 가져올 것입니다.
 
----
-
-유첨
---
+## 유첨
 
 아래 주요 용어를 통해 개념을 쉽게 이해하고, 이러한 기술들이 다양한 응용 분야에서 어떻게 사용될 수 있는지 명확하게 파악할 수 있습니다.
 

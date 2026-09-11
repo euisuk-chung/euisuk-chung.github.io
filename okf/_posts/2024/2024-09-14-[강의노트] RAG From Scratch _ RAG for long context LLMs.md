@@ -1,18 +1,32 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : RAG for long context LLMs"
+description: "Needle in a Haystack 실험과 최신성 편향을 근거로 장문 LLM이 RAG를 대체하기 어려운 이유를 살펴보고, 문서 중심 RAG, RAPTOR, Self-RAG, CRAG 등 장문 LLM 시대 RAG의 진화 방향을 정리한다."
 date: "2024-09-14"
+tags:
+  - "RAG"
+  - "강의노트"
+  - "NLP"
+  - "LangChain"
+resource: "https://velog.io/@euisuk-chung/RAG는-정말로-끝났을까"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:49:39Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/RAG는-정말로-끝났을까"
+    title: "[강의노트] RAG From Scratch : RAG for long context LLMs"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
 
-# [강의노트] RAG From Scratch : RAG for long context LLMs
-
-RAG for long context LLMs
-=========================
+# RAG for long context LLMs
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2385f0a8-71ab-400c-a824-19f3439d2c49/image.png)
 
-Introduction
-------------
+## Introduction
 
 최근 **LLM(Long Large Models)**의 급격한 발전으로 인해 거대한 양의 데이터를 한 번에 처리할 수 있는 가능성이 열리고 있습니다. 특히, **100만 토큰** 이상의 정보를 한 번에 처리할 수 있는 모델들이 등장하면서, 과연 **RAG(Retrieval-Augmented Generation)** 시스템이 여전히 필요한지에 대한 의문이 커지고 있습니다.
 
@@ -23,8 +37,7 @@ Introduction
 * `영상 제목`: RAG for long context LLMs
 * `영상 링크` : <https://youtu.be/SsHUNfhF32s>
 
-Background: RAG란 무엇인가?
-----------------------
+## Background: RAG란 무엇인가?
 
 **RAG**는 간단히 말해, 대형 언어 모델(LLM)이 외부 데이터베이스나 문서에서 필요한 정보를 **검색(Retrieval)**하고 이를 바탕으로 **응답을 생성(Generation)**하는 과정입니다.
 
@@ -35,15 +48,13 @@ RAG는 다음과 같은 흐름을 따릅니다:
 2. **문서 검색**: 질문에 맞는 문서를 검색합니다. 이때 보통 **semantic similarity**를 사용합니다.  
 3. **LLM 활용**: 검색된 문서를 기반으로 LLM이 응답을 생성합니다.
 
-장문 LLM은 RAG를 대체할 수 있을까?
------------------------
+## 장문 LLM은 RAG를 대체할 수 있을까?
 
 오늘날 **Claude 3**나 **GPT-4** 같은 최신 모델들은 최대 **100만 토큰** 이상의 데이터를 한 번에 처리할 수 있습니다. 이 말은 수백 페이지의 문서를 한꺼번에 모델에 넣을 수 있다는 뜻입니다. 그렇다면 이렇게 많은 데이터를 한 번에 처리할 수 있는 모델이 RAG 시스템을 대체할 수 있을까요?
 
 Lance는 이 질문에 답하기 위해 몇 가지 실험을 설계했습니다.
 
-실험: Needle in a Haystack 테스트
-----------------------------
+## 실험: Needle in a Haystack 테스트
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/94272467-aa95-4bdf-aa85-c294fee1541d/image.png)
 
@@ -51,8 +62,7 @@ Lance는 이 질문에 답하기 위해 몇 가지 실험을 설계했습니다.
 
 Lance는 이 테스트를 위해 "피자 재료"를 이용했습니다. 예를 들어, "무화과(figs), 프로슈토(prosciutto), 염소 치즈(goat cheese)" 같은 피자 재료를 문맥의 여러 위치에 숨겨 두고, 모델에게 "완벽한 피자의 비밀 재료는 무엇인가요?"라고 질문한 후, 모델이 그 재료를 모두 찾을 수 있는지 확인했습니다.
 
-결과: 장문 LLM의 한계
---------------
+## 결과: 장문 LLM의 한계
 
 1. **정보가 많을수록 성능 저하**: 문맥에 삽입된 정보의 수가 많아질수록, 모델이 모든 정보를 정확히 검색해 내는 비율이 떨어졌습니다.
 2. **추론의 어려움**: 단순히 정보를 검색하는 것보다, 그 정보를 기반으로 **추론**을 해야 할 때 성능이 더 떨어졌습니다. 예를 들어, 재료의 첫 글자를 추론하는 작업에서 성능이 더 나빠졌습니다.
@@ -64,8 +74,7 @@ Lance는 이 테스트를 위해 "피자 재료"를 이용했습니다. 예를 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/978d0808-7384-497f-9606-bc7ac282f5e4/image.png)
 
-한계점: 단순한 Context Stuffing의 문제
------------------------------
+## 한계점: 단순한 Context Stuffing의 문제
 
 실험 결과, 아무리 긴 문맥을 처리할 수 있는 LLM이라도 모든 정보를 완벽하게 검색해 내지는 못한다는 것이 드러났습니다.
 
@@ -73,10 +82,7 @@ Lance는 이 테스트를 위해 "피자 재료"를 이용했습니다. 예를 �
 
 특히 **문서의 앞부분에 있는 정보는 잊혀지는 경향**이 있었습니다. 따라서 단순히 더 많은 정보를 LLM의 context window에 넣는 것이 능사가 아님이 명백해졌습니다. 또한, 이러한 방법은 토큰 비용이 매우 높아질 수 있으며, 보안과 인증 문제가 발생할 수 있습니다.
 
----
-
-RAG의 미래: 변화하는 패러다임
-==================
+# RAG의 미래: 변화하는 패러다임
 
 앞으로 더욱 더 긴 컨텍스트를 넣어줄 수 있는 모델들이 나오게 될수도 있는데, 그렇다면 **RAG**는 이제 끝난 것일까요? 발표자 Lance는 그렇지 않다고 주장합니다. RAG는 단순히 변할 뿐, 사라지지 않을 것이라고 이야기합니다.
 
@@ -84,15 +90,13 @@ RAG의 미래: 변화하는 패러다임
 
 다음은 **long context LLMs** 시대에서 RAG가 어떻게 변화할 수 있을지에 대한 몇 가지 연구들을 소개합니다. (이전 챕터들과 조금 겹치는 내용들이 조금 있습니다.)
 
-1. Document-Centric RAG
------------------------
+## 1. Document-Centric RAG
 
 현재의 RAG 시스템은 문서를 작은 덩어리로 쪼개서 인덱싱하고, 그 덩어리 중 적합한 것을 검색하는 방식입니다. 하지만 장문 LLM 시대에서는 **문서 자체를 전체로 검색**하는 방법이 더 적합할 수 있습니다. 이는 쪼개는 방식에 대한 불필요한 복잡성을 줄이고, 더 자연스러운 문서 검색을 가능하게 합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9c00a32e-e326-43ec-a586-68514c759b08/image.png)
 
-2. Multi-Representation Indexing
---------------------------------
+## 2. Multi-Representation Indexing
 
 문서를 쪼개지 않고 **요약**을 통해 문서의 대표적인 표현을 인덱싱하는 방법입니다. 검색 시에는 이 요약을 활용해 적합한 문서를 찾고, 최종적으로는 **전체 문서**를 LLM에게 넘겨주는 방식입니다.
 
@@ -112,10 +116,7 @@ RAG의 미래: 변화하는 패러다임
   2. **FACTOIDWIKI 소개**: 이 연구에서는 FACTOIDWIKI라는 영어 위키피디아 덤프를 새로 가공하여, 각 페이지를 100단어 길이의 문단, 문장, proposition 단위로 나누는 작업을 진행했습니다.
   3. **검색 및 다운스트림 작업 성능 향상**: proposition 기반 검색은 문장 및 문단 기반 검색보다 전반적인 성능이 우수했으며, 특히 질문에 관련된 정보를 더 밀집된 형태로 제공하여 QA(질문 답변) 작업에서 더욱 뛰어난 성능을 발휘했습니다.
 
----
-
-3. RAPTOR: 문서 요약 클러스터링
-----------------------
+## 3. RAPTOR: 문서 요약 클러스터링
 
 RAPTOR는 문서를 요약한 후, 이를 **클러스터**로 묶고, 클러스터 간의 요약을 반복하여 최종적으로 전체 문서 코퍼스에 대한 고차원 요약을 만드는 방식입니다. 이렇게 생성된 요약을 바탕으로 여러 문서에 걸친 정보를 통합하여 검색할 수 있습니다.
 
@@ -136,10 +137,7 @@ RAPTOR는 문서를 요약한 후, 이를 **클러스터**로 묶고, 클러스�
   2. **효율적인 검색 및 정보 통합**: 이 트리 구조는 다양한 요약 수준에서 정보를 검색하여, 복잡한 질문에 대해 효과적으로 답할 수 있게 합니다. 이를 통해, 긴 문서를 처리하는 질문-응답 작업에서 기존 방식보다 성능이 크게 향상되었습니다.
   3. **최신 성과**: RAPTOR와 GPT-4를 결합하여 QuALITY 데이터셋에서 20% 이상의 성능 개선을 달성했으며, 여러 QA 작업에서 최고 성능을 기록했습니다.
 
----
-
-4. Self-RAG: 순환적 RAG
---------------------
+## 4. Self-RAG: 순환적 RAG
 
 RAG 시스템이 한 번의 검색과 응답 생성으로 끝나는 것이 아니라, **반복적으로 질문을 수정하거나 검색 결과를 평가**하는 방법입니다. 이를 통해 검색의 정확도를 높이고, **hallucination**을 방지할 수 있습니다.
 
@@ -160,10 +158,7 @@ RAG 시스템이 한 번의 검색과 응답 생성으로 끝나는 것이 아�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/689911ad-b2b8-43cc-8d99-5d17695f1008/image.png)
 
----
-
-5. Corrective RAG: 외부 검색 연동
----------------------------
+## 5. Corrective RAG: 외부 검색 연동
 
 내부 인덱스에 없는 질문이 들어왔을 때, 외부 웹 검색을 통해 새로운 정보를 찾아내는 방법입니다. 이를 통해 **out-of-domain** 질문에도 대응할 수 있습니다.
 
@@ -185,10 +180,7 @@ RAG 시스템이 한 번의 검색과 응답 생성으로 끝나는 것이 아�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/42c9c572-6a06-4fc4-9568-c87c7a8cad7d/image.png)
 
----
-
-Conclusion: RAG의 새로운 방향
-=======================
+# Conclusion: RAG의 새로운 방향
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f86f78db-69ec-436b-b05c-0c0c5c1f9859/image.png)
 

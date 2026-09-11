@@ -1,13 +1,27 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : Overview"
+description: "RAG From Scratch 1~4편을 따라 인덱싱·검색·생성의 기본 흐름을 정리하고, LangChain과 Chroma, OpenAI 임베딩, tiktoken으로 기본 RAG 체인을 구성하는 코드를 단계별로 설명한다."
 date: "2024-09-14"
 tags:
-  - "rag"
+  - "RAG"
+  - "LangChain"
   - "강의노트"
+  - "NLP"
+  - "Python"
+resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-Overview"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:51:04Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-Overview"
+    title: "[강의노트] RAG From Scratch : Overview"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] RAG From Scratch : Overview
 
 * 해당 블로그 포스트는 [RAG From Scratch : Coursework](https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch) 강의 파트 1 - 4 내용을 다루고 있습니다.
 
@@ -183,8 +197,6 @@ This approach enhances model performance by simplifying and structuring tasks sy
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/bd88afb8-274b-4c44-8b0e-fcd05eb28488/image.png)
 
----
-
 ### Part 2 (인덱싱)
 
 * 이번 영상은 RAG(Retrieval-Augmented Generation) 파이프라인의 두 번째 파트로, '인덱싱(Indexing)'에 대해 다룹니다.
@@ -343,8 +355,6 @@ retriever = vectorstore.as_retriever()
 * `Chroma.from_documents`는 문서의 임베딩을 생성하여 벡터 스토어에 저장합니다.
 * 마지막으로 `vectorstore.as_retriever()`를 통해 저장된 임베딩에서 텍스트 검색이 가능한 검색기를 생성합니다.
 
----
-
 ### Part 3 (검색)
 
 * 이 비디오는 LangChain의 Lance가 진행하는 "RAG From Scratch" 시리즈의 세 번째 영상으로, 이번 주제는 **정보 검색**(Retrieval)입니다.
@@ -376,8 +386,6 @@ retriever = vectorstore.as_retriever()
   ```
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9f47da0e-f61a-4b02-b5fb-760efff009ef/image.png)
-
----
 
 ### Part 4 (생성)
 

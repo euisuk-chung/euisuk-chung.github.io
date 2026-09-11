@@ -30,6 +30,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Computer Vision](_concepts/computer-vision.md) - 이미지·영상 인식 모델과 컴퓨터 비전 연구.
 * [개념정리](_concepts/concepts.md) - 머신러닝, 딥러닝, 소프트웨어의 핵심 개념을 정리한 글.
 * [Conference](_concepts/conference.md) - 컨퍼런스·서밋·키노트 참관 및 발표 정리.
+* [데이터분석](_concepts/data-analysis.md) - A/B 테스트, 퍼널·코호트 분석 등 데이터 분석 기법과 데이터 기반 의사결정을 다룬 글.
 * [딥러닝](_concepts/deep-learning.md) - 신경망 구조, 학습 기법, 최신 딥러닝 연구를 다룬 글.
 * [환경설정](_concepts/dev-environment.md) - 개발 환경 구성, 가상환경, 패키지 관리, 설치 가이드.
 * [차원축소](_concepts/dimensionality-reduction.md) - PCA, t-SNE, UMAP 등 차원 축소 기법.
@@ -66,6 +67,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [SK AI Summit](_concepts/sk-ai-summit.md) - SK AI Summit 세션 정리.
 * [Snippet](_concepts/snippet.md) - 자주 쓰는 코드 조각 모음.
 * [Splunk](_concepts/splunk.md) - Splunk와 SPL(Search Processing Language) 사용법.
+* [State Space Model](_concepts/state-space-model.md) - 상태 공간 모델(SSM)의 이론과 HiPPO, S4, Mamba 등 SSM 기반 시퀀스 모델을 다룬 글.
 * [Streamlit](_concepts/streamlit.md) - Streamlit으로 데이터 앱을 만드는 방법.
 * [시계열](_concepts/time-series.md) - 시계열 데이터 분석, 예측 모델, 관련 논문.
 * [꿀팁](_concepts/tips.md) - 바로 써먹을 수 있는 짧은 실전 팁.

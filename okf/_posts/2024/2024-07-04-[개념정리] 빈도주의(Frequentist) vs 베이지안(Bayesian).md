@@ -1,18 +1,31 @@
 ---
+type: "Concept Note"
 title: "[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)"
+description: "확률을 장기 빈도로 보는 빈도주의와 믿음의 갱신으로 보는 베이지안 관점을 대수의 법칙, MLE, 베이즈 정리 등 핵심 이론과 동전 던지기, A/B 테스트 예시로 비교한다."
 date: "2024-07-04"
+tags:
+  - "수학"
+  - "개념정리"
+  - "머신러닝"
+resource: "https://velog.io/@euisuk-chung/용어정리-빈도주의Frequentist-VS-베이지안Baysian"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:57:15Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/용어정리-빈도주의Frequentist-VS-베이지안Baysian"
+    title: "[개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-07-04"
+status: "stable"
 year: "2024"
 ---
 
-# [개념정리] 빈도주의(Frequentist) vs 베이지안(Bayesian)
-
-Bayesian 확률과 Frequentist 확률
-===========================
+# Bayesian 확률과 Frequentist 확률
 
 안녕하세요!🙌 오늘은 통계학의 두 가지 주요 접근법인 `Bayesian 확률`과 `Frequentist 확률`에 대해 자세히 알아보겠습니다. 이 개념들은 머신러닝과 딥러닝에서 중요한 역할을 하므로, 깊이 있는 이해가 필요합니다.
 
-0. 확률 (Probability) 개념
-----------------------
+## 0. 확률 (Probability) 개념
 
 확률은 불확실한 사건의 발생 가능성을 수치화한 것입니다. 일상에서 "확률적으로", "확률이 높다" 등의 표현을 자주 사용하지만, 확률을 해석하는 방식에는 크게 두 가지 접근법이 있습니다:
 
@@ -27,8 +40,7 @@ Bayesian 확률과 Frequentist 확률
 
 이처럼 두 접근법에는 확률을 해석하는 차이가 존재하며, 이는 통계적 추론과 의사결정 과정에도 큰 영향을 미칩니다. 머신러닝과 딥러닝에서는 문제의 특성과 목적에 따라 두 접근법을 적절히 선택하거나 결합하여 사용합니다.
 
-1. Frequentist 확률
------------------
+## 1. Frequentist 확률
 
 * `정의`:  
   - 사건의 발생 빈도에 기반한 객관적인 확률 해석
@@ -95,8 +107,7 @@ Bayesian 확률과 Frequentist 확률
   + 3. 점 추정의 한계: 불확실성을 완전히 표현하기 어려울 수 있습니다.
   + 4. 반복 가능한 실험 가정: 모든 상황이 반복 가능한 실험으로 모델링되기 어려운 경우가 있습니다.
 
-2. Bayesian 확률
---------------
+## 2. Bayesian 확률
 
 * `정의`:  
   - 주관적 믿음의 정도를 나타내는 확률 해석
@@ -165,8 +176,7 @@ Bayesian 확률과 Frequentist 확률
   + 2. 사전 분포 선택의 주관성: 부적절한 사전 분포 선택이 결과를 왜곡할 수 있습니다.
   + 3. 해석의 어려움: 비전문가에게 베이지안 결과의 해석이 직관적이지 않을 수 있습니다.
 
-두 접근법의 주요 차이점
--------------
+## 두 접근법의 주요 차이점
 
 1. **확률 해석**:
 
@@ -204,8 +214,7 @@ Bayesian 확률과 Frequentist 확률
 | 과적합 방지 | 사전 분포를 통한 자연스러운 정규화 | 별도의 정규화 기법 필요 |
 | 주요 이론/기법 | 베이즈 정리, MCMC, 변분추론 | 최대우도추정, 가설검정, 신뢰구간 |
 
-예시를 통한 비교
----------
+## 예시를 통한 비교
 
 1. **동전 던지기 문제**:
 
@@ -224,8 +233,7 @@ Bayesian 확률과 Frequentist 확률
    * Frequentist 접근: ARIMA와 같은 모델을 사용하여 과거 데이터에 가장 잘 맞는 단일 모델을 찾습니다.
    * Bayesian 접근: 동적 선형 모델(Dynamic Linear Models)을 사용하여 시간에 따른 파라미터의 변화를 확률 분포로 모델링합니다.
 
-결론
---
+## 결론
 
 Bayesian 접근법과 Frequentist 접근법은 각각 고유한 장단점을 가지고 있으며, 상황에 따라 적절한 방법을 선택하는 것이 중요합니다. 많은 경우, 두 접근법을 보완적으로 사용하는 것이 가장 효과적일 수 있습니다.
 

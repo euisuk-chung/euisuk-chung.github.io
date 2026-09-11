@@ -1,21 +1,32 @@
 ---
+type: "Tip"
 title: "[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet"
+description: "sort_values 정렬, 컬럼 이름·순서 변경, 조건 필터링, dropna·fillna·ffill·bfill 결측치 처리, apply와 lambda 변환, groupby 집계, 타입 변환 등 실무용 Pandas 코드 조각을 모았다."
 date: "2024-09-06"
 tags:
-  - "pandas"
-  - "python"
-  - "snippet"
+  - "Pandas"
+  - "Python"
+  - "Snippet"
+  - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/Pandas-실무에서-쓰려고-정리해둔-Code-Snippet"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:52:19Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Pandas-실무에서-쓰려고-정리해둔-Code-Snippet"
+    title: "[Pandas] 실무에서 쓰려고 정리해둔 Code Snippet"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-06"
+status: "stable"
 year: "2024"
 ---
-
-# [Pandas] 실무에서 쓰려고 정리해둔 Code Snippet
 
 파이썬의 `Pandas 라이브러리`는 데이터 분석 및 조작을 위한 필수 도구입니다. 특히, 데이터를 효과적으로 정렬하고 분석하는 것은 데이터 과학자의 중요한 과제 중 하나입니다. 이전 포스트들에서도 몇 번 개념 및 주요 함수들을 소개해드렸는데요.
 
 이 글에서는 주로 사용하는 Pandas의 정렬 및 분석에 유용한 테크닉과 함께, 실무에서 바로 활용할 수 있는 스니펫을 소개합니다. 각 스니펫은 바로 복사하여 사용할 수 있도록 구성되어 있으니, 필요할 때마다 빠르게 참조해보세요! ~~(실은 제가 쓰려고 만들어둔 것은 안 비밀)~~
 
-1. 정렬 옵션
---------
+## 1. 정렬 옵션
 
 ### 📌 sort\_values()로 컬럼 값 기준 정렬
 
@@ -59,8 +70,7 @@ year: "2024"
   df_sorted = df.sort_values(by='column_name', kind='mergesort')
   ```
 
-2. 컬럼 변경
---------
+## 2. 컬럼 변경
 
 데이터 분석 시 컬럼의 이름을 변경하거나 순서를 재배치하는 것은 매우 자주 발생하는 작업입니다. Pandas에서는 간단한 명령어로 컬럼 이름을 수정하고, 순서를 변경할 수 있습니다.
 
@@ -92,10 +102,7 @@ year: "2024"
   df = df[desired_order + [col for col in df.columns if col not in desired_order]]
   ```
 
----
-
-3. 데이터 필터링
-----------
+## 3. 데이터 필터링
 
 데이터를 분석할 때 특정 조건에 맞는 데이터만 추출하는 것이 매우 중요합니다.
 
@@ -113,10 +120,7 @@ filtered_df = df[df['column_name'] > 100]
 filtered_df = df[(df['column1'] > 100) & (df['column2'] == 'specific_value')]
 ```
 
----
-
-4. 데이터 탐색
----------
+## 4. 데이터 탐색
 
 데이터 탐색은 분석 작업의 첫 단계로, 데이터의 구조와 주요 특징을 파악하는 데 중요합니다.
 
@@ -136,10 +140,7 @@ df.describe()
 df.isnull().sum()
 ```
 
----
-
-5. 결측치 처리
----------
+## 5. 결측치 처리
 
 실제 데이터에서 결측치는 매우 흔하게 발생하는 문제입니다. Pandas는 결측치를 처리할 수 있는 다양한 방법을 제공합니다. 결측치를 제거하거나, 특정 값으로 대체할 수 있습니다.
 
@@ -187,10 +188,7 @@ df.isnull().sum()
   df_ffill = df.fillna(method='ffill')
   ```
 
----
-
-6. Lambda 함수로 데이터 변환
---------------------
+## 6. Lambda 함수로 데이터 변환
 
 * `Lambda 함수`와 `apply()` 메서드를 사용하면 데이터를 변환할 때 매우 유용합니다.
 
@@ -239,10 +237,7 @@ df.isnull().sum()
   df['processed_text'] = df['text_column'].apply(lambda x: x if len(x) >= 5 else 'Short')
   ```
 
----
-
-7. 그룹화 및 집계
------------
+## 7. 그룹화 및 집계
 
 * 데이터를 그룹화하여 집계할 때는 `groupby()`를 사용합니다. 이를 통해 다양한 통계를 낼 수 있습니다.
 
@@ -254,10 +249,7 @@ grouped_df = df.groupby('category_column')['numeric_column'].mean()
 grouped_df = df.groupby(['category1', 'category2'])['numeric_column'].agg(['mean', 'sum'])
 ```
 
----
-
-8. 데이터 타입 변환
-------------
+## 8. 데이터 타입 변환
 
 데이터 분석을 위해 컬럼의 데이터 타입을 변환해야 하는 경우가 많습니다.
 
@@ -275,10 +267,7 @@ df['date_column'] = pd.to_datetime(df['date_column'])
 df['category_column'] = df['category_column'].astype('category')
 ```
 
----
-
-마무리
----
+## 마무리
 
 Pandas의 다양한 기능을 활용하면 데이터를 보다 쉽게 정렬하고 분석할 수 있습니다. 이 글에서 소개한 스니펫들은 실무에서 자주 사용되는 테크닉들로, 필요할 때마다 빠르게 복사하여 사용할 수 있도록 준비되었습니다. Pandas의 풍부한 기능들을 익히면 데이터 조작과 분석 작업에서 큰 효율성을 얻을 수 있을 것입니다.
 
