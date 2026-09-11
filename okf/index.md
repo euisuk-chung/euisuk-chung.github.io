@@ -66,6 +66,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Qwen](_concepts/qwen.md) - Alibaba의 Qwen 계열 언어·멀티모달 모델 기술 보고서와 리뷰.
 * [RAG](_concepts/rag.md) - 검색 증강 생성(RAG) 아키텍처와 구현.
 * [강화학습](_concepts/reinforcement-learning.md) - 보상을 최대화하는 정책을 학습하는 강화학습의 개념과 Q-Learning, DQN 등 알고리즘을 다룬 글.
+* [Repo Review](_concepts/repo-review.md) - 오픈소스 GitHub 저장소의 구조와 핵심 구현을 코드 기준으로 분석한 리뷰.
 * [SK AI Summit](_concepts/sk-ai-summit.md) - SK AI Summit 세션 정리.
 * [Snippet](_concepts/snippet.md) - 자주 쓰는 코드 조각 모음.
 * [Sora](_concepts/sora.md) - OpenAI의 영상 생성 모델 Sora의 기능, 출시 소식, 프롬프팅 가이드를 다룬 글.
