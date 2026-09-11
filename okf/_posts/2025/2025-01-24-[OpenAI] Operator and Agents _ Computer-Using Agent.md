@@ -19,6 +19,8 @@ sources:
     last_modified: "2025-01-24"
 status: "stable"
 year: "2025"
+redirect_from:
+  - "/2025/01/24/OpenAI-Introduction-to-Operator-and-Agents-_-Computer-Using-Agent/"
 ---
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/be96d2a5-36ec-4c1d-bf01-6dd969b42294/image.png)
