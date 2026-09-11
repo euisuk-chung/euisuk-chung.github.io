@@ -179,7 +179,8 @@ uv run --project _scripts python -m pytest _scripts/tests -q
   `new_tags`에 적은 태그는 concept 파일로 생성됩니다.
 - 크롤러 본문 정규화 규칙이 바뀌면 `blog_crawler.py --rehash`로 `processed_posts.csv`의 해시를 먼저 갱신하세요.
   안 하면 `--check-updates`가 모든 글을 다시 씁니다.
-- CI: `.github/workflows/okf-lint.yml`이 PR/master에서 테스트·린트·멱등 검사를 돌립니다.
+- CI: `.github/workflows/okf-lint.yml`이 PR/master에서 테스트·린트(`--strict`: `type` 없는 legacy 포스트도 오류)·멱등 검사를 돌립니다.
+- 포스트의 `description`은 `og:description`, JSON-LD, `search.json`에도 쓰입니다.
 
 ### 콘텐츠 PR
 

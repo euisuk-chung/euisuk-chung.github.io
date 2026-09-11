@@ -1,17 +1,27 @@
 ---
+type: "Product Update"
 title: "[OpenAI] Introducing ChatGPT agent"
+description: "Operator와 Deep Research를 통합한 ChatGPT Agent의 텍스트·GUI 브라우저, 터미널, 커넥터 도구 활용을 데모별로 분석하고 벤치마크 성능과 출시 일정, 한계를 정리한다."
 date: "2025-07-20"
 tags:
+  - "ChatGPT"
+  - "AI Agent"
   - "OpenAI"
-  - "agent"
-  - "chatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI-Introducing-ChatGPT-agent"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:21:21Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-Introducing-ChatGPT-agent"
+    title: "[OpenAI] Introducing ChatGPT agent"
+    author: "human:euisuk-chung"
+    last_modified: "2025-07-20"
+status: "stable"
 year: "2025"
 ---
 
-# [OpenAI] Introducing ChatGPT agent
-
-Introducing ChatGPT agent 리뷰
-============================
+# Introducing ChatGPT agent 리뷰
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3251f185-7a26-4b22-8d56-8e5e369ddd82/image.png)
 
@@ -21,8 +31,7 @@ Introducing ChatGPT agent 리뷰
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2d783f5d-c984-4d6f-bc8a-b87a386ba821/image.png)
 
-ChatGPT agent 드디어 떳나?!
-----------------------
+## ChatGPT agent 드디어 떳나?!
 
 ChatGPT가 더 이상 단순히 답을 알려주는 도우미에 머무르지 않습니다. **이제는 직접 행동하는 '에이전트(Agent)'가 되었습니다.**
 
@@ -64,10 +73,7 @@ ChatGPT가 더 이상 단순히 답을 알려주는 도우미에 머무르지 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/91ace78a-daea-4d70-a897-fe21921ffebd/image.png)
 
----
-
-1. 친구 웨딩 참석 시 조언 구하기
---------------------
+## 1. 친구 웨딩 참석 시 조언 구하기
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/02cc699c-6818-4b00-aca7-a6337e8acaf7/image.png)
 
@@ -145,10 +151,7 @@ Agent는 **Text Browser**를 통해 빠르게 웹페이지 내용을 스캔하�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/7e2572f3-27ba-4704-ac08-8c0aa5fff829/image.png)
 
----
-
-2. 업무 자동화: 스티커 주문 + 아트 생성
--------------------------
+## 2. 업무 자동화: 스티커 주문 + 아트 생성
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6ff4409c-baec-460f-9268-68793b5cae27/image.png)
 
@@ -182,10 +185,7 @@ Agent는 **Text Browser**를 통해 빠르게 웹페이지 내용을 스캔하�
 
 Agent는 중간에 사용자에게 수량, 디자인 확인을 요청하고, **사용자가 takeover하여 카드 정보 입력** 후 직접 결제할 수 있도록 유도합니다.
 
----
-
-3. 대화 중 “신발 구매” 요청 → 멀티턴 처리
----------------------------
+## 3. 대화 중 “신발 구매” 요청 → 멀티턴 처리
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/400251bc-1686-4556-bfda-06a6d83fc2bd/image.png)
 
@@ -208,10 +208,7 @@ Agent는 대화 중에도:
 
 이러한 능력은 **멀티스레딩적 사고 방식**으로, 사용자의 비정형적 요구에도 유연하게 대응할 수 있게 합니다.
 
----
-
-4. 발표 자료 생성 (PPTX)
-------------------
+## 4. 발표 자료 생성 (PPTX)
 
 ### 요청:
 
@@ -251,8 +248,7 @@ Agent는 대화 중에도:
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/45dbcd12-f4b0-4954-a904-5c15d2a554be/image.png)
 
-5. 성능 소개
---------
+## 5. 성능 소개
 
 **결과 및 벤치마크 성능 소개**
 
@@ -292,10 +288,7 @@ Agent는 대화 중에도:
   + **Data Analysis**: 인간(64.1%)보다 월등히 높은 **89.9%** 정확도.
   + **Data Modeling**: 인간(65.0%)보다 높은 **85.5%** 성능.
 
----
-
-6. 여행 계획: MLB 투어 일정표 생성
------------------------
+## 6. 여행 계획: MLB 투어 일정표 생성
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0f1a4ae2-5246-42f2-bf25-e630c81a5768/image.png)
 
@@ -327,10 +320,7 @@ Agent는 대화 중에도:
 
 > 실제 인간이 하루 이상 걸릴 계획을 20~30분 만에 마무리
 
----
-
-🔓 출시 일정 및 이용 가능 여부 (Availability)
----------------------------------
+## 🔓 출시 일정 및 이용 가능 여부 (Availability)
 
 ChatGPT Agent는 현재 단계적으로 배포 중이며, 다음과 같이 제공됩니다:
 
@@ -345,8 +335,7 @@ ChatGPT Agent는 현재 단계적으로 배포 중이며, 다음과 같이 제�
 이전의 Deep Research 기능은 Agent의 일부로 통합되었으며,  
 보다 정밀하고 느린 분석이 필요한 경우 여전히 composer에서 'deep research'를 선택하여 이용 가능합니다.
 
-⚠️ 한계점 및 향후 계획 (Limitations & Looking Ahead)
---------------------------------------------
+## ⚠️ 한계점 및 향후 계획 (Limitations & Looking Ahead)
 
 ChatGPT Agent는 강력한 기능을 보유하고 있지만, 아직 초기 단계에 있는 만큼 다음과 같은 제한이 존재합니다:
 

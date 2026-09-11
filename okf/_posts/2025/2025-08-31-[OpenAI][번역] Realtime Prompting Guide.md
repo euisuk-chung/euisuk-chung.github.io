@@ -1,23 +1,34 @@
 ---
+type: "Product Update"
 title: "[OpenAI][번역] Realtime Prompting Guide"
+description: "OpenAI Realtime API 프롬프팅 가이드를 번역해 역할·톤·언어 제약·발음 규칙 등 프롬프트 구조, 도구 호출 서문과 도구별 동작 규칙, 상태 머신 기반 대화 흐름과 에스컬레이션 설계를 다룬다."
 date: "2025-08-31"
 tags:
+  - "Prompt Engineering"
   - "OpenAI"
-  - "chatGPT"
+  - "AI Agent"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI-Realtime-Prompting-Guide"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:13:54Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-Realtime-Prompting-Guide"
+    title: "[OpenAI][번역] Realtime Prompting Guide"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-31"
+status: "stable"
 year: "2025"
 ---
 
-# [OpenAI][번역] Realtime Prompting Guide
-
-OpenAI Realtime API 프롬프팅 가이드
-============================
+# OpenAI Realtime API 프롬프팅 가이드
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/bf2761ba-ea49-4adb-9cbd-01ffce59364a/image.png)
 
 > <https://cookbook.openai.com/examples/realtime_prompting_guide>
 
-소개
---
+## 소개
 
 오늘 OpenAI는 API에서 가장 강력한 음성 대 음성 모델인 **gpt-realtime**을 출시하고 Realtime API의 일반 사용 가능성을 발표했습니다.
 
@@ -27,8 +38,7 @@ OpenAI Realtime API 프롬프팅 가이드
 
 Realtime 모델은 텍스트 기반 모델에 직접 적용되지 않는 다양한 프롬프팅 기법의 이점을 얻습니다. 이 프롬프팅 가이드는 제안된 프롬프트 구조부터 시작하여 각 부분을 실용적인 팁, 복사할 수 있는 작은 패턴, 그리고 사용 사례에 적용할 수 있는 예시와 함께 안내합니다.
 
-일반적인 팁
-------
+## 일반적인 팁
 
 * **끊임없이 반복하세요**: 작은 단어 변경이 행동을 좌우할 수 있습니다.
 
@@ -41,8 +51,7 @@ Realtime 모델은 텍스트 기반 모델에 직접 적용되지 않는 다양�
 * **강조를 위한 대문자 텍스트 사용**: 핵심 규칙을 대문자로 쓰면 모델이 더 잘 따를 수 있습니다.
 * **텍스트가 아닌 규칙을 텍스트로 변환**: "IF x > 3 THEN ESCALATE" 대신 "IF MORE THAN THREE FAILURES THEN ESCALATE"로 작성하세요.
 
-프롬프트 구조
--------
+## 프롬프트 구조
 
 프롬프트를 구성하면 모델이 맥락을 이해하고 턴 전반에 걸쳐 일관성을 유지하기 쉬워집니다. 또한 문제가 있는 섹션을 반복하고 수정하기도 쉬워집니다.
 
@@ -61,8 +70,7 @@ Realtime 모델은 텍스트 기반 모델에 직접 적용되지 않는 다양�
 # Safety & Escalation     — 대체 및 인계 논리
 ```
 
-역할 및 목표
--------
+## 역할 및 목표
 
 이 섹션은 에이전트가 누구인지와 "완료"가 무엇을 의미하는지 정의합니다. 예시들은 모델이 역할과 목표가 명시적일 때 얼마나 밀접하게 준수하는지 보여주기 위해 두 가지 다른 정체성을 나타냅니다.
 
@@ -104,8 +112,7 @@ You are a high-energy game-show host guiding the caller to guess a secret number
 
 새로운 realtime 모델은 역할을 더 잘 수행할 수 있습니다.
 
-성격 및 톤
-------
+## 성격 및 톤
 
 새로운 모델 스냅샷은 특정 성격이나 톤을 모방하는 지시사항을 정말 잘 따릅니다. 사용 사례에서 기대하는 바에 따라 음성 경험과 전달을 맞춤화할 수 있습니다.
 
@@ -161,8 +168,7 @@ You are a high-energy game-show host guiding the caller to guess a secret number
 
 모델은 복잡한 지시사항을 따르고 오디오 응답 전반에 걸쳐 3가지 감정을 전환할 수 있습니다.
 
-속도 지시사항
--------
+## 속도 지시사항
 
 Realtime API에서 속도 매개변수는 재생 속도를 변경하지 모델이 음성을 구성하는 방식은 변경하지 않습니다. 실제로 더 빠르게 들리게 하려면 페이싱을 안내할 수 있는 지시사항을 추가하세요.
 
@@ -204,8 +210,7 @@ Realtime API에서 속도 매개변수는 재생 속도를 변경하지 모델�
 
 새로운 realtime 모델의 오디오는 (너무 급하게 들리지 않으면서도!) 페이스가 눈에 띄게 빠릅니다.
 
-언어 제약
------
+## 언어 제약
 
 언어 제약은 배경 소음이나 다국어 입력과 같은 까다로운 조건에서도 모델이 의도된 언어로 일관되게 응답하도록 보장합니다.
 
@@ -293,8 +298,7 @@ Speak in French when conducting practice, giving examples, or engaging in dialog
 
 모델은 우리의 맞춤형 지시사항에 따라 한 언어에서 다른 언어로 쉽게 코드 전환할 수 있습니다!
 
-반복 줄이기
-------
+## 반복 줄이기
 
 realtime 모델은 샘플 문구를 밀접하게 따라 브랜드를 유지할 수 있지만, 과도하게 사용하여 응답이 로봇적이거나 반복적으로 들릴 수 있습니다. 반복 규칙을 추가하면 명확성과 브랜드 음성을 유지하면서 다양성을 유지하는 데 도움이 됩니다.
 
@@ -344,8 +348,7 @@ realtime 모델은 샘플 문구를 밀접하게 따라 브랜드를 유지할 �
 
 이제 모델은 응답과 확인을 다양화하여 로봇적으로 들리지 않을 수 있습니다.
 
-참고 발음
------
+## 참고 발음
 
 이 섹션은 음성 상호작용 중에 모델이 중요한 단어, 숫자, 이름, 그리고 용어를 올바르게 발음하도록 보장하는 방법을 다룹니다.
 
@@ -379,8 +382,7 @@ When voicing these words, use the respective pronunciations:
 
 새로운 GA 모델 gpt-realtime은 참고 발음을 사용하여 SQL을 "sequel"로 올바르게 발음할 수 있습니다.
 
-영숫자 발음
-------
+## 영숫자 발음
 
 Realtime S2S는 핵심 정보(전화, 신용카드, 주문 ID)를 읽을 때 숫자/문자를 흐리게 하거나 병합할 수 있습니다. 명시적인 문자별 확인은 오해를 방지하고 더 명확한 음성 합성을 유도합니다.
 
@@ -455,8 +457,7 @@ Realtime S2S는 핵심 정보(전화, 신용카드, 주문 ID)를 읽을 때 숫
 
 지시사항을 적용한 후 gpt-realtime을 사용하면: "물론입니다! 번호는 5-5-1-1-1-9-7-6-5-4-2-3입니다. 다른 도움이 필요하시면 알려주세요!"
 
-지시사항
-----
+## 지시사항
 
 이 섹션은 모델이 작업을 해결하고 잠재적인 모범 사례와 가능한 문제를 해결하는 방법에 대한 프롬프트 지침을 다룹니다.
 
@@ -589,8 +590,7 @@ Can you provide some variants of the prompt so that the model can better underst
 
 이 예시에서 모델은 (매우) 큰 기침과 불명확한 오디오 후에 명확화를 요청합니다.
 
-도구
---
+## 도구
 
 이 섹션을 사용하여 모델에게 함수와 도구를 사용하는 방법을 알려주세요. 도구를 언제 호출하고 언제 호출하지 말아야 하는지, 어떤 인수를 수집해야 하는지, 호출이 실행되는 동안 무엇을 말해야 하는지, 그리고 오류나 부분 결과를 어떻게 처리해야 하는지 명시하세요.
 
@@ -901,8 +901,7 @@ Description: Call this when a customer says they're done with the session or doe
 설명: 고객이 세션을 끝내거나 계속하고 싶지 않다고 말할 때 호출합니다. 모호하면 호출하기 전에 고객과 확인하세요.
 ```
 
-대화 흐름
------
+## 대화 흐름
 
 이 섹션은 모델이 각 단계에서 정확히 무엇을 해야 하는지 알 수 있도록 대화를 명확하고 목표 지향적인 단계로 구성하는 방법을 다룹니다. 각 단계의 목적, 그것을 통과하기 위한 지시사항, 그리고 다음으로 전환하기 위한 구체적인 "종료 기준"을 정의합니다. 이는 모델이 정체되거나 단계를 건너뛰거나 앞서 나가는 것을 방지하고 대화가 인사에서 해결까지 체계적으로 유지되도록 보장합니다.
 
@@ -1006,8 +1005,7 @@ Exit when: Caller declines more help.
 종료 시기: 발신자가 더 이상의 도움을 거절할 때.
 ```
 
-샘플 구문
------
+## 샘플 구문
 
 샘플 구문은 모델에 대한 "앵커 예시" 역할을 합니다. 하나의 경직된 응답에 고정시키지 않고 따라야 할 스타일, 간결함, 그리고 톤을 보여줍니다.
 
@@ -1187,8 +1185,7 @@ Exit when: Caller declines more help.
 종료 시기: 발신자가 더 이상의 도움을 거절할 때.
 ```
 
-고급 대화 흐름
---------
+## 고급 대화 흐름
 
 사용 사례가 더 복잡해짐에 따라 모델을 효과적으로 유지하면서 확장되는 구조가 필요합니다. 핵심은 유지 관리 가능성과 단순성의 균형을 맞추는 것입니다: 너무 많은 경직된 상태는 모델에 과부하를 일으켜 성능을 해치고 대화가 로봇적으로 느껴지게 할 수 있습니다.
 
@@ -1519,8 +1516,7 @@ def build_session_update(state: State) -> dict:
     }
 ```
 
-안전 및 에스컬레이션
------------
+## 안전 및 에스컬레이션
 
 종종 Realtime 음성 에이전트에서는 인간에게 에스컬레이션하는 신뢰할 수 있는 방법이 중요합니다. 이 섹션에서는 사용 사례에 따라 언제 에스컬레이션해야 하는지에 대한 지시사항을 수정해야 합니다.
 
@@ -1568,8 +1564,7 @@ escalate_to_human 도구를 호출하는 동시에 말해야 할 것 (필수):
 
 새로운 realtime 모델은 지시사항을 더 잘 따르고 더 신뢰할 수 있게 인간에게 에스컬레이션할 수 있습니다.
 
-결론
---
+## 결론
 
 이 가이드는 OpenAI의 새로운 **gpt-realtime** 모델을 효과적으로 사용하기 위한 포괄적인 프롬프팅 전략을 제공합니다. 각 섹션의 지침을 따르고 제공된 예시를 적용하여 더 자연스럽고 효과적인 음성 AI 상호작용을 구축할 수 있습니다.
 

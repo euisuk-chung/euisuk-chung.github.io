@@ -1,19 +1,32 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models"
+description: "LLaVA-PruMerge 논문의 [CLS] 어텐션 IQR 이상치 기반 적응적 토큰 선택, 키 유사도 k-NN 클러스터링 병합, PruMerge+의 공간 균등 샘플링과 최대 14배 토큰 압축 시 벤치마크·효율성 결과를 정리한다."
 date: "2025-12-12"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Computer Vision"
+  - "Transformer"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/LLaVA-PruMerge-Adaptive-Token-Reduction-for-Efficient-Large-Multimodal-Models"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-16T22:52:25Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/LLaVA-PruMerge-Adaptive-Token-Reduction-for-Efficient-Large-Multimodal-Models"
+    title: "[Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models"
+    author: "human:euisuk-chung"
+    last_modified: "2025-12-12"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/544908e7-c545-4f9b-b1fc-2ae9a671dd01/image.png)
 
 > <https://arxiv.org/pdf/2403.15388>
 
-논문 정보
------
+## 논문 정보
 
 * **제목**: LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models
 * **저자**: Yuzhang Shang, Mu Cai, Bingxin Xu, Yong Jae Lee, Yan Yan
@@ -23,10 +36,7 @@ year: "2025"
 * **GitHub**: <https://github.com/42Shawn/LLaVA-PruMerge>
 * **Project Page**: <https://llava-prumerge.github.io>
 
----
-
-1. Introduction: LMM 효율성의 새로운 패러다임
-----------------------------------
+## 1. Introduction: LMM 효율성의 새로운 패러다임
 
 ### 1.1 Large Multimodal Models (LMMs)의 등장
 
@@ -37,8 +47,6 @@ year: "2025"
 [Vision Encoder] → Visual Tokens (prefix) → [LLM] → 텍스트 응답
 (CLIP-ViT)         (576개)                  (Vicuna/LLaMA)
 ```
-
----
 
 ### 1.2 LMM의 계산 비용 문제
 
@@ -53,8 +61,6 @@ LMM은 **추론(inference)에 상당한 계산 비용**이 필요합니다.
 
 > 🔎 **핵심 통찰:** Vision Encoder는 LLM에 비해 매우 작으므로, **LLM의 추론 비용을 줄이는 것이 전체 LMM 효율화의 핵심**입니다.
 
----
-
 ### 1.3 기존 접근법과 한계
 
 이전 연구들은 이러한 LLM 비용을 줄이기 위해 아래와 같은 시도들을 수행하였습니다.
@@ -63,8 +69,6 @@ LMM은 **추론(inference)에 상당한 계산 비용**이 필요합니다.
 | --- | --- | --- |
 | **Small LLM 사용** | Phi-2 기반 MobileVLM, TinyGPT-V | LLM 추론 능력 희생, VQAv2/MMBench에서 큰 성능 격차 |
 | **Quantization** | 4-bit, 8-bit 압축 | 파라미터 수는 줄지만 다른 문제 미해결 |
-
----
 
 ### 1.4 간과된 비용 원천: Input Context Length
 
@@ -86,8 +90,6 @@ Attention(Q,K,V)=softmax(QKTdk)⋅V\text{Attention}(Q, K, V) = \text{softmax}\le
 
 > 🔎 **핵심 질문:** *Prefix visual tokens의 수를 줄이면서도 성능을 유지할 수 있는가?*
 
----
-
 ### 1.5 핵심 관찰: Visual Tokens의 Redundancy
 
 본 연구에서 발견한 중요한 현상:
@@ -99,8 +101,6 @@ Vision Encoder의 self-attention에서 **[CLS] 토큰과 spatial patches 간의 
 **관찰 2: 대부분의 Visual Tokens은 Redundant**
 
 기존 연구(Bolya et al., 2023; Liu et al., 2022)와 일관되게, 대부분의 visual tokens은 성능 저하 없이 제거(prune)될 수 있습니다.
-
----
 
 ### 1.6 제안 방법: PruMerge 개요
 
@@ -132,10 +132,7 @@ Vision Encoder의 self-attention에서 **[CLS] 토큰과 spatial patches 간의 
 > 3. **Plug-and-play 적용**: 기존 LMM에 추가 학습 없이 적용 가능  
 > 4. **다양한 모달리티 확장**: 이미지뿐 아니라 비디오(Video-LLaVA)에도 적용 가능
 
----
-
-2.1 Efficient Large Multimodal Models
--------------------------------------
+## 2.1 Efficient Large Multimodal Models
 
 ### 1. Compact Architecture (작은 모델 사용)
 
@@ -157,8 +154,6 @@ MobileVLM:   Vision Encoder → [MobileLLaMA-1.4B] → 응답
 * 모바일 최적화 LLM backbone 사용
 * 경량화된 projector 설계
 
----
-
 #### TinyGPT-V
 
 **목표:** 작은 LLM으로도 좋은 성능 달성
@@ -177,8 +172,6 @@ TinyGPT-V:  Vision Encoder → [Phi-2 (2.7B)] → 응답
 * Phi-2의 강력한 reasoning 능력 활용
 * 7B 대비 약 3배 작은 모델
 
----
-
 #### LLaVA-Phi
 
 **목표:** Phi 기반 효율적 LMM
@@ -194,8 +187,6 @@ Vision Encoder → [Phi-2] → 응답
 * 작은 backbone + 향상된 vocabulary
 * 더 나은 일반화 성능 추구
 
----
-
 #### TinyLLaVA
 
 **목표:** 아키텍처 선택과 학습 최적화 연구
@@ -209,8 +200,6 @@ Vision Encoder → [Phi-2] → 응답
 * 어떤 학습 전략이 최적인가?
 
 **결론**: 작은 모델도 최적화하면 큰 모델과 유사한 성능 가능
-
----
 
 #### MoE-LLaVA
 
@@ -230,8 +219,6 @@ MoE-LLM:    Expert 1  Expert 2  Expert 3  Expert 4
 
 * 전체 파라미터는 많지만, 추론 시 **일부만 사용**
 * 계산량 감소 + 성능 유지
-
----
 
 ### 2. Quantization & Compression
 
@@ -255,8 +242,6 @@ W = [0.1, -0.6, 0.9, ...]           ← 각 숫자가 4 bits로 근사
 * 압축 대상: 모델의 파라미터 (weights)
 * 토큰 수는 그대로 → attention 연산량 동일
 
----
-
 ### 3. Vision-Language Connectors
 
 Vision Encoder 출력을 LLM 입력으로 변환하는 모듈들입니다.
@@ -273,8 +258,6 @@ Visual Token (1024-dim) → [Linear → GELU → Linear] → LLM Token (4096-dim
 
 * 가장 단순한 구조
 * **토큰 수 변화 없음** (576 → 576)
-
----
 
 #### Q-Former (BLIP-2)
 
@@ -294,8 +277,6 @@ Query Outputs (32개)
 * **토큰 수 감소** (576 → 32)
 * 하지만 고정된 수의 query 사용 (adaptive 아님)
 
----
-
 #### Resampler (Flamingo)
 
 > <https://arxiv.org/abs/2204.14198>
@@ -313,8 +294,6 @@ Fixed-size Output (64개)
 * 다양한 해상도 입력 처리 가능
 * 고정된 수의 출력 토큰
 
----
-
 ### Connector 비교
 
 | Connector | 입력 토큰 | 출력 토큰 | Adaptive? |
@@ -324,10 +303,7 @@ Fixed-size Output (64개)
 | Resampler (Flamingo) | 가변 | 64 | ✗ (고정) |
 | **PruMerge** | 576 | **약 32**(유동적) | **✓ (적응적)** |
 
----
-
-2.2 Token Reduction Methods
----------------------------
+## 2.2 Token Reduction Methods
 
 ### Sparse Attention
 
@@ -351,8 +327,6 @@ Q @ K'^T = N×k 행렬  → O(N×k) ≈ O(N)
 ![](https://velog.velcdn.com/images/euisuk-chung/post/729d060a-eed9-4718-bc8f-b27da6f7a08e/image.png)
 
 **한계:** LMM에 직접 적용 어려움 (prefix 구조)
-
----
 
 #### ReFormer (Reformer)
 
@@ -379,8 +353,6 @@ ReFormer:
 ```
 
 **한계:** 여전히 모든 토큰 유지, 연산 방식만 변경
-
----
 
 ### Token Merging
 
@@ -416,8 +388,6 @@ T3 + T4 → T'2
 ...
 ```
 
----
-
 ### 기존 Token Reduction vs PruMerge 비교
 
 | 항목 | ToMe (기존) | PruMerge |
@@ -428,10 +398,7 @@ T3 + T4 → T'2
 | **감소 방식** | 점진적 (576→500→450→...) | 한 번에 (576→32) |
 | **Adaptive** | ✗ (고정 비율) | **✓ (이미지별 다름)** |
 
----
-
-3. Method: Token Pru-Merging
-----------------------------
+## 3. Method: Token Pru-Merging
 
 ### 3.1 Preliminaries
 
@@ -506,13 +473,9 @@ Text X_q  → [Tokenizer] ──────────────────
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/cae273e6-bbf3-44ad-8901-27621829a3a3/image.png)
 
----
-
 ### 3.2 Adaptive Important Token Selection via Outlier Detection
 
 > **핵심 질문**: "각 visual token의 중요도를 어떻게 판단하는가?"
-
----
 
 #### 두 가지 극단적 패러다임
 
@@ -520,8 +483,6 @@ Text X_q  → [Tokenizer] ──────────────────
 | --- | --- | --- |
 | **LMM** | 576개 (전부 사용) | 상세한 시각 정보 표현 |
 | **CLIP** | 1개 ([CLS]만 사용) | 가장 압축된 정보 표현 |
-
----
 
 #### 균형점 탐색: [CLS]-Visual Attention 조사
 
@@ -550,8 +511,6 @@ Text X_q  → [Tokenizer] ──────────────────
 
 * `PruMerge`: 정보가 중요한 곳만 선택 → 효율적이지만 일부 정보 손실 가능
 * `PruMerge+`: 중요한 곳 + 균등 샘플링 → 약간의 토큰 증가로 커버리지 보장
-
----
 
 #### IQR (Interquartile Range) 기반 Outlier Detection
 
@@ -583,8 +542,6 @@ important_indices = where(a_cls > upper_fence)
 * Attention score는 양수이므로 **upper fence만 사용**
 * 각 이미지의 분포에 따라 **threshold가 자동 조절**
 * 통계적으로 검증된 robust한 outlier detection
-
----
 
 #### Adaptive Selection의 특성
 
@@ -677,16 +634,12 @@ PruMerge 선택:
 | Sequential | 64.20 |
 | Spatial (4×4) | 66.29 |
 
----
-
 #### Penultimate Layer 사용
 
 **왜 마지막 layer가 아닌 penultimate (끝에서 두 번째) layer?**
 
 * 마지막 layer: Classification에 특화
 * Penultimate layer: **더 rich한 feature representation 보유**
-
----
 
 ### 3.3 Token Supplement via Similar Key Clustering
 
@@ -720,8 +673,6 @@ IQR Outlier Selection 결과:
 
 **해결책:** Pruned tokens를 버리지 않고 선택된 토큰에 **병합(merge)**해주면, 그 특징을 살려줄 수 있지 않을까?
 
----
-
 #### Token Similarity 측정: Key Vector 활용
 
 > *"Since the key vector of each patch token already contains information summarized in the self-attention module, the final layer's key vector serves as the representation."*
@@ -754,8 +705,6 @@ Similarity Matrix (576 × 576):
 
 similarity_matrix[i][j] = token i와 token j의 유사도
 ```
-
----
 
 #### K-Nearest Neighbor Clustering & Weighted Merge
 
@@ -810,8 +759,6 @@ _, cluster_indices = torch.topk(cos_sim_matrix, k=int(32), dim=2, largest=True)
 ## topk: Tensor에서 가장 큰 (또는 작은) k개의 값과 인덱스를 반환
 ```
 
----
-
 ### 3.4 PruMerge+: Bridging the Efficiency-Performance Gap
 
 #### 문제: PruMerge의 성능 격차
@@ -820,8 +767,6 @@ PruMerge는 **~14배 압축 (5.5% tokens)**을 달성하지만:
 
 * 원본 LLaVA 대비 **marginal performance drop** 발생
 * 특정 영역에 토큰이 편중될 수 있음
-
----
 
 #### 해결책: Spatial Uniform Sampling 추가
 
@@ -864,8 +809,6 @@ if if_adaptive:
 * 공간적으로 underrepresented 영역 보완
 * 더 comprehensive한 visual representation
 
----
-
 #### PruMerge vs PruMerge+ 비교
 
 | 항목 | PruMerge | PruMerge+ |
@@ -889,8 +832,6 @@ if if_adaptive:
 
 * **PruMerge**: 최대 효율성 (14× 압축), 약간의 성능 저하
 * **PruMerge+**: 효율성 + 성능 균형 (4× 압축, 거의 원본 성능)
-
----
 
 ### 3.5 Algorithm Summary
 
@@ -945,10 +886,7 @@ def token_prumerge(K, Q, Y, n):
 2. **(Optional)** Spatial sampling  
 3. **TS**: k-NN clustering + weighted merging
 
----
-
-4. Experiments
---------------
+## 4. Experiments
 
 ### 4.1 Main Results
 
@@ -1332,10 +1270,7 @@ Speedup: 59.3× in attention matrix computation
 * Resource 충분: Fine-tuning 권장
 * 빠른 적용 필요: Training-free로 시작
 
----
-
-5. 요약
------
+## 5. 요약
 
 ### 5.1 Adaptive Token Selection
 
@@ -1393,10 +1328,7 @@ Speedup: 59.3× in attention matrix computation
 * Minimal code changes
 * Research-friendly
 
----
-
-6. Limitations 및 향후 방향
-----------------------
+## 6. Limitations 및 향후 방향
 
 ### 현재 한계 (논문 기준)
 
@@ -1423,10 +1355,7 @@ Speedup: 59.3× in attention matrix computation
 * LLaVA-Next with Yi-34B backbone 등 대규모 모델 적용
 * Generalization 및 broader impact 검증
 
----
-
-7. Conclusion
--------------
+## 7. Conclusion
 
 **LLaVA-PruMerge는 Large Multimodal Models의 효율성을 획기적으로 개선**:
 

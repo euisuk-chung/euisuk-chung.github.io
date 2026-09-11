@@ -1,17 +1,30 @@
 ---
+type: "Conference Recap"
 title: "[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대"
+description: "Google I/O 2026 Developer Keynote의 Managed Agents, Antigravity 2.0과 CLI, Gemma 4 LoRA 파인튜닝 데모, Android CLI, WebMCP와 DevTools for Agents 발표를 정리합니다."
 date: "2026-05-25"
 tags:
-  - "google"
+  - "Google"
+  - "Gemini"
+  - "AI Agent"
+  - "Conference"
+resource: "https://velog.io/@euisuk-chung/구글-2026-Google-IO-Developer-Keynote정리-Agent가-주도하는-개발의-새-시대"
+generated:
+  by: "process:velog-sync"
+  at: "2026-06-01T10:54:36Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/구글-2026-Google-IO-Developer-Keynote정리-Agent가-주도하는-개발의-새-시대"
+    title: "[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대"
+    author: "human:euisuk-chung"
+    last_modified: "2026-05-25"
+status: "stable"
 year: "2026"
 ---
 
-# [구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대
-
 > <https://youtu.be/aqmpZocmR8o>
 
-들어가며
-----
+## 들어가며
 
 Google I/O '26 Developer Keynote는 한마디로 정리할 수 있는 행사였습니다. "AI가 단순히 보조하는 시대는 끝났고, 이제 Agent가 직접 일을 처리하는 시대가 시작되었다"는 선언입니다. 이번 키노트의 핵심 메시지는 단순하면서도 강력합니다. 개발자는 큰 아이디어와 방향성에 집중하고, 무거운 실행 작업은 Agent에게 위임한다는 것입니다.
 
@@ -19,10 +32,7 @@ Google AI Studio, Antigravity, Android, Chrome에 이르기까지 모든 개발 
 
 본 글에서는 발표 타임라인을 따라 각 섹션의 모든 발표 내용을 자세히 풀어 정리합니다.
 
----
-
-1. Introduction
----------------
+## 1. Introduction
 
 ### 1.1 Josh Woodward의 환영사
 
@@ -62,10 +72,7 @@ Josh는 이 모든 전환의 중심에 Google Antigravity가 있다고 선언했
 
 키노트 도입부의 마지막에서 Josh는 한 발 물러서서 Google의 전체 전략을 제시했습니다. Cutting-edge model인 Gemini와 Gemma가 가장 아래층에 있고, 그 위에 Antigravity 같은 agentic tools가 있으며, 그 위에는 사용자가 마법을 경험하는 다양한 플랫폼이 있고, 이 모든 것을 가능하게 하는 인프라가 함께 작동합니다. Google은 이 스택의 위아래에서 개발자를 돕는다는 전략을 분명히 했습니다.
 
----
-
-2. Building Agents
-------------------
+## 2. Building Agents
 
 ### 2.1 Logan Kilpatrick의 등장과 Agent의 활용 영역
 
@@ -243,10 +250,7 @@ Paige는 Agent 구축이 "단일 이벤트가 아닌 전체 라이프사이클"�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/002e3349-6f74-416b-858b-47237048c93f/image.png)
 
----
-
-3. Antigravity
---------------
+## 3. Antigravity
 
 ### 3.1 Anshul Ramachandran의 메시지
 
@@ -388,10 +392,7 @@ Agent를 매우 특화된 영역으로 밀어 넣기 위한 새로운 카테고�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2208c348-6b3b-4384-9d3c-d14cc014397b/image.png)
 
----
-
-4. Android
-----------
+## 4. Android
 
 ### 4.1 Florina Muntenescu와 Adarsh Fernando의 등장
 
@@ -561,10 +562,7 @@ Adarsh는 이 섹션을 다음과 같이 정리했습니다. Antigravity와 Andr
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9f008213-6973-4a12-a6f8-bda9aac1c158/image.png)
 
----
-
-5. Chrome
----------
+## 5. Chrome
 
 ### 5.1 Una Kravets의 비전
 
@@ -713,10 +711,7 @@ Una의 마무리 메시지는 강렬했습니다. 오늘 본 것은 단순한 �
 
 > "The future of the web is imagined by you, and supercharged by AI."
 
----
-
-6. Closing
-----------
+## 6. Closing
 
 ### 6.1 Josh Woodward의 마무리
 
@@ -744,10 +739,7 @@ Josh는 "지금처럼 빌드하기 좋은 시기는 없었다"고 강조하며, 
 
 Josh는 io.google에서 라이브스트림 세션과 향후 며칠간 출시될 on-demand 콘텐츠를 시청할 수 있다고 안내하며 키노트를 마무리했습니다. 마지막 한마디는 단순했습니다. "Thanks for coming and have an amazing I/O!"
 
----
-
-맺음말
----
+## 맺음말
 
 이번 Developer Keynote를 한 문장으로 요약하면 "개발자는 큰 아이디어에 집중하고, Agent가 무거운 실행을 맡는 시대의 도구가 모두 갖춰졌다"는 선언입니다. Gemma 4의 폭발적 확산을 시작점으로, Managed Agents가 Agent 빌드의 인프라 부담을 제거하고, Antigravity 2.0과 CLI가 Agent 오케스트레이션의 mission control 역할을 맡았으며, Android에는 Migration Assistant까지 포함된 풀스택 Agent 도구가 결합되었고, Chrome에는 Modern Web Guidance·WebMCP·HTML-in-Canvas·Chrome DevTools for Agents라는 네 개의 축이 동시에 자리 잡았습니다.
 

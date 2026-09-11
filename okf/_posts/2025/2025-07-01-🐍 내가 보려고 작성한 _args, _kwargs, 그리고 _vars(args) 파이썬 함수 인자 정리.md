@@ -1,15 +1,29 @@
 ---
+type: "Concept Note"
 title: "🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리"
+description: "위치 인자와 키워드 인자의 차이를 바탕으로 *args가 튜플, **kwargs가 딕셔너리로 인자를 받는 원리와 언패킹 규칙을 예제로 설명하고, argparse Namespace를 **vars(args)로 함수에 넘기는 패턴을 정리한다."
 date: "2025-07-01"
+tags:
+  - "Python"
+  - "개념정리"
+  - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/내가-보려고-작성한-args-kwargs-그리고-varsargs-파이썬-함수-인자-정리"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:22:25Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/내가-보려고-작성한-args-kwargs-그리고-varsargs-파이썬-함수-인자-정리"
+    title: "🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리"
+    author: "human:euisuk-chung"
+    last_modified: "2025-07-01"
+status: "stable"
 year: "2025"
 ---
 
-# 🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/55d70d64-25c2-480f-9502-58d3ce0fc76e/image.png)
 
-👋 들어가며
-------
+## 👋 들어가며
 
 Python으로 데이터를 다루다 보면 함수에 인자를 유연하게 넘겨야 하는 상황이 자주 생깁니다.
 
@@ -23,10 +37,7 @@ Python으로 데이터를 다루다 보면 함수에 인자를 유연하게 넘�
 
 하지만, 오랫동안 안 쓰다보면 종종 헷갈리는 경우가 있어, 이번 포스팅을 통해 이 세 가지 개념을 실제 예제와 함께 자세히 복습하며 정리해보겠습니다.
 
----
-
-🧱 기본 개념 정리
-----------
+## 🧱 기본 개념 정리
 
 ### (참고) 위치 인자 (Positional Argument)란?
 
@@ -80,8 +91,6 @@ print_args(1, 2, 3)
 * `*args`는 함수에 전달된 **여러 개의 위치 인자**를 하나의 튜플로 묶어줍니다.
 * 이름은 꼭 `args`일 필요는 없지만, 관례적으로 이렇게 사용합니다.
 
----
-
 ### (참고) 키워드 인자 (Keyword Argument)란?
 
 **✅ 정의**
@@ -132,8 +141,6 @@ print_kwargs(name="Alice", age=30)
 * `**kwargs`는 함수에 전달된 **여러 개의 키워드 인자**를 딕셔너리로 묶어줍니다.
 * 즉, `key=value` 형식의 인자들을 처리할 때 유용합니다.
 
----
-
 ### 정리
 
 | 구분 | 영어 명칭 | 전달 형식 | 순서 중요 여부 | 함수 내부 처리 | 예시 |
@@ -175,10 +182,7 @@ foo(1, 2, 3, a=10, b=20)
 
 -> 이걸 "알아서" 해주는 게 Python의 함수 호출 인터페이스의 **자동 언패킹 메커니즘**입니다.
 
----
-
-💻 실전 예제: `argparse` + `**vars(args)`
-------------------------------------
+## 💻 실전 예제: `argparse` + `**vars(args)`
 
 다음은 커맨드라인에서 인자를 받아 시계열 데이터를 생성하는 스크립트 예제입니다.
 
@@ -218,19 +222,13 @@ if __name__ == "__main__":
 * `vars(args)`는 이 Namespace 객체를 **딕셔너리로 변환**합니다.
 * `**vars(args)`를 통해 해당 딕셔너리를 함수에 언패킹하면 각 키워드를 인자로 넘길 수 있습니다.
 
----
-
-🧪 실습해보기
--------
+## 🧪 실습해보기
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/35a35a53-56cd-477f-ab70-8bbd3bdd87e4/image.png)
 
 위처럼 커맨드라인에서 옵션을 주면 자동으로 함수 인자에 매핑되어 넘겨집니다.
 
----
-
-🧠 마무리 요약
---------
+## 🧠 마무리 요약
 
 | 개념 | 설명 |
 | --- | --- |
@@ -240,10 +238,7 @@ if __name__ == "__main__":
 | `**` | 딕셔너리를 키워드 인자로 언패킹 |
 | `vars(args)` | Namespace → dict 변환 (argparse와 함께 자주 사용됨) |
 
----
-
-🪄 실무 팁
-------
+## 🪄 실무 팁
 
 * `argparse`를 쓸 땐 `**vars(args)` 패턴을 적극 활용하세요.
 * 함수에 인자가 많거나, 가변적인 경우 `**kwargs`를 함수 정의에 포함시키면 유지보수에 매우 유리합니다.

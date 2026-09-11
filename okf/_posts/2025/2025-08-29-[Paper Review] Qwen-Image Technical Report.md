@@ -1,12 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Qwen-Image Technical Report"
+description: "Qwen2.5-VL 인코더, 이중 디코더 VAE, MSRoPE를 적용한 MMDiT로 구성된 Qwen-Image의 아키텍처와 7단계 데이터 필터링, 텍스트 렌더링 합성 데이터, flow matching 사전학습과 DPO·GRPO 후속 학습을 정리한다."
 date: "2025-08-29"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Qwen"
+  - "Computer Vision"
+  - "Transformer"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-Image-Technical-Report"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:15:29Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-Image-Technical-Report"
+    title: "[Paper Review] Qwen-Image Technical Report"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-29"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] Qwen-Image Technical Report
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3ae570b0-1f5f-4b9d-9d9c-981a71f386a3/image.png)
 
@@ -18,8 +32,7 @@ WU, Chenfei, et al. Qwen-image technical report. arXiv preprint arXiv:2508.02324
 
 본 연구에서는 복잡한 텍스트 렌더링과 정밀한 이미지 편집에서 상당한 진보를 이룬 Qwen 시리즈의 이미지 생성 foundation model인 Qwen-Image를 제시합니다.
 
-1. 서론
------
+## 1. 서론
 
 text-to-image 생성(T2I)과 이미지 편집(TI2I)을 모두 포함하는 이미지 생성 모델은 현대 인공지능의 기본 구성 요소로 등장했습니다. 기계가 텍스트 프롬프트에서 시각적으로 매력적이고 의미적으로 일관된 콘텐츠를 합성하거나 수정할 수 있게 합니다. 지난 몇 년 동안 이 분야에서 놀라운 진전이 있었습니다. 특히 fine-grained semantic detail을 캡처하면서 고해상도 이미지 생성을 가능하게 하는 diffusion-based architecture의 출현과 함께 말입니다.
 
@@ -39,8 +52,7 @@ Qwen-Image의 주요 기여사항은 다음과 같이 요약됩니다:
 * **일관된 이미지 편집**: 강화된 multi-task training paradigm을 통해 Qwen-Image는 편집 작업 중 semantic meaning과 visual realism을 모두 보존하는 데 뛰어난 성능을 달성합니다.
 * **강력한 cross-benchmark 성능**: 여러 benchmark에서 평가한 결과, Qwen-Image는 다양한 생성 및 편집 태스크에서 기존 모델들을 지속적으로 능가하여 이미지 생성을 위한 강력한 foundation model을 확립합니다.
 
-2. 모델
------
+## 2. 모델
 
 이 섹션에서는 훈련 데이터와 훈련 세부사항에 대한 포괄적인 개요와 함께 Qwen-Image 모델의 아키텍처 설계를 제시합니다.
 
@@ -80,8 +92,7 @@ Qwen-Image는 텍스트와 이미지를 jointly 모델링하기 위해 Multimoda
 * 텍스트가 이미지의 대각선을 따라 연결된 것으로 개념화
 * 이미지 측면에서 resolution scaling 장점을 활용하면서 텍스트 측면에서 1D-RoPE와 기능적으로 동등함을 유지
 
-3. 데이터
-------
+## 3. 데이터
 
 ### 3.1 데이터 수집
 
@@ -148,8 +159,7 @@ captioning과 메타데이터 추출을 독립적인 태스크로 처리하는 �
 2. **Compositional Rendering in Contextual Scenes**: 합성 텍스트를 현실적인 시각적 맥락에 삽입하여 일상 환경에서의 모습을 모방합니다.
 3. **Complex Rendering in Structured Templates**: 복잡하고 구조화된 프롬프트를 따르는 모델의 능력을 향상시키기 위해 사전 정의된 템플릿의 프로그래밍적 편집에 기반한 합성 전략을 제안합니다.
 
-4. 훈련
------
+## 4. 훈련
 
 ### 4.1 Pre-training
 
@@ -231,8 +241,7 @@ text-to-image(T2I) 생성 외에도, text와 image 입력을 모두 포함하는
 * novel view synthesis
 * depth estimation과 같은 computer vision 태스크
 
-5. 실험
------
+## 5. 실험
 
 ### 5.1 인간 평가
 
@@ -311,8 +320,7 @@ Qwen-Image의 이미지 편집(TI2I) 능력을 종합적으로 평가하기 위�
 4. **연쇄 편집**: 전체 편집 체인을 통해 구조적 특징 보존
 5. **Novel View Synthesis**: 복잡한 편집 태스크에서 뛰어난 공간 및 semantic coherence
 
-6. 결론
------
+## 6. 결론
 
 본 논문에서는 복잡한 텍스트 렌더링과 정밀한 이미지 편집에서 주요한 진전을 달성한 Qwen 시리즈의 이미지 생성 foundation model인 Qwen-Image를 소개했습니다. 포괄적인 데이터 파이프라인을 구축하고 progressive curriculum learning 전략을 채택함으로써 Qwen-Image는 생성된 이미지 내에서 복잡한 텍스트를 렌더링하는 능력을 크게 향상시켰습니다.
 

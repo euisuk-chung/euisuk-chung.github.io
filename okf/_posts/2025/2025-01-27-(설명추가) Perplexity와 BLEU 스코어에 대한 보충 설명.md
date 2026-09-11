@@ -1,15 +1,25 @@
-﻿---
+---
+type: "Concept Note"
 title: "(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명"
+description: "『Easy! 딥러닝』 19쪽의 보충으로 Perplexity의 정의와 지수 -1/N을 쓰는 이유, BLEU의 n-그램 정밀도와 Brevity Penalty, 두 지표의 차이를 설명한다."
 date: "2025-01-27"
 tags:
+  - "NLP"
+  - "개념정리"
   - "도서리뷰"
+resource: "https://velog.io/@euisuk-chung/설명추가-Perplexity와-BLEU-스코어에-대한-상세-정리"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:36:52Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/설명추가-Perplexity와-BLEU-스코어에-대한-상세-정리"
+    title: "(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-27"
+status: "stable"
 year: "2025"
 ---
-
-# (설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명
-
-
-
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/748459ec-3899-4e1c-8cea-1f705a3e09db/image.png)
 
@@ -95,8 +105,6 @@ PP(W)=e−1Nlog⁡P(W)PP(W) = e^{-\frac{1}{N} \log P(W)}PP(W)=e−N1​logP(W)
 * 모델이 특정 문맥에서 단어를 얼마나 정확히 예측하는지 평가하여, 학습된 모델의 품질을 나타냅니다.
 * 예를 들어, 번역 모델, 음성 인식 모델 등에서 모델 성능을 정량적으로 비교하는 데 유용합니다.
 
----
-
 ### **BLEU (Bilingual Evaluation Understudy) Score**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1be64c56-8b4a-4bf6-92e2-6a82df5ccdc4/image.png)
@@ -178,8 +186,6 @@ BLEU=BP⋅exp⁡(∑n=1Nwn⋅log⁡Pn)BLEU = BP \cdot \exp \left( \sum\_{n=1}^{N
 
 * BLEU는 번역 품질을 평가하는 데 중점을 두며, Perplexity는 언어 모델의 일반적인 예측 성능을 측정합니다.
 * 두 지표는 상호 보완적으로 사용되며, 각각 다른 측면에서 모델 성능을 평가합니다.
-
----
 
 ### **요약**
 

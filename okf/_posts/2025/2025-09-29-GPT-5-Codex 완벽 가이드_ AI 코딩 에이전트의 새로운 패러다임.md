@@ -1,16 +1,29 @@
 ---
+type: "Guide"
 title: "GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임"
+description: "GPT-5-Codex의 에이전트형 코딩 특성과 'Less is More' 프롬프팅 원칙, Codex CLI 설치법과 시스템 프롬프트 섹션별 분석, SWE-bench 성능 지표와 기업 도입 사례를 정리한다."
 date: "2025-09-29"
 tags:
   - "OpenAI"
-  - "chatGPT"
+  - "AI Agent"
+  - "Prompt Engineering"
+  - "Vibe Coding"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/GPT-5-Codex-완벽-가이드-AI-코딩-에이전트의-새로운-패러다임"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:10:30Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/GPT-5-Codex-완벽-가이드-AI-코딩-에이전트의-새로운-패러다임"
+    title: "GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임"
+    author: "human:euisuk-chung"
+    last_modified: "2025-09-29"
+status: "stable"
 year: "2025"
 ---
 
-# GPT-5-Codex 완벽 가이드: AI 코딩 에이전트의 새로운 패러다임
-
-목차
---
+## 목차
 
 1. [GPT-5-Codex 혁명의 시작](#gpt-5-codex-%ED%98%81%EB%AA%85%EC%9D%98-%EC%8B%9C%EC%9E%91)
 2. [핵심 혁신: 에이전트형 모델의 등장](#%ED%95%B5%EC%8B%AC-%ED%98%81%EC%8B%A0-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%ED%98%95-%EB%AA%A8%EB%8D%B8%EC%9D%98-%EB%93%B1%EC%9E%A5)
@@ -21,10 +34,7 @@ year: "2025"
 7. [성능 검증과 기업 도입 사례](#%EC%84%B1%EB%8A%A5-%EA%B2%80%EC%A6%9D%EA%B3%BC-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%82%AC%EB%A1%80)
 8. [GPT-5-Codex와 함께하는 개발의 미래](#gpt-5-codex%EC%99%80-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%EA%B0%9C%EB%B0%9C%EC%9D%98-%EB%AF%B8%EB%9E%98)
 
----
-
-GPT-5-Codex 혁명의 시작
-------------------
+## GPT-5-Codex 혁명의 시작
 
 ![GPT-5-Codex 소개](https://velog.velcdn.com/images/euisuk-chung/post/4fc146af-7f84-4898-8fa4-33c758ebfdfc/image.png)
 
@@ -43,10 +53,7 @@ GPT-5-Codex 혁명의 시작
 * 작업 복잡도에 따른 적응형 추론 시간 조절
 * 실시간 코드베이스 분석 및 일관성 있는 구현
 
----
-
-핵심 혁신: 에이전트형 모델의 등장
--------------------
+## 핵심 혁신: 에이전트형 모델의 등장
 
 ### 실전 소프트웨어 엔지니어링 최적화
 
@@ -84,10 +91,7 @@ GPT-5-Codex의 가장 혁신적인 특징은 **작업 복잡도에 따른 자동
 * **하위 10 퍼센타일 (간단한 작업)**: GPT-5 대비 93.7% 적은 토큰 사용
 * **상위 10 퍼센타일 (복잡한 작업)**: GPT-5 대비 102.2% 더 많은 토큰 사용
 
----
-
-패러다임 전환: Less is More 철학
-------------------------
+## 패러다임 전환: Less is More 철학
 
 ![프롬프팅 철학 변화](https://velog.velcdn.com/images/euisuk-chung/post/a3bc5b19-74f3-4f3d-ab53-5f8d2d498f1f/image.png)
 
@@ -116,10 +120,7 @@ Codex CLI의 시스템 프롬프트는 GPT-5 프롬프트 대비 약 40% 수준�
 
 GPT-5-Codex 사용의 핵심은 **모델이 이미 충분히 똑똑하다는 것을 신뢰**하는 것입니다. 베스트 프랙티스를 강요하거나 단계별 프로세스를 지시하는 대신, **목표만 명확히 전달하면 모델이 최적의 방법을 찾습니다**.
 
----
-
-Codex 생태계와 실전 사용법
------------------
+## Codex 생태계와 실전 사용법
 
 ![Codex 생태계](https://velog.velcdn.com/images/euisuk-chung/post/31a2ccdb-aa5f-4ec1-bc9a-cfb9994a1c2d/image.png)
 
@@ -196,10 +197,7 @@ codex -i screenshot.png "Explain this error"
 * "@codex review for security vulnerabilities" 같은 특화된 리뷰
 * OpenAI에서 대부분의 PR을 Codex가 리뷰
 
----
-
-Codex CLI 시스템 프롬프트 완전 분석
-------------------------
+## Codex CLI 시스템 프롬프트 완전 분석
 
 Codex CLI의 기본 프롬프트를 섹션별로 상세 분석하여 효과적인 프롬프팅 전략을 이해해보겠습니다.
 
@@ -381,10 +379,7 @@ You are producing plain text that will later be styled by the CLI. Follow these 
 * **참조**: 클릭 가능한 경로, URI 사용 금지
 * **제안**: 논리적 다음 단계 간략 제시
 
----
-
-실전 프롬프팅 마스터 가이드
----------------
+## 실전 프롬프팅 마스터 가이드
 
 ### 버그 수정: 핵심만 전달
 
@@ -441,10 +436,7 @@ PR #342의 결제 처리 변경사항을 리뷰해주세요.
 * Preamble이나 요약 요청
 * 과도한 설명이나 맥락 정보
 
----
-
-성능 검증과 기업 도입 사례
----------------
+## 성능 검증과 기업 도입 사례
 
 ### 정량적 성능 지표
 
@@ -490,10 +482,7 @@ PR #342의 결제 처리 변경사항을 리뷰해주세요.
 
 > "AI가 실제로 코드베이스를 이해하면 무엇이 가능해지는지 다시 생각해 보게 하는 도구입니다." - Jonathon Lacher, 에이전틱 SDLC 리드
 
----
-
-GPT-5-Codex와 함께하는 개발의 미래
-------------------------
+## GPT-5-Codex와 함께하는 개발의 미래
 
 GPT-5-Codex는 AI 코딩 어시스턴트의 진화에서 중요한 전환점을 제시합니다. 핵심은 기존의 "더 많은 프롬프트가 더 좋은 결과"라는 직관을 버리고, 모델의 내재된 전문성을 신뢰하는 새로운 협업 방식을 수용하는 것입니다.
 

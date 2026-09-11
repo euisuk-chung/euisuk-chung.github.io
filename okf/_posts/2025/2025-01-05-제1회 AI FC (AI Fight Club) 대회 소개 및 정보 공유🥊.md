@@ -1,17 +1,30 @@
 ---
+type: "Blog Post"
 title: "제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊"
+description: "AIKive가 주최한 AI 이미지 창작 대회 AI FC의 참여 방법과 심사 기준을 정리하고, 직접 제출한 작품과 지인들의 작품에 사용한 생성 프롬프트를 공유한다."
 date: "2025-01-05"
+tags:
+  - "Prompt Engineering"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/제1회-AI-FC-AI-Fight-Club-대회-소개-및-참여후기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:24:15Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/제1회-AI-FC-AI-Fight-Club-대회-소개-및-참여후기"
+    title: "제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-05"
+status: "stable"
 year: "2025"
 ---
-
-# 제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊
 
 안녕하세요! 오늘은 AI 창작의 최전선에서 열린 ‘**2025 제1회 AI FC(AI Fight Club)**’ 대회 소개 및 제가 참여한 작품에 대해 이야기하려고 합니다.
 
 이 대회는 AI를 활용한 이미지 창작 대회로, “**나만의 FANTASY**”라는 자유 주제로 진행되고 있는데요. AI 기술을 활용한 창작 활동을 지원하는 플랫폼인 `AIKive`에서 주최했습니다.
 
-AIKive 플랫폼 소개
--------------
+## AIKive 플랫폼 소개
 
 **AIKive**는 AI 기술을 활용한 창작 활동을 지원하는 종합 AI 정보 플랫폼입니다.
 
@@ -23,10 +36,7 @@ AIKive 플랫폼 소개
 4. **AI 비디오 생성 플랫폼**: 텍스트만으로 개인화된 비디오를 생성할 수 있는 서비스를 운영합니다.
 5. **AI 애니메이션 제작 지원**: AI를 활용한 애니메이션 제작 기능을 제공합니다.
 
----
-
-AI FC 대회
---------
+## AI FC 대회
 
 ### AI FC 대회 참여 방법
 
@@ -42,8 +52,6 @@ AI FC 대회
 참가자들은 생성형 AI를 활용해 주제에 맞는 이미지를 제출하며, “나만의 FANTASY”를 AI 이미지로 표현하는 것이 핵심입니다.
 
 접수는 1월 16일까지 진행되며, 본선 진출작은 1월 20일에 발표됩니다. 최종 심사는 1월 31일에 열리니, 많은 관심 부탁드립니다! 저는 벌써 친구들이랑 못 참고 대회 시작 당일에 올려버렸어요...! (~~존버하고 올릴걸 ㅠ~~) **1인 1작품이랍니다!!**
-
----
 
 ### 심사 기준
 
@@ -65,10 +73,7 @@ AI FC 대회
 > * 링크 : <https://aikive.com/community/263>  
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/fbe165eb-6ec7-417d-96bc-e54bde2b5db5/image.png)
 
----
-
-작품 및 프롬프트 소개
-------------
+## 작품 및 프롬프트 소개
 
 이번 대회에서 제가 제출한 작품과 지인들의 창작물, 그리고 프롬프트를 소개합니다!
 
@@ -97,10 +102,7 @@ AI FC 대회
 
 저의 작품과 함께 지인들의 멋진 창작물도 감상해 보세요!
 
----
-
-추천 부탁드립니다! 🙇‍♂️
----------------
+## 추천 부탁드립니다! 🙇‍♂️
 
 여러분, 제가 열심히 만든 작품과 지인들의 작품이 마음에 드셨다면 꼭 추천 부탁드려요!
 

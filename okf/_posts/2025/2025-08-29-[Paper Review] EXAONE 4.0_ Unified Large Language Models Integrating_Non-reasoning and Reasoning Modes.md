@@ -1,22 +1,32 @@
 ---
-title: "[Paper Review] EXAONE 4.0: Unified Large Language Models Integrating
-Non-reasoning and Reasoning Modes"
+type: "Paper Review"
+title: "[Paper Review] EXAONE 4.0: Unified Large Language Models Integrating Non-reasoning and Reasoning Modes"
+description: "EXAONE 4.0 기술 보고서를 따라 3:1 Hybrid Attention과 QK-Reorder-LN, 14T 토큰 사전학습, Unified Mode SFT와 AGAPO 강화학습, SimPER 선호 학습, 벤치마크와 Reasoning Budget 실험을 분석한다."
 date: "2025-08-29"
 tags:
   - "EXAONE"
-  - "paper-review"
+  - "Paper Review"
+  - "LG"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-4.0-Unified-Large-Language-Models-IntegratingNon-reasoning-and-Reasoning-Modes"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:15:13Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-4.0-Unified-Large-Language-Models-IntegratingNon-reasoning-and-Reasoning-Modes"
+    title: "[Paper Review] EXAONE 4.0: Unified Large Language Models Integrating Non-reasoning and Reasoning Modes"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-29"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] EXAONE 4.0: Unified Large Language Models Integrating
-Non-reasoning and Reasoning Modes
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e106b46f-38f9-428c-82e7-d8872d22e773/image.png)
 
 > <https://arxiv.org/pdf/2507.11407>
 
-Introduction
-------------
+## Introduction
 
 LLM 생태계에서 가장 뚜렷한 트렌드 중 하나는 "빠른 응답"과 "깊은 추론"을 하나의 모델로 제공하는 Hybrid 모델의 부상입니다.
 
@@ -32,8 +42,7 @@ LG AI Research는 EXAONE이라는 자체 Foundation Model 시리즈를 개발해
 
 이 글에서는 EXAONE 4.0 Technical Report의 흐름을 따라, 아키텍처 설계 결정부터 Post-training 파이프라인, 벤치마크 성능까지 체계적으로 분석합니다.
 
-Model Configurations: 아키텍처의 핵심 변경점
-----------------------------------
+## Model Configurations: 아키텍처의 핵심 변경점
 
 ### Hybrid Attention — Global과 Sliding Window의 결합
 
@@ -88,8 +97,7 @@ EXAONE 4.0은 이 문제를 해결하기 위해 **QK-Reorder-LN**을 채택합�
 
 Tokenizer는 BBPE(Byte-level Byte Pair Encoding)를 사용하며, 102,400개의 Vocabulary를 한국어와 영어 토큰이 거의 동일한 비율로 공유합니다. 1.2B 모델은 파라미터 효율성을 위해 Tied Word Embedding(입력 Embedding과 출력 Projection이 같은 가중치를 공유하는 방식)을 사용합니다.
 
-Pre-training: 데이터 규모와 품질의 동시 강화
--------------------------------
+## Pre-training: 데이터 규모와 품질의 동시 강화
 
 EXAONE 4.0 32B 모델은 **14T(14조) 토큰**으로 Pretraining되었으며, 이는 EXAONE 3.5의 6.5T 대비 약 2배에 해당합니다. 1.2B 모델도 12T 토큰으로 학습되어 모델 크기 대비 상당히 많은 데이터를 소화했습니다. 투입된 연산량(FLOPs)은 32B 모델이 2.69×10242.69 \times 10^{24}2.69×1024, 1.2B 모델이 8.65×10228.65 \times 10^{22}8.65×1022입니다. 참고로 Pretraining은 모델이 대규모 텍스트 데이터로부터 언어의 패턴, 사실 지식, 추론 능력 등을 학습하는 초기 학습 단계로, 이후의 Fine-tuning과 구분됩니다.
 
@@ -97,8 +105,7 @@ EXAONE 4.0 32B 모델은 **14T(14조) 토큰**으로 Pretraining되었으며, �
 
 또한 최근 연구("Four Habits of Highly Effective STaRs")에서 추론 성능이 Pretraining 과정에서 학습된 Cognitive Behavior에 크게 영향을 받는다는 결과가 보고되었습니다. Cognitive Behavior란 모델이 텍스트를 생성할 때 보이는 사고 패턴 — 예를 들어 문제를 단계적으로 분해하거나, 가정을 검증하거나, 대안을 탐색하는 등의 행동 — 을 말합니다. 이러한 패턴은 주로 Pretraining 데이터에 포함된 문서(교과서, 학술 논문, 논리적 토론 등)로부터 학습됩니다. EXAONE 4.0은 이를 반영하여 Pretraining 단계에서부터 엄격한 Data Curation을 수행하여, 단순히 지식뿐 아니라 Post-training에서의 추론 성능까지 고려한 데이터 구성을 했다고 합니다.
 
-Context Length Extension: 4K에서 128K까지
--------------------------------------
+## Context Length Extension: 4K에서 128K까지
 
 EXAONE 4.0은 최대 128K 토큰의 Context Length를 지원합니다. Context Length란 모델이 한 번에 처리할 수 있는 입력 텍스트의 최대 길이를 의미합니다. 128K 토큰은 대략 영문 기준 약 300페이지 분량의 텍스트에 해당하며, 긴 문서 요약, 대량의 코드 분석, 여러 문서를 동시에 참조하는 QA 등에서 핵심적인 능력입니다.
 
@@ -110,8 +117,7 @@ Short-context 영역에서의 성능 저하를 방지하기 위해 신중한 데
 
 1.2B 모델은 64K 토큰까지 확장됩니다. 1B 파라미터 범위의 모델 대부분이 32K를 최대 지원하는 것을 감안하면, 이는 동급 대비 약 2배의 Context Length입니다.
 
-Post-training: 5단계 파이프라인
-------------------------
+## Post-training: 5단계 파이프라인
 
 Pretraining이 "원시적인 언어 능력"을 학습하는 단계라면, Post-training은 이 능력을 사용자의 지시를 따르고, 정확하게 추론하며, 인간의 선호에 맞게 응답하도록 정제하는 단계입니다. EXAONE 4.0의 Post-training은 5단계로 구성된 정교한 파이프라인을 거칩니다. 크게 SFT(Supervised Fine-Tuning) → RL(Reinforcement Learning) → Preference Learning의 3개 축으로 나뉩니다.
 
@@ -186,8 +192,7 @@ Preference Learning은 인간의 선호를 직접 학습하는 방법입니다. 
 
 **Stage 2**는 인간 정렬(Human Alignment)에 집중합니다. Preference Reward와 Language Consistency Reward를 결합합니다. REASONING 모드 데이터의 경우, 추론 과정(Thinking) 부분이 아닌 **최종 답변에 대해서만 Preference Labeling**을 수행하는 것이 중요한 설계 결정입니다. 사고 과정의 스타일보다는 최종적으로 사용자에게 제시되는 답변의 품질과 선호도에 집중하겠다는 의미입니다. 학습 안정성을 위해 Stage 1 데이터의 일부를 Stage 2에서 재사용합니다.
 
-Evaluation: 벤치마크 성능 분석
-----------------------
+## Evaluation: 벤치마크 성능 분석
 
 ### 평가 체계
 
@@ -247,15 +252,13 @@ Reasoning 토큰 수를 1K에서 64K까지 변화시키며 성능을 관찰한 �
 
 이 결과는 실제 서비스 배포 시 **32K Budget만으로도 대부분의 경우 충분한 성능을 확보**할 수 있음을 의미합니다. Reasoning Token이 줄어들면 추론 지연시간과 GPU 비용이 직접적으로 감소하므로, 이는 실시간 서비스에서의 비용 최적화에 바로 활용 가능한 인사이트입니다.
 
-Limitations
------------
+## Limitations
 
 논문에서 명시하는 한계점은 모든 LLM에 공통적인 것들을 포함합니다. 학습 데이터의 통계적 특성에 의존하여 부적절하거나 편향된(나이, 성별, 인종 등) 응답이 생성될 수 있으며, Knowledge Cut-off(2024년 11월) 이후의 정보는 반영되지 않습니다. 또한 확률 기반 텍스트 생성의 본질적 특성상 의미적/구문적으로 부정확한 문장이 생성될 가능성이 있습니다.
 
 라이선스는 **EXAONE AI Model License Agreement 1.2 - NC**로, 연구 및 교육 목적으로만 사용 가능합니다. 상업적 활용에는 LG AI Research와의 별도 라이선스 계약이 필요하며, 특히 경쟁 모델 개발에 EXAONE 4.0의 모델이나 Output을 사용하는 것도 명시적으로 금지되어 있습니다. 오픈소스(Apache 2.0, MIT 등)와는 다른 제한적 라이선스이므로, 활용 시 주의가 필요합니다.
 
-결론 및 시사점
---------
+## 결론 및 시사점
 
 EXAONE 4.0은 "하나의 모델로 두 가지 모드"라는 Hybrid 패러다임의 실효성을 입증합니다. 32B 모델이 Math/Coding에서 7배 큰 Qwen 3 235B를 능가하고, 1.2B 모델이 3B급 모델을 상회하는 결과는 아키텍처 설계(Hybrid Attention, QK-Reorder-LN)와 Data Curation(14T 토큰, 도메인별 맞춤 데이터), 그리고 AGAPO를 통한 RL 최적화의 종합적 효과를 보여줍니다.
 

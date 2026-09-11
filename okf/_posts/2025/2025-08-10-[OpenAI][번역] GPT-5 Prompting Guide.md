@@ -1,13 +1,26 @@
 ---
+type: "Product Update"
 title: "[OpenAI][번역] GPT-5 Prompting Guide"
+description: "OpenAI 공식 GPT-5 프롬프팅 가이드를 번역해 reasoning_effort와 verbosity 매개변수, 에이전트 적극성 조절, tool preamble, Cursor의 시스템 프롬프트 튜닝 사례와 메타프롬프팅 템플릿을 정리한다."
 date: "2025-08-10"
 tags:
+  - "Prompt Engineering"
   - "OpenAI"
-  - "chatGPT"
+  - "AI Agent"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI번역-GPT-5-Prompting-Guide"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:18:49Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI번역-GPT-5-Prompting-Guide"
+    title: "[OpenAI][번역] GPT-5 Prompting Guide"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-10"
+status: "stable"
 year: "2025"
 ---
-
-# [OpenAI][번역] GPT-5 Prompting Guide
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/aa92d106-f35c-44ea-a8d4-5a1eea74ac60/image.png)
 
@@ -31,18 +44,13 @@ year: "2025"
 
 하지만 항상 그렇듯이 **만능 프롬프트는 존재하지 않으며**, 문제에 대한 최적의 해결책을 찾기 위해 여기 제공된 기초를 바탕으로 실험을 실행하고 반복하는 것이 좋습니다.
 
----
-
-1. Agentic workflow predictability
-----------------------------------
+## 1. Agentic workflow predictability
 
 ### 1.1 에이전트 행동 제어
 
 GPT-5는 **툴 호출**, **지시 이행**, **긴 문맥 이해** 능력을 크게 강화하여, Agentic Application의 기본 모델로 적합합니다.
 
 특히 [Responses API](https://platform.openai.com/docs/api-reference/responses/create) 사용 시, 추론이 툴 호출 간에 지속(persist)되어 **효율성**과 **지능**이 향상됩니다.
-
----
 
 ### 1.2 Less Eagerness Prompting
 
@@ -135,8 +143,6 @@ Loop:
 
 핵심적인 맥락 수집 행동을 제한할 때는, 더 짧은 맥락 수집 단계를 만족시키기 쉽도록 모델에게 명시적인 **탈출구(escape hatch)**를 제공하는 것이 도움이 됩니다. 이는 일반적으로 위 예시의 `"완전히 정확하지 않을 수 있더라도"`와 같이 모델이 불확실성 하에서도 진행할 수 있도록 허용하는 조항의 형태로 나타납니다.
 
----
-
 ### 1.3 More Eagerness Prompting
 
 반대로, 모델의 자율성을 장려하고 tool-calling 지속성을 높이며, 명확화 질문이나 사용자에게 다시 되돌리는 상황의 발생을 줄이고 싶다면, `reasoning_effort`를 높이고 다음과 같은 프롬프트를 사용하여 지속성과 철저한 작업 완료를 장려하는 것을 권장합니다:
@@ -173,8 +179,6 @@ Loop:
 
 * 예를 들어, 쇼핑용 도구 세트에서는 결제 및 지불 도구가 사용자 명확화를 요구하는 불확실성 임계값을 명시적으로 낮게 설정해야 하는 반면, 검색 도구는 매우 높은 임계값을 가져야 합니다.
 * 마찬가지로 코딩 설정에서는 파일 삭제 도구가 grep 검색 도구보다 훨씬 낮은 임계값을 가져야 합니다.
-
----
 
 ### 1.4 Tool Preambles(도구 사전 설명) 사용법
 
@@ -250,8 +254,6 @@ Loop:
   ],
 ```
 
----
-
 ### 1.5 Reasoning Effort (추론 강도)
 
 모델이 얼마나 깊이 생각하고 얼마나 적극적으로 도구를 호출할지를 제어하는 `reasoning_effort` 매개변수를 제공합니다.
@@ -271,8 +273,6 @@ Loop:
 
 > <https://platform.openai.com/docs/guides/reasoning>
 
----
-
 ### 1.6 Responses API를 통한 추론 맥락 재사용
 
 GPT-5를 사용할 때 개선된 에이전트 플로우, 낮은 비용, 그리고 애플리케이션에서 더 효율적인 토큰 사용을 실현하기 위해 `Responses API` 사용을 강력히 권장합니다.
@@ -289,10 +289,7 @@ Chat Completions API 대신 Responses API를 사용할 때 평가에서 통계�
 >   + ZDR을 적용한 자동화 플랫폼에서는 기본적으로 **민감한 데이터를 저장하지 않으며**, 필요할 때 실시간으로 데이터를 불러와 사용한 뒤 바로 데이터를 삭제합니다.
 >   + 이를 통해, 민감한 정보가 플랫폼 내에 남지 않도록 하여 **보안 및 프라이버시 리스크를 최소화**합니다. 명시적으로 저장이 필요한 경우에만 예외적으로 데이터를 보관하도록 설정할 수 있습니다.
 
----
-
-2. Maximizing coding performance, from planning to execution
-------------------------------------------------------------
+## 2. Maximizing coding performance, from planning to execution
 
 GPT-5는 **코딩 역량**에서 모든 최첨단 모델을 선도합니다. 대규모 코드베이스에서 **버그를 수정**하고, **큰 diff를 처리**하며, **다중 파일 리팩토링**이나 **대규모 새 기능을 구현**할 수 있습니다. 또한, 처음부터 완전히 **새로운 앱을 구현**하는 데 탁월하며, 프론트엔드와 백엔드 구현을 모두 다룹니다.
 
@@ -309,8 +306,6 @@ GPT-5는 엄격한 구현 능력과 함께 뛰어난 **기본 심미적 감각�
 * **아이콘**: Material Symbols, Heroicons, Lucide
 * **애니메이션**: Motion
 * **폰트**: San Serif, Inter, Geist, Mona Sans, IBM Plex Sans, Manrope
-
----
 
 ### 2.2 Zero-to-one 앱 생성 (Self-Reflection)
 
@@ -338,8 +333,6 @@ GPT-5는 한 번의 작업으로 애플리케이션을 구축하는 데 매우 �
 - 마지막으로, 이 루브릭을 활용해 내부적으로 최고의 솔루션을 구상하고 반복 개선한다. 모든 항목에서 최고점을 달성하지 못하면 다시 시작한다.
 </self_reflection>
 ```
-
----
 
 ### **2.3 기존 코드베이스와 일관성 유지**
 
@@ -440,8 +433,6 @@ GPT-5는 기본적으로 **기존 코드베이스를 분석하여 스타일과 �
 </ui_ux_best_practices>
 <code_editing_rules>
 ```
-
----
 
 ### **2.4 프로덕션에서의 협업 코딩- Cursor 튜닝**
 
@@ -597,10 +588,7 @@ GPT-5는 직접적이고 명시적인 지침에 잘 반응하며 Cursor 팀은 �
 * 여기에는 장황함 제어, 주관적인 코드 스타일 선호도, 엣지 케이스에 대한 민감성과 같은 영역이 포함됩니다.
 * Cursor는 사용자가 자신만의 [커스텀 Cursor 규칙](https://docs.cursor.com/en/context/rules)을 구성할 수 있도록 허용하는 것이 GPT-5의 향상된 조정 가능성으로 특히 효과적이라는 것을 발견했으며, 이를 통해 사용자에게 더 개인화된 경험을 제공했습니다.
 
----
-
-**3. Optimizing intelligence and instruction-following**
---------------------------------------------------------
+## **3. Optimizing intelligence and instruction-following**
 
 ### **3.1 조정(Steering)**
 
@@ -611,8 +599,6 @@ GPT-5는 직접적이고 명시적인 지침에 잘 반응하며 Cursor 팀은 �
 이전 추론 모델에서와 같이 `reasoning_effort`(eg. o3)를 제어할 수 있는 것 외에도, GPT-5에서는 사고의 길이가 아닌 모델의 최종 답변 길이에 영향을 주는 `verbosity`라는 새로운 API 매개변수를 도입했습니다.
 
 GPT-5는 전역 기본값에서 벗어나고 싶은 특정 맥락에서 프롬프트의 자연어 verbosity 재정의에 반응하도록 훈련되었습니다. 위의 Cursor 예시처럼 전역적으로 낮은 verbosity를 설정하고 코딩 도구에만 높은 verbosity를 지정하는 것이 그러한 맥락의 주요 예입니다.
-
----
 
 ### **3.2 Instruction following**
 
@@ -686,8 +672,6 @@ Eg. 다음과 같이 모순을 수정할 수 있습니다.:
 
 이미 여러 초기 사용자들이 그러한 검토를 수행하여 핵심 프롬프트 라이브러리에서 모호함과 모순을 발견했습니다. 이를 제거하는 것이 GPT-5 성능을 극적으로 간소화하고 개선했습니다. 이러한 유형의 문제를 식별하는 데 도움이 되도록 우리의 [프롬프트 최적화 도구](https://platform.openai.com/chat/edit?optimize=true)에서 프롬프트를 테스트하는 것을 권장합니다. (위 prompt optimizer tool 참고)
 
----
-
 ### **3.3 최소 추론(Minimal Reasoning)**
 
 GPT-5에서 처음으로 **최소 추론 강도(minimal reasoning effort)를 도입**합니다. 이는 추론 모델 패러다임의 이점을 여전히 얻으면서도 가장 빠른 옵션입니다. 이것이 **지연 시간에 민감한 사용자와 현재 GPT-4.1 사용자들에게 최고의 업그레이드**라고 생각합니다.
@@ -726,8 +710,6 @@ You must plan extensively in accordance with the workflow steps before making su
 함수 호출 전에 워크플로 단계에 따라 충분히 계획을 세우고, 각 함수 호출 결과를 철저히 반영하여 사용자의 요청과 관련된 모든 하위 요청이 완전히 해결되었는지 확인하십시오.
 ```
 
----
-
 ### **3.4 메타프롬프팅(Metaprompting)**
 
 마지막으로 **메타적인 관점에서 마무리**하자면, 초기 테스터들은 GPT-5를 자신을 위한 메타 프롬프터로 사용하여 큰 성공을 거두었습니다.
@@ -756,26 +738,17 @@ The desired behavior from this prompt is for the agent to [DO DESIRED BEHAVIOR],
 이 프롬프트로부터 원하는 동작은 에이전트가 [원하는 동작을 수행]하는 것이지만, 대신 [원하지 않는 동작을 수행]합니다. 기존 프롬프트를 가능한 한 많이 그대로 유지하면서, 에이전트가 이러한 단점을 더 일관되게 해결하도록 격려하기 위해 수행할 최소한의 편집/추가사항은 무엇입니까?
 ```
 
----
-
-**4. 부록. Appendix**
--------------------
-
----
+## **4. 부록. Appendix**
 
 ### **4.1 SWE-Bench 개발자 지침**
 
 * `apply_patch` 명령으로 코드 변경
 * 모든 변경 사항 철저 검증
 
----
-
 ### **4.2 Agentic coding tool definitions**
 
 * **Set 1**: `apply_patch`, `read_file`, `list_files`, `find_matches`
 * **Set 2**: `run`, `send_input`
-
----
 
 ### **4.3 Domain-specific minimal reasoning instructions (TauBench-Retail)**
 
@@ -783,18 +756,13 @@ The desired behavior from this prompt is for the agent to [DO DESIRED BEHAVIOR],
 * 사용자 인증 필수
 * 승인 없는 데이터 변경 금지
 
----
-
 ### **4.4 Terminal-Bench prompt**
 
 * 컨테이너 환경에서의 안전한 코드 수정 워크플로
 * 느린 명령(`ls -R`, `find`, `grep`) 대신 `rg` 사용
 * 코드 스타일 일관성 유지
 
----
-
-🏁 맺음말
------
+## 🏁 맺음말
 
 이번 정리는 GPT-5를 단순한 대화형 모델이 아닌, **완전한 에이전트**로 활용하기 위한 핵심 프롬프트 패턴과 운영 기법을 모두 담고 있습니다.
 

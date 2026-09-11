@@ -1,10 +1,24 @@
 ---
+type: "Guide"
 title: "Google NotebookLM: 나만의 AI 지식 비서"
+description: "Google NotebookLM의 출처 인용 기반 문서 Q&A, Notebook Guide, AI 팟캐스트 오디오 오버뷰, FAQ·학습 가이드 자동 생성 기능을 소개하고 7단계 사용법과 추천 프롬프트를 정리한다."
 date: "2025-04-11"
+tags:
+  - "Google"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/Google-NotebookLM-나만의-AI-지식-비서"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:28:18Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Google-NotebookLM-나만의-AI-지식-비서"
+    title: "Google NotebookLM: 나만의 AI 지식 비서"
+    author: "human:euisuk-chung"
+    last_modified: "2025-04-11"
+status: "stable"
 year: "2025"
 ---
-
-# Google NotebookLM: 나만의 AI 지식 비서
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a8d39129-d08c-4361-83dd-613f3cb6f180/image.png)
 
@@ -18,10 +32,7 @@ year: "2025"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/cb693b79-0086-4f43-9406-0116835f542b/image.png)
 
----
-
-📌 NotebookLM이란?
----------------
+## 📌 NotebookLM이란?
 
 **NotebookLM**은 Google이 실험적으로 개발한 **AI-first 노트북 플랫폼**입니다. 사용자가 업로드한 문서들을 학습하고, 해당 내용을 기반으로 AI가 질의응답, 요약, 콘텐츠 생성 등을 지원하며, 마치 나만의 문서 비서처럼 작동합니다. 기존 노트 앱들과 달리, 단순한 기록의 기능을 넘어서 지식 구조화, 학습 보조, 아이디어 확장까지 가능한 도구입니다.
 
@@ -37,10 +48,7 @@ NotebookLM의 가장 큰 특징은 처음부터 **AI 중심(AI-first)**으로 �
 
 특히 최근에는 유튜브 영상, 블로그 포스트, 슬라이드, 정부 보고서 등 **다양한 형식의 정보원**을 업로드한 뒤 **하나의 노트북에서 통합 분석**할 수 있게 되어, 정보 통합 도구로서도 큰 주목을 받고 있습니다.
 
----
-
-🧠 주요 기능
--------
+## 🧠 주요 기능
 
 ### 1. 📄 문서 요약 및 질문 응답 (Q&A)
 
@@ -95,10 +103,7 @@ NotebookLM은 생성된 AI 응답이나 사용자의 입력 내용을 노트로 
 
 이외에도 사용자가 원하는 문서 형식을 직접 프롬프트로 지정하여 다양한 형태로 생성할 수 있습니다.
 
----
-
-🧪 실습 예시: 단계별 사용 가이드
--------------------
+## 🧪 실습 예시: 단계별 사용 가이드
 
 ### 1단계. NotebookLM 접속 및 노트북 생성
 
@@ -136,10 +141,7 @@ NotebookLM은 생성된 AI 응답이나 사용자의 입력 내용을 노트로 
 * “Generate Podcast” 클릭 → 자동 오디오 생성
 * 대화 내용은 저장 및 재생 가능
 
----
-
-✍️ 추천 프롬프트 예시
--------------
+## ✍️ 추천 프롬프트 예시
 
 * “이 문서의 내용을 3문단으로 요약해줘.”
 * “타임라인 형식으로 문서를 정리해줘.”
@@ -147,10 +149,7 @@ NotebookLM은 생성된 AI 응답이나 사용자의 입력 내용을 노트로 
 * “PDF 문서 요약해서 회의용 브리핑 만들어줘.”
 * “이 블로그 글에서 마케팅 전략의 강점과 약점을 비교해줘.”
 
----
-
-✅ 마치며
------
+## ✅ 마치며
 
 NotebookLM은 AI와 문서가 실시간으로 상호작용하는 **차세대 지식 작업 도구**입니다. 단순한 메모 앱을 넘어, 복잡한 문서를 요약하고, AI와의 대화로 통찰을 얻으며, 오디오로 정보를 습득할 수 있는 새로운 경험을 제공합니다.
 

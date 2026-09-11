@@ -1,12 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
+description: "Whisper 인코더와 Qwen-7B를 결합해 30개 이상의 오디오 작업을 계층적 태그 기반 멀티태스크 프레임워크로 공동 학습한 Qwen-Audio의 구조와 단어 단위 타임스탬프(SRWT) 효과, 벤치마크 결과를 정리한다."
 date: "2025-08-29"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Qwen"
+  - "딥러닝"
+  - "Transformer"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-Audio-Advancing-Universal-Audio-Understanding-via-Unified-Large-Scale-Audio-Language-Models"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:15:45Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-Audio-Advancing-Universal-Audio-Understanding-via-Unified-Large-Scale-Audio-Language-Models"
+    title: "[Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-29"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/886942db-9c26-422a-831a-3dd7e89263a4/image.png)
 
@@ -16,8 +30,7 @@ year: "2025"
 CHU, Yunfei, et al. Qwen-audio: Advancing universal audio understanding via unified large-scale audio-language models. arXiv preprint arXiv:2311.07919, 2023.
 ```
 
-Abstract
---------
+## Abstract
 
 최근 instruction-following audio-language 모델들이 인간과의 오디오 상호작용에서 광범위한 관심을 받고 있습니다. 그러나 다양한 오디오 유형과 작업을 처리할 수 있는 사전 훈련된 오디오 모델의 부재가 이 분야의 발전을 저해하고 있습니다. 결과적으로 기존의 대부분의 연구들은 제한된 범위의 상호작용 기능만을 지원할 수 있었습니다.
 
@@ -29,8 +42,7 @@ Abstract
 
 주목할 점은 Qwen-Audio가 작업별 fine-tuning 없이도 다양한 벤치마크 작업에서 인상적인 성능을 달성하여 기존 모델들을 능가한다는 것입니다. Qwen-Audio의 기능을 기반으로, 우리는 다양한 오디오와 텍스트 입력을 허용하고 multi-turn dialogue를 가능하게 하며 다양한 오디오 중심 시나리오를 지원하는 Qwen-Audio-Chat을 추가로 개발했습니다.
 
-1. Introduction
----------------
+## 1. Introduction
 
 Large Language Models (LLMs)는 강력한 지식 보존, 복잡한 추론 및 문제 해결 능력으로 인해 일반 인공지능(AGI) 분야의 발전을 크게 촉진했습니다. 그러나 언어 모델은 인간처럼 이미지나 오디오와 같은 비텍스트 modality를 인식하는 능력이 부족합니다.
 
@@ -62,8 +74,7 @@ Qwen-Audio의 기능을 활용하여, 우리는 supervised instruction fine-tuni
 
 • 실험 결과는 Qwen-Audio가 작업별 fine-tuning 없이도 다양한 벤치마크 작업에서 인상적인 성능을 달성하여 기존 모델들을 능가한다는 것을 보여줍니다. 특히, Qwen-Audio는 Aishell1, cochlscene, ClothoAQA, VocalSound의 테스트 셋에서 최첨단 결과를 달성합니다.
 
-2. Related Work
----------------
+## 2. Related Work
 
 ### Multi-task Audio-Text Learning
 
@@ -97,8 +108,7 @@ SALMMON은 텍스트 encoder와 speech encoder를 모두 활용하여 다양한 
 
 본 연구에서 Qwen-Audio는 텍스트 대화 능력을 보존하면서 오디오 입력을 인식하고 이해할 수 있는 통합된 audio-text multi-task multilingual LLMs 훈련을 목표로 합니다. Qwen-Audio는 모든 오디오에 대해 단일 encoder를 사용하고, 자연음 탐지, 인간 음성 인식 및 grounding, 오디오 캡션 작업과 같은 다양한 작업을 지원하기 위해 대규모 end-to-end 훈련을 통해 오디오와 텍스트 modality 간의 격차를 연결합니다.
 
-3. Methodology
---------------
+## 3. Methodology
 
 이 섹션은 범용 오디오 이해와 인간 지시사항을 기반으로 한 유연한 상호작용을 위해 설계된 Qwen-Audio와 Qwen-Audio-Chat의 세부사항을 제공합니다. Qwen-Audio와 Qwen-Audio-Chat의 모델 구조는 먼저 Section 3.1에서 제시됩니다.
 
@@ -160,8 +170,7 @@ multi-audio dialogue와 여러 오디오 입력을 효과적으로 처리하기 
 
 multi-turn dialogue 내에서 오디오와 순수 텍스트 modality 모두로부터 다양한 입력을 촉진하기 위해, 우리는 이 훈련 과정에서 위에서 언급한 audio-centric instruction 데이터와 순수 텍스트 instruction 데이터의 조합을 사용합니다. 이 접근 방식을 통해 모델이 다양한 형태의 입력을 원활하게 처리할 수 있습니다. instruction tuning 데이터의 총량은 20k입니다.
 
-4. Experiments
---------------
+## 4. Experiments
 
 ### 4.1 Setup
 
@@ -197,15 +206,13 @@ Figure 2에 묘사된 예시 사례를 통해 Qwen-Audio-Chat의 대화 능력�
 
 Table 4와 Table 5에 결과가 나타나 있습니다: SRWT로 훈련된 모델들이 자동 음성 인식과 자연음 QA 및 Music QA를 포함한 오디오 질문 답변 작업에서 우수한 성능을 달성합니다. 이러한 결과는 일반적인 오디오 신호 grounding 능력을 향상시키고 이후 소리와 음악 신호 QA 작업의 성능을 개선하기 위해 세밀한 word-level 타임스탬프를 통합하는 효과를 강조합니다.
 
-5. Conclusion
--------------
+## 5. Conclusion
 
 본 논문에서는 범용 오디오 이해 능력을 갖춘 대규모 audio-language 모델 세트인 Qwen-Audio 시리즈를 제시합니다. 공동 훈련을 위해 다양한 종류의 오디오를 통합하기 위해, 우리는 유사한 작업들 간의 지식 공유를 촉진하고 서로 다른 텍스트 형식으로 인한 one-to-many 매핑 문제를 방지하는 통합된 multi-task 학습 framework를 제안합니다.
 
 작업별 fine-tuning 없이도, 결과적인 Qwen-Audio 모델들은 다양한 벤치마크에서 이전 연구들을 능가하여 범용 오디오 이해 능력을 보여줍니다. supervised instruction finetuning을 통해, Qwen-Audio-Chat은 인간 의도에 맞춘 강력한 능력을 보여주며, 오디오와 텍스트 입력 모두로부터 다국어 및 multi-turn dialogue를 지원합니다.
 
-6. Acknowledgements
--------------------
+## 6. Acknowledgements
 
 Jinze Bai, Shuai Bai, Peng Wang, Sinan Tan, Shijie Wang와의 통찰력 있는 토론에 감사를 표합니다. 이 프로젝트의 지원에 대해 Juan Zhu, Junyang Lin, Siqi Zheng, Jiaming Wang, Zhihao Du에게 감사드립니다.
 

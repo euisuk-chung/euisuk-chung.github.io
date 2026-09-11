@@ -1,12 +1,25 @@
 ---
+type: "Conference Recap"
 title: "NVIDIA GTC 2026 키노트 완벽 정리: Inference Inflection부터 Physical AI까지"
+description: "Jensen Huang의 GTC 2026 키노트를 발표 순서대로 따라가며 CUDA Flywheel, Inference Inflection, Vera Rubin과 Groq 통합, OpenClaw·NemoClaw, Physical AI 로보틱스 발표를 정리합니다."
 date: "2026-03-17"
 tags:
-  - "Nvidia"
+  - "NVIDIA"
+  - "Conference"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/NVIDIA-GTC-2026-키노트-완벽-정리-Inference-Inflection부터-Physical-AI까지"
+generated:
+  by: "process:velog-sync"
+  at: "2026-06-01T10:55:04Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/NVIDIA-GTC-2026-키노트-완벽-정리-Inference-Inflection부터-Physical-AI까지"
+    title: "NVIDIA GTC 2026 키노트 완벽 정리: Inference Inflection부터 Physical AI까지"
+    author: "human:euisuk-chung"
+    last_modified: "2026-03-17"
+status: "stable"
 year: "2026"
 ---
-
-# NVIDIA GTC 2026 키노트 완벽 정리: Inference Inflection부터 Physical AI까지
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/78815564-9efb-449c-8f6f-35502efab494/image.png)
 
@@ -16,10 +29,7 @@ year: "2026"
 
 이 글에서는 키노트 발표 순서를 그대로 따라가며, 핵심 내용을 빠짐없이 정리합니다.
 
----
-
-1. CUDA의 20년, 그리고 Flywheel 효과
------------------------------
+## 1. CUDA의 20년, 그리고 Flywheel 효과
 
 Jensen은 키노트의 시작을 **CUDA의 20주년 기념**으로 열었습니다. CUDA는 SIMT(Single Instruction Multi-Threaded) 아키텍처를 기반으로, Scalar 코드를 멀티스레드 애플리케이션으로 쉽게 변환할 수 있게 설계된 혁명적인 발명입니다. 최근에는 Tensor Core 프로그래밍을 돕기 위한 Tile 기능이 추가되었고, 수천 개의 도구, 컴파일러, 프레임워크, 라이브러리가 오픈소스로 제공되고 있습니다.
 
@@ -33,10 +43,7 @@ Jensen은 NVIDIA 전략의 핵심을 하나의 차트로 설명했습니다. 바
 
 핵심 메시지는 명확합니다. NVIDIA는 소프트웨어를 지속적으로 업데이트함으로써, 동일한 하드웨어에서 **최초 도입 시의 성능 향상(First-time Pop)** 뿐 아니라 **시간에 따른 지속적 비용 절감**까지 제공한다는 것입니다.
 
----
-
-2. GeForce에서 Neural Rendering까지: 25년의 그래픽스 여정
----------------------------------------------
+## 2. GeForce에서 Neural Rendering까지: 25년의 그래픽스 여정
 
 Jensen은 CUDA의 기원을 25년 전 GeForce까지 거슬러 올라갔습니다.
 
@@ -49,10 +56,7 @@ Jensen은 CUDA의 기원을 25년 전 GeForce까지 거슬러 올라갔습니다
 
 Jensen은 이 "Structured Data + Generative AI" 융합 컨셉이 산업 전반에 걸쳐 반복될 것이라고 강조했습니다.
 
----
-
-3. 데이터 처리의 혁신: cuDF, cuVS, 그리고 클라우드 파트너십
-----------------------------------------
+## 3. 데이터 처리의 혁신: cuDF, cuVS, 그리고 클라우드 파트너십
 
 ### 3.1 Structured Data와 Unstructured Data
 
@@ -84,10 +88,7 @@ Jensen은 NVIDIA와 주요 클라우드 서비스 제공자(CSP)들의 관계를
 * **CoreWeave**: 세계 최초의 AI Native Cloud로, GPU 호스팅만을 위해 설계된 회사입니다.
 * **Palantir + Dell**: 3사가 협력하여 에어갭(Air-gapped) 환경, 온프레미스, 현장 어디서든 배포 가능한 AI 플랫폼을 구축했습니다.
 
----
-
-4. Vertically Integrated, Horizontally Open
--------------------------------------------
+## 4. Vertically Integrated, Horizontally Open
 
 Jensen은 NVIDIA의 정체성을 **"수직적으로 통합되었지만, 수평적으로 개방된"** 회사라고 정의했습니다.
 
@@ -95,10 +96,7 @@ Accelerated Computing의 핵심은 "Application Acceleration"입니다. CPU가 �
 
 NVIDIA는 애플리케이션과 도메인의 알고리즘을 이해하고, 데이터센터/클라우드/온프레미스/엣지/로보틱스 등 다양한 배포 환경에 맞게 최적화합니다. 동시에, 이 기술을 세계의 모든 플랫폼에 통합하여 개방합니다.
 
----
-
-5. 산업별 영향력과 AI Native 기업의 부상
-----------------------------
+## 5. 산업별 영향력과 AI Native 기업의 부상
 
 ### 5.1 버티컬 산업
 
@@ -132,10 +130,7 @@ Jensen은 NVIDIA를 "알고리즘 회사"라고 표현하며, 이러한 도메�
 
 지난 2년간 AI Native 기업에 대한 벤처 투자가 \$150B(역사상 최대)에 달했습니다. 투자 규모도 수백만 달러에서 수억~수십억 달러로 급증했습니다. OpenAI, Anthropic을 비롯한 수많은 AI Native 기업들이 탄생했고, PC 혁명, 인터넷 혁명, 모바일/클라우드 혁명에 이은 새로운 플랫폼 전환기의 시작을 알리고 있습니다.
 
----
-
-6. AI의 3대 Inflection과 Inference Inflection의 도래
-----------------------------------------------
+## 6. AI의 3대 Inflection과 Inference Inflection의 도래
 
 Jensen은 지난 2년간 AI에서 일어난 세 가지 결정적 전환점을 설명했습니다.
 
@@ -151,10 +146,7 @@ Jensen은 지난 2년간 AI에서 일어난 세 가지 결정적 전환점을 �
 
 Jensen은 작년 GTC에서 2026년까지 \$500B의 고신뢰 수요를 전망했는데, 올해는 **2027년까지 최소 \$1T(1조 달러)** 의 수요를 확인했다고 발표했습니다.
 
----
-
-7. 2025년 Inference의 해: Blackwell의 성과
-------------------------------------
+## 7. 2025년 Inference의 해: Blackwell의 성과
 
 2025년은 NVIDIA의 "Inference의 해"였습니다. Hopper가 전성기에 있을 때 과감하게 아키텍처를 재설계하여, NVLink 8에서 NVLink 72로 확장하고, 시스템을 완전히 Disaggregate했습니다.
 
@@ -171,10 +163,7 @@ Jensen은 Token Factory라는 개념을 도입했습니다. 데이터센터는 �
 
 실제로 Fireworks, Together 등의 Inference 서비스 제공 업체에 NVIDIA 소프트웨어 업데이트를 적용한 결과, 동일 시스템에서 약 700 tokens/sec에서 약 5,000 tokens/sec로 **7배 향상**되었습니다.
 
----
-
-8. Vera Rubin: 차세대 AI 슈퍼컴퓨터 플랫폼
--------------------------------
+## 8. Vera Rubin: 차세대 AI 슈퍼컴퓨터 플랫폼
 
 ### 8.1 10년의 아키텍처 진화
 
@@ -230,10 +219,7 @@ Blackwell → Vera Rubin으로의 전환은 동일 전력에서 **5배의 수익
 
 Samsung이 Groq LP30 칩을 제조하며, Q3에 출하 예정입니다. Vera Rubin RC(Research Chip)는 이미 Microsoft Azure에서 가동 중입니다.
 
----
-
-9. 로드맵: Rubin Ultra에서 Feynman까지
--------------------------------
+## 9. 로드맵: Rubin Ultra에서 Feynman까지
 
 ### 9.1 현재 ~ 근미래
 
@@ -251,10 +237,7 @@ Samsung이 Groq LP30 칩을 제조하며, Q3에 출하 예정입니다. Vera Rub
 
 Jensen은 Copper, Optical Scale-up, Optical Scale-out 모두가 필요하며, 모든 방식의 용량을 대폭 늘려야 한다고 강조했습니다.
 
----
-
-10. AI Factory 플랫폼: NVIDIA DGX
-------------------------------
+## 10. AI Factory 플랫폼: NVIDIA DGX
 
 NVIDIA는 칩 회사에서 AI Factory 회사로 진화했습니다. AI Factory 내부에서 낭비되는 전력을 최소화하기 위해, **NVIDIA DGX 플랫폼**을 만들었습니다.
 
@@ -268,10 +251,7 @@ Digital Twin이 운영자가 되어, AI Agent가 DGX Max-Q와 협력하여 인�
 
 또한 **Vera Rubin Space 1**이라는 우주용 컴퓨터도 발표했습니다. Thor 칩이 이미 방사선 인증을 받아 위성에 탑재되어 있으며, 향후 우주에 데이터센터를 구축할 계획입니다.
 
----
-
-11. OpenClaw: Agentic AI의 Linux
--------------------------------
+## 11. OpenClaw: Agentic AI의 Linux
 
 키노트의 가장 중요한 발표 중 하나는 **OpenClaw**에 대한 NVIDIA의 지원 발표였습니다. Peter Steinberger가 개발한 OpenClaw는 인류 역사상 가장 빠르게 성장한 오픈소스 프로젝트로, 불과 몇 주 만에 Linux가 30년간 달성한 것을 넘어섰습니다.
 
@@ -301,10 +281,7 @@ NVIDIA는 Peter Steinberger와 협력하여 OpenClaw를 Enterprise 환경에 적
 * **네트워크 가드레일 + 프라이버시 라우터**: Agent의 행동 범위를 안전하게 제한
 * **SaaS 회사의 Policy Engine 연결**: 기존 보안 정책을 NemoClaw에 연결 가능
 
----
-
-12. NVIDIA Open Model Initiative
---------------------------------
+## 12. NVIDIA Open Model Initiative
 
 NVIDIA는 모든 AI 도메인에서 Frontier 수준의 오픈 모델을 제공하고 있습니다. 6개의 오픈 Frontier 모델 패밀리와 학습 데이터/레시피/프레임워크를 공개합니다.
 
@@ -323,10 +300,7 @@ Nemotron 4를 더 발전시키기 위한 연합체가 발표되었습니다. 참
 
 Jensen은 미래의 모든 엔지니어가 연봉 외에 **연간 Token 예산**을 받게 될 것이라고 전망했습니다. Token이 엔지니어의 생산성을 10배로 높일 수 있기 때문에, "이 직무에는 Token이 얼마나 포함되나요?"가 실리콘밸리의 새로운 채용 질문이 되고 있다고 덧붙였습니다.
 
----
-
-13. Physical AI와 로보틱스
----------------------
+## 13. Physical AI와 로보틱스
 
 키노트의 마지막 대주제는 Physical AI, 즉 물리 세계에서 작동하는 Embodied Agent(로봇)였습니다.
 
@@ -371,10 +345,7 @@ T-Mobile과는 기지국을 **AI RAN(Robotics Radio Tower)**로 전환하는 파
 
 Jensen은 미래의 디즈니랜드에서 이런 캐릭터 로봇들이 돌아다니는 모습을 상상해보라고 말했습니다.
 
----
-
-14. 마무리: 4대 메가 트렌드
-------------------
+## 14. 마무리: 4대 메가 트렌드
 
 Jensen은 키노트를 4가지 핵심 주제로 요약했습니다.
 

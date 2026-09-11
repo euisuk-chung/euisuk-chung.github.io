@@ -147,3 +147,11 @@ def test_migrate_text_is_idempotent(tmp_path):
     twice, _ = om.migrate_text(once, "okf/_posts/2021/2021-01-01-T.md", ctx, None)
     assert once == twice
     assert once.endswith('---\n\n## A\n\nbody\n')
+
+
+def test_consecutive_hrs_before_heading_removed_in_one_pass():
+    body = "p\n\n---\n\n\n\n---\n\n### H\n"
+    out, rep = norm(body)
+    assert out == "p\n\n### H\n" and rep.hr_removed == 2
+    again, rep2 = oc.normalize_body(out, "T")
+    assert again == out and rep2.hr_removed == 0

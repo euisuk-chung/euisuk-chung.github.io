@@ -1,13 +1,25 @@
 ---
+type: "Product Update"
 title: "[OpenAI] Operator & Agents : Computer-Using Agent"
+description: "GUI를 직접 조작하는 OpenAI CUA의 작동 방식과 Operator 데모 사례(Instacart, OpenTable, Saved Prompts), 벤치마크 성능과 오용·실수·적대적 공격 대응책을 다룬다."
 date: "2025-01-24"
 tags:
+  - "AI Agent"
   - "OpenAI"
-  - "chatGPT"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI-Introduction-to-Operator-Agents-Computer-Using-Agent"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:37:50Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-Introduction-to-Operator-Agents-Computer-Using-Agent"
+    title: "[OpenAI] Operator & Agents : Computer-Using Agent"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-24"
+status: "stable"
 year: "2025"
 ---
-
-# [OpenAI] Operator & Agents : Computer-Using Agent
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/be96d2a5-36ec-4c1d-bf01-6dd969b42294/image.png)
 
@@ -88,8 +100,6 @@ CUA는 **단순한 작업에서부터 복잡한 다단계 작업까지 처리**�
 | **적용 사례** | 연구 개발 및 API 통합을 통한 고급 에이전트 구현 | 웹 기반 자동화 작업(호텔 예약, 쇼핑 리스트 관리, 공공 서비스 이용 등) |
 | **확장성** | API를 통해 다양한 개발자 및 시스템에 통합 가능 | 사용자 맞춤형 설정 및 다중 작업 관리 기능 제공 |
 
----
-
 ### How it works
 
 CUA는 화면의 픽셀 데이터를 이해하고 가상 마우스와 키보드를 사용해 작업을 수행합니다.
@@ -131,8 +141,6 @@ CUA는 이러한 과정을 통해 복잡한 문제를 체계적으로 해결하�
 
   + 예를 들어, 사용자는 특정 작업 단계에서 직접 컨트롤을 넘겨받아 작업을 수정하거나, CUA가 제안한 결과를 확인하고 승인을 내릴 수 있습니다.
 
----
-
 ### Agent와 Operator의 개념 확장
 
 Agent는 단순히 주어진 명령을 실행하는 도구를 넘어, 사용자가 목표를 설정하면 해당 목표를 달성하기 위한 모든 세부 단계를 스스로 계획하고 실행하는 AI 시스템을 의미합니다. 이는 인간의 조력을 최소화하면서도 정확성과 효율성을 극대화합니다.
@@ -157,8 +165,6 @@ Agent와 Operator는 사용자의 디지털 경험을 한층 더 향상시키기
 * Operator는 단순한 자동화를 넘어 디지털 생태계에 새로운 형태의 상호작용 방식을 도입합니다.
 * 고객 지원, 전자상거래, 공공 서비스 등 다양한 분야에서 Operator는 인간의 조력자로서 시간과 자원을 절약합니다.
 * 또한, 공공기관과 기업이 시민 참여와 고객 경험을 개선하는 데 기여할 수 있습니다.
-
----
 
 ### Operator의 활용 사례 (Demo)
 
@@ -224,8 +230,6 @@ Operator는 실제 활용 사례를 통해 다양한 작업에서 AI의 효율�
 
 이와 같은 사례는 Operator가 단순한 작업 자동화를 넘어 사용자 경험을 개인화하고, 반복 작업의 효율성을 극대화할 수 있음을 보여줍니다. 작업 진행 상황은 시각적으로 표시되며, 사용자는 언제든 작업에 개입하거나 수정할 수 있습니다.
 
----
-
 ### Evaluations
 
 CUA는 여러 벤치마크에서 이전 최고 성능(State-of-the-Art, SOTA)을 갱신하며 뛰어난 성능을 입증했습니다.  
@@ -289,8 +293,6 @@ WebVoyager는 실제 사용자가 웹에서 수행하는 과업과 유사한 복
 
 Operator를 통해 이러한 성능은 사용자 경험과 결합하여 더욱 강력한 도구로 발전하고 있습니다.
 
----
-
 ### Safety
 
 CUA는 사용자의 안전을 최우선으로 고려하여 설계되었습니다.
@@ -322,8 +324,6 @@ CUA는 이중, 삼중 방어 구조를 통해 안전성을 강화하며, 지속�
 
 사용자 확인 시스템과 실시간 모니터링, 그리고 필요시 사용자가 컨트롤을 넘겨받을 수 있는 기능은 Operator와 CUA가 안전하게 작업을 수행할 수 있도록 지원합니다.
 
----
-
 ### Operator의 미래 전망
 
 Operator와 CUA는 디지털 작업 자동화의 새로운 패러다임을 제시하며, 앞으로도 지속적으로 개선되고 확장될 예정입니다.
@@ -339,8 +339,6 @@ Operator와 CUA는 디지털 작업 자동화의 새로운 패러다임을 제�
    * Operator의 기능을 고도화하여 더 복잡하고 긴 작업 흐름을 처리할 수 있도록 개발할 것입니다.
 
 > API는 어떤식으로 제공해줄지 궁금하군요 ( •͈ ◦ •͈ )
-
----
 
 ### Conclusion
 

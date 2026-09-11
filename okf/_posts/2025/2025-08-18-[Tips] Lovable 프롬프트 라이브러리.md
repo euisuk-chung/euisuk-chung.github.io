@@ -1,16 +1,27 @@
 ---
+type: "Guide"
 title: "[Tips] Lovable 프롬프트 라이브러리"
+description: "Lovable 공식 Prompt Library를 번역해 프로젝트 시작, UI/UX 개선, 반응형 디자인, 리팩토링, 파일 잠금, Stripe 결제와 Supabase 백엔드 등 시나리오별 예시 프롬프트와 요청 분석을 정리한다."
 date: "2025-08-18"
 tags:
   - "Lovable"
-  - "vibe coding"
+  - "Prompt Engineering"
+  - "Vibe Coding"
+resource: "https://velog.io/@euisuk-chung/Tips-Lovable-프롬프트-라이브러리"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:17:57Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Tips-Lovable-프롬프트-라이브러리"
+    title: "[Tips] Lovable 프롬프트 라이브러리"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-18"
+status: "stable"
 year: "2025"
 ---
 
-# [Tips] Lovable 프롬프트 라이브러리
-
-Lovable 프롬프트 라이브러리: AI 기반 개발을 위한 완벽 가이드
-=======================================
+# Lovable 프롬프트 라이브러리: AI 기반 개발을 위한 완벽 가이드
 
 > 이 글은 Lovable의 공식 문서인 **[Prompt Library](https://docs.lovable.dev/prompting/prompting-library)**을 번역하고 정리한 콘텐츠입니다.
 
@@ -18,17 +29,13 @@ Lovable 프롬프트 라이브러리: AI 기반 개발을 위한 완벽 가이�
 
 > <https://docs.lovable.dev/prompting/prompting-library>
 
-개요
---
+## 개요
 
 AI 기반 개발이 점점 더 중요해지고 있는 시대에서, **효과적인 프롬프트 작성은 프로젝트 성공의 핵심 요소**가 되었습니다. Lovable의 프롬프트 라이브러리는 다양한 개발 시나리오에서 재사용 가능한 패턴과 예시를 제공하여, 개발자들이 AI와 더 효율적으로 협업할 수 있도록 돕습니다.
 
 이 가이드에서는 프로젝트 시작부터 결제 시스템 통합까지, **실제 개발 과정에서 마주치는 다양한 상황에 대한 구체적인 프롬프트 전략을 소개**합니다. 각 섹션은 특정 사용 사례를 다루며, 언제 사용해야 하는지와 실제 예시 프롬프트를 포함하고 있습니다.
 
----
-
-프로젝트 시작하기
----------
+## 프로젝트 시작하기
 
 ### 언제 사용하나요?
 
@@ -128,10 +135,7 @@ What edge cases does it handle or miss? How could it be improved?
 * 또한 이 함수가 처리하는 엣지 케이스와 놓치는 경우를 분석하고, 어떻게 개선할 수 있을지 제안하세요.
 ```
 
----
-
-UI/UX 디자인
----------
+## UI/UX 디자인
 
 ### 언제 사용하나요?
 
@@ -418,10 +422,7 @@ Check for proper keyboard navigation, screen reader support, sufficient color co
 
 > UI 코드 → 접근성 리뷰 보고서 작성
 
----
-
-반응형 디자인
--------
+## 반응형 디자인
 
 ### 언제 사용하나요?
 
@@ -480,10 +481,7 @@ After making changes, please double-check the layout at iPhone 12 dimensions and
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/11af5a4c-6e74-4387-b4b0-2fcc11b85ef0/image.png)
 
----
-
-리팩토링
-----
+## 리팩토링
 
 ### 언제 사용하나요?
 
@@ -538,10 +536,7 @@ Do **not** introduce any new features or change how the component works for the 
 
 위와 같은 방식으로 기존 코드의 리팩토링을 수행할 수 있습니다.
 
----
-
-범위 제한 / 파일 잠금
--------------
+## 범위 제한 / 파일 잠금
 
 ### 언제 사용하나요?
 
@@ -581,10 +576,7 @@ Task: Add a new section to the Dashboard that shows "Tasks due this week". Make 
 *(다시 말하지만, 로그인이나 인증 파일은 변경하지 마세요 – 그것들은 금지구역입니다.)*
 ```
 
----
-
-계획 수립
------
+## 계획 수립
 
 ### 언제 사용하나요?
 
@@ -636,10 +628,7 @@ Once you outline the plan, pause for review. **Do not make any code changes yet.
 >   3. 프론트엔드/백엔드 관점 모두 고려
 >   4. 계획만 작성하고 실제 코드 생성은 보류
 
----
-
-Stripe 설정
----------
+## Stripe 설정
 
 ### 언제 사용하나요?
 
@@ -749,10 +738,7 @@ STRIPE_WEBHOOK_SECRET=whsec_***
 
 > 👉 이렇게 하면 Stripe를 Lovable/웹앱 환경에 안전하게 붙일 수 있고, 구독형 시스템까지 확장 가능합니다.
 
----
-
-Supabase 및 백엔드
---------------
+## Supabase 및 백엔드
 
 * Supabase를 사용한 백엔드 작업에는 데이터베이스 스키마 설계, Row Level Security 정책 구현, Edge Function 생성 등이 포함됩니다.
 * 이러한 작업들은 애플리케이션의 보안과 성능에 직접적인 영향을 미치므로 신중하게 접근해야 합니다.
@@ -813,8 +799,6 @@ Add animations, improve spacing, create a polished look while maintaining access
 * **산출물:** 수정된 컴포넌트 코드, 접근성 점검 목록(ARIA, 콘트라스트), 반응형 규칙
 * **체크리스트:** spacing scale 적용, focus/hover 상태 정의, prefers-reduced-motion 대응, 키보드 탭 순서 보장, Tailwind/utility class 정리
 
----
-
 #### 데이터베이스 스키마 설계
 
 **[프롬프트]**
@@ -833,8 +817,6 @@ Include foreign key constraints, indexes for performance, and proper data types 
 * **산출물:** DDL 스크립트, ERD, 인덱스 전략(복합/부분/GIN), 파티셔닝 고려 사항
 * **체크리스트:** 정규화 수준(3NF±), soft-delete/감사 컬럼, 시계열 파티션, UUID vs BIGINT, 다국어/통화 컬럼, RLS 전제 시 테넌트 키 포함
 
----
-
 #### 데이터 페치 서비스 구현
 
 **[프롬프트]**
@@ -851,8 +833,6 @@ Set up proper TypeScript interfaces for the response data and handle API version
 * **범위:** fetch/axios 래퍼, 캐시(LRU/TTL), 재시도(backoff/jitter), 스로틀(토큰버킷)
 * **산출물:** TS 서비스 모듈, DTO/타입 정의, 버전 추상화 레이어(v1/v2), 에러 매핑
 * **체크리스트:** idempotency, 429/5xx 처리, ETag/If-None-Match, AbortController, 테스트용 mock 어댑터
-
----
 
 #### 행 수준 보안 정책 설정
 
@@ -872,8 +852,6 @@ Implement proper user isolation, role-based access, and handle hierarchical data
 * **산출물:** SQL 정책 스크립트, 역할 매핑 테이블, 인덱스(tenant\_id, role 조합)
 * **체크리스트:** `auth.uid()` 매핑, 조인 기반 정책 성능(부분 인덱스/Materialized View 고려), 복합 키(tenant\_id+id)
 
----
-
 #### Supabase Edge Function 개발
 
 **[프롬프트]**
@@ -890,8 +868,6 @@ Include rate limiting and proper environment variable usage.
 * **범위:** 입력 검증(Zod/valibot), 인증/권한, 레이트 리미팅(슬라이딩 윈도/토큰 버킷)
 * **산출물:** Edge Function 코드, 환경 변수 스키마, 관측(로그/트레이스)
 * **체크리스트:** 서명 토큰 검증, CORS, 타임아웃/재시도, 비밀값은 `Deno.env`/Vault, PII 로그 마스킹
-
----
 
 #### 실시간 데이터 동기화
 
@@ -910,8 +886,6 @@ Handle connection management, graceful degradation when offline, and conflict re
 * **산출물:** 구독 핸들러, optimistic update/rollback 로직, 충돌 해결 정책(last-write-wins/CRDT 대안)
 * **체크리스트:** 배압 처리, 구독 스코프(tenant/channel), 재연결 백오프, 스냅샷+증분 동기
 
----
-
 #### 고급 검색 기능 구현
 
 **[프롬프트]**
@@ -926,8 +900,6 @@ Implement a robust search feature for [describe content type] with filtering, so
 * **범위:** 쿼리 파서, 서버/클라이언트 필터, 정렬 키 인덱스, 하이라이트(워드 경계)
 * **산출물:** 검색 API, 제안(Typeahead) 엔드포인트, 최근 검색 저장/삭제, 빈 결과 UX
 * **체크리스트:** 부분 일치 vs prefix 인덱스, Trigram/GIN, stopword/스테밍, XSS-safe 하이라이트, 성능 가드레일(limit/timeout)
-
----
 
 #### 데이터 테이블 그리드 구현
 
@@ -946,8 +918,6 @@ Include features for exporting data and customizing visible columns.
 * **산출물:** 재사용 가능한 Table 컴포넌트, CSV/Excel 내보내기, 상태 영속(LocalStorage/URL)
 * **체크리스트:** 가상 스크롤, 접근성 그리드 롤, Sticky 헤더, 열 정의 타입 안전성, export 시 권한 필터
 
----
-
 #### 데이터 임포트/익스포트 시스템
 
 **[프롬프트]**
@@ -964,8 +934,6 @@ Include validation, progress indicators, error handling, and the ability to map 
 * **범위:** 스키마 검증, 미리보기, 필드 매핑, 부분 실패 리포트, 트랜잭션/배치
 * **산출물:** 업로드 파서, 매핑 UI, 에러 CSV, 진행률 표시(Chunked)
 * **체크리스트:** 인코딩/구분자 처리, 대용량 스트리밍, 중복 키 정책, 롤백/부분 커밋 전략, 감사 로그
-
----
 
 #### 대시보드 차트 구현
 
@@ -984,8 +952,6 @@ Include different visualization types (bar, line, pie), time period selection, d
 * **산출물:** 차트 컴포넌트 세트, 툴팁/줌/브러시, 데이터 어댑터
 * **체크리스트:** 빈 데이터 처리, 축 포맷(로케일/단위), 접근성 대체 텍스트, 성능(메모이제이션/샘플링)
 
----
-
 #### 오프라인 동기화 전략
 
 **[프롬프트]**
@@ -1002,8 +968,6 @@ Handle conflict resolution, optimistic UI updates, and provide visual indicators
 * **범위:** IndexedDB/kv 저장, changeset 큐, 재동기화 스케줄러, 충돌 정책
 * **산출물:** 오프라인 큐 엔진, 상태 배지(queued/syncing/failed), 재시도/백오프
 * **체크리스트:** 멱등 키, 시퀀스 넘버/버전 필드, 서버 타임스탬프 우선, 배치 업로드
-
----
 
 #### 멀티스텝 폼 위자드
 
@@ -1022,10 +986,7 @@ Handle conditional form fields based on previous answers.
 * **산출물:** Wizard 컴포넌트, 검증 스키마, 요약/확인 단계, 재개(resume) 기능
 * **체크리스트:** 접근성(Form role/label), 오토세이브, 서버 검증 에러 매핑, 진행률 보정(조건부 단계)
 
----
-
-워크플로우 관리
---------
+## 워크플로우 관리
 
 효과적인 워크플로우 관리는 프로젝트의 성공적인 완성을 위해 필수적입니다. Git 연동, 테스팅 전략, 배포 파이프라인 등을 포함합니다.
 
@@ -1080,8 +1041,6 @@ Extract reusable parts, implement proper prop passing, maintain state management
 * **산출물:** 분리된 컴포넌트 트리, 스토리북/테스트, 변경 영향도 체크리스트
 * **체크리스트:** 동등 렌더 보장(Snapshot/Playwright), 상태 상향/하향 전략, 이벤트 버블링 유지, CSS scope 안전
 
----
-
 #### 테스트 전략 수립
 
 **[프롬프트]**
@@ -1098,8 +1057,6 @@ Include unit tests for business logic, integration tests for data flow, and UI t
 * **범위:** 단위(순수 로직), 통합(API/스토어), E2E(핵심 플로우), 목킹/픽스처 표준
 * **산출물:** 테스트 피라미드, 샘플 테스트, 커버리지 목표, CI 연동
 * **체크리스트:** 시나리오 명세서→테스트 케이스 추적성, flaky 방지, 테스트 데이터 격리, 성능/접근성 smoke
-
----
 
 #### 비동기 함수 에러 처리 강화
 
@@ -1119,8 +1076,6 @@ Include retry logic, fallback mechanisms, proper error reporting, user-friendly 
 * **산출물:** 강화된 함수, 에러 카탈로그(분류/코드), 로거/트레이서 훅, 알림 연동
 * **체크리스트:** 타임아웃/취소, 동등 에러 합치기, PII 비노출, SLO/알람 기준
 
----
-
 #### 배포 파이프라인 구축
 
 **[프롬프트]**
@@ -1135,8 +1090,6 @@ Set up a deployment pipeline for this application that includes staging and prod
 * **범위:** 환경 분리(.env/secret), 마이그레이션 자동 적용/검증, 헬스체크/카나리
 * **산출물:** CI/CD 정의, 마이그레이션 스텝, 롤백 스크립트/스냅샷, 배포 체크리스트
 * **체크리스트:** 데이터 마이그레이션 안전망(락/배치/리허설), feature flag, 관측(로그/메트릭/트레이스), DB 스키마 호환성(blue-green)
-
----
 
 #### 사용자 플로우 분석 및 최적화
 
@@ -1155,10 +1108,7 @@ Suggest improvements for user experience, reduce friction points, implement prog
 * **산출물:** 개선 제안서(AS-IS/TO-BE 플로우), 와이어프레임, 실험 설계(A/B), 접근성 점검표
 * **체크리스트:** 입력 최소화, 오류 복구 UX, 로딩 인디케이터/낙관적 UI, 키보드/리더 대응, 계측 이벤트 정의
 
----
-
-Chat 모드 vs Default 모드 사용법
--------------------------
+## Chat 모드 vs Default 모드 사용법
 
 ### 언제 사용하나요?
 
@@ -1181,10 +1131,7 @@ Chat 모드 vs Default 모드 사용법
 이러한 도구들을 효과적으로 활용하면 AI와 더 나은 협업을 통해 고품질의 애플리케이션을 개발할 수 있습니다.  
 각 상황에 맞는 적절한 프롬프트 전략을 선택하여 개발 효율성을 극대화하세요.
 
----
-
-지식 베이스 및 PRD 작성
----------------
+## 지식 베이스 및 PRD 작성
 
 ### 언제 사용하나요?
 
@@ -1227,10 +1174,7 @@ PRD 작성과 지식 베이스 채우기는 추가적인 사전 작업처럼 느
 
 마지막으로, 프로젝트가 발전함에 따라 지식 베이스를 유지하세요. 주요 기능을 추가하거나 범위를 변경한다면, PRD/지식 베이스 문서를 업데이트하세요. 이렇게 하면 향후 프롬프트가 새로운 정보를 고려할 것입니다. 매번 컨텍스트를 다시 설명하는 것보다 훨씬 쉽습니다. 본질적으로, 지식 베이스 + PRD는 당신의 AI 프로젝트 핸드북입니다 - 구축하고 있는 것과 방법에 대해 모든 사람(당신과 AI)이 같은 페이지에 있도록 유지합니다.
 
----
-
-결론
-==
+# 결론
 
 Lovable의 프롬프트 라이브러리는 AI 기반 개발에서 효율성과 정확성을 극대화하기 위한 실용적인 가이드입니다. 각 시나리오별로 최적화된 프롬프트 패턴을 활용하면, 개발 과정에서 발생할 수 있는 오류를 최소화하고 원하는 결과를 더 빠르게 달성할 수 있습니다.
 

@@ -1,19 +1,31 @@
 ---
+type: "Trend Report"
 title: "[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례"
+description: "Google Cloud가 공개한 1,001건의 생성형 AI 고객 사례를 14개 산업별로 정리하고, 고객·직원·코드·데이터·크리에이티브 에이전트 유형으로 분류해 산업별 인사이트를 도출한다."
 date: "2025-10-10"
 tags:
-  - "google"
+  - "Google"
+  - "트렌드"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/Google-Cloud-고객사의-1001가지-GenAI-활용-사례"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:08:37Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Google-Cloud-고객사의-1001가지-GenAI-활용-사례"
+    title: "[정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례"
+    author: "human:euisuk-chung"
+    last_modified: "2025-10-10"
+status: "stable"
 year: "2025"
 ---
-
-# [정리] Google Cloud 고객사의 1,001가지 GenAI 활용 사례
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/630cbe25-b142-4ecc-99aa-b6ada985d3f6/image.png)
 
 > <https://blog.google/products/google-cloud/gen-ai-business-use-cases/>
 
-들어가며
-====
+# 들어가며
 
 2024년 4월, Google Cloud는 고객사들의 생성형 AI 활용 사례 101건을 발표하며 기술 도입의 빠른 속도를 입증했습니다. 그로부터 약 18개월이 지난 2025년 10월, 이 수치는 **10배 증가한 1,001건**으로 확대되었습니다. 이는 단순한 양적 성장을 넘어, 생성형 AI가 실험 단계를 벗어나 실제 비즈니스 가치를 창출하는 프로덕션 환경으로 본격 진입했음을 보여주는 강력한 증거입니다.
 
@@ -21,11 +33,9 @@ year: "2025"
 
 > 💡 **주의**: 기업조사 내용도 포함되어 있어서 상당이 깁니다. 빠르게 보시고 싶으신 분들은 TL;DR만 읽길 권장드립니다.
 
-TL;DR - Google Cloud Gen AI Use Cases 분석
-========================================
+# TL;DR - Google Cloud Gen AI Use Cases 분석
 
-전체 요약
------
+## 전체 요약
 
 Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 종합 리포트입니다.
 
@@ -33,10 +43,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * **기간**: 2024년 4월 (101건) → 2025년 10월 (1,001건)
 * **증가율**: 약 10배
 
----
-
-산업별 핵심 내용
----------
+## 산업별 핵심 내용
 
 ### 자동차 및 물류 (Automotive and Logistics)
 
@@ -48,8 +55,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (8개): Continental, General Motors, LUXGEN, PODS, UPS Capital, Volkswagen of America, 704 Apps, Geotab
 
----
-
 ### 비즈니스 및 전문 서비스 (Business & Professional Services)
 
 **주요 활용 사례**:
@@ -59,8 +64,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * Cognizant: Vertex AI와 Gemini를 사용하여 법무 팀이 계약서 초안을 작성하고 위험 점수를 할당하며 운영 영향을 최적화하는 방법에 대한 권장 사항을 제공하는 AI 에이전트를 구축했습니다.
 
 **대표 기업** (8개): Allegis Group, Altumatim, Anara, BCG, Beyond, Cintas, Croud, Dun & Bradstreet
-
----
 
 ### 크리에이티브 및 마케팅 (Creative & Marketing)
 
@@ -72,8 +75,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (8개): AdVon Commerce, Agoda, Comeen, Dentsu Digital, Hotmob, Monday.com, Quom, Salesrun
 
----
-
 ### 금융 서비스 (Financial Services)
 
 **주요 활용 사례**:
@@ -83,8 +84,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * Commerzbank: Customer Engagement Suite를 조기에 도입하여 자체 전문 챗봇 Bene를 구축했습니다.
 
 **대표 기업** (8개): Albo, Apex Fintech Solutions, Banco Covalto, Banco Macro, Bud Financial, Commerzbank, Contabilizei, Definity
-
----
 
 ### 의료 및 생명과학 (Healthcare & Life Sciences)
 
@@ -96,8 +95,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (8개): Bennie Health, CitiusTech, Clivi, Family Vision Care of Ponca City, Fitterfly, Freenome, Genial Care, Manipal Hospitals
 
----
-
 ### 환대 및 여행 (Hospitality & Travel)
 
 **주요 활용 사례**:
@@ -107,8 +104,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * Catchtable: Vertex AI와 GPU 최적화를 갖춘 Kubeflow를 사용하여 개인화된 레스토랑 추천 모델을 구축하여 예약 전환율을 30% 증가시키고 레스토랑 검색당 노출을 150% 증가시켰습니다.
 
 **대표 기업** (8개): Agoda, Alaska Airlines, Bookme, Catchtable, Fitness Park, Gymshark, Hershey Entertainment & Resorts, HomeToGo
-
----
 
 ### 제조업 (Manufacturing)
 
@@ -120,8 +115,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (8개): Motorola, Samsung, Adani Group, AES, Bynry, Copel, Danfoss, Enpal
 
----
-
 ### 미디어 및 마케팅 (Media & Marketing)
 
 **주요 활용 사례**:
@@ -131,8 +124,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * Bayer: 음성 지원 약국 검색 엔진을 구축하여 소비자가 접근성을 개선하기 위해 최신 Bayer 제품을 찾을 수 있는 위치를 찾을 수 있도록 돕습니다.
 
 **대표 기업** (8개): 99designs by Vistaprint, Adobe, Adsmurai, Bayer, Clinique, C&A, De Telegraaf, Filipe
-
----
 
 ### 공공 부문 (Public Sector)
 
@@ -144,8 +135,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (8개): City of Los Angeles, UK Government Digital Service, U.S. Department of Veterans Affairs, City of New York, NASA, U.S. Department of Defense, City of Chicago, European Space Agency
 
----
-
 ### 소매업 (Retail)
 
 **주요 활용 사례**:
@@ -155,8 +144,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * Best Buy: Vertex AI를 사용하여 수천 개의 제품 리뷰를 간결한 인사이트로 요약해 고객이 정보에 입각한 구매 결정을 내릴 수 있도록 지원합니다.
 
 **대표 기업** (8개): 425DEGREE, Allegro, Best Buy, blackcircles, BrainLogic, Cainz, Carrefour Taiwan, Dunelm
-
----
 
 ### 기술 (Technology)
 
@@ -168,8 +155,6 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (8개): Abstrakt, ADT, AMD, AUI, BMC, Character.ai, Flockx, Gojek
 
----
-
 ### 통신 (Telecommunication)
 
 **주요 활용 사례**:
@@ -180,10 +165,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 **대표 기업** (6개): AT&T, BT Group, Deutsche Telekom, Orange, Verizon, Vodafone
 
----
-
-주요 트렌드
-------
+## 주요 트렌드
 
 1. **Customer Agents (고객 에이전트)**: 고객 서비스 자동화, 챗봇, 대화형 AI
 2. **Employee Agents (직원 에이전트)**: 내부 업무 효율화, 생산성 향상
@@ -191,13 +173,9 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 4. **Data Agents (데이터 에이전트)**: 데이터 분석, 인사이트 도출
 5. **Creative Agents (크리에이티브 에이전트)**: 콘텐츠 생성, 마케팅 자동화
 
----
+# 상세 정리
 
-상세 정리
-=====
-
-자동차 및 물류 (Automotive and Logistics)
------------------------------------
+## 자동차 및 물류 (Automotive and Logistics)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/5ba6c411-48e2-4a79-a316-f4f5b75b1d5c/image.png)
 
@@ -351,10 +329,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 * **Mitsubishi Motors**는 AI 기반 SIEM 및 SOAR 기능을 갖춘 **Google Security Operations를 사용**하여 점점 더 정교해지는 사이버 공격으로부터 글로벌 운영을 보호합니다.
   + **클라우드 기반 보안 플랫폼**은 Mitsubishi Motors Group 전체의 보안 관리를 단순화하고 자동화된 위협 탐지 및 대응을 통해 운영 부담을 줄였습니다.
 
----
-
-비즈니스 및 전문 서비스 (Business & Professional Services)
-------------------------------------------------
+## 비즈니스 및 전문 서비스 (Business & Professional Services)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/19810683-1fc6-40fa-a144-28c04b993dd1/image.png)
 
@@ -886,10 +861,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Zoi(조이)**는 엔터프라이즈 AI 및 클라우드 통합 솔루션을 제공하는 기업으로, zoi.tech를 운영하는 회사로 추정됩니다. 이 회사는 기업 지식을 분석하고, 맥락에 맞게 연결하며, 실행 가능한 인사이트를 제공합니다. Zoi는 NotebookLM Plus를 통해 문서, 프레젠테이션, 이메일, 웹사이트 등의 정보를 정리하고 분석하며, AI를 기업 IT에 통합하여 지능형 워크플로, 스마트 AI 에이전트, 데이터 기반 의사결정을 가능하게 합니다. Google Agentspace를 활용하여 지능형 AI 에이전트로 워크플로를 자동화하고 의사결정 프로세스를 최적화합니다. Zoi는 기업들이 AI 기반 검색을 통해 향상된 데이터 인사이트를 얻고 문서 작성에서 AI 지원을 받을 수 있도록 하며, 기술 민주화를 통해 직원들이 새로운 가치를 발휘하고 디지털 혁신을 방해하는 데이터 사일로를 허물 수 있도록 지원합니다.
 
----
-
-금융 서비스 (Financial Services)
----------------------------
+## 금융 서비스 (Financial Services)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/12771645-f4ea-4782-aaef-ef75da3ff452/image.png)
 
@@ -1332,10 +1304,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Upsure(업슈어)**는 인도 기반 보험 기술 플랫폼으로, Google Kubernetes Engine, Vertex AI, Gemini에 AI 기반 솔루션을 구축하여 보험사가 자금 세탁 방지 규정 준수 및 리드 점수 매기기를 위한 통합 데이터 레이크를 만들 수 있도록 돕으며, 99.9%의 가동 시간과 밀리초 단위의 응답 시간으로 2,000개 이상의 위치에서 일일 100만 명 이상의 사용자를 지원합니다.
 
----
-
-의료 및 생명과학 (Healthcare & Life Sciences)
---------------------------------------
+## 의료 및 생명과학 (Healthcare & Life Sciences)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/4a65ac5d-9abb-4085-bcc1-ee603c47f7d8/image.png)
 
@@ -1704,10 +1673,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Pfizer(화이자)**는 사이버 보안 데이터 소스를 집계하여 분석 시간을 며칠에서 몇 초로 단축할 수 있습니다.
 
----
-
-환대 및 여행 (Hospitality & Travel)
-------------------------------
+## 환대 및 여행 (Hospitality & Travel)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/70091b99-da94-4483-81bc-28f160cdb605/image.png)
 
@@ -1869,10 +1835,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Studiosus Reisen(스튜디오서스 라이젠)** - Customer Agents 섹션 참조. happtiq와 협력하여 Vertex AI를 사용하여 보안 경고를 자동으로 분류하고 필터링하는 맞춤형 AI 모델을 구축하여 여행자를 위한 활성 보안 문제에 대한 수동 노력을 75% 줄였습니다.
 
----
-
-제조업 (Manufacturing)
--------------------
+## 제조업 (Manufacturing)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/42629465-0b7b-46e0-80e0-76851f324388/image.png)
 
@@ -2155,10 +2118,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Panasonic Energy(파나소닉 에너지)**는 구성 관리 데이터베이스를 Cloud Asset Inventory에서 Security Command Center로 마이그레이션하여 보안 팀이 잠재적인 위협을 더 빠르게 식별하고 대응할 수 있도록 하여 사이버 보안 태세를 강화했습니다.
 
----
-
-미디어 및 마케팅 (Media & Marketing)
------------------------------
+## 미디어 및 마케팅 (Media & Marketing)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a657dda3-417e-431e-8b16-943d79c9e5f3/image.png)
 
@@ -2558,10 +2518,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Walmart(월마트)**는 세계 최대 소매업체로서 BigQuery와 Vertex AI를 사용하여 방대한 양의 고객 및 운영 데이터를 분석하여 재고 관리, 공급망 최적화 및 개인화된 쇼핑 경험을 개선합니다.
 
----
-
-공공 부문 (Public Sector)
----------------------
+## 공공 부문 (Public Sector)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/d59bc845-650e-4df7-acb8-bee57a653361/image.png)
 
@@ -2633,10 +2590,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **U.S. Department of Energy(미국 에너지부)**는 AI를 활용하여 에너지 소비를 최적화하고 재생 가능 에너지 잠재력을 예측하며 기후 변화를 완화하기 위한 전략을 개발합니다.
 
----
-
-소매업 (Retail)
-------------
+## 소매업 (Retail)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/d221a290-b054-4ce1-83b9-43ae55af8ddb/image.png)
 
@@ -3018,10 +2972,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Wyze Labs**는 스마트 홈 기술 회사로, Google의 비전 AI 도구로 구동되는 보안 카메라 시스템을 위한 새로운 AI 기반 이상 징후 탐지 기능을 출시하고 있습니다. 컴퓨터 비전과 머신러닝을 활용하여 비정상적인 활동을 자동으로 감지하고 사용자에게 알림을 제공하여 가정 보안을 강화합니다.
 
----
-
-기술 (Technology)
----------------
+## 기술 (Technology)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/67f902ef-6f88-4a9c-a5fc-883d9db88942/image.png)
 
@@ -3983,10 +3934,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Zefr**는 책임감 있는 AI(Responsible AI) 분야의 글로벌 리더로, 브랜드 안전성을 보장하는 광고 기술 플랫폼을 제공합니다. YouTube, TikTok 등의 플랫폼에서 **Fortune 500 브랜드 광고**의 안전성과 적합성을 보장합니다. **특허받은 Cognitive AI**를 사용하여 콘텐츠를 분석합니다. Gemini Flash와 Vertex AI로 비디오, 이미지, 오디오, 텍스트를 다중 모달 분석합니다. 브랜드에 부적절한 콘텐츠(폭력, 혐오 발언, 허위 정보 등) 옆에 광고가 게재되지 않도록 보호합니다. 브랜드 가치와 일치하는 안전한 콘텐츠에만 광고를 배치합니다. 신뢰할 수 있고 확장 가능한 솔루션으로 대규모 광고 캠페인을 지원합니다. 실시간으로 콘텐츠를 평가하여 빠르게 광고 배치 결정을 내립니다. 브랜드 평판을 보호하고 광고 효과를 극대화합니다. 책임감 있는 디지털 광고 생태계를 구축합니다.
 
----
-
-통신 (Telecommunication)
-----------------------
+## 통신 (Telecommunication)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/02c5a037-74e6-4bfa-af47-c8fbc29bf5f1/image.png)
 
@@ -4024,10 +3972,7 @@ Google Cloud의 1,001개 생성형 AI 활용 사례를 산업별로 분석한 �
 
 > **Vodafone(보다폰)**은 AI를 활용하여 고객 서비스를 개선하고 네트워크 운영을 최적화하며 새로운 디지털 솔루션을 개발합니다.
 
----
-
-결론
-==
+# 결론
 
 이 1,001개의 사례는 전 세계 주요 기업들이 AI 에이전트를 실제 비즈니스 환경에서 어떻게 활용하고 있는지를 보여줍니다. 고객 서비스 자동화부터 창의적 콘텐츠 생성, 복잡한 데이터 분석, 보안 강화에 이르기까지, AI는 산업 전반에 걸쳐 혁신을 주도하고 있습니다.
 

@@ -1,13 +1,26 @@
 ---
+type: "Guide"
 title: "[Tips] Lovable Vibe-Coding Best Practices"
+description: "Lovable 공식 Best Practices를 번역해 Knowledge file 설정, 기능 분해 프롬프트, Chat 모드 활용, Supabase 연결 시 주의점, Visual Edit, GitHub 연동, Remix 활용법을 정리한다."
 date: "2025-08-18"
+tags:
+  - "Lovable"
+  - "Vibe Coding"
+resource: "https://velog.io/@euisuk-chung/Tips-Lovable-Vibe-Coding-Best-Practices"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:18:33Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Tips-Lovable-Vibe-Coding-Best-Practices"
+    title: "[Tips] Lovable Vibe-Coding Best Practices"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-18"
+status: "stable"
 year: "2025"
 ---
 
-# [Tips] Lovable Vibe-Coding Best Practices
-
-Lovable을 최대한 활용하는 방법
-====================
+# Lovable을 최대한 활용하는 방법
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/235801b0-6450-47ff-926d-44a00a09fd4c/image.png)
 
@@ -19,8 +32,7 @@ Lovable을 최대한 활용하는 방법
 > ⭐ Check out original source ⭐  
 > <https://docs.lovable.dev/tips-tricks/best-practice>
 
-1. 기반 설정하기: Knowledge File 활용
------------------------------
+## 1. 기반 설정하기: Knowledge File 활용
 
 **왜 중요한가**: `Knowledge file`은 프로젝트의 두뇌입니다. 모든 프롬프트와 함께 전송되어 AI가 전체 맥락을 이해하는 데 도움을 줍니다.
 
@@ -63,8 +75,7 @@ Generate knowledge for my project at T=0 based on the features I’ve already im
 이미 구현한 기능을 바탕으로 T=0에서 내 프로젝트에 대한 knowledge를 생성해주세요.
 ```
 
-2. 프롬프트 작성 모범 사례
-----------------
+## 2. 프롬프트 작성 모범 사례
 
 > Clear, verbose prompts = better output
 
@@ -145,8 +156,7 @@ Investor로서, 회사 대시보드를 보고 싶지만 편집할 수는 없어�
 이 기능을 Investor 역할에만 격리해주세요.
 ```
 
-3. Chat Mode를 자주 활용하기
----------------------
+## 3. Chat Mode를 자주 활용하기
 
 `Chat mode`는 당신의 **AI Co-pilot(부조종사)**입니다.
 
@@ -218,8 +228,7 @@ If needed, revert to the last working version and fix from there.
 필요하다면 마지막 작동 버전으로 되돌리고 거기서부터 수정해주세요.
 ```
 
-4. Supabase의 일반적인 함정 피하기
-------------------------
+## 4. Supabase의 일반적인 함정 피하기
 
 Supabase는 **Firebase의 오픈소스 대안**으로, PostgreSQL 기반 데이터베이스와 실시간 기능을 제공하는 백엔드 서비스입니다.
 
@@ -260,8 +269,7 @@ T=0에서 SQL 스키마를 검증하고 파괴적인 변경사항이 없었는�
 
 * 위 프롬프트를 적용하고, 이를 게시하기 전에 항상 데이터베이스 연결 기능을 테스트
 
-5. 빠른 UI 수정을 위한 Visual Edit 사용
-------------------------------
+## 5. 빠른 UI 수정을 위한 Visual Edit 사용
 
 앱을 만들다 보면 코드 수정이나 프롬프트 호출까지는 필요 없지만, 버튼 색상이나 제목 문구처럼 **작은 UI 요소를 빠르게 고치고 싶을 때**가 많습니다. 이럴 때 바로 활용할 수 있는 기능이 **Lovable의 Visual Edit**기능입니다.
 
@@ -279,8 +287,7 @@ T=0에서 SQL 스키마를 검증하고 파괴적인 변경사항이 없었는�
 * 여러 작은 요소를 한 번에 편집
 * 안전하고 크레딧 없는 커밋 (실행취소 가능)
 
-6. GitHub + 버전 관리를 현명하게 사용
---------------------------
+## 6. GitHub + 버전 관리를 현명하게 사용
 
 Lovable에서 일어나는 모든 편집은 곧 하나의 **Git 커밋**이라고 생각할 수 있습니다.
 
@@ -324,8 +331,7 @@ Lovable에서 일어나는 모든 편집은 곧 하나의 **Git 커밋**이라�
   + Lovable은 GitHub의 **기본 브랜치(main/master)**만 추적합니다.
   + 따라서 기능 개발은 GitHub에서 별도의 브랜치로 진행하되, 최종적으로 main에 merge해야 Lovable과 동기화됩니다.
 
-7. 모든 방법이 실패하면, Remix
----------------------
+## 7. 모든 방법이 실패하면, Remix
 
 많은 사용자가 깨닫는 것: 두 번째에는 모든 것을 다시 하는 것이 더 적은 시간이 걸립니다.
 
@@ -361,8 +367,7 @@ Lovable에서 일어나는 모든 편집은 곧 하나의 **Git 커밋**이라�
 * (보안상의 이유로) Supabase가 연결된 프로젝트는 Remix할 수 없습니다.
 * Remix는 원본 프로젝트를 덮어쓰지 않고 새로운 사본만 만듭니다.
 
-8. 인내심을 갖고 침착하게
----------------
+## 8. 인내심을 갖고 침착하게
 
 AI는 어떤 순간에는 마법처럼 느껴지지만, 또 어떤 순간에는 답답하고 좌절스러울 수 있습니다.
 
@@ -375,8 +380,7 @@ AI는 어떤 순간에는 마법처럼 느껴지지만, 또 어떤 순간에는 
 > * 작업을 작고 테스트 가능한 블록으로 나누세요.
 > * 입력이 정확할수록 출력이 더 좋아집니다.
 
-9. 문서 사용 및 도움 요청
-----------------
+## 9. 문서 사용 및 도움 요청
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c8190a7a-dd4f-4679-b39b-e06d4e72935b/image.png)
 
@@ -387,8 +391,7 @@ AI는 어떤 순간에는 마법처럼 느껴지지만, 또 어떤 순간에는 
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c527dfd1-c378-487b-a0e8-74d348b7f236/image.png)
 
-10. 보너스 팁
----------
+## 10. 보너스 팁
 
 * 긴 프롬프트를 입력할 때는 **음성 받아쓰기**를 활용해보세요.
 

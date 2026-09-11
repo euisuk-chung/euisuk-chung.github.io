@@ -1,10 +1,24 @@
 ---
+type: "Trend Report"
 title: "[HAI] AI Index Report 2026 정리: 기술은 가속하고, 시스템은 뒤따라가기 바쁘다"
+description: "Stanford HAI AI Index Report 2026의 9개 챕터에서 R&D 집중도, 벤치마크 수렴, Responsible AI trade-off, 투자·노동시장, 과학·의료 응용, 정책과 여론 수치를 정리하고 ML 실무자 관점의 시사점을 도출합니다."
 date: "2026-04-20"
+tags:
+  - "트렌드"
+  - "IT지식"
+resource: "https://velog.io/@euisuk-chung/HAI-AI-Index-Report-2026"
+generated:
+  by: "process:velog-sync"
+  at: "2026-06-01T10:54:58Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/HAI-AI-Index-Report-2026"
+    title: "[HAI] AI Index Report 2026 정리: 기술은 가속하고, 시스템은 뒤따라가기 바쁘다"
+    author: "human:euisuk-chung"
+    last_modified: "2026-04-20"
+status: "stable"
 year: "2026"
 ---
-
-# [HAI] AI Index Report 2026 정리: 기술은 가속하고, 시스템은 뒤따라가기 바쁘다
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/d561c4c4-3d0f-47bf-827d-729c28d0e4d1/image.png)
 
@@ -16,10 +30,7 @@ Stanford HAI(Human-Centered AI Institute)가 매년 발간하는 *AI Index Repor
 
 이 글은 9개 챕터를 모두 다루며, 각 챕터에서 ML·DS 실무자가 알아야 할 수치와 함의를 정리합니다.
 
----
-
-1. 2026년을 관통하는 15개 Top Takeaway
--------------------------------
+## 1. 2026년을 관통하는 15개 Top Takeaway
 
 리포트는 본문에 앞서 15개의 최상위 takeaway를 제시합니다.
 
@@ -39,10 +50,7 @@ Stanford HAI(Human-Centered AI Institute)가 매년 발간하는 *AI Index Repor
 14. AI Sovereignty가 국가 정책 핵심 원리로 부상했지만 인프라는 불균등합니다. 오픈소스 개발이 참여를 재분배합니다.
 15. 전문가와 대중의 인식 격차가 큽니다. AI가 직업에 긍정적이라고 보는 비율은 전문가 73%, 대중 23%로 50%p 차이입니다. 미국은 자국 정부의 AI 규제 신뢰도가 31%로 조사 대상국 중 가장 낮습니다.
 
----
-
-2. Chapter 1: Research and Development
---------------------------------------
+## 2. Chapter 1: Research and Development
 
 ### 2.1 Notable AI Models — 산업 집중 심화
 
@@ -90,10 +98,7 @@ AI 출판 총량에서는 중국이 명확한 선두입니다. 가장 인용된 
 
 여성 참여 비중은 사우디아라비아 32.3%, 호주 30.1%, 캐나다 29.6%로 일부 국가가 상대적으로 높지만, 어떤 국가도 성별 균형에 가깝지 않습니다. 리포트는 2010년 이후 어떤 국가에서도 성별 격차에 의미 있는 개선이 없었다고 명시합니다.
 
----
-
-3. Chapter 2: Technical Performance
------------------------------------
+## 3. Chapter 2: Technical Performance
 
 ### 3.1 Overall Performance Trends — 인간 베이스라인을 넘는 다수 벤치마크
 
@@ -141,10 +146,7 @@ RLBench에서 로봇 조작은 89.4% 성공률을 보이지만 BEHAVIOR-1K로 �
 
 자율주행은 2025년에 대규모 배포 단계에 진입했습니다. Waymo는 미국 5개 도시에서 주당 약 45만 건, 중국의 Apollo Go는 1,100만 건의 완전 무인 주행을 기록(전년 대비 175% 증가)했습니다. 다만 모두 우호적 날씨 지역에서 원격 인간 감독자가 있는 조건의 배포입니다. 안전성에 관한 신규 벤치마크들도 함께 소개됩니다.
 
----
-
-4. Chapter 3: Responsible AI
-----------------------------
+## 4. Chapter 3: Responsible AI
 
 ### 4.1 RAI의 3계층 프레임워크
 
@@ -188,10 +190,7 @@ min⁡θLtask(θ)+∑iλiLRAIi(θ)\min\_{\theta} \mathcal{L}\_{\text{task}}(\the
 
 여기서 LRAIi\mathcal{L}\_{\text{RAI}\_i}LRAIi​​들은 서로 독립이 아니며, Pareto frontier 상에서 어떤 지점을 선택할지가 설계의 핵심 결정이 됩니다. 리포트는 "the tradeoffs are not well understood"라고 명시하며, 이 영역이 향후 RAI 연구의 핵심 주제가 될 것임을 예고합니다.
 
----
-
-5. Chapter 4: Economy
----------------------
+## 5. Chapter 4: Economy
 
 ### 5.1 2025 Year in Review — 주요 투자 이벤트
 
@@ -231,10 +230,7 @@ Generative AI는 3년 만에 53% 인구 도입률에 도달했습니다. 국가�
 
 중국은 전 세계 산업용 로봇의 54%를 설치하며 2023년 51.1%에서 격차를 더 벌렸습니다. 글로벌 전년 대비 성장률은 정체였고 미국·독일·이탈리아가 감소했습니다. 대만은 33%의 가장 높은 전년 대비 성장률을 기록했습니다.
 
----
-
-6. Chapter 5: Science
----------------------
+## 6. Chapter 5: Science
 
 ### 6.1 AI for Science의 세 단계
 
@@ -274,10 +270,7 @@ Sakana의 AI Scientist-v2는 사람이 작성한 템플릿 없이 생성한 논�
 
 과학용 AI 모델 대부분은 학계와 정부 기관에서 나오며, 이는 산업계 중심의 범용 AI 지형과 대조됩니다. 다수는 국제 협력의 결과물이고, 지구과학 데이터셋은 전적으로 정부·학계 소스에서 옵니다. 기상·기후 Foundation Model에서는 산업계가 주도합니다.
 
----
-
-7. Chapter 6: Medicine
-----------------------
+## 7. Chapter 6: Medicine
 
 ### 7.1 The Central Dogma — 분자에서 치료까지
 
@@ -317,10 +310,7 @@ Microsoft의 AI Diagnostic Orchestrator와 OpenAI o3의 조합이 까다로운 �
 
 500개 이상 임상 AI 연구 리뷰 결과, 거의 절반이 실제 환자 데이터가 아닌 시험 스타일 질문에 기반했고, 실제 임상 데이터를 사용한 연구는 5%에 불과했습니다. 임상 AI의 엄정한 근거 기반은 여전히 얕다는 의미입니다.
 
----
-
-8. Chapter 7: Education
------------------------
+## 8. Chapter 7: Education
 
 ### 8.1 CS 등록의 감소와 AI 석사의 증가
 
@@ -348,10 +338,7 @@ Microsoft의 AI Diagnostic Orchestrator와 OpenAI o3의 조합이 까다로운 �
 
 사람들은 정규 교육 밖에서도 AI 기술을 습득하고 이력서에 광고합니다. 대부분 국가에서 AI Literacy는 엔지니어링 지향 AI 기술보다 빠르게 성장했습니다. UAE, 칠레, 남아프리카공화국은 예외로, 2022년 이후 엔지니어링 기술이 더 가파르게 성장했습니다.
 
----
-
-9. Chapter 8: Policy and Governance
------------------------------------
+## 9. Chapter 8: Policy and Governance
 
 ### 9.1 신흥국의 국가 AI 전략 확산
 
@@ -389,10 +376,7 @@ AI 관련 미국 의회 청문회 증인은 2017년 5명에서 2025년 102명으
 
 일본, 한국, 이탈리아는 각각 2025년에 국가 AI 법을 통과시켰습니다. 규제 방향은 세계적으로 분기 중입니다.
 
----
-
-10. Chapter 9: Public Opinion
------------------------------
+## 10. Chapter 9: Public Opinion
 
 ### 10.1 낙관과 불안의 동반 상승
 
@@ -436,10 +420,7 @@ AI 동반자(Companionship) 사용은 아직 틈새이지만, 전문가들은 20
 
 Pew의 2025년 25개국 조사에서 AI 규제 효과성에 대한 신뢰 중위값은 EU 53%, 미국 37%, 중국 27%입니다. EU가 미국·중국보다 더 신뢰받는 규제자로 인식됩니다.
 
----
-
-11. Data Scientist·ML 실무자 관점의 핵심 시사점
-------------------------------------
+## 11. Data Scientist·ML 실무자 관점의 핵심 시사점
 
 2026년 리포트에서 ML·DS 실무자가 특히 눈여겨볼 신호는 다음과 같이 정리됩니다.
 
@@ -459,10 +440,7 @@ Pew의 2025년 25개국 조사에서 AI 규제 효과성에 대한 신뢰 중위
 
 여덟째, 에이전트 배포의 갭입니다. Agent 벤치마크 성능은 빠르게 올랐지만 실제 비즈니스 기능에서 Agent 배포는 한 자릿수에 머물러 있습니다. 벤치마크 성능과 실배포 사이의 신뢰성·통합·관리 갭이 향후 1-2년의 핵심 과제입니다.
 
----
-
-12. 마무리
--------
+## 12. 마무리
 
 리포트는 "what we cannot yet measure matters just as much as what we can"이라는 문장으로 서문을 닫습니다. 이 문장은 2026년 AI 지형을 이해하는 데 가장 적절한 요약입니다.
 

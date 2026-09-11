@@ -1,19 +1,27 @@
-﻿---
+---
+type: "Tip"
 title: "[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법"
+description: "GPT Canvas의 LaTeX 렌더링 버그를 정리하고 MathJax·KaTeX 문법 차이를 설명한 뒤, @ 기호 대체 프롬프트와 Python 후처리로 수식을 보존하는 방법을 소개한다."
 date: "2025-01-29"
 tags:
+  - "꿀팁"
+  - "ChatGPT"
   - "OpenAI"
-  - "chatGPT"
+resource: "https://velog.io/@euisuk-chung/꿀팁-GPT-Canvas에서-LaTeX-수식-랜더링-문제-및-해결-방법"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:35:31Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/꿀팁-GPT-Canvas에서-LaTeX-수식-랜더링-문제-및-해결-방법"
+    title: "[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-29"
+status: "stable"
 year: "2025"
 ---
 
-# [꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법
-
-
-
-
-(복습) GPT Canvas란?
------------------
+## (복습) GPT Canvas란?
 
 
 **캔버스(Canvas)**는 **2024년 12days of OpenAI**에 ChatGPT에 통합된 혁신적인 협업 도구로, 글쓰기, 코딩, 창작 작업을 더욱 직관적이고 효율적으로 수행할 수 있도록 돕는 플랫폼입니다.
@@ -25,8 +33,7 @@ year: "2025"
 
 이러한 기능을 통해 캔버스는 창의적인 아이디어를 구체화하고, 협업을 강화하는 강력한 도구로 자리 잡고 있습니다.
 
-문제 개요
------
+## 문제 개요
 
 GPT Canvas는 강력한 문서 작성 도구이지만, 현재 **LaTeX 수식 랜더링과 관련하여 몇 가지 문제**를 안고 있습니다.
 
@@ -114,8 +121,7 @@ GPT Canvas는 강력한 문서 작성 도구이지만, 현재 **LaTeX 수식 랜
 
 > 실제로 캔버스 상에 수식이 들어가면 위와 같이 랜더링 실패로 누락되어 나오는 것을 확인 할 수 있습니다.
 
-해결 방법: LaTeX 수식 대체 기호 사용
-------------------------
+## 해결 방법: LaTeX 수식 대체 기호 사용
 
 현재로서는 GPT Canvas가 LaTeX 수식을 정상적으로 랜더링할 수 있도록 하는 공식적인 해결책이 없지만, 다음과 같은 **임시 방안을 활용하면 문제를 회피**할 수 있습니다.
 
@@ -303,8 +309,7 @@ print("변환이 완료되었습니다! 'final_latex.md' 파일을 확인하세�
 > * 반드시 “블록 수식 기호”부터 치환하고, 그 다음 “인라인 기호”를 치환해야 중복 충돌을 피할 수 있습니다.
 > * 실제 프로젝트에서는 훨씬 정교한 정규식(`re.sub()`)을 쓰거나, 마크다운 파서를 활용해 충돌 없이 변환하는 방안을 모색할 수도 있습니다.
 
-결론
---
+## 결론
 
 이번 블로그 콘텐츠에서는 커뮤니티에서 제안한 솔루션을 보다 실용적인 방식으로 정리하여 공유하였습니다. 특히 Markdown과 LaTeX의 충돌을 피하면서도 원본 수식을 유지하는 방법을 다루었으며, 이를 GPT Canvas에서 활용할 수 있도록 구체적인 예제와 후처리 방법을 제시했습니다. 😎
 

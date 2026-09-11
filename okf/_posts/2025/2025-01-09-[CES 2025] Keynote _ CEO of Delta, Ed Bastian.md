@@ -1,10 +1,24 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : CEO of Delta, Ed Bastian"
+description: "Sphere에서 열린 Delta 100주년 키노트에서 AI 개인 비서 Delta Concierge의 여행 시나리오, Delta Sync, Joby·Uber·Airbus 파트너십과 지속 가능 항공 연료 전략을 정리한다."
 date: "2025-01-09"
+tags:
+  - "CES"
+  - "Conference"
+resource: "https://velog.io/@euisuk-chung/CES-2025-CEO-of-Delta-Ed-Bastian"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:39:51Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-CEO-of-Delta-Ed-Bastian"
+    title: "[CES 2025] Keynote : CEO of Delta, Ed Bastian"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
-
-# [CES 2025] Keynote : CEO of Delta, Ed Bastian
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3de12478-6bd8-4c57-a1d4-2e4e1bb4a0f7/image.png)
 
@@ -30,8 +44,6 @@ Gary Shapiro, CTA 회장은 Ed Bastian의 발표를 소개하며 Delta의 100주
 
 > 키야... 100주년 클래스...
 
----
-
 ### Delta의 100년 역사와 비전
 
 1. **Delta의 유산**
@@ -53,8 +65,6 @@ Gary Shapiro, CTA 회장은 Ed Bastian의 발표를 소개하며 Delta의 100주
      + Delta의 목표는 기술을 활용해 **고객이 원하는 모든 것을 미리 예측하고 제공**하는 것입니다.
    * Delta의 새로운 디지털 플랫폼인 "**Delta Concierge**"는 AI 기반의 개인 비서로, 고객의 여행 여정을 지원하며, 이를 통해 더욱 직관적이고 개인화된 서비스를 제공합니다.
      + 이 플랫폼은 고객 데이터를 분석하여 개별적인 필요를 충족시키며, 비행 전후의 모든 과정을 간소화합니다.
-
----
 
 ### Delta Concierge 서비스 시나리오
 
@@ -94,8 +104,6 @@ Delta Concierge는 고객이 처음 여행을 계획하는 단계부터 모든 �
      ![](https://velog.velcdn.com/images/euisuk-chung/post/70d56484-0d76-4898-b938-15e682ce4702/image.png)
 
 Delta Concierge는 고객의 여정을 처음부터 끝까지 매끄럽게 연결하며, 개인화된 서비스를 통해 여행의 모든 순간을 특별하게 만듭니다.
-
----
 
 ### 주요 혁신
 
@@ -141,8 +149,6 @@ Delta Concierge는 고객의 여정을 처음부터 끝까지 매끄럽게 연�
 
      > Google Search | Joby Aviation
 
----
-
 ### 고객 경험의 혁신
 
 1. **Delta Concierge**
@@ -159,8 +165,6 @@ Delta Concierge는 고객의 여정을 처음부터 끝까지 매끄럽게 연�
    * Delta Sync는 개인화된 좌석 화면을 통해 고객에게 맞춤형 콘텐츠를 제공합니다. Delta는 고객의 취향을 분석해 관련 영화, 음악, 팟캐스트 등을 추천합니다.
    * 실시간 번역 기능을 통해 다양한 언어로 번역 서비스를 제공하며, 이를 통해 글로벌 고객의 편의성을 높입니다.
    * Delta는 고객의 관심사와 요구에 맞춘 콘텐츠를 제공하여 항공 여행 중의 만족도를 극대화합니다. 이러한 서비스는 고객 경험의 중요한 부분을 차지합니다.
-
----
 
 ### 결론
 

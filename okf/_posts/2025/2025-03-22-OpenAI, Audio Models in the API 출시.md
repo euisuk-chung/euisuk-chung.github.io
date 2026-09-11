@@ -1,13 +1,25 @@
 ---
+type: "Product Update"
 title: "OpenAI, Audio Models in the API 출시"
+description: "GPT-4o-transcribe STT 모델과 지시 기반 음성 합성을 지원하는 GPT-4o-mini-TTS의 특징, FLEURS 벤치마크 결과, Agents SDK VoicePipeline으로 텍스트 에이전트를 음성 에이전트로 확장하는 방법을 소개한다."
 date: "2025-03-22"
 tags:
   - "OpenAI"
-  - "chatGPT"
+  - "AI Agent"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI-Audio-Models-in-the-API-출시"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:29:50Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-Audio-Models-in-the-API-출시"
+    title: "OpenAI, Audio Models in the API 출시"
+    author: "human:euisuk-chung"
+    last_modified: "2025-03-22"
+status: "stable"
 year: "2025"
 ---
-
-# OpenAI, Audio Models in the API 출시
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1feabe7a-a279-46f9-bf02-a80c4fbbb81c/image.png)
 
@@ -41,8 +53,7 @@ OpenAI는 많은 개발자들이 이 Chained 방식을 중심으로 Voice Agent�
 
 이 글에서는 이러한 음성 모델들이 어떤 점에서 발전했는지, 실제로 어떻게 사용할 수 있는지 자세히 살펴보겠습니다.
 
-1. 새로운 음성-텍스트(STT) 모델
----------------------
+## 1. 새로운 음성-텍스트(STT) 모델
 
 OpenAI는 GPT-4o 기반의 새로운 음성-텍스트 모델 `두 가지`를 출시했습니다.
 
@@ -108,8 +119,7 @@ OpenAI가 진행한 **FLEURS(Few-shot Learning Evaluation of Universal Represent
 
 * 사용자의 발화 종료 시점을 모델이 스스로 파악하여 처리
 
-2. 새로운 텍스트-음성(TTS) 모델: GPT-4o-mini-TTS
---------------------------------------
+## 2. 새로운 텍스트-음성(TTS) 모델: GPT-4o-mini-TTS
 
 이번에 함께 공개된 텍스트-음성 모델 **GPT-4o-mini-TTS**는 단순한 텍스트 낭독 기능을 넘어, 감정과 스타일을 지정하여 음성을 생성할 수 있는 ***지시 기반 음성 합성(Instructable Speech Synthesis)*** 기능을 지원합니다.
 
@@ -146,10 +156,7 @@ OpenAI는 이를 체험해볼 수 있도록 **[openai.fm](https://www.openai.fm)
 
 또한, Python, JavaScript, curl 등으로 바로 호출 가능한 API 코드 예제도 제공되어, 개발자가 손쉽게 자신의 앱이나 서비스에 바로 적용할 수 있도록 지원하고 있습니다.
 
----
-
-3. 모델의 기술적 혁신
--------------
+## 3. 모델의 기술적 혁신
 
 OpenAI는 이번 오디오 모델을 개발하며 음성 AI의 근본적인 한계를 극복하기 위해 다음과 3가지에 집중했다고 합니다.
 
@@ -173,18 +180,13 @@ OpenAI는 이번 오디오 모델을 개발하며 음성 AI의 근본적인 한�
 
 * RL(Reinforcement Learning) 기법을 통해 모델이 오류를 줄이고 실제 사용자 발화에 더 민감하게 반응할 수 있도록 튜닝되었습니다.
 
----
-
-4. Agents SDK를 통한 음성 에이전트 구현
-----------------------------
+## 4. Agents SDK를 통한 음성 에이전트 구현
 
 OpenAI는 기존 텍스트 기반 에이전트를 **음성 입력과 음성 응답이 가능한 Voice Agent로 빠르게 전환할 수 있도록** Agents SDK에 강력한 기능을 추가했습니다. 실제 데모에서는 지난주 공개된 텍스트 기반 고객지원 에이전트를 **불과 9줄의 코드 수정만으로** 음성 기반 에이전트로 확장하는 과정을 보여주었습니다.
 
 ### 🎬 데모 시나리오: 텍스트 기반 → 음성 에이전트로 확장
 
 데모에서 사용된 예시는 사용자의 주문 내역을 확인해주는 고객지원 에이전트였습니다. 원래는 텍스트 입력을 받고, 주문 정보를 출력하는 기본적인 구조였지만, 여기에 음성 기능을 추가하기 위해 아래와 같은 단계가 진행되었습니다.
-
----
 
 ### 🧩 핵심 변경 1: WebSocket 기반 오디오 처리 로직 추가
 
@@ -215,8 +217,6 @@ elif is_audio_comp(message):
 ```
 
 * 이 구조 덕분에, 클라이언트는 음성을 녹음해서 전송하고, 서버는 이를 분석 후 음성으로 다시 응답할 수 있게 됩니다.
-
----
 
 ### 🧩 핵심 변경 2: Voice Pipeline 적용
 
@@ -258,8 +258,6 @@ voice_pipeline = VoicePipeline(workflow=workflow)
 
 > 음성으로 챗봇과 대화중 ㄷㄷ
 
----
-
 ### 👁️ 디버깅 & 확인: Tracing UI
 
 Voice Agent를 구축하면서 “*정확히 어떤 음성을 인식했고, 어떤 응답을 생성했는지*”를 확인하기 어려운 경우가 많습니다.
@@ -291,10 +289,7 @@ Voice Agent를 구축하면서 “*정확히 어떤 음성을 인식했고, 어�
 
 > 발표 소개 신규 기능
 
----
-
-5. 향후 계획 및 전망
--------------
+## 5. 향후 계획 및 전망
 
 OpenAI는 음성 모델의 정확도 및 맞춤형 기능 확대에 지속적인 투자를 진행할 예정입니다.
 

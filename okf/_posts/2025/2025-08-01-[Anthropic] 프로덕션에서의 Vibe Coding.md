@@ -1,24 +1,34 @@
 ---
+type: "Conference Recap"
 title: "[Anthropic] 프로덕션에서의 Vibe Coding"
+description: "Code w/ Claude에서 Erik Schluntz가 발표한 프로덕션 Vibe Coding 전략으로 컴파일러 비유, 코드 대신 동작을 검증하는 법, 리프 노드 중심 위임, Claude의 PM 되기, 22,000줄 PR 사례와 워크플로우를 정리한다."
 date: "2025-08-01"
 tags:
-  - "Anthropic"
+  - "Vibe Coding"
   - "Claude"
-  - "vibe coding"
+  - "Anthropic"
+  - "Conference"
+resource: "https://velog.io/@euisuk-chung/Anthropic-프로덕션에서의-Vibe-Coding"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:19:23Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Anthropic-프로덕션에서의-Vibe-Coding"
+    title: "[Anthropic] 프로덕션에서의 Vibe Coding"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-01"
+status: "stable"
 year: "2025"
 ---
-
-# [Anthropic] 프로덕션에서의 Vibe Coding
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6a3b3b3b-86f5-41cb-a7e3-07bca03060dd/image.png)
 
 > <https://youtu.be/fHWFF_pnqDk?si=-MXGeYqm8e0EZKcr>
 
-Code w/ Claude
-==============
+# Code w/ Claude
 
-Vibe Coding in Production
--------------------------
+## Vibe Coding in Production
 
 최근 소프트웨어 개발 커뮤니티에서 "Vibe Coding"이라는 다소 파격적인 개념이 회자되고 있습니다. 단순한 자동완성이나 코파일럿 보조를 넘어서, AI가 코드를 "느낌대로" 작성하고, 인간은 결과만 검토하는 방식—이것이 가능한 시대가 정말 올 수 있을까요?
 
@@ -26,10 +36,7 @@ Vibe Coding in Production
 
 이 글에서는 그의 발표를 토대로 Vibe Coding의 정의부터 적용 전략, 실무 워크플로우, 그리고 앞으로의 개발자 역량까지 폭넓게 살펴보겠습니다.
 
----
-
-Vibe Coding이란 무엇인가?
--------------------
+## Vibe Coding이란 무엇인가?
 
 Vibe Coding은 흔히 Copilot, Cursor 등의 AI 코딩 도구 사용과 혼동되곤 합니다. 그러나 Schulntz는 이를 **"코드의 존재를 잊고 AI의 흐름에 몸을 맡기는 것"**으로 정의합니다. Andrej Karpathy의 말을 빌리자면:
 
@@ -41,10 +48,7 @@ Vibe Coding은 흔히 Copilot, Cursor 등의 AI 코딩 도구 사용과 혼동�
 
 > <https://youtu.be/L8Tb3RERZoY>
 
----
-
-왜 지금 Vibe Coding을 논해야 할까?
--------------------------
+## 왜 지금 Vibe Coding을 논해야 할까?
 
 ### 1. AI의 작업 길이(Task Length)가 지수적으로 늘어나고 있다
 
@@ -118,10 +122,7 @@ C = A + B
 
 그것이 앞으로의 기술 과제라고 강조했습니다.
 
----
-
-우리가 코드를 이해하지 못할 때 어떻게 검증할까?
----------------------------
+## 우리가 코드를 이해하지 못할 때 어떻게 검증할까?
 
 기술 리더, 제품 관리자, 심지어 CEO도 자신이 직접 작성하지 않은 작업물을 평가해야 할 때가 많습니다. 이는 소프트웨어 개발자만의 고민이 아닙니다.
 
@@ -145,10 +146,7 @@ Schulntz는 강연에서 이렇게 말합니다:
 
 이 말인 즉, 기존의 소프트웨어 개발자는 지금까지 항상 자신이 작성한 코드를 직접 이해하고, 제어하고, 검토하는 것을 전제로 일해왔으나, "AI 코드 생성 시대에는 더 이상 그 방식이 생산적이지 않다"라고 얘기하며 **매니져의 관점으로 업무를 바라보고 수행해야 한다**고 이야기하고 있습니다.
 
----
-
-프로덕션 관점에서 Vibe Coding 전략
-------------------------
+## 프로덕션 관점에서 Vibe Coding 전략
 
 ### 배경: 기술 부채(Tech Debt)와 AI의 한계
 
@@ -198,10 +196,7 @@ Vibe Coding에서 인간의 역할은 단순히 "요청자"가 아닌, **Claude�
 
 > "Ask not what Claude can do for you, but what you can do for Claude."
 
----
-
-(사례) 22,000라인 PR을 Claude가 작성한 이유와 방식
-------------------------------------
+## (사례) 22,000라인 PR을 Claude가 작성한 이유와 방식
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/d126f2d2-bc1e-4e43-a454-59e6c92b8be4/image.png)
 
@@ -218,15 +213,11 @@ Anthropic의 강화학습 시스템에 통합된 대규모 PR은 다음과 같�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/99f95942-4fbc-440b-aea6-e351f5a78e74/image.png)
 
----
-
-Q&A
-===
+# Q&A
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/13c096a8-3242-4f70-abfe-082721610314/image.png)
 
-개발자는 이제 어떤 역량을 길러야 하는가?
------------------------
+## 개발자는 이제 어떤 역량을 길러야 하는가?
 
 **1. 코드를 짜는 능력보다 ‘문제 정의 능력’이 중요해진다**
 
@@ -238,10 +229,7 @@ Q&A
 
 > "Lazy people will learn nothing. But those who ask the right questions will learn faster than ever."
 
----
-
-보안을 어떻게 확보할까?
--------------
+## 보안을 어떻게 확보할까?
 
 Schulntz는 프로덕션 보안과 관련된 질문에 대해 다음과 같이 강조했습니다:
 
@@ -249,10 +237,7 @@ Schulntz는 프로덕션 보안과 관련된 질문에 대해 다음과 같이 �
 * 민감한 기능(API 키 처리, 인증, 결제 등)은 사람이 직접 작성하거나, **AI에게 구체적이고 보수적인 프롬프트**를 제공해야 합니다.
 * **샌드박스형 프레임워크**나 오프라인 환경에서 AI 코드를 실행함으로써 안전성을 확보할 수 있습니다.
 
----
-
-실용 워크플로우 가이드
-------------
+## 실용 워크플로우 가이드
 
 1. **탐색 단계**
 
@@ -268,10 +253,7 @@ Schulntz는 프로덕션 보안과 관련된 질문에 대해 다음과 같이 �
    * **최소한의 end-to-end 테스트**부터 확인
    * 필요시 “compact”나 새 세션으로 컨텍스트 리셋
 
----
-
-결론
-==
+# 결론
 
 Vibe Coding은 단순한 유행이 아닙니다. AI의 능력이 지수적으로 성장하는 시대,
 

@@ -1,29 +1,38 @@
 ---
+type: "Lecture Note"
 title: "[토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리"
+description: "Andrej Karpathy 강의를 바탕으로 LLM의 두 파일 구조, 사전학습·미세조정·RLHF, Scaling Laws, Tool Use, LLM OS 개념과 Jailbreak·Prompt Injection·Data Poisoning 보안 위협을 정리한다."
 date: "2025-12-26"
+tags:
+  - "강의노트"
+  - "NLP"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/토크-LLM-완벽-입문-가이드-Andrej-Karpathy-강의-정리"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-16T22:51:48Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/토크-LLM-완벽-입문-가이드-Andrej-Karpathy-강의-정리"
+    title: "[토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리"
+    author: "human:euisuk-chung"
+    last_modified: "2025-12-26"
+status: "stable"
 year: "2025"
 ---
-
-# [토크] LLM 완벽 입문 가이드: Andrej Karpathy 강의 정리
 
 > **원본 강의**: **Intro to Large Language Models** - Andrej Karpathy (<https://youtu.be/zjkBMFhNj_g>)  
 > **Slides as PDF**: <https://drive.google.com/file/d/1pxx_ZI7O-Nwl7ZLNk5hI3WzAsTLwvNU7/view> (42MB)
 
 *All the images are from the lecture slide*
 
----
-
-서론: 왜 LLM을 이해해야 하는가?
---------------------
+## 서론: 왜 LLM을 이해해야 하는가?
 
 ChatGPT, Claude, Bard와 같은 서비스의 핵심 기술인 **Large Language Model(LLM)**은 현재 AI 분야에서 가장 주목받는 기술입니다. 이 블로그 포스트는 Andrej Karpathy(전 Tesla AI Director, OpenAI 창립 멤버)의 1시간 강의를 바탕으로, LLM의 본질부터 미래 방향성, 그리고 보안 이슈까지 체계적으로 정리합니다.
 
 이 강의가 특별한 이유는 복잡한 기술을 명확한 비유와 구체적인 예시로 설명하며, 단순히 "LLM이 무엇인가"를 넘어 **"LLM이 어디로 향하는가"**와 **"어떤 위험이 존재하는가"**까지 다루기 때문입니다.
 
----
-
-Part 1: LLM의 본질 - 두 개의 파일로 이루어진 세계
-----------------------------------
+## Part 1: LLM의 본질 - 두 개의 파일로 이루어진 세계
 
 ### 1.1 LLM은 결국 두 개의 파일이다
 
@@ -78,10 +87,7 @@ LLM의 핵심 과제는 놀라울 정도로 단순합니다. 바로 **다음 단
 
 이로 인해 **불확실성**이 발생합니다. 어떤 정보가 정확한 지식인지, 어떤 정보가 환각인지 구분하기 어렵습니다.
 
----
-
-Part 2: Transformer와 해석 가능성의 한계
--------------------------------
+## Part 2: Transformer와 해석 가능성의 한계
 
 ### 2.1 Transformer 아키텍처
 
@@ -116,10 +122,7 @@ Karpathy는 LLM을 다음과 같이 정의합니다. LLM은 **"mostly inscrutabl
 
 현재로서는 LLM을 **경험적(Empirical)** 시스템으로 다루어야 합니다. 이는, 입력을 주고 출력을 측정하며 동작을 관찰하는 방식입니다.
 
----
-
-Part 3: Pre-training에서 Fine-tuning으로
-------------------------------------
+## Part 3: Pre-training에서 Fine-tuning으로
 
 ### 3.1 두 단계 학습 패러다임
 
@@ -197,10 +200,7 @@ OpenAI의 InstructGPT 논문에서 공개된 레이블링 지침의 핵심은 �
 
 > <https://www.aitimes.com/news/articleView.html?idxno=155196>
 
----
-
-Part 4: LLM의 발전 방향
-------------------
+## Part 4: LLM의 발전 방향
 
 ### 4.1 Scaling Laws: 예측 가능한 성능 향상
 
@@ -307,10 +307,7 @@ Sam Altman이 발표한 **GPTs App Store**는 LLM 커스터마이징의 한 시�
 
 미래에는 **Fine-tuning**을 통해 자신만의 학습 데이터로 모델을 조정할 수 있을 것입니다. 특정 작업에 **전문화된 LLM**들이 등장하여 하나의 범용 모델 대신 다양한 전문가 모델들이 협력하게 될 것입니다.
 
----
-
-Part 5: LLM OS - 새로운 컴퓨팅 패러다임
------------------------------
+## Part 5: LLM OS - 새로운 컴퓨팅 패러다임
 
 ### 5.1 LLM을 운영체제로 이해하기
 
@@ -334,10 +331,7 @@ LLM OS의 구성 요소를 살펴보면, **텍스트 처리** 측면에서 읽�
 
 이 유사성을 통해 기존 컴퓨팅 스택의 **교훈을 적용**할 수 있습니다.
 
----
-
-Part 6: LLM 보안 - 새로운 위협의 등장
----------------------------
+## Part 6: LLM 보안 - 새로운 위협의 등장
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f9ba220b-5283-4bac-890f-d1919f5a895e/image.png)
 
@@ -416,10 +410,7 @@ Part 6: LLM 보안 - 새로운 위협의 등장
 
 **Cat and Mouse Game**이 진행 중입니다. 기존 컴퓨터 보안과 마찬가지로 공격과 방어가 끊임없이 진화합니다. 이 분야는 매우 **새롭고 빠르게 변화**하고 있습니다.
 
----
-
-결론: LLM의 현재와 미래
----------------
+## 결론: LLM의 현재와 미래
 
 ### 핵심 요약
 

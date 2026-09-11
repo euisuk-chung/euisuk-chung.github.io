@@ -1,24 +1,34 @@
 ---
+type: "Trend Report"
 title: "BCG AI Radar 2026: CEO가 AI 투자의 중심에 서다"
+description: "BCG AI Radar 2026 서베이를 바탕으로 매출 대비 AI 투자 급증, CIO에서 CEO로 옮겨간 AI 의사결정 주도권, Change Distance 현상, Followers·Pragmatists·Trailblazers 세 CEO 유형과 실행 가이드를 정리한다."
 date: "2026-01-20"
+tags:
+  - "트렌드"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/BCG-AI-Radar-2026-CEO가-AI-투자의-중심에-서다"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-16T22:49:56Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/BCG-AI-Radar-2026-CEO가-AI-투자의-중심에-서다"
+    title: "BCG AI Radar 2026: CEO가 AI 투자의 중심에 서다"
+    author: "human:euisuk-chung"
+    last_modified: "2026-01-20"
+status: "stable"
 year: "2026"
 ---
 
-# BCG AI Radar 2026: CEO가 AI 투자의 중심에 서다
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/f4689444-a79f-42c9-a352-a32c6d092947/image.png)
 
-핵심 요약
------
+## 핵심 요약
 
 2026년 기업 AI 투자가 급증하면서, CEO들이 직접 AI 전략의 주도권을 쥐고 있습니다. BCG의 2026 AI Radar 서베이에 따르면 72%의 CEO가 자사의 AI 주요 의사결정자라고 응답했으며, 이는 전년 대비 2배 증가한 수치입니다. 기업들은 2026년 AI 투자를 매출 대비 약 1.7%까지 확대할 계획이며, 이는 2025년 0.8%에서 두 배 이상 증가한 것입니다. 특히 약 90%의 CEO가 AI Agent가 2026년 측정 가능한 ROI를 창출할 것이라 확신하고 있습니다.
 
 > 보고서 바로가기: <https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead>
 
----
-
-1. 서베이 개요
----------
+## 1. 서베이 개요
 
 BCG AI Radar 2026은 **16개 글로벌 시장에서 총 2,360명의 경영진**을 대상으로 진행된 대규모 조사입니다. 그중 **640명은 CEO**, 나머지 응답자 역시 대부분 C-suite 및 핵심 임원으로 구성되어 있어, 실제 기업의 AI 의사결정에 가장 깊이 관여하는 리더들의 관점을 탄탄하게 담고 있습니다.
 
@@ -52,10 +62,7 @@ BCG AI Radar 2026은 **16개 글로벌 시장에서 총 2,360명의 경영진**�
 
 > *Key-takeaways* (뒤에서 다룰 예정)
 
----
-
-Takeaway 1: 기업 AI 투자가 2배로 증가했으며, 지속될 것이다
-----------------------------------------
+## Takeaway 1: 기업 AI 투자가 2배로 증가했으며, 지속될 것이다
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e3dc3756-2f62-419a-9d2d-6591792f701b/image.png)
 
@@ -125,10 +132,7 @@ Agentic AI는 사이버보안 측면에서 기회이자 위협입니다. 응답�
 * New Targets 관점에서 계정, 비밀번호, 설정을 정기적으로 점검할 수 있으며,
 * Learning 관점에서 방어 전략을 학습하고 지속 개선할 수 있습니다.
 
----
-
-Takeaway 2: AI 전환이 CIO 주도에서 CEO 주도로 이동하다
-----------------------------------------
+## Takeaway 2: AI 전환이 CIO 주도에서 CEO 주도로 이동하다
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/98b11004-8ed6-4153-b862-33181968673f/image.png)
 
@@ -270,10 +274,7 @@ AI 시스템의 자율성이 증가하면서 Governance 구조도 변화해야 �
 
 기업들은 단순히 일상 업무에 AI를 배치(Deploy AI in everyday tasks)하는 것을 넘어, 핵심 워크플로우와 기능을 재설계(Reshape critical workflows and functions)하고, 나아가 완전히 새로운 비즈니스 모델과 수익원을 발명(Invent new business models and revenue streams)하는 방향으로 나아갈 것입니다.
 
----
-
-Takeaway 3: 세 가지 CEO 유형이 등장하고, Trailblazers가 End-to-End AI 전환을 주도하다
--------------------------------------------------------------------
+## Takeaway 3: 세 가지 CEO 유형이 등장하고, Trailblazers가 End-to-End AI 전환을 주도하다
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6586a365-fd2f-43b2-9dd4-2d3000d32cb1/image.png)
 
@@ -400,10 +401,7 @@ Trailblazer 기업은 **조직의 AI 역량 확보에도 공격적으로 투자*
 * 또한 전체 직원의 약 70%가 이미 AI 기반 업스킬·리스킬을 완료해, **다른 그룹보다 빠르게 AI Ready 조직을 구축**하고 있습니다.
 * 이는 기술 도입을 넘어 사람 중심의 조직 변화가 경쟁력의 핵심임을 시사합니다.
 
----
-
-CEO를 위한 실행 가이드
---------------
+## CEO를 위한 실행 가이드
 
 서베이는 CEO가 AI 여정의 다음 단계를 이끌기 위해 가장 중요한 **다섯 가지 행동**을 제시합니다.
 
@@ -415,10 +413,7 @@ CEO를 위한 실행 가이드
 4. 넷째, 조직을 업스킬링해야 합니다.
 5. 다섯째, AI의 측정 가능한 ROI를 추적해야 합니다.
 
----
-
-결론
---
+## 결론
 
 BCG AI Radar 2026의 핵심 메시지는 명확합니다.
 

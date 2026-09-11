@@ -1,10 +1,26 @@
 ---
+type: "Conference Recap"
 title: "Google Cloud Next 2025 Opening Keynote 정리"
+description: "Google Cloud Next 2025 키노트를 시간순으로 따라가며 Ironwood TPU와 AI Hypercomputer, Gemini 2.5, Vertex AI, ADK·MCP·A2A 기반 멀티에이전트 전략과 고객·창작·데이터·코드 에이전트 사례를 정리한다."
 date: "2025-04-11"
+tags:
+  - "Google"
+  - "Conference"
+  - "Gemini"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/Google-Cloud-Next-2025-Opening-Keynote-정리"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:28:41Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Google-Cloud-Next-2025-Opening-Keynote-정리"
+    title: "Google Cloud Next 2025 Opening Keynote 정리"
+    author: "human:euisuk-chung"
+    last_modified: "2025-04-11"
+status: "stable"
 year: "2025"
 ---
-
-# Google Cloud Next 2025 Opening Keynote 정리
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3e8c4bdc-2911-42cd-9c0b-9bcf2a77898b/image.png)
 
@@ -22,10 +38,7 @@ year: "2025"
 > * [Vertex AI 공식 문서](https://cloud.google.com/vertex-ai)
 > * [Gemini 모델 아키텍처](https://deepmind.google/technologies/gemini)
 
----
-
-📽️ 00:14 - Countdown powered by Veo 2
--------------------------------------
+## 📽️ 00:14 - Countdown powered by Veo 2
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3464e448-c6b4-4bc5-bd77-2fee378e1f0e/image.png)
 
@@ -47,10 +60,7 @@ Google Cloud Next 2025 키노트는 **Veo 2** 기반으로 제작된 카운트�
 **의미:**  
 이 Countdown은 **AI를 활용한 콘텐츠 제작이 엔터프라이즈 도구로 진입했음을 시각적으로 선언**한 것입니다. 또한 이 기술이 Sphere 프로젝트, Creative Agent, Veo 2 시연 등으로 이어지는 전체 흐름의 시각적 단서를 제공했습니다.
 
----
-
-🎬 01:00 - Opening Film: "Why Not?"
-----------------------------------
+## 🎬 01:00 - Opening Film: "Why Not?"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2b3c39e6-04ef-4a3d-93b1-6a633046e3f3/image.png)
 
@@ -72,10 +82,7 @@ Google Cloud Next 2025 키노트는 **Veo 2** 기반으로 제작된 카운트�
 **전략적 의미:**  
 이 오프닝은 전체 키노트의 핵심 메시지를 미리 압축해 보여주는 도입부 역할을 했습니다. 또한, **Google Cloud가 단순한 클라우드 인프라 제공자가 아니라, 기업과 사회의 혁신 파트너임을 강조**하는 상징적인 장치이기도 합니다.
 
----
-
-🚀 02:53 - Google Cloud Momentum
--------------------------------
+## 🚀 02:53 - Google Cloud Momentum
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a1573c4a-15c9-43f0-8e3b-a0661e206ad7/image.png)
 
@@ -110,10 +117,7 @@ Thomas Kurian (Google Cloud CEO)는 Google Cloud의 지난 1년간의 성과를 
 
 * 이어지는 세션에서는 이러한 인프라 및 AI 모델이 어떤 식으로 **제품화(Productization)** 되었는지를 구체적으로 다루게 됩니다. 특히 다음 챕터인 **💸 05:12 - Investment in Every Layer of the Stack**에서 구체적 CAPEX 투자 전략과 AI 전용 하드웨어가 소개됩니다.
 
----
-
-💸 05:12 - Investment in Every Layer of the Stack
-------------------------------------------------
+## 💸 05:12 - Investment in Every Layer of the Stack
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/2ffd9d74-2c3a-44e8-9332-fdc001a2a1ac/image.png)
 
@@ -123,8 +127,6 @@ Sundar Pichai (Google & Alphabet CEO)
 **핵심 메시지:**
 
 > Google은 인공지능의 미래를 위해 **하드웨어, 네트워크, 소프트웨어, 모델, 제품**에 이르기까지 **AI 전체 스택에 걸친 투자를 단행**하고 있다.
-
----
 
 #### 📌 주요 발표 내용 요약
 
@@ -158,15 +160,11 @@ Sundar Pichai (Google & Alphabet CEO)
 * Google DeepMind 연구팀과 공동 개발
 * 향후 대규모 양자 컴퓨팅으로 연결될 수 있는 **중요한 기반**
 
----
-
 #### 💡 기술적/전략적 의미
 
 * 단순히 AI 모델 성능 경쟁이 아니라, Google은 **AI를 위한 물리적 세계의 기반(Compute, Storage, Network)을 직접 설계**하고 있다는 점에서 차별화됨.
 * 특히 **“End-to-End AI Stack”**을 자체적으로 구축, 제어함으로써 **가격/성능/에너지 측면에서 경쟁자 대비 우위를 확보**.
 * Cloud WAN을 통해 네트워크마저 “Google화”하여 **고객이 Google의 글로벌 속도와 신뢰성을 직접 이용**할 수 있게 됨.
-
----
 
 ### ✅ 5) 🧠 16:19 – AI Hypercomputer & Infrastructure
 
@@ -180,8 +178,6 @@ Amin Vahdat (VP/GM, Systems & Services Infrastructure, Google Cloud)
 > AI 시대의 컴퓨팅 수요는 기존 인프라로는 감당할 수 없다. Google은 이를 해결하기 위해 **AI Hypercomputer**라는 새로운 형태의 슈퍼컴퓨터급 인프라 아키텍처를 설계했다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1968c5ea-d3e4-46ea-b12d-a84f2ccc45ae/image.png)
-
----
 
 #### 📌 주요 구성 요소 요약
 
@@ -217,8 +213,6 @@ Amin Vahdat (VP/GM, Systems & Services Infrastructure, Google Cloud)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3e07e330-8232-49f5-b34a-ef5f680232e6/image.png)
 
----
-
 #### 💡 전략적 가치
 
 * **“Hypercomputer”는 단순히 빠른 서버의 집합이 아니라,**  
@@ -226,10 +220,7 @@ Amin Vahdat (VP/GM, Systems & Services Infrastructure, Google Cloud)
 * 고객 입장에서는 고성능 LLM도 **낮은 비용, 높은 유연성, 빠른 서빙 지연시간**으로 사용할 수 있게 됨
 * 이는 Gemini 모델군이 GPT-4o보다 **24배 높은 intelligence-per-dollar**를 달성하는 기술적 기반임
 
----
-
-🧬 18:44 - Research & Foundation Models
---------------------------------------
+## 🧬 18:44 - Research & Foundation Models
 
 **발표자:**  
 Thomas Kurian (Google Cloud CEO)
@@ -237,8 +228,6 @@ Thomas Kurian (Google Cloud CEO)
 **핵심 메시지:**
 
 > “우리는 세계 최고의 AI 연구를 바탕으로 모델의 한계를 넘어서는 도전을 이어가고 있다. 이제 AI는 ‘생성’만이 아니라 ‘사고(Thinking)’하기 시작했다.”
-
----
 
 #### 📌 대표 모델 및 연구 성과 요약
 
@@ -278,14 +267,10 @@ Thomas Kurian (Google Cloud CEO)
   + 영화급 퀄리티로 기존 콘텐츠 리마스터링
   + Google DeepMind와 협력하여 **딥러닝 기반 영화 제작 시대**의 서막을 알림
 
----
-
 #### 🧪 AI 연구의 방향성과 확장성
 
 * AI는 단순한 언어 모델(LM)을 넘어, **멀티모달(Multimodal) 모델**, **도구 사용(Tool Use)**, **에이전트 기반 사고 체계**로 진화 중
 * 연구와 제품이 완전히 연결되어 있으며, Gemini 모델군은 이를 대표하는 **플래그십 체계**임
-
----
 
 #### 💡 전략적 의미
 
@@ -293,10 +278,7 @@ Thomas Kurian (Google Cloud CEO)
 * 단순한 챗봇 경쟁에서 벗어나, **지식 추론, 멀티모달 생성, 협업적 에이전트 설계**까지 전방위에서 선도
 * 기업과 개발자에게는 Google의 모델이 **가장 빠르게 실험 → 적용 → 확장 가능한 생태계**로 자리 잡고 있음을 강조
 
----
-
-🧩 33:22 - Vertex AI
--------------------
+## 🧩 33:22 - Vertex AI
 
 **발표자:**  
 Thomas Kurian (CEO, Google Cloud)
@@ -304,8 +286,6 @@ Thomas Kurian (CEO, Google Cloud)
 **핵심 메시지:**
 
 > “Vertex AI는 단순한 모델 제공 플랫폼을 넘어, **에이전트 생태계 전체를 아우르는 통합 AI 플랫폼**으로 진화하고 있습니다.”
-
----
 
 #### 📌 주요 내용 요약
 
@@ -333,18 +313,13 @@ Thomas Kurian (CEO, Google Cloud)
 * 자동화된 지표 기반 튜닝 지원
 * **대시보드에서 사용량, 지연시간, 실패율, 성능**을 통합 모니터링 가능
 
----
-
 #### 💡 전략적 의미
 
 * Vertex AI는 단순한 ML 플랫폼에서 **멀티모달, 멀티모델, 멀티에이전트** 통합 플랫폼으로 확대됨
 * 클라우드 기반 MLOps/LLMOps를 지원하면서도, Open/Interoperable 구조를 갖추어 기업 내 기존 IT 자산과 **충돌 없이 자연스럽게 통합 가능**
 * 모델 중심 → 에이전트 중심으로 중심축이 이동하고 있으며, 이는 이어지는 ‘Agents’ 세션으로 본격 확장됨
 
----
-
-🤖 46:40 - Agents: 멀티에이전트 시대의 도래
--------------------------------
+## 🤖 46:40 - Agents: 멀티에이전트 시대의 도래
 
 **발표자:**  
 Thomas Kurian (CEO, Google Cloud)
@@ -352,8 +327,6 @@ Thomas Kurian (CEO, Google Cloud)
 **핵심 메시지:**
 
 > “AI는 이제 단일 응답형 챗봇이 아니라, **계획하고 기억하고 도구를 사용하며 다른 에이전트와 협업하는 실질적 작업 수행자(Agent)**로 진화하고 있다.”
-
----
 
 #### 📌 에이전트(Agent)의 정의와 역할
 
@@ -366,8 +339,6 @@ Thomas Kurian (CEO, Google Cloud)
   + 타 에이전트와 협업(Agent-to-Agent Collaboration)
 
 이러한 시스템은 단순 챗봇보다 훨씬 진화된 형태로, **실제 비즈니스 프로세스를 자동화하고 대체할 수 있는 가능성**을 보여줍니다.
-
----
 
 #### 🛠️ 주요 구성 요소 및 기술
 
@@ -387,8 +358,6 @@ Thomas Kurian (CEO, Google Cloud)
 * 서로 다른 언어 모델 (Gemini, Claude, Llama 등)로 만들어진 에이전트들이 상호 협력할 수 있는 **다중모델 호환 프로토콜**
 * LangGraph, Crew AI 등과 **상호 운용성 확보**
 
----
-
 #### 🔗 실질적 의미 및 활용 방향
 
 * 기업은 이제 단일 AI 도우미를 넘어서, **팀 단위의 AI 에이전트 체계**를 구성할 수 있음
@@ -398,17 +367,12 @@ Thomas Kurian (CEO, Google Cloud)
   + 전 과정을 **여러 에이전트가 나누어 협력해 처리**
 * Google은 이를 통해 단순한 “AI 플랫폼”에서 **“Enterprise Multi-Agent Operating System”**으로 확장 중
 
----
-
 #### 🌐 외부 생태계와의 연계
 
 * LangGraph, Crew AI 등 주요 오픈 멀티에이전트 프레임워크와 호환
 * Google Agentspace, Agent Builder 등과 결합해 **엔드유저도 에이전트를 쉽게 생성 및 배치 가능**
 
----
-
-🧑‍💼 58:18 - Customer Agents
----------------------------
+## 🧑‍💼 58:18 - Customer Agents
 
 **발표자:**  
 Lisa O'Malley (Director, Product Management, Google Cloud)
@@ -416,8 +380,6 @@ Lisa O'Malley (Director, Product Management, Google Cloud)
 **핵심 메시지:**
 
 > “AI는 이제 고객 서비스 영역에서 단순 FAQ를 넘어서, **감정 인식, 멀티모달 이해, 실시간 대응까지 수행하는 고객 대응 파트너**로 진화하고 있습니다.”
-
----
 
 #### 🧾 주요 기업 사례
 
@@ -442,15 +404,11 @@ Lisa O'Malley (Director, Product Management, Google Cloud)
 * Vertex AI 기반으로 **1.5억 개 이상의 상품을 멀티모달 검색으로 연결**
 * 고객이 **이미지+텍스트로 상품 검색 가능**, 구매 전환율 향상
 
----
-
 #### 🧠 AI 에이전트가 수행하는 능력
 
 * 고객의 텍스트/음성/영상 요청을 이해하고 **적절한 도구를 호출하여 작업 수행**
 * **자연어 기반 질의 응답, 제품 추천, 장바구니 추가, 결제 처리, A/S 예약까지** 자동화
 * 감정 인식 기능을 통해, **고객 불만 시 태도 전환, 담당자 연결** 등도 수행 가능
-
----
 
 #### 🛠️ 새로운 기능 요약
 
@@ -458,18 +416,13 @@ Lisa O'Malley (Director, Product Management, Google Cloud)
 * **감정 인식 기반 대화 전환**: 고객의 톤, 표현 등을 분석해 적절한 대응
 * **API 연동 자동화**: CRM, 주문 시스템, 창고 정보 등과 연결해 업무 실행
 
----
-
 #### 💡 전략적 의미
 
 * 이제 기업은 콜센터 자동화를 넘어서, **실시간 맞춤형 응대와 고객 만족을 동시에 달성할 수 있는 시스템**을 구축 가능
 * Google은 단일 챗봇을 넘어서, 고객의 행위와 맥락을 이해하는 **“Agent-based Customer Experience 플랫폼”**으로 자리매김하고 있음
 * 이는 향후 소개되는 Creative, Data, Code, Security 에이전트와의 **에이전트 생태계 통합**으로 확장됨
 
----
-
-🎨 1:12:54 - Creative Agents
----------------------------
+## 🎨 1:12:54 - Creative Agents
 
 **발표자:**  
 Lisa O'Malley & Nenshad Bardoliwalla (Google Cloud)
@@ -477,8 +430,6 @@ Lisa O'Malley & Nenshad Bardoliwalla (Google Cloud)
 **핵심 메시지:**
 
 > “AI는 단지 생산성을 높이는 도구를 넘어서, **창조성(Creativity)의 파트너로 확장되고 있습니다.** 이제 브랜드, 스튜디오, 크리에이터들은 Google Cloud의 에이전트 기반 생성형 미디어 기술을 활용하여 새로운 방식으로 콘텐츠를 제작하고 있습니다.”
-
----
 
 #### 🖼️ 대표 에이전트 및 모델 소개
 
@@ -510,8 +461,6 @@ Lisa O'Malley & Nenshad Bardoliwalla (Google Cloud)
 * 사용자의 목소리 샘플 10초만으로 AI 내레이터 생성
 * 오디오북, 튜토리얼, 마케팅 콘텐츠 등에서 활용 가능
 
----
-
 #### 🎥 데모 시연: AI 콘서트 예고편 만들기
 
 Nenshad Bardoliwalla가 실제 데모로 **Veo + Lyria를 활용해 콘서트 예고편 영상**을 만드는 과정을 실시간 시연함:
@@ -525,18 +474,13 @@ Nenshad Bardoliwalla가 실제 데모로 **Veo + Lyria를 활용해 콘서트 �
 
 ➡️ 이 과정을 통해 **Veo는 전문가가 아닌 일반 사용자도 시네마틱 영상 제작을 가능하게 하는 툴**임을 강조
 
----
-
 #### 💡 전략적 의미
 
 * 기업은 이제 콘텐츠 기획–제작–수정–배포 과정을 **AI를 통한 자동화 및 협업 구조로 전환** 가능
 * 광고/마케팅, 미디어/방송, 교육/엔터테인먼트 업계는 **비용과 시간 단축 + 창의적 실험 증가**
 * Google은 생성형 미디어 모델을 영상, 이미지, 오디오, 음악까지 **“모든 모달리티”로 확장**해 제공 중
 
----
-
-📊 1:16:40 - Data Agents
------------------------
+## 📊 1:16:40 - Data Agents
 
 **발표자:**  
 Yasmeen Ahmad (Managing Director, Google Cloud AI)
@@ -544,8 +488,6 @@ Yasmeen Ahmad (Managing Director, Google Cloud AI)
 **핵심 메시지:**
 
 > “데이터 분석의 미래는 더 이상 복잡한 코드나 도구를 배우는 것이 아니라, **자연어 기반 대화와 에이전트를 통해 누구나 분석과 인사이트를 실현하는 시대**로 전환되고 있습니다.”
-
----
 
 #### 📊 데모 시나리오: “Cash Flow 분석하기”
 
@@ -562,16 +504,12 @@ Yasmeen은 Colab + BigQuery + Vertex AI를 이용해 **기업의 현금 흐름 �
 8. 특정 세그먼트(식음료 도매상)에서만 위험 발생
 9. 전략 제안: 프로모션 조건을 타겟팅 방식으로 변경
 
----
-
 #### 💡 주요 기술 포인트
 
 * **BigQuery**가 단순 SQL 쿼리 엔진을 넘어,  
   ➤ 멀티모달 분석 플랫폼 + ML 모델 서빙 + 예측 수행 엔진으로 진화
 * 자연어로 **분석 요청 → 전처리 → 모델 학습 → 예측 → 전략 제안**까지 하나의 워크플로우 수행 가능
 * Colab 내에서 에이전트가 코드를 직접 생성하고 수정 → **“AI와 함께 일하는 분석가” 구조**
-
----
 
 #### 🧠 제공되는 에이전트 유형
 
@@ -580,18 +518,13 @@ Yasmeen은 Colab + BigQuery + Vertex AI를 이용해 **기업의 현금 흐름 �
 * **Business Analyst Agent**: 자연어 질의 기반 KPI 분석 및 리포팅
 * **Embedded Agent**: Web/Mobile App 내 임베딩 가능
 
----
-
 #### 🧩 전략적 의미
 
 * Google Cloud는 데이터를 가장 먼저 연결하고 가장 빠르게 분석하는 **“End-to-End Data AI Stack”**을 지향
 * AI가 단지 모델이나 기능이 아니라, **실제 업무에서 Insight를 주는 디지털 동료(Agent)로 작동**함
 * 이는 LLM + Data + Application 통합 플랫폼으로서 Vertex AI의 확장성을 보여줌
 
----
-
-💻 1:20:14 - Code Agents
------------------------
+## 💻 1:20:14 - Code Agents
 
 **발표자:**  
 Brad Calder (VP, Google Cloud Platform)
@@ -599,8 +532,6 @@ Brad Calder (VP, Google Cloud Platform)
 **핵심 메시지:**
 
 > “개발의 미래는 ‘AI가 함께 코딩하는 팀원’과 함께하는 것입니다. Gemini Code Assist는 단순한 코드 제안이 아닌, **계획, 생성, 리뷰, 디버깅까지 전 과정을 지원하는 에이전트 기반 개발 파트너**입니다.”
-
----
 
 #### 🛠️ 주요 기능 및 구조
 
@@ -631,18 +562,13 @@ Brad Calder (VP, Google Cloud Platform)
 * 협업 툴: GitHub, GitLab, Jira, Sentry, Snyk, Replit, Tabnine 등
 * Google 내부뿐 아니라 Aider, Cursor 등 외부 툴과도 연동
 
----
-
 #### 💡 전략적 의미
 
 * Gemini Code Assist는 GPT 기반 코드 보조 도구(Copilot 등)와 달리, **엔터프라이즈 보안, 표준 준수, 팀 기반 협업**을 내장한 구조
 * 개발자는 코드를 직접 작성하지 않고도, **대화 기반의 개발 기획–구현–검토–배포를 수행**할 수 있음
 * 이는 기업의 개발 생산성을 극적으로 높이는 동시에, **AI 개발자와 인간 개발자가 협업하는 시대의 시작**을 의미함
 
----
-
-🔐 1:29:53 - Security Agents
----------------------------
+## 🔐 1:29:53 - Security Agents
 
 Sandra Joyce는 **Google Unified Security (GUS)**를 소개하며 보안 에이전트의 도입을 공식화했습니다.
 
@@ -652,10 +578,7 @@ Sandra Joyce는 **Google Unified Security (GUS)**를 소개하며 보안 에이�
 
 특히, 개발자와 보안 담당자가 **실시간 협업하며 보안 리스크를 즉시 대응**할 수 있는 환경이 GUS로 구현되고 있다는 점을 강조했습니다.
 
----
-
-맺음말: AI 중심의 새로운 클라우드
---------------------
+## 맺음말: AI 중심의 새로운 클라우드
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6e804331-2093-4051-8f15-cf78644407f5/image.png)
 
@@ -665,8 +588,6 @@ Thomas Kurian (CEO, Google Cloud)
 **핵심 메시지:**
 
 > “Google Cloud는 단순한 클라우드 공급자가 아닙니다. 우리는 여러분이 AI 중심 조직으로 전환할 수 있도록, **AI에 최적화된 풀스택 플랫폼과 생태계를 제공합니다.**”
-
----
 
 #### 🌎 Google Cloud의 3대 전략적 비전
 
@@ -687,15 +608,11 @@ Thomas Kurian (CEO, Google Cloud)
 * 미국 정부의 Secret/Top Secret 인증을 받은 Air-Gapped 환경 제공
 * Workspace, Gemini, Veo, Vertex AI 모델들도 이 환경에서 활용 가능
 
----
-
 #### 🤝 생태계 협력 강조
 
 * Accenture, Deloitte, TCS, KPMG, Wipro, HCL 등 글로벌 파트너와 **에이전트 개발 협업**
 * 각 산업별 특화 에이전트를 수천 개 개발 및 배포 중
 * Adobe, SAP, Salesforce, NVIDIA 등 주요 기업과도 통합 및 공동 개발 발표
-
----
 
 #### 📆 마무리 메시지
 

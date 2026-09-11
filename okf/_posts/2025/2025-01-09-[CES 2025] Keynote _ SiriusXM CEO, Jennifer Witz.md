@@ -1,13 +1,24 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : SiriusXM CEO, Jennifer Witz"
+description: "SiriusXM CEO와 Crime Junkie 진행자 Ashley Flowers의 대담을 통해 오디오 엔터테인먼트의 진화, AI 기반 추천과 음성 합성 광고, 인간 중심 창작과의 균형을 정리한다."
 date: "2025-01-09"
 tags:
   - "CES"
   - "Conference"
+resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-SiriusXM-CEO-Jennifer-Witz"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:41:05Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-SiriusXM-CEO-Jennifer-Witz"
+    title: "[CES 2025] Keynote : SiriusXM CEO, Jennifer Witz"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
-
-# [CES 2025] Keynote : SiriusXM CEO, Jennifer Witz
 
 ### **1. 행사 개요**
 
