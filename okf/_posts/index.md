@@ -2,6 +2,7 @@
 
 ## 2026
 
+* [[Paper Review] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](2026/2026-09-10-show-harness-review.md) - VLM의 판단을 작은 로봇 동작으로 연결하는 Show-Harness의 인터페이스, 실험, 부록을 원문 순서대로 분석합니다.
 * [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md) - Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다.
 * [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md) - Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다.
 * [[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대](2026/2026-05-25-[구글] 2026 Google I_O Developer Keynote정리_ Agent가 주도하는 개발의 새 시대.md) - Google I/O 2026 Developer Keynote의 Managed Agents, Antigravity 2.0과 CLI, Gemma 4 LoRA 파인튜닝 데모, Android CLI, WebMCP와 DevTools for Agents 발표를 정리합니다.
