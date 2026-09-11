@@ -87,13 +87,24 @@ class PostExtractor(HTMLParser):
         self._flush()
 
 
-def normalized_text(html: str, strip_first_h1: bool) -> tuple[str, int, int]:
+def normalized_text(html: str, strip_first_h1: bool, title: str | None = None) -> tuple[str, int, int]:
     ex = PostExtractor()
     ex.feed(html)
     ex.close()
     blocks = list(ex.blocks)
-    if strip_first_h1 and blocks and blocks[0][0] == "h1":
-        blocks = blocks[1:]
+    if strip_first_h1 and blocks:
+        # 중복 제목: 첫 <h1> 하나, 또는 여러 줄로 접힌 제목이 h1 + 이어지는 문단으로 렌더된 경우
+        folded = " ".join(title.split()) if title else None
+        acc, k, dropped = "", 0, False
+        if folded:
+            for k in range(1, min(4, len(blocks)) + 1):
+                acc = " ".join(t for _, t in blocks[:k])
+                if acc == folded:
+                    blocks = blocks[k:]
+                    dropped = True
+                    break
+        if not dropped and blocks[0][0] == "h1":
+            blocks = blocks[1:]
     parts = []
     for tag, text in blocks:
         if tag in HEADINGS:
@@ -122,19 +133,33 @@ def page_paths_for_report(report: dict, site: Path) -> set[str]:
         if len(candidates) == 1:
             pages.add((candidates[0] / "index.html").relative_to(site).as_posix())
             continue
-        src = Path(site).parent / rel
-        title = None
-        if src.exists():
-            head = src.read_text(encoding="utf-8", errors="replace")[:2000]
-            t = re.search(r'^title:\s*"(.*)"\s*$', head, re.M)
-            title = t.group(1).replace('\\"', '"') if t else None
+        title = post_title(Path(site).parent / rel)
         for c in candidates:
             page = (c / "index.html").read_text(encoding="utf-8", errors="replace")
             tt = re.search(r"<title>(.*?)</title>", page, re.S)
-            if title and tt and title in htmlmod.unescape(tt.group(1)):
+            if title and tt and _fold(title) in _fold(tt.group(1)):
                 pages.add((c / "index.html").relative_to(site).as_posix())
                 break
     return pages
+
+
+def _fold(text: str) -> str:
+    """제목 비교용: HTML 언이스케이프, 공백 접기, 타이포그래피 따옴표를 ASCII 로."""
+    import html as htmlmod
+    t = " ".join(htmlmod.unescape(text).split())
+    return t.replace("\u2018", "'").replace("\u2019", "'").replace("\u201c", '"').replace("\u201d", '"')
+
+
+def post_title(src: Path) -> str | None:
+    """포스트 소스의 front matter title (공백 접기). 여러 줄 따옴표 제목도 처리."""
+    if not src.exists():
+        return None
+    try:
+        import okf_common as oc
+        fm = oc.parse_document(src.read_text(encoding="utf-8", errors="replace")).front_matter
+        return " ".join(str(fm.get("title", "")).split()) or None
+    except Exception:
+        return None
 
 
 def main(argv=None) -> int:
@@ -160,6 +185,16 @@ def main(argv=None) -> int:
 
     expected_hr = sum(r.get("hr_removed", 0) for r in report.values())
     pages = page_paths_for_report(report, after) if report else None
+    titles: dict[str, str] = {}
+    if pages is not None:
+        for rel in report:
+            t = post_title(Path(after).parent / rel)
+            for p in pages:
+                if t and p not in titles:
+                    page = (after / p).read_text(encoding="utf-8", errors="replace")
+                    tt = re.search(r"<title>(.*?)</title>", page, re.S)
+                    if tt and _fold(t) in _fold(tt.group(1)):
+                        titles[p] = t
     if pages is not None:
         print(f"[pages] {len(pages)} of {len(report)} report entries mapped to output pages")
     hr_delta = 0
@@ -173,7 +208,8 @@ def main(argv=None) -> int:
         ha = (after / rel).read_text(encoding="utf-8", errors="replace")
         if hb == ha:
             continue
-        tb, hrb, _ = normalized_text(hb, strip_first_h1=True)
+        title = titles.get(rel)
+        tb, hrb, _ = normalized_text(hb, strip_first_h1=True, title=title)
         ta, hra, olh2 = normalized_text(ha, strip_first_h1=False)
         checked += 1
         hr_delta += hrb - hra
