@@ -109,7 +109,7 @@ def remove_duplicate_posts(source_dir, target_posts_dir, dry_run=False):
 def sync_posts(
     source_dir=None,
     target_repo_dir=None,
-    post_folder_name="_posts",
+    post_folder_name="okf/_posts",
     dry_run=False
 ):
     """

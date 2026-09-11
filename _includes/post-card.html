@@ -1,0 +1,28 @@
+{%- comment -%}
+    @param {object} post - a post document
+    Post preview card shared by the home page and tag pages.
+{%- endcomment -%}
+<div class="post-preview">
+    <a href="{{ include.post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ include.post.title }}
+        </h2>
+        {% if include.post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ include.post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if include.post.lang == 'en' %}
+                {{ include.post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ include.post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </div>
+    </a>
+    {% include post-tags.html tags=include.post.tags %}
+    <p class="post-meta">
+        Posted by {% if include.post.author %}{{ include.post.author }}{% else %}{{ site.title }}{% endif %} on {{ include.post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
