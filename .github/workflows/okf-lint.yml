@@ -39,7 +39,7 @@ jobs:
         run: uv run --frozen --project _scripts python -m pytest _scripts/tests -q
 
       - name: Lint posts and tag concepts
-        run: uv run --frozen --project _scripts python _scripts/okf_lint.py --allow-draft --check-index
+        run: uv run --frozen --project _scripts python _scripts/okf_lint.py --strict --allow-draft --check-index
 
       - name: Migrated posts stay idempotent
-        run: uv run --frozen --project _scripts python _scripts/okf_migrate.py --check
+        run: uv run --frozen --project _scripts python _scripts/okf_migrate.py --check --strict
