@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-11
+* **Update**: Converted [[Repo Review] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](_posts/2026/2026-09-11-superpowers-review.md) to OKF for content review (PR #4); preserved existing article text.
 * **Update**: Migrated 16 posts of batch 2026 ([2026](_posts/2026/)) to OKF front matter and ATX headings.
 * **Update**: Migrated 26 posts of batch 2025c ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: sora.
 * **Update**: Migrated 39 posts of batch 2025b ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: qwen.
