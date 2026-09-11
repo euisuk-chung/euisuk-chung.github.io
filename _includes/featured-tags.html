@@ -16,8 +16,10 @@
             but it will break sort...
         {% endcomment %}
         {% for tag in site.tags %}{% if tag[1].size > site.featured-condition-size %}
+                {%- assign tag_name = tag[0] -%}
+                {%- capture tag_url %}{% include tag-url.html tag=tag_name %}{% endcapture -%}
                 <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}" 
-                    href="{{ site.baseurl }}/archive/?tag={{ tag[0] | url_encode }}"
+                    href="{{ tag_url }}"
                     title="{{ tag[0] }}"
                     rel="{{ tag[1].size }}">{{ tag[0] }}</a>__SEPARATOR__
         {% endif %}{% endfor %}

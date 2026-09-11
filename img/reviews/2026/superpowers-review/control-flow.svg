@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1170" viewBox="0 0 900 1170" role="img" aria-labelledby="title desc">
+<title id="title">Superpowers 초기화와 파일 기반 작업 리뷰 흐름</title>
+<desc id="desc">초기화 코드는 스킬을 모델 컨텍스트로 전달합니다. 이후 자연어 지침을 따르는 컨트롤러가 계획에서 작업을 추출하고 구현자와 리뷰어를 순차 호출합니다. 셸 도구가 요구사항 파일과 커밋 범위의 diff를 생성합니다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#526581" stroke-width="1.5"/></marker></defs>
+<rect width="900" height="1170" fill="#f8fafc"/>
+<style>text{font-family:Arial,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;fill:#172b46}.head{font-size:27px;font-weight:700}.label{font-size:23px;font-weight:700}.sub{font-size:20px}.note{font-size:19px}.code{fill:#e7f0ff;stroke:#6994cc}.policy{fill:#fff5de;stroke:#c49541}.file{fill:#e6f5ef;stroke:#65a68b}.line{fill:none;stroke:#526581;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="40" y="48" class="head">Superpowers: 컨텍스트 전달 → 작업 파일 → 리뷰</text>
+<text x="40" y="80" class="note">분석 커밋 b36e082 · 실선은 데이터 전달 또는 지침상 호출 순서</text>
+
+<rect x="40" y="110" width="820" height="112" rx="12" class="code"/>
+<text x="60" y="144" class="label">1. 플랫폼 연결 코드가 공통 스킬을 읽습니다</text>
+<text x="60" y="175" class="sub">SessionStart → hooks/session-start → JSON 컨텍스트</text>
+<text x="60" y="202" class="sub">OpenCode·Pi는 별도 메시지 삽입 경로 / Codex는 스킬 경로 선언</text>
+<path d="M450 222 V252" class="line"/>
+<rect x="40" y="260" width="820" height="110" rx="12" class="policy"/>
+<text x="60" y="294" class="label">2. 모델이 관련 스킬과 개발 절차를 선택합니다</text>
+<text x="60" y="325" class="sub">using-superpowers → brainstorming → 필요한 경우 writing-plans</text>
+<text x="60" y="352" class="sub">아래는 상세 계획을 사용하는 SDD 경로이며, 모든 요청의 필수 경로는 아닙니다.</text>
+<path d="M450 370 V400" class="line"/>
+<rect x="40" y="410" width="390" height="112" rx="12" class="file"/>
+<text x="60" y="444" class="label">3. 구현 계획 파일</text>
+<text x="60" y="475" class="sub">Task N과 Global Constraints</text>
+<text x="60" y="502" class="sub">컨트롤러가 공통 제약을 별도 전달</text>
+<rect x="470" y="410" width="390" height="112" rx="12" class="code"/>
+<text x="490" y="444" class="label">4. task-brief 도구</text>
+<text x="490" y="475" class="sub">Task N 제목 구간 추출</text>
+<text x="490" y="502" class="sub">task-N-brief.md 생성</text>
+<path d="M430 466 H463" class="line"/>
+<path d="M665 522 V552" class="line"/>
+<rect x="470" y="565" width="390" height="112" rx="12" class="policy"/>
+<text x="490" y="599" class="label">5. 구현자 호출 · 결과 기록</text>
+<text x="490" y="630" class="sub">요구사항 파일 + 연결 맥락</text>
+<text x="490" y="657" class="sub">변경 커밋 + task-N-report.md</text>
+<rect x="40" y="565" width="390" height="112" rx="12" class="file"/>
+<text x="60" y="599" class="label">컨트롤러가 보존하는 근거</text>
+<text x="60" y="630" class="sub">호출 전 BASE / 완료 후 HEAD</text>
+<text x="60" y="657" class="sub">progress.md에 작업·수정 회차</text>
+<path d="M430 620 H463" class="line"/>
+<path d="M665 677 V707" class="line"/>
+<rect x="470" y="720" width="390" height="112" rx="12" class="code"/>
+<text x="490" y="754" class="label">6. review-package 도구</text>
+<text x="490" y="785" class="sub">BASE..HEAD 커밋 목록·통계</text>
+<text x="490" y="812" class="sub">git diff -U10 → 리뷰 파일</text>
+<rect x="40" y="720" width="390" height="112" rx="12" class="file"/>
+<text x="60" y="754" class="label">리뷰 입력 묶음</text>
+<text x="60" y="785" class="sub">요구사항 + 구현 보고서 + diff</text>
+<text x="60" y="812" class="sub">해당 작업의 전역 제약</text>
+<path d="M470 776 H437" class="line"/>
+<path d="M235 832 V862" class="line"/>
+<rect x="40" y="875" width="820" height="112" rx="12" class="policy"/>
+<text x="60" y="909" class="label">7. task reviewer가 규격 준수와 코드 품질을 판정합니다</text>
+<text x="60" y="940" class="sub">컨트롤러가 판정에 따라 수정·재리뷰 또는 다음 작업을 순차 진행</text>
+<text x="60" y="967" class="sub">작업 완료 후 전체 브랜치 리뷰 / 수정 상한과 재개 판단도 자연어 정책</text>
+<rect x="40" y="1020" width="820" height="115" rx="12" fill="#ffffff" stroke="#d3dde9"/>
+<rect x="60" y="1041" width="20" height="20" class="code"/><text x="92" y="1058" class="note">연결 코드·셸 도구</text>
+<rect x="300" y="1041" width="20" height="20" class="file"/><text x="332" y="1058" class="note">파일·기록</text>
+<rect x="495" y="1041" width="20" height="20" class="policy"/><text x="527" y="1058" class="note">모델이 따르는 자연어 절차</text>
+<text x="60" y="1093" class="note">초기화 코드가 승인·리뷰·수정 횟수를 강제하는 상태 머신은 아닙니다.</text>
+<text x="60" y="1120" class="note">리뷰어 작성 · 정적 소스 분석으로 구성했으며 실제 에이전트 실행은 검증하지 않았습니다.</text>
+</svg>
