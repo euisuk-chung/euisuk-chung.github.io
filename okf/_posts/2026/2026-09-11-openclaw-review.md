@@ -4,6 +4,7 @@ title: "[Repo Review] OpenClaw — 메시지 한 건이 에이전트 실행과 �
 description: "OpenClaw의 Gateway, 세션 라우팅, 실행 큐, 도구 구성과 응답 전달을 Control UI의 chat.send 경로로 추적합니다."
 date: "2026-09-11"
 tags:
+  - "Repo Review"
   - "AI Agent"
   - "Network"
   - "Tools"
