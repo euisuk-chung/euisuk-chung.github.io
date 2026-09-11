@@ -28,3 +28,16 @@ gh pr create --base master --head fix-123 \
 ```
 
 The PR description should contain a concise summary, validation results, and `Refs: #123`. For a code-only issue fix, the agent may merge after validation. Content PRs must stop at the review link for human approval.
+
+## OKF content rules
+
+Posts and tag concepts follow Google Cloud's Open Knowledge Format (OKF) v0.2: markdown with YAML front matter, `type` required, cross-links as plain markdown links. The bundle root is `okf/` (`okf/_posts/<year>/`, `okf/_concepts/`, `okf/index.md`, `okf/log.md`). Posts go only in `okf/_posts/<year>/`; `okf/_concepts/` is the tag dictionary, one file per tag.
+
+- Post front matter, in this key order: `type` (from `_scripts/okf_types.json`), `title`, `description` (one sentence), `date`, `tags`, `resource` (velog URL), `generated` (`by`: `process:velog-sync` or `human:<id>`, `at`: ISO-8601), `sources`, `status` (`draft` | `stable` | `deprecated`), `year`. Strings are double-quoted.
+- New paper reviews use `type: Paper Review` and titles starting with `[Paper Review] `. Repository reviews use `type: Repo Review` and titles starting with `[Repo Review] `. Do not duplicate the title in the body.
+- Tags must be the exact `title` of a concept file in the concepts directory. To use a new tag, add `<slug>.md` there first (`type: Tag`, `title`, `slug` == filename, `description`, `aliases`, optional `parent`/`related`). Never invent tag spellings in a post.
+- Bodies use ATX headings (`##`), start with content (no duplicate `# {title}`), and never put a `---` rule directly above a heading (the theme draws its own divider). Do not hand-fix formatting across posts; run `uv run --project _scripts python _scripts/okf_migrate.py --paths <files> --check` to verify and `okf_migrate.py --paths <files>` to normalize. The migration must never change body text; `verify_no_loss` blocks writes that do.
+- LLM-generated `description`/`tags` go through an `enrich.json` sidecar (`okf_migrate.py --enrich`), never by editing prose in the body. Descriptions do not summarize away or shorten the article; the body stays byte-identical apart from the normalizations above.
+- Before pushing anything under the posts or concepts directories run `okf_lint.py --allow-draft --check-index` and, after adding posts, `okf_index.py --write`. CI (`.github/workflows/okf-lint.yml`) runs the same checks.
+- Migration batches are content PRs (one per year or ~50 posts, branch `codex/okf-migrate-<batch>`), reviewed by a human. The PR body lists per post: title, generated `description`, `tags`, `type`, resource source; then migration counts from `--report`; validation commands in a collapsed section. Tooling changes (`_scripts/**`, workflows, docs) are code PRs and may be integrated by the agent after validation.
+
