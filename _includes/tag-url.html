@@ -1,7 +1,7 @@
 {%- comment -%}
     @param {string} tag - a post tag string
     Prints the URL for a tag: its concept page (/tags/<slug>/) when a
-    _concepts/*.md file whose `title` equals the tag exists, otherwise the
+    okf/_concepts/*.md file whose `title` equals the tag exists, otherwise the
     archive filter. Use inside capture:
       {% capture tag_url %}{% include tag-url.html tag=tag %}{% endcapture %}
 {%- endcomment -%}

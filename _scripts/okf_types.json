@@ -1,0 +1,25 @@
+{
+  "default": "Blog Post",
+  "allowed": [
+    "Blog Post", "Paper Review", "Concept Note", "Lecture Note", "Conference Recap",
+    "Tip", "Guide", "Product Update", "Trend Report", "Book Review", "Tag"
+  ],
+  "prefix_map": {
+    "Paper Review": "Paper Review",
+    "개념": "Concept Note", "개념정리": "Concept Note", "머신러닝": "Concept Note", "딥러닝": "Concept Note",
+    "이탐": "Concept Note", "NLP": "Concept Note", "TS": "Concept Note", "Graph": "Concept Note",
+    "파이토치": "Concept Note", "CV Notes": "Concept Note", "IT": "Concept Note", "알고리즘": "Concept Note", "트리": "Concept Note",
+    "강의노트": "Lecture Note", "CS294": "Lecture Note", "CS50": "Lecture Note",
+    "컨퍼": "Conference Recap", "CES 2025": "Conference Recap", "CES": "Conference Recap", "정리": "Conference Recap",
+    "구글": "Conference Recap", "Gemini 해커톤": "Conference Recap", "토크": "Conference Recap", "인터뷰": "Conference Recap",
+    "꿀팁": "Tip", "Tips": "Tip", "사이트": "Tip",
+    "Git": "Guide", "Linux": "Guide", "파이썬": "Guide", "Conda": "Guide", "설치": "Guide", "접속": "Guide",
+    "가이드": "Guide", "SPL": "Guide", "Pandas": "Guide", "GPU": "Guide", "자료": "Guide",
+    "OpenAI": "Product Update", "Anthropic": "Product Update", "Lovable": "Product Update", "LG": "Product Update",
+    "TREND": "Trend Report", "트렌드": "Trend Report", "HAI": "Trend Report", "기업": "Trend Report",
+    "도서리뷰": "Book Review", "도서소개": "Book Review"
+  },
+  "regex_map": {
+    "^\\[Day \\d+\\]": "Product Update"
+  }
+}

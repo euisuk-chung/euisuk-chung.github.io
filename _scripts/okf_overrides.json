@@ -1,0 +1,4 @@
+{
+  "_comment": "post path (repo-relative, POSIX, NFC) -> front-matter overrides applied by okf_migrate.py. Keys: resource, generated, type.",
+  "posts": {}
+}

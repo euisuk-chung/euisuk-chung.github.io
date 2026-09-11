@@ -1,4 +1,7 @@
 {
     "velog_username": "euisuk-chung",
-    "github_repo": "euisuk-chung/euisuk-chung.github.io"
+    "github_repo": "euisuk-chung/euisuk-chung.github.io",
+    "posts_dir": "okf/_posts",
+    "concepts_dir": "okf/_concepts",
+    "okf_root": "okf"
 }

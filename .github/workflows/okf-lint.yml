@@ -1,0 +1,45 @@
+name: OKF Lint
+
+# OKF 콘텐츠 규칙 검사(읽기 전용). 포스트/태그 concept/툴링이 바뀐 PR 과 master push 에서 돈다.
+on:
+  pull_request:
+    paths:
+      - "okf/**"
+      - "_scripts/**"
+      - "_config.yml"
+      - ".github/workflows/okf-lint.yml"
+  push:
+    branches: [master]
+    paths:
+      - "okf/**"
+      - "_scripts/**"
+      - "_config.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v4
+
+      - name: Install Python & deps
+        run: |
+          uv python install 3.11
+          uv sync --frozen --project _scripts
+
+      - name: Unit tests
+        run: uv run --frozen --project _scripts python -m pytest _scripts/tests -q
+
+      - name: Lint posts and tag concepts
+        run: uv run --frozen --project _scripts python _scripts/okf_lint.py --allow-draft --check-index
+
+      - name: Migrated posts stay idempotent
+        run: uv run --frozen --project _scripts python _scripts/okf_migrate.py --check
