@@ -169,7 +169,7 @@ concept 본문은 `description` 문장 하나와, `parent`가 있으면 `상위 
 - `ChatGPT`는 ChatGPT 앱·제품이 주제일 때만. 모델·API·CLI·Cookbook 글은 `OpenAI`만 붙입니다.
 - 하위 concept과 상위 concept을 함께 붙입니다(`Gemini`+`Google`, `CES`+`Conference`). 아카이브 필터가 명시 태그를 읽습니다.
 - 벤더 프롬프팅 가이드의 번역·요약은 `type: Guide`입니다(Product Update 아님).
-- 카테고리성 태그(`개념정리`, `꿀팁`, `트렌드`, `강의노트`, `Paper Review`)는 전환기 동안 유지합니다. `강의노트`·`Paper Review`는 `type`과 1:1이라 아카이브에 type 필터가 생기면 퇴역 대상입니다.
+- 카테고리성 태그(`개념정리`, `꿀팁`, `트렌드`, `강의노트`, `Paper Review`, `Conference`)는 `type`과 겹치더라도 유지합니다. 아카이브 필터와 FEATURED TAGS가 태그로 동작하므로 독자의 진입점입니다.
 
 중복 글(크롤러가 같은 velog 글을 두 번 저장한 경우)은 `resource`가 있는 쪽을 남기고 다른 쪽을 지운 뒤,
 남긴 글 front matter에 지운 글의 URL을 `redirect_from`으로 적습니다(`jekyll-redirect-from` 활성).
