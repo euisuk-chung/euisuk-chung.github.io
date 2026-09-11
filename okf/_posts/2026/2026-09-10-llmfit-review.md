@@ -4,6 +4,7 @@ title: "[Repo Review] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LL
 description: "하드웨어 감지부터 양자화 선택, 메모리 적합도와 속도 추정, 실측 보정까지 llmfit의 추천 경로를 코드로 분석합니다."
 date: "2026-09-10"
 tags:
+  - "Repo Review"
   - "Tools"
   - "머신러닝"
   - "Ollama"
