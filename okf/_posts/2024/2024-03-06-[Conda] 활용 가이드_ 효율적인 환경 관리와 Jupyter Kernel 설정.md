@@ -1,15 +1,29 @@
 ---
+type: "Guide"
 title: "[Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정"
+description: "Conda 환경 생성·삭제·리비전 롤백·캐시 정리 명령어와 ipykernel로 Jupyter 커널을 등록하는 법, conda activate가 안 될 때 conda init과 셸 설정 파일 수정으로 해결하는 방법을 정리했다."
 date: "2024-03-06"
+tags:
+  - "환경설정"
+  - "Python"
+  - "Linux"
+resource: "https://velog.io/@euisuk-chung/Conda-활용-가이드-효율적인-환경-관리와-Jupyter-Kernel-설정"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:04:09Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Conda-활용-가이드-효율적인-환경-관리와-Jupyter-Kernel-설정"
+    title: "[Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정"
+    author: "human:euisuk-chung"
+    last_modified: "2024-03-06"
+status: "stable"
 year: "2024"
 ---
 
-# [Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정
-
 Conda는 다양한 프로젝트에 필요한 독립된 환경을 만들고 관리할 수 있는 강력한 도구입니다. 이 글에서는 Conda 환경 설정, 관리, Jupyter Notebook에서의 활용법 등 몇 가지 유용한 Conda 사용법을 소개합니다. 또한, 특정 상황에서 `conda activate` 대신 `source activate`를 사용해야 하는 경우와 그 이유에 대해서도 알아보겠습니다.
 
-Conda 환경 관리
------------
+## Conda 환경 관리
 
 ### 환경 목록 확인
 
@@ -52,8 +66,7 @@ conda clean -a
 
 이 명령어는 Conda가 다운로드한 패키지 파일과 캐시를 정리하여 디스크 공간을 확보합니다.
 
-Jupyter Kernel 설정
------------------
+## Jupyter Kernel 설정
 
 Jupyter Notebook에서 Conda 환경을 Kernel로 사용하려면, 해당 환경을 활성화한 후 아래 단계를 따르면 됩니다.
 
@@ -64,8 +77,7 @@ python -m ipykernel install --user --name py39
 
 이 과정을 통해 Jupyter Notebook에서 `py39` 환경을 선택할 수 있는 Kernel이 추가됩니다.
 
-`conda activate`가 안돼?!
-----------------------
+## `conda activate`가 안돼?!
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/19cb7da3-d236-42b5-b95e-0bb7cafa36f4/image.png)
 
@@ -99,8 +111,7 @@ Conda 설치 후 쉘 설정 파일(`.bashrc`, `.zshrc` 등)이 자동으로 업�
 >    설정 파일을 업데이트한 후, 쉘을 재시작하거나 새 터미널 창을 열어 변경사항을 적용합니다. 이제 `conda activate` 명령어가 정상적으로 작동해야 합니다.  
 >    이 단계들을 수행함으로써, `conda activate` 명령어가 작동하지 않는 문제를 해결할 수 있습니다. Conda 환경을 원활하게 활성화하고 관리할 수 있는 기반을 마련하게 됩니다.
 
-결론
---
+## 결론
 
 Conda는 데이터 과학, 기계 학습 프로젝트 등 다양한 개발 환경에서 유용하게 사용될 수 있는 강력한 도구입니다.
 

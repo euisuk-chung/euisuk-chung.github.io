@@ -1,16 +1,26 @@
 ---
+type: "Tip"
 title: "[꿀팁] Confluence 단축키📖 (북마크 추천!!)"
+description: "Confluence Cloud와 On-Premise 버전의 페이지 뷰 모드·편집 모드 단축키, 자동완성 문자, 블록 서식 단축키를 표로 비교 정리한 치트시트다."
 date: "2024-05-31"
 tags:
-  - "tools"
+  - "Tools"
   - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/꿀팁-Confluence-단축키-북마크-추천"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:24:50Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/꿀팁-Confluence-단축키-북마크-추천"
+    title: "[꿀팁] Confluence 단축키📖 (북마크 추천!!)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-05-31"
+status: "stable"
 year: "2024"
 ---
 
-# [꿀팁] Confluence 단축키📖 (북마크 추천!!)
-
-Confluence 단축키 완벽 가이드
-=====================
+# Confluence 단축키 완벽 가이드
 
 안녕하세요! `Confluence`는 제품 문서화, 지식 베이스, 프로젝트 계획 활동 또는 블로깅을 위한 훌륭한 협업 도구입니다. 국내 외 수많은 회사들이 해당 회사의 제품을 사용하여 협력/정보 공유 등의 활동을 하고 있습니다.
 
@@ -21,8 +31,7 @@ Source: <https://www.atlassian.com/ko/software/confluence/premium>
 
 본 게시글은 `Cloud와 On-Premise 버전 간의 단축키 차이점`과 `페이지 뷰(View) 모드 및 페이지 편집(Edit) 모드`에서 사용하는 단축키를 구분하여 설명합니다. 아마 해당 제품을 사용하시는 기업들은 대부분 Cloud 모드를 사용하고 있으리라고 생각합니다!! (지극히 개인적인 생각 🤗)
 
-Confluence 단축키 메뉴 접근 방법
------------------------
+## Confluence 단축키 메뉴 접근 방법
 
 Confluence 홈 페이지에서 단축키 메뉴를 여는 방법은 간단합니다. `Shift + ?`를 눌러 단축키 창을 열 수 있습니다.
 
@@ -36,8 +45,7 @@ Atlassian은 단축키를 세 가지 카테고리로 분류했습니다. 솔직�
 
 저는 개인적으로 여기서부터가 중요하다고 생각합니다.😎
 
-Confluence Cloud vs On-Premise 단축키 차이점
---------------------------------------
+## Confluence Cloud vs On-Premise 단축키 차이점
 
 Confluence Cloud와 On-Premise 버전 간에는 일부 단축키의 차이가 있습니다. 이 차이를 명확하게 인식하여 사용하는 것이 중요합니다. 사내에서 사용하시는 분들은 Confluence `Cloud 단축키` 부분을 참고하시면 됩니다!
 

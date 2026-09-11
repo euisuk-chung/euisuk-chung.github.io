@@ -214,48 +214,48 @@
 * [[트리] 트리 기반 ML 알고리즘](2024/2024-06-24-[트리] 트리 기반 ML 알고리즘.md)
 * [[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기](2024/2024-06-09-[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기.md)
 * [[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)](2024/2024-06-09-[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등).md)
-* [[꿀팁] Confluence 단축키📖 (북마크 추천!!)](2024/2024-05-31-[꿀팁] Confluence 단축키📖 (북마크 추천!!).md)
-* [[개념] 신호처리 및 푸리에 변환](2024/2024-05-31-[개념] 신호처리 및 푸리에 변환.md)
-* [[꿀팁] Notion 단축키📖 (북마크 추천!!)](2024/2024-05-30-[꿀팁] Notion 단축키📖 (북마크 추천!!).md)
-* [[Git] SSH로 GitHub Repository Clone하기 🔑](2024/2024-05-28-[Git] SSH로 GitHub Repository Clone하기 🔑.md)
-* [[Git] Credential Helper로 GitHub 인증하기 🔑](2024/2024-05-28-[Git] Credential Helper로 GitHub 인증하기 🔑.md)
-* [[꿀팁] Python으로 다양한 데이터 다루기](2024/2024-05-24-[꿀팁] Python으로 다양한 데이터 다루기.md)
-* [[이탐] 통계 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 통계 기반 이상탐지 알고리즘.md)
-* [[이탐] 앙상블 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 앙상블 기반 이상탐지 알고리즘.md)
-* [[이탐] 밀도 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 밀도 기반 이상탐지 알고리즘.md)
-* [[이탐] 내가 보려고 정리한 ML 이상탐지](2024/2024-05-14-[이탐] 내가 보려고 정리한 ML 이상탐지.md)
-* [[이탐] 결정 경계 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 결정 경계 기반 이상탐지 알고리즘.md)
-* [[이탐] 거리 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 거리 기반 이상탐지 알고리즘.md)
-* [[꿀팁] 설마 수식/테이블 직접 코드로 작성하시나요?!](2024/2024-04-29-[꿀팁] 설마 수식_테이블 직접 코드로 작성하시나요_!.md)
-* [[설치] pipenv로 pyenv 뽕 뽑기](2024/2024-04-27-[설치] pipenv로 pyenv 뽕 뽑기.md)
-* [[설치] pyenv 어서 오고](2024/2024-04-26-[설치] pyenv 어서 오고.md)
-* [[Linux] 딥러닝 환경 구축 : CUDA, CuDNN](2024/2024-04-24-[Linux] 딥러닝 환경 구축 _ CUDA, CuDNN.md)
-* [[꿀팁] 직장인 필수! 파워포인트 단축키 모음 TOP 10](2024/2024-04-12-[꿀팁] 직장인 필수! 파워포인트 단축키 모음 TOP 10.md)
-* [리눅스 : 리눅스 구성 요소](2024/2024-03-22-리눅스 _ 리눅스 구성 요소.md)
-* [네트워크 계층 : OSI 7계층 vs TCP/IP 5계층](2024/2024-03-22-네트워크 계층 _ OSI 7계층 vs TCP_IP 5계층.md)
-* [네트워크 기초 : 네트워크 그리고 서버란?](2024/2024-03-21-네트워크 기초 _ 네트워크 그리고 서버란_.md)
-* [[사이트] 직장인을 위한 무료 픽토그램 사이트 TOP 2](2024/2024-03-17-[사이트] 직장인을 위한 무료 픽토그램 사이트 TOP 2.md)
-* [[사이트] 이모티콘🤗으로 글에 생명 불어넣기 : EmojiCombos](2024/2024-03-17-[사이트] 이모티콘🤗으로 글에 생명 불어넣기 _ EmojiCombos.md)
-* [[개념] 생성 AI의 학습 방식: 제로샷·원샷·퓨샷 러닝](2024/2024-03-11-[개념] 생성 AI의 학습 방식_ 제로샷_원샷_퓨샷 러닝.md)
-* [[Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정](2024/2024-03-06-[Conda] 활용 가이드_ 효율적인 환경 관리와 Jupyter Kernel 설정.md)
-* [[Conda] Miniforge를 이용한 분석 환경 설정하기 (OS: Ubuntu)](2024/2024-03-06-[Conda] Miniforge를 이용한 분석 환경 설정하기 (OS_ Ubuntu).md)
-* [[IT] 개발자들의 종류 및 역할](2024/2024-02-28-[IT] 개발자들의 종류 및 역할.md)
-* [[Git] Git을 어떻게 합치지? : Git Merging](2024/2024-02-28-[Git] Git을 어떻게 합치지_ _ Git Merging.md)
-* [[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기](2024/2024-02-27-[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기.md)
-* [[컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드](2024/2024-02-27-[컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드.md)
-* [[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략](2024/2024-02-26-[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략.md)
-* [[컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래](2024/2024-02-25-[컨퍼][CIO] Workday AI_ML 솔루션과 Generative AI의 미래.md)
-* [[컨퍼][CIO] GenAI, First!](2024/2024-02-25-[컨퍼][CIO] GenAI, First!.md)
-* [[컨퍼][CIO] '24년 비즈니스 혁신을 가속화하는 생성형 AI](2024/2024-02-24-[컨퍼][CIO] _24년 비즈니스 혁신을 가속화하는 생성형 AI.md)
-* [[컨퍼][CIO] '24년 CIO SUMMIT 후기](2024/2024-02-24-[컨퍼][CIO] _24년 CIO SUMMIT 후기.md)
-* [[파이썬] 쉽게 설명한 Process vs Thread](2024/2024-02-19-[파이썬] 쉽게 설명한 Process vs Thread.md)
-* [[파이썬] multiprocessing의 Pool 클래스](2024/2024-02-19-[파이썬] multiprocessing의 Pool 클래스.md)
-* [[파이썬] Multiprocessing, Multithreading 자원 분할 및 할당](2024/2024-02-19-[파이썬] Multiprocessing, Multithreading 자원 분할 및 할당.md)
-* [[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항](2024/2024-02-19-[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항.md)
-* [[Linux] 파일 권한과 쓰기 작업](2024/2024-01-25-[Linux] 파일 권한과 쓰기 작업.md)
-* [[Linux] 사용자 계정 및 그룹 관리 가이드](2024/2024-01-23-[Linux] 사용자 계정 및 그룹 관리 가이드.md)
-* [[개념] MLOps vs AIOps](2024/2024-01-22-[개념] MLOps vs AIOps.md)
-* [[Linux] 열려 있는 파일 및 리소스 관리의 필수 도구(lsof)](2024/2024-01-17-[Linux] 열려 있는 파일 및 리소스 관리의 필수 도구(lsof).md)
+* [[꿀팁] Confluence 단축키📖 (북마크 추천!!)](2024/2024-05-31-[꿀팁] Confluence 단축키📖 (북마크 추천!!).md) - Confluence Cloud와 On-Premise 버전의 페이지 뷰 모드·편집 모드 단축키, 자동완성 문자, 블록 서식 단축키를 표로 비교 정리한 치트시트다.
+* [[개념] 신호처리 및 푸리에 변환](2024/2024-05-31-[개념] 신호처리 및 푸리에 변환.md) - 신호처리의 목적과 응용 분야를 소개한 뒤 푸리에 변환의 정의, 오일러 공식을 통한 실수부·허수부 해석, 진폭과 위상 계산, 역 푸리에 변환을 설명하고 NumPy FFT 예제로 확인한다.
+* [[꿀팁] Notion 단축키📖 (북마크 추천!!)](2024/2024-05-30-[꿀팁] Notion 단축키📖 (북마크 추천!!).md) - Notion의 Mac/Windows 키보드 단축키, Markdown 문법, 블록 편집과 이동, @·[[·+ 명령어와 슬래시 명령어를 표로 정리한 참고용 치트시트다.
+* [[Git] SSH로 GitHub Repository Clone하기 🔑](2024/2024-05-28-[Git] SSH로 GitHub Repository Clone하기 🔑.md) - ssh-keygen으로 RSA 키를 만들어 GitHub에 등록하고 SSH URL로 저장소를 클론하는 과정과 함께 PowerShell 경로 오류, ssh-agent와 ~/.ssh/config 설정의 차이를 설명한다.
+* [[Git] Credential Helper로 GitHub 인증하기 🔑](2024/2024-05-28-[Git] Credential Helper로 GitHub 인증하기 🔑.md) - Git Credential Helper의 cache, store, osxkeychain, wincred 방식으로 GitHub 인증 정보를 저장하고 삭제하는 git config 명령을 정리하며 개인 PC는 store, 공용 PC는 cache를 권한다.
+* [[꿀팁] Python으로 다양한 데이터 다루기](2024/2024-05-24-[꿀팁] Python으로 다양한 데이터 다루기.md) - CSV, Excel, JSON, YAML, 피클, SQLite, HDF5, MAT, XML, PPTX, PDF 등 13가지 파일 형식을 pandas, PIL, h5py, python-pptx, PyPDF2 등으로 읽고 저장하는 코드를 정리한다.
+* [[이탐] 통계 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 통계 기반 이상탐지 알고리즘.md) - 가우시안 혼합 모델(GMM)과 PCA 재구성 오차를 이용한 통계 기반 이상탐지의 원리와 scikit-learn GaussianMixture, PCA의 매개변수·속성·메서드, 예제 코드를 정리한다.
+* [[이탐] 앙상블 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 앙상블 기반 이상탐지 알고리즘.md) - 랜덤 분할 트리 앙상블로 이상치를 빠르게 고립시키고 경로 길이로 점수를 매기는 Isolation Forest의 원리와 scikit-learn IsolationForest의 매개변수, 속성, 메서드, 예제 코드를 정리한다.
+* [[이탐] 밀도 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 밀도 기반 이상탐지 알고리즘.md) - 지역적 밀도 차이로 이상치를 찾는 DBSCAN과 LOF(Local Outlier Factor)의 원리와 적합한 데이터, scikit-learn 구현의 매개변수·속성·메서드와 예제 코드를 정리한다.
+* [[이탐] 내가 보려고 정리한 ML 이상탐지](2024/2024-05-14-[이탐] 내가 보려고 정리한 ML 이상탐지.md) - 머신러닝 이상탐지 방법론을 밀도·통계·거리·앙상블·결정 경계 기반으로 분류하고, DBSCAN, LOF, GMM, PCA, KNN, K-Means, Isolation Forest, OCSVM의 개념과 적합 데이터, 비즈니스 이점을 비교한다.
+* [[이탐] 결정 경계 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 결정 경계 기반 이상탐지 알고리즘.md) - 정상 데이터 분포의 경계를 학습해 경계 밖 점을 이상치로 판별하는 One-Class SVM의 원리와 scikit-learn OneClassSVM의 매개변수, 속성, 메서드, 예제 코드를 정리한다.
+* [[이탐] 거리 기반 이상탐지 알고리즘](2024/2024-05-14-[이탐] 거리 기반 이상탐지 알고리즘.md) - K-Means 클러스터링과 KNN(NearestNeighbors)을 활용한 거리 기반 이상탐지의 원리와 적합한 데이터, scikit-learn 매개변수·속성·메서드와 예제 코드, 두 방법의 차이를 정리한다.
+* [[꿀팁] 설마 수식/테이블 직접 코드로 작성하시나요?!](2024/2024-04-29-[꿀팁] 설마 수식_테이블 직접 코드로 작성하시나요_!.md) - 수식이나 표 이미지를 캡처해 LaTeX, MathML(DOCX), Markdown, SMILES로 변환해 주는 Mathpix의 Snip 사용 예시와 주요 기능, 무료·Pro 플랜을 소개한다.
+* [[설치] pipenv로 pyenv 뽕 뽑기](2024/2024-04-27-[설치] pipenv로 pyenv 뽕 뽑기.md) - pipenv로 Pipfile과 Pipfile.lock 기반 의존성 관리와 프로젝트별 가상환경을 구성하는 방법, pipenv install과 lock의 차이, 주요 명령어와 pip 옵션 변환 팁을 정리한다.
+* [[설치] pyenv 어서 오고](2024/2024-04-26-[설치] pyenv 어서 오고.md) - 아나콘다 라이선스 문제의 대안으로 pyenv를 택해 venv·virtualenv·pipenv와 비교하고, 리눅스와 윈도우에서의 설치, 쉘 설정, 파이썬 버전 설치와 전환 방법을 단계별로 정리한다.
+* [[Linux] 딥러닝 환경 구축 : CUDA, CuDNN](2024/2024-04-24-[Linux] 딥러닝 환경 구축 _ CUDA, CuDNN.md) - NVIDIA 드라이버·CUDA·CUDA Toolkit·cuDNN의 개념을 정리하고, Ubuntu 18.04에 드라이버와 CUDA 11.8, cuDNN 8.7을 설치한 뒤 PATH를 설정하고 버전을 확인하는 절차를 설명한다.
+* [[꿀팁] 직장인 필수! 파워포인트 단축키 모음 TOP 10](2024/2024-04-12-[꿀팁] 직장인 필수! 파워포인트 단축키 모음 TOP 10.md) - 새 슬라이드 삽입, 슬라이드 쇼, 글꼴 서식, 글자 크기 조정, 그룹화, 정렬, 맞춤법 검사 등 파워포인트 작업 속도를 높이는 단축키 10가지를 사용 예와 함께 정리했다.
+* [리눅스 : 리눅스 구성 요소](2024/2024-03-22-리눅스 _ 리눅스 구성 요소.md) - 운영체제의 역할을 짚은 뒤 리눅스를 프로그램(터미널)·셸·커널 세 요소로 나누어 각각의 정의와 역할, 명령어가 처리되는 동작 순서를 설명한다.
+* [네트워크 계층 : OSI 7계층 vs TCP/IP 5계층](2024/2024-03-22-네트워크 계층 _ OSI 7계층 vs TCP_IP 5계층.md) - OSI 7계층과 TCP/IP 5계층 모델의 구조적 차이를 비교하고, 편지 배송 비유로 응용·전송·네트워크·데이터링크·물리 계층의 역할을 설명한다.
+* [네트워크 기초 : 네트워크 그리고 서버란?](2024/2024-03-21-네트워크 기초 _ 네트워크 그리고 서버란_.md) - IT·CT·ICT의 차이를 정리하고 네트워크를 엣지·코어·엑세스 세 요소로 나누어 설명하며, 서버는 코어, 클라이언트는 엣지에 해당함을 실생활 예시로 풀어낸다.
+* [[사이트] 직장인을 위한 무료 픽토그램 사이트 TOP 2](2024/2024-03-17-[사이트] 직장인을 위한 무료 픽토그램 사이트 TOP 2.md) - 발표 자료와 포트폴리오에 쓸 무료 아이콘을 구할 수 있는 Flaticon과 The Noun Project의 특징, 검색 및 무료 다운로드 방법을 소개한다.
+* [[사이트] 이모티콘🤗으로 글에 생명 불어넣기 : EmojiCombos](2024/2024-03-17-[사이트] 이모티콘🤗으로 글에 생명 불어넣기 _ EmojiCombos.md) - 키워드 검색으로 상황에 맞는 이모티콘 조합과 픽셀아트를 찾아 바로 복사할 수 있는 EmojiCombos.com의 사용법과 장점을 소개한다.
+* [[개념] 생성 AI의 학습 방식: 제로샷·원샷·퓨샷 러닝](2024/2024-03-11-[개념] 생성 AI의 학습 방식_ 제로샷_원샷_퓨샷 러닝.md) - Zero-shot·One-shot·Few-shot 러닝의 정의와 사전학습·파인튜닝·인퍼런스 단계에서의 역할을 설명하고, CV의 유사도 기반 학습과 NLP의 프롬프팅 방식 차이를 비교한다.
+* [[Conda] 활용 가이드: 효율적인 환경 관리와 Jupyter Kernel 설정](2024/2024-03-06-[Conda] 활용 가이드_ 효율적인 환경 관리와 Jupyter Kernel 설정.md) - Conda 환경 생성·삭제·리비전 롤백·캐시 정리 명령어와 ipykernel로 Jupyter 커널을 등록하는 법, conda activate가 안 될 때 conda init과 셸 설정 파일 수정으로 해결하는 방법을 정리했다.
+* [[Conda] Miniforge를 이용한 분석 환경 설정하기 (OS: Ubuntu)](2024/2024-03-06-[Conda] Miniforge를 이용한 분석 환경 설정하기 (OS_ Ubuntu).md) - Ubuntu에서 Miniconda와 Miniforge의 차이를 설명하고, Miniforge 설치 스크립트 실행, PATH 설정, 가상환경 생성, base 자동 활성화 해제, conda-forge 채널 관리까지 분석 환경 구성 절차를 안내한다.
+* [[IT] 개발자들의 종류 및 역할](2024/2024-02-28-[IT] 개발자들의 종류 및 역할.md) - 프론트엔드·백엔드 개발자와 데이터 과학자·분석가·엔지니어가 각각 어떤 기술 스택을 다루고 어떤 업무 범위를 담당하는지 역할별로 구분해 정리한다.
+* [[Git] Git을 어떻게 합치지? : Git Merging](2024/2024-02-28-[Git] Git을 어떻게 합치지_ _ Git Merging.md) - 브랜치를 통합하는 git merge와 별도 머지 커밋 없이 포인터만 옮기는 패스트포워딩의 차이, git fetch와 git pull의 차이, 원격 브랜치 기반으로 로컬 브랜치를 만드는 git checkout -b 사용법을 예시 명령어와 함께 설명한다.
+* [[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기](2024/2024-02-27-[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기.md) - CIO SUMMIT 2024 효성인포메이션시스템 세션을 바탕으로 GPT-4 이후 스스로 탐구하는 AGI 개념, Levels of AGI 논문의 5단계 분류, LLM 고도화에 따른 GPU 인프라와 데이터 처리 효율의 중요성을 정리한다.
+* [[컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드](2024/2024-02-27-[컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드.md) - CIO SUMMIT 2024 마키나락스 세션에서 제시한 Traditional AI와 Generative AI의 결합, Link·Runway 솔루션의 LLMOps 확장, 엔터프라이즈 AI 플랫폼의 역할을 발표 내용과 개인적인 해석을 곁들여 정리한다.
+* [[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략](2024/2024-02-26-[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략.md) - CIO SUMMIT 2024 비아이매트릭스 세션을 바탕으로 로우코드 BI 플랫폼에 LLM을 결합한 G-MATRIX의 메타 정의, 자연어 질의의 쿼리 변환, 결과 화면 생성 과정과 기업이 RAG를 도입하는 이유를 정리한다.
+* [[컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래](2024/2024-02-25-[컨퍼][CIO] Workday AI_ML 솔루션과 Generative AI의 미래.md) - CIO SUMMIT 2024 Workday 세션에서 소개된 노동 인구 감소에 대응하는 AI/ML 투자 전략, Skills Cloud와 Workday Extend 플랫폼 데모, LLM 기반 피드백 생성 프로그램을 정리하고 아쉬웠던 점을 덧붙인다.
+* [[컨퍼][CIO] GenAI, First!](2024/2024-02-25-[컨퍼][CIO] GenAI, First!.md) - CIO SUMMIT 2024 패널 토크에서 논의된 생성형 AI의 산업 적용 현황, 정부의 AI 일상화 정책과 공공 도입 사례, 부작용 최소화 방안과 함께 제조 도메인에서 LLM이 Predictive AI의 보조 역할을 한다는 답변을 정리한다.
+* [[컨퍼][CIO] '24년 비즈니스 혁신을 가속화하는 생성형 AI](2024/2024-02-24-[컨퍼][CIO] _24년 비즈니스 혁신을 가속화하는 생성형 AI.md) - CIO SUMMIT 2024 한국IBM 세션을 바탕으로 파운데이션 모델의 개념, Watson에서 watsonx로의 진화와 그래미 협업 사례, 멀티모달 전략·AI 거버넌스·데이터 관리라는 2024년 생성형 AI 트렌드를 정리한다.
+* [[컨퍼][CIO] '24년 CIO SUMMIT 후기](2024/2024-02-24-[컨퍼][CIO] _24년 CIO SUMMIT 후기.md) - 2024년 2월 전자신문 주최 CIO SUMMIT 'GenAI, First!'에 참석한 소감과 오전·오후·특별 세션의 프로그램 일정을 정리했다.
+* [[파이썬] 쉽게 설명한 Process vs Thread](2024/2024-02-19-[파이썬] 쉽게 설명한 Process vs Thread.md) - 교실과 학생 비유로 프로세스와 스레드의 독립성·자원 공유·생성 비용 차이를 설명하고, 멀티프로세싱과 멀티스레딩을 각각 언제 선택해야 하는지 정리했다.
+* [[파이썬] multiprocessing의 Pool 클래스](2024/2024-02-19-[파이썬] multiprocessing의 Pool 클래스.md) - multiprocessing.Pool의 자동 프로세스 관리와 map·apply·imap 작업 분배, 결과 수집 방식을 설명하고 Process.start()와 join()을 직접 제어하는 방식과의 차이를 비교했다.
+* [[파이썬] Multiprocessing, Multithreading 자원 분할 및 할당](2024/2024-02-19-[파이썬] Multiprocessing, Multithreading 자원 분할 및 할당.md) - 멀티프로세싱과 멀티스레딩의 메모리·CPU 자원 분할 방식, OS 스케줄러의 자동 할당과 개발자의 수동 분배, cpu_count와 queue를 활용한 작업 분배 예시를 정리했다.
+* [[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항](2024/2024-02-19-[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항.md) - CPU 집약 작업에는 multiprocessing의 Pool과 Process, I/O 바운드 작업에는 threading이 적합한 이유를 파이썬 예시 코드와 함께 비교 설명했다.
+* [[Linux] 파일 권한과 쓰기 작업](2024/2024-01-25-[Linux] 파일 권한과 쓰기 작업.md) - ls -l로 권한을 읽는 법과 chmod의 숫자·문자 표기, chown 소유자 변경, -R 재귀 적용, 리디렉션을 이용한 파일 쓰기까지 리눅스 파일 권한 설정을 예시로 정리했다.
+* [[Linux] 사용자 계정 및 그룹 관리 가이드](2024/2024-01-23-[Linux] 사용자 계정 및 그룹 관리 가이드.md) - adduser, visudo, userdel, usermod, groupadd 등 리눅스 계정·그룹 관리 명령어와 sudo 권한 부여, 계정 잠금·만료일 설정, 로그인 기록 확인 방법을 예시와 함께 정리했다.
+* [[개념] MLOps vs AIOps](2024/2024-01-22-[개념] MLOps vs AIOps.md) - MLOps의 데이터 추출부터 모델 배포까지의 단계와 AIOps의 이상 감지·예측·근본 원인 분석 요소를 비교하며 두 개념의 목적과 적용 영역 차이를 정리했다.
+* [[Linux] 열려 있는 파일 및 리소스 관리의 필수 도구(lsof)](2024/2024-01-17-[Linux] 열려 있는 파일 및 리소스 관리의 필수 도구(lsof).md) - 리눅스 lsof 명령어로 디렉토리·파일·포트·사용자·PID별로 열린 리소스를 점유한 프로세스를 찾는 방법과 watch를 조합한 실시간 추적, kill -9 사용 시 주의점을 정리했다.
 
 ## 2023
 

@@ -1,10 +1,26 @@
 ---
+type: "Guide"
 title: "[Linux] 딥러닝 환경 구축 : CUDA, CuDNN"
+description: "NVIDIA 드라이버·CUDA·CUDA Toolkit·cuDNN의 개념을 정리하고, Ubuntu 18.04에 드라이버와 CUDA 11.8, cuDNN 8.7을 설치한 뒤 PATH를 설정하고 버전을 확인하는 절차를 설명한다."
 date: "2024-04-24"
+tags:
+  - "환경설정"
+  - "Linux"
+  - "NVIDIA"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/환경구축-CUDA-CuDNN아-나-좀-그만-괴롭혀라-ㅠ"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:02:07Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/환경구축-CUDA-CuDNN아-나-좀-그만-괴롭혀라-ㅠ"
+    title: "[Linux] 딥러닝 환경 구축 : CUDA, CuDNN"
+    author: "human:euisuk-chung"
+    last_modified: "2024-04-24"
+status: "stable"
 year: "2024"
 ---
-
-# [Linux] 딥러닝 환경 구축 : CUDA, CuDNN
 
 오늘 회사 로컬 서버가 다운되면서 기존에 오래된 파일들을 밀고 새롭게 다시 설치할 기회가 왔다!!! 파일은 다행히 복원을 완료해서 지금에서야 웃으면서 쓰지만... 정말이지 끔찍한 8시간이었다...ㅎㅎ
 
@@ -16,11 +32,9 @@ year: "2024"
 
 서두가 길긴 했지만 이 참에 `UBUNTU`를 새롭게 설치하고 기존에 오래된 레거시 코드들은 정리해주는 작업을 수행할 수 있었다. 하지만, 아직까지 한가지 난관이 남아있었다! 바로바로 딥러닝 환경 설정!! 항상 딥러닝 환경 설정을 하다보면 가차(뽑기)처럼 어떤 블로그 글을 읽는 가에 따라서 한번에 설치가 잘 될 때도 안 될 때도 있다. 그래서 이참에 새롭게 설치를 하면서 본질을 파악하고 제대로 된 설치를 해보려고 한다.
 
-용어정리
-====
+# 용어정리
 
-Nvidia Driver는 무엇인가?
---------------------
+## Nvidia Driver는 무엇인가?
 
 ![Nvidia Driver](https://velog.velcdn.com/images/euisuk-chung/post/ec8b163b-08fd-42d0-b83c-d2e50c6c561e/image.png)
 
@@ -34,8 +48,7 @@ Nvidia Driver는 `Nvidia 그래픽 카드`와 `컴퓨터 운영 체제(OS)` 간�
 2. `호환성 유지`: 운영 체제 업데이트나 소프트웨어 변경 사항에 따라 호환성을 유지한다.
 3. `오류 수정`: 발견되는 버그나 성능 문제를 해결하여 안정성을 보장한다.
 
-CUDA란 무엇인가?
------------
+## CUDA란 무엇인가?
 
 ### 정의
 
@@ -46,8 +59,7 @@ CUDA(Compute Unified Device Architecture)는 Nvidia가 개발한 병렬 컴퓨�
 1. `병렬 처리 가속화`: 대규모 데이터와 복잡한 계산을 GPU에서 병렬로 처리하여 CPU만 사용할 때보다 빠르게 작업을 완료할 수 있다.
 2. `다양한 애플리케이션 지원`: 과학 연산, 엔지니어링, 딥러닝 등 다양한 분야에서 활용된다.
 
-CUDA Toolkit이란 무엇인가?
---------------------
+## CUDA Toolkit이란 무엇인가?
 
 ### 정의
 
@@ -58,8 +70,7 @@ CUDA Toolkit은 `CUDA 개발 환경을 제공`하는 소프트웨어 패키지�
 * `개발 도구 제공`: CUDA 애플리케이션을 개발할 때 필요한 다양한 도구와 라이브러리를 제공한다.
 * `성능 분석`: 개발된 애플리케이션의 성능을 분석하고 최적화할 수 있는 도구를 포함한다.
 
-cuDNN(cuda Deep Neural network Library)
----------------------------------------
+## cuDNN(cuda Deep Neural network Library)
 
 ### 정의
 
@@ -70,13 +81,11 @@ cuDNN은 `딥러닝 연산을 위해 최적화된 GPU 가속 라이브러리`이
 1. `딥러닝 성능 최적화`: 다양한 딥러닝 프레임워크와 연동하여 높은 성능을 발휘할 수 있도록 돕는다.
 2. `학습 시간 단축`: 고성능 컴퓨팅 환경을 활용하여 모델 학습 시간을 크게 줄인다.
 
-설치 방법 (UBUNTU 18.04LTS)
-=======================
+# 설치 방법 (UBUNTU 18.04LTS)
 
 UBUNTU 18.04 LTS에 cuda12.1버전과 cudnn8.7.0버전을 설치하고 싶다고 가정하고 설치 방법에 대해서 설명해보겠다.
 
-1. **NVIDIA 드라이버 설치**
----------------------
+## 1. **NVIDIA 드라이버 설치**
 
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -98,8 +107,7 @@ sudo apt install nvidia-driver-550
 > 하지만, 권장 드라이버를 자동으로 설치해주는 함수 또한 존재한다.  
 > ✍️ `sudo ubuntu-drivers autoinstall`
 
-2. **CUDA 및 CUDA Toolkit 설치**
------------------------------
+## 2. **CUDA 및 CUDA Toolkit 설치**
 
 필자는 파이토치를 사용할 것이므로 토치에서 요구하고 있는 cuda11.8을 설치해볼 예정이다.  
 (참고: 이전 버전의 파이토치를 설치하려면? => <https://pytorch.org/get-started/previous-versions/>)
@@ -142,8 +150,7 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 >                          ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 > ```
 
-3. **cuDNN 설치**
----------------
+## 3. **cuDNN 설치**
 
 위에서 CUDA를 설치를 완료했고, 이제 CuDNN을 설치하려고 한다. Tensorflow의 경우, 특히나 CUDA 및 CuDNN의 버전에 민감하기 때문에 설치 시 버전에 유의해서 설치를 수행해야 한다.
 
@@ -170,8 +177,7 @@ sudo chmod a+r /usr/local/cuda-11.8/lib64/libcudnn*
 * **`sudo cp`**: cuDNN 라이브러리 파일과 헤더 파일을 적절한 CUDA 디렉토리로 복사한다. 이는 CUDA와 함께 cuDNN이 작동할 수 있도록 설정한다.
 * **`sudo chmod a+r`**: 복사된 파일들에 대해 읽기 권한을 추가하여 다른 사용자도 이 파일들을 사용할 수 있도록 한다.
 
-이미 특정 버전의 CUDA 및 cuDNN가 깔려있을 때
-------------------------------
+## 이미 특정 버전의 CUDA 및 cuDNN가 깔려있을 때
 
 ```
 sudo apt-get --purge remove "cuda*"
@@ -180,8 +186,7 @@ sudo apt-get --purge remove "cudnn*"
 
 * **`sudo apt-get --purge remove`**: 시스템에 설치된 CUDA 또는 cuDNN의 기존 버전을 완전히 제거한다. 이 명령은 설정 파일을 포함하여 관련된 모든 파일을 삭제한다.
 
-설치 완료 후 버전 확인 코드
-----------------
+## 설치 완료 후 버전 확인 코드
 
 아래 두 코드 라인으로 각각 설치되어 있는 CUDA 및 CUDNN 버전을 확인할 수 있다.
 

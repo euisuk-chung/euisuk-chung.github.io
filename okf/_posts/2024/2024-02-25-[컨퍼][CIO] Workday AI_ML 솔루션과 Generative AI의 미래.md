@@ -1,28 +1,37 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래"
+description: "CIO SUMMIT 2024 Workday 세션에서 소개된 노동 인구 감소에 대응하는 AI/ML 투자 전략, Skills Cloud와 Workday Extend 플랫폼 데모, LLM 기반 피드백 생성 프로그램을 정리하고 아쉬웠던 점을 덧붙인다."
 date: "2024-02-25"
 tags:
   - "CIO"
   - "Conference"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/컨퍼CIO-Workday-AIML-솔루션과-Generative-AI의-미래"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:06:19Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼CIO-Workday-AIML-솔루션과-Generative-AI의-미래"
+    title: "[컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-25"
+status: "stable"
 year: "2024"
 ---
 
-# [컨퍼][CIO] Workday AI/ML 솔루션과 Generative AI의 미래
-
 본 내용은 `CIO SUMMIT 2024`에서 발표된 내용을 기반으로 제가 더 조사 및 정리해서 작성한 글입니다. 본 게시글은 발표 내용을 정리한 것이지 특정 회사를 옹호•홍보할 목적이 아님을 밝힙니다. 틀린 내용이 있다면 편하게 댓글 달아주세요!! 🤗
 
-제목
---
+## 제목
 
 Workday AI/ML 솔루션과 Generative AI의 미래
 
-발표자
----
+## 발표자
 
 Workday 문성민 상무
 
-발표내용
-----
+## 발표내용
 
 ### Workday 뭐하는 회사지?
 

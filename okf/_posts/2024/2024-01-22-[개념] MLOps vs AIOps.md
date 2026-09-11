@@ -1,16 +1,27 @@
 ---
+type: "Concept Note"
 title: "[개념] MLOps vs AIOps"
+description: "MLOps의 데이터 추출부터 모델 배포까지의 단계와 AIOps의 이상 감지·예측·근본 원인 분석 요소를 비교하며 두 개념의 목적과 적용 영역 차이를 정리했다."
 date: "2024-01-22"
 tags:
   - "IT지식"
   - "개념정리"
+  - "머신러닝"
+resource: "https://velog.io/@euisuk-chung/MLOps-vs-AIOps"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:08:22Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/MLOps-vs-AIOps"
+    title: "[개념] MLOps vs AIOps"
+    author: "human:euisuk-chung"
+    last_modified: "2024-01-22"
+status: "stable"
 year: "2024"
 ---
 
-# [개념] MLOps vs AIOps
-
-MLOps란 무엇인가?
-============
+# MLOps란 무엇인가?
 
 MLOps는 기계 학습(ML) 시스템의 개발과 배포를 통합하는 프레임워크입니다. 이는 ML 모델을 지속적으로 생산에 투입하기 위해 표준화하고 간소화하는 역할을 합니다. MLOps의 주요 단계는 다음과 같습니다:
 
@@ -23,8 +34,7 @@ MLOps는 기계 학습(ML) 시스템의 개발과 배포를 통합하는 프레�
 
 MLOps는 DevOps 원칙을 기반으로 하지만 ML 모델과 시스템에 특화된 추가적인 레이어를 포함합니다.
 
-AIOps란 무엇인가?
-============
+# AIOps란 무엇인가?
 
 AIOps는 "Artificial Intelligence for IT Operations"의 약어로, IT 운영 과정을 자동화하기 위해 대규모 데이터와 기계 학습을 결합합니다. AIOps의 핵심 요소는 다음과 같습니다:
 
@@ -35,8 +45,7 @@ AIOps는 "Artificial Intelligence for IT Operations"의 약어로, IT 운영 과
 
 AIOps는 IT 운영 프로세스를 자동화하기 위해 빅 데이터와 머신 러닝을 결합합니다. 이는 IT 인프라에서 발생하는 다양한 데이터를 효과적으로 관리하고, 실시간 통찰력과 예측 분석을 제공하여 IT 팀이 문제에 효율적으로 대응하도록 돕습니다.
 
-MLOps vs AIOps
-==============
+# MLOps vs AIOps
 
 MLOps와 AIOps는 서로 다른 영역에 속하지만, 종종 혼동됩니다. 기본적인 차이점은 다음과 같습니다:
 
@@ -51,7 +60,6 @@ MLOps와 AIOps는 서로 다른 영역에 속하지만, 종종 혼동됩니다. 
   + 자동화된 근본 원인 분석 및 해결
   + 대규모 데이터 처리 및 관리
 
-결론
-==
+# 결론
 
 MLOps와 AIOps는 효과적이고 확장 가능하며 지속 가능한 시스템을 만드는 데 도움이 되는 중요한 도구입니다. MLOps는 ML 모델의 구축과 배포를, AIOps는 실시간으로 애플리케이션 데이터에 대응하는데 사용됩니다. 이 두 도구는 ML 모델 구축 및 IT 운영 자동화에 필요한 기능을 모두 제공하기 때문에 함께 사용될 수 있습니다.

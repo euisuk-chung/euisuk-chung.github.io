@@ -1,13 +1,24 @@
 ---
+type: "Concept Note"
 title: "[파이썬] multiprocessing의 Pool 클래스"
+description: "multiprocessing.Pool의 자동 프로세스 관리와 map·apply·imap 작업 분배, 결과 수집 방식을 설명하고 Process.start()와 join()을 직접 제어하는 방식과의 차이를 비교했다."
 date: "2024-02-19"
 tags:
-  - "python"
+  - "Python"
   - "개념정리"
+resource: "https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Pool"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:06:56Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Pool"
+    title: "[파이썬] multiprocessing의 Pool 클래스"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-19"
+status: "stable"
 year: "2024"
 ---
-
-# [파이썬] multiprocessing의 Pool 클래스
 
 `multiprocessing.Pool`은 Python의 멀티프로세싱 모듈에서 제공하는 매우 유용한 클래스로, 병렬 처리를 위한 프로세스 풀을 관리합니다. 이 클래스를 사용하면 여러 프로세스에서 동시에 작업을 실행하는 복잡한 로직을 간단하게 처리할 수 있습니다.
 

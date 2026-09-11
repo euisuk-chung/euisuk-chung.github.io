@@ -1,28 +1,37 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기"
+description: "CIO SUMMIT 2024 효성인포메이션시스템 세션을 바탕으로 GPT-4 이후 스스로 탐구하는 AGI 개념, Levels of AGI 논문의 5단계 분류, LLM 고도화에 따른 GPU 인프라와 데이터 처리 효율의 중요성을 정리한다."
 date: "2024-02-27"
 tags:
   - "CIO"
   - "Conference"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/컨퍼CIO-스스로-탐구하는-AGI와-GPU-인프라-이야기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:05:23Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼CIO-스스로-탐구하는-AGI와-GPU-인프라-이야기"
+    title: "[컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-27"
+status: "stable"
 year: "2024"
 ---
 
-# [컨퍼][CIO] 스스로 탐구하는 AGI와 GPU 인프라 이야기
-
 본 내용은 CIO SUMMIT 2024에서 발표된 내용을 기반으로 제가 더 조사 및 정리해서 작성한 글입니다. 본 게시글은 발표 내용을 정리한 것이지 특정 회사를 옹호•홍보할 목적이 아님을 밝힙니다. 틀린 내용이 있다면 편하게 댓글 달아주세요!! 🤗
 
-제목
---
+## 제목
 
 스스로 탐구하는 AGI와 GPU 인프라 이야기
 
-발표자
----
+## 발표자
 
 효성인포메이션시스템 김형섭 수석 컨설턴트
 
-발표내용
-----
+## 발표내용
 
 ![CIO_SUMMIT](https://velog.velcdn.com/images/euisuk-chung/post/cce015d4-5385-4362-b131-f93f713bee4b/image.png)
 

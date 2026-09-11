@@ -1,13 +1,27 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][CIO] '24년 CIO SUMMIT 후기"
+description: "2024년 2월 전자신문 주최 CIO SUMMIT 'GenAI, First!'에 참석한 소감과 오전·오후·특별 세션의 프로그램 일정을 정리했다."
 date: "2024-02-24"
+tags:
+  - "CIO"
+  - "Conference"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/컨퍼CIO-CIO-SUMMIT-2024"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:06:45Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼CIO-CIO-SUMMIT-2024"
+    title: "[컨퍼][CIO] '24년 CIO SUMMIT 후기"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-24"
+status: "stable"
 year: "2024"
 ---
 
-# [컨퍼][CIO] '24년 CIO SUMMIT 후기
-
-CIO SUMMIT 2024
-===============
+# CIO SUMMIT 2024
 
 **일시**: 2024년 2월 22일(목) 09:00-17:20  
 **장소**: 인터콘티넨탈 서울 코엑스, 하모니볼룸(HL)  
@@ -15,15 +29,13 @@ CIO SUMMIT 2024
 
 ![CIO_SUMMIT](https://velog.velcdn.com/images/euisuk-chung/post/8f50785c-4a15-476d-9096-3958199a775d/image.png)
 
-개요
---
+## 개요
 
 좋은 기회로 2024년 2월 22일에 전자신문에서 주최하는 "CIO Summit 2024"에 회사의 지원으로 참석하게 되었습니다. 이번 CIO Summit의 주제는 'GenAI, First!'로, LLM과 Generative AI에 대해서 이야기를 나누고 기업의 CIO 및 IT 전문가들이 인공지능(AI)의 선도적 활용에 대해서 논의하는 자리였다고 생각이 듭니다.
 
 개인적으로는 LLM 현황 및 기술 현황에 대한 공유가 더 있었으면 했지만, 기업 현황 및 현재 국내 기업들이 어떻게 LLM과 생성형 인공지능에 대해서 고민하고 있는지에 대해서 들을 수 있다는 점에서 뜻 깊었던 경험인 것 같습니다. 프로그램 일정은 아래와 같으며 제가 들었던 내용 중 인상깊었던 내용들은 다음 게시글에 공유드리겠습니다.
 
-참여 프로그램 일정
-----------
+## 참여 프로그램 일정
 
 ### 오전 세션
 

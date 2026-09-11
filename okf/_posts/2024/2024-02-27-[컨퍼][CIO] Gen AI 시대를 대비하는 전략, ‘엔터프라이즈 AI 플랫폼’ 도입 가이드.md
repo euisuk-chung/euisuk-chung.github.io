@@ -1,28 +1,37 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드"
+description: "CIO SUMMIT 2024 마키나락스 세션에서 제시한 Traditional AI와 Generative AI의 결합, Link·Runway 솔루션의 LLMOps 확장, 엔터프라이즈 AI 플랫폼의 역할을 발표 내용과 개인적인 해석을 곁들여 정리한다."
 date: "2024-02-27"
 tags:
   - "CIO"
   - "Conference"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/Gen-AI-시대를-대비하는-전략-엔터프라이즈-AI-플랫폼-도입-가이드Gen-AI-시대를-대비하는-전략-엔터프라이즈-AI-플랫폼-도입-가이드"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:05:07Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Gen-AI-시대를-대비하는-전략-엔터프라이즈-AI-플랫폼-도입-가이드Gen-AI-시대를-대비하는-전략-엔터프라이즈-AI-플랫폼-도입-가이드"
+    title: "[컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-27"
+status: "stable"
 year: "2024"
 ---
 
-# [컨퍼][CIO] Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드
-
 본 내용은 CIO SUMMIT 2024에서 발표된 내용을 기반으로 제가 더 조사 및 정리해서 작성한 글입니다. 본 게시글은 발표 내용을 정리한 것이지 특정 회사를 옹호•홍보할 목적이 아님을 밝힙니다. 틀린 내용이 있다면 편하게 댓글 달아주세요!! 🤗
 
-제목
---
+## 제목
 
 Gen AI 시대를 대비하는 전략, ‘엔터프라이즈 AI 플랫폼’ 도입 가이드
 
-발표자
----
+## 발표자
 
 마키나락스 심상우 CTO
 
-발표내용
-----
+## 발표내용
 
 ### 뭐하는 회사지?
 

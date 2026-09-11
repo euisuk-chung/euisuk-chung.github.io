@@ -1,13 +1,24 @@
 ---
+type: "Concept Note"
 title: "[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항"
+description: "CPU 집약 작업에는 multiprocessing의 Pool과 Process, I/O 바운드 작업에는 threading이 적합한 이유를 파이썬 예시 코드와 함께 비교 설명했다."
 date: "2024-02-19"
 tags:
-  - "python"
+  - "Python"
   - "개념정리"
+resource: "https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Multithreading-사용-시-고려-사항-예시-코드-포함"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:07:23Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이썬-Multiprocessing-Multithreading-사용-시-고려-사항-예시-코드-포함"
+    title: "[파이썬] Multiprocessing, Multithreading 사용 시 고려 사항"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-19"
+status: "stable"
 year: "2024"
 ---
-
-# [파이썬] Multiprocessing, Multithreading 사용 시 고려 사항
 
 `멀티프로세싱`과 `멀티스레딩`을 선택할 때 고려해야 하는 작업의 특성에 대해 더 자세히 설명하겠습니다. `자원 분할 및 할당`에 대해서 궁금하신 분을 다음 [게시글](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%EC%8D%AC-Multiprocessing-Multithreading-%EC%9E%90%EC%9B%90-%EB%B6%84%ED%95%A0-%EB%B0%8F-%ED%95%A0%EB%8B%B9)에서 확인하실 수 있습니다.
 
