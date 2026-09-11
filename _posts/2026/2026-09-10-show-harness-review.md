@@ -12,6 +12,19 @@ source_revision: '2609.10522v1'
 analyzed_at: '2026-09-10T23:45:06+09:00'
 source_title: 'Show-Harness: Just a VLM Agent Can Play Robots'
 source_authors: [Yanzhe Chen, Zechen Bai, Zhijun Cao, Wenzheng Zeng, Kevin Qinghong Lin, Yiqi Lin, Guoqiang Liang, Kevin Yuchen Ma, Qiming Huang, Mike Zheng Shou]
+visual_sources:
+  - path: '/img/reviews/2026/show-harness-review/figure-3.png'
+    kind: paper-figure
+    source_url: 'https://arxiv.org/pdf/2609.10522v1#page=5'
+    page: 5
+    figure: 3
+    caption: 'Show-Harness Figure 3. PDF 5쪽의 아키텍처 영역을 크롭했습니다. 원본 영문 표기와 범례를 보존하고 한국어 해설을 덧붙였습니다.'
+  - path: '/img/reviews/2026/show-harness-review/table-2.png'
+    kind: paper-table
+    source_url: 'https://arxiv.org/pdf/2609.10522v1#page=11'
+    page: 11
+    table: 2
+    caption: 'Show-Harness Table 2. PDF 11쪽의 표 전체 영역을 크롭했습니다. 모든 열·행·단위·미보고 표시를 보존하고 한국어 해설을 덧붙였습니다.'
 ---
 
 ## 1. 논문 개요와 전체 구조
@@ -113,6 +126,12 @@ $$
 
 #### 3.3 Embodied Harness Architecture
 
+[![관측을 VLM에 전달하고 추론 플러그인으로 문맥을 정제한 뒤 의미 행동을 실행하여 관측으로 되돌아오는 Show-Harness 아키텍처]({{ '/img/reviews/2026/show-harness-review/figure-3.png' | relative_url }})]({{ '/img/reviews/2026/show-harness-review/figure-3.png' | relative_url }})
+
+*그림 3. Yanzhe Chen 등의 Show-Harness 아키텍처. [arXiv 2609.10522v1, Figure 3, PDF 5쪽](https://arxiv.org/pdf/2609.10522v1#page=5)에서 그림 영역만 크롭했습니다. 원본 영문 표기·화살표·범례를 보존했으며, 캡션과 아래 해설은 한국어로 작성했습니다. 이미지를 누르면 확대할 수 있습니다.*
+
+그림의 보라색 화살표는 관측을 받은 VLM이 추론 플러그인을 거쳐 정제된 문맥을 다시 받는 흐름을, 초록색 화살표는 행동 출력과 실행 상태가 다음 관측으로 돌아오는 흐름을 표시합니다. 실선과 점선 테두리는 기본·선택 플러그인을 구분합니다. 오른쪽의 계획·보폭 조정과 아래쪽의 행동 이력·복구가 한 루프에 결합되어 있으므로, 아래 설명에서도 각 기능이 어느 시점의 정보에 개입하는지를 구분합니다.
+
 **Perception:** Multi-View Guidance는 전체 장면과 손목 카메라의 역할을 알려 줍니다. Proprioception은 높이·이동량·접촉·그리퍼 상태를 짧은 텍스트로 전달합니다. 영상만으로 깊이나 잡기 상태를 판단하기 어려운 경우를 보완하려는 구성입니다.
 
 **Reasoning:** 원문 순서대로 다섯 플러그인을 둡니다.
@@ -166,6 +185,12 @@ $$
 #### 5.2 Main Results: Generalization across Task, Environment, and Embodiments
 
 먼저 cross-task는 물체·목적지 조합, cross-environment는 배경·조명·시점·방해 물체·sim-to-real, cross-embodiment는 Franka와 AgileX를 평가합니다. FT의 로봇 간 평가는 **두 로봇 시연을 공동 학습한 뒤 각 로봇에서 평가**한 것이므로, 학습에 전혀 없던 로봇으로의 zero-shot 전이와 구분해야 합니다.
+
+[![작업·환경·로봇 형태 일반화에서 여덟 방법의 성공 횟수와 평균 성공률을 비교한 원문 표 2]({{ '/img/reviews/2026/show-harness-review/table-2.png' | relative_url }})]({{ '/img/reviews/2026/show-harness-review/table-2.png' | relative_url }})
+
+*표 2. Yanzhe Chen 등의 실제 로봇 일반화 평가. [arXiv 2609.10522v1, Table 2, PDF 11쪽](https://arxiv.org/pdf/2609.10522v1#page=11)에서 표 전체 영역을 크롭했습니다. 원본 영문 표기·수치·단위·주석을 보존했으며, 캡션과 해설은 한국어로 작성했습니다. ZS는 Gemini-3.1 Pro의 medium thinking effort, FT는 Qwen3.5-2B입니다. 이미지를 누르면 확대할 수 있습니다.*
+
+각 셀의 분수는 성공 횟수/시도 횟수이고 Average 행은 백분율입니다. †는 미세조정 시 보지 못한 물체를, 대시는 미보고 결과를 뜻합니다. 위에서부터 작업 조합, 환경 변화, 로봇 형태 변화의 평가이므로 서로 다른 묶음의 평균을 합치지 않고 읽어야 합니다.
 
 HTML에서 표 2가 누락되어 동일 버전 PDF 11쪽의 표를 확인했습니다. 10개 작업 평균은 ZS 89%, FT 86%, <span markdown="0">$\pi_{0.5}$</span> 39%, GR00T 35%, H-VLA 50%, G-VLA 13%, CaP-X 44%, RATS 57%입니다. 다만 banana→bowl에서는 ZS가 6/10으로 RATS의 8/10보다 낮습니다. 평균 우세가 모든 개별 작업의 우세를 의미하지는 않습니다.
 
