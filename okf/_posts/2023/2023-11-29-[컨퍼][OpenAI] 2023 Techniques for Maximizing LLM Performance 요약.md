@@ -8,7 +8,6 @@ tags:
   - "Conference"
   - "Prompt Engineering"
   - "RAG"
-  - "NLP"
 resource: "https://velog.io/@euisuk-chung/컨퍼OpenAI-2023-Techniques-for-Maximizing-LLM-Performance-요약"
 generated:
   by: "process:velog-sync"

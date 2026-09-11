@@ -5,7 +5,6 @@ description: "BCG AI Radar 2026 서베이를 바탕으로 매출 대비 AI 투�
 date: "2026-01-20"
 tags:
   - "트렌드"
-  - "AI Agent"
 resource: "https://velog.io/@euisuk-chung/BCG-AI-Radar-2026-CEO가-AI-투자의-중심에-서다"
 generated:
   by: "process:velog-sync"

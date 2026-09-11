@@ -6,7 +6,6 @@ date: "2026-03-17"
 tags:
   - "NVIDIA"
   - "Conference"
-  - "트렌드"
 resource: "https://velog.io/@euisuk-chung/NVIDIA-GTC-2026-키노트-완벽-정리-Inference-Inflection부터-Physical-AI까지"
 generated:
   by: "process:velog-sync"
@@ -25,7 +24,7 @@ year: "2026"
 
 > <https://youtu.be/jw_o0xr8MWU>
 
-2025년 3월 17일, NVIDIA의 CEO Jensen Huang이 GTC 2026 키노트를 통해 AI 산업의 현재와 미래를 조망했습니다. 450개 기업이 스폰서로 참여하고, 1,000개의 기술 세션과 20,000명의 연사가 함께한 이번 GTC는 AI 인프라의 5개 레이어(토지/전력/셸 → 인프라 → 칩 → 플랫폼/모델 → 애플리케이션)를 모두 아우르는 역대 최대 규모의 행사였습니다.
+2026년 3월 17일, NVIDIA의 CEO Jensen Huang이 GTC 2026 키노트를 통해 AI 산업의 현재와 미래를 조망했습니다. 450개 기업이 스폰서로 참여하고, 1,000개의 기술 세션과 20,000명의 연사가 함께한 이번 GTC는 AI 인프라의 5개 레이어(토지/전력/셸 → 인프라 → 칩 → 플랫폼/모델 → 애플리케이션)를 모두 아우르는 역대 최대 규모의 행사였습니다.
 
 이 글에서는 키노트 발표 순서를 그대로 따라가며, 핵심 내용을 빠짐없이 정리합니다.
 

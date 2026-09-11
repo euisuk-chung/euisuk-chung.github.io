@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-11
+* **Update**: Review pass over all 290 posts: corrected `type`/`tags` on 38 posts (ChatGPT tag only for the ChatGPT product; Sora/State Space Model back-applied; prompting-guide translations typed Guide), removed the single-use concept 글또, filled stub bodies and `parent`/`related` on new concepts, fixed three body typos.
 * **Update**: Migrated 16 posts of batch 2026 ([2026](_posts/2026/)) to OKF front matter and ATX headings.
 * **Update**: Migrated 26 posts of batch 2025c ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: sora.
 * **Update**: Migrated 39 posts of batch 2025b ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: qwen.
