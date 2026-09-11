@@ -1,12 +1,25 @@
 ---
+type: "Guide"
 title: "[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)"
+description: "Windows에서 Ed25519 SSH 키를 생성해 Linux 서버 authorized_keys에 등록하고, VS Code Remote-SSH config와 SSH Agent로 비밀번호 없이 접속하는 절차와 권한 오류 트러블슈팅을 정리한다."
 date: "2025-08-20"
 tags:
-  - "환경"
+  - "환경설정"
+  - "Linux"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/원격에서-비밀번호-없이-접속하기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:16:52Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/원격에서-비밀번호-없이-접속하기"
+    title: "[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-20"
+status: "stable"
 year: "2025"
 ---
-
-# [접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)
 
 ![SSH Remote Connection](https://velog.velcdn.com/images/euisuk-chung/post/fa875e0d-fcc0-48d7-8010-c81e7d9ae51c/image.png)
 
@@ -14,10 +27,7 @@ year: "2025"
 
 매번 리눅스 서버에 접속할 때마다 비밀번호를 입력하는 것은 생각보다 큰 스트레스입니다. 특히 VS Code로 원격 개발을 하면서 하루에도 수십 번씩 재접속해야 하는 상황이라면 더더욱 그렇죠. 이번 포스팅에서는 **Windows 로컬 환경에서 Linux 원격 서버로 SSH Key 인증을 설정**하여, 비밀번호 없이 안전하고 편리하게 자동 로그인하는 방법을 단계별로 상세히 정리했습니다.
 
----
-
-목차
---
+## 목차
 
 1. SSH Key 인증의 이해
 2. SSH Key가 필요한 이유
@@ -29,10 +39,7 @@ year: "2025"
 8. 트러블슈팅 가이드
 9. 전체 프로세스 요약
 
----
-
-1. SSH Key 인증의 이해
------------------
+## 1. SSH Key 인증의 이해
 
 ### SSH Key의 기본 원리
 
@@ -71,10 +78,7 @@ SSH Key 인증은 **비밀번호 대신 암호화 키 쌍으로 신원을 확인
 
 이 방식은 **중간자 공격(Man-in-the-Middle Attack)**에 강하고, 무차별 대입 공격(Brute Force)으로부터도 안전합니다.
 
----
-
-2. SSH Key가 필요한 이유
-------------------
+## 2. SSH Key가 필요한 이유
 
 ### 보안성 측면
 
@@ -108,10 +112,7 @@ SSH Key 인증은 **비밀번호 대신 암호화 키 쌍으로 신원을 확인
 * 프로젝트별, 팀원별로 다른 키를 발급하여 권한 분리 가능
 * 특정 키가 유출되었을 때 해당 공개키만 서버에서 제거하면 즉시 접근 차단
 
----
-
-3. 실무 핵심 가이드라인
---------------
+## 3. 실무 핵심 가이드라인
 
 ### 알고리즘 선택 기준
 
@@ -170,10 +171,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 * 개인용, 회사용, 프로젝트용 등 용도별로 별도 키 생성
 * `~/.ssh/config`에서 호스트별로 다른 키 지정 가능
 
----
-
-4. Windows에서 SSH Key 생성하기
--------------------------
+## 4. Windows에서 SSH Key 생성하기
 
 ### 사전 준비사항
 
@@ -288,10 +286,7 @@ ssh-keygen -t ed25519
 
 이 경우 공개키 마지막에 주석이 붙지 않거나 Windows 사용자명이 자동으로 표시됩니다.
 
----
-
-5. Linux 서버에 공개키 등록하기
----------------------
+## 5. Linux 서버에 공개키 등록하기
 
 ### 공개키 내용 확인
 
@@ -389,10 +384,7 @@ rm ~/temp_key.pub  # 임시 파일 삭제
 * **여러 줄 추가 금지**: 공개키는 **한 줄**이어야 합니다. 줄바꿈이 들어가면 인증 실패합니다.
 * **권한 문제**: Linux SSH 서버는 `.ssh` 디렉토리와 `authorized_keys` 파일 권한이 너무 열려있으면 보안상 인증을 거부합니다.
 
----
-
-6. VS Code Remote-SSH 설정하기
---------------------------
+## 6. VS Code Remote-SSH 설정하기
 
 ### VS Code 확장 설치
 
@@ -521,10 +513,7 @@ Host internal-server
     IdentityFile C:\Users\YourName\.ssh\id_ed25519
 ```
 
----
-
-7. Passphrase와 SSH Agent 활용하기
------------------------------
+## 7. Passphrase와 SSH Agent 활용하기
 
 ### Passphrase의 필요성
 
@@ -606,10 +595,7 @@ ssh-add -d $env:USERPROFILE\.ssh\id_ed25519
 ssh-add -D
 ```
 
----
-
-8. 트러블슈팅 가이드
-------------
+## 8. 트러블슈팅 가이드
 
 ### 문제 1: "Permission denied (publickey)"
 
@@ -779,10 +765,7 @@ ssh-keygen -R 192.168.1.100
 notepad $env:USERPROFILE\.ssh\known_hosts
 ```
 
----
-
-9. 전체 프로세스 요약
--------------
+## 9. 전체 프로세스 요약
 
 ### Windows (로컬) 작업 순서
 
@@ -865,10 +848,7 @@ ssh my-linux-server
 | Config 작성 | ✅ | - | Host, HostName, User, IdentityFile 확인 |
 | 접속 테스트 | ✅ | - | 비밀번호 없이 접속 성공 |
 
----
-
-마치며
----
+## 마치며
 
 SSH Key 인증은 처음 설정 시 다소 복잡해 보일 수 있지만, 한 번 제대로 구축하면 개발 생산성을 크게 향상시킬 수 있는 강력한 도구입니다. 특히 **Windows 로컬 환경에서 Linux 원격 서버로 VS Code Remote-SSH를 사용하는 경우**, 비밀번호 입력 없이 즉시 코드 편집 환경에 진입할 수 있어 워크플로우가 매끄럽게 연결됩니다.
 

@@ -1,25 +1,34 @@
 ---
+type: "Guide"
 title: "[가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기"
+description: "Ollama 설치와 EXAONE 3.5 모델 실행부터 Python SDK의 generate·chat으로 챗봇과 문서 요약을 구현하고, llama3.1로 함수 호출(tool calling) 에이전트를 만드는 과정과 주요 API를 정리한다."
 date: "2025-05-29"
 tags:
-  - "OLLAMA"
-  - "python"
+  - "Ollama"
+  - "Python"
+  - "AI Agent"
+  - "EXAONE"
+resource: "https://velog.io/@euisuk-chung/가이드-Python에서-Ollama-사용하기-설치부터-AI-에이전트-만들기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:22:59Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/가이드-Python에서-Ollama-사용하기-설치부터-AI-에이전트-만들기"
+    title: "[가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기"
+    author: "human:euisuk-chung"
+    last_modified: "2025-05-29"
+status: "stable"
 year: "2025"
 ---
 
-# [가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1a9d8ab3-c111-45f4-83c1-94dbcd9fd443/image.png)
 
-🌟 개요
-----
+## 🌟 개요
 
 Ollama는 로컬 환경에서 대규모 언어 모델(LLM, Large Language Model)을 간단히 실행하고 Python 프로젝트에 통합할 수 있도록 도와주는 프레임워크입니다. 해당 포스트에서는 Ollama의 설치 방법부터 Python SDK 사용법, 실제 활용 예제(챗봇 구현, 자동화 에이전트 개발)까지 단계별로 살펴봅니다. (사용 모델은 국산 LLM인 `exaone3.5:7.8b`입니다.)
 
----
-
-Ollama와 Exaone 3.5 소개
----------------------
+## Ollama와 Exaone 3.5 소개
 
 `Ollama`는 Docker처럼 **사전 빌드된 모델 패키지를 로컬에서 pull 받아 실행할 수 있도록 설계된 오픈소스 플랫폼**입니다. 모델 실행에 필요한 가중치, 설정, 데이터 등을 하나의 패키지(Modelfile)로 묶어 CLI나 REST API로 손쉽게 사용할 수 있습니다.
 
@@ -29,10 +38,7 @@ Ollama와 Exaone 3.5 소개
 
 저는 가장 최신에 나온 `EXAONE 3.5:7.8b` 모델을 사용하여 실습을 진행해보도록 하겠습니다.
 
----
-
-Ollama 설치 및 Python 연동
----------------------
+## Ollama 설치 및 Python 연동
 
 ### 1. Ollama 엔진 설치
 
@@ -80,10 +86,7 @@ ollama를 파이썬에서 실행하기 위해서는 아래 라이브러리를 �
 pip install ollama
 ```
 
----
-
-첫 번째 예제: 프롬프트 기반 텍스트 생성
------------------------
+## 첫 번째 예제: 프롬프트 기반 텍스트 생성
 
 ```
 import ollama
@@ -92,10 +95,7 @@ result = ollama.generate(model='exaone3.5:7.8b', prompt='우주는 왜 어두운
 print(result['response'])
 ```
 
----
-
-실전 활용 1: 프라이빗 AI 챗봇 구축
-----------------------
+## 실전 활용 1: 프라이빗 AI 챗봇 구축
 
 아래 함수를 통해 `chatSLM.py`를 정의하면 바로 챗봇처럼 사용하실 수 있습니다!
 
@@ -158,10 +158,7 @@ Bot: 맞아요! 🌧️ "스콜"은 특히 **짧고 강렬한 집중 호우**를
      이런 특징적인 날씨 현상을 설명할 때 "스콜"이라는 단어가 쓰입니다! 👍
 ```
 
----
-
-실전 활용 2: 문서 자동 요약
------------------
+## 실전 활용 2: 문서 자동 요약
 
 **코드**:
 
@@ -190,10 +187,7 @@ print("Summary:", result['response'])
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b50771df-66e6-4c0d-91f4-5aa4bad3df78/image.png)
 
----
-
-실전 활용 3: 코드 요청하기
-----------------
+## 실전 활용 3: 코드 요청하기
 
 **코드**:
 
@@ -210,10 +204,7 @@ print(response['response'])
 **출력**:  
 ![](https://velog.velcdn.com/images/euisuk-chung/post/afc64d5b-c82c-4f82-ae9b-8cd5a8890be4/image.png)
 
----
-
-실전 활용 4: 함수 호출 기반 AI 에이전트 만들기
------------------------------
+## 실전 활용 4: 함수 호출 기반 AI 에이전트 만들기
 
 ### 1. 툴 함수 정의 (계산 기능 예시)
 
@@ -335,10 +326,7 @@ if response.message.tool_calls:
                      [LLM generates follow-up: "The result is 20."]
 ```
 
----
-
-마무리
----
+## 마무리
 
 이 글에서는 LLM 기반 애플리케이션을 빠른 건설으로 가능하게 해주는 Ollama의 헌신 기능과 Python 연동 방법을 살펴보였습니다. 특히 `exaone3.5:7.8b`와 같은 국사 LLM을 사용할 경우, 한국어 회신 성능을 높이며 더는 강한 프라이버시와 반성 속도를 확립할 수 있습니다.
 

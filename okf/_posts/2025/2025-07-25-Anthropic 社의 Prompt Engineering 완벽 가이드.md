@@ -1,13 +1,25 @@
 ---
+type: "Guide"
 title: "Anthropic 社의 Prompt Engineering 완벽 가이드"
+description: "Anthropic 공식 문서를 바탕으로 프롬프트 생성기, 명확한 지시, 멀티샷 예시, Chain of Thought, XML 태그, 역할 부여, 응답 사전 입력, 프롬프트 연쇄, 긴 맥락 처리 등 9가지 Claude 프롬프팅 기법을 정리한다."
 date: "2025-07-25"
 tags:
+  - "Prompt Engineering"
+  - "Claude"
   - "Anthropic"
-  - "prompt"
+resource: "https://velog.io/@euisuk-chung/Anthropic-Prompt-Engineering-완벽-가이드"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:20:25Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Anthropic-Prompt-Engineering-완벽-가이드"
+    title: "Anthropic 社의 Prompt Engineering 완벽 가이드"
+    author: "human:euisuk-chung"
+    last_modified: "2025-07-25"
+status: "stable"
 year: "2025"
 ---
-
-# Anthropic 社의 Prompt Engineering 완벽 가이드
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/df1c424d-216b-445b-b5b3-f6481f5697f0/image.png)
 
@@ -17,8 +29,7 @@ AI 개발업체 앤트로픽(Anthropic)이 자사 AI 모델 클로드(Claude)의
 
 > source: <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/>
 
-프롬프트 엔지니어링 vs 파인튜닝: 효율성의 혁신
----------------------------
+## 프롬프트 엔지니어링 vs 파인튜닝: 효율성의 혁신
 
 앤트로픽은 이번 가이드에서 **프롬프트 엔지니어링이 기존 파인튜닝 방식보다 훨씬 효율적**이라고 강조했습니다. 그 근거는 명확합니다:
 
@@ -36,8 +47,7 @@ AI 개발업체 앤트로픽(Anthropic)이 자사 AI 모델 클로드(Claude)의
 * 모델 업데이트 시에도 버전 간 변경 없이 사용 가능
 * 모델의 광범위한 일반 지식과 능력 완전 보존
 
-데이터 사이언스 관점에서의 핵심 장점
---------------------
+## 데이터 사이언스 관점에서의 핵심 장점
 
 특히 데이터 사이언스와 AI 개발 분야에서 프롬프트 엔지니어링은 다음과 같은 혁신적 이점을 제공합니다:
 
@@ -47,8 +57,7 @@ AI 개발업체 앤트로픽(Anthropic)이 자사 AI 모델 클로드(Claude)의
 * **높은 투명성**: 추론 과정의 명확한 추적과 디버깅 가능
 * **유지보수 용이성**: 지속적인 모델 개선과 최적화
 
-본 가이드의 구성
----------
+## 본 가이드의 구성
 
 이번 가이드는 **앤트로픽의 공식 문서**([Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview))를 기반으로, **가장 광범위하게 효과적인 기법부터 전문적인 기법 순서**로 구성되어 있습니다. 성능 개선이 필요할 때 해당 순서대로 적용할 것을 권장합니다.
 
@@ -56,8 +65,7 @@ AI와의 효과적인 소통은 현재 데이터 과학과 AI 개발에서 필�
 
 이 글에서는 Claude를 위한 9가지 핵심 prompt engineering 기법을 단계별로 살펴보겠습니다.
 
-1. Prompt Generator: 효과적인 프롬프트 자동 생성
-------------------------------------
+## 1. Prompt Generator: 효과적인 프롬프트 자동 생성
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator>
 
@@ -77,8 +85,7 @@ Prompt generator는 특정 작업에 맞는 고품질 프롬프트 템플릿을 
 
 *(개인생각) 해당 prompt genertor의 성능이 얼마나 좋을지 모르지만, prompting을 처음하시거나 귀찮으신 분들 말고는 얼마나 사용할지 궁금하네요* 😗
 
-2. 명확하고 직접적인 지시: 정확성의 기초
-------------------------
+## 2. 명확하고 직접적인 지시: 정확성의 기초
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct>
 
@@ -120,8 +127,7 @@ Prompt generator는 특정 작업에 맞는 고품질 프롬프트 템플릿을 
 ```
 {% endraw %}
 
-3. 예시 활용(Multishot Prompting): 정확성 향상의 핵심
------------------------------------------
+## 3. 예시 활용(Multishot Prompting): 정확성 향상의 핵심
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/multishot-prompting>
 
@@ -157,8 +163,7 @@ CS팀이 구조화되지 않은 피드백으로 어려움을 겪고 있습니다
 ```
 {% endraw %}
 
-4. 사고 과정 유도(Chain of Thought): 복잡한 분석의 핵심
------------------------------------------
+## 4. 사고 과정 유도(Chain of Thought): 복잡한 분석의 핵심
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought>
 
@@ -201,8 +206,7 @@ CS팀이 구조화되지 않은 피드백으로 어려움을 겪고 있습니다
 * 과거 시장 데이터 검토
 * 상세한 근거와 함께 최종 권고
 
-5. XML 태그 활용: 구조화된 프롬프트 설계
---------------------------
+## 5. XML 태그 활용: 구조화된 프롬프트 설계
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags>
 
@@ -243,8 +247,7 @@ CS팀이 구조화되지 않은 피드백으로 어려움을 겪고 있습니다
 ```
 {% endraw %}
 
-6. 역할 부여(System Prompts): 전문성 강화
---------------------------------
+## 6. 역할 부여(System Prompts): 전문성 강화
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts>
 
@@ -280,8 +283,7 @@ response = client.messages.create(
 * 업계 표준 대비 구체적인 리스크 평가
 * 협상을 위한 구체적인 대안 제시
 
-7. 응답 사전 입력(Prefilling): 출력 형태 제어
----------------------------------
+## 7. 응답 사전 입력(Prefilling): 출력 형태 제어
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response>
 
@@ -315,8 +317,7 @@ messages=[
 ]
 ```
 
-8. 복잡한 프롬프트 연쇄(Chain Prompts): 정확성 극대화
---------------------------------------
+## 8. 복잡한 프롬프트 연쇄(Chain Prompts): 정확성 극대화
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts>
 
@@ -368,8 +369,7 @@ Claude가 자신의 작업을 검토하고 개선하도록 하는 고급 기법:
 2. **자체 검토 및 피드백 생성**
 3. **피드백을 바탕으로 개선된 버전 생성**
 
-9. 긴 맥락 처리(Long Context Tips): 대용량 데이터 활용
------------------------------------------
+## 9. 긴 맥락 처리(Long Context Tips): 대용량 데이터 활용
 
 > <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips>
 
@@ -412,8 +412,7 @@ Claude의 200K 토큰 컨텍스트 윈도우를 효과적으로 활용하기 위
 **3. 메타데이터로 문서 구조화**  
 여러 문서를 다룰 때는 각 문서를 명확히 태그하고 출처를 표시합니다.
 
-실전 적용을 위한 권고사항
---------------
+## 실전 적용을 위한 권고사항
 
 ### 점진적 접근
 
@@ -430,8 +429,7 @@ Claude의 200K 토큰 컨텍스트 윈도우를 효과적으로 활용하기 위
 * 문제 발생 시 개별 단계 격리 및 개선
 * 사용자 피드백을 통한 지속적 개선
 
-결론
---
+## 결론
 
 효과적인 prompt engineering은 Claude와의 상호작용을 크게 향상시킵니다. 이 9가지 기법을 단계적으로 적용하면서, 여러분의 특정 사용 사례에 맞게 조정해나가시기 바랍니다. 특히 데이터 사이언스와 AI 개발 분야에서는 이러한 기법들이 모델의 성능을 극대화하고 더 정확하고 유용한 결과를 얻는 데 필수적입니다.
 

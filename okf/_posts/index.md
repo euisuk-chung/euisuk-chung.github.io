@@ -47,45 +47,45 @@
 * [[OpenAI] 언어모델 환각(Hallucination) 현상: 왜 AI는 확신에 찬 거짓말을 할까?](2025/2025-09-07-[OpenAI] 언어모델 환각(Hallucination) 현상_ 왜 AI는 확신에 찬 거짓말을 할까_.md)
 * [[정리] AI가 창출하는 5가지 새로운 직업과 전문가 되는 방법](2025/2025-09-06-[정리] AI가 창출하는 5가지 새로운 직업과 전문가 되는 방법.md)
 * [[정리] GPT-5 ‘원사이즈 핏’의 착각과 골디락스 프롬프트](2025/2025-09-05-[정리] GPT-5 ‘원사이즈 핏’의 착각과 골디락스 프롬프트.md)
-* [[OpenAI][번역] Realtime Prompting Guide](2025/2025-08-31-[OpenAI][번역] Realtime Prompting Guide.md)
-* [[OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점](2025/2025-08-31-[OpenAI] GPT Realtime API_ 음성 기반 AI 에이전트의 새로운 전환점.md)
-* [[Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision](2025/2025-08-30-[Paper Review] EXAONE Path 2.0_ Pathology Foundation Model with End-to-End Supervision.md)
-* [[Paper Review] EXAONE Deep: Reasoning Enhanced Language Models](2025/2025-08-30-[Paper Review] EXAONE Deep_ Reasoning Enhanced Language Models.md)
-* [[Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases](2025/2025-08-30-[Paper Review] EXAONE 3.5_ Series of Large Language Models for Real-world Use Cases.md)
-* [[Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](2025/2025-08-29-[Paper Review] Qwen-VL_ A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond.md)
-* [[Paper Review] Qwen-Image Technical Report](2025/2025-08-29-[Paper Review] Qwen-Image Technical Report.md)
-* [[Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models](2025/2025-08-29-[Paper Review] Qwen-Audio_ Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models.md)
-* [[Paper Review] Qwen Technical Report](2025/2025-08-29-[Paper Review] Qwen Technical Report.md)
-* [[Paper Review] EXAONE 4.0: Unified Large Language Models Integrating Non-reasoning and Reasoning Modes](2025/2025-08-29-[Paper Review] EXAONE 4.0_ Unified Large Language Models Integrating_Non-reasoning and Reasoning Modes.md)
-* [🧪 내가 보려고 작성한 pytest 가이드](2025/2025-08-26-🧪 내가 보려고 작성한 pytest 가이드.md)
-* [[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)](2025/2025-08-20-[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH_VSCODE 원격 접속).md)
-* [[Tips] Lovable 바이브-코딩 용어집](2025/2025-08-20-[Tips] Lovable 바이브-코딩 용어집.md)
-* [[Tips] Lovable 프롬프트 및 통합 전략](2025/2025-08-18-[Tips] Lovable 프롬프트 및 통합 전략.md)
-* [[Tips] Lovable 프롬프트 라이브러리](2025/2025-08-18-[Tips] Lovable 프롬프트 라이브러리.md)
-* [[Tips] Lovable 디버깅 프롬프트](2025/2025-08-18-[Tips] Lovable 디버깅 프롬프트.md)
-* [[Tips] Lovable Vibe-Coding Best Practices](2025/2025-08-18-[Tips] Lovable Vibe-Coding Best Practices.md)
-* [[Tips] Lovable Prompting Tips 공개!! : Prompting 1.1](2025/2025-08-18-[Tips] Lovable Prompting Tips 공개!! _ Prompting 1.1.md)
-* [[OpenAI][번역] GPT-5 Prompting Guide](2025/2025-08-10-[OpenAI][번역] GPT-5 Prompting Guide.md)
-* [[OpenAI] GPT-5 공개, 박사급 전문가가 주머니 속에 들어오다!](2025/2025-08-08-[OpenAI] GPT-5 공개, 박사급 전문가가 주머니 속에 들어오다!.md)
-* [[Anthropic] 프로덕션에서의 Vibe Coding](2025/2025-08-01-[Anthropic] 프로덕션에서의 Vibe Coding.md)
-* [[Paper Review] A generic non-invasive neuromotor interface for human-computer interaction](2025/2025-07-31-[Paper Review] A generic non-invasive neuromotor interface for human-computer interaction.md)
-* [[OpenAI] ChatGPT Study Mode: GPT로 학습하자!](2025/2025-07-30-[OpenAI] ChatGPT Study Mode_ GPT로 학습하자!.md)
-* [[Anthropic] Anthropic팀은 어떻게 Claude Code를 사용하는가?](2025/2025-07-28-[Anthropic] Anthropic팀은 어떻게 Claude Code를 사용하는가_.md)
-* [[Paper Review] An Efficient Statistical Method for Image Noise Level Estimation](2025/2025-07-25-[Paper Review] An Efficient Statistical Method for Image Noise Level Estimation.md)
-* [Anthropic 社의 Prompt Engineering 완벽 가이드](2025/2025-07-25-Anthropic 社의 Prompt Engineering 완벽 가이드.md)
-* [[LG] LG AI Talk Concert 2025 - Shaping the Future of AI](2025/2025-07-23-[LG] LG AI Talk Concert 2025 - Shaping the Future of AI.md)
-* [[OpenAI] Introducing ChatGPT agent](2025/2025-07-20-[OpenAI] Introducing ChatGPT agent.md)
-* [[트렌드] Skywork.ai 과연 GenSpark 붐을 꺾을 수 있는가](2025/2025-07-02-[트렌드] Skywork.ai 과연 GenSpark 붐을 꺾을 수 있는가.md)
-* [🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리](2025/2025-07-01-🐍 내가 보려고 작성한 _args, _kwargs, 그리고 _vars(args) 파이썬 함수 인자 정리.md)
-* [[Lovable] 코딩 없이 웹/앱 만들기 : Lovable 완전 가이드](2025/2025-06-08-[Lovable] 코딩 없이 웹_앱 만들기 _ Lovable 완전 가이드.md)
-* [[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기](2025/2025-05-30-[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기.md)
-* [[가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기](2025/2025-05-29-[가이드] Python에서 Ollama 사용하기_ 설치부터 AI 에이전트 만들기.md)
-* [Claude 4, 소프트웨어 엔지니어링 성능의 새로운 기준](2025/2025-05-25-Claude 4, 소프트웨어 엔지니어링 성능의 새로운 기준.md)
-* [[구글] Google I/O '25 키노트 ✨](2025/2025-05-21-[구글] Google I_O _25 키노트 ✨.md)
-* [🔍 Codex 연구 프리뷰: AI 개발 에이전트의 시대](2025/2025-05-18-🔍 Codex 연구 프리뷰_ AI 개발 에이전트의 시대.md)
-* [ChatGPT를 진짜 "쓸모 있게" 만드는 간단한 방법](2025/2025-05-12-ChatGPT를 진짜 _쓸모 있게_ 만드는 간단한 방법.md)
-* [미드저니(Midjourney) 기초 가이드](2025/2025-05-01-미드저니(Midjourney) 기초 가이드.md)
-* [[꿀팁] 미드저니(Midjourney) 기초 가이드](2025/2025-05-01-[꿀팁] 미드저니(Midjourney) 기초 가이드.md)
+* [[OpenAI][번역] Realtime Prompting Guide](2025/2025-08-31-[OpenAI][번역] Realtime Prompting Guide.md) - OpenAI Realtime API 프롬프팅 가이드를 번역해 역할·톤·언어 제약·발음 규칙 등 프롬프트 구조, 도구 호출 서문과 도구별 동작 규칙, 상태 머신 기반 대화 흐름과 에스컬레이션 설계를 다룬다.
+* [[OpenAI] GPT Realtime API: 음성 기반 AI 에이전트의 새로운 전환점](2025/2025-08-31-[OpenAI] GPT Realtime API_ 음성 기반 AI 에이전트의 새로운 전환점.md) - OpenAI가 정식 출시한 Speech-to-Speech 모델 gpt-realtime과 Realtime API의 오디오 품질·함수 호출 벤치마크, MCP 서버·이미지 입력·SIP 지원, T-Mobile 활용 사례와 가격 정책을 정리한다.
+* [[Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision](2025/2025-08-30-[Paper Review] EXAONE Path 2.0_ Pathology Foundation Model with End-to-End Supervision.md) - 슬라이드 수준 지도학습으로 patch 표현을 end-to-end 학습하는 병리 파운데이션 모델 EXAONE Path 2.0의 3단계 HIPT 구조, 커리큘럼 학습, 멀티태스크 학습과 10개 바이오마커 예측 벤치마크 결과를 정리한다.
+* [[Paper Review] EXAONE Deep: Reasoning Enhanced Language Models](2025/2025-08-30-[Paper Review] EXAONE Deep_ Reasoning Enhanced Language Models.md) - EXAONE 3.5를 기반으로 SFT·DPO·Online RL로 추론 능력을 강화한 EXAONE Deep 2.4B·7.8B·32B의 학습 데이터 구성과 thought 태그 형식, MATH-500·AIME·CSAT·LiveCodeBench 평가 결과를 정리한다.
+* [[Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases](2025/2025-08-30-[Paper Review] EXAONE 3.5_ Series of Large Language Models for Real-world Use Cases.md) - LG AI연구원의 EXAONE 3.5(2.4B·7.8B·32B) 기술 보고서를 정리하며, 32K 컨텍스트 확장, substring 기반 decontamination, SFT와 DPO·SimPO 정렬, 실사용·long-context·일반 도메인 벤치마크 결과를 살펴본다.
+* [[Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](2025/2025-08-29-[Paper Review] Qwen-VL_ A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond.md) - ViT-bigG 인코더와 위치 인식 cross-attention 어댑터로 Qwen-7B에 시각 능력을 부여한 Qwen-VL의 구조, bounding box 입출력 형식, 3단계 학습 파이프라인과 캡셔닝·VQA·grounding 벤치마크 결과를 정리한다.
+* [[Paper Review] Qwen-Image Technical Report](2025/2025-08-29-[Paper Review] Qwen-Image Technical Report.md) - Qwen2.5-VL 인코더, 이중 디코더 VAE, MSRoPE를 적용한 MMDiT로 구성된 Qwen-Image의 아키텍처와 7단계 데이터 필터링, 텍스트 렌더링 합성 데이터, flow matching 사전학습과 DPO·GRPO 후속 학습을 정리한다.
+* [[Paper Review] Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models](2025/2025-08-29-[Paper Review] Qwen-Audio_ Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models.md) - Whisper 인코더와 Qwen-7B를 결합해 30개 이상의 오디오 작업을 계층적 태그 기반 멀티태스크 프레임워크로 공동 학습한 Qwen-Audio의 구조와 단어 단위 타임스탬프(SRWT) 효과, 벤치마크 결과를 정리한다.
+* [[Paper Review] Qwen Technical Report](2025/2025-08-29-[Paper Review] Qwen Technical Report.md) - Alibaba의 Qwen 시리즈 기술 보고서를 정리하며, 데이터 전처리와 RoPE·SwiGLU 기반 아키텍처, SFT와 RLHF 정렬, ReAct 도구 사용 능력, Code-Qwen과 Math-Qwen 전문 모델의 벤치마크 결과를 살펴본다.
+* [[Paper Review] EXAONE 4.0: Unified Large Language Models Integrating Non-reasoning and Reasoning Modes](2025/2025-08-29-[Paper Review] EXAONE 4.0_ Unified Large Language Models Integrating_Non-reasoning and Reasoning Modes.md) - EXAONE 4.0 기술 보고서를 따라 3:1 Hybrid Attention과 QK-Reorder-LN, 14T 토큰 사전학습, Unified Mode SFT와 AGAPO 강화학습, SimPER 선호 학습, 벤치마크와 Reasoning Budget 실험을 분석한다.
+* [🧪 내가 보려고 작성한 pytest 가이드](2025/2025-08-26-🧪 내가 보려고 작성한 pytest 가이드.md) - pytest의 autodiscovery, fixture, parametrize, 마커, 모킹과 실행 옵션·커버리지 명령어를 예제로 정리하고, in-memory DB·FastAPI·ETL·ML 파이프라인 통합 테스트 패턴까지 다룬다.
+* [[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH/VSCODE 원격 접속)](2025/2025-08-20-[접속] 원격 개발에서 비밀번호 없이 접속하기 (SSH_VSCODE 원격 접속).md) - Windows에서 Ed25519 SSH 키를 생성해 Linux 서버 authorized_keys에 등록하고, VS Code Remote-SSH config와 SSH Agent로 비밀번호 없이 접속하는 절차와 권한 오류 트러블슈팅을 정리한다.
+* [[Tips] Lovable 바이브-코딩 용어집](2025/2025-08-20-[Tips] Lovable 바이브-코딩 용어집.md) - Lovable 공식 용어집을 바탕으로 Chat/Edit Mode, Knowledge, Remix 등 Lovable 전용 용어와 MVP, API, React, Supabase, 인증, SEO 같은 개발 기초 개념을 쉬운 비유로 설명한다.
+* [[Tips] Lovable 프롬프트 및 통합 전략](2025/2025-08-18-[Tips] Lovable 프롬프트 및 통합 전략.md) - Lovable 공식 Prompts & Integrations 문서를 번역해 LLM, 이미지·비전, UI 컴포넌트, 오디오, 지도, 문서, 웹 도구, 비즈니스 통합별 예시 프롬프트와 API 키 관리 모범 사례를 정리한다.
+* [[Tips] Lovable 프롬프트 라이브러리](2025/2025-08-18-[Tips] Lovable 프롬프트 라이브러리.md) - Lovable 공식 Prompt Library를 번역해 프로젝트 시작, UI/UX 개선, 반응형 디자인, 리팩토링, 파일 잠금, Stripe 결제와 Supabase 백엔드 등 시나리오별 예시 프롬프트와 요청 분석을 정리한다.
+* [[Tips] Lovable 디버깅 프롬프트](2025/2025-08-18-[Tips] Lovable 디버깅 프롬프트.md) - Lovable 공식 Debugging Prompts 문서를 번역해 코드베이스 감사와 성능 감사 프롬프트, 오류 루프 탈출 플로우, 근본 원인 분석과 롤백 전략, 커뮤니티 디버깅 가이드북을 정리한다.
+* [[Tips] Lovable Vibe-Coding Best Practices](2025/2025-08-18-[Tips] Lovable Vibe-Coding Best Practices.md) - Lovable 공식 Best Practices를 번역해 Knowledge file 설정, 기능 분해 프롬프트, Chat 모드 활용, Supabase 연결 시 주의점, Visual Edit, GitHub 연동, Remix 활용법을 정리한다.
+* [[Tips] Lovable Prompting Tips 공개!! : Prompting 1.1](2025/2025-08-18-[Tips] Lovable Prompting Tips 공개!! _ Prompting 1.1.md) - Lovable 공식 Prompting 1.1 문서를 번역해 CLEAR 원칙, 보조바퀴·대화형·메타·역 메타 프롬프팅의 4단계, few-shot 활용과 환각 관리 전략, Chat 모드와 Knowledge Base 활용 팁을 정리한다.
+* [[OpenAI][번역] GPT-5 Prompting Guide](2025/2025-08-10-[OpenAI][번역] GPT-5 Prompting Guide.md) - OpenAI 공식 GPT-5 프롬프팅 가이드를 번역해 reasoning_effort와 verbosity 매개변수, 에이전트 적극성 조절, tool preamble, Cursor의 시스템 프롬프트 튜닝 사례와 메타프롬프팅 템플릿을 정리한다.
+* [[OpenAI] GPT-5 공개, 박사급 전문가가 주머니 속에 들어오다!](2025/2025-08-08-[OpenAI] GPT-5 공개, 박사급 전문가가 주머니 속에 들어오다!.md) - GPT-5 공개 라이브를 정리하며 기본 모델·Thinking·라우터 통합 구조, SWE-Bench 등 벤치마크, 자동 추론과 바이브 코딩 데모, 음성·개인화 기능, Safe Completion과 Synthetic Curriculum, API 계층과 요금제를 다룬다.
+* [[Anthropic] 프로덕션에서의 Vibe Coding](2025/2025-08-01-[Anthropic] 프로덕션에서의 Vibe Coding.md) - Code w/ Claude에서 Erik Schluntz가 발표한 프로덕션 Vibe Coding 전략으로 컴파일러 비유, 코드 대신 동작을 검증하는 법, 리프 노드 중심 위임, Claude의 PM 되기, 22,000줄 PR 사례와 워크플로우를 정리한다.
+* [[Paper Review] A generic non-invasive neuromotor interface for human-computer interaction](2025/2025-07-31-[Paper Review] A generic non-invasive neuromotor interface for human-computer interaction.md) - Meta의 Nature 논문을 리뷰하며 손목 sEMG 밴드로 수천 명의 데이터를 모아 손목 제어·이산 제스처·필기 전사를 보정 없이 디코딩하는 범용 LSTM·Conformer 모델과 온라인 평가, 개인화 효과를 정리한다.
+* [[OpenAI] ChatGPT Study Mode: GPT로 학습하자!](2025/2025-07-30-[OpenAI] ChatGPT Study Mode_ GPT로 학습하자!.md) - 시스템 프롬프트로 소크라테스식 문답과 스캐폴딩을 구현한 ChatGPT Study Mode의 작동 원리와 OpenAI가 공개한 학습 사례 4건을 분석하고, 사용법과 활용 아이디어를 제안한다.
+* [[Anthropic] Anthropic팀은 어떻게 Claude Code를 사용하는가?](2025/2025-07-28-[Anthropic] Anthropic팀은 어떻게 Claude Code를 사용하는가_.md) - Anthropic 내부 10개 팀이 Claude Code를 코드베이스 탐색, 테스트·코드 리뷰, 디버깅, 프로토타이핑, 문서화, 워크플로우 자동화에 활용한 사례를 팀별 역할과 함께 정리한다.
+* [[Paper Review] An Efficient Statistical Method for Image Noise Level Estimation](2025/2025-07-25-[Paper Review] An Efficient Statistical Method for Image Noise Level Estimation.md) - ICCV 2015 논문을 리뷰하며 이미지 패치 공분산 행렬의 고유값 통계로 가우시안 노이즈 분산을 추정하는 방법, 최소 고유값 기반 기존 기법의 과소평가 문제, 평균-중앙값 비교 차원 선택 알고리즘과 BM3D 실험을 정리한다.
+* [Anthropic 社의 Prompt Engineering 완벽 가이드](2025/2025-07-25-Anthropic 社의 Prompt Engineering 완벽 가이드.md) - Anthropic 공식 문서를 바탕으로 프롬프트 생성기, 명확한 지시, 멀티샷 예시, Chain of Thought, XML 태그, 역할 부여, 응답 사전 입력, 프롬프트 연쇄, 긴 맥락 처리 등 9가지 Claude 프롬프팅 기법을 정리한다.
+* [[LG] LG AI Talk Concert 2025 - Shaping the Future of AI](2025/2025-07-23-[LG] LG AI Talk Concert 2025 - Shaping the Future of AI.md) - LG AI연구원 AI Talk Concert 2025의 EXAONE 4.0·Path 2.0, Chat EXAONE 멀티 에이전트 구조, Data Foundry, 온프레미스 패키지, FuriosaAI·LSEG 협력과 에이전틱·피지컬 AI 로드맵을 정리한다.
+* [[OpenAI] Introducing ChatGPT agent](2025/2025-07-20-[OpenAI] Introducing ChatGPT agent.md) - Operator와 Deep Research를 통합한 ChatGPT Agent의 텍스트·GUI 브라우저, 터미널, 커넥터 도구 활용을 데모별로 분석하고 벤치마크 성능과 출시 일정, 한계를 정리한다.
+* [[트렌드] Skywork.ai 과연 GenSpark 붐을 꺾을 수 있는가](2025/2025-07-02-[트렌드] Skywork.ai 과연 GenSpark 붐을 꺾을 수 있는가.md) - Skywork.ai의 문서·슬라이드·표·웹페이지·팟캐스트·범용 6종 AI 에이전트를 직접 테스트해 Genspark와 비교하고, 개인 지식 베이스 기능과 요금제를 정리한다.
+* [🐍 내가 보려고 작성한 *args, **kwargs, 그리고 **vars(args) 파이썬 함수 인자 정리](2025/2025-07-01-🐍 내가 보려고 작성한 _args, _kwargs, 그리고 _vars(args) 파이썬 함수 인자 정리.md) - 위치 인자와 키워드 인자의 차이를 바탕으로 *args가 튜플, **kwargs가 딕셔너리로 인자를 받는 원리와 언패킹 규칙을 예제로 설명하고, argparse Namespace를 **vars(args)로 함수에 넘기는 패턴을 정리한다.
+* [[Lovable] 코딩 없이 웹/앱 만들기 : Lovable 완전 가이드](2025/2025-06-08-[Lovable] 코딩 없이 웹_앱 만들기 _ Lovable 완전 가이드.md) - AI 노코드 앱 빌더 Lovable의 React·Tailwind·Supabase 기술 스택과 요금제, 자연어 프롬프트로 앱을 생성·수정·배포하는 4단계, 설문조사 앱 예제와 Supabase 백엔드 연결, GitHub 연동 등 고급 기능을 소개한다.
+* [[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기](2025/2025-05-30-[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기.md) - LangChain의 ChatOllama 클래스로 로컬 Ollama 모델을 체인에 연결하는 방법과 temperature·num_ctx 등 파라미터, 도구 호출, LangGraph 분기 그래프, 대화 히스토리 관리, 토큰 스트리밍 실습을 다룬다.
+* [[가이드] Python에서 Ollama 사용하기: 설치부터 AI 에이전트 만들기](2025/2025-05-29-[가이드] Python에서 Ollama 사용하기_ 설치부터 AI 에이전트 만들기.md) - Ollama 설치와 EXAONE 3.5 모델 실행부터 Python SDK의 generate·chat으로 챗봇과 문서 요약을 구현하고, llama3.1로 함수 호출(tool calling) 에이전트를 만드는 과정과 주요 API를 정리한다.
+* [Claude 4, 소프트웨어 엔지니어링 성능의 새로운 기준](2025/2025-05-25-Claude 4, 소프트웨어 엔지니어링 성능의 새로운 기준.md) - Anthropic이 발표한 Claude Opus 4와 Sonnet 4의 SWE-bench 성적, 확장 사고 중 도구 사용과 메모리 기능, Code Execution·MCP Connector·Files API 등 API 신기능과 Claude Code 연동을 정리한다.
+* [[구글] Google I/O '25 키노트 ✨](2025/2025-05-21-[구글] Google I_O _25 키노트 ✨.md) - Google I/O 2025 키노트에서 발표된 Gemini 2.5 Pro·Flash와 Deep Think, Project Astra·Mariner 에이전트, AI Mode 검색, Imagen 4·Veo 3, Android XR 안경 등 주요 내용을 요약한다.
+* [🔍 Codex 연구 프리뷰: AI 개발 에이전트의 시대](2025/2025-05-18-🔍 Codex 연구 프리뷰_ AI 개발 에이전트의 시대.md) - OpenAI가 공개한 클라우드 기반 AI 개발 에이전트 Codex의 codex-1 모델, 격리 샌드박스 병렬 작업 방식, AGENTS.md 지침 파일, 데모 영상의 버그 수정·PR 생성 사례와 Codex CLI 요금을 정리한다.
+* [ChatGPT를 진짜 "쓸모 있게" 만드는 간단한 방법](2025/2025-05-12-ChatGPT를 진짜 _쓸모 있게_ 만드는 간단한 방법.md) - GPT-4o의 아첨(sycophancy) 문제가 RLHF 보상 신호에서 비롯된 배경을 설명하고, 솔직한 조언을 유도하는 프롬프트 문장과 Custom Instructions·영구 메모리 설정 방법을 제안한다.
+* [미드저니(Midjourney) 기초 가이드](2025/2025-05-01-미드저니(Midjourney) 기초 가이드.md) - 텍스트 프롬프트로 이미지를 만드는 Midjourney의 가입과 요금제, 웹 Create 페이지와 Creation Actions 사용법, 주요 파라미터와 프롬프트 가중치, V6·V6.1·V7·Niji 6 버전 선택 기준을 단계별로 안내한다.
+* [[꿀팁] 미드저니(Midjourney) 기초 가이드](2025/2025-05-01-[꿀팁] 미드저니(Midjourney) 기초 가이드.md) - Midjourney 공식 문서를 바탕으로 웹 UI의 Create·Edit·Organize 페이지, Vary·Upscale·Pan 등 Creation Actions, 주요 파라미터와 멀티 프롬프트 가중치, V6.1·V7·Niji 6 버전 차이를 정리한 입문 가이드.
 * [[개념] API에 대해서 이해해보자!](2025/2025-04-27-[개념] API에 대해서 이해해보자!.md) - API의 요청·응답 구조와 동기/비동기 통신, REST·GraphQL·gRPC·JSON-RPC 형식, HTTP·WebSocket·SSE·STDIO 프로토콜, FastAPI를 설명하고 Python requests로 Kakao 검색 API를 호출하는 예제를 다룬다.
 * [💻 내가 보려고 작성한 UV 완벽 가이드](2025/2025-04-24-💻 내가 보려고 작성한 UV 완벽 가이드.md) - Rust 기반 Python 환경 관리 도구 UV의 설치, Python 버전 관리, uv init·venv·sync, uv add와 uv tool·uvx의 차이, 실무 프로젝트 템플릿과 기존 도구 대비 성능까지 정리한다.
 * [내가 보려고 정리한 터미널 함수 25선](2025/2025-04-24-내가 보려고 정리한 터미널 함수 25선.md) - ls, cp, rm, find, grep, xargs, tee, history 등 자주 쓰는 리눅스 명령어 25개를 Windows PowerShell의 대응 cmdlet(Get-ChildItem, Select-String 등)과 나란히 비교한 치트시트다.

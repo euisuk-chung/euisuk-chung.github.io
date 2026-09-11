@@ -1,16 +1,26 @@
 ---
+type: "Guide"
 title: "[Tips] Lovable 프롬프트 및 통합 전략"
+description: "Lovable 공식 Prompts & Integrations 문서를 번역해 LLM, 이미지·비전, UI 컴포넌트, 오디오, 지도, 문서, 웹 도구, 비즈니스 통합별 예시 프롬프트와 API 키 관리 모범 사례를 정리한다."
 date: "2025-08-18"
 tags:
   - "Lovable"
-  - "vibe coding"
+  - "Vibe Coding"
+resource: "https://velog.io/@euisuk-chung/Tips-Lovable-프롬프트-및-통합-전략"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:17:23Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Tips-Lovable-프롬프트-및-통합-전략"
+    title: "[Tips] Lovable 프롬프트 및 통합 전략"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-18"
+status: "stable"
 year: "2025"
 ---
 
-# [Tips] Lovable 프롬프트 및 통합 전략
-
-Lovable 프롬프트 및 통합: 강력한 내장 통합으로 앱 기능 향상하기
-========================================
+# Lovable 프롬프트 및 통합: 강력한 내장 통합으로 앱 기능 향상하기
 
 > 이 글은 Lovable의 공식 문서인 [Prompts & Integrations](https://docs.lovable.dev/prompting/prompt-integrations)을 번역하고 정리한 콘텐츠입니다.
 
@@ -18,8 +28,7 @@ Lovable 프롬프트 및 통합: 강력한 내장 통합으로 앱 기능 향상
 
 > <https://docs.lovable.dev/prompting/prompt-integrations>
 
-개요
---
+## 개요
 
 Lovable은 애플리케이션에 고급 기능을 제공하는 광범위한 내장 통합을 제공합니다. AI 기반 처리, 문서 자동화, 또는 UI 개선이 필요하든 관계없이, Lovable이 모든 것을 제공합니다.
 
@@ -27,8 +36,7 @@ Lovable은 애플리케이션에 고급 기능을 제공하는 광범위한 내�
 
 **중요 사항**: 이러한 통합을 Lovable에서 사용하려면 자체 API 키를 설정해야 합니다.
 
-AI 및 LLM (대형 언어 모델)
--------------------
+## AI 및 LLM (대형 언어 모델)
 
 사용자 경험을 향상시키고, 워크플로우를 자동화하며, 콘텐츠를 생성하는 지능형 애플리케이션을 구축하기 위해 최고의 AI 모델을 통합하세요:
 
@@ -162,8 +170,7 @@ Generate blog posts and display them using [Markdown Renderer].
 블로그 포스트를 생성하고 [Markdown Renderer]를 사용하여 표시하세요.
 ```
 
-이미지 및 비전
---------
+## 이미지 및 비전
 
 이미지 분석, 개선 및 생성을 위한 최첨단 비전 API를 활용하세요. Lovable은 다음을 지원합니다:
 
@@ -261,8 +268,7 @@ Retrieve the latest AI research papers with Exa.
 Exa로 최신 AI 연구 논문을 검색하세요.
 ```
 
-UI 컴포넌트
--------
+## UI 컴포넌트
 
 접근 가능한 디자인과 재사용 가능한 UI 컴포넌트를 위해 다음을 권장합니다:
 
@@ -334,8 +340,7 @@ Develop a settings panel using [shadcn/ui].
 [shadcn/ui]를 사용하여 설정 패널을 개발하세요.
 ```
 
-오디오 처리
-------
+## 오디오 처리
 
 고품질 통합을 위해 Eleven Labs가 최고의 선택입니다.
 
@@ -407,8 +412,7 @@ Transcribe and summarize meeting recordings.
 회의 녹음을 전사하고 요약하세요.
 ```
 
-지도
---
+## 지도
 
 **Mapbox, Google Maps, Weather API**를 사용하여 다음 기능으로 애플리케이션을 개선하세요:
 
@@ -492,8 +496,7 @@ Show real-time weather updates using [Weather API].
 [Weather API]를 사용하여 실시간 날씨 업데이트를 표시하세요.
 ```
 
-문서
---
+## 문서
 
 다음 기능을 제공합니다:
 
@@ -567,8 +570,7 @@ Generate QR codes for links and business details.
 링크와 비즈니스 세부정보를 위한 QR 코드를 생성하세요.
 ```
 
-미디어 및 엔터테인먼트
-------------
+## 미디어 및 엔터테인먼트
 
 다음 기능을 제공합니다:
 
@@ -652,8 +654,7 @@ Build a book discovery app with [Book Search].
 [Book Search]로 도서 발견 앱을 구축하세요.
 ```
 
-웹 도구
-----
+## 웹 도구
 
 다음 기능을 제공합니다:
 
@@ -726,8 +727,7 @@ Find images using [Google Image Search].
 [Google Image Search]를 사용하여 이미지를 찾으세요.
 ```
 
-비즈니스
-----
+## 비즈니스
 
 다음 기능을 원활하게 제공합니다:
 
@@ -853,8 +853,7 @@ Create a newsletter system with [Resend].
 [Resend]로 뉴스레터 시스템을 만드세요.
 ```
 
-결론
---
+## 결론
 
 Lovable의 광범위한 통합 옵션은 현대적이고 강력한 애플리케이션을 구축하는 데 필요한 모든 도구를 제공합니다. AI 기반 기능부터 비즈니스 자동화까지, 각 통합은 특정 요구사항을 해결하고 사용자 경험을 향상시키도록 설계되었습니다.
 

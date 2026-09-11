@@ -1,13 +1,25 @@
 ---
+type: "Conference Recap"
 title: "[LG] LG AI Talk Concert 2025 - Shaping the Future of AI"
+description: "LG AI연구원 AI Talk Concert 2025의 EXAONE 4.0·Path 2.0, Chat EXAONE 멀티 에이전트 구조, Data Foundry, 온프레미스 패키지, FuriosaAI·LSEG 협력과 에이전틱·피지컬 AI 로드맵을 정리한다."
 date: "2025-07-23"
 tags:
   - "EXAONE"
-  - "lg"
+  - "LG"
+  - "Conference"
+resource: "https://velog.io/@euisuk-chung/LG-AI-Talk-Concert-2025-Shaping-the-Future-of-AI"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:21:03Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/LG-AI-Talk-Concert-2025-Shaping-the-Future-of-AI"
+    title: "[LG] LG AI Talk Concert 2025 - Shaping the Future of AI"
+    author: "human:euisuk-chung"
+    last_modified: "2025-07-23"
+status: "stable"
 year: "2025"
 ---
-
-# [LG] LG AI Talk Concert 2025 - Shaping the Future of AI
 
 최근 LG AI 연구원이 진행한 '**AI Talk Concert 2025**' 영상을 흥미롭게 시청했습니다. 'AI의 미래를 만들다(Shaping the Future of AI)'라는 슬로건 아래, LG AI 연구원의 지난 여정과 눈부신 성과, 그리고 앞으로 나아갈 방향에 대한 심도 깊은 이야기가 펼쳐졌습니다.
 
@@ -108,8 +120,6 @@ AI가 우리 삶의 모든 영역에 스며들고 있는 지금, 이번 온라�
 
 이 모든 사례는 AI가 어떻게 기업의 핵심 경쟁력이 될 수 있는지를 명확히 보여주었습니다.
 
----
-
 ### **2부: 최신 엑사원 모델 - 기술의 진화를 목격하다 (이홍락 부사장)**
 
 다음으로 이홍락 부사장님이 무대에 올라 한층 더 진화한 최신 엑사원 모델들을 상세히 소개하며 기술의 깊이를 더했습니다.
@@ -184,8 +194,6 @@ AI가 우리 삶의 모든 영역에 스며들고 있는 지금, 이번 온라�
   + 예시: 전문 문서 이해 사례
 
   ![](https://velog.velcdn.com/images/euisuk-chung/post/1ed236d6-a43d-4eb5-ab20-0d6edfa0b864/image.png)
-
----
 
 ### **3부: 엑사원 생태계 - 함께 만들어가는 AI의 미래 (최정규 그룹장)**
 
@@ -490,8 +498,6 @@ Dr. Arman Kizilbash가 소개한 LSEG와의 협력은 금융 AI의 새로운 패
   + 자연어 해설로 '블랙박스 AI' 문제 해결
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1f72c4fd-39a6-4736-b87b-1d61c859be3f/image.png)
-
----
 
 ### **4부: AI의 다음 단계 - 에이전틱 AI와 피지컬 AI (이홍락 부사장)**
 

@@ -1,14 +1,27 @@
 ---
+type: "Guide"
 title: "[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기"
+description: "LangChain의 ChatOllama 클래스로 로컬 Ollama 모델을 체인에 연결하는 방법과 temperature·num_ctx 등 파라미터, 도구 호출, LangGraph 분기 그래프, 대화 히스토리 관리, 토큰 스트리밍 실습을 다룬다."
 date: "2025-05-30"
 tags:
-  - "OLLAMA"
-  - "langChain"
-  - "python"
+  - "LangChain"
+  - "Ollama"
+  - "Python"
+  - "LangGraph"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/가이드-Ollama-LangChain-실전-가이드-ChatOllama-사용하기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:22:44Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/가이드-Ollama-LangChain-실전-가이드-ChatOllama-사용하기"
+    title: "[가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기"
+    author: "human:euisuk-chung"
+    last_modified: "2025-05-30"
+status: "stable"
 year: "2025"
 ---
-
-# [가이드] Ollama + LangChain 실전 가이드 - ChatOllama 사용하기
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/646c14e5-e1a7-4742-8124-9a1c1e236f7c/image.png)
 
@@ -25,10 +38,7 @@ LangChain은 대규모 언어 모델을 실제 애플리케이션으로 구현�
 >
 > * <https://python.langchain.com/docs/integrations/chat/ollama/>
 
----
-
-✅ 환경 구성
--------
+## ✅ 환경 구성
 
 ### 1. 필요한 패키지 설치
 
@@ -54,10 +64,7 @@ ollama pull llava-llama3
 ollama list
 ```
 
----
-
-💡 핵심 클래스: `ChatOllama`
-----------------------
+## 💡 핵심 클래스: `ChatOllama`
 
 `ChatOllama`는 LangChain의 `BaseChatModel`을 상속한 클래스로, Ollama 서버에서 실행 중인 LLM을 사용하여 채팅 스타일의 응답을 생성합니다.
 
@@ -308,10 +315,7 @@ llm.invoke(messages)
   chain = prompt | llm # 체인
   ```
 
----
-
-🧪 LangChain + Ollama 종합 실습 가이드
-------------------------------
+## 🧪 LangChain + Ollama 종합 실습 가이드
 
 ### 1. 💬 시스템 프롬프트 기반 번역기
 
@@ -340,8 +344,6 @@ print(result.content)  # 나는 프로그래밍을 좋아합니다.
 ```
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/ef55ed91-dd7e-40c5-a870-9c0ce3eacce2/image.png)
-
----
 
 ### 2. 🖥️ `.invoke()` 함수 사용하기
 
@@ -374,8 +376,6 @@ If you're looking for the nearest train station from a specific location within 
 ```
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/63330843-7e28-43f0-81fd-2b29298a4f30/image.png)
-
----
 
 ### 3. 🛠️ Tool Calling 기능 (도구 자동 호출)
 
@@ -552,8 +552,6 @@ graph
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/542389e2-7859-450f-9175-092e08cc3f5a/image.png)
 
----
-
 ### 4. 🧠 멀티 메시지 대화 (`invoke(messages)`) - langchain
 
 **핵심 아이디어**:
@@ -640,8 +638,6 @@ while True:
 | ✅ 자동 흐름 저장 | 각 노드 실행 후 상태를 자동 체크포인트 | 대화 흐름이 끊겨도 이어서 실행 가능 (resume) |
 | ✅ 기억 범위 조절 | 상태 내 메시지 수 제한 또는 요약 가능 | LLM context 제한에 맞춰 최근 N개만 유지 |
 
----
-
 ### 5. 🌊 토큰 스트리밍 (동기 버전)
 
 ```
@@ -671,10 +667,7 @@ print("\n이야기 끝!")
     - `print(..., flush=True)`를 사용하면, **print 함수가 호출될 때마다 출력 버퍼의 내용을 즉시 강제로 비우고 해당 내용을 화면(또는 다른 출력 대상)으로 보내도록** 합니다.
     - 따라서 `end=""`와 함께 `flush=True`를 사용하면, 스트리밍으로 수신되는 각 텍스트 조각(`chunk.content`)이 `print`되는 즉시 화면에 나타나게 되어, 마치 타자 치듯이 실시간으로 텍스트가 표시되는 효과를 얻을 수 있습니다.
 
----
-
-🧭 마무리
------
+## 🧭 마무리
 
 `ChatOllama`를 활용하면 로컬에서 실행 중인 Ollama 모델을 LangChain 체인에 손쉽게 통합할 수 있으며,  
 이를 통해 대화형 에이전트, 툴 연동, 스트리밍 출력 등 다양한 기능을 구현할 수 있습니다.

@@ -1,13 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision"
+description: "슬라이드 수준 지도학습으로 patch 표현을 end-to-end 학습하는 병리 파운데이션 모델 EXAONE Path 2.0의 3단계 HIPT 구조, 커리큘럼 학습, 멀티태스크 학습과 10개 바이오마커 예측 벤치마크 결과를 정리한다."
 date: "2025-08-30"
 tags:
+  - "Paper Review"
   - "EXAONE"
-  - "paper-review"
+  - "LG"
+  - "Computer Vision"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-Path-2.0-Pathology-Foundation-Model-with-End-to-End-Supervision"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:14:22Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-Path-2.0-Pathology-Foundation-Model-with-End-to-End-Supervision"
+    title: "[Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-30"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/874933a3-887a-4e87-9945-f80c83bb4fa2/image.png)
 
@@ -17,8 +30,7 @@ year: "2025"
 PYEON, Myeongjang, et al. EXAONE Path 2.0: Pathology Foundation Model with End-to-End Supervision. arXiv preprint arXiv:2507.06639, 2025.
 ```
 
-Abstract
---------
+## Abstract
 
 디지털 병리학에서 whole-slide images (WSIs)는 gigapixel 규모로 인해 처리가 어려운 경우가 많습니다. 따라서 대부분의 접근법은 self-supervised learning (SSL)을 통해 patch encoder를 훈련시킨 다음, multiple instance learning (MIL) 또는 slide encoder를 통해 patch-level embedding을 집계하여 downstream 작업을 수행합니다. 그러나 patch-level SSL은 mutation status 및 분자 특성과 같은 biomarker 예측에 필수적인 복잡한 도메인 특화 특성을 간과할 수 있습니다. SSL 방법들은 작은 patch-level 영역에서 자연 이미지 도메인을 위해 선택된 기본 augmentation에만 의존하기 때문입니다. 또한 SSL 방법들은 완전 지도학습 접근법보다 데이터 효율성이 떨어지며, 경쟁력 있는 성능을 달성하기 위해 광범위한 계산 자원과 데이터셋이 필요합니다.
 
@@ -26,8 +38,7 @@ Abstract
 
 **Figure 1**: 매개변수 수와 훈련에 사용된 WSI 수를 기반으로 한 모델 성능 비교. 평균 AUROC는 10개의 biomarker 예측 작업에서 AUROC 점수를 평균하여 얻어집니다. 주목할 점은 EXAONE Path 2.0이 다른 모델들에 비해 적은 매개변수와 적은 WSI를 사용했음에도 불구하고 높은 성능을 달성하여 효율성을 보여준다는 것입니다.
 
-1. Introduction
----------------
+## 1. Introduction
 
 디지털 병리학은 AI 기반 의료 애플리케이션의 핵심 도메인으로 부상하였으며, whole-slide images (WSIs)는 gigapixel 규모로 인해 독특한 계산적 과제를 제시합니다. 현재의 접근법들은 일반적으로 2단계 패러다임을 따릅니다: DINO와 DINOv2와 같은 self-supervised learning 방법을 통해 patch-level encoder를 훈련시킨 다음, downstream 예측 작업을 위해 multiple-instance learning (MIL) 또는 slide-level encoder를 사용하여 patch-level embedding을 집계합니다.
 
@@ -37,8 +48,7 @@ Abstract
 
 우리의 결과는 EXAONE Path 2.0이 경쟁하는 방법들보다 실질적으로 적은 훈련 샘플을 요구하면서도 모든 평가된 작업에서 우수한 평균 성능을 달성함을 보여주며, 계산 병리학에서 중요한 발전을 나타냅니다.
 
-2. Modeling
------------
+## 2. Modeling
 
 ### 2.1 Gigapixel 이미지 훈련의 금지적 계산 비용 극복
 
@@ -58,8 +68,7 @@ Gigapixel whole-slide image에 대한 훈련은 메모리 제약과 처리 요�
 
 **Downstream 적응을 위한 Early Exit 전략**: 소규모 데이터와 깊은 네트워크 환경에서 과적합을 더욱 완화하기 위해, 우리는 전체 hierarchical 모델보다는 early representation을 활용하는 shallow network 접근법을 채택합니다. 구체적으로, 우리는 downstream 작업 적응을 위해 Clustering-constrained Attention Multiple Instance Learning (CLAM)과 결합된 첫 번째 단계 모델을 활용합니다. 전체 hierarchical network를 fine-tuning하는 대신, 이 early exit 접근법은 첫 번째 단계 모델의 robust한 patch-level 특성을 사용하면서 CLAM이 이러한 특성을 slide-level 예측을 위해 효율적으로 집계합니다. 이 전략은 downstream 작업 적응 중 계산 오버헤드를 크게 줄이면서 제한된 데이터가 있는 병리학 애플리케이션에서 일반적으로 관찰되는 과적합의 함정을 피합니다.
 
-3. Experiments
---------------
+## 3. Experiments
 
 ### 3.1 Training Data
 
@@ -117,8 +126,7 @@ RCC 벤치마크에서 EXAONE Path 2.0은 BAP1 mutation 작업에서 명확한 �
 
 모든 벤치마크에 걸친 전체적인 비교를 제공하기 위해, 우리는 radar 및 bar chart를 사용하여 모델 성능을 시각화했습니다(Figure 3). 차트는 10개 검증 데이터셋에서 각 모델의 AUROC를 보여주며, 성능 일관성의 직관적인 이해를 가능하게 합니다. 보여진 바와 같이, EXAONE Path 2.0은 모든 벤치마크에서 일관되게 강력한 범위를 보여줍니다. 이는 특정 작업에서 성능 저하를 보이는 다른 많은 foundation model들에 비해 우수한 일반화 능력과 견고성을 나타냅니다. EXAONE Path 2.0의 시각적으로 지배적인 프로파일은 그것의 선도적인 평균 성능을 강화하고 범용 slide-level foundation model로서의 적합성을 강조합니다.
 
-4. Conclusion
--------------
+## 4. Conclusion
 
 우리는 직접적인 slide-level 지도학습 하에서 patch-level representation을 학습하는 병리학 foundation model인 EXAONE Path 2.0을 제시했습니다. 우리의 접근법은 slide-level supervised signal이 모든 hierarchical 단계를 통해 전파되도록 하여 임상적으로 관련된 representation의 end-to-end 학습을 가능하게 합니다.
 

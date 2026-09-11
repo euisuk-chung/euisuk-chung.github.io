@@ -1,12 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Qwen Technical Report"
+description: "Alibaba의 Qwen 시리즈 기술 보고서를 정리하며, 데이터 전처리와 RoPE·SwiGLU 기반 아키텍처, SFT와 RLHF 정렬, ReAct 도구 사용 능력, Code-Qwen과 Math-Qwen 전문 모델의 벤치마크 결과를 살펴본다."
 date: "2025-08-29"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Qwen"
+  - "NLP"
+  - "Transformer"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-Technical-Report"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:16:19Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-Technical-Report"
+    title: "[Paper Review] Qwen Technical Report"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-29"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] Qwen Technical Report
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/579f08e9-44bf-44e2-ad07-7d9ab9c8c731/image.png)
 
@@ -18,13 +32,11 @@ BAI, Jinze, et al. Qwen technical report. arXiv preprint arXiv:2309.16609, 2023.
 
 > 💡 QWEN은 중국어로 "천 개의 질문"을 의미하는 Qianwen의 별명입니다. "QWEN"의 발음은 맥락과 말하는 개인에 따라 달라질 수 있습니다. 한 가지 가능한 발음 방법은 /kwEn/입니다. ~~전 그냥 퀜이라고 부릅니다!~~ ㅎㅎ
 
-초록
---
+## 초록
 
 Large Language Model(LLM)들은 인공지능 분야를 혁신했으며, 이전에는 인간에게만 가능하다고 여겨졌던 자연어 처리 작업들을 가능하게 했습니다. 본 연구에서는 Large Language Model 시리즈의 첫 번째 버전인 QWEN¹을 소개합니다. QWEN은 다양한 parameter 수를 가진 개별 모델들을 포함하는 포괄적인 언어 모델 시리즈입니다. 여기에는 기본 사전 훈련된 언어 모델인 QWEN과 인간 정렬 기법으로 fine-tuning된 채팅 모델인 QWEN-CHAT이 포함됩니다. 기본 언어 모델들은 여러 downstream task에서 뛰어난 성능을 지속적으로 보여주며, 채팅 모델들, 특히 Reinforcement Learning from Human Feedback(RLHF)로 훈련된 모델들은 매우 경쟁력이 있습니다. 채팅 모델들은 agent application 생성을 위한 고급 tool 사용 및 계획 능력을 갖추고 있으며, code interpreter 활용과 같은 복잡한 작업에서도 더 큰 모델들과 비교했을 때 인상적인 성능을 보입니다. 또한, 기본 언어 모델을 바탕으로 구축된 코딩 전문 모델인 CODE-QWEN과 CODE-QWEN-CHAT, 그리고 수학 중심 모델인 MATH-QWEN-CHAT을 개발했습니다. 이들 모델은 오픈소스 모델들과 비교했을 때 현저히 향상된 성능을 보이며, 상용 모델들에는 약간 뒤처집니다.
 
-1. 서론
------
+## 1. 서론
 
 Large Language Model(LLM)(Radford et al., 2018; Devlin et al., 2018; Raffel et al., 2020; Brown et al., 2020; OpenAI, 2023; Chowdhery et al., 2022; Anil et al., 2023; Thoppilan et al., 2022; Touvron et al., 2023a;b)들은 복잡한 추론과 문제 해결 작업을 위한 강력한 기반을 제공함으로써 인공지능(AI) 분야를 혁신했습니다. 이들 모델은 방대한 지식을 신경망에 압축하는 능력을 가지고 있어, 매우 다양한 agent로 활용됩니다. 채팅 인터페이스를 통해 LLM들은 이전에는 인간의 전유물로 여겨졌던 작업들, 특히 창의성과 전문성이 필요한 작업들을 수행할 수 있습니다(OpenAI, 2022; Ouyang et al., 2022; Anil et al., 2023; Google, 2023; Anthropic, 2023a;b). 이들은 인간과 자연어 대화에 참여하고, 질문에 답하고, 정보를 제공하며, 심지어 이야기, 시, 음악과 같은 창작물을 생성할 수 있습니다. 이로 인해 챗봇과 가상 도우미부터 언어 번역과 요약 도구에 이르기까지 다양한 애플리케이션이 개발되었습니다.
 
@@ -32,8 +44,7 @@ LLM들은 언어 작업에만 제한되지 않습니다. 이들은 또한 일반
 
 인상적인 능력에도 불구하고, LLM들은 재현성, 조작성, 그리고 서비스 제공업체에 대한 접근성이 부족하다는 비판을 받고 있습니다. 본 연구에서는 우리의 LLM 시리즈의 초기 버전인 QWEN을 소개하게 되어 기쁩니다. QWEN은 중국어로 "천 개의 질문"을 의미하는 Qianwen에서 파생된 이름으로, 다양한 질문을 수용한다는 개념을 전달합니다. QWEN은 다양한 parameter 수를 가진 개별 모델들을 포함하는 포괄적인 언어 모델 시리즈입니다. 모델 시리즈에는 기본 사전 훈련된 언어 모델들, 즉 supervised finetuning(SFT), reinforcement learning with human feedback(RLHF) 등의 인간 정렬 기법으로 fine-tuning된 채팅 모델들, 그리고 코딩 및 수학 전문 모델들이 포함됩니다.
 
-2. 사전훈련 (Pretraining)
----------------------
+## 2. 사전훈련 (Pretraining)
 
 사전훈련 단계에서는 방대한 양의 데이터를 학습하여 세상과 그 다양한 복잡성에 대한 포괄적인 이해를 습득합니다. 여기에는 기본적인 언어 능력뿐만 아니라 산술, 코딩, 논리적 추론과 같은 고급 기술도 포함됩니다.
 
@@ -73,8 +84,7 @@ Transformer 모델들은 attention 메커니즘의 맥락 길이에 상당한 �
 
 실험 결과는 세 개의 QWEN 모델들이 모든 downstream task에서 탁월한 성능을 보임을 보여줍니다. 주목할 점은 LLaMA2-70B와 같은 더 큰 모델들조차 QWEN-14B에 의해 3개 작업에서 압도당한다는 것입니다. QWEN-7B도 훌륭한 성능을 보이며, LLaMA2-13B를 능가하고 Baichuan2-13B와 비슷한 결과를 달성합니다.
 
-3. 정렬 (Alignment)
------------------
+## 3. 정렬 (Alignment)
 
 사전훈련된 Large Language Model들은 인간 행동과 정렬되지 않는 것으로 밝혀졌으며, 대부분의 경우 AI 도우미로 사용하기에 부적합합니다. 최근 연구에 따르면 supervised finetuning(SFT)과 reinforcement learning from human feedback(RLHF)와 같은 정렬 기법의 사용이 언어 모델들의 자연스러운 대화 능력을 크게 향상시킬 수 있습니다.
 
@@ -124,8 +134,7 @@ PPO 작업 중에는 각 질의에 대해 동시에 두 개의 응답을 샘플�
 
 QWEN의 agent나 부조종사로서의 능력을 향상시키기 위해 SFT에 self-instruct(Wang et al., 2023c) 전략을 사용합니다. 구체적으로, self-instruction을 위해 QWEN의 in-context learning 능력을 활용합니다. 몇 가지 예시를 제공함으로써 QWEN이 더 관련성 있는 질의를 생성하고 ReAct(Yao et al., 2022)와 같은 특정 형식을 따르는 출력을 생성하도록 유도할 수 있습니다.
 
-4. CODE-QWEN: 코딩 전문 모델
-----------------------
+## 4. CODE-QWEN: 코딩 전문 모델
 
 도메인별 데이터에 대한 훈련은 특히 코드 사전훈련과 fine-tuning의 경우에 매우 효과적임이 입증되었습니다. 코드 데이터로 강화된 훈련을 받은 언어 모델은 코딩, 디버깅, 해석 등의 작업에 유용한 도구 역할을 할 수 있습니다. 본 연구에서는 사전훈련과 정렬 기법을 사용하여 일련의 일반주의 모델들을 개발했습니다. 이 기반 위에 QWEN의 기본 언어 모델들을 활용하여 코딩을 위한 도메인별 모델들을 만들었으며, 여기에는 지속적인 사전훈련 모델인 CODE-QWEN과 supervised fine-tuning 모델인 CODE-QWEN-CHAT이 포함됩니다. 두 모델 모두 140억 및 70억 parameter 버전이 있습니다.
 
@@ -143,8 +152,7 @@ CODE-QWEN 모델들을 상용 및 오픈소스 언어 모델들과 비교했습�
 
 분석 결과 특수 모델들, 특히 CODE-QWEN과 CODE-QWEN-CHAT이 유사한 parameter 수를 가진 이전 baseline들을 크게 능가함을 보여줍니다. 실제로, 이들 모델은 Starcoder(Li et al., 2023d)와 같은 더 큰 모델들의 성능과도 경쟁합니다.
 
-5. MATH-QWEN: 수학적 추론 전문 모델
---------------------------
+## 5. MATH-QWEN: 수학적 추론 전문 모델
 
 QWEN 사전훈련된 언어 모델들을 기반으로 구축된 수학 전문 모델 시리즈인 MATH-QWEN-CHAT을 만들었습니다. 구체적으로, 산술과 수학에서 뛰어난 성능을 보이고 인간 행동과 정렬된 도우미 모델들을 개발했습니다. 140억과 70억 parameter를 각각 가진 두 가지 버전인 MATH-QWEN-14B-CHAT과 MATH-QWEN-7B-CHAT을 출시합니다.
 
@@ -158,8 +166,7 @@ GSM8K(Grade school math)(Cobbe et al., 2021), MATH(Challenging competition math 
 
 MATH-QWEN-CHAT 모델들은 유사한 크기의 오픈소스 모델들 및 QWEN-CHAT 모델들과 비교했을 때 더 나은 수학적 추론과 산술 능력을 보여줍니다. 상용 모델들과 비교했을 때, MATH-QWEN-7B-CHAT은 MATH에서 Minerva-8B를 능가합니다. MATH-QWEN-14B-CHAT은 GSM8K와 MATH에서 Minerva-62B와 GPT-3.5를 추격하고 있으며, 산술 능력과 중국 수학 문제에서 더 나은 성능을 보입니다.
 
-6. 관련 연구
---------
+## 6. 관련 연구
 
 ### 6.1 Large Language Models
 
@@ -181,8 +188,7 @@ LLM의 계획 기능을 통해 Schick et al.(2023)이 보여준 바와 같이 in
 
 특정 모델 규모를 가진 LLM들이 수학적 추론을 수행하는 능력을 가지고 있음이 발견되었습니다(Wei et al., 2022b; Suzgun et al., 2022). 수학 관련 작업에서 LLM들이 더 나은 성능을 달성하도록 격려하기 위해, 연구자들은 chain-of-thought prompting(Wei et al., 2022c)과 scratchpad(Nye et al., 2021) 같은 기법들을 사용했으며, 이는 유망한 결과를 보여주었습니다.
 
-7. 결론
------
+## 7. 결론
 
 본 보고서에서는 자연어 처리 분야의 최신 발전을 보여주는 QWEN 시리즈의 Large Language Model들을 소개합니다. 140억, 70억, 18억 parameter를 가진 이들 모델은 수조 개의 토큰을 포함한 방대한 양의 데이터로 사전훈련되었으며, SFT와 RLHF와 같은 최첨단 기법을 사용하여 fine-tuning되었습니다.
 

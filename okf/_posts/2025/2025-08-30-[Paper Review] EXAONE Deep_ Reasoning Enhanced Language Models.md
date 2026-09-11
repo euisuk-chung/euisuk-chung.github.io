@@ -1,13 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] EXAONE Deep: Reasoning Enhanced Language Models"
+description: "EXAONE 3.5를 기반으로 SFT·DPO·Online RL로 추론 능력을 강화한 EXAONE Deep 2.4B·7.8B·32B의 학습 데이터 구성과 thought 태그 형식, MATH-500·AIME·CSAT·LiveCodeBench 평가 결과를 정리한다."
 date: "2025-08-30"
 tags:
+  - "Paper Review"
   - "EXAONE"
-  - "paper-review"
+  - "LG"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-Deep-Reasoning-Enhanced-Language-Models"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:14:38Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-Deep-Reasoning-Enhanced-Language-Models"
+    title: "[Paper Review] EXAONE Deep: Reasoning Enhanced Language Models"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-30"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] EXAONE Deep: Reasoning Enhanced Language Models
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c1e891a2-0fa5-4248-a5ec-c5ed04376818/image.png)
 
@@ -17,13 +30,11 @@ year: "2025"
 RESEARCH, L. G., et al. EXAONE Deep: Reasoning Enhanced Language Models. arXiv preprint arXiv:2503.12524, 2025.
 ```
 
-Abstract
---------
+## Abstract
 
 EXAONE Deep 시리즈를 소개합니다. 이 모델들은 수학 및 코딩 benchmark를 포함한 다양한 추론 작업에서 우수한 성능을 보입니다. 우리는 긴 사고 과정의 stream을 통합한 추론 특화 dataset을 주로 사용하여 모델들을 훈련했습니다. 평가 결과, 우리의 작은 모델들인 EXAONE Deep 2.4B와 7.8B는 비슷한 크기의 다른 모델들을 능가하며, 가장 큰 모델인 EXAONE Deep 32B는 주요 open-weight 모델들과 경쟁력 있는 성능을 보여줍니다. 모든 EXAONE Deep 모델들은 연구 목적으로 공개되어 있으며 <https://huggingface.co/LGAI-EXAONE> 에서 다운로드할 수 있습니다.
 
-1. Introduction
----------------
+## 1. Introduction
 
 최근 연구에서는 테스트 단계에서 컴퓨팅 리소스를 조정하여 추론 성능을 향상시키는 추세가 증가하고 있습니다. 이러한 추세에 대응하여, LG AI Research는 EXAONE Deep 2.4B, 7.8B, 32B라는 새로운 모델 라인업을 소개합니다. 이 모델들은 EXAONE 3.5 시리즈의 fine-tuned 버전으로, 추론 작업에 특별히 최적화되었습니다. 우리는 fine-tuning에 널리 사용되는 세 가지 주요 기법인 Supervised Fine-Tuning (SFT), Direct Preference Optimization (DPO), Online Reinforcement Learning (Online RL)을 사용하여 이 모델들을 훈련했습니다.
 
@@ -31,8 +42,7 @@ EXAONE Deep 시리즈를 소개합니다. 이 모델들은 수학 및 코딩 ben
 
 > "생각이 말이 되고, 말이 행동이 되고, 행동이 습관이 되고, 습관이 성격이 되고, 성격이 운명이 된다. 따라서 깨어있는 마음의 눈으로 마음의 를 지켜보라." - TRYON EDWARDS
 
-2. Modeling
------------
+## 2. Modeling
 
 ### 2.1 Data
 
@@ -56,8 +66,7 @@ EXAONE Deep의 base 모델들은 instruction-following 능력을 갖춘 instruct
 | 7.8B | 4.21 × 10²³ | 1.71 × 10²¹ | 4.23 × 10²³ |
 | 2.4B | 9.36 × 10²² | 5.27 × 10²⁰ | 9.41 × 10²² |
 
-3. Evaluation
--------------
+## 3. Evaluation
 
 ### 3.1 Benchmarks
 
@@ -85,18 +94,15 @@ EXAONE Deep 32B 모델은 DeepSeek-R1 및 QwQ-32B와 같은 주요 open-weight �
 
 EXAONE Deep 2.4B의 경우, DeepSeek-R1-Distill-Qwen-1.5B를 능가합니다. 우리의 실험 결과는 EXAONE Deep 모델들이 다양한 모델 크기에서 향상된 추론 능력을 보여준다는 것을 강조합니다.
 
-4. Limitations
---------------
+## 4. Limitations
 
 이 문서에서 소개된 EXAONE Deep 모델들은 추론 작업에서 뛰어난 성능을 발휘하도록 특별히 fine-tuning되었습니다. base 모델들이 instruction-fine-tuned되어 일반적으로 지시를 따를 수 있지만, 더 넓은 범위의 실제 사용 사례를 다루기 위해서는 실용적인 응용 시나리오에 최적화된 EXAONE 3.5 Instruct 모델들을 사용할 것을 강력히 권장합니다.
 
-5. Deployment
--------------
+## 5. Deployment
 
 부록 B에서는 EXAONE Deep 모델 사용을 위한 라이선스 정보를 제공합니다. 언어 모델의 법적 활용을 위해서는 라이선스 정보를 이해하는 것이 필수적입니다.
 
-6. Conclusion
--------------
+## 6. Conclusion
 
 이 문서에서 우리는 세 가지 특화된 추론 모델인 EXAONE Deep 2.4B, 7.8B, 32B를 제시했습니다. 추론 능력 향상을 목표로 하는 다양한 방법론의 출현에도 불구하고, 우리는 SFT, DPO, Online RL과 같은 잘 확립된 접근법에 의존하여 비슷한 규모의 모델들 대비 우수하거나 경쟁력 있는 성능을 달성했습니다.
 
@@ -104,10 +110,7 @@ EXAONE Deep 2.4B의 경우, DeepSeek-R1-Distill-Qwen-1.5B를 능가합니다. �
 
 우리의 모델들은 연구 목적으로 모든 사람이 사용할 수 있으며, 모델 개선에 도움이 되는 여러분의 피드백을 환영합니다. 피드백이 있거나 모델과의 상업적 기회 탐색에 관심이 있으시면 contact\_us@lgresearch.ai로 연락해 주시기 바랍니다.
 
----
-
-Model License
--------------
+## Model License
 
 **EXAONE AI Model License Agreement 1.1 - NC**
 
@@ -159,8 +162,7 @@ Model License
 
 9.1 **수정**: 라이선스 제공자는 단독 재량으로 언제든지 이 계약을 수정하거나 개정할 권리를 보유합니다.
 
-Evaluation Details
-------------------
+## Evaluation Details
 
 **Table 4: CSAT 2025 benchmark의 선택 과목별 개별 점수에서 EXAONE Deep과 baseline 모델들의 비교**
 

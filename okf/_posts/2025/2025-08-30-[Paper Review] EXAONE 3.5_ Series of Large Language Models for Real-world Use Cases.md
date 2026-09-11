@@ -1,13 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases"
+description: "LG AI연구원의 EXAONE 3.5(2.4B·7.8B·32B) 기술 보고서를 정리하며, 32K 컨텍스트 확장, substring 기반 decontamination, SFT와 DPO·SimPO 정렬, 실사용·long-context·일반 도메인 벤치마크 결과를 살펴본다."
 date: "2025-08-30"
 tags:
+  - "Paper Review"
   - "EXAONE"
-  - "paper-review"
+  - "LG"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-3.5-Series-of-Large-Language-Models-for-Real-world-Use-Cases"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:14:56Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-EXAONE-3.5-Series-of-Large-Language-Models-for-Real-world-Use-Cases"
+    title: "[Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-30"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] EXAONE 3.5: Series of Large Language Models for Real-world Use Cases
 
 > <https://arxiv.org/pdf/2412.04862>
 
@@ -15,13 +28,11 @@ year: "2025"
 AN, Soyoung, et al. EXAONE 3.5: Series of Large Language Models for Real-world Use Cases. arXiv e-prints, 2024, arXiv: 2412.04862.
 ```
 
-Abstract
---------
+## Abstract
 
 이 기술 보고서는 LG AI Research에서 개발하고 공개한 EXAONE 3.5 instruction-tuned 언어 모델들을 소개합니다. EXAONE 3.5 언어 모델은 32B, 7.8B, 2.4B의 세 가지 구성으로 제공됩니다. 이 모델들은 다음과 같은 뛰어난 능력을 특징으로 합니다: 1) 실제 시나리오에서 탁월한 instruction following 능력으로 7개 benchmark에서 최고 점수 달성, 2) 뛰어난 long-context 이해력으로 4개 benchmark에서 최고 성능 달성, 3) 9개 일반 benchmark에서 유사한 크기의 최신 오픈 모델들과 비교하여 경쟁력 있는 결과 달성. EXAONE 3.5 언어 모델은 연구 목적으로 누구나 사용할 수 있으며 <https://huggingface.co/LGAI-EXAONE> 에서 다운로드할 수 있습니다. 상업적 이용을 위해서는 LG AI Research의 공식 연락처로 문의하시기 바랍니다: contact\_us@lgresearch.ai.
 
-1. 서론
------
+## 1. 서론
 
 78억 매개변수를 가진 EXAONE 3.0 instruction-tuned 대규모 언어 모델은 한국어와 영어에서 강력한 이중언어 능력과 탁월한 실제 성능 및 instruction-following 숙련도를 보여주었습니다. 출시 이후, 학술계와 산업계에서 다양한 피드백을 받았습니다. 예를 들어, 학술 연구자들은 고성능 컴퓨팅 인프라에 대한 제한적인 접근으로 인해 저사양 GPU에서 훈련하고 배포할 수 있는 더 작은 모델의 필요성을 강조했습니다. 산업계에서는 비용 효율성을 유지하면서도 향상된 성능을 제공하는 더 큰 모델과 기기 내 배포에 적합한 더 작은 모델에 대한 강한 수요를 표현했습니다. 또한, 참조 문서나 웹 검색 결과를 기반으로 답변을 생성하는 retrieval-augmented generation (RAG) 기술의 채택이 증가하면서, 더 긴 context를 효과적으로 처리할 수 있는 모델에 대한 상당한 수요가 있었습니다.
 
@@ -29,8 +40,7 @@ Abstract
 
 EXAONE 3.5 언어 모델들의 출시를 통해 연구자들이 생성형 AI의 경계를 넓히고 인간의 삶을 향상시키는 혁신적인 애플리케이션 개발에 영감을 받기를 희망합니다. 이는 LG AI Research의 사명인 "더 나은 삶을 위한 AI 발전"과 일치합니다.
 
-2. 모델 훈련
---------
+## 2. 모델 훈련
 
 이 섹션에서는 모델 구성에 대한 상세한 정보와 pre-training 및 post-training 단계에서 사용된 방법들, 그리고 각 훈련 단계별 데이터셋 구성 과정을 설명합니다.
 
@@ -107,8 +117,7 @@ DPO와 SimPO와 같은 Direct alignment algorithms (DAAs)를 사용하여 superv
 
 AI 모델 개발에는 대량의 데이터가 필요하며, 이 데이터의 획득과 활용은 저작권 침해, 지적 재산권 침해, 개인정보 보호 위반 등 다양한 법적 문제로 이어질 수 있습니다. 이러한 위험을 최소화하기 위해, LG AI Research는 데이터 수집, AI 모델 훈련, 정보 제공의 전체 과정에 걸쳐 AI Compliance 검토를 수행합니다. 더 자세한 정보는 EXAONE 3.0 기술 보고서와 LG AI 윤리 원칙을 참조하시기 바랍니다.
 
-3. 평가
------
+## 3. 평가
 
 이 섹션에서는 다양한 benchmark 데이터셋에서 EXAONE 3.5 언어 모델들의 평가 설정과 결과를 제시합니다. 우리 모델들의 benchmark 성능을 비교하기 위해 최근 출시된 오픈 언어 모델들을 베이스라인으로 선택했습니다. 모든 베이스라인과 그들의 상세한 정보는 Appendix D.1에 설명되어 있습니다.
 
@@ -154,8 +163,7 @@ Table 7에 표시된 바와 같이, EXAONE 3.5 언어 모델들은 32B와 78억 
 
 Table 8은 일반 도메인 카테고리의 benchmark들에서 EXAONE 3.5 언어 모델들과 베이스라인 모델들의 결과를 보여줍니다. benchmark 전체의 평균에서, 32B와 78억 크기의 EXAONE 3.5 언어 모델들은 유사한 크기의 베이스라인들과 비교하여 경쟁력 있는 성능을 보여줍니다. 반면, EXAONE 3.5 24억 모델은 평균 점수에서 모든 베이스라인을 능가했습니다.
 
-4. 책임감 있는 AI
-------------
+## 4. 책임감 있는 AI
 
 EXAONE 3.5 언어 모델들은 광범위한 사용자들에게 제공될 것의 특성을 고려하여 데이터 거버넌스, 윤리적 고려사항, 위험 관리를 포괄하는 책임감 있는 AI 개발 프레임워크에 따라 개발되었습니다. 오픈 모델의 특성상 결국 다양한 도메인에서 광범위하게 사용될 것이므로, LG AI 윤리 원칙에서 요구하는 인간성, 공정성, 안전성, 책임성, 투명성을 보장하면서 사회적 이익을 최대화하는 것을 목표로 합니다.
 
@@ -179,8 +187,7 @@ AI 윤리적 고려사항과 규제 요구사항의 수준은 사용자의 다�
 
 한국 과학기술정보통신부와 한국정보화진흥원(NIA)에서 제공하는 제3자 데이터셋인 한국어 대규모 언어 모델 신뢰성 벤치마크 데이터를 사용하여 EXAONE 3.5 언어 모델들의 윤리와 보안에 대한 포괄적인 평가를 수행했습니다. 이 데이터셋은 언어 모델의 무해성을 평가하기 위해 특별히 설계되었습니다. 평가 결과는 Table 9에 제시되어 있습니다. 성능을 측정하기 위해, 모델에게 5개 옵션 중 하나를 선택하도록 요청했습니다. 선택된 옵션이 정답 집합에 포함되면 정답으로 점수를 매겼습니다. 제공된 데이터셋에서 처음 두 옵션은 "거짓"으로, 나머지 세 개는 "참"으로 라벨이 붙어 있었습니다. 옵션 순서로 인한 잠재적 편향을 완화하기 위해, 각 평가마다 옵션 순서를 무작위로 섞었습니다. 실험 결과는 유해한 반응을 필터링하는 데 효과성을 보여주었지만, 여전히 개선의 여지가 있습니다.
 
-5. 한계
------
+## 5. 한계
 
 EXAONE 3.5 언어 모델들은 기존의 모든 언어 모델들과 마찬가지로 특정한 한계가 있으며 때때로 부적절한 응답을 생성할 수 있습니다. 언어 모델은 토큰의 출력 확률을 기반으로 응답을 생성하며, 이는 훈련 데이터에서의 학습 중에 결정됩니다. 훈련 데이터에서 개인적, 유해한, 편향된 정보를 제외하기 위해 모든 노력을 기울였지만, 일부 문제가 있는 콘텐츠가 여전히 포함되어 바람직하지 않은 응답으로 이어질 수 있습니다. EXAONE 3.5 언어 모델들이 생성하는 텍스트는 LG AI Research의 견해를 반영하지 않는다는 점을 유의하시기 바랍니다.
 
@@ -191,13 +198,11 @@ EXAONE 3.5 언어 모델들은 기존의 모든 언어 모델들과 마찬가지
 
 LG AI Research는 EXAONE 3.5 언어 모델들로부터 발생할 수 있는 잠재적 위험을 줄이기 위해 노력합니다. 사용자들은 EXAONE 3.5 언어 모델들을 사용할 때 LG AI의 윤리 원칙을 위반하는 부적절한 출력 생성을 유도할 수 있는 악의적 활동(예: 불법 정보 입력)에 참여해서는 안 됩니다.
 
-6. 배포
------
+## 6. 배포
 
 Appendix의 Section B는 EXAONE 3.5 언어 모델들 사용을 위한 라이선스 정보를 제공합니다. 언어 모델의 법적 활용을 위해서는 라이선스 정보를 이해하는 것이 필수적입니다.
 
-7. 결론
------
+## 7. 결론
 
 학계와 산업계의 증가하는 관심에 응답하여, 실제 사용 사례와 long-context 이해에서 뛰어난 성능을 보이는 EXAONE 3.5 언어 모델들을 출시하게 되어 기쁩니다. 이 모델들은 세 가지 크기(32B, 7.8B, 2.4B)로 제공됩니다.
 

@@ -64,6 +64,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Prompt Engineering](_concepts/prompt-engineering.md) - 프롬프트 작성 기법과 공식 프롬프팅 가이드.
 * [Python](_concepts/python.md) - 파이썬 언어 기능, 표준 라이브러리, 실전 팁.
 * [PyTorch](_concepts/pytorch.md) - PyTorch로 딥러닝 모델을 만들고 학습하는 방법.
+* [Qwen](_concepts/qwen.md) - Alibaba의 Qwen 계열 언어·멀티모달 모델 기술 보고서와 리뷰.
 * [RAG](_concepts/rag.md) - 검색 증강 생성(RAG) 아키텍처와 구현.
 * [강화학습](_concepts/reinforcement-learning.md) - 보상을 최대화하는 정책을 학습하는 강화학습의 개념과 Q-Learning, DQN 등 알고리즘을 다룬 글.
 * [SK AI Summit](_concepts/sk-ai-summit.md) - SK AI Summit 세션 정리.

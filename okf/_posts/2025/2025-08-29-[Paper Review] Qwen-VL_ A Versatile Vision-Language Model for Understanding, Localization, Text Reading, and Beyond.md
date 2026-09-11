@@ -1,12 +1,27 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond"
+description: "ViT-bigG 인코더와 위치 인식 cross-attention 어댑터로 Qwen-7B에 시각 능력을 부여한 Qwen-VL의 구조, bounding box 입출력 형식, 3단계 학습 파이프라인과 캡셔닝·VQA·grounding 벤치마크 결과를 정리한다."
 date: "2025-08-29"
 tags:
-  - "paper-review"
+  - "Paper Review"
+  - "Qwen"
+  - "Computer Vision"
+  - "NLP"
+  - "Transformer"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-VL-A-Versatile-Vision-Language-Model-for-Understanding-Localization-Text-Reading-and-Beyond"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:16:03Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Qwen-VL-A-Versatile-Vision-Language-Model-for-Understanding-Localization-Text-Reading-and-Beyond"
+    title: "[Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond"
+    author: "human:euisuk-chung"
+    last_modified: "2025-08-29"
+status: "stable"
 year: "2025"
 ---
-
-# [Paper Review] Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/019b662c-e53d-4068-9c38-0f6f33ddd422/image.png)
 
@@ -16,13 +31,11 @@ year: "2025"
 WANG, Peng, et al. Qwen2-vl: Enhancing vision-language model's perception of the world at any resolution. arXiv preprint arXiv:2409.12191, 2024.
 ```
 
-초록
---
+## 초록
 
 본 연구에서는 텍스트와 이미지를 모두 인식하고 이해하도록 설계된 대규모 vision-language 모델(LVLM)인 Qwen-VL 시리즈를 소개합니다. Qwen-LM을 기반으로 시작하여, 세심하게 설계된 (i) visual receptor, (ii) input-output interface, (iii) 3단계 training pipeline, (iv) 다국어 multimodal 정제 코퍼스를 통해 visual capacity를 부여했습니다. 기존의 이미지 설명 및 질의응답을 넘어서, image-caption-box tuple을 정렬하여 Qwen-VL의 grounding 및 text-reading 능력을 구현했습니다. Qwen-VL과 Qwen-VL-Chat을 포함한 결과 모델들은 비슷한 모델 규모의 generalist 모델들 중에서 다양한 visual-centric benchmark(예: 이미지 캡셔닝, 질의응답, visual grounding)와 다양한 설정(예: zero-shot, few-shot)에서 새로운 기록을 달성했습니다. 또한 실제 대화 benchmark에서도 instruction-tuned된 Qwen-VL-Chat이 기존 vision-language chatbot들에 비해 우수성을 보여줍니다. 모든 모델은 향후 연구를 촉진하기 위해 공개됩니다.
 
-1. 서론
------
+## 1. 서론
 
 최근 Large Language Model(LLM) (Brown et al., 2020; OpenAI, 2023; Anil et al., 2023; Gao et al., 2023; Qwen, 2023)들이 텍스트 생성 및 이해의 강력한 능력으로 인해 큰 주목을 받고 있습니다. 이러한 모델들은 instruction fine-tuning을 통해 사용자 의도와 더욱 잘 정렬될 수 있으며, 강력한 상호작용 능력과 지능형 어시스턴트로서 생산성을 향상시킬 수 있는 잠재력을 보여줍니다.
 
@@ -44,8 +57,7 @@ WANG, Peng, et al. Qwen2-vl: Enhancing vision-language model's perception of the
 
 • **세밀한 시각적 이해**: 훈련에서 사용한 더 높은 해상도의 입력 크기와 세밀한 corpus 덕분에, Qwen-VL들은 높은 경쟁력을 가진 세밀한 시각적 이해 능력을 보여줍니다. 기존 vision-language generalist들과 비교해, Qwen-VL들은 grounding, text-reading, 텍스트 지향 질의응답, 세밀한 대화 성능에서 훨씬 더 나은 성능을 보입니다.
 
-2. 방법론
-------
+## 2. 방법론
 
 ### 2.1 모델 아키텍처
 
@@ -63,8 +75,7 @@ Qwen-VL의 전체 네트워크 아키텍처는 세 가지 구성 요소로 이�
 
 **Bounding Box Input and Output**: 모델의 세밀한 시각적 이해 및 grounding capacity를 향상시키기 위해, Qwen-VL의 훈련에는 지역 설명, 질문 및 detection 형태의 데이터가 포함됩니다. 이미지-텍스트 설명이나 질문을 포함하는 기존 작업과 달리, 이 작업은 모델이 지정된 형식으로 지역 설명을 정확하게 이해하고 생성해야 합니다. 주어진 bounding box에 대해 정규화 과정([0, 1000) 범위 내)이 적용되고 지정된 문자열 형식으로 변환됩니다: "(X\_topleft, Y\_topleft),(X\_bottomright, Y\_bottomright)". 이 문자열은 텍스트로 토큰화되며 추가적인 위치 vocabulary가 필요하지 않습니다. detection 문자열과 일반 텍스트 문자열을 구별하기 위해, 두 개의 특수 토큰(와 )이 bounding box 문자열의 시작과 끝에 추가됩니다. 또한 bounding box를 해당하는 설명 단어나 문장과 적절히 연관시키기 위해, 또 다른 특수 토큰 set(와 )이 도입되어 bounding box가 참조하는 내용을 표시합니다.
 
-3. 훈련
------
+## 3. 훈련
 
 그림 3에 나타난 바와 같이, Qwen-VL 모델의 훈련 과정은 세 단계로 구성됩니다: 두 단계의 pre-training과 마지막 instruction fine-tuning 훈련 단계입니다.
 
@@ -84,8 +95,7 @@ visual encoder의 입력 해상도를 224 × 224에서 448 × 448로 증가시�
 
 이 단계에서는 instruction fine-tuning을 통해 Qwen-VL 사전 훈련 모델을 fine-tune하여 instruction following 및 대화 능력을 향상시켜 상호작용 가능한 Qwen-VL-Chat 모델을 만들었습니다. multi-modal instruction tuning 데이터는 주로 LLM self-instruction을 통해 생성된 caption 데이터나 대화 데이터에서 나오며, 이는 종종 single-image 대화와 추론만을 다루고 이미지 내용 이해에 제한됩니다. localization과 multi-image 이해 능력을 Qwen-VL 모델에 통합하기 위해 manual annotation, 모델 생성, strategy concatenation을 통해 추가 대화 데이터 set을 구성했습니다. 모델이 이러한 능력을 더 넓은 범위의 언어와 질문 유형으로 효과적으로 전이한다는 것을 확인했습니다. 또한 훈련 중에 multi-modal과 순수 텍스트 대화 데이터를 혼합하여 대화 능력에서 모델의 보편성을 보장합니다. instruction tuning 데이터는 350k개입니다. 이 단계에서는 visual encoder를 동결하고 language model과 adapter module을 최적화합니다. 이 단계의 데이터 형식은 부록 B.2에서 보여줍니다.
 
-4. 평가
------
+## 4. 평가
 
 본 섹션에서는 다양한 multi-modal 작업에 대한 전반적인 평가를 수행하여 모델의 시각적 이해 능력을 종합적으로 평가합니다. 이하에서 Qwen-VL은 multi-task 훈련 후의 모델을 의미하고, Qwen-VL-Chat은 supervised fine-tuning (SFT) 단계 후의 모델을 의미합니다.
 
@@ -121,8 +131,7 @@ RefCOCO (Kazemzadeh et al., 2014), RefCOCOg (Mao et al., 2016), RefCOCO+ (Mao et
 
 세 benchmark에 대한 결과는 표 7에 나와 있습니다. Qwen-VL-Chat은 세 데이터셋 모두에서 다른 LVLM들에 비해 명백한 장점을 달성했으며, 이는 모델이 다양한 사용자 instruction을 이해하고 답변하는 데 더 나은 성능을 보인다는 것을 나타냅니다. SEED-Bench에서는 단순히 네 개의 frame을 샘플링하여 모델의 시각적 능력이 비디오 작업에 효과적으로 전이될 수 있음을 발견했습니다. TouchStone에서 제시된 전반적인 점수 면에서, 모델은 다른 LVLM들에 비해 특히 중국어 능력에서 명확한 장점을 보여줍니다. 능력의 광범위한 범주 면에서, 모델은 이해와 인식에서 더 두드러진 장점을 보이며, 특히 텍스트 인식과 차트 분석과 같은 영역에서 그렇습니다. 더 자세한 정보는 TouchStone 데이터셋을 참조하시기 바랍니다.
 
-5. 관련 연구
---------
+## 5. 관련 연구
 
 최근 몇 년간 연구자들은 vision-language learning에 상당한 관심을 보여왔으며, 특히 multi-task generalist 모델 개발에서 그렇습니다. CoCa (Yu et al., 2022)는 image-text retrieval과 vision-language 생성 작업을 동시에 다루기 위해 encoder-decoder 구조를 제안합니다. OFA (Wang et al., 2022a)는 사용자 지정 작업 instruction을 사용하여 특정 vision-language 작업을 sequence-to-sequence 작업으로 변환합니다. Unified I/O (Lu et al., 2022a)는 segmentation과 depth estimation과 같은 더 많은 작업을 통합된 프레임워크로 도입합니다.
 
@@ -130,8 +139,7 @@ RefCOCO (Kazemzadeh et al., 2014), RefCOCOg (Mao et al., 2016), RefCOCO+ (Mao et
 
 상당한 진전을 달성했음에도 불구하고, 이전 vision-language 모델들은 여전히 instruction following에서의 낮은 견고성, 미지의 작업에서 제한된 일반화 능력, in-context 능력의 부족과 같은 여러 한계를 가지고 있습니다. Large Language Model (LLM)의 급속한 발전과 함께, 연구자들은 LLM을 기반으로 더 강력한 large vision-language model (LVLM)을 구축하기 시작했습니다. BLIP-2 (Li et al., 2023c)는 동결된 vision foundation 모델과 LLM을 정렬하기 위해 Q-Former를 제안합니다. 한편, LLAVA (Liu et al., 2023)와 MiniGPT4 (Zhu et al., 2023)는 LVLM에서 instruction following 능력을 향상시키기 위해 visual instruction tuning을 도입합니다. 추가적으로, mPLUG-DocOwl (Ye et al., 2023a)은 디지털 문서 데이터를 도입하여 LVLM에 문서 이해 능력을 통합합니다. Kosmos2 (Peng et al., 2023), Shikra (Chen et al., 2023a), BuboGPT (Zhao et al., 2023)는 visual grounding 능력으로 LVLM을 더욱 향상시켜 지역 설명과 localization을 가능하게 합니다. 본 연구에서는 image captioning, visual question answering, OCR, document understanding, visual grounding 능력을 Qwen-VL에 통합합니다. 결과 모델은 이러한 다양한 스타일의 작업에서 뛰어난 성능을 달성합니다.
 
-6. 결론 및 향후 연구
--------------
+## 6. 결론 및 향후 연구
 
 multimodal 연구를 촉진하는 것을 목표로 하는 대규모 다국어 vision-language 모델 세트인 Qwen-VL 시리즈를 출시했습니다. Qwen-VL은 다양한 benchmark에서 비슷한 모델들을 능가하며, 다국어 대화, multi-image interleaved 대화, 중국어 grounding, 세밀한 인식을 지원합니다. 앞으로 여러 핵심 차원에서 Qwen-VL의 능력을 더욱 향상시키는 데 전념하고 있습니다:
 
