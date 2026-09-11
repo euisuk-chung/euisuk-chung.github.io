@@ -19,6 +19,8 @@ sources:
     last_modified: "2025-01-26"
 status: "stable"
 year: "2025"
+redirect_from:
+  - "/2025/01/27/(설명추가)-Perplexity와-BLEU-스코어에-대한-보충-설명/"
 ---
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/748459ec-3899-4e1c-8cea-1f705a3e09db/image.png)
