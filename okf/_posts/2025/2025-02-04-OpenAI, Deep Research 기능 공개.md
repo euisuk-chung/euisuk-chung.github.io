@@ -1,10 +1,25 @@
 ---
+type: "Product Update"
 title: "OpenAI, Deep Research 기능 공개"
+description: "OpenAI Deep Research가 o3 추론 모델과 강화학습을 바탕으로 다단계 웹 검색과 보고서 생성을 수행하는 방식, HLE·GAIA 벤치마크 결과, 시장조사·논문조사·투자분석 데모 사례를 정리한다."
 date: "2025-02-04"
+tags:
+  - "OpenAI"
+  - "AI Agent"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/OpenAI-Deep-Research-기능-공개"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:33:37Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/OpenAI-Deep-Research-기능-공개"
+    title: "OpenAI, Deep Research 기능 공개"
+    author: "human:euisuk-chung"
+    last_modified: "2025-02-04"
+status: "stable"
 year: "2025"
 ---
-
-# OpenAI, Deep Research 기능 공개
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/ec9147c7-2d93-481e-9d1c-678d83d82b0c/image.png)
 
@@ -13,8 +28,7 @@ year: "2025"
 > * Youtube: <https://youtu.be/YkCDVn3_wiw>
 > * openAI blog: <https://openai.com/index/introducing-deep-research/>
 
-1. Deep Research란 무엇인가?
------------------------
+## 1. Deep Research란 무엇인가?
 
 **Deep Research**는 OpenAI에서 새롭게 선보인 **에이전트 기반(AI Agent) 연구 기능**으로, 다단계 웹 검색 및 데이터 분석을 자동화하여 **전문 연구 분석가 수준의 보고서를 생성하는 AI 도구**입니다.
 
@@ -44,10 +58,7 @@ year: "2025"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9cf0c7be-9059-4513-a351-b8f304758d1e/image.png)
 
----
-
-2. 개발 배경 및 기술적 특징
------------------
+## 2. 개발 배경 및 기술적 특징
 
 기존 AI 모델은 실시간으로 정보를 탐색하는 기능이 제한적이었습니다.
 
@@ -81,10 +92,7 @@ year: "2025"
 * **다중 소스 정보 통합:** 여러 웹사이트에서 데이터를 크롤링하여 신뢰도 높은 정보를 선별하고 비교 분석 가능
 * **데이터 시각화 기능 강화:** 분석한 데이터를 효과적으로 표현하기 위한 차트 및 그래프 자동 생성 기능 포함
 
----
-
-3. Deep Research의 성능 평가
------------------------
+## 3. Deep Research의 성능 평가
 
 ### 3.1 **Humanity’s Last Exam 평가**
 
@@ -96,8 +104,6 @@ year: "2025"
 
 * 최근 평가에서, OpenAI의 'Deep Research' 모델은 26.6%의 정확도를 기록하여 이전 모델들보다 향상된 성능을 보였습니다.
 
----
-
 ### 3.2 **GAIA 벤치마크 평가**
 
 **GAIA(benchmark for General AI Assistants)**는 AI 모델이 실제 세계의 복잡한 작업을 얼마나 잘 수행하는지 평가하기 위한 벤치마크입니다.
@@ -108,8 +114,6 @@ year: "2025"
 ![](https://velog.velcdn.com/images/euisuk-chung/post/87713e9c-207f-4ce2-8293-f96634fb7774/image.png)
 
 * 최근 평가에서, 'Deep Research' 모델은 모든 난이도에서 우수한 성능을 기록하였습니다.
-
----
 
 ### 3.3 전문가 수준 작업(Expert-Level Tasks) 평가
 
@@ -132,10 +136,7 @@ year: "2025"
   + **X축**: 도구 호출 횟수(Max Tool Calls)
   + **Y축**: 수행률(Pass Rate)
 
----
-
-4. Deep Research 데모
--------------------
+## 4. Deep Research 데모
 
 OpenAI의 **Deep Research** 기능이 실제로 어떻게 작동하는지를 보여주기 위해, 패널 토크에서는 다양한 데모를 진행했습니다.
 
@@ -308,10 +309,7 @@ OpenAI의 **Deep Research** 기능이 실제로 어떻게 작동하는지를 보
 * **유망한 스타트업 및 기존 항공 기업 분석.**
 * **시장 성장 예측 데이터 및 관련 규제 분석 포함.**
 
----
-
-5. Deep Research의 작동 방식
------------------------
+## 5. Deep Research의 작동 방식
 
 1. **초기 질의 설정**
 
@@ -332,10 +330,7 @@ OpenAI의 **Deep Research** 기능이 실제로 어떻게 작동하는지를 보
    * 필요 시 추가 탐색을 수행하여 최적의 결과 도출.
    * 사용자 요구 사항에 따라 데이터 업데이트 및 보완 가능.
 
----
-
-6. 향후 발전 방향
------------
+## 6. 향후 발전 방향
 
 OpenAI의 **Deep Research**는 AI가 수행할 수 있는 연구의 수준을 한층 더 끌어올리는 혁신적인 기술입니다. 단순한 정보 검색을 넘어 다단계 웹 탐색, 신뢰성 높은 데이터 분석, 전문가 수준의 보고서 작성을 자동화하여 연구 생산성을 극대화할 수 있습니다.
 

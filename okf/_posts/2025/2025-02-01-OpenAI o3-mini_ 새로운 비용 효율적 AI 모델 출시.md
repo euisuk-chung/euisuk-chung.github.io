@@ -1,16 +1,26 @@
 ---
+type: "Product Update"
 title: "OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시"
+description: "OpenAI o3-mini의 reasoning effort(Low/Medium/High) 옵션과 가격, 컨텍스트 윈도우를 소개하고 AIME, GPQA, Codeforces, SWE-bench 등 벤치마크에서 o1·o1-mini 대비 성능을 비교한다."
 date: "2025-02-01"
 tags:
   - "OpenAI"
-  - "chatGPT"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/openAI-o3-mini-release"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:34:41Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/openAI-o3-mini-release"
+    title: "OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시"
+    author: "human:euisuk-chung"
+    last_modified: "2025-02-01"
+status: "stable"
 year: "2025"
 ---
 
-# OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시
-
-1. 개요
------
+## 1. 개요
 
 금일 ChatGPT와 API에서 o3-mini 및 o3-mini-high를 공개하였습니다.
 
@@ -159,10 +169,7 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 > Table Source: <https://platform.openai.com/docs/models#o1>
 
----
-
-2. 주요 성능 분석
------------
+## 2. 주요 성능 분석
 
 위에서 특징을 살펴봤다면 이제 benchmark 데이터를 기준으로 한번 살펴보도록 하겠습니다.
 
@@ -192,8 +199,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 * AIME(American Invitational Mathematics Examination) 2024에서 **높은 reasoning effort에서 가장 높은 성능**을 기록하였으며, **중간 effort에서도 o1 수준에 근사하는 성능을 유지**함.
 * 이는 복잡한 수학적 문제 해결에서 o3-mini가 상당한 경쟁력을 갖추었음을 의미함.
-
----
 
 ### 2.2 과학(Science) 성능
 
@@ -236,8 +241,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 * o3-mini (high) 모델은 2130 Elo를 기록하여 **기존 모델보다 높은 성능을 보였으며**, o1-mini보다 500 Elo 이상 높은 성능을 보여줌.
 
----
-
 ### 2.4 고급 수학 문제 해결 능력 (FrontierMath)
 
 > (참고) FrontierMath는 **고급 수학 문제 해결 능력을 평가하는 벤치마크**이며, 여기서 `Pass@k`는 **AI 모델이 수학 문제를 얼마나 잘 해결할 수 있는지 측정하는 핵심 지표**입니다.
@@ -257,8 +260,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 ✅ **표 해석:**
 
 * o3-mini 모델은 **Pass@1, Pass@4, Pass@8 성능이 모두 o1-mini와 o1을 크게 초과**, 특히 **수학적 reasoning을 필요로 하는 문제에서 유의미한 성능 향상**을 보임.
-
----
 
 ### 2.5 일반 지식 및 수학 지식 (General Knowledge)
 
@@ -282,8 +283,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 * MMLU(일반 지식)에서는 기존 모델과 유사한 성능을 보였으나, **수학(MGSM) 성능에서 o3-mini가 확연히 향상**된 결과를 보임.
 
----
-
 ### 2.6 인간 평가 결과 (Human Preference Evaluation)
 
 > (참고) Human Preference Evaluation은 실제 (인간) 사용자들이 **AI 모델이 생성한 응답을 비교하여 어느 모델이 더 나은 결과를 제공하는지 평가하는 벤치마크**입니다.
@@ -304,8 +303,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 * **STEM 및 비-STEM 도메인**에서 **o3-mini (medium) 모델이 기존 o1-mini 모델보다 더 선호**되는 응답을 생성.
 * **시간 제약이 있는 경우**에도 **o3-mini 모델이 더 높은 정답률을 보임**, 즉 빠르고 정확한 응답을 제공할 가능성이 높음.
 * **Major Error Rate**(중대한 오류 비율)가 **기존 모델 대비 39% 감소**, 즉 **더 신뢰할 수 있는 정보를 제공**.
-
----
 
 ### 2.7 코드 생성 및 컴플리션 성능 (LiveBench Coding)
 
@@ -330,8 +327,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 * o3-mini (high) 모델은 **코드 자동 완성(Code Completion)에서 기존 o1 모델을 초과하는 성능을 보이며**, 개발 생산성을 높일 수 있는 가능성을 확인.
 
----
-
 ### 2.8 소프트웨어 엔지니어링 성능 (SWE-bench Verified)
 
 > (참고) SWE-bench Verified는 AI 모델의 소프트웨어 엔지니어링(Software Engineering) 문제 해결 능력을 평가하는 벤치마크입니다.
@@ -352,8 +347,6 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 * 소프트웨어 엔지니어링 문제 해결에서 **o3-mini (high) 모델이 o1 모델을 초과하는 성능**을 보임.
 
----
-
 ### 2.9 응답 속도 비교 (Latency)
 
 | 모델 | Time to First Token (ms) |
@@ -367,10 +360,7 @@ o1과 o3-mini의 가격만 비교하면 아래와 같습니다:
 
 * o3-mini 모델은 **빠른 응답 시간으로 실시간 상호작용 성능이 향상**됨.
 
----
-
-결론
---
+## 결론
 
 OpenAI의 새로운 AI 모델인 **o3-mini**는 기존 모델(o1-mini, o1)과 비교했을 때, **STEM(Science, Technology, Engineering, Mathematics) 및 프로그래밍 영역에서 더욱 강력한 성능**을 발휘하는 것이 특징입니다.
 

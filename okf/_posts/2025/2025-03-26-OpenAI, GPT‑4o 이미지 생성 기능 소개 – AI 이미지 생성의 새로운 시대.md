@@ -1,10 +1,25 @@
 ---
+type: "Product Update"
 title: "OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대"
+description: "GPT-4o 네이티브 이미지 생성의 멀티턴 편집, 정밀 지시 반영, 인컨텍스트 학습, 텍스트 렌더링 등 6가지 기능을 OpenAI 데모와 공식 예시 프롬프트, 직접 생성한 결과물로 살펴본다."
 date: "2025-03-26"
+tags:
+  - "OpenAI"
+  - "ChatGPT"
+  - "Prompt Engineering"
+resource: "https://velog.io/@euisuk-chung/GPT4o-이미지-생성-기능-소개-AI-이미지-생성의-새로운-시대"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:23:48Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/GPT4o-이미지-생성-기능-소개-AI-이미지-생성의-새로운-시대"
+    title: "OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대"
+    author: "human:euisuk-chung"
+    last_modified: "2025-03-26"
+status: "stable"
 year: "2025"
 ---
-
-# OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대
 
 안녕하세요! 오늘 나온 기능은 제가 **정말정말 기다렸던 기능**인데요!! 🙌
 
@@ -69,15 +84,11 @@ OpenAI는 GPT‑4o에 가장 진보된 이미지 생성기를 통합하며 이�
 
 본 블로그 포스트는 **OpenAI Youtube Demo(Part1)**와 **OpenAI Blog 내용(Part2)**로 나뉩니다.
 
----
-
-PART 1. OpenAI Youtube Demo 소개
-==============================
+# PART 1. OpenAI Youtube Demo 소개
 
 발표는 실제 데모 시연 중심으로 이루어졌으며, 각 세션이 **정교한 텍스트 렌더링**, **속성 결합의 정밀도**, **밈(meme) 이미지 생성의 유연성**, **다중 모달 입력 활용** 등을 단계별로 보여주었습니다.
 
-🎬 이미지 생성 품질의 진화
----------------
+## 🎬 이미지 생성 품질의 진화
 
 발표 초반에 "GPT‑4o의 이미지 생성 품질은 과거의 모델과는 차원이 다르다"고 강조했습니다.
 
@@ -281,10 +292,7 @@ GPT‑4o는 **사진 스타일을 모사하면서도, 지정된 텍스트와 숫
 > * "이름마다 색상 다르게 적용해줘"
 > * "이 부분만 수정해줘"
 
----
-
-PART 2. OpenAI Blog 내용 소개
-=========================
+# PART 2. OpenAI Blog 내용 소개
 
 글의 맨 앞에서 얘기한 것처럼 이번 GPT-4o ImageGeneration 업데이트는 아래와 같습니다.
 
@@ -304,10 +312,7 @@ PART 2. OpenAI Blog 내용 소개
 아래 예시들의 프롬프트와 이미지는 **OpenAI Blog에 나온 공식 사례들**입니다.  
 (조금씩 추가/변경한 내용도 존재합니다)
 
----
-
-🧭 1. **Multi-turn Generation (멀티턴 이미지 생성)**
--------------------------------------------
+## 🧭 1. **Multi-turn Generation (멀티턴 이미지 생성)**
 
 > GPT-4o는 채팅 기반으로 이미지 생성 과정을 단계적으로 이어가며 점진적으로 정교화할 수 있습니다.
 
@@ -360,10 +365,7 @@ CAT (Image)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/73d03d06-d2bc-453f-aa71-0cdbe9b96353/image.png)
 
----
-
-📋 2. **Instruction Following (지시사항 기반 생성)**
--------------------------------------------
+## 📋 2. **Instruction Following (지시사항 기반 생성)**
 
 > GPT-4o는 긴 prompt와 복잡한 객체 지시사항을 정확히 따릅니다.  
 > (최대 10~20개의 객체도 처리 가능.)
@@ -408,10 +410,7 @@ show me a wine glass with only the tiniest drop of red wine in it.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/308cd1f9-91c9-4390-97a7-6b9e93048a45/image.png)
 
----
-
-🧠 3. **In-context Learning (컨텍스트 학습)**
---------------------------------------
+## 🧠 3. **In-context Learning (컨텍스트 학습)**
 
 > 참조 이미지 기반으로 스타일, 구성, 아이디어를 학습해 새로운 이미지에 반영합니다.
 
@@ -439,10 +438,7 @@ an photorealistic image of a blue chainsaw
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b41dc37b-005d-45a6-b3e1-14a213df1e0b/image.png)
 
----
-
-🌐 4. **World Knowledge Integration (세계 지식 연계)**
------------------------------------------------
+## 🌐 4. **World Knowledge Integration (세계 지식 연계)**
 
 > GPT-4o는 텍스트 모델의 지식을 기반으로 이미지를 논리적으로 생성합니다.
 
@@ -475,10 +471,7 @@ make a visual infographic describing why SF is so foggy
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/15e774c8-9361-4fb0-b202-c6846254066c/image.png)
 
----
-
-🖼 5. **Photorealism & Style Transfer (포토리얼리즘 및 스타일 변환)**
---------------------------------------------------------
+## 🖼 5. **Photorealism & Style Transfer (포토리얼리즘 및 스타일 변환)**
 
 > 다양한 스타일에 대한 학습을 통해 사실적이거나 예술적인 이미지 생성이 가능
 
@@ -531,10 +524,7 @@ The reflection is that of a tiger, realistically distorted by ripples in the wat
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/530cc3fc-f7aa-4f73-87f3-39dc263d76bf/image.png)
 
----
-
-📐 6. **Text Rendering (텍스트 렌더링 정확도)**
--------------------------------------
+## 📐 6. **Text Rendering (텍스트 렌더링 정확도)**
 
 > 이미지 내 텍스트 렌더링 품질이 탁월하며, 표지판, 메뉴판, 초대장 등 실사용 가능
 
@@ -587,10 +577,7 @@ Hoddeok (Korean Sweet Pancake) – \$9 Pan-fried cinnamon-stuffed pancake with b
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/8cae9d58-9a15-41c4-82dc-e35e0ce6d494/image.png)
 
----
-
-마무리
-===
+# 마무리
 
 이번 GPT-4o 업데이트를 통해 우리는 이미지 생성에서도 **단순한 생성**을 넘어, **프롬프트를 통한 세밀한 컨트롤**과 **다단계 정교화**, 그리고 **지식 기반 생성**까지 폭넓은 가능성을 확인할 수 있었습니다.
 

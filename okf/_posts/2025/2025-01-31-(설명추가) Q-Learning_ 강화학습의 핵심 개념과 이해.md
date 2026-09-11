@@ -1,13 +1,26 @@
 ---
+type: "Concept Note"
 title: "(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해"
+description: "혁펜하임의 『Easy! 딥러닝』을 바탕으로 강화학습의 상태·행동·보상 개념과 Q-Table, 벨만 방정식 기반 Q-값 갱신, ε-greedy 탐색 전략, 할인율, DQN으로의 확장까지 Q-Learning을 정리한다."
 date: "2025-01-31"
 tags:
-  - "도서리뷰"
+  - "강화학습"
   - "딥러닝"
+  - "개념정리"
+  - "도서리뷰"
+resource: "https://velog.io/@euisuk-chung/설명추가-Q-Learning-강화학습의-핵심-개념과-이해"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:35:06Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/설명추가-Q-Learning-강화학습의-핵심-개념과-이해"
+    title: "(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-31"
+status: "stable"
 year: "2025"
 ---
-
-# (설명추가) Q-Learning: 강화학습의 핵심 개념과 이해
 
 혁펜하임님의『Easy! 딥러닝』책을 보다보면 엄청 중요한 내용들이 쉽게 풀이되어 있습니다. 처음 배우시는 분들도 쉽게 따라오실 수 있습니다.
 
@@ -27,8 +40,7 @@ year: "2025"
 
 이번 포스팅에서는 **강화학습** 내용을 정리해보고, **Q-learning**에 대해서 보다 더 상세하게 공부해보도록 하겠습니다.
 
-1. 강화학습과 Q-Learning의 기본 개념
---------------------------
+## 1. 강화학습과 Q-Learning의 기본 개념
 
 **강화학습(Reinforcement Learning, RL)**은 인공지능(AI) 에이전트가 환경과 상호작용하면서 최적의 행동을 학습하는 알고리즘입니다.
 
@@ -66,10 +78,7 @@ year: "2025"
 **Q-Learning**은 책에서 소개하는 핵심 강화학습 기법 중 하나로, **Q-Table**이라는 구조를 사용하여 각 상태에서의 행동 가치를 학습합니다.  
 (For more. Q-Table은 **"6. Q-Table이란?"**을 참고해주세요)
 
----
-
-2. 행동 가치 함수(Q-Value Function)란?
--------------------------------
+## 2. 행동 가치 함수(Q-Value Function)란?
 
 `Q-Learning`의 핵심은 **행동 가치 함수(Q-Value Function)**를 학습하는 것입니다.
 
@@ -79,10 +88,7 @@ year: "2025"
 
 * Q-값을 반복적으로 업데이트함으로써 에이전트는 더 높은 보상을 기대할 수 있는 행동을 선택하는 경향을 가지게 되며, 최적의 정책을 형성하게 됩니다.
 
----
-
-3. Q-Learning의 학습 과정
---------------------
+## 3. Q-Learning의 학습 과정
 
 Q-Learning의 학습은 **Q-Table을 반복적으로 업데이트**하는 과정으로 진행됩니다.
 
@@ -121,10 +127,7 @@ Q(S,A)=0∀S,AQ(S, A) = 0 \quad \forall S, AQ(S,A)=0∀S,A
 >   + 이는 Q-Learning과 같은 강화학습에서 **Q-값을 업데이트하는 핵심 원리**로 작용합니다.
 >   + 벨만 방정식은 **현재 상태**에서의 **최적 Q-값**을 **미래의 기대 보상(Discounted Future Reward)으로 표현**한 재귀 방정식입니다.
 
----
-
-4. ε-greedy 기법과 Exploration & Exploitation 전략
----------------------------------------------
+## 4. ε-greedy 기법과 Exploration & Exploitation 전략
 
 Q-Learning에서는 **탐색(Exploration)과 활용(Exploitation)의 균형이 중요**합니다.
 
@@ -166,10 +169,7 @@ Q-Learning에서는 **탐색(Exploration)과 활용(Exploitation)의 균형이 �
 | **경험 재사용(Experience Replay)** | 사용 어려움 | 사용 가능 (데이터 재사용 가능) |
 | **예제 알고리즘** | SARSA, PPO | Q-Learning, DQN |
 
----
-
-5. 할인율(Discount Factor)의 역할
----------------------------
+## 5. 할인율(Discount Factor)의 역할
 
 Q-Learning에서는 미래 보상의 가치를 현재 보상과 비교할 때 **할인율(Discount Factor, γ\gammaγ)**을 적용합니다.
 
@@ -184,8 +184,7 @@ Q-Learning에서는 미래 보상의 가치를 현재 보상과 비교할 때 **
 
 이 설정은 문제의 특성과 목표에 따라 달라질 수 있습니다.
 
-6. Q-Table이란?
--------------
+## 6. Q-Table이란?
 
 Q-Table은 각 상태(state)에서 가능한 행동(action)에 대한 **예상 보상 값(Q-Value)**을 저장하는 테이블입니다.
 
@@ -203,10 +202,7 @@ Q-Table의 구조는 다음과 같습니다.
 
 * 학습이 진행됨에 따라 Q-Table의 값이 점점 더 정확한 보상 예측값으로 수렴합니다.
 
----
-
-7. Q-Learning의 구현 예제
---------------------
+## 7. Q-Learning의 구현 예제
 
 > (참고용) 아래는 간단한 **Q-Learning 알고리즘을 구현하는 Python 코드**입니다.
 
@@ -257,10 +253,7 @@ print(Q_table)
 
 위 코드를 실행하면 **Q-Table이 학습되면서 최적의 행동을 찾아가는 과정**을 확인할 수 있습니다.
 
----
-
-8. Model-Based RL과 Q-Learning의 차이
----------------------------------
+## 8. Model-Based RL과 Q-Learning의 차이
 
 Q-Learning은 **Model-Free RL(모델이 없는 강화학습)** 기법입니다.
 
@@ -285,10 +278,7 @@ Q-Learning은 **Model-Free RL(모델이 없는 강화학습)** 기법입니다.
 
 > (참고) Q-Learning은 환경 모델 없이도 학습할 수 있기 때문에 **게임 AI, 로봇 제어, 네트워크 최적화 등 다양한 실제 문제에서 널리 사용됩니다.**
 
----
-
-9. Q-Learning의 한계점(?)
----------------------
+## 9. Q-Learning의 한계점(?)
 
 무작정 모든 상태(state)에 대해 Q-Table을 생성하는 것은 **낭비일 수 있습니다.**
 
@@ -326,10 +316,7 @@ Q-Learning은 **Model-Free RL(모델이 없는 강화학습)** 기법입니다.
 * **Q-Learning**은 고전적인 강화학습 알고리즘이며, 비교적 단순한 테이블 기반 접근법을 사용합니다.
 * **Deep Q-Network(DQN)** 같은 신경망 기반 강화학습 알고리즘이 등장하면서 더 확장된 형태로 발전했습니다.
 
----
-
-10. 결론
-------
+## 10. 결론
 
 이번 포스트에서는 혁펜하임님의『Easy! 딥러닝』책을 보면서 더 살펴보고 싶었던 강화학습의 심화내용과, Q-Learning에 대해서 살펴보았습니다.
 

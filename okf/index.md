@@ -50,6 +50,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Lovable](_concepts/lovable.md) - AI 앱 빌더 Lovable로 서비스를 만드는 과정과 팁.
 * [머신러닝](_concepts/machine-learning.md) - 머신러닝 알고리즘, 모델 평가, 실전 적용을 다룬 글.
 * [수학](_concepts/math.md) - 머신러닝에 필요한 수학(선형대수, 확률, 최적화) 정리.
+* [MCP](_concepts/mcp.md) - LLM과 외부 도구·데이터를 표준 방식으로 연결하는 Model Context Protocol의 개념과 서버 구현, 활용 사례.
 * [Midjourney](_concepts/midjourney.md) - 이미지 생성 도구 Midjourney의 사용법과 프롬프트 가이드.
 * [Naver](_concepts/naver.md) - 네이버의 AI 모델과 서비스, 행사 발표를 다룬 글.
 * [Network](_concepts/network.md) - 네트워크 기초와 통신 프로토콜 정리.
@@ -64,6 +65,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Python](_concepts/python.md) - 파이썬 언어 기능, 표준 라이브러리, 실전 팁.
 * [PyTorch](_concepts/pytorch.md) - PyTorch로 딥러닝 모델을 만들고 학습하는 방법.
 * [RAG](_concepts/rag.md) - 검색 증강 생성(RAG) 아키텍처와 구현.
+* [강화학습](_concepts/reinforcement-learning.md) - 보상을 최대화하는 정책을 학습하는 강화학습의 개념과 Q-Learning, DQN 등 알고리즘을 다룬 글.
 * [SK AI Summit](_concepts/sk-ai-summit.md) - SK AI Summit 세션 정리.
 * [Snippet](_concepts/snippet.md) - 자주 쓰는 코드 조각 모음.
 * [Splunk](_concepts/splunk.md) - Splunk와 SPL(Search Processing Language) 사용법.

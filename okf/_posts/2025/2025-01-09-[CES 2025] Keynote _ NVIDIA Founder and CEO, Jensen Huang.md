@@ -1,16 +1,28 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang"
+description: "토큰과 세 가지 스케일링 법칙, RTX 50 Blackwell과 DLSS 4, NVLink 72, NIM·NeMo 기반 Agentic AI 스택, Cosmos 세계 기반 모델과 로보틱스, Project DIGITS까지 젠슨 황 기조연설을 상세히 정리한다."
 date: "2025-01-09"
 tags:
+  - "NVIDIA"
   - "CES"
   - "Conference"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-NVIDIA-Founder-and-CEO-Jensen-Huang"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:41:49Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-NVIDIA-Founder-and-CEO-Jensen-Huang"
+    title: "[CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
 
-# [CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang
-
-CES 2025 엔비디아 CEO 기조연설
-----------------------
+## CES 2025 엔비디아 CEO 기조연설
 
 젠슨 황(Jensen Huang)의 CES 2025 기조연설은 엔비디아의 혁신적인 기술과 인공지능(AI)의 미래에 대한 비전을 중심으로 진행되었습니다.
 
@@ -30,8 +42,6 @@ CES 2025 엔비디아 CEO 기조연설
 >   + 1:21:37 Project DIGITS
 >   + 1:27:20 Closing
 
----
-
 ### **1. 인공지능과 토큰의 개념**
 
 젠슨 황은 영상을 통해 "토큰(token)"을 인공지능의 핵심 구성 요소로 소개하며, 이를 통해 AI가 세상을 이해하고 창조하는 과정을 설명했습니다.
@@ -46,8 +56,6 @@ CES 2025 엔비디아 CEO 기조연설
 * 이를 통해 토큰이 AI 혁신의 기반이 됨을 강조.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/433a13b2-d50f-4542-ace5-c5aecce1d222/image.png)
-
----
 
 ### **2. 엔비디아의 역사와 기술 발전**
 
@@ -65,8 +73,6 @@ CES 2025 엔비디아 CEO 기조연설
 
   + Transformer는 텍스트, 이미지, 소리뿐 아니라 물리적 데이터까지 이해 및 생성 가능.  
     ![](https://velog.velcdn.com/images/euisuk-chung/post/2dde611f-bc62-42ff-9484-7952168cdbf0/image.png)
-
----
 
 ### **3. 새로운 RTX Blackwell 아키텍처**
 
@@ -190,8 +196,6 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/23753591-1315-4744-939d-5b39168ecd86/image.png)
 
----
-
 ### **4. 인공지능의 확장과 스케일링 법칙**
 
 젠슨 황은 AI 발전을 위한 **세 가지 주요 스케일링 법칙**을 설명했습니다.
@@ -212,12 +216,6 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
   + 문제를 단계별로 나누고 여러 아이디어를 생성 및 평가.
   + 예. Agentic AI, 사고(Reasoning) -> 추론 연산량 폭발적 증가  
     ![](https://velog.velcdn.com/images/euisuk-chung/post/ad8c19ce-a42e-460b-8db9-6a15281660db/image.png)
-
----
-
-
-
----
 
 ### 5. **NVLink와 데이터 센터용 Blackwell 아키텍처**
 
@@ -268,8 +266,6 @@ NVIDIA의 **Blackwell 아키텍처**는 GeForce RTX 50 시리즈에 적용된 �
 >   + 대규모 AI 워크로드 처리에 최적화
 >   + GPU 간 지연 시간 최소화
 >   + 시스템 전체가 단일 칩처럼 효율적으로 작동
-
----
 
 ### **6. 엔비디아의 AI 에코시스템**
 
@@ -367,8 +363,6 @@ NVIDIA의 발표에서 **Windows WSL2(Windows Subsystem for Linux 2)** 기반으
   + NVIDIA는 전 세계 주요 PC 제조사와 협력하여 **RTX 50 시리즈** + **WSL2** + **NVIDIA AI 스택**이 결합된 **AI PC**를 제공할 예정.
   + 수백만 대의 Windows PC를 AI에 적합하도록 준비하고, 이를 통해 AI를 더욱 대중화할 계획.
 
----
-
 ### **7. 물리적 AI (Physical AI)와 'Cosmos' 플랫폼**
 
 **Physical AI 개념**
@@ -443,8 +437,6 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
   + Cosmos와 Omniverse는 다양한 시나리오에서 AI를 검증할 수 있는 **Multiverse Playground**를 제공합니다.
   + 로봇의 물리적 행동을 디지털로 시뮬레이션하며 실제 환경에 적용하기 전 검증 및 최적화 가능.  
     ![](https://velog.velcdn.com/images/euisuk-chung/post/021e0b2c-b42e-4d6b-b3b2-75b647982288/image.png)
-
----
 
 ### **8. 로봇틱스, 디지털 트윈 및 자율 주행**
 
@@ -570,8 +562,6 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
    * Omniverse와 Cosmos 기반의 멀티버스 시뮬레이션 엔진을 통해 로봇 정책을 학습.
    * 소프트웨어-인-루프 테스트를 통해 실제 환경에서 검증 전에 정확도를 확인.
 
----
-
 ### **9. 새로운 AI 컴퓨터 – DGX와 Project Digits**
 
 > 🌐 **DGX의 혁신**
@@ -606,8 +596,7 @@ NVIDIA의 **Cosmos**는 **물리적 AI(Physical AI)**를 위해 개발된 세계
 * 2024년 5월 출시 예정으로, AI 연구소, 중소기업, 일반 개발자들이 손쉽게 접근 가능한 **AI 슈퍼컴퓨터 생태계** 구축.
 * 데이터 분석, AI 모델 학습 및 추론, 시뮬레이션 작업에 최적화된 플랫폼으로 자리잡을 전망.
 
-**결론**
-------
+## **결론**
 
 엔비디아는 GPU 기술의 혁신에서 시작해 AI, 자율주행, 로봇 공학, 디지털 트윈 등 다양한 첨단 분야로의 확장을 통해 기술 리더십을 공고히 하고 있습니다. CES 2025에서 발표된 내용은 엔비디아가 AI와 물리적 세계의 융합, 디지털 트윈 기술, 자율주행, 로봇 공학 등에서 대규모 변화를 주도하며 미래를 설계하고자 하는 명확한 비전을 제시했습니다.
 

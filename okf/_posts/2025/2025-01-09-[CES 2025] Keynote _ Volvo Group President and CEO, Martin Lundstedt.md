@@ -1,18 +1,28 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : Volvo Group President and CEO, Martin Lundstedt"
+description: "전기 트럭·굴착기, 충전 인프라, 화석 연료 없는 철강, Daimler와의 SDV 플랫폼, Aurora와의 자율 주행 트럭 등 Volvo Group의 지속 가능한 운송 전략과 스웨덴 장관의 발표를 정리한다."
 date: "2025-01-09"
 tags:
   - "CES"
   - "Conference"
+resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-Volvo-Group-President-and-CEO-Martin-Lundstedt"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:39:24Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-Volvo-Group-President-and-CEO-Martin-Lundstedt"
+    title: "[CES 2025] Keynote : Volvo Group President and CEO, Martin Lundstedt"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
 
-# [CES 2025] Keynote : Volvo Group President and CEO, Martin Lundstedt
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/868d502a-ccee-4251-8922-19594a975acd/image.png)
 
-Kinsey의 오프닝 환영사
----------------
+## Kinsey의 오프닝 환영사
 
 * 소비자 기술 협회(Consumer Technology Association)의 회장 Kinsey가 CES 2025에 참석한 모든 이들을 환영하며 시작.
 * 교통수단은 단순히 이동을 넘어서, 연결과 새로운 가능성을 열어주는 중요한 역할을 함.
@@ -20,10 +30,7 @@ Kinsey의 오프닝 환영사
 * Volvo의 혁신은 이동성을 안전하고 효율적으로 바꾸는 데 기여하고 있음.
 * Kinsey는 Volvo의 협력적 접근 방식과 지속 가능성 목표를 강조하며 Volvo Group의 성공 요인을 소개.
 
----
-
-Martin Lundstedt의 기조연설
-----------------------
+## Martin Lundstedt의 기조연설
 
 ### Volvo Group의 비전
 
@@ -46,8 +53,6 @@ Martin Lundstedt의 기조연설
 * 교통은 GDP 증가에 기여하지만, 동시에 기후 변화, 오염, 소음 등 부정적인 영향을 초래.
 * 화석 연료 기반 시스템에서 탈피해 안전하고 지속 가능한 교통 시스템으로의 전환이 필수적.
 * Volvo는 이러한 도전에 대응하기 위해 혁신적인 기술 솔루션과 글로벌 협력을 통해 지속 가능성을 실현하고자 함.
-
----
 
 ### Volvo의 혁신 전략
 
@@ -137,10 +142,7 @@ Martin Lundstedt의 기조연설
   + 협력적 접근 방식을 통해 전기차 및 자율 주행 기술 채택을 가속화.
   + 글로벌 파트너와 함께 인프라 개발, 기술 표준화, 규제 완화 등의 과제를 해결.
 
----
-
-Volvo의 지속 가능성 노력
-----------------
+## Volvo의 지속 가능성 노력
 
 * **공급망 탈탄소화**:
 
@@ -159,10 +161,7 @@ Volvo의 지속 가능성 노력
   + Volvo는 차량 설계부터 폐기에 이르는 전 과정에서 순환 경제 원칙을 도입.
   + 재활용 및 재사용 가능한 부품과 자재를 활용하여 자원 낭비를 최소화.
 
----
-
-스웨덴의 혁신 정신과 협력
---------------
+## 스웨덴의 혁신 정신과 협력
 
 ### Ebba Busch (스웨덴 에너지, 비즈니스 및 산업부 장관)
 
@@ -189,10 +188,7 @@ Volvo의 지속 가능성 노력
   + 스웨덴은 정부와 민간 부문 간의 협력 모델을 통해 경제적, 환경적 과제를 해결.
   + 이러한 협력 모델은 Volvo와 같은 글로벌 기업의 성공을 뒷받침하며, 지속 가능한 미래로의 전환을 가속화.
 
----
-
-맺음말
----
+## 맺음말
 
 Volvo Group은 CES 2025에서 지속 가능한 미래를 향한 강력한 비전을 제시하며, 기술과 협력이 어떻게 우리의 삶과 환경에 긍정적인 영향을 미칠 수 있는지 보여주었습니다.
 

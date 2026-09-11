@@ -1,18 +1,30 @@
 ---
+type: "Guide"
 title: "[개념정리] Streamlit👑 소개 및 활용 가이드"
+description: "Streamlit 설치와 기본 실행부터 텍스트·입력 위젯·데이터·차트·지도 출력 API, 사이드바·컬럼·탭·expander 레이아웃, 포트 및 외부 접속 설정, Streamlit Cloud와 Docker 배포까지 정리한다."
 date: "2025-03-09"
 tags:
-  - "streamlit"
+  - "Streamlit"
+  - "Python"
+  - "Visualization"
   - "개념정리"
+resource: "https://velog.io/@euisuk-chung/Streamlit-소개-및-활용-가이드"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:24:02Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Streamlit-소개-및-활용-가이드"
+    title: "[개념정리] Streamlit👑 소개 및 활용 가이드"
+    author: "human:euisuk-chung"
+    last_modified: "2025-03-09"
+status: "stable"
 year: "2025"
 ---
 
-# [개념정리] Streamlit👑 소개 및 활용 가이드
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/621eb9db-c429-4097-8368-22de9a1fd72d/image.png)
 
-**1. Streamlit이란?**
--------------------
+## **1. Streamlit이란?**
 
 Streamlit은 **Python 기반의 오픈소스 웹 애플리케이션 프레임워크**로, 데이터 사이언스 및 머신러닝 모델을 **빠르게 배포하고 공유**할 수 있도록 설계된 도구입니다.
 
@@ -23,10 +35,7 @@ Streamlit은 **Python 기반의 오픈소스 웹 애플리케이션 프레임워
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c4e8061a-db86-47d4-857a-b53f8a256335/image.png)
 
----
-
-**2. Streamlit의 주요 특징**
------------------------
+## **2. Streamlit의 주요 특징**
 
 * **간편한 구현**:
 
@@ -50,10 +59,7 @@ Streamlit은 **Python 기반의 오픈소스 웹 애플리케이션 프레임워
 
   + 다양한 플러그인과 사용자 정의 컴포넌트를 활용하여 기능 확장이 가능.
 
----
-
-**3. Streamlit 설치 및 기본 실행**
----------------------------
+## **3. Streamlit 설치 및 기본 실행**
 
 ### **📌 3.1 설치**
 
@@ -276,8 +282,6 @@ frame_text.empty()
 st.button("Rerun")
 ```
 
----
-
 ### **📌 3.2 첫 번째 Streamlit 앱 실행**
 
 #### `hello_streamlit.py`
@@ -299,10 +303,7 @@ streamlit run hello_streamlit.py
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6e085630-b9ef-422b-938a-38d67454edaf/image.png)
 
----
-
-**4. Streamlit 주요 API 소개**
---------------------------
+## **4. Streamlit 주요 API 소개**
 
 > 📊 API DEMO 출력 결과 이미지는 아래 DataCamp의 출력 결과 이미지를 활용했습니다.
 >
@@ -397,8 +398,6 @@ streamlit run hello_streamlit.py
   st.latex(r"E = mc^2")
 ```
 
----
-
 ### **📌 4.2 사용자 입력 받기**
 
 * Streamlit은 다양한 입력 위젯을 제공하여 사용자로부터 데이터를 입력받을 수 있습니다.
@@ -478,8 +477,6 @@ streamlit run hello_streamlit.py
   st.write(f"선택한 색상: {color}")
 ```
 
----
-
 ### **📌 4.3 버튼 및 선택형 입력**
 
 * Streamlit은 다양한 버튼 및 선택형 입력 위젯을 제공하여 인터랙티브한 UI를 만들 수 있습니다.
@@ -558,8 +555,6 @@ streamlit run hello_streamlit.py
   rating = st.select_slider("평가를 선택하세요", ["나쁨", "보통", "좋음", "최고"])
   st.write(f"선택한 평가: {rating}")
 ```
-
----
 
 ### **📌 4.4 데이터 출력**
 
@@ -654,8 +649,6 @@ streamlit run hello_streamlit.py
 st.metric(label="LG전자", value="78,000원", delta="2.12%")
 st.metric(label="현대차", value="150,000원", delta="-1.25%")
 ```
-
----
 
 ### **📌 4.5 차트 및 지도 출력**
 
@@ -831,8 +824,6 @@ st.metric(label="현대차", value="150,000원", delta="-1.25%")
 
 > Image Source: <https://www.datacamp.com/tutorial/streamlit>
 
----
-
 ### **📌 4.6. 상태 메시지 및 진행률 표시**
 
 * Streamlit은 애플리케이션의 **현재 상태를 시각적으로 표현**할 수 있는 다양한 기능을 제공합니다. 진행률 바, 스피너(로딩 표시), 알림 메시지 등을 활용하여 사용자 경험을 향상시킬 수 있습니다.
@@ -938,10 +929,7 @@ st.metric(label="현대차", value="150,000원", delta="-1.25%")
   st.exception(RuntimeError("RuntimeError 예외 발생"))
 ```
 
----
-
-5. Streamlit Component
-----------------------
+## 5. Streamlit Component
 
 Streamlit은 다양한 UI 요소를 제공하여 애플리케이션을 보다 **구조적으로 정리하고 사용자 경험을 향상**시킬 수 있습니다. 이 장에서는 **사이드바, 컨테이너, 컬럼, 탭, 익스팬더(expander)** 등의 기능을 정리하겠습니다.
 
@@ -969,8 +957,6 @@ Streamlit의 `st.sidebar()`를 사용하면 **화면의 왼쪽**에 **고정된 
 
 * `st.sidebar.title()`, `st.sidebar.markdown()`, `st.sidebar.radio()` 등을 사용하여 사이드바 내 UI 구성 가능
 * **주요 콘텐츠를 화면 중앙에 배치하면서 설정을 사이드바에 넣어 사용자 경험을 향상**
-
----
 
 ### **📌 5.2. 여러 개의 컬럼 활용**
 
@@ -1014,8 +1000,6 @@ Streamlit에서는 `st.columns()`을 사용하여 **여러 개의 컬럼을 생�
 * 여러 개의 UI 요소를 병렬 배치 가능
 * **데이터 시각화 및 비교 분석 화면 구성에 유용**
 
----
-
 ### **📌 5.3. 컨테이너 사용하기**
 
 Streamlit에서는 `st.container()`를 사용하여 **내용을 그룹화**할 수 있습니다.
@@ -1034,8 +1018,6 @@ Streamlit에서는 `st.container()`를 사용하여 **내용을 그룹화**할 �
 
 * 특정 콘텐츠를 논리적으로 그룹화하여 **UI를 정돈**
 * **반복적인 UI 요소를 동적으로 생성할 때 유용**
-
----
 
 ### **📌 5.4. Tab(탭) 활용하기**
 
@@ -1067,8 +1049,6 @@ Streamlit의 `st.tabs()`를 사용하면 **한 화면에서 여러 개의 탭을
 * 여러 개의 정보를 한 화면에서 관리하면서도 **사용자가 선택적으로 볼 수 있도록 구성**
 * **멀티 페이지 구조를 효과적으로 구현 가능**
 
----
-
 ### **📌 5.5. Expander(펼치기) 사용하기**
 
 Streamlit에서는 `st.expander()`를 사용하여 **정보를 접고 펼치는 UI를 구현**할 수 있습니다.
@@ -1099,10 +1079,7 @@ Streamlit에서는 `st.expander()`를 사용하여 **정보를 접고 펼치는 
 * 긴 내용을 한 번에 표시하지 않고, **필요할 때만 내용을 볼 수 있도록 구성 가능**
 * **설명서, 추가 정보 제공 시 유용**
 
----
-
-**6. Streamlit 로컬 서버 실행 및 외부 접속 설정**
-------------------------------------
+## **6. Streamlit 로컬 서버 실행 및 외부 접속 설정**
 
 > (참고) 기본적으로 실행하면?
 >
@@ -1142,10 +1119,7 @@ streamlit run app.py --server.address 0.0.0.0 --server.port 8080
 > * `0.0.0.0`으로 설정하면 해당 컴퓨터의 모든 네트워크 인터페이스에서 접근 가능.
 > * 즉, 같은 네트워크의 다른 기기에서도 `http://<서버의 IP>:8080`을 통해 접근 가능.
 
----
-
-**7. Streamlit 배포하기**
----------------------
+## **7. Streamlit 배포하기**
 
 ### **📌 7.1 Streamlit Community Cloud 배포**
 

@@ -1,15 +1,27 @@
 ---
+type: "Guide"
 title: "[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드"
+description: "OpenAI Sora의 Storyboard·Re-cut·Remix·Blend·Loop 편집 기능과 요금제를 소개하고, 기본 프리셋 5종의 프롬프트 원문과 커스텀 프리셋 제작·공유 방법, CAST 프롬프트 구조를 안내한다."
 date: "2025-04-13"
 tags:
   - "OpenAI"
+  - "Prompt Engineering"
+  - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/꿀팁-Sora-AI-소개-및-Presets-기능-활용-가이드"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:27:59Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/꿀팁-Sora-AI-소개-및-Presets-기능-활용-가이드"
+    title: "[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드"
+    author: "human:euisuk-chung"
+    last_modified: "2025-04-13"
+status: "stable"
 year: "2025"
 ---
 
-# [꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드
-
-🎥 현실감 있는 AI 비디오를 만드는 생성형 모델, **Sora AI**
-----------------------------------------
+## 🎥 현실감 있는 AI 비디오를 만드는 생성형 모델, **Sora AI**
 
 OpenAI가 개발한 **Sora AI**는 텍스트만으로 사실적이고 상상력 가득한 영상을 생성할 수 있는 **텍스트-투-비디오(Text-to-Video)** 생성형 AI입니다.
 
@@ -26,10 +38,7 @@ OpenAI는 Sora를 통해 움직이는 물리 세계를 이해하고 시뮬레이
 
 > “프롬프트 한 줄로 영화 같은 장면이 만들어지는 시대가 시작되었습니다.”
 
----
-
-기능 간단 소개
---------
+## 기능 간단 소개
 
 Sora는 단순한 영상 생성 도구를 넘어서, 아래와 같은 고급 편집 기능들을 통해 보다 정교하고 창의적인 영상 제작이 가능합니다:
 
@@ -74,10 +83,7 @@ Sora는 단순한 영상 생성 도구를 넘어서, 아래와 같은 고급 편
 
 > 🍔 이 기능들을 적절히 조합하면 단순한 AI 생성 영상이 아니라, 완성도 높은 '**AI 기반 콘텐츠**'로 승화시킬 수 있습니다.
 
----
-
-요금제 및 접근 방식
------------
+## 요금제 및 접근 방식
 
 > 참고 링크 : [Sora 요금제 및 FAQ](https://help.openai.com/en/articles/10245774-sora-billing-faq)
 
@@ -97,10 +103,7 @@ Sora는 단순한 영상 생성 도구를 넘어서, 아래와 같은 고급 편
 
 해지 또는 업그레이드는 ChatGPT 설정의 **Subscription → Manage** 메뉴를 통해 진행할 수 있으며, 결제일은 가입일 기준 매월 동일하게 청구됩니다.
 
----
-
-핵심: **Presets(프리셋)** 기능
------------------------
+## 핵심: **Presets(프리셋)** 기능
 
 Presets는 `스타일`, `색감`, `조명`, `필름 질감` 등 다양한 시네마틱 요소들을 미리 정의해둔 템플릿입니다.
 
@@ -115,10 +118,7 @@ Presets는 `스타일`, `색감`, `조명`, `필름 질감` 등 다양한 시네
 | 🎨 **일관성 유지** | 하나의 프로젝트 내에서 통일된 스타일 유지에 효과적 |
 | 📘 **학습 가이드** | 스타일 요소를 자연스럽게 학습할 수 있는 최고의 시각적 매뉴얼 |
 
----
-
-프리셋 활용 전략
----------
+## 프리셋 활용 전략
 
 Sora는 창의적인 작업을 위한 강력한 도구로, 다양한 스타일과 테마를 손쉽게 적용할 수 있는 "프리셋" 설정을 제공합니다.
 
@@ -177,8 +177,7 @@ Sora 인터페이스에서 "`Presets`" 버튼을 클릭하면 사용할 수 있�
 > 🎯 **참고 자료**  
 > 참고로 저는 Sora 프리셋을 직접 제작/정리/생성 후 해당 스레드에 공유 중입니다. ([@chung\_es Threads 계정](https://www.threads.net/@chung_es)) 실사용 프리셋 예시와 함께 스타일 연구를 병행하고 있습니다.
 
-📌 기본 제공 프리셋 5종 예시
------------------
+## 📌 기본 제공 프리셋 5종 예시
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/80217c5c-fc1f-4cc5-ac73-c44e1ef499e1/image.png)
 
@@ -298,10 +297,7 @@ Lighting: 부드럽고 확산된 조명 사용.
 Content Transformation: 모든 요소(인물, 배경, 사물)가 종이와 골판지로 만들어진 듯한 질감, 주름과 접힌 자국이 보이는 수작업 질감.
 ```
 
----
-
-📖 프롬프트 작성 팁: CAST 구조
---------------------
+## 📖 프롬프트 작성 팁: CAST 구조
 
 SORA는 사물과의 상호작용이 많을수록 좋지 않은 성능이 나올 확률이 큽니다.
 
@@ -326,10 +322,7 @@ The street is damp and reflective, creating a mirror effect of the colorful ligh
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/831a3a19-b490-4070-8214-59eaf1bb5324/image.png)
 
----
-
-✨ Sora, 영상 크리에이션의 장벽을 허물다!
---------------------------
+## ✨ Sora, 영상 크리에이션의 장벽을 허물다!
 
 Sora AI는 단순한 영상 생성 툴이 아니라, **텍스트 기반 영상 창작의 새로운 기준**을 제시하고 있습니다.  
 텍스트 한 줄, 이미지 한 장이 시네마틱한 영상으로 변신하는 경험은 **AI와 창작자의 협업**이 얼마나 강력해질 수 있는지를 보여줍니다.

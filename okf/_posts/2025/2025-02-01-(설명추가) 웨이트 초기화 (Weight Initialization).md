@@ -1,13 +1,27 @@
 ---
+type: "Concept Note"
 title: "(설명추가) 웨이트 초기화 (Weight Initialization)"
+description: "LeCun, Xavier(Glorot), He(Kaiming) 초기화가 활성화 함수별로 가중치 분산을 어떻게 조절하는지 수식으로 설명하고, 시그모이드 포화와 기울기 소실 문제, PyTorch·Keras 적용 코드, 초기화 선택 기준을 정리한다."
 date: "2025-02-01"
+tags:
+  - "딥러닝"
+  - "개념정리"
+  - "PyTorch"
+resource: "https://velog.io/@euisuk-chung/설명추가-웨이트-초기화-Weight-Initialization"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:34:16Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/설명추가-웨이트-초기화-Weight-Initialization"
+    title: "(설명추가) 웨이트 초기화 (Weight Initialization)"
+    author: "human:euisuk-chung"
+    last_modified: "2025-02-01"
+status: "stable"
 year: "2025"
 ---
 
-# (설명추가) 웨이트 초기화 (Weight Initialization)
-
-1. 웨이트 초기화란?
-------------
+## 1. 웨이트 초기화란?
 
 딥러닝에서 **웨이트 초기화(Weight Initialization)**는 신경망의 가중치를 학습 전에 설정하는 과정입니다. 초기화 방식에 따라 모델의 학습 속도, 성능, 안정성이 크게 달라질 수 있습니다.
 
@@ -53,8 +67,7 @@ aj=σ(zj)a\_j = \sigma(z\_j)aj​=σ(zj​)
 4. **초기 수렴 속도 향상**
    * 적절한 초기화는 학습 초기에 손실 함수의 감소를 촉진하여 더 빠르게 수렴할 수 있도록 합니다.
 
-2. 네트워크 초기화란?
--------------
+## 2. 네트워크 초기화란?
 
 딥러닝 모델의 **네트워크 초기화(Network Initialization)**는 모델 내 모든 레이어의 가중치를 초기화하는 과정입니다. 초기화 방법을 신중하게 선택하지 않으면 학습이 비효율적으로 진행될 수 있습니다.
 
@@ -121,8 +134,7 @@ zj∼N(0,Nin⋅σx2⋅σw2)z\_j \sim \mathcal{N}(0, N\_{in} \cdot \sigma\_x^2 \c
 
 이는 아래 **3. 주요 웨이트 초기화 방법**에서 자세하게 살펴보겠습니다.
 
-3. 주요 웨이트 초기화 방법
-----------------
+## 3. 주요 웨이트 초기화 방법
 
 ### 3.0 PyTorch 및 Keras 초기화 모듈
 
@@ -151,8 +163,6 @@ initializer = GlorotUniform()  # Xavier 초기화
 initializer = HeNormal()  # He 초기화
 initializer = Orthogonal(gain=1.0)  # 직교 초기화
 ```
-
----
 
 ### 3.1 LeCun 초기화
 
@@ -247,8 +257,6 @@ from tensorflow.keras.initializers import LecunNormal
 layer = Dense(64, activation='selu', kernel_initializer=LecunNormal())
 ```
 
----
-
 ### 3.2 Xavier (Glorot) 초기화
 
 * **제안자**: Xavier Glorot & Yoshua Bengio (2010)
@@ -295,8 +303,6 @@ from tensorflow.keras.initializers import GlorotUniform
 
 layer = Dense(64, activation='tanh', kernel_initializer=GlorotUniform())
 ```
-
----
 
 ### 3.3 He (Kaiming) 초기화
 
@@ -420,10 +426,7 @@ layer = Dense(64, activation='relu', kernel_initializer=HeNormal())
 
 각 초기화 기법은 **순전파와 역전파에서 분산이 너무 커지거나 작아지는 문제를 방지**하기 위해 설계되었습니다.
 
----
-
-4. 초기화 방법 선택 기준
----------------
+## 4. 초기화 방법 선택 기준
 
 초기화 방식에 따라 학습 성능이 크게 달라질 수 있습니다.
 
@@ -476,10 +479,7 @@ layer = Dense(64, activation='relu', kernel_initializer=HeNormal())
 > * 그러나, 특정한 모델이나 실험에서는 `torch.nn.init.normal_`을 사용할 수 있습니다.
 >   + 예를 들어, **GAN(Generative Adversarial Network) 모델**의 구현에서 가중치를 초기화할 때, 평균이 0이고 표준편차가 0.02인 정규 분포를 사용하기도 합니다.
 
----
-
-5. 결론
------
+## 5. 결론
 
 웨이트 초기화는 딥러닝 모델의 첫걸음을 결정짓는 중요한 요소입니다.
 

@@ -1,25 +1,32 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : Panasonic Holdings CEO , Mr. Yuki Kusumi"
+description: "넷제로 공장과 Redwood Materials 배터리 순환, 4680 배터리, OASYS 가정 솔루션, Blue Yonder 공급망 AI, 웰빙 코치 Umi와 Anthropic 협력 등 파나소닉의 지속 가능성·AI 전략을 정리한다."
 date: "2025-01-09"
 tags:
   - "CES"
   - "Conference"
+resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-Mr.-Yuki-Kusumi-group-CEO-Panasonic-Holdings"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:41:27Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-Mr.-Yuki-Kusumi-group-CEO-Panasonic-Holdings"
+    title: "[CES 2025] Keynote : Panasonic Holdings CEO , Mr. Yuki Kusumi"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
 
-# [CES 2025] Keynote : Panasonic Holdings CEO , Mr. Yuki Kusumi
-
-발표 순서
------
+## 발표 순서
 
 1. **CTA Vice President 겸 CEO, Gary Shapiro**
 2. **CTA President, Kinsey Fabrizio**
 3. **Panasonic Holdings Group CEO, Yuki Kusumi**
 
----
-
-**게리 J. 샤피로의 발표 요약**
---------------------
+## **게리 J. 샤피로의 발표 요약**
 
 게리는 CES의 비전인 **“우리의 연결성이 세상의 문제를 해결하고 무한한 가능성을 제공한다”**를 강조하며 시작했습니다.
 
@@ -45,10 +52,7 @@ year: "2025"
 
 그는 이러한 기술들이 어떻게 더 나은 세상을 구축할 수 있는지를 강조하며, 기술과 인간의 상호작용이 미래를 결정짓는 핵심 요소임을 역설했습니다.
 
----
-
-**Kinsey Fabrizio의 발표 요약**
---------------------------
+## **Kinsey Fabrizio의 발표 요약**
 
 Kinsey는 기술이 개인의 삶에 미치는 긍정적인 영향과 **CES가 전 세계 기술 혁신을 공유하는 장**이라는 점을 강조했습니다.
 
@@ -115,8 +119,7 @@ Kinsey는 특히 개인화된 기술 솔루션이 **건강 관리와 접근성�
 
 > 아니 Captin America 형이 왜 여기 나오냐고 ㅋㅋㅋ
 
-**유키 쿠스미(Yuki Kusumi)의 발표 정리**
-------------------------------
+## **유키 쿠스미(Yuki Kusumi)의 발표 정리**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/36d9c8ff-a237-48d4-886e-39d25b4b01a3/image.png)
 
@@ -157,8 +160,6 @@ Kinsey는 특히 개인화된 기술 솔루션이 **건강 관리와 접근성�
 
 * 그는 에너지 효율성과 지속 가능성의 결합이 기술 혁신의 중심임을 명확히 하며, 이러한 비전이 기업의 미래를 정의한다고 역설했습니다.
 
----
-
 ### 2. **EV 배터리 시장 리더십**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6480b129-961a-45df-90ea-f0d208e8f6f5/image.png)
@@ -174,8 +175,6 @@ Kinsey는 특히 개인화된 기술 솔루션이 **건강 관리와 접근성�
 유키는 특히 북미 지역에서의 성과를 강조하며, 미국 네바다 공장에서 생산되는 EV 배터리가 Tesla와 같은 파트너사를 통해 수백만 대의 전기 자동차에 동력을 공급하고 있다고 설명했습니다.
 
 * 그는 또한 캔자스 공장에서의 추가적인 투자와 확장이 북미 시장에서의 경쟁력을 강화할 것이라고 덧붙였습니다.
-
----
 
 ### 3. **지속 가능한 가정 솔루션**
 
@@ -234,8 +233,6 @@ OASYS는 에너지 효율성과 가정 내 웰빙을 동시에 충족하는 **�
 ![](https://velog.velcdn.com/images/euisuk-chung/post/26594ec7-a874-4bb3-bef8-011f5b339082/image.png)
 
 유키는 파나소닉이 내부적으로 에너지 효율성을 개선하고 외부적으로 고객과 파트너와 협력하여 탄소 배출 감소를 실현하고 있다고 설명했습니다. 그는 이러한 노력이 단순히 기업의 지속 가능성을 넘어 전 세계적으로 긍정적인 영향을 미친다고 덧붙였습니다.
-
----
 
 ### 5. **Panasonic GO: AI와 소프트웨어 중심의 비즈니스 혁신**
 
@@ -315,8 +312,6 @@ Panasonic GO는 파나소닉이 하드웨어 중심 기업에서 소프트웨어
 
 * 그는 Blue Yonder를 통해 공급망 관리에서의 효율성을 높이고, Umi와 같은 개인화된 웰빙 플랫폼을 통해 고객과의 정서적 연결을 강화하며, 이를 통해 기업 가치를 장기적으로 높이는 것을 목표로 하고 있다고 설명했습니다.
 
----
-
 ### 6. **윤리적 AI와 협력**
 
 **Anthropic과의 파트너십: 윤리적 AI의 선구자**
@@ -338,10 +333,7 @@ Yoky Matsuoka(CEO of Panasonic Well)은 Anthropic과의 협력을 통해 파나�
 
 그녀는 AI 기술이 불평등한 의료 접근성을 해소하고, 지속 가능한 웰빙 솔루션을 통해 전 세계 사용자들에게 실질적인 가치를 제공할 것이라고 설명했습니다.
 
----
-
-**결론**
-------
+## **결론**
 
 유키 쿠스미는 파나소닉의 혁신과 지속 가능성 비전을 통해 세상을 변화시키겠다는 의지를 강조하며 발표를 마무리했습니다. 그는 파나소닉이 단순한 기술 혁신을 넘어, 지속 가능한 미래를 설계하고 전 세계 사회에 긍정적인 영향을 미치기 위해 노력하고 있음을 설명했습니다.
 

@@ -1,16 +1,27 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet"
+description: "AI Refinery 플랫폼과 산업별 AI 에이전트, 기술적·정서적 신뢰와 인력 재교육, KION과의 물리적 AI·디지털 트윈 협력, AI 보안과 규제까지 Accenture의 기업 AI 도입 전략을 정리한다."
 date: "2025-01-09"
 tags:
   - "CES"
   - "Conference"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-Accenture-Chair-and-CEO-Julie-Sweet"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:39:00Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-Accenture-Chair-and-CEO-Julie-Sweet"
+    title: "[CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
 
-# [CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet
-
-연설 개요
------
+## 연설 개요
 
 CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 Accenture의 혁신과 업적을 소개하며, 기술 트렌드를 주도하고 있는 Accenture를 환영했습니다.
 
@@ -26,10 +37,7 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 > * 주요 사업 영역으로는 경영 컨설팅, IT 서비스, 아웃소싱, 디지털 마케팅 등이 있으며, 클라우드 컴퓨팅, AI, 데이터 분석 등 최신 기술을 활용한 서비스를 제공합니다.
 > * 120개국 이상에서 사업을 운영하며, 포춘 글로벌 500대 기업의 75% 이상이 고객일 정도로 강력한 글로벌 입지를 자랑합니다.
 
----
-
-주요 발표 내용
---------
+## 주요 발표 내용
 
 ### 1. Accenture의 기술과 혁신
 
@@ -62,8 +70,6 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 
 > 출처 : <https://aimagazine.com/articles/nvidia-accenture-join-to-bring-agentic-ai-to-enterprises>
 
----
-
 ### 2. AI 신뢰 구축과 변화 관리
 
 * **신뢰의 중요성**
@@ -83,8 +89,6 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
     - 예: 프롬프트 엔지니어링(prompt engineering) 등 새로운 직무 등장.
   + Accenture는 직원들의 기술 향상을 위해 매년 10억 달러 이상을 투자하고 있으며, 이는 조직 전반의 AI 도입 가속화를 지원합니다.
   + 또한, 조직은 AI 도입으로 인해 불필요해지는 역할을 새로운 기회로 전환하는 데 주력해야 하며, 공공 및 민간 부문 간의 협력을 통해 교육과 직업 훈련 프로그램을 확장해야 합니다.
-
----
 
 ### 3. 물리적 AI와 디지털 트윈
 
@@ -111,8 +115,6 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
 
 > 출처 : <https://digitalfocus.news/bbs/board.php?bo_table=news&wr_id=7613&page=6>
 
----
-
 ### 4. AI와 보안
 
 * **AI를 활용한 보안 강화**
@@ -129,10 +131,7 @@ CES 2025에서 Consumer Technology Association(CTA) 회장인 Kinsey Pbrisio는 
   + AI 규제는 데이터 프라이버시, 알고리즘 공정성, 그리고 윤리적 사용을 보장하기 위한 초석으로 간주됩니다.
   + Accenture는 정부와 기업 간의 협력을 통해 AI 규제 환경을 조성하며, 이를 통해 혁신과 책임 있는 기술 사용 간의 균형을 유지하는 데 기여하고 있습니다.
 
----
-
-맺음말
----
+## 맺음말
 
 CES 2025에서 Accenture의 Julie Sweet는 기술이 단순히 혁신의 도구가 아니라, 기업과 개인이 더 나은 미래를 만들어가는 핵심이라는 점을 다시 한 번 강조했습니다. 그녀의 비전은 AI와 같은 첨단 기술이 단순히 작업 효율을 높이는 것을 넘어, 새로운 산업 모델을 창출하고, 지속 가능한 발전에 기여할 수 있음을 보여줍니다.
 

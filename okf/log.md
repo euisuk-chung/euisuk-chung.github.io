@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-11
+* **Update**: Migrated 46 posts of batch 2025a ([2025](_posts/2025/)) to OKF front matter and ATX headings; added concepts: mcp,reinforcement-learning.
 * **Update**: Migrated 37 posts of batch 2024c ([2024](_posts/2024/)) to OKF front matter and ATX headings.
 * **Update**: Migrated 42 posts of batch 2024b ([2024](_posts/2024/)) to OKF front matter and ATX headings; added concepts: data-analysis,state-space-model.
 * **Update**: Migrated 42 posts of batch 2024a ([2024](_posts/2024/)) to OKF front matter and ATX headings.

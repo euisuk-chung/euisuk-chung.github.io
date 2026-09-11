@@ -1,20 +1,33 @@
 ---
+type: "Concept Note"
 title: "(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명"
+description: "언어 모델 평가 지표인 Perplexity의 정의와 엔트로피와의 관계, BLEU 스코어의 n-그램 정밀도와 Brevity Penalty 계산 과정 및 한계를 수식과 함께 정리한다."
 date: "2025-01-26"
+tags:
+  - "NLP"
+  - "개념정리"
+  - "도서리뷰"
+resource: "https://velog.io/@euisuk-chung/설명추가-Perplexity와-BLEU-스코어에-대한-상세-정리"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:36:52Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/설명추가-Perplexity와-BLEU-스코어에-대한-상세-정리"
+    title: "(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-26"
+status: "stable"
 year: "2025"
 ---
-
-# (설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/748459ec-3899-4e1c-8cea-1f705a3e09db/image.png)
 
 책 19쪽에 해당 스코어에 대한 언급은 있지만, 개인적으로 좀 더 정리가 필요하다고 생각하여 아래와 같이 정리를 수행하였습니다.
 
-**Perplexity**
-==============
+# **Perplexity**
 
-**1. Perplexity란 무엇인가?**
-------------------------
+## **1. Perplexity란 무엇인가?**
 
 * Perplexity는 "혼란도"라는 뜻으로, 언어 모델이 주어진 문장을 얼마나 잘 예측했는지를 측정하는 지표입니다.
 * 낮은 Perplexity 값은 모델이 주어진 텍스트를 잘 예측했음을 나타내며, 높은 Perplexity 값은 모델이 텍스트를 예측하는 데 어려움을 겪었음을 의미합니다.
@@ -25,8 +38,7 @@ year: "2025"
 
 > Source: <https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3>
 
-**2. Perplexity의 정의**
----------------------
+## **2. Perplexity의 정의**
 
 Perplexity는 다음과 같이 정의됩니다:
 
@@ -41,8 +53,7 @@ PP(W)=P(W)−1/NPP(W) = P(W)^{-{1}/{N}}PP(W)=P(W)−1/N
 
 PP(W)=e−1Nlog⁡P(W)PP(W) = e^{-\frac{1}{N} \log P(W)}PP(W)=e−N1​logP(W)
 
-**3. Perplexity의 계산 과정**
-------------------------
+## **3. Perplexity의 계산 과정**
 
 1. **문장 WWW의 확률 계산**:  
    문장 WWW는 각 단어의 조건부 확률로 계산됩니다:
@@ -65,16 +76,14 @@ PP(W)=e−1Nlog⁡P(W)PP(W) = e^{-\frac{1}{N} \log P(W)}PP(W)=e−N1​logP(W)
 
    이 계산 결과는 언어 모델이 단어를 얼마나 효율적으로 예측했는지 나타냅니다.
 
-**4. Perplexity의 직관적 해석**
--------------------------
+## **4. Perplexity의 직관적 해석**
 
 * Perplexity는 모델이 단어 시퀀스를 예측하는 **평균적인 복잡도**를 나타냅니다.
 * **낮은 Perplexity 값**: 모델이 주어진 문장을 잘 예측 → 선택지가 적음.
 * **높은 Perplexity 값**: 모델이 주어진 문장을 잘 예측하지 못함 → 선택지가 많음.
 * Perplexity 값이 작을수록 모델의 예측이 더 정확하며, 언어 모델이 더 적합하다는 것을 의미합니다.
 
-**5. Perplexity에서 지수 −1N-\frac{1}{N}−N1​을 사용하는 이유**
----------------------------------------------------
+## **5. Perplexity에서 지수 −1N-\frac{1}{N}−N1​을 사용하는 이유**
 
 1. **정규화를 통해 평균화**:
 
@@ -93,24 +102,19 @@ PP(W)=e−1Nlog⁡P(W)PP(W) = e^{-\frac{1}{N} \log P(W)}PP(W)=e−N1​logP(W)
 
      PP=eHPP = e^HPP=eH
 
-**6. Perplexity의 활용**
----------------------
+## **6. Perplexity의 활용**
 
 * Perplexity는 언어 모델의 성능을 측정하는 데 사용됩니다.
 * 모델이 특정 문맥에서 단어를 얼마나 정확히 예측하는지 평가하여, 학습된 모델의 품질을 나타냅니다.
   + 예를 들어, 번역 모델, 음성 인식 모델 등에서 모델 성능을 정량적으로 비교하는 데 유용합니다.
 
----
-
-**BLEU (Bilingual Evaluation Understudy) Score**
-================================================
+# **BLEU (Bilingual Evaluation Understudy) Score**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1be64c56-8b4a-4bf6-92e2-6a82df5ccdc4/image.png)
 
 > Source: <https://www.slideserve.com/cassius/overview-of-bleu>
 
-**1. BLEU 스코어란 무엇인가?**
-----------------------
+## **1. BLEU 스코어란 무엇인가?**
 
 * BLEU(Bilingual Evaluation Understudy) 스코어는 기계 번역에서 생성된 번역문과 **참조 번역문(reference translation)** 간의 **유사도**를 측정하는 자동 평가 지표입니다.
 * 번역된 문장의 **정확성(accuracy)**을 평가하며, 인간 번역과 얼마나 유사한지를 수치화합니다.
@@ -122,8 +126,7 @@ PP(W)=e−1Nlog⁡P(W)PP(W) = e^{-\frac{1}{N} \log P(W)}PP(W)=e−N1​logP(W)
 
 > Source: <https://www.slideserve.com/cassius/overview-of-bleu>
 
-**2. BLEU 스코어의 정의**
--------------------
+## **2. BLEU 스코어의 정의**
 
 BLEU는 다음과 같은 주요 요소를 기반으로 정의됩니다:
 
@@ -135,8 +138,7 @@ BLEU=BP⋅exp⁡(∑n=1Nwn⋅log⁡Pn)BLEU = BP \cdot \exp \left( \sum\_{n=1}^{N
 * **가중치 (wnw\_nwn​)**: 각 nnn-그램에 대한 중요도를 설정 (일반적으로 동일한 가중치).
 * **Brevity Penalty (BP)**: 번역문의 길이가 참조 번역문과 비교해 너무 짧을 때 패널티를 부과.
 
-**3. BLEU 계산 과정**
------------------
+## **3. BLEU 계산 과정**
 
 1. **nnn-그램 유사도 계산**:
 
@@ -159,16 +161,14 @@ BLEU=BP⋅exp⁡(∑n=1Nwn⋅log⁡Pn)BLEU = BP \cdot \exp \left( \sum\_{n=1}^{N
 
    * BLEU는 여러 nnn-그램의 유사도를 종합하여 최종 점수를 계산합니다.
 
-**4. BLEU 스코어의 직관적 해석**
------------------------
+## **4. BLEU 스코어의 직관적 해석**
 
 * BLEU는 생성된 번역이 참조 번역과 얼마나 유사한지를 수치화합니다.
 
   + PnP\_nPn​: 각 nnn-그램에 대해 얼마나 일치했는지를 측정.
   + BLEU는 nnn-그램 Precision 값을 종합하여, 번역문의 **정확성**뿐만 아니라 **유창성**을 함께 평가합니다.
 
-**5. BLEU 스코어의 한계**
--------------------
+## **5. BLEU 스코어의 한계**
 
 1. **문맥 및 의미 무시**:
 
@@ -180,8 +180,7 @@ BLEU=BP⋅exp⁡(∑n=1Nwn⋅log⁡Pn)BLEU = BP \cdot \exp \left( \sum\_{n=1}^{N
 
    * 길이 패널티가 적용되더라도 짧은 문장에서 BLEU의 평가가 왜곡될 가능성이 있습니다.
 
-**6. BLEU의 활용**
----------------
+## **6. BLEU의 활용**
 
 * BLEU는 **기계 번역 모델**의 성능을 비교하는 데 널리 사용됩니다.
 * **번역 품질 자동 평가**:
@@ -189,16 +188,12 @@ BLEU=BP⋅exp⁡(∑n=1Nwn⋅log⁡Pn)BLEU = BP \cdot \exp \left( \sum\_{n=1}^{N
 * **모델 성능 개선**:
   + BLEU 점수를 기준으로 모델을 최적화하는 데 활용.
 
-**7. BLEU와 Perplexity의 비교**
----------------------------
+## **7. BLEU와 Perplexity의 비교**
 
 * BLEU는 번역 품질을 평가하는 데 중점을 두며, Perplexity는 언어 모델의 일반적인 예측 성능을 측정합니다.
 * 두 지표는 상호 보완적으로 사용되며, 각각 다른 측면에서 모델 성능을 평가합니다.
 
----
-
-**요약**
-======
+# **요약**
 
 * Perplexity와 BLEU는 모두 언어 모델의 성능을 평가하는 중요한 지표입니다.
   + **Perplexity**는 모델이 단어를 얼마나 잘 예측했는지를 측정하며, 낮을수록 성능이 우수합니다.

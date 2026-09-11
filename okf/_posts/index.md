@@ -86,52 +86,52 @@
 * [ChatGPT를 진짜 "쓸모 있게" 만드는 간단한 방법](2025/2025-05-12-ChatGPT를 진짜 _쓸모 있게_ 만드는 간단한 방법.md)
 * [미드저니(Midjourney) 기초 가이드](2025/2025-05-01-미드저니(Midjourney) 기초 가이드.md)
 * [[꿀팁] 미드저니(Midjourney) 기초 가이드](2025/2025-05-01-[꿀팁] 미드저니(Midjourney) 기초 가이드.md)
-* [[개념] API에 대해서 이해해보자!](2025/2025-04-27-[개념] API에 대해서 이해해보자!.md)
-* [💻 내가 보려고 작성한 UV 완벽 가이드](2025/2025-04-24-💻 내가 보려고 작성한 UV 완벽 가이드.md)
-* [내가 보려고 정리한 터미널 함수 25선](2025/2025-04-24-내가 보려고 정리한 터미널 함수 25선.md)
-* [[꿀팁] 사람처럼 글을 쓰는 프롬프팅 팁](2025/2025-04-18-[꿀팁] 사람처럼 글을 쓰는 프롬프팅 팁.md)
-* [[꿀팁] 웹사이트를 앱처럼! + Win 단축키로 초간편 실행하는 꿀팁 (💻 + 🔢)](2025/2025-04-17-[꿀팁] 웹사이트를 앱처럼! + Win 단축키로 초간편 실행하는 꿀팁 (💻 + 🔢).md)
-* [OpenAI, o3 & o4-mini 공개: AI 추론의 진화](2025/2025-04-17-OpenAI, o3 and o4-mini 공개_ AI 추론의 진화.md)
-* [OpenAI, 개발자용 API GPT 4.1 공개](2025/2025-04-15-OpenAI, 개발자용 API GPT 4.1 공개.md)
-* [[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드](2025/2025-04-13-[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드.md)
-* [Google NotebookLM: 나만의 AI 지식 비서](2025/2025-04-11-Google NotebookLM_ 나만의 AI 지식 비서.md)
-* [Google Cloud Next 2025 Opening Keynote 정리](2025/2025-04-11-Google Cloud Next 2025 Opening Keynote 정리.md)
-* [[개념] 모델 컨텍스트 프로토콜(MCP) 완전 정복](2025/2025-03-29-[개념] 모델 컨텍스트 프로토콜(MCP) 완전 정복.md)
-* [OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대](2025/2025-03-26-OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대.md)
-* [OpenAI, Audio Models in the API 출시](2025/2025-03-22-OpenAI, Audio Models in the API 출시.md)
-* [[인터뷰] NVIDIA CEO 젠슨황이 말하는 AI의 미래](2025/2025-03-15-[인터뷰] NVIDIA CEO 젠슨황이 말하는 AI의 미래.md)
-* [OpenAI, 새로운 에이전트 개발 도구 발표](2025/2025-03-12-OpenAI, 새로운 에이전트 개발 도구 발표.md)
-* [[개념정리] 메타-분석과 서베이 페이퍼](2025/2025-03-09-[개념정리] 메타-분석과 서베이 페이퍼.md)
-* [[개념정리] Streamlit👑 소개 및 활용 가이드](2025/2025-03-09-[개념정리] Streamlit👑 소개 및 활용 가이드.md)
-* [[머신러닝] 로지스틱 회귀 모델 (Logistic Regression)](2025/2025-03-07-[머신러닝] 로지스틱 회귀 모델 (Logistic Regression).md)
-* [[꿀팁] VS Code 특정 버전 설치 및 다운그레이드 방법](2025/2025-03-06-[꿀팁] VS Code 특정 버전 설치 및 다운그레이드 방법.md)
-* [[Pandas] 판다스 피클(.pkl) 파일의 압축 방식 비교](2025/2025-03-04-[Pandas] 판다스 피클(.pkl) 파일의 압축 방식 비교.md)
-* [OpenAI, 더 자연스럽고 지능적인 대화 능력을 갖춘 GPT-4.5 출시](2025/2025-02-28-OpenAI, 더 자연스럽고 지능적인 대화 능력을 갖춘 GPT-4.5 출시.md)
-* [[도서리뷰] 경사 하강법 계보 정리(혁펜하임의 『Easy! 딥러닝』)](2025/2025-02-08-[도서리뷰] 경사 하강법 계보 정리(혁펜하임의 『Easy! 딥러닝』).md)
-* [OpenAI, Deep Research 기능 공개](2025/2025-02-04-OpenAI, Deep Research 기능 공개.md)
-* [OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시](2025/2025-02-01-OpenAI o3-mini_ 새로운 비용 효율적 AI 모델 출시.md)
-* [(설명추가) 웨이트 초기화 (Weight Initialization)](2025/2025-02-01-(설명추가) 웨이트 초기화 (Weight Initialization).md)
-* [(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해](2025/2025-01-31-(설명추가) Q-Learning_ 강화학습의 핵심 개념과 이해.md)
-* [[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법](2025/2025-01-29-[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법.md)
-* [[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법](2025/2025-01-28-[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법.md)
-* [[NLP] 6. Topic Modeling이란?](2025/2025-01-28-[NLP] 6. Topic Modeling이란_.md)
-* [[NLP] 5. 자연어 차원 축소(Dimension Reduction) 기법](2025/2025-01-28-[NLP] 5. 자연어 차원 축소(Dimension Reduction) 기법.md)
-* [(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명](2025/2025-01-27-(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명.md)
-* [(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명](2025/2025-01-26-(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명.md)
-* [[도서소개] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』](2025/2025-01-25-[도서소개] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』.md)
-* [[도서리뷰] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』](2025/2025-01-25-[도서리뷰] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』.md)
-* [[OpenAI] Operator & Agents : Computer-Using Agent](2025/2025-01-24-[OpenAI] Operator and Agents _ Computer-Using Agent.md)
-* [[OpenAI] Introduction to Operator & Agents : Computer-Using Agent](2025/2025-01-24-[OpenAI] Introduction to Operator and Agents _ Computer-Using Agent.md)
-* [[꿀팁] 유니코드 문자표 모음집 사이트 소개!!](2025/2025-01-22-[꿀팁] 유니코드 문자표 모음집 사이트 소개!!.md)
-* [ChatGPT Tasks: 혁신적인 작업 관리 도구](2025/2025-01-18-ChatGPT Tasks_ 혁신적인 작업 관리 도구.md)
-* [[CES 2025] Keynote : Volvo Group President and CEO, Martin Lundstedt](2025/2025-01-09-[CES 2025] Keynote _ Volvo Group President and CEO, Martin Lundstedt.md)
-* [[CES 2025] Keynote : SiriusXM CEO, Jennifer Witz](2025/2025-01-09-[CES 2025] Keynote _ SiriusXM CEO, Jennifer Witz.md)
-* [[CES 2025] Keynote : Panasonic Holdings CEO , Mr. Yuki Kusumi](2025/2025-01-09-[CES 2025] Keynote _ Panasonic Holdings CEO , Mr. Yuki Kusumi.md)
-* [[CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang](2025/2025-01-09-[CES 2025] Keynote _ NVIDIA Founder and CEO, Jensen Huang.md)
-* [[CES 2025] Keynote : CEO of X Corp, Linda Yaccarino](2025/2025-01-09-[CES 2025] Keynote _ CEO of X Corp, Linda Yaccarino.md)
-* [[CES 2025] Keynote : CEO of Delta, Ed Bastian](2025/2025-01-09-[CES 2025] Keynote _ CEO of Delta, Ed Bastian.md)
-* [[CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet](2025/2025-01-09-[CES 2025] Keynote _ Accenture Chair and CEO, Julie Sweet.md)
-* [제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊](2025/2025-01-05-제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊.md)
+* [[개념] API에 대해서 이해해보자!](2025/2025-04-27-[개념] API에 대해서 이해해보자!.md) - API의 요청·응답 구조와 동기/비동기 통신, REST·GraphQL·gRPC·JSON-RPC 형식, HTTP·WebSocket·SSE·STDIO 프로토콜, FastAPI를 설명하고 Python requests로 Kakao 검색 API를 호출하는 예제를 다룬다.
+* [💻 내가 보려고 작성한 UV 완벽 가이드](2025/2025-04-24-💻 내가 보려고 작성한 UV 완벽 가이드.md) - Rust 기반 Python 환경 관리 도구 UV의 설치, Python 버전 관리, uv init·venv·sync, uv add와 uv tool·uvx의 차이, 실무 프로젝트 템플릿과 기존 도구 대비 성능까지 정리한다.
+* [내가 보려고 정리한 터미널 함수 25선](2025/2025-04-24-내가 보려고 정리한 터미널 함수 25선.md) - ls, cp, rm, find, grep, xargs, tee, history 등 자주 쓰는 리눅스 명령어 25개를 Windows PowerShell의 대응 cmdlet(Get-ChildItem, Select-String 등)과 나란히 비교한 치트시트다.
+* [[꿀팁] 사람처럼 글을 쓰는 프롬프팅 팁](2025/2025-04-18-[꿀팁] 사람처럼 글을 쓰는 프롬프팅 팁.md) - ChatGPT의 기계적인 문체를 벗어나 친근한 대화체, 개인 경험, 감정 강조, 질문, 유머, 비유, 행동 유도 마무리 등 사람처럼 자연스러운 글을 얻기 위한 10가지 프롬프트 템플릿과 활용 팁을 정리한다.
+* [[꿀팁] 웹사이트를 앱처럼! + Win 단축키로 초간편 실행하는 꿀팁 (💻 + 🔢)](2025/2025-04-17-[꿀팁] 웹사이트를 앱처럼! + Win 단축키로 초간편 실행하는 꿀팁 (💻 + 🔢).md) - Chrome과 Edge에서 자주 쓰는 웹사이트를 독립 앱으로 설치하고, 작업 표시줄에 고정한 뒤 Win+숫자 단축키로 즉시 실행하는 Windows 생산성 팁을 소개한다.
+* [OpenAI, o3 & o4-mini 공개: AI 추론의 진화](2025/2025-04-17-OpenAI, o3 and o4-mini 공개_ AI 추론의 진화.md) - OpenAI 라이브스트림을 바탕으로 o3·o4-mini의 도구 기반 연쇄 추론 구조, AIME·Codeforces·SWE-bench 벤치마크, 데모 사례, 비용 대비 효율, 가격표와 오픈소스 Codex CLI까지 정리한다.
+* [OpenAI, 개발자용 API GPT 4.1 공개](2025/2025-04-15-OpenAI, 개발자용 API GPT 4.1 공개.md) - GPT-4.1·mini·nano 세 모델의 100만 토큰 컨텍스트, SWE-bench·Aider Polyglot·MultiChallenge 등 벤치마크에서 GPT-4o 대비 향상 폭, 알파 테스터 사례와 토큰당 가격 정책을 정리한다.
+* [[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드](2025/2025-04-13-[꿀팁] Sora AI 소개 및 Presets 기능 활용 가이드.md) - OpenAI Sora의 Storyboard·Re-cut·Remix·Blend·Loop 편집 기능과 요금제를 소개하고, 기본 프리셋 5종의 프롬프트 원문과 커스텀 프리셋 제작·공유 방법, CAST 프롬프트 구조를 안내한다.
+* [Google NotebookLM: 나만의 AI 지식 비서](2025/2025-04-11-Google NotebookLM_ 나만의 AI 지식 비서.md) - Google NotebookLM의 출처 인용 기반 문서 Q&A, Notebook Guide, AI 팟캐스트 오디오 오버뷰, FAQ·학습 가이드 자동 생성 기능을 소개하고 7단계 사용법과 추천 프롬프트를 정리한다.
+* [Google Cloud Next 2025 Opening Keynote 정리](2025/2025-04-11-Google Cloud Next 2025 Opening Keynote 정리.md) - Google Cloud Next 2025 키노트를 시간순으로 따라가며 Ironwood TPU와 AI Hypercomputer, Gemini 2.5, Vertex AI, ADK·MCP·A2A 기반 멀티에이전트 전략과 고객·창작·데이터·코드 에이전트 사례를 정리한다.
+* [[개념] 모델 컨텍스트 프로토콜(MCP) 완전 정복](2025/2025-03-29-[개념] 모델 컨텍스트 프로토콜(MCP) 완전 정복.md) - LLM과 외부 도구를 연결하는 표준 규약 MCP를 USB-C에 비유해 설명하고, Host·Client·Server 3계층 구조와 JSON-RPC 통신 흐름, FastMCP로 툴을 만드는 예제까지 다룬다.
+* [OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대](2025/2025-03-26-OpenAI, GPT‑4o 이미지 생성 기능 소개 – AI 이미지 생성의 새로운 시대.md) - GPT-4o 네이티브 이미지 생성의 멀티턴 편집, 정밀 지시 반영, 인컨텍스트 학습, 텍스트 렌더링 등 6가지 기능을 OpenAI 데모와 공식 예시 프롬프트, 직접 생성한 결과물로 살펴본다.
+* [OpenAI, Audio Models in the API 출시](2025/2025-03-22-OpenAI, Audio Models in the API 출시.md) - GPT-4o-transcribe STT 모델과 지시 기반 음성 합성을 지원하는 GPT-4o-mini-TTS의 특징, FLEURS 벤치마크 결과, Agents SDK VoicePipeline으로 텍스트 에이전트를 음성 에이전트로 확장하는 방법을 소개한다.
+* [[인터뷰] NVIDIA CEO 젠슨황이 말하는 AI의 미래](2025/2025-03-15-[인터뷰] NVIDIA CEO 젠슨황이 말하는 AI의 미래.md) - Cleo Abram과의 인터뷰를 바탕으로 CUDA와 AlexNet이 이끈 GPU 병렬 연산의 역사, Omniverse·Cosmos 기반 로봇 학습, Physical AI와 디지털 생물학에 대한 젠슨 황의 전망을 정리한다.
+* [OpenAI, 새로운 에이전트 개발 도구 발표](2025/2025-03-12-OpenAI, 새로운 에이전트 개발 도구 발표.md) - OpenAI가 발표한 Responses API의 상태 유지·내장 도구(Web Search, File Search, Computer Use) 기능과 Agents SDK의 handoff·guardrails 구조를 Chat Completions API와 코드로 비교한다.
+* [[개념정리] 메타-분석과 서베이 페이퍼](2025/2025-03-09-[개념정리] 메타-분석과 서베이 페이퍼.md) - 메타분석과 서베이 페이퍼의 목적과 절차를 비교하고, p-value·이질성·출판 편향·포레스트 플롯 등 메타분석 핵심 개념과 서베이 논문 작성 단계를 정리한다.
+* [[개념정리] Streamlit👑 소개 및 활용 가이드](2025/2025-03-09-[개념정리] Streamlit👑 소개 및 활용 가이드.md) - Streamlit 설치와 기본 실행부터 텍스트·입력 위젯·데이터·차트·지도 출력 API, 사이드바·컬럼·탭·expander 레이아웃, 포트 및 외부 접속 설정, Streamlit Cloud와 Docker 배포까지 정리한다.
+* [[머신러닝] 로지스틱 회귀 모델 (Logistic Regression)](2025/2025-03-07-[머신러닝] 로지스틱 회귀 모델 (Logistic Regression).md) - 오즈와 오즈 비의 해석부터 시그모이드·로짓 변환으로 정의되는 로지스틱 회귀, 최대 우도 추정과 Binary Cross-Entropy의 관계, 회귀계수·p-value·Odds Ratio 결과 해석까지 정리한다.
+* [[꿀팁] VS Code 특정 버전 설치 및 다운그레이드 방법](2025/2025-03-06-[꿀팁] VS Code 특정 버전 설치 및 다운그레이드 방법.md) - Windows에서 VS Code를 제거하고 update.code.visualstudio.com URL을 편집해 특정 버전의 유저/시스템 설치 파일을 받는 방법과 update.mode 설정으로 자동 업데이트를 막는 방법을 설명한다.
+* [[Pandas] 판다스 피클(.pkl) 파일의 압축 방식 비교](2025/2025-03-04-[Pandas] 판다스 피클(.pkl) 파일의 압축 방식 비교.md) - Pandas to_pickle/read_pickle에서 지원하는 gzip, bz2, zip, xz 압축 방식의 압축률과 속도, 호환성을 비교하고 상황별로 어떤 방식을 선택할지 예제 코드와 함께 정리한다.
+* [OpenAI, 더 자연스럽고 지능적인 대화 능력을 갖춘 GPT-4.5 출시](2025/2025-02-28-OpenAI, 더 자연스럽고 지능적인 대화 능력을 갖춘 GPT-4.5 출시.md) - OpenAI GPT-4.5 연구 프리뷰의 비지도 학습 확장, 감성 지능 향상, 환각 감소 등 개선점과 SimpleQA·GPQA·AIME 벤치마크에서 GPT-4o 및 o3-mini와의 성능 비교, 배포 일정을 정리한다.
+* [[도서리뷰] 경사 하강법 계보 정리(혁펜하임의 『Easy! 딥러닝』)](2025/2025-02-08-[도서리뷰] 경사 하강법 계보 정리(혁펜하임의 『Easy! 딥러닝』).md) - 혁펜하임의 『Easy! 딥러닝』 2장을 바탕으로 그래디언트의 의미와 GD, SGD, Mini-Batch, Momentum, NAG, AdaGrad, RMSProp, AdaDelta, Adam, Nadam까지 최적화 기법의 등장 배경과 수식, 한계를 계보순으로 정리한다.
+* [OpenAI, Deep Research 기능 공개](2025/2025-02-04-OpenAI, Deep Research 기능 공개.md) - OpenAI Deep Research가 o3 추론 모델과 강화학습을 바탕으로 다단계 웹 검색과 보고서 생성을 수행하는 방식, HLE·GAIA 벤치마크 결과, 시장조사·논문조사·투자분석 데모 사례를 정리한다.
+* [OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시](2025/2025-02-01-OpenAI o3-mini_ 새로운 비용 효율적 AI 모델 출시.md) - OpenAI o3-mini의 reasoning effort(Low/Medium/High) 옵션과 가격, 컨텍스트 윈도우를 소개하고 AIME, GPQA, Codeforces, SWE-bench 등 벤치마크에서 o1·o1-mini 대비 성능을 비교한다.
+* [(설명추가) 웨이트 초기화 (Weight Initialization)](2025/2025-02-01-(설명추가) 웨이트 초기화 (Weight Initialization).md) - LeCun, Xavier(Glorot), He(Kaiming) 초기화가 활성화 함수별로 가중치 분산을 어떻게 조절하는지 수식으로 설명하고, 시그모이드 포화와 기울기 소실 문제, PyTorch·Keras 적용 코드, 초기화 선택 기준을 정리한다.
+* [(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해](2025/2025-01-31-(설명추가) Q-Learning_ 강화학습의 핵심 개념과 이해.md) - 혁펜하임의 『Easy! 딥러닝』을 바탕으로 강화학습의 상태·행동·보상 개념과 Q-Table, 벨만 방정식 기반 Q-값 갱신, ε-greedy 탐색 전략, 할인율, DQN으로의 확장까지 Q-Learning을 정리한다.
+* [[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법](2025/2025-01-29-[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법.md) - GPT Canvas의 LaTeX 렌더링 버그를 정리하고 MathJax·KaTeX 문법 차이를 설명한 뒤, @ 기호 대체 프롬프트와 Python 후처리로 수식을 보존하는 방법을 소개한다.
+* [[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법](2025/2025-01-28-[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법.md) - GPT Canvas에서 LaTeX 수식이 깨지는 문제를 살펴보고, $ 대신 @ 기호로 수식을 작성한 뒤 찾기/바꾸기나 Python 스크립트로 복구하는 우회 방법을 제시한다.
+* [[NLP] 6. Topic Modeling이란?](2025/2025-01-28-[NLP] 6. Topic Modeling이란_.md) - 행렬 분해 기반 LSA와 확률 모델 기반 pLSA, LDA의 원리를 비교하고 SVD, EM 알고리즘, Gibbs Sampling을 설명하며 뉴스 기사로 LSA 실습을 수행한다.
+* [[NLP] 5. 자연어 차원 축소(Dimension Reduction) 기법](2025/2025-01-28-[NLP] 5. 자연어 차원 축소(Dimension Reduction) 기법.md) - DSBA 강필성 교수 강의를 바탕으로 텍스트 데이터의 특징 선택 지표 10가지와 SVD, LSA, SNE, Symmetric SNE, t-SNE 등 특징 추출 기법을 정리한다.
+* [(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명](2025/2025-01-27-(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명.md) - 『Easy! 딥러닝』 19쪽의 보충으로 Perplexity의 정의와 지수 -1/N을 쓰는 이유, BLEU의 n-그램 정밀도와 Brevity Penalty, 두 지표의 차이를 설명한다.
+* [(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명](2025/2025-01-26-(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명.md) - 언어 모델 평가 지표인 Perplexity의 정의와 엔트로피와의 관계, BLEU 스코어의 n-그램 정밀도와 Brevity Penalty 계산 과정 및 한계를 수식과 함께 정리한다.
+* [[도서소개] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』](2025/2025-01-25-[도서소개] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』.md) - 혁펜하임의 『Easy! 딥러닝』 입문서를 소개하며 저자 소개와 책의 특징, 챕터별 구성을 정리하고 경사 하강법 최적화 기법과 정규화 기법 리뷰 계획을 예고한다.
+* [[도서리뷰] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』](2025/2025-01-25-[도서리뷰] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』.md) - 혁펜하임의 『Easy! 딥러닝』을 소개하며 저자 배경, 책의 특징, 8개 챕터와 기초 수학 부록의 목차, 이어질 리뷰에서 다룰 배치·레이어 정규화 주제를 안내한다.
+* [[OpenAI] Operator & Agents : Computer-Using Agent](2025/2025-01-24-[OpenAI] Operator and Agents _ Computer-Using Agent.md) - GUI를 직접 조작하는 OpenAI CUA의 작동 방식과 Operator 데모 사례(Instacart, OpenTable, Saved Prompts), 벤치마크 성능과 오용·실수·적대적 공격 대응책을 다룬다.
+* [[OpenAI] Introduction to Operator & Agents : Computer-Using Agent](2025/2025-01-24-[OpenAI] Introduction to Operator and Agents _ Computer-Using Agent.md) - OpenAI의 Computer-Using Agent(CUA)와 Operator의 개념 차이, 지각·추론·행동 루프, OSWorld·WebArena·WebVoyager 벤치마크 결과와 안전 장치를 정리한다.
+* [[꿀팁] 유니코드 문자표 모음집 사이트 소개!!](2025/2025-01-22-[꿀팁] 유니코드 문자표 모음집 사이트 소개!!.md) - 유니코드 기호를 검색하고 복사할 수 있는 사이트 SYMBL을 소개하며, 박스 도면, 수학 기호, 화살표 등 자주 쓰는 기호의 활용 예를 정리한다.
+* [ChatGPT Tasks: 혁신적인 작업 관리 도구](2025/2025-01-18-ChatGPT Tasks_ 혁신적인 작업 관리 도구.md) - ChatGPT의 예약 작업 기능 Tasks의 설정·편집·일시정지 방법을 화면과 함께 안내하고, AI 뉴스 요약, 주식 정보, 단편 소설 생성 등 직접 적용한 자동화 사례를 소개한다.
+* [[CES 2025] Keynote : Volvo Group President and CEO, Martin Lundstedt](2025/2025-01-09-[CES 2025] Keynote _ Volvo Group President and CEO, Martin Lundstedt.md) - 전기 트럭·굴착기, 충전 인프라, 화석 연료 없는 철강, Daimler와의 SDV 플랫폼, Aurora와의 자율 주행 트럭 등 Volvo Group의 지속 가능한 운송 전략과 스웨덴 장관의 발표를 정리한다.
+* [[CES 2025] Keynote : SiriusXM CEO, Jennifer Witz](2025/2025-01-09-[CES 2025] Keynote _ SiriusXM CEO, Jennifer Witz.md) - SiriusXM CEO와 Crime Junkie 진행자 Ashley Flowers의 대담을 통해 오디오 엔터테인먼트의 진화, AI 기반 추천과 음성 합성 광고, 인간 중심 창작과의 균형을 정리한다.
+* [[CES 2025] Keynote : Panasonic Holdings CEO , Mr. Yuki Kusumi](2025/2025-01-09-[CES 2025] Keynote _ Panasonic Holdings CEO , Mr. Yuki Kusumi.md) - 넷제로 공장과 Redwood Materials 배터리 순환, 4680 배터리, OASYS 가정 솔루션, Blue Yonder 공급망 AI, 웰빙 코치 Umi와 Anthropic 협력 등 파나소닉의 지속 가능성·AI 전략을 정리한다.
+* [[CES 2025] Keynote : NVIDIA Founder and CEO, Jensen Huang](2025/2025-01-09-[CES 2025] Keynote _ NVIDIA Founder and CEO, Jensen Huang.md) - 토큰과 세 가지 스케일링 법칙, RTX 50 Blackwell과 DLSS 4, NVLink 72, NIM·NeMo 기반 Agentic AI 스택, Cosmos 세계 기반 모델과 로보틱스, Project DIGITS까지 젠슨 황 기조연설을 상세히 정리한다.
+* [[CES 2025] Keynote : CEO of X Corp, Linda Yaccarino](2025/2025-01-09-[CES 2025] Keynote _ CEO of X Corp, Linda Yaccarino.md) - X의 Community Notes와 Meta의 채택, 실시간 트렌드 광고 도구 Trend Genius, NFL Portal, 크리에이터 수익 공유, X Money와 Grok 등 CES 2025 발표 내용을 정리한다.
+* [[CES 2025] Keynote : CEO of Delta, Ed Bastian](2025/2025-01-09-[CES 2025] Keynote _ CEO of Delta, Ed Bastian.md) - Sphere에서 열린 Delta 100주년 키노트에서 AI 개인 비서 Delta Concierge의 여행 시나리오, Delta Sync, Joby·Uber·Airbus 파트너십과 지속 가능 항공 연료 전략을 정리한다.
+* [[CES 2025] Keynote : Accenture Chair and CEO, Julie Sweet](2025/2025-01-09-[CES 2025] Keynote _ Accenture Chair and CEO, Julie Sweet.md) - AI Refinery 플랫폼과 산업별 AI 에이전트, 기술적·정서적 신뢰와 인력 재교육, KION과의 물리적 AI·디지털 트윈 협력, AI 보안과 규제까지 Accenture의 기업 AI 도입 전략을 정리한다.
+* [제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊](2025/2025-01-05-제1회 AI FC (AI Fight Club) 대회 소개 및 정보 공유🥊.md) - AIKive가 주최한 AI 이미지 창작 대회 AI FC의 참여 방법과 심사 기준을 정리하고, 직접 제출한 작품과 지인들의 작품에 사용한 생성 프롬프트를 공유한다.
 
 ## 2024
 

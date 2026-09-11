@@ -1,13 +1,24 @@
 ---
+type: "Conference Recap"
 title: "[CES 2025] Keynote : CEO of X Corp, Linda Yaccarino"
+description: "X의 Community Notes와 Meta의 채택, 실시간 트렌드 광고 도구 Trend Genius, NFL Portal, 크리에이터 수익 공유, X Money와 Grok 등 CES 2025 발표 내용을 정리한다."
 date: "2025-01-09"
 tags:
   - "CES"
   - "Conference"
+resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-CEO-of-X-Corp-Linda-Yaccarino"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:40:29Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/CES-2025-Keynote-CEO-of-X-Corp-Linda-Yaccarino"
+    title: "[CES 2025] Keynote : CEO of X Corp, Linda Yaccarino"
+    author: "human:euisuk-chung"
+    last_modified: "2025-01-09"
+status: "stable"
 year: "2025"
 ---
-
-# [CES 2025] Keynote : CEO of X Corp, Linda Yaccarino
 
 ### X Corp 소개
 
@@ -21,8 +32,6 @@ X Corp의 주요 비전은 단순한 소셜 네트워킹 플랫폼을 넘어 오
 
 * 또한, xAI와의 통합을 통해 인공지능 기능을 강화하고, 2024년 말까지 사용자의 금융 활동 중심 허브로 자리 잡는 것을 목표로 하고 있습니다.
 * 글로벌 확장을 통해 북미, 아시아, 유럽 등 전 세계적으로 사업을 확대하며, 다양한 기능과 서비스를 통해 사용자 경험을 재정의하고자 합니다.
-
----
 
 ### Linda Yaccarino의 리더십
 
@@ -38,8 +47,6 @@ Linda Yaccarino는 혁신적이고 비전을 가진 리더로, X Corp의 CEO로�
   + "X는 당신의 주머니 속 글로벌 뉴스룸입니다."
   + 자유로운 대화의 공간을 제공하며, 전 세계 주요 인물과 대중이 연결되는 플랫폼입니다.
   + 브랜드와 크리에이터, 커뮤니티를 위한 혁신적 솔루션 제공.
-
----
 
 ### CES 2025 발표 주요 내용
 
@@ -176,8 +183,6 @@ X는 글로벌 자유로운 대화의 장으로서, 주요 선거와 같은 중�
 * **확장 가능성**:
 
   + X는 선거 외에도 글로벌 정책 토론, 환경 문제, 사회적 이슈와 같은 다양한 주제에 대한 대화 플랫폼으로의 확장을 모색하고 있습니다.
-
----
 
 ### 결론
 
