@@ -5,7 +5,7 @@ import os
 import re
 import shutil
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -23,6 +23,9 @@ except ImportError:
     # 설치가 안 되어 있다면, pip install markdownify
     def md(x):
         return x  # fallback - 그대로 반환
+
+import okf_common as oc
+from okf_common import yaml_dq  # noqa: F401  (하위 호환: 다른 스크립트가 import 한다)
 
 # --- 경로 상수 ---
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -78,19 +81,12 @@ def protect_liquid_in_code_blocks(content):
     return "\n".join(out)
 
 
-def yaml_dq(value):
-    """YAML 이중따옴표 스칼라로 안전하게 감싼다.
-
-    제목에 따옴표가 들어간 글(예: 'ChatGPT를 진짜 "쓸모 있게" 만드는 방법')을
-    그대로 쓰면 front-matter가 깨져 Jekyll이 해당 포스트를 레이아웃 없이
-    렌더한다. 백슬래시와 이중따옴표를 이스케이프한다.
-    """
-    escaped = str(value).replace("\\", "\\\\").replace('"', '\\"')
-    return f'"{escaped}"'
-
-
 def compute_content_hash(content):
-    """본문 내용의 MD5 해시를 계산합니다. 변경 감지용."""
+    """정규화된 본문의 MD5 해시. 변경 감지용.
+
+    save_as_markdown 이 저장하는 본문(escape/raw 보호/OKF 정규화 적용 후)을 기준으로 계산해야
+    --check-updates 가 서식 차이 때문에 멀쩡한 글을 다시 쓰지 않는다.
+    """
     return hashlib.md5(content.encode('utf-8')).hexdigest()
 
 
@@ -271,7 +267,7 @@ def get_post_content(url):
 
         if content_div:
             html_content = str(content_div)
-            markdown_content = md(html_content)
+            markdown_content = md(html_content, heading_style="atx")
         else:
             markdown_content = "내용 없음"
 
@@ -300,12 +296,18 @@ def get_post_content(url):
         # --------------------------------------------------------------------------------
         # 예시: <div class="sc-cZMNgc bpMcZw"><a href="/tags/IT지식">IT지식</a> ...</div>
         tags = []
-        tag_wrapper = soup.find('div', class_='sc-cZMNgc bpMcZw')
-        if tag_wrapper:
-            for a_tag in tag_wrapper.find_all('a'):
-                tag_text = a_tag.get_text(strip=True)
-                if tag_text:
-                    tags.append(tag_text)
+        # 해시된 클래스명은 velog 배포마다 바뀌므로 태그 링크 href 를 우선 사용한다.
+        for a_tag in soup.select('a[href^="/tags/"]'):
+            tag_text = a_tag.get_text(strip=True)
+            if tag_text and tag_text not in tags:
+                tags.append(tag_text)
+        if not tags:
+            tag_wrapper = soup.find('div', class_='sc-cZMNgc bpMcZw')
+            if tag_wrapper:
+                for a_tag in tag_wrapper.find_all('a'):
+                    tag_text = a_tag.get_text(strip=True)
+                    if tag_text:
+                        tags.append(tag_text)
 
         return {
             'title': title,
@@ -319,7 +321,7 @@ def get_post_content(url):
         driver.quit()
 
 
-def save_as_markdown(post, base_output_dir):
+def save_as_markdown(post, base_output_dir, existing_fm=None):
     """
     게시글을 마크다운 파일로 저장합니다.
     base_output_dir 아래에 연도(year)별 폴더를 만들어 저장.
@@ -352,29 +354,105 @@ def save_as_markdown(post, base_output_dir):
     filepath = os.path.join(output_dir, file_name)
     print(f"[Saving Post] {filepath}")
 
-    # YAML Front Matter + 본문 작성
+    # 본문: 통화 $ 이스케이프 → Liquid 보호 → OKF 정규화(setext→ATX, 제목 앞 hr 제거)
+    body = escape_currency_dollars(post['content'])
+    body = protect_liquid_in_code_blocks(body)
+    body, _report = oc.normalize_body(body, post['title'])
+    post['normalized_content'] = body
+
+    front_matter = build_front_matter(post, existing_fm)
     with open(filepath, 'w', encoding='utf-8') as f:
-        f.write("---\n")
-        f.write(f"title: {yaml_dq(post['title'])}\n")
-        f.write(f"date: {yaml_dq(post['date'])}\n")
-        if post.get('tags'):
-            f.write("tags:\n")
-            for tg in post['tags']:
-                f.write(f"  - {yaml_dq(tg)}\n")
-        f.write(f"year: {yaml_dq(post['year'])}\n")
-        f.write("---\n\n")
+        f.write(oc.render_front_matter(front_matter))
+        f.write("\n")
+        f.write(body)
 
-        # 제목 / 원본 링크
-        f.write(f"# {post['title']}\n\n")
-        # f.write(f"원본 게시글: {post['url']}\n\n")
+    # 환경 간 이식성을 위해 레포 루트 기준 POSIX 상대 경로 반환
+    return os.path.relpath(filepath, _REPO_ROOT).replace(os.sep, '/')
 
-        # 마크다운 변환된 본문 (통화 $ 이스케이프 적용)
-        escaped_content = escape_currency_dollars(post['content'])
-        escaped_content = protect_liquid_in_code_blocks(escaped_content)
-        f.write(escaped_content)
 
-    # 환경 간 이식성을 위해 레포 루트 기준 상대 경로 반환
-    return os.path.relpath(filepath, _REPO_ROOT)
+def build_front_matter(post, existing_fm=None):
+    """OKF v0.2 포스트 front matter.
+
+    새 글은 status: draft 로 들어오고, description 과 정규 태그를 갖추면 stable 로 올린다.
+    existing_fm 이 있으면(업데이트 재저장) 사람이 보강한 필드를 보존한다.
+    """
+    cfg = oc.load_config()
+    types_cfg = oc.load_types_config()
+    concepts = oc.load_concepts(Path(_REPO_ROOT) / cfg["concepts_dir"])
+    tags, _unknown = oc.canonicalize_tags(list(post.get('tags') or []), oc.build_alias_map(concepts))
+    now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    fm = {
+        "type": oc.derive_type(post['title'], types_cfg),
+        "title": post['title'],
+        "description": None,
+        "date": post['date'],
+        "tags": tags or None,
+        "resource": post['url'],
+        "generated": {"by": "process:velog-sync", "at": now},
+        "sources": [{
+            "id": "velog",
+            "resource": post['url'],
+            "title": post['title'],
+            "author": "human:euisuk-chung",
+            "last_modified": post['date'],
+        }],
+        "status": "draft",
+        "year": post['year'],
+    }
+    if existing_fm:
+        # 보강 필드는 보존, 원문 유래 필드는 갱신
+        for key in ("description", "type", "tags", "status", "verified", "stale_after"):
+            if existing_fm.get(key) is not None:
+                fm[key] = existing_fm[key]
+        if existing_fm.get("generated"):
+            fm["generated"] = existing_fm["generated"]
+        if existing_fm.get("sources"):
+            fm["sources"] = existing_fm["sources"]
+            if isinstance(fm["sources"][0], dict):
+                fm["sources"][0]["last_modified"] = datetime.now().strftime('%Y-%m-%d')
+        for key, val in existing_fm.items():
+            if key not in fm:
+                fm[key] = val
+    return fm
+
+
+def read_existing_front_matter(path):
+    """재저장 전에 기존 파일의 front matter 를 읽는다(없으면 None)."""
+    try:
+        with open(path, encoding='utf-8') as f:
+            return oc.parse_document(f.read()).front_matter
+    except (OSError, ValueError):
+        return None
+
+
+def append_log(kind, title, rel_path):
+    """okf/log.md 에 OKF §9 형식으로 항목을 추가한다. 번들 루트가 없으면 건너뛴다."""
+    cfg = oc.load_config()
+    root = Path(_REPO_ROOT) / cfg["okf_root"]
+    log_path = root / "log.md"
+    if not root.exists():
+        return
+    rel_from_root = os.path.relpath(os.path.join(_REPO_ROOT, rel_path), root).replace(os.sep, '/')
+    today = datetime.now().strftime('%Y-%m-%d')
+    entry = f"* **{kind}**: [{title}]({rel_from_root})"
+    lines = log_path.read_text(encoding='utf-8').split("\n") if log_path.exists() else ["# Update Log", ""]
+    header = f"## {today}"
+    if header in lines:
+        idx = lines.index(header)
+        lines.insert(idx + 1, entry)
+    else:
+        # 최신 날짜가 위로 오도록 첫 번째 ## 앞에 삽입
+        first = next((i for i, ln in enumerate(lines) if ln.startswith("## ")), len(lines))
+        lines[first:first] = [header, entry, ""]
+    log_path.write_text("\n".join(lines).rstrip("\n") + "\n", encoding='utf-8')
+
+
+def refresh_index():
+    """번들 index.md 가 이미 있으면 갱신한다."""
+    cfg = oc.load_config()
+    if (Path(_REPO_ROOT) / cfg["posts_dir"] / "index.md").exists():
+        import okf_index
+        okf_index.main(["--write"])
 
 
 def _resolve_file_path(rel_path):
@@ -516,8 +594,9 @@ def crawl_new_posts(username, base_output_dir):
                 continue
 
             filepath = save_as_markdown(post, base_output_dir)
-            content_hash = compute_content_hash(post['content'])
+            content_hash = compute_content_hash(post['normalized_content'])
             save_processed_post(url, post['title'], 'success', content_hash, filepath)
+            append_log("Creation", post['title'], filepath)
             print(f"[완료] 저장: {post['title']}")
             time.sleep(1)
 
@@ -557,7 +636,11 @@ def check_updates(username, base_output_dir, post_links=None):
     for url in urls_to_check:
         try:
             post = get_post_content(url)
-            new_hash = compute_content_hash(post['content'])
+            probe = dict(post)
+            probe['content'] = post['content']
+            body = protect_liquid_in_code_blocks(escape_currency_dollars(post['content']))
+            body, _ = oc.normalize_body(body, post['title'])
+            new_hash = compute_content_hash(body)
             old_hash = processed[url].get('content_hash', '')
 
             if old_hash and new_hash == old_hash:
@@ -565,15 +648,18 @@ def check_updates(username, base_output_dir, post_links=None):
                 time.sleep(1)
                 continue
 
-            # 기존 파일이 있으면 삭제 후 새로 저장
+            # 기존 파일이 있으면 front matter(description/tags 등 보강값)를 살린 뒤 삭제하고 새로 저장
             old_file = _resolve_file_path(processed[url].get('file_path', ''))
+            existing_fm = None
             if old_file and os.path.exists(old_file):
+                existing_fm = read_existing_front_matter(old_file)
                 os.remove(old_file)
                 print(f"[삭제] 기존 파일: {old_file}")
 
-            rel_path = save_as_markdown(post, base_output_dir)
+            rel_path = save_as_markdown(post, base_output_dir, existing_fm=existing_fm)
             update_processed_post(url, title=post['title'], status='success',
                                   content_hash=new_hash, file_path=rel_path)
+            append_log("Update", post['title'], rel_path)
             updated_count += 1
             print(f"[업데이트] {post['title']}")
             time.sleep(1)
@@ -635,11 +721,31 @@ def sync_deletions(username, base_output_dir, post_links=None):
     print(f"\n아카이브 완료: {archived_count}개 파일 이동됨")
 
 
+def rehash_processed_posts():
+    """파일은 건드리지 않고 CSV 의 content_hash 를 현재 파일 본문 기준으로 다시 계산한다.
+
+    본문 정규화 규칙이 바뀌면(예: setext→ATX) 옛 해시와 새 해시가 전부 달라져
+    --check-updates 가 모든 글을 다시 쓰게 된다. 그 전에 한 번 실행한다.
+    """
+    df = load_processed_posts_df()
+    updated = 0
+    for i, row in df.iterrows():
+        path = _resolve_file_path(str(row.get('file_path') or '').replace('\\', '/'))
+        if not path or not os.path.exists(path):
+            continue
+        with open(path, encoding='utf-8') as f:
+            body = oc.parse_document(f.read()).body
+        df.at[i, 'content_hash'] = compute_content_hash(body)
+        updated += 1
+    df.to_csv(_CSV_PATH, index=False)
+    print(f"[rehash] {updated}개 행 갱신")
+
+
 def crawl_and_save_posts(check_updates_flag=False, sync_deletions_flag=False):
     config = load_config()
     username = config['velog_username']
 
-    base_output_dir = os.path.join(_REPO_ROOT, '_posts')
+    base_output_dir = os.path.join(_REPO_ROOT, oc.load_config()['posts_dir'])
     Path(base_output_dir).mkdir(parents=True, exist_ok=True)
 
     # (1) 항상 새 포스트 크롤링 먼저 실행
@@ -655,6 +761,9 @@ def crawl_and_save_posts(check_updates_flag=False, sync_deletions_flag=False):
         print("\n--- 삭제 동기화 모드 ---")
         sync_deletions(username, base_output_dir, post_links)
 
+    # (4) 번들 index.md 갱신
+    refresh_index()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Velog 블로그 크롤러')
@@ -664,7 +773,13 @@ if __name__ == "__main__":
                         help='Velog에서 삭제된 포스트를 로컬에서 아카이브합니다')
     parser.add_argument('--full-sync', action='store_true',
                         help='업데이트 확인 + 삭제 동기화를 모두 수행합니다')
+    parser.add_argument('--rehash', action='store_true',
+                        help='크롤링 없이 processed_posts.csv 의 content_hash 만 현재 파일 기준으로 재계산합니다')
     args = parser.parse_args()
+
+    if args.rehash:
+        rehash_processed_posts()
+        raise SystemExit(0)
 
     do_updates = args.check_updates or args.full_sync
     do_deletions = args.sync_deletions or args.full_sync

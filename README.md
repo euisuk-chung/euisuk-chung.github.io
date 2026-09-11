@@ -64,6 +64,8 @@ gh workflow run velog-sync.yml
 
 크롤러는 `_scripts/`에 있고 [uv](https://docs.astral.sh/uv/)로 의존성을 관리합니다. 처리 이력은 `processed_posts.csv`에 기록됩니다.
 
+포스트와 태그 사전은 Google Cloud의 [Open Knowledge Format(OKF) v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) 규칙을 따릅니다. 검사·변환 도구(`okf_lint.py`, `okf_migrate.py`, `okf_index.py`)와 규칙은 `_doc/Manual.md`의 "OKF 콘텐츠 규칙" 절을 보세요.
+
 ---
 
 License
