@@ -209,7 +209,8 @@ def migrate_text(text: str, post_rel: str, ctx: dict, enrich: dict | None) -> tu
     fm = build_post_front_matter(doc.front_matter, post_rel, rows=ctx["rows"], overrides=ctx["overrides"],
                                  types_cfg=ctx["types_cfg"], alias_map=ctx["alias_map"],
                                  enrich=enrich, report=report)
-    out = oc.render_front_matter(fm) + "\n" + new_body
+    # front matter 와 본문 사이는 정확히 빈 줄 하나 (재실행 시 빈 줄이 누적되지 않도록 선두 빈 줄 제거)
+    out = oc.render_front_matter(fm) + "\n" + new_body.lstrip("\n")
     return out, report
 
 

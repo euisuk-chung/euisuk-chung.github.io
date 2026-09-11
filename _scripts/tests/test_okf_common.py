@@ -137,3 +137,13 @@ def test_derive_type():
     assert oc.derive_type("[Paper Review] X", cfg) == "Paper Review"
     assert oc.derive_type("[Day 3] X", cfg) == "Product Update"
     assert oc.derive_type("plain", cfg) == "Blog Post"
+
+
+def test_migrate_text_is_idempotent(tmp_path):
+    import okf_migrate as om
+    ctx = {"rows": [], "overrides": {}, "types_cfg": oc.load_types_config(), "alias_map": {}}
+    src = '---\ntitle: "T"\ndate: "2021-01-01"\nyear: "2021"\n---\n\n# T\n\nA\n---\n\nbody\n'
+    once, _ = om.migrate_text(src, "okf/_posts/2021/2021-01-01-T.md", ctx, {"description": "설명."})
+    twice, _ = om.migrate_text(once, "okf/_posts/2021/2021-01-01-T.md", ctx, None)
+    assert once == twice
+    assert once.endswith('---\n\n## A\n\nbody\n')
