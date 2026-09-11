@@ -928,6 +928,24 @@ img::-moz-selection {
   }
 }
 // Tag concept page (/tags/<slug>/)
+// /tags/ index: one row per concept (tags.html).
+.tag-index {
+  margin: 20px 0;
+  .tag-index-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid @gray-light;
+    .tag { flex: 0 0 auto; }
+    .tag-index-desc {
+      color: @gray-dark;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
 .tag-page {
   .tag-description {
     margin: 20px 0 10px;
