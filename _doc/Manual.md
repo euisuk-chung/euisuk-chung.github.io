@@ -10,6 +10,7 @@
 - [OKF 콘텐츠 규칙](#okf-콘텐츠-규칙)
 - [사이드바](#사이드바)
 - [Featured Tags](#featured-tags)
+- [태그 페이지 (`_concepts/`)](#태그-페이지-_concepts)
 - [Friends](#friends)
 - [검색](#검색)
 - [Keynote 레이아웃](#keynote-레이아웃)
@@ -27,7 +28,8 @@
 | 경로 | 설명 |
 |---|---|
 | `_posts/<연도>/` | 포스트 마크다운. velog 동기화가 연도별로 넣습니다 |
-| `_layouts/` | `default` · `page` · `post` · `keynote` 4종 |
+| `_concepts/<slug>.md` | 태그 사전. 파일 하나가 `/tags/<slug>/` 페이지 하나 |
+| `_layouts/` | `default` · `page` · `post` · `keynote` · `tag` 5종 |
 | `_includes/` | Liquid 파셜 (헤더, 푸터, 사이드바, 광고 등) |
 | `less/` | 스타일 **원본** |
 | `css/`, `js/blog*.js` | 빌드 **산출물** — 직접 수정 금지 |
@@ -216,6 +218,34 @@ featured-condition-size: 1   # 이 값보다 많은 글을 가진 태그만 노�
 
 내부적으로 `{% if tag[1].size > site.featured-condition-size %}` 조건을 씁니다.
 태그가 많아져 목록이 길어지면 이 값을 올리세요.
+
+---
+
+## 태그 페이지 (`_concepts/`)
+
+태그는 세 곳에 노출됩니다: 포스트 상단 히어로(흰 pill), 포스트 본문 하단(`.post-tags-footer`),
+홈/아카이브/태그 페이지의 글 카드. 링크 대상은 `_includes/tag-url.html`이 한 곳에서 정합니다.
+
+- `_concepts/<slug>.md` 파일이 있는 태그 → `/tags/<slug>/` 전용 페이지(설명 + 해당 글 목록)
+- 없는 태그 → `/archive/?tag=<태그>` 클라이언트 필터로 폴백
+
+concept 파일 규칙:
+
+```yml
+---
+type: Tag
+title: OpenAI          # 포스트 front-matter의 tags 문자열과 정확히 일치해야 함 (대소문자 포함)
+slug: openai           # 파일명과 동일, ASCII 소문자-하이픈. 한글 태그도 영문 slug 사용
+description: "한 문장 설명"   # 히어로 부제와 <meta description>에 쓰임
+aliases: []            # 옛 표기 목록 (OKF 도구가 정규화에 사용)
+status: stable
+---
+본문은 태그 설명으로 목록 위에 렌더됩니다.
+```
+
+컬렉션 이름이 `tags`가 아니라 `concepts`인 이유: Jekyll이 `site.tags`를 포스트 태그 집계용으로 예약하고 있어
+같은 이름의 컬렉션은 템플릿에서 읽을 수 없습니다. 레이아웃은 `_layouts/tag.html`, 글 목록 카드는
+`_includes/post-card.html`을 공유합니다. `_config.yml`을 바꾼 뒤에는 `jekyll serve`를 재시작해야 합니다.
 
 ---
 
