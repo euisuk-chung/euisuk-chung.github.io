@@ -4,6 +4,7 @@ title: "[Repo Review] Hermes Agent: 도구 실행과 기억을 연결하는 에�
 description: "Hermes Agent의 대화 루프, 실행 전 영속화, 충돌을 고려한 도구 병렬 처리, 세션·메모리·스킬의 분리를 코드로 살펴봅니다."
 date: "2026-09-11"
 tags:
+  - "Repo Review"
   - "AI Agent"
   - "Python"
   - "Tools"
