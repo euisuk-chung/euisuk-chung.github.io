@@ -2,7 +2,7 @@
 layout: page
 ---
 {%- comment -%}
-    Tag concept page: rendered for each _concepts/*.md document.
+    Tag concept page: rendered for each okf/_concepts/*.md document.
     `page.title` must equal the tag string used in post front matter.
 {%- endcomment -%}
 {%- assign tag_posts = site.posts | where_exp: "p", "p.tags contains page.title" -%}

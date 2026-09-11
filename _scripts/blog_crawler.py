@@ -325,7 +325,7 @@ def save_as_markdown(post, base_output_dir, existing_fm=None):
     """
     게시글을 마크다운 파일로 저장합니다.
     base_output_dir 아래에 연도(year)별 폴더를 만들어 저장.
-    예: _posts/2024/2024-12-22-제목.md
+    예: okf/_posts/2024/2024-12-22-제목.md
     """
     # year별 폴더 생성
     output_dir = os.path.join(base_output_dir, post['year'])

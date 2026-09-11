@@ -45,8 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for d in _posts _concepts okf; do [ -d "$d" ] && git add "$d"; done
-          git add processed_posts.csv
+          git add okf/ processed_posts.csv
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

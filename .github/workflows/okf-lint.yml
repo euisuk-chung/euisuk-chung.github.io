@@ -4,8 +4,6 @@ name: OKF Lint
 on:
   pull_request:
     paths:
-      - "_posts/**"
-      - "_concepts/**"
       - "okf/**"
       - "_scripts/**"
       - "_config.yml"
@@ -13,8 +11,6 @@ on:
   push:
     branches: [master]
     paths:
-      - "_posts/**"
-      - "_concepts/**"
       - "okf/**"
       - "_scripts/**"
       - "_config.yml"

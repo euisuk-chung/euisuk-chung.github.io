@@ -31,7 +31,7 @@ The PR description should contain a concise summary, validation results, and `Re
 
 ## OKF content rules
 
-Posts and tag concepts follow Google Cloud's Open Knowledge Format (OKF) v0.2: markdown with YAML front matter, `type` required, cross-links as plain markdown links. The bundle root is `okf/` (`okf/_posts/<year>/`, `okf/_concepts/`, `okf/index.md`, `okf/log.md`); until the layout move lands the same rules apply to `_posts/` and `_concepts/`.
+Posts and tag concepts follow Google Cloud's Open Knowledge Format (OKF) v0.2: markdown with YAML front matter, `type` required, cross-links as plain markdown links. The bundle root is `okf/` (`okf/_posts/<year>/`, `okf/_concepts/`, `okf/index.md`, `okf/log.md`). Posts go only in `okf/_posts/<year>/`; `okf/_concepts/` is the tag dictionary, one file per tag.
 
 - Post front matter, in this key order: `type` (from `_scripts/okf_types.json`), `title`, `description` (one sentence), `date`, `tags`, `resource` (velog URL), `generated` (`by`: `process:velog-sync` or `human:<id>`, `at`: ISO-8601), `sources`, `status` (`draft` | `stable` | `deprecated`), `year`. Strings are double-quoted.
 - Tags must be the exact `title` of a concept file in the concepts directory. To use a new tag, add `<slug>.md` there first (`type: Tag`, `title`, `slug` == filename, `description`, `aliases`, optional `parent`/`related`). Never invent tag spellings in a post.

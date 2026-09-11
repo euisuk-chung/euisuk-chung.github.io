@@ -63,8 +63,8 @@ def load_config() -> dict:
     cfg = {}
     if cfg_path.exists():
         cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
-    cfg.setdefault("posts_dir", "_posts")
-    cfg.setdefault("concepts_dir", "_concepts")
+    cfg.setdefault("posts_dir", "okf/_posts")
+    cfg.setdefault("concepts_dir", "okf/_concepts")
     cfg.setdefault("okf_root", "okf")
     return cfg
 
