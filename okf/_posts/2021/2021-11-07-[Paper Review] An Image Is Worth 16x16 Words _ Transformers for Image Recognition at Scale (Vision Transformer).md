@@ -1,21 +1,35 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)"
+description: "Self-Attention과 Transformer 배경을 짚은 뒤, 이미지를 고정 크기 패치로 나눠 선형 임베딩과 위치 임베딩을 더하고 [CLS] 토큰으로 분류하는 Vision Transformer의 구조를 einops 기반 PyTorch 코드로 구현한다."
 date: "2021-11-07"
+tags:
+  - "Paper Review"
+  - "Transformer"
+  - "Computer Vision"
+  - "딥러닝"
+  - "PyTorch"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-An-Image-Is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-Vision-Transformer"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:15:45Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-An-Image-Is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-Vision-Transformer"
+    title: "[Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-11-07"
+status: "stable"
 year: "2021"
 ---
 
-# [Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)
-
-선정 이유
-=====
+# 선정 이유
 
 안녕하세요! 오늘 논문리뷰, 코드리뷰해볼 논문은 **"An Image Is Worth 16x16 Words: Transformers for Image Recognition at Scale"** 로, 컴퓨터 비전에서 Transformer와 Attention이 쓰이게 된 결정적 계기(?)가 된 논문입니다. 최근 이쪽 분야에 관심이 많다 보니 오늘은 이 논문을 리뷰하게 되었습니다.
 
-논문리뷰
-====
+# 논문리뷰
 
-Background
-----------
+## Background
 
 ### (Self) Attention
 
@@ -51,8 +65,7 @@ Background
 * 위에 그림처럼 여지껏 CV(Computer Vision) 도메인에서는 CNN(Convolutional Neural Network)를 사용한 모델들이 많이 사용되어 오고 있었습니다. (Ex. ResNet, UNet, EfficientNet 등)
 * 하지만, NLP(Natural Language Processing) 도메인에서의 Self-Attention과 Transformer의 성장으로 인해 CNN과 Attention을 함께 이용하려는 추세가 증가하고 있습니다. 본 논문(연구) 역시 그러한 시도 중 하나입니다.
 
-Vision Transformer
-------------------
+## Vision Transformer
 
 * Vision Transformer의 개념은 Transformer가 어떻게 작동하는지 아는 사람들이라면 쉽게 접근할 수 있습니다. 아래 그림이 솔직히 본 논문에 전부이기 때문이죠.
 
@@ -340,8 +353,7 @@ class ViT(nn.Module):
         return self.mlp_head(x)
 ```
 
-Reference
-=========
+# Reference
 
 1. An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale, ICLR 2019 - Alexey Dosovitskiy et. al.
 2. 딥 러닝을 이용한 자연어 처리 입문 - 유원준 외 1인 (<https://wikidocs.net/book/2155>)

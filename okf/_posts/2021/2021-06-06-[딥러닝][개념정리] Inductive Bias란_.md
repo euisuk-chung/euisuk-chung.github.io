@@ -1,24 +1,33 @@
 ---
+type: "Concept Note"
 title: "[딥러닝][개념정리] Inductive Bias란?"
+description: "Bias-Variance 분해에서 출발해 Inductive Bias의 정의와 Translation Invariance 등 대표 예시, 딥러닝 레이어별 관계 귀납 편향과 샘플 효율성 간의 trade-off를 정리합니다."
 date: "2021-06-06"
 tags:
   - "개념정리"
   - "딥러닝"
+  - "머신러닝"
+resource: "https://velog.io/@euisuk-chung/Inductive-Bias란"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:19:39Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Inductive-Bias란"
+    title: "[딥러닝][개념정리] Inductive Bias란?"
+    author: "human:euisuk-chung"
+    last_modified: "2021-06-06"
+status: "stable"
 year: "2021"
 ---
 
-# [딥러닝][개념정리] Inductive Bias란?
+# Inductive Bias
 
-Inductive Bias
-==============
-
-Overview
---------
+## Overview
 
 Inductive Bias란 무엇일까요? 최근 논문들을 보면 그냥 Bias도 아니고 Inductive Bias라는 말이 자주 나오는 것을 확인할 수 있는데요! 오늘은 해당 개념에 대해 정리해보는 시간을 가지려고 합니다. 공부하면서 작성한 글이므로 틀린 개념이 있다면 언제든 피드백 환영합니다.
 
-Bias(편향) and Variance(분산)
--------------------------
+## Bias(편향) and Variance(분산)
 
 이미 해당 포스팅을 읽는 분들은 아시겠지만, 먼저 간단하게 Bias와 Variance의 개념을 짚고 넘어가도록 하겠습니다.
 
@@ -37,8 +46,7 @@ Bias(편향) and Variance(분산)
 
 하지만, 현실적으로 낮은 Bias와 낮은 Variance 두 가지를 동시에 만족하는 것은 거의 불가능합니다. 따라서 어느 정도의 tradeoff는 반드시 생길 수 밖에 없으며 이는 **bias-variance trade-off** 라고 불립니다..
 
-Inductive Bias (귀납편향)
----------------------
+## Inductive Bias (귀납편향)
 
 그렇다면 이번 포스팅의 메인 디쉬인 Inductive Bias는 무엇일까요?
 
@@ -66,15 +74,13 @@ Machine learning에서는 어떤 목표(target)를 예측하기 위해 학습할
 * `Minimum features`: 특정 피쳐가 유용하다는 근거가 없는 한 삭제해야 합니다.
 * `Nearest neighbors`: 특징 공간에 있는 작은 이웃의 경우 대부분이 동일한 클래스에 속한다고 가정합니다.
 
-딥러닝에서의 Inductive Bias
----------------------
+## 딥러닝에서의 Inductive Bias
 
 딥러닝의 관점에서 Inductive Bias를 이야기해보자면, 딥러닝에서 우리가 흔히 쌓는 레이어의 구성은 일종의 Relational Inductive Bias(관계 귀납적 편향), 즉 hierarchical processing(계층적 처리)를 제공합니다. 딥러닝 레이어의 종류에 따라 추가적인 관계 유도 편향을 부과되며 이는 아래 표를 참고하면 될 것 같습니다.
 
 ![Relational inductive biases, deep learning, and graph networks (Battaglia et. al, 2018)](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F9afdc1ea-eb3a-495c-a4af-ba386b7c4ab5%2Fsearch.png)
 
-Conclusion
-----------
+## Conclusion
 
 Inductive Bias가 강할수록, Sample Efficiency가 좋아지긴 하나 그만큼 가정이 강하게 들어간 것임으로 좋게 볼 수만은 없습니다. 이는 앞에서 소개한 bias-variance tradeoff와 유사한 개념으로 보시면 될 것 같습니다.
 
@@ -82,8 +88,7 @@ Inductive Bias가 강할수록, Sample Efficiency가 좋아지긴 하나 그만�
 
 반면에, 몇몇 딥러닝 아키텍처(Eg. Graph Network)에 더 강한 관계 Inductive Bias를 만드는 것에 대한 많은 연구들이 존재합니다.
 
-출처
---
+## 출처
 
 본 포스팅은 아래 사이트들을 참고하여 작성되었습니다.
 

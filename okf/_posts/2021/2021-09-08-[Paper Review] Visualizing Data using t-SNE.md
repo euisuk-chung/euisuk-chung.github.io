@@ -1,31 +1,42 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Visualizing Data using t-SNE"
+description: "SNE의 조건부 확률과 KL divergence, crowding problem을 해결하는 Student-t 분포, early exaggeration 등 t-SNE의 원리를 정리하고 MNIST에서 Isomap, LLE와 비교 구현합니다."
 date: "2021-09-08"
+tags:
+  - "Paper Review"
+  - "차원축소"
+  - "Visualization"
+  - "머신러닝"
+  - "Python"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Visualizing-Data-using-t-SNE"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:18:43Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Visualizing-Data-using-t-SNE"
+    title: "[Paper Review] Visualizing Data using t-SNE"
+    author: "human:euisuk-chung"
+    last_modified: "2021-09-08"
+status: "stable"
 year: "2021"
 ---
 
-# [Paper Review] Visualizing Data using t-SNE
-
-선정 이유
-=====
+# 선정 이유
 
 오늘 `리뷰/번역/구현`할 논문은 **Visualizing Data using t-SNE**으로, 2008년에 Geoffrey Hinton이 저자인 논문입니다. t-SNE(t-Stochastic Nearest Neighbor)은 지금까지도 시각화를 하는 데 자주 사용되는 알고리즘입니다. 이는 고차원의 벡터로 표현되는 데이터 간의 neighbor structure 를 보존하는 2 차원의 embedding vector 를 학습함으로써, 고차원의 데이터를 2 차원으로 표현할 수 있도록 합니다.
 
----
+# 논문요약
 
-논문요약
-====
-
-Abstract
---------
+## Abstract
 
 * t-SNE는 2차원 또는 3차원 지도에 가지고 있는 데이터 포인트에 위치를 부여함으로서 이를 시각화할 수 있도록 해주는 방법론입니다.
 * t-SNE는 SNE(Stochastic Neighbor Embedding (Hinton and Roweis, 2002)) 방법에서 좀 더 개선된 방법론이며 기존에 있던 crowding problem문제를 해결하기 위해 만들어졌습니다.
 * t-SNE는 매우 큰 데이터 세트를 시각화하기 위해 인접 그래프에서 random walks 방법을 사용하여 데이터의 암시적인 구조가 데이터의 하위 집합이 표시되는 방식에 영향을 미치도록 합니다.
 * 본 논문에서는 다양한 데이터 세트에서 t-SNE 성능을 보여주고, Sammon Mapping, Isomap 및 locally linear embedding과 비교를 수행합니다.
 
-1. Introduction
----------------
+## 1. Introduction
 
 * 고차원 데이터의 시각화는 많은 도메인 영역에서 주요하게 다루어집니다.
 
@@ -55,8 +66,7 @@ Abstract
   + Laplacian Eigenmaps (Belkin and Niyogi, 2002).
 * 하지만, 이러한 방법론들도 고차원 데이터의 로컬 또는 글로벌한 정보를 둘 다 잘 유지하지는 못하였다. t-SNE는 이를 가능하게 해줍니다.
 
-2. Stochastic Neighbor Embedding
---------------------------------
+## 2. Stochastic Neighbor Embedding
 
 * SNE(Stochastic Neighbor Embedding)은 데이터 점 사이의 고차원의 "유클리드 거리"를 "유사성을 나타내는 조건부 확률"로 변환하여 사용합니다.
 * SNE는 pj∣ip\_{j|i}pj∣i​와 qj∣iq\_{j|i}qj∣i​사이의 불일치를 최소화하는 저차원 데이터 표현을 찾는 것을 목표로 합니다.
@@ -96,8 +106,7 @@ Abstract
 
 * 최적화 초기에는 가우시안 노이즈를 추가하여 local minimum 에 빠지지 않도록 유의한다. 하지만 이러한 과정이 한번에 이뤄질 수는 없습니다. 적당한 amount of momentum과 step size를 찾기 위해 여러번 반복 수행을 해주어야 합니다.
 
-3. t-Distributed Stochastic Neighbor Embedding
-----------------------------------------------
+## 3. t-Distributed Stochastic Neighbor Embedding
 
 ### 3.1. Symmetric SNE
 
@@ -185,8 +194,7 @@ Abstract
    * pij에 특정 상수(논문 예시로 4)를 곱하여, qij가 상대적으로 작기 때문에 pij에 대응하기 위하여 크게 움직이고 맵 포인트가 넓게 움직이도록 합니다.
    * 클러스터가 맵 포인트에서 단단하고 서로 간의 넓게 분리된 클러스터를 형성하는 경향으로 빈 공간이 많이 생길 수 있도록 조정해주는 데 의의가 있습니다.
 
-4. Experiments
---------------
+## 4. Experiments
 
 * t-SNE를 평가하기 위해, 차원 축소를 위한 7가지 다른 비모수 기술과 비교되는 실험을 제시합니다.
 * 본 논문에서는 (1) Sammon 매핑, (2) Isomap, (3) LLE 만 t-SNE와 비교합니다.
@@ -249,8 +257,7 @@ Abstract
 * 하지만 t-SNE를 제외한 나머지 3개의 방법론들은 이를 명확하게 분리해내지 못 합니다. Figure 5는 또한 다른 세 가지 기술이 매우 다른 대상에 해당하는 매니 폴드를 깨끗하게 분리하는 것과 거의 비슷하지 않음을 보여줍니다.
 * 또한 Isomap과 LLE는 COIL-20 데이터 세트에서 소수의 클래스만 시각화합니다.
 
-5. Applying t-SNE to Large Data Sets
-------------------------------------
+## 5. Applying t-SNE to Large Data Sets
 
 * 다른 많은 시각화 기술과 마찬가지로 t-SNE는 quadratic in the number of datapoints를 계산하는데는 메모리 복잡성이 있습니다. t-SNE의 표준 버전을 10,000 포인트 이상을 포함하는 데이터 세트에 적용하는 것은 실행 불가능합니다.
 
@@ -283,8 +290,7 @@ Abstract
 * t-SNE의 강한 성능은 또한 저차원 표현에 대해 훈련된 가장 가까운 이웃 분류 자의 일반화 오차에 반영합니다.
 * 원래의 784 차원 데이터 점에 대해 훈련된 최근접 이웃 분류기의 일반화 오차 (10 배 교차 검증을 사용하여 측정)가 5.75 % 인 반면에, 2 차원에 훈련 된 최근접 이웃 분류기의 일반화 오차 t-SNE에 의해 생성된 데이터 표현은 단지 5.13 %에 불과하게 됩니다.
 
-6. Discussion
--------------
+## 6. Discussion
 
 앞의 두 섹션에서 다양한 데이터 세트에서 t-SNE의 성능을 보였습니다. 이 섹션에서는 t-SNE와 다른 비모수 기법의 차이점에 대해 논의하고, 약점 및 가능한 개선점을 논의합니다.
 
@@ -340,10 +346,7 @@ Abstract
 * t-SNE의 주요 단점은 비용 함수가 볼록하지 않기때문에 여러 최적화 매개 변수를 선택해야 한다는 점이다. 그리고, 그에 따라 구성된 솔루션이 달라집니다.
 * t-SNE가 맵 포인트의 초기 무작위 구성에서 실행될 때마다 다를 수 있으나, 다양한 최적화 매개 변수가 다양한 시각화 작업에 사용될 수 있음을 입증했으며 최적의 품질은 실행마다 크게 다르지 않음을 확인했습니다.
 
----
-
-논문구현
-----
+## 논문구현
 
 본 논문 reproduction 과제에 있어서 구현을 해본 부분은 t-SNE 논문의 experiment 내용 중 MNIST Dataset에 대한 내용이다. 논문과 동일한 실험환경으로 셋팅했으며, 함수 최적화를 위해 함수만 구현하고 실제로 돌린 모델을 돌릴때는 sklearn 내장함수를 이용했다. 파라미터는 논문에 나온 파라미터값을 그대로 사용하였다. 논문과 마찬가지로 Isomap과 LLE 또한 적용하여 비교를 수행하였다. t-SNE의 베이스라인 코드는 아래 링크를 참고하여 구현하였다. (<https://nlml.github.io/in-raw-numpy/in-raw-numpy-t-sne/>)
 

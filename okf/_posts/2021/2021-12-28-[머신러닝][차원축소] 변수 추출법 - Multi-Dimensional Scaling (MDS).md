@@ -1,21 +1,32 @@
 ---
+type: "Lecture Note"
 title: "[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)"
+description: "변수 추출법인 다차원척도법(MDS)이 객체 간 거리를 보존하는 저차원 좌표계를 찾는 원리를 PCA와 비교하고, 거리 행렬에서 내적 행렬 B를 거쳐 고유값 분해로 좌표 X를 도출하는 수식 과정을 정리한다."
 date: "2021-12-28"
 tags:
-  - "머신러닝"
   - "차원축소"
+  - "머신러닝"
+  - "강의노트"
+  - "수학"
+resource: "https://velog.io/@euisuk-chung/머신러닝차원축소-변수-추출법-Multi-Dimensional-Scaling-MDS"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:13:53Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/머신러닝차원축소-변수-추출법-Multi-Dimensional-Scaling-MDS"
+    title: "[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-12-28"
+status: "stable"
 year: "2021"
 ---
 
-# [머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)
-
 본 포스트는 `고려대학교 강필성 교수님`의 강의를 수강 후 정리를 한 것입니다. 작성 및 설명의 편의를 위해 아래는 편하게 작성한 점 양해부탁드립니다.
 
-Dimensionality Reduction
-========================
+# Dimensionality Reduction
 
-Supervised Variable Extraction
-------------------------------
+## Supervised Variable Extraction
 
 **차원축소**는, 모델링을 하기 위해 내가 가진 데이터의 정보를 최대한 보존하면서, 훨씬 더 compact하게 데이터셋을 구성하는 것을 목적으로 하며, 크게 변수선택(Variable Selection, 변수들의 부분 집합 선택)과 변수추출(Variable Extraction, 변수들을 요약하는 새로운 변수 생성)이 있다.
 

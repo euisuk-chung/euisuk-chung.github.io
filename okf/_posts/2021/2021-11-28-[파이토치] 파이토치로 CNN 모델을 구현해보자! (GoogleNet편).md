@@ -1,13 +1,26 @@
 ---
+type: "Guide"
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편)"
+description: "Inception 모듈의 1x1 Convolution 차원 축소, Global Average Pooling, Auxiliary Classifier 등 GoogleNet의 핵심 아이디어를 설명하고 PyTorch로 구현해 CIFAR10에서 학습·평가한다."
 date: "2021-11-28"
 tags:
   - "PyTorch"
+  - "CNN"
   - "딥러닝"
+  - "Computer Vision"
+resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-GoogleNet편"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:14:25Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-GoogleNet편"
+    title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-11-28"
+status: "stable"
 year: "2021"
 ---
-
-# [파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편)
 
 안녕하세요! 지난번 포스트인 [VGGNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-VGGNet%ED%8E%B8) 이후로 오늘은 `GoogleNet` 관련 포스트입니다. 다음 포스트는 `ResNet`으로 찾아뵙도록 하겠습니다.
 
@@ -21,11 +34,9 @@ year: "2021"
 
 ![Depth Comp](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F83fe8361-b80d-487f-a355-65cbe8c30a05%2Fimage.png)
 
-GoogleNet 개요
-============
+# GoogleNet 개요
 
-소개
---
+## 소개
 
 GoogleNet이 소개된 논문의 제목은 Going Deeper with Convolutions로, 다음 링크에서 확인해보실 수 있습니다. [링크](https://arxiv.org/abs/1409.4842)
 
@@ -39,8 +50,7 @@ GoogleNet은 인셉션(inception) 모듈이라는 블록을 가지고 있어서 
 
 > Source : <https://arxiv.org/abs/1409.4842>
 
-Inception Module
-----------------
+## Inception Module
 
 위의 구조도를 살펴보면 뭔가 여러갈래로 갈라졌다가 모이는 형태를 하고 있는 것을 확인할 수 있습니다. 이렇한 모듈(블록)을 인셉션(Inception) 모듈이라고 하며 이는 아래 그림과 같습니다.
 
@@ -76,8 +86,7 @@ GoogleNet은 이러한 1x1 Convolution의 특징을 살려 sparse한 연산을 d
 
 기존의 (a)에서 5x5 Convolution이 좌측과 같이 112.9M개의 파라미터를 가지고 있다면, (b)에서처럼 1x1 Convolution을 통해 채널 수를 줄여주어 Bottleneck역할을 수행하고, 이를 다시 5x5 Convolution을 통과시켜 같은 output인 `14x14x48`을 반환해줌에도 불구하고 5.3M개의 파라미터를 갖게하는 것을 볼 수 있습니다.
 
-Global Average Pooling(GAP)
----------------------------
+## Global Average Pooling(GAP)
 
 또한, CNN 모델들을 생각해보면 마지막에 softmax 연산을 취하기 전에 아래 그림과 같이 도출된 feature map을 flatten을 통해 쭉 펴서 굉장히 긴 하나의 벡터로 만든 다음, 그 벡터를 Fully Connected Layer에 넣는 방식으로 하나하나 매핑해서 클래스를 분류했습니다.
 
@@ -89,8 +98,7 @@ Global Average Pooling(GAP)
 
 위 그림에선 7x7 feature map이 1024개이므로 분류할 클래스 수가 1024개라고 가정하도록 하겠습니다. GAP는 각 feature map 안에 있는 특징값들의 평균을 구해서 각각의 출력 노드에 바로 입력하는 방식입니다. 파라미터 관점에서 해석해서 보면 위의 Fully Connected 그림의 경우, `(7x7x1024)x1024 = 51.3M`개의 Weight를 가지고 있고, GAP의 경우 바로 평균을 취하게 되므로 Weight의 개수가 `0`개가 됩니다.
 
-Auxiliary Classifier
---------------------
+## Auxiliary Classifier
 
 방금까지 위해서 1x1 Conv과 GAP를 살펴보셨는데요. GoogleNet의 다른 특징으로는 바로 Auxiliary Classifier가 존재한다는 점입니다.
 
@@ -100,8 +108,7 @@ Auxiliary Classifier
 
 이때, Backpropagation시, weight값에 큰 영향을 주는 것을 막기 위해 Auxiliary Classifier에 0.3을 곱하여 training을 수행합니다. Auxiliary Classifier는 학습 시 발생하는 문제인 vanishing gradient를 해결하기 위해 사용하는 기법이므로 검증 수행 시 이를 제거하고 제일 마지막 layer의 softmax만을 사용하게 됩니다.
 
-코드 실습
-=====
+# 코드 실습
 
 인셉션 모듈을 정의하기 위해 아래 함수들을 미리 정의해두었습니다.
 
@@ -112,8 +119,7 @@ Auxiliary Classifier
 * 1x1 Convolution -> 5x5 Convolution
 * 3x3 MaxPooling -> 1x1 Convolution
 
-Define Convolution Blocks
--------------------------
+## Define Convolution Blocks
 
 * 1x1 Convolution
 
@@ -164,8 +170,7 @@ def max_3_1(in_dim,out_dim):
     return model
 ```
 
-Define Inception Module
------------------------
+## Define Inception Module
 
 ![코드실습](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F48342c3b-c163-4985-8c49-aed3af6473c5%2Fimage.png)
 
@@ -202,8 +207,7 @@ class inception_module(nn.Module):
         return output
 ```
 
-Define GoogleNet
-----------------
+## Define GoogleNet
 
 GoogleNet은 다음과 같이 구성이 되어 있습니다.
 
@@ -257,8 +261,7 @@ class GoogLeNet(nn.Module):
         return out
 ```
 
-CIFAR10 Implementation
-----------------------
+## CIFAR10 Implementation
 
 이전 VGGNet과 마찬가지로 이를 CIFAR10데이터에 적용해보았습니다. `TRAIN`과 `INFERENCE`함수는 이전 포스트와 동일합니다. [(이전 포스트)](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-VGGNet%ED%8E%B8)
 

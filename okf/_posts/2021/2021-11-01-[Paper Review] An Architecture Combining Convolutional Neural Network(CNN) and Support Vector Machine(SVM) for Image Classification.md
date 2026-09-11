@@ -1,13 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification"
+description: "Agarap의 논문을 따라 CNN 마지막 층의 softmax를 L2-SVM(hinge loss)으로 대체한 CNN-SVM을 PyTorch로 직접 구현하고 MNIST와 Fashion-MNIST에서 CNN-Softmax와 정확도를 비교한다."
 date: "2021-11-01"
 tags:
-  - "CV"
-  - "paper-review"
+  - "Paper Review"
+  - "Computer Vision"
+  - "딥러닝"
+  - "PyTorch"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-An-Architecture-Combining-Convolutional-Neural-NetworkCNN-and-Support-Vector-Machine-SVM-for-Image-Classification"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:15:58Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-An-Architecture-Combining-Convolutional-Neural-NetworkCNN-and-Support-Vector-Machine-SVM-for-Image-Classification"
+    title: "[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification"
+    author: "human:euisuk-chung"
+    last_modified: "2021-11-01"
+status: "stable"
 year: "2021"
 ---
-
-# [Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification
 
 오늘 `리뷰/번역/구현`할 논문은 "Abien Fred M. Agarap" 저자가 쓴 논문으로, "Yichuan Tang"의 "Deep Learning using Linear Support Vector Machines"을 보고 inspired되어 연구하게 되었다고 한다. 하단의 참고 논문 소스에 해당 논문 링크와 이번 논문의 링크를 첨부였다.
 
@@ -16,10 +29,7 @@ year: "2021"
 * Deep Learning using Linear Support Vector Machines ([클릭](https://arxiv.org/pdf/1306.0239v4.pdf))
 * An Architecture Combining Convolutional Neural Network (CNN) and Support Vector Machine (SVM) for Image Classification ([클릭](https://arxiv.org/pdf/1712.03541v2.pdf))
 
----
-
-Abstract
-========
+# Abstract
 
 * CNN(합성곱신경망)은 Hidden layer들과 learnable parameter들로 구성되어 있으며, 각 뉴런에서는 input을 받으면 이를 내적하고, 비선형성을 더해준다. Raw Image와 해당 class score를 이어주는 매개체의 역할을 수행한다. (주로 CNN 마지막 단에는 softmax함수가 이용이 된다.
 * 하지만, 몇몇 논문들은 위와 같은 방법론에 문제를 제기하였다:
@@ -41,10 +51,7 @@ Abstract
 > 💡 **리뷰 논문 선정 이유**  
 > 해당 논문에서는 이를 이용하여 State-of-the-art(SOTA)를 찍지는 않지만, 후에 다양한 Vision 분야에서 마지막 단에 SVM Classifier를 사용하기에 근간이 된 논문을 선정하게 되었다. 최근 연구에 있어서 모델에 간단한 변화를 (더해)줌으로써 모델의 성능을 향상시킬 수 있을까 하는 고민에 찾아보고 정리해보게 되었다.
 
----
-
-1. Introduction
-===============
+# 1. Introduction
 
 * 위에 Abstract에서 간단히 소개했듯이 NeuralNet(인공신경망)에 softmax이외에 다른 방법론(Ex. SVM)을 적용하는 연구들이 진행되어 왔다.
   + Abien Fred Agarap. 2017. A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data. arXiv preprint arXiv:1709.03082 (2017).
@@ -53,11 +60,9 @@ Abstract
 * 이러한 연구들에서 ANN에 softmax를 적용하는 것보다, SVM을 적용하는 것이 더 좋다는 결과들이 나왔다. (이진 판별(binary classification) 한정, multinomial case의 경우 one-versus-all 방식 채용)
 * 해당 논문에서는 2013년에 나온 "Deep learning using linear support vector machines" 논문에서 CNN모델을 좀 더 쉽고 간편한 2-Conv Layer with Max Pooling모델을 사용한다.
 
-2. Metodology
-=============
+# 2. Metodology
 
-2.1 Machine Intelligence Library
---------------------------------
+## 2.1 Machine Intelligence Library
 
 * 해당 논문은 Google의 Tensorflow을 이용하여 연구를 진행하였다.
 * 이번 논문 구현에 있어서는 최근 가장 많이 사용되는 PyTorch를 이용하여 논문구현을 수행해보았다.
@@ -90,8 +95,7 @@ if device == 'cuda':
 transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean=(0.5,), std=(0.5,))])
 ```
 
-2.2 The Dataset
----------------
+## 2.2 The Dataset
 
 * **MNIST** : 10-class classification problem having 60,000 training examples, and 10,000 test cases – all in grayscale
 
@@ -130,8 +134,7 @@ mnist_testloader = torch.utils.data.DataLoader(mnist_testset, batch_size=128, sh
 
 * 별도의 전처리는 수행하지 않는다. (No normalization or dimensionality reduction)
 
-2.3 Support Vector Machine(SVM)
--------------------------------
+## 2.3 Support Vector Machine(SVM)
 
 * Support Vector Machine(SVM)은 C. Cortes and V. Vapnik에 의해 개발된 이진분류 방법론으로, 최적의 초평면(***f (w, x) = w · x + b***)을 찾는 데에 의의를 둔다. 초평면은 서로 다른 두 class를 분류해준다.
 * SVM은 해당 식을 최적화하여 W parameter를 학습한다.
@@ -176,8 +179,7 @@ class SVM:
         return np.sign(approx)
 ```
 
-2.4 Convolutional Neural Network(CNN)
--------------------------------------
+## 2.4 Convolutional Neural Network(CNN)
 
 * Convolutional Neural Network(CNN)은 컴퓨터 비전에서 많이 쓰이는 deep feed-forward artificial neural network로, MLP 뿐만 아니라 convolutional layers, pooling, 그리고 비선형 activation function인 tanh, sigmoid, ReLU 등이 쓰인다.
 * 본 연구에서는 다음과 같은 기본 CNN모델을 이용한다.
@@ -286,14 +288,12 @@ class multiClassHingeLoss(nn.Module):
 > * 이진 분류문제에서 모델의 예측값 y′(스칼라), 학습데이터의 실제값 y (-1 또는 1) 사이의 hinge loss는 아래와 같이 정의된다.  
 >   loss=max(0,1−(y′×y))loss=max( 0, 1 − (y' × y))loss=max(0,1−(y′×y))
 
-2.5 Data Analysis
------------------
+## 2.5 Data Analysis
 
 * 2개의 phase(train/test)
 * 2개의 dataset(MNIST, fashion-MNIST)
 
-3. Experiments
-==============
+# 3. Experiments
 
 * 아래 그림은 각각의 데이터셋에 대하여 설정해준 Hyper parameter 정보들이다.
 
@@ -529,8 +529,7 @@ Table 3: Test accuracy of CNN-Softmax and CNN-SVM on image classification using 
 | MNIST | 98.47% | 98.77% |
 | FASHION-MNIST | 88.13% | 87.84% |
 
-4. Conclusion and Rcommendation
-===============================
+# 4. Conclusion and Rcommendation
 
 * 본 연구 결과는 "Deep Learning using Linear Support Vector Machines"의 제안된 CNN-SVM에 대한 검토를 더욱 검증하기 위한 방법론의 개선을 보증하는데 의의를 둔다.
 * "Deep Learning using Linear Support Vector Machines"의 조사 결과와 모순됨에도 불구하고, 양적으로 말하면, CNN-소프트맥스와 CNN-SVM의 시험 정확도는 관련 연구와 거의 같다.

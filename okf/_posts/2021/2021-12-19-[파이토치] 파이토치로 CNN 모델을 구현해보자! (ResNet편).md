@@ -1,13 +1,26 @@
 ---
+type: "Guide"
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)"
+description: "깊은 네트워크의 degradation 문제를 residual learning과 shortcut connection으로 해결한 ResNet의 구조와 Bottleneck 블록, 논문 실험 결과를 정리하고 ResNet-50을 PyTorch로 구현해 CIFAR10에 적용한다."
 date: "2021-12-19"
 tags:
   - "PyTorch"
+  - "CNN"
   - "딥러닝"
+  - "Computer Vision"
+resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-ResNet편"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:14:08Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-ResNet편"
+    title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-12-19"
+status: "stable"
 year: "2021"
 ---
-
-# [파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)
 
 안녕하세요! 지난번 포스트인 [VGGNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-VGGNet%ED%8E%B8)과 [GoogleNet](https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EB%A1%9C-CNN-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90-GoogleNet%ED%8E%B8) 이후로 오늘은 `ResNet` 관련 포스트입니다.
 
@@ -21,11 +34,9 @@ year: "2021"
 
 ![Depth Comp](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F83fe8361-b80d-487f-a355-65cbe8c30a05%2Fimage.png)
 
-ResNet 개요
-=========
+# ResNet 개요
 
-소개
---
+## 소개
 
 ResNet이 소개된 논문의 제목은 Going Deeper with Convolutions로, 다음 링크에서 확인해보실 수 있습니다. [(링크)](https://arxiv.org/abs/1512.03385)
 
@@ -42,8 +53,7 @@ ResNet의 저자들은 일정 수준 이상의 깊이가 되면 오히려 얕은
 
 위 그림에서 볼 수 있다시피 잔차 학습은 이전 단계에서 뽑았던 특성들을 변형시키지 않고, 그대로 다음 단계로 전달하여 더해주기 때문에 앞에서 학습한 low-level 특징과 뒤에서 학습한 high-level 특징을 모두 다음 block(단계)로 전달할 수 있다는 장점을 가지고 있습니다. 이전 GoogleNet의 경우, Neural Network의 Vanishing Gradient 문제를 해결하기 위해 Auxilary Classifier를 사용하였습니다. 하지만, ResNet의 경우 더하기 연산은 기울기가 1이기 때문에 역전파 시 loss가 줄지 않고, 모델 앞까지 잘 전파가 된다는 특징이 있어서 GoogleNet과는 다르게 Auxilary Classifier가 별도로 필요하지 않습니다.
 
-모델 구조
------
+## 모델 구조
 
 ### Overall Network
 
@@ -110,8 +120,7 @@ Bottleneck Block은 1x1, 3x3, 1x1 convolution으로 구성된 3개의 Layer를 �
 
 이런 방법을 적용하여 깊은 모델(50-layer, 101-layer, 152-layer에 적용해본 결과, 기존의 degradation의 문제가 발생하지 않고, 깊이가 더 깊어짐에 따라 더 좋아지는 것을 확인할 수 있었습니다.
 
-실험
---
+## 실험
 
 ### CIFAR 10
 
@@ -133,8 +142,7 @@ Bottleneck Block은 1x1, 3x3, 1x1 convolution으로 구성된 3개의 Layer를 �
 **MS COCO**  
 ![MS COCO](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F2f8c6bc4-d752-49b8-8104-f4d8b4e29280%2Fimage.png)
 
-코드
---
+## 코드
 
 이번 포스트에서는 ResNet-50을 구현해보는 시간을 갖겠습니다.
 

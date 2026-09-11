@@ -1,13 +1,26 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)"
+description: "CNN의 Convolution, Pooling 구조와 MLP를 비교하고, MNIST-C의 Translated, Scaled 데이터에서 CNN을 Teacher로 증류한 MLP가 정확도, ECE와 MDS 시각화 모두에서 CNN에 가까워짐을 확인합니다."
 date: "2021-09-13"
 tags:
+  - "Paper Review"
   - "Distillation"
-  - "paper-review"
+  - "Computer Vision"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-33"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:18:13Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-33"
+    title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-09-13"
+status: "stable"
 year: "2021"
 ---
-
-# [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)
 
 안녕하세요 :) 오늘은 지난번 포스팅에 이어서 "Transferring Inductive Bias Through Knowledge Distillation" 논문에 대한 정리를 이어나가 보도록 하겠습니다. 이전 포스팅에서 본 논문에서 다루게 될 주요 개념들인 `Knowledge Distillation`과 `Inductive Bias`에 대한 설명과 `RNNs vs Transformers`에 대하 실험을 진행한 Scenario 1에 대해 이야기를 풀어봤는데요.
 
@@ -15,8 +28,7 @@ year: "2021"
 1. 논문에 필요한 개념: Knowledge Distillation & Inductive Bias [(링크)](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation)  
 2. 논문 시나리오 1 : RNNs vs Transformers [(링크)](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-23)
 
-논문의 목적(복습)
-----------
+## 논문의 목적(복습)
 
 본 논문은 **"Knowledge Distillation에서 Teacher Model이 Student Model에 전하는 Dark Knowledge에 과연 Inductive Bias에 대한 정보가 존재할까?"** 라는 질문에서 비롯된 의문점을 확인하기 위해 두가지 시나리오를 가지고 실험을 전개합니다. 첫 번째 시나리오는 RNNs(Teacher Model)과 Transformers(Student Model)를, 그리고 두 번째 시나리오는 CNNs(Teacher Model)과 MLPs(Student Model)를 비교합니다.
 
@@ -28,8 +40,7 @@ year: "2021"
 
 이번 포스팅에서는 **두번째 시나리오(CNNs vs MLPs)**에 대해 다뤄보도록 하겠습니다.
 
-Scenerio 2
-----------
+## Scenerio 2
 
 ### Convolutional Neural Nets (CNNs)
 

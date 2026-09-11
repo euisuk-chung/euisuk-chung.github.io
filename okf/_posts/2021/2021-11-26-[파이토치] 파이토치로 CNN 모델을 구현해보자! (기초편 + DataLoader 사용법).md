@@ -1,16 +1,28 @@
 ---
+type: "Guide"
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)"
+description: "MNIST 데이터셋에 DataLoader를 정의하고 Conv2d·MaxPool·FC로 구성된 기본 CNN을 PyTorch로 만들어 학습·평가하며, model.train(), model.eval(), torch.no_grad()의 역할을 설명한다."
 date: "2021-11-26"
 tags:
   - "PyTorch"
+  - "CNN"
   - "딥러닝"
+  - "Computer Vision"
+resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-기초편-DataLoader-사용법"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:15:02Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-기초편-DataLoader-사용법"
+    title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-11-26"
+status: "stable"
 year: "2021"
 ---
 
-# [파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)
-
-MNIST 데이터 - CNN 실습
-==================
+# MNIST 데이터 - CNN 실습
 
 오늘은 MNIST 데이터로 Convolutional Neural Network(이하 CNN)을 구현하고 돌려보는 시간을 갖도록 하겠습니다!
 
@@ -21,8 +33,6 @@ MNIST 데이터 - CNN 실습
 * **완전연결 신경망(Fully Connected Network)** : 추출된 정보를 기반으로 최종 예측을 수행하는 계층
 
 ![CNN](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fd54a1393-dd17-4ddd-99a9-212e2561f3d7%2Fimage.png)
-
----
 
 ### Import Library
 
@@ -41,8 +51,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
----
-
 ### Set Hyperparameter
 
 ```
@@ -51,8 +59,6 @@ learning_rate = 0.0002
 num_epoch = 10
 ```
 
----
-
 ### Load MNIST Data
 
 ```
@@ -60,16 +66,12 @@ mnist_train = datasets.MNIST(root="../Data/", train=True, transform=transforms.T
 mnist_test = datasets.MNIST(root="../Data/", train=False, transform=transforms.ToTensor(), download=True)
 ```
 
----
-
 ### Define Loaders
 
 ```
 train_loader = DataLoader(mnist_train, batch_size=batch_size, shuffle=True, num_workers=2, drop_last=True)
 test_loader = DataLoader(mnist_test, batch_size=batch_size, shuffle=False, num_workers=2, drop_last=True)
 ```
-
----
 
 ### Define CNN(Base) Model
 
@@ -101,8 +103,6 @@ class CNN(nn.Module):
         return out
 ```
 
----
-
 ### Define Device & Model
 
 ```
@@ -110,16 +110,12 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = CNN().to(device)
 ```
 
----
-
 ### Define Loss & Optimizer
 
 ```
 loss_func = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 ```
-
----
 
 ### 🏋️ Train Model
 
@@ -160,8 +156,6 @@ for i in range(num_epoch):
             loss_arr.append(loss.cpu().detach().numpy())
 ```
 
----
-
 ### 🧪 Test Model
 
 학습이 완료된 모델을 바탕으로 테스트 데이터를 입력하여 정확도를 평가해봅니다. 이때는 다음 두 가지 설정을 반드시 적용해야 합니다.
@@ -178,8 +172,6 @@ model.eval()
 
 즉, **학습과 추론의 모드가 다르기 때문에**, 평가 전에 반드시 `model.eval()`을 호출해야 정확한 성능 평가가 가능합니다.
 
----
-
 #### 2️⃣ `with torch.no_grad()`란?
 
 ```
@@ -189,8 +181,6 @@ with torch.no_grad():
 * Pytorch의 **Autograd 엔진을 꺼서 gradient 계산을 하지 않도록** 설정합니다.
 * 테스트나 추론 시에는 기울기 계산이 필요 없기 때문에 메모리와 속도 측면에서 효율적입니다.
 * 또한, GPU 메모리를 절약하고 연산 속도를 높일 수 있습니다.
-
----
 
 #### ✅ 전체 테스트 코드
 
@@ -213,8 +203,6 @@ with torch.no_grad():  # gradient 비활성화
 
     print("Accuracy of Test Data: {:.2f}%".format(100 * correct / total))
 ```
-
----
 
 ### 마무리 📝
 

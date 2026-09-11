@@ -1,20 +1,32 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)"
+description: "LSTM의 순차성, 메모리 병목, 재귀성이라는 Inductive Bias를 Transformer와 비교하고, Subject-verb agreement 과제에서 LSTM을 Teacher로 증류하면 Transformer의 정확도와 ECE, 표현 분산이 개선됨을 보입니다."
 date: "2021-08-27"
 tags:
+  - "Paper Review"
   - "Distillation"
-  - "paper-review"
+  - "NLP"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-23"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:18:57Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation-23"
+    title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-08-27"
+status: "stable"
 year: "2021"
 ---
-
-# [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)
 
 안녕하세요 :) 오늘은 지난번 포스팅에 이어서 "Transferring Inductive Bias Through Knowledge Distillation" 논문에 대한 정리를 이어나가 보도록 하겠습니다. 이전 포스팅에서 본 논문에서 다루게 될 주요 개념들인 `Knowledge Distillation`과 `Inductive Bias`에 대한 설명을 해보았는데요. 이번 포스팅에서는 해당 기법들을 적용하여 저자가 수행한 실험들 중 첫번째 시나리오에 대해서 이갸기를 풀어가보도록 하겠습니다.
 
 이전 포스트가 궁금하신 분은 [여기](https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation)를 통해 확인해 보실 수 있습니다.
 
-논문의 목적(복습)
-----------
+## 논문의 목적(복습)
 
 본 논문은 **"Knowledge Distillation에서 Teacher Model이 Student Model에 전하는 Dark Knowledge에 과연 Inductive Bias에 대한 정보가 존재할까?"** 라는 질문에서 비롯된 의문점을 확인하기 위해 두가지 시나리오를 가지고 실험을 전개합니다. 첫 번째 시나리오는 RNNs(Teacher Model)과 Transformers(Student Model)를, 그리고 두 번째 시나리오는 CNNs(Teacher Model)과 MLPs(Student Model)를 비교합니다.
 
@@ -26,8 +38,7 @@ year: "2021"
 
 이번 포스팅에서는 **첫번째 시나리오(RNNs vs Transformers)**에 대해 다뤄보도록 하겠습니다.
 
-Scenerio 1
-----------
+## Scenerio 1
 
 먼저 첫번째 시나리오는 RNN중 대표적인 모델인 LSTM과 Transformer를 비교합니다. 두 모델 모두 Natural Language Processing(자연어 처리)에서 많이 사용되는 모델이며, Transformer는 LSTM에 비해 비교적 최신에 나온 논문으로 학습 데이터가 충분히 많으면 수많은 목표(task)에 있어서 뛰어난 성능을 보여주는 모델입니다.
 
@@ -51,8 +62,6 @@ Scenerio 1
 ![Results](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fe62c7998-274e-4ca0-97b9-93a0752ff011%2Fimage.png)
 
 > From "The Importance of Being Recurrent for Modeling Hierarchical Structure (2018)"
-
----
 
 ### RNNs' Inductive Bias
 
@@ -90,8 +99,6 @@ Scenerio 1
 2. `Memory Bottleneck` : 해당 timestamp 바로 이전의 hidden state정보만을 모델이 받을 수 있기 때문에, 해당 hidden state가 더 이전 과거의 내용까지 전부 함축적으로 갖추도록 강제하는 "메모리의 병목성"
 3. `Recursion` : 모든 함수가 동일하도록 강제하는 "재귀성"
 
----
-
 ### Transformers' Inductive Bias
 
 Transformer는 아래 그림과 같이 인코더에서 입력 시퀀스(ex. I am a student)를 입력받고, 디코더에서 출력 시퀀스(ex. Je suis étudiant)를 출력하는 인코더-디코더 구조의 모델입니다. 본 모델은 RNN처럼 순차적으로 단어가 들어가지 않아도 `Self-Attention`과 `Feed Forward Neural Network`만으로도 좋은 성능을 낼 수 있다는 것을 보여준 획기적인 논문(방법론)입니다. 본 포스트에서 Transformer에 대한 개념 전반을 다루기에는 너무 길어지기 때문에 RNN에 비해 제약이 적다는 정도만 이해하시고 넘어가면 좋을 것 같습니다.
@@ -109,8 +116,6 @@ Transformer의 경우, RNN에 비해 제약 또는 Inductive Bias가 훨씬 약�
 1. Transformer는 토큰들의 위치 정보를 임배딩하기 위해 positional encoding 을 더해주는 데 이는 단순한 sin함수와 cos함수로 도출된 벡터값으로, 모델 단에서 강제적로 데이터를 순차적으로 받게하는 RNN과 같은 `Sequential-lity`가 존재하지 않습니다.
 2. Transformer는 전체 토큰에 대한 정보를 Self-attention을 통해 전반적으로 받을 수 있기에, 이전 timestamp의 hidden-state만을 전달받을 수 있는 RNN과 같은 `Memory Bottleneck`이 존재하지 않습니다.
 3. Transformer는 Encoder에서 Decoder로 한번에 가는 구조이므로, 같은 함수가 연속적으로 사용되는 RNN과 같은 `recursion`이 존재하지 않습니다.
-
----
 
 ### Experiment Settings
 
@@ -143,8 +148,6 @@ Transformer의 경우, RNN에 비해 제약 또는 Inductive Bias가 훨씬 약�
   4. `Universal Transformer-seq`: Transformer-seq에 Recursion을 강제로 추가해준 모델 (Sequentiality + Recursion)
 
 ![Classification Settings](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F9b88bd21-0e94-46c8-aa9c-12c77466a26e%2Fimage.png)
-
----
 
 ### Experiment Results
 

@@ -1,13 +1,25 @@
 ---
+type: "Guide"
 title: "[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편"
+description: "한국공항공사 월별 공항 이용객 데이터를 시계열 분해와 ACF·PACF, Durbin-Watson과 Dickey-Fuller 검정으로 정상성을 판별하고 차분 후 auto_arima 탐색으로 ARIMA(4,1,0)을 선정해 예측 성능을 평가한다."
 date: "2021-10-09"
 tags:
-  - "Timeseries"
+  - "시계열"
   - "머신러닝"
+  - "Python"
+resource: "https://velog.io/@euisuk-chung/머신러닝시계열-AR-MA-ARMA-ARIMA의-모든-것-실습편"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:16:28Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/머신러닝시계열-AR-MA-ARMA-ARIMA의-모든-것-실습편"
+    title: "[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편"
+    author: "human:euisuk-chung"
+    last_modified: "2021-10-09"
+status: "stable"
 year: "2021"
 ---
-
-# [머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편
 
 본 포스팅은 실제 데이터를 활용한 시계열 분석의 전반적인 프로세스 과정을 담고 있습니다. 분석 팁이나 피드백은 언제나 환영입니다!! 🙇‍♂️
 
@@ -20,11 +32,9 @@ year: "2021"
 4. ARIMA 모델 식별 및 추정 수행
 5. 모델 평가
 
-참고(라이브러리, 평가지표)
-===============
+# 참고(라이브러리, 평가지표)
 
-라이브러리
------
+## 라이브러리
 
 ```
 import os
@@ -49,8 +59,7 @@ import seaborn as sns
 plt.style.use('seaborn-whitegrid')
 ```
 
-평가지표
-----
+## 평가지표
 
 ```
 from sklearn import metrics
@@ -84,8 +93,7 @@ def get_score(model, y_true, y_pred):
     return score_dict
 ```
 
-1. 데이터 선정 및 전처리
-===============
+# 1. 데이터 선정 및 전처리
 
 ![한국공항공사](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fd3e5c8ba-996e-466d-8f5a-0ee239af5a57%2Fimage.png)
 
@@ -97,11 +105,9 @@ def get_score(model, y_true, y_pred):
 
 또한 모델 구축 후 예측에 대한 평가를 수행하기 위해 데이터를 Train, Test Split의 비율을 8:2로 두어 Train Dataset과 Test Dataset을 구축하였습니다.
 
-2. 데이터의 정상성(비정상) 프로세스 판별
-========================
+# 2. 데이터의 정상성(비정상) 프로세스 판별
 
-시각화를 통한 판단
-----------
+## 시각화를 통한 판단
 
 먼저, 데이터에 아무런 변화를 주지 않고, 이를 파이썬 stats-models 모듈의 time series analysis에 내장되어 있는 seasonal decomposition 함수를 이용하여 데이터에서 추세(Trend), 계절(Seasonal), 예측오차(Residual)를 분리해 내어 시각화를 수행하였습니다. 위 그림의 좌측을 보면, 순서대로 본래 가지고 있는 데이터의 그래프, 추세 그래프, 계절 그래프, 예측오차 그래프를 의미합니다. 추세 그래프를 통해 데이터가 증가하고 있고, 계절 그래프를 통해 데이터가 주기를 가지고 있고, 예측오차 그래프를 통해 평균이 0이고 분산이 일정한 것을 확인할 수 있습니다. 이러한 그래프들을 통해 해당 데이터가 stationary하지 않다는 것을 시각적으로 확인할 수 있습니다.
 
@@ -125,8 +131,7 @@ sm.graphics.tsa.plot_pacf(train_data.values.squeeze(), lags=30, ax=ax[1]);
 
 ![ACF, PACF](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fe93dc71e-f603-41bd-9cf6-ab9c648c4251%2Fimage.png)
 
-통계적 검정을 통한 판단
--------------
+## 통계적 검정을 통한 판단
 
 앞장에서는 데이터의 비정상성을 시각화를 통해 확인해보는 작업을 수행해보았습니다. 이번 단에서는 데이터의 비정상성을 통계적으로 검증해보기 위해 Durbin Watson Test와 Dickey Fuller Test를 수행해보았습니다.
 
@@ -142,8 +147,7 @@ Dickey Fuller Test를 사용하여 시계열 데이터가 정상성을 가지는
 
 ![Dickey Fuller Test](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F287afc94-dde5-4700-90a2-cbe9eeb5b434%2Fimage.png)
 
-3. 차분 수행 및 정상/비정상 판별
-====================
+# 3. 차분 수행 및 정상/비정상 판별
 
 ![차분](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F538eb134-a171-4ea3-a6f9-fdebf434957d%2Fimage.png)
 
@@ -170,8 +174,7 @@ print(diff2_train_data.head())
 
 ![차분통계](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Febb350fb-8649-4f01-a4fe-1e949bb03a70%2Fimage.png)
 
-4. ARIMA 모델 식별 및 추정 수행
-======================
+# 4. ARIMA 모델 식별 및 추정 수행
 
 ARIMA는 ① 데이터 전처리 → ② 시범적으로 확인해볼 모델 구축 → ③ 파라미터의 추정(탐색) → ④ 타당성 확인 → ⑤ 최종모델선정의 흐름으로 분석이 진행됩니다. 앞에서 1차 차분, 2차 차분 둘 다 p-value가 0.05보다 작아 귀무가설을 기각하므로, 1차 차분한 데이터를 이용하여 분석을 수행해보았습니다. 일단 현재까지 ①단계인 데이터 전처리는 완료되었고, ②단계인 시범적으로 확인해볼 모델 구축하기 위해 1차 차분된 데이터를 이용하여 ACF와 PACF를 시각화하였습니다.
 
@@ -215,8 +218,7 @@ auto_arima_model = auto_arima(train_data,
 
 ![ARIMA결과 BEST](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Fe9edce50-00ef-479c-910e-8bb7bab18f0e%2Fimage.png)
 
-5. 모델 평가
-========
+# 5. 모델 평가
 
 앞에서 데이터 전처리 파트에서 언급했지만, 해당 데이터를 8:2 비율로 train과 test로 나누어 train 데이터는 모델 학습 및 hyper parameter tuning에 사용을 하였고, 나머지 test data는 예측 후 모델 성능을 평가하기 위해 남겨두었습니다. 다음은 지금 구축한 모델에 대한 test 기간에 대한 예측을 수행하고 이에 대한 평가해 보았습니다.
 

@@ -1,13 +1,26 @@
 ---
+type: "Guide"
 title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)"
+description: "ILSVRC 계보 속 VGGNet의 3x3 합성곱 설계와 깊이에 따른 성능 실험을 살펴보고, conv 블록 함수로 VGG16을 PyTorch로 구현해 CIFAR10에서 학습·평가한 결과(정확도 약 82%)를 공유한다."
 date: "2021-11-27"
 tags:
   - "PyTorch"
+  - "CNN"
   - "딥러닝"
+  - "Computer Vision"
+resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-VGGNet편"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:14:44Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이토치-파이토치로-CNN-모델을-구현해보자-VGGNet편"
+    title: "[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-11-27"
+status: "stable"
 year: "2021"
 ---
-
-# [파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)
 
 안녕하세요! 오늘 포스팅부터 다음다음 포스팅까지는 CNN 모델의 뼈대가 되는 모델들인 VGGNet, GoogleNet, ResNet을 소개하고 이를 구현해보는 시간을 갖도록 하겠습니다! :) 이번 포스팅은 `VGGNet` 관련 포스트입니다.
 
@@ -21,8 +34,7 @@ year: "2021"
 
 ![Depth Comp](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F83fe8361-b80d-487f-a355-65cbe8c30a05%2Fimage.png)
 
-VGGNet 개요
----------
+## VGGNet 개요
 
 ### 소개
 
@@ -53,8 +65,7 @@ VGGNet은 신경망의 깊이가 모델의 성능에 미치는 영향을 조사�
 
 ![Eval](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2Ffd326bed-9335-4eb7-95fa-20310b0b62de%2Fimage.png)
 
-VGGNet 구현
----------
+## VGGNet 구현
 
 그럼 VGGNet의 개요를 살펴봤으니 이번에는 이를 구현해볼까요? 구현은 위 실험 설계 표의 D열의 셋팅을 구현해보았습니다. 다시 한번 줄글로 해당 구조를 설명하자면 아래와 같습니다.
 

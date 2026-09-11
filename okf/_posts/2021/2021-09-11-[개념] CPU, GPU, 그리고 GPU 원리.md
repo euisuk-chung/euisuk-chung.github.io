@@ -1,13 +1,28 @@
 ---
+type: "Concept Note"
 title: "[개념] CPU, GPU, 그리고 GPU 원리"
+description: "CPU의 순차 처리와 GPU의 병렬 처리 구조 차이를 설명하고, CUDA, Tensor, Ray Tracing 코어와 SM binning, SIMD와 SIMT 등 GPU 내부 원리와 딥러닝 행렬 연산 가속을 다룹니다."
 date: "2021-09-11"
+tags:
+  - "개념정리"
+  - "IT지식"
+  - "NVIDIA"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/개념-CPU와-GPU"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:18:28Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/개념-CPU와-GPU"
+    title: "[개념] CPU, GPU, 그리고 GPU 원리"
+    author: "human:euisuk-chung"
+    last_modified: "2021-09-11"
+status: "stable"
 year: "2021"
 ---
 
-# [개념] CPU, GPU, 그리고 GPU 원리
-
-CPU와 GPU
-========
+# CPU와 GPU
 
 딥러닝과 머신러닝을 학습하거나 작업할 때 GPU를 사용하는 것은 이제 당연하게 여겨집니다. 실제로 아래와 같은 코드로 GPU나 CPU를 손쉽게 선택할 수 있습니다.
 
@@ -26,8 +41,7 @@ device = torch.device('cuda:0' if USE_CUDA else 'cpu')
 
 이번 포스팅에서는 **CPU와 GPU의 차이점**, **GPU가 딥러닝에서 강력한 이유**, 그리고 **GPU 내부의 연산 구조**를 깊이 있게 살펴보겠습니다.
 
-CPU와 GPU의 차이점
--------------
+## CPU와 GPU의 차이점
 
 CPU와 GPU는 둘 다 데이터를 읽어들여 연산처리를 통해 답을 도출하는 기능을 수행하나, 이름과 구조에서 알수 있듯이 중앙 처리 장치(CPU)와 그래픽 처리 장치(GPU)는 역할이 매우 다릅니다.
 
@@ -293,8 +307,6 @@ NVIDIA RTX 3090 GPU를 기준으로 하여 세부적으로 살펴보겠습니다
 * **Tensor 코어**: AI와 딥러닝 작업에서 대규모 데이터 학습과 추론을 가속.
 * **Ray Tracing 코어**: 사실적인 조명과 그림자를 생성하여 몰입감을 더함.
 
----
-
 ### GPU의 병렬 연산: 딥러닝에서의 활용
 
 GPU는 벡터 및 행렬 연산을 병렬로 처리하며, 이는 딥러닝 모델의 학습과 추론에 이상적입니다.
@@ -324,8 +336,6 @@ GPU는 벡터 및 행렬 연산을 병렬로 처리하며, 이는 딥러닝 모�
   + 데이터의 전방 전파(Forward Propagation)
   + 역전파(Back Propagation) 및 그래디언트 계산
 
----
-
 ### GPU 아키텍처의 유연성: SIMD에서 SIMT로
 
 전통적인 GPU는 **SIMD(Single Instruction Multiple Data)** 구조를 사용했으나, 최신 GPU는 더 유연한 **SIMT(Single Instruction Multiple Threads)** 구조로 발전했습니다.
@@ -341,10 +351,7 @@ GPU는 벡터 및 행렬 연산을 병렬로 처리하며, 이는 딥러닝 모�
   + 코드 유연성 증가: 조건문 처리가 가능.
   + 계산 효율성 향상: 병렬 연산 성능 극대화.
 
----
-
-결론
---
+## 결론
 
 GPU는 **병렬 연산에 특화된 구조와 수많은 코어**를 통해 CPU보다 대규모 연산에서 훨씬 뛰어난 성능을 발휘합니다. **딥러닝, 그래픽 렌더링, 암호화폐 채굴** 등 다양한 응용 분야에서 GPU는 없어서는 안 될 존재입니다.
 

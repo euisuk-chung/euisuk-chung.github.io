@@ -280,27 +280,27 @@
 
 ## 2021
 
-* [[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)](2021/2021-12-28-[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS).md)
-* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)](2021/2021-12-19-[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편).md)
-* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편)](2021/2021-11-28-[파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편).md)
-* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)](2021/2021-11-27-[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편).md)
-* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)](2021/2021-11-26-[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법).md)
-* [[머신러닝] 이상 탐지 개요 및 밀도 기반 이상치탐지](2021/2021-11-21-[머신러닝] 이상 탐지 개요 및 밀도 기반 이상치탐지.md)
-* [[머신러닝] 거리•군집•서포트벡터 기반 이상탐지 기법](2021/2021-11-21-[머신러닝] 거리•군집•서포트벡터 기반 이상탐지 기법.md)
-* [[Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)](2021/2021-11-07-[Paper Review] An Image Is Worth 16x16 Words _ Transformers for Image Recognition at Scale (Vision Transformer).md)
-* [[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification](2021/2021-11-01-[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification.md)
-* [[알고리즘] 그래프](2021/2021-10-24-[알고리즘] 그래프.md)
-* [[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편](2021/2021-10-09-[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편.md)
-* [[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 개념편](2021/2021-10-09-[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 개념편.md)
-* [[머신러닝][차원축소] 변수 추출법 - Principal Component Analysis (PCA)](2021/2021-09-21-[머신러닝][차원축소] 변수 추출법 - Principal Component Analysis (PCA).md)
-* [[머신러닝][차원축소] 변수 선택법](2021/2021-09-20-[머신러닝][차원축소] 변수 선택법.md)
-* [[파이토치] 파이토치 기초 요소 (Autograd란)](2021/2021-09-16-[파이토치] 파이토치 기초 요소 (Autograd란).md)
-* [[꿀팁] Velog 글씨를 내 마음대로 바꿔보자! (색상, 형광펜) 🔆](2021/2021-09-15-[꿀팁] Velog 글씨를 내 마음대로 바꿔보자! (색상, 형광펜) 🔆.md)
-* [[파이토치] 파이토치 기초 요소 (텐서편)](2021/2021-09-14-[파이토치] 파이토치 기초 요소 (텐서편).md)
-* [[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)](2021/2021-09-13-[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3_3).md)
-* [[개념] CPU, GPU, 그리고 GPU 원리](2021/2021-09-11-[개념] CPU, GPU, 그리고 GPU 원리.md)
-* [[Paper Review] Visualizing Data using t-SNE](2021/2021-09-08-[Paper Review] Visualizing Data using t-SNE.md)
-* [[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)](2021/2021-08-27-[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2_3).md)
-* [[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)](2021/2021-08-15-[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1_3).md)
-* [[글또 6기] 글쓰는 개발자 모임에 참가하게 되었습니다!](2021/2021-07-26-[글또 6기] 글쓰는 개발자 모임에 참가하게 되었습니다!.md)
-* [[딥러닝][개념정리] Inductive Bias란?](2021/2021-06-06-[딥러닝][개념정리] Inductive Bias란_.md)
+* [[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS)](2021/2021-12-28-[머신러닝][차원축소] 변수 추출법 - Multi-Dimensional Scaling (MDS).md) - 변수 추출법인 다차원척도법(MDS)이 객체 간 거리를 보존하는 저차원 좌표계를 찾는 원리를 PCA와 비교하고, 거리 행렬에서 내적 행렬 B를 거쳐 고유값 분해로 좌표 X를 도출하는 수식 과정을 정리한다.
+* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편)](2021/2021-12-19-[파이토치] 파이토치로 CNN 모델을 구현해보자! (ResNet편).md) - 깊은 네트워크의 degradation 문제를 residual learning과 shortcut connection으로 해결한 ResNet의 구조와 Bottleneck 블록, 논문 실험 결과를 정리하고 ResNet-50을 PyTorch로 구현해 CIFAR10에 적용한다.
+* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편)](2021/2021-11-28-[파이토치] 파이토치로 CNN 모델을 구현해보자! (GoogleNet편).md) - Inception 모듈의 1x1 Convolution 차원 축소, Global Average Pooling, Auxiliary Classifier 등 GoogleNet의 핵심 아이디어를 설명하고 PyTorch로 구현해 CIFAR10에서 학습·평가한다.
+* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편)](2021/2021-11-27-[파이토치] 파이토치로 CNN 모델을 구현해보자! (VGGNet편).md) - ILSVRC 계보 속 VGGNet의 3x3 합성곱 설계와 깊이에 따른 성능 실험을 살펴보고, conv 블록 함수로 VGG16을 PyTorch로 구현해 CIFAR10에서 학습·평가한 결과(정확도 약 82%)를 공유한다.
+* [[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법)](2021/2021-11-26-[파이토치] 파이토치로 CNN 모델을 구현해보자! (기초편 + DataLoader 사용법).md) - MNIST 데이터셋에 DataLoader를 정의하고 Conv2d·MaxPool·FC로 구성된 기본 CNN을 PyTorch로 만들어 학습·평가하며, model.train(), model.eval(), torch.no_grad()의 역할을 설명한다.
+* [[머신러닝] 이상 탐지 개요 및 밀도 기반 이상치탐지](2021/2021-11-21-[머신러닝] 이상 탐지 개요 및 밀도 기반 이상치탐지.md) - 이상탐지가 이진 분류와 다른 점을 학습 방법·데이터·평가 관점에서 짚고, Gaussian, Mixture of Gaussian, Kernel Density Estimation(Parzen Window), LOF 등 밀도 기반 이상치 탐지 기법을 정리한다.
+* [[머신러닝] 거리•군집•서포트벡터 기반 이상탐지 기법](2021/2021-11-21-[머신러닝] 거리•군집•서포트벡터 기반 이상탐지 기법.md) - 강필성 교수님 강의를 바탕으로 kNN 거리 기반, K-Means와 PCA·Auto-Encoder 재구성 기반, One-class SVM과 SVDD, Isolation Forest까지 이상탐지 기법의 핵심 아이디어와 이상치 점수 정의를 정리한다.
+* [[Paper Review] An Image Is Worth 16x16 Words : Transformers for Image Recognition at Scale (Vision Transformer)](2021/2021-11-07-[Paper Review] An Image Is Worth 16x16 Words _ Transformers for Image Recognition at Scale (Vision Transformer).md) - Self-Attention과 Transformer 배경을 짚은 뒤, 이미지를 고정 크기 패치로 나눠 선형 임베딩과 위치 임베딩을 더하고 [CLS] 토큰으로 분류하는 Vision Transformer의 구조를 einops 기반 PyTorch 코드로 구현한다.
+* [[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification](2021/2021-11-01-[Paper Review] An Architecture Combining Convolutional Neural Network(CNN) and Support Vector Machine(SVM) for Image Classification.md) - Agarap의 논문을 따라 CNN 마지막 층의 softmax를 L2-SVM(hinge loss)으로 대체한 CNN-SVM을 PyTorch로 직접 구현하고 MNIST와 Fashion-MNIST에서 CNN-Softmax와 정확도를 비교한다.
+* [[알고리즘] 그래프](2021/2021-10-24-[알고리즘] 그래프.md) - 그래프의 정의와 종류, 차수·경로·사이클 등 용어, 인접행렬과 인접리스트 표현 방식을 정리하고 파이썬 deque와 재귀로 DFS와 BFS를 구현한 코드를 제시한다.
+* [[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편](2021/2021-10-09-[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 실습편.md) - 한국공항공사 월별 공항 이용객 데이터를 시계열 분해와 ACF·PACF, Durbin-Watson과 Dickey-Fuller 검정으로 정상성을 판별하고 차분 후 auto_arima 탐색으로 ARIMA(4,1,0)을 선정해 예측 성능을 평가한다.
+* [[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 개념편](2021/2021-10-09-[머신러닝][시계열] AR, MA, ARMA, ARIMA의 모든 것 - 개념편.md) - 정상성과 자기상관 개념을 바탕으로 AR, MA, ARMA, ARIMA 모델의 수식과 하이퍼파라미터, 차분의 의미, ACF와 PACF로 p와 q를 정하는 방법을 김성범 교수님 강의 기반으로 정리한다.
+* [[머신러닝][차원축소] 변수 추출법 - Principal Component Analysis (PCA)](2021/2021-09-21-[머신러닝][차원축소] 변수 추출법 - Principal Component Analysis (PCA).md) - 공분산 행렬, 사영, 고유값과 고유벡터를 복습한 뒤 라그랑주 승수법으로 분산을 최대화하는 PCA 유도 과정과 Scree Plot 기반 주성분 개수 선택, 성적 데이터 예시, PCA의 한계를 정리한다.
+* [[머신러닝][차원축소] 변수 선택법](2021/2021-09-20-[머신러닝][차원축소] 변수 선택법.md) - 차원의 저주와 차원축소의 목적을 설명하고 Forward, Backward, Stepwise 등 지도 변수 선택 기법과 AIC, BIC, Adjusted R2 평가지표, 유전 알고리즘(GA) 기반 변수 선택 절차를 정리한다.
+* [[파이토치] 파이토치 기초 요소 (Autograd란)](2021/2021-09-16-[파이토치] 파이토치 기초 요소 (Autograd란).md) - 순전파와 역전파 개념을 짚은 뒤 requires_grad, loss.backward(), torch.no_grad()로 MLP를 학습하는 예제로 PyTorch Autograd와 연산 그래프(DAG), torch.nn과 optim 패키지를 정리한다.
+* [[꿀팁] Velog 글씨를 내 마음대로 바꿔보자! (색상, 형광펜) 🔆](2021/2021-09-15-[꿀팁] Velog 글씨를 내 마음대로 바꿔보자! (색상, 형광펜) 🔆.md) - velog 마크다운에서 span 태그의 color와 background-color 스타일로 글자 색상과 형광펜 효과를 주는 방법과 hex 코드 색상표를 소개한다.
+* [[파이토치] 파이토치 기초 요소 (텐서편)](2021/2021-09-14-[파이토치] 파이토치 기초 요소 (텐서편).md) - torch.tensor로 스칼라, 벡터, 행렬, 텐서를 정의하고 shape를 확인하는 방법과 add, sub, mul, div, dot, matmul 등 기본 연산을 예제 코드로 정리합니다.
+* [[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3/3)](2021/2021-09-13-[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (3_3).md) - CNN의 Convolution, Pooling 구조와 MLP를 비교하고, MNIST-C의 Translated, Scaled 데이터에서 CNN을 Teacher로 증류한 MLP가 정확도, ECE와 MDS 시각화 모두에서 CNN에 가까워짐을 확인합니다.
+* [[개념] CPU, GPU, 그리고 GPU 원리](2021/2021-09-11-[개념] CPU, GPU, 그리고 GPU 원리.md) - CPU의 순차 처리와 GPU의 병렬 처리 구조 차이를 설명하고, CUDA, Tensor, Ray Tracing 코어와 SM binning, SIMD와 SIMT 등 GPU 내부 원리와 딥러닝 행렬 연산 가속을 다룹니다.
+* [[Paper Review] Visualizing Data using t-SNE](2021/2021-09-08-[Paper Review] Visualizing Data using t-SNE.md) - SNE의 조건부 확률과 KL divergence, crowding problem을 해결하는 Student-t 분포, early exaggeration 등 t-SNE의 원리를 정리하고 MNIST에서 Isomap, LLE와 비교 구현합니다.
+* [[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2/3)](2021/2021-08-27-[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (2_3).md) - LSTM의 순차성, 메모리 병목, 재귀성이라는 Inductive Bias를 Transformer와 비교하고, Subject-verb agreement 과제에서 LSTM을 Teacher로 증류하면 Transformer의 정확도와 ECE, 표현 분산이 개선됨을 보입니다.
+* [[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)](2021/2021-08-15-[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1_3).md) - Knowledge Distillation의 Teacher-Student 구조와 지식 유형, 증류 방식 분류를 정리하고, KD로 Inductive Bias를 전달할 수 있는지 검증하려는 논문의 문제의식과 두 실험 시나리오를 소개합니다.
+* [[글또 6기] 글쓰는 개발자 모임에 참가하게 되었습니다!](2021/2021-07-26-[글또 6기] 글쓰는 개발자 모임에 참가하게 되었습니다!.md) - 글쓰는 개발자 모임 글또 6기 참가 소감과 지원 동기를 밝히고, 개발 환경 셋업 팁, 알고리즘 공부, 논문 리뷰 등 앞으로 블로그에서 다룰 주제 계획을 소개합니다.
+* [[딥러닝][개념정리] Inductive Bias란?](2021/2021-06-06-[딥러닝][개념정리] Inductive Bias란_.md) - Bias-Variance 분해에서 출발해 Inductive Bias의 정의와 Translation Invariance 등 대표 예시, 딥러닝 레이어별 관계 귀납 편향과 샘플 효율성 간의 trade-off를 정리합니다.

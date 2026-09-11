@@ -1,20 +1,32 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)"
+description: "Knowledge Distillation의 Teacher-Student 구조와 지식 유형, 증류 방식 분류를 정리하고, KD로 Inductive Bias를 전달할 수 있는지 검증하려는 논문의 문제의식과 두 실험 시나리오를 소개합니다."
 date: "2021-08-15"
 tags:
+  - "Paper Review"
   - "Distillation"
-  - "paper-review"
+  - "딥러닝"
+  - "개념정리"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:19:11Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation"
+    title: "[Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)"
+    author: "human:euisuk-chung"
+    last_modified: "2021-08-15"
+status: "stable"
 year: "2021"
 ---
-
-# [Paper Review] Transferring Inductive Bias Through Knowledge Distillation - (1/3)
 
 안녕하세요 :) 오늘 블로그 포스팅으로 다뤄볼 내용은 얼마 전에 흥미롭게 읽어보았던 "Transferring Inductive Bias Through Knowledge Distillation"이라는 논문인데요! 해당 논문은 Knowledge Distillation을 이용하여 과연 Inductive Bias를 전달할 수 있을 까를 다룬 논문입니다. 아쉽게도 이번 ICLR2021에서 Accept되진 못했지만 다양한 실험과 Knowledge Distillation을 이용하여 Inductive Bias를 Student모델에게 전달하려고 시도한 첫 논문이기 때문에 그만큼 흥미롭게 읽은 논문인 것 같습니다.
 
 본격적인 논문 리뷰를 하기 전에 이번 장에서는 중요한 개념인 `Knowledge Distillation`과 `Inductive Bias`에 대하여 이야기하고 다음 장에서는 논문에서 진행한 다양한 실험들에 대해 다루어 보고자합니다.
 
-What is Knowledge Distillation
-------------------------------
+## What is Knowledge Distillation
 
 ![KD Diagram](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F0a335ca5-4799-4775-ab8e-52a22e13ab1a%2Fimage.png)
 
@@ -58,8 +70,7 @@ Knowledge Distillation(KD)은 다음과 같이 분류가 될 수 있는 데요. 
 (2) Online Distillation : Teacher와 Student를 동시에 학습되며 서로 Knowledge를 전달함  
 (3) Self-Distillation : 하나의 모델 내부에서 Knowledge를 전달함
 
-What is Inductive Bias
-----------------------
+## What is Inductive Bias
 
 Inductive Bias란, 데이터와 무관하게 일반화 동작에 영향을 미치는 학습 알고리즘의 특성으로, 학습 알고리즘이 특정 솔루션까지 수렴할 수 있도록 도와줍니다. 적당한 Inductive Bias는, 우리가 제한된 데이터나 컴퓨팅 파워를 가지고 모델을 학습하거나, 학습에 사용된 Train 데이터가 Test 데이터를 완벽하게 대표(perfectly representative)하지 못할 때 중요하게 작용하게 됩니다. 만약, Inductive Bias가 존재하지 않는다면, 모델은 local minima에 빠질 가능성이 존재하며, 모델의 initial state와 학습 데이터의 순서에 따라서도 수렴 값이 바뀔 수 있습니다.  
 ![해의 수렴](https://velog.velcdn.com/images%2Feuisuk-chung%2Fpost%2F58a05baf-6db6-49e5-8d9f-00ee7d320f94%2Fimage.png)
@@ -77,8 +88,7 @@ Inductive Bias란, 데이터와 무관하게 일반화 동작에 영향을 미�
 
 Inductive Bias에 대해 더 궁금하신 분들은 제 이전 [포스트](https://velog.io/@euisuk-chung/Inductive-Bias%EB%9E%80)를 참고하시면 될 것 같습니다.
 
-논문 개요
------
+## 논문 개요
 
 ### 아이디어
 

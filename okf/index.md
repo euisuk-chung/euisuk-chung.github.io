@@ -18,6 +18,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 # Tags
 
 * [AI Agent](_concepts/ai-agent.md) - LLM 기반 에이전트 설계, 프레임워크, 활용 사례.
+* [알고리즘](_concepts/algorithm.md) - 자료구조와 알고리즘의 개념 정리와 파이썬 구현, 문제 풀이.
 * [이상탐지](_concepts/anomaly-detection.md) - 이상 탐지 기법과 논문, 실전 적용.
 * [Anthropic](_concepts/anthropic.md) - Anthropic의 모델과 제품(Claude, Claude Code), 공개 자료를 다룬 글.
 * [도서리뷰](_concepts/book-review.md) - 책을 읽고 정리한 리뷰와 추천.
@@ -25,6 +26,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [ChatGPT](_concepts/chatgpt.md) - OpenAI의 대화형 AI 서비스 ChatGPT의 기능, 업데이트, 활용법을 다룬 글.
 * [CIO](_concepts/cio.md) - CIO 서밋 등 기업 IT 리더십 행사 세션 정리.
 * [Claude](_concepts/claude.md) - Anthropic의 Claude 모델과 Claude Code 사용법, 업데이트를 다룬 글.
+* [CNN](_concepts/cnn.md) - 합성곱 신경망(CNN)의 구조와 VGGNet, GoogleNet, ResNet 등 대표 모델의 원리와 구현을 다룬 글.
 * [Computer Vision](_concepts/computer-vision.md) - 이미지·영상 인식 모델과 컴퓨터 비전 연구.
 * [개념정리](_concepts/concepts.md) - 머신러닝, 딥러닝, 소프트웨어의 핵심 개념을 정리한 글.
 * [Conference](_concepts/conference.md) - 컨퍼런스·서밋·키노트 참관 및 발표 정리.
@@ -34,6 +36,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Distillation](_concepts/distillation.md) - 지식 증류(knowledge distillation) 기법과 논문.
 * [EXAONE](_concepts/exaone.md) - LG AI연구원의 EXAONE 계열 모델 기술 보고서와 리뷰.
 * [Gemini](_concepts/gemini.md) - Google의 Gemini 모델과 관련 도구, 해커톤을 다룬 글.
+* [글또](_concepts/geultto.md) - 글쓰는 개발자 모임 글또 참가기와 회고, 관련 소식을 다룬 글.
 * [Git](_concepts/git.md) - Git 명령어, 브랜치 전략, GitHub 활용 팁.
 * [Google](_concepts/google.md) - Google의 AI 모델, 제품, 개발자 행사(Google I/O 등)를 다룬 글.
 * [Graph](_concepts/graph.md) - 그래프 이론과 그래프 신경망(GNN).
@@ -67,6 +70,7 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [시계열](_concepts/time-series.md) - 시계열 데이터 분석, 예측 모델, 관련 논문.
 * [꿀팁](_concepts/tips.md) - 바로 써먹을 수 있는 짧은 실전 팁.
 * [Tools](_concepts/tools.md) - 개발과 생산성에 도움이 되는 도구 소개.
+* [Transformer](_concepts/transformer.md) - Self-Attention 기반 Transformer 아키텍처와 이를 비전·언어 등 다양한 도메인에 적용한 모델을 다룬 글.
 * [트렌드](_concepts/trend.md) - AI·IT 산업 동향과 보고서 요약.
 * [비지도학습](_concepts/unsupervised-learning.md) - 군집화, 표현 학습 등 비지도 학습 기법.
 * [Velog](_concepts/velog.md) - velog 블로그 운영과 동기화에 관한 글.
