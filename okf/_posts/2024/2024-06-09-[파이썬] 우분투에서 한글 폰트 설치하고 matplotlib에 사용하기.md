@@ -1,14 +1,26 @@
 ---
+type: "Guide"
 title: "[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기"
+description: "우분투에 나눔 폰트를 apt로 설치하고 matplotlib 폰트 디렉터리에 복사한 뒤 캐시를 지워 한글 그래프가 깨지지 않게 설정하는 과정과 주피터용 일괄 실행 스니펫을 소개한다."
 date: "2024-06-09"
 tags:
-  - "python"
-  - "visualization"
-  - "환경"
+  - "Visualization"
+  - "환경설정"
+  - "Linux"
+  - "Python"
+resource: "https://velog.io/@euisuk-chung/파이썬-우분투에서-한글-폰트-설치하고-matplotlib에-사용하기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:58:00Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이썬-우분투에서-한글-폰트-설치하고-matplotlib에-사용하기"
+    title: "[파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기"
+    author: "human:euisuk-chung"
+    last_modified: "2024-06-09"
+status: "stable"
 year: "2024"
 ---
-
-# [파이썬] 우분투에서 한글 폰트 설치하고 matplotlib에 사용하기
 
 안녕하세요😛 오늘은 우분투에서 한글 폰트 설치하고 matplotlib에서 해당 폰트를 사용하는 방법을 정리해보겠습니다!
 
@@ -20,8 +32,7 @@ year: "2024"
 
 아래 방법을 따르면 5분 내로 폰트를 설정할 수 있습니다.
 
-1. 나눔 폰트 설치
------------
+## 1. 나눔 폰트 설치
 
 우선, 나눔 폰트를 설치합니다. 터미널에서 다음 명령어를 실행합니다.
 
@@ -29,8 +40,7 @@ year: "2024"
 sudo apt-get install fonts-nanum*
 ```
 
-2. 폰트 캐시 삭제
------------
+## 2. 폰트 캐시 삭제
 
 폰트 캐시를 갱신하기 위해 캐시를 삭제합니다.
 
@@ -38,8 +48,7 @@ sudo apt-get install fonts-nanum*
 fc-cache -fv
 ```
 
-3. 폰트 배포
---------
+## 3. 폰트 배포
 
 Matplotlib의 폰트 디렉터리에 나눔 폰트를 복사해야 합니다. 먼저, Matplotlib 설정 디렉터리가 어디 있는지 확인합니다.
 
@@ -62,8 +71,7 @@ print(matplotlib.__file__)
 cp /usr/share/fonts/truetype/nanum/Nanum* /usr/anaconda3/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/
 ```
 
-4. Matplotlib 폰트 캐시 삭제
-----------------------
+## 4. Matplotlib 폰트 캐시 삭제
 
 Matplotlib의 폰트 캐시를 삭제하여 새로운 폰트를 인식하도록 합니다.
 
@@ -71,8 +79,7 @@ Matplotlib의 폰트 캐시를 삭제하여 새로운 폰트를 인식하도록 
 rm -rf ~/.cache/matplotlib/*
 ```
 
-5. 폰트 적용
---------
+## 5. 폰트 적용
 
 파이썬 혹은 주피터 노트북을 재실행하여 폰트를 로드합니다. 폰트가 설치되었는지 확인하는 명령어를 실행합니다.
 
@@ -99,8 +106,7 @@ print([matplotlib.font_manager.FontProperties(fname=font).get_name() for font in
 
 이제 폰트를 Matplotlib에서 적용할 수 있습니다.
 
-6. 예시 코드 실행
------------
+## 6. 예시 코드 실행
 
 다음 예제 코드를 사용하여 나눔 폰트를 설정하고 그래프를 그려봅니다.
 
@@ -127,8 +133,7 @@ plt.show()
 
 이 과정을 통해 나눔 폰트를 Ubuntu 환경에서 Matplotlib에 적용할 수 있습니다.
 
-(참고) Jupyter Snippet
---------------------
+## (참고) Jupyter Snippet
 
 귀찮으시다고요?! 저도 귀찮아서 주피터노트북에서 한번에 실행할 수 있게 코드를 짰습니다 😝
 

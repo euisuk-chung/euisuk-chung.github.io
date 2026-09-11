@@ -1,13 +1,26 @@
 ---
+type: "Conference Recap"
 title: "[정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석"
+description: "마이크로소프트 최윤석 세션을 정리하며 GPU 발전과 LLM 성장, Reasoning Native AI, 벡터 검색 기반 RAG 원리, LLM에서 AI 에이전트로의 진화와 OmniParser, Copilot Studio를 소개한다."
 date: "2024-12-25"
 tags:
-  - "AIS"
+  - "SK AI Summit"
   - "Conference"
+  - "RAG"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/정리-24년-AI-Summit-쉽게-이해하는-RAG와-에이전트-AI-기술의-현재와-미래-Microsoft"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:43:33Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/정리-24년-AI-Summit-쉽게-이해하는-RAG와-에이전트-AI-기술의-현재와-미래-Microsoft"
+    title: "[정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-25"
+status: "stable"
 year: "2024"
 ---
-
-# [정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석
 
 오전 미팅 일정을 마친 후, Day2 오후 세션에 참석하여 매우 유익한 시간을 보냈습니다. 모든 세션에 참가하지 못한 점은 아쉽지만, 참석한 세션들에서 얻은 내용과 인사이트를 중심으로 이번 시리즈를 구성해 보았습니다.
 

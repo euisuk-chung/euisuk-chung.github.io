@@ -1,16 +1,26 @@
-﻿---
+---
+type: "Lecture Note"
 title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 2)"
+description: "TypedDict·Pydantic 상태 스키마, 병렬 업데이트 충돌을 푸는 리듀서, Input/Output/Private 다중 스키마, trim_messages 트리밍, 대화 요약 챗봇과 MemorySaver·SqliteSaver 체크포인터를 다룬다."
 date: "2024-10-16"
 tags:
-  - "langgraph"
+  - "LangGraph"
   - "강의노트"
+  - "AI Agent"
+  - "LangChain"
+resource: "https://velog.io/@euisuk-chung/LangChain-Academy-Introduction-to-LangGraph-Module-2"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:41:01+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/LangChain-Academy-Introduction-to-LangGraph-Module-2"
+    title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 2)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-16"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] LangChain Academy : Introduction to LangGraph (Module 2)
-
-
-
 
 **랭체인(LangChain)**과 **랭그래프(LangGraph)**는 대규모 언어 모델(LLM)을 활용한 애플리케이션 개발을 위한 도구들입니다. 위 강의는 LangChain에서 운영하는 LangChain Academy에서 제작한 "Introduction to LangGraph" 강의의 내용을 정리 및 추가 설명한 내용입니다.
 
@@ -270,8 +280,6 @@ display(Image(graph.get_graph().draw_mermaid_png()))
 ![](https://velog.velcdn.com/images/euisuk-chung/post/fd26e16e-e145-4482-95e9-b308ed6a2ea3/image.png)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/242e2952-4514-4cd0-b145-8ed0060e3d88/image.png)
-
----
 
 ### **Lesson 2: State Reducers**
 
@@ -545,8 +553,6 @@ class ExtendedMessagesState(MessagesState):
 >     ```
 >     ![](https://velog.velcdn.com/images/euisuk-chung/post/751d51c4-6b70-4325-a766-3ffd2214fa90/image.png)
 
----
-
 ### **Lesson 3: Multiple Schemas**
 
 * Langraph에서 **그래프의 노드 간**에는 **여러 스키마**를 사용할 수 있습니다.
@@ -734,8 +740,6 @@ graph.invoke({"question":"hi"})
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/256a4621-96c4-4e2a-ac0b-143016becbd4/image.png)
 
----
-
 ### **Lesson 4: Trim and Filter Messages**
 
 * **복습**:
@@ -873,8 +877,6 @@ graph.invoke({"question":"hi"})
      + 그리고 langraph 상에는 전체의 message history는 그대로 유지되게 됩니다.  
        
        ![](https://velog.velcdn.com/images/euisuk-chung/post/59884f3a-f8ac-4946-8a5b-30aecca8318f/image.png)
-
----
 
 ### **Lesson 5: Chatbot w/ Summarizing Messages and Memory**
 
@@ -1049,8 +1051,6 @@ Langraph에서는 이와 비슷한 개념으로 `configurable`을 사용하여 �
 >   + 이 시스템 메시지를 대화 히스토리의 맨 앞에 추가합니다.
 >   + 그 다음에 새로운 사용자 메시지를 포함한 최근 메시지들이 추가됩니다.
 > * 이렇게 구성된 메시지 리스트(요약 + 최근 메시지들)가 LLM에 전달됩니다.
-
----
 
 ### **Lesson 6: Chatbot w/ Summarizing Messages and External Memory**
 

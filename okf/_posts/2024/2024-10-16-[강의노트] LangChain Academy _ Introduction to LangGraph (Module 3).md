@@ -1,16 +1,26 @@
-﻿---
+---
+type: "Lecture Note"
 title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 3)"
+description: "stream/astream_events 스트리밍, interrupt_before 브레이크포인트와 update_state를 이용한 Human-in-the-loop, NodeInterrupt 동적 중단점, 체크포인트 기반 Time Travel 재생·포크를 정리한다."
 date: "2024-10-16"
 tags:
-  - "langgraph"
+  - "LangGraph"
   - "강의노트"
+  - "AI Agent"
+  - "LangChain"
+resource: "https://velog.io/@euisuk-chung/3-m82jb3x6"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:40:46+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/3-m82jb3x6"
+    title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 3)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-16"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] LangChain Academy : Introduction to LangGraph (Module 3)
-
-
-
 
 **랭체인(LangChain)**과 **랭그래프(LangGraph)**는 대규모 언어 모델(LLM)을 활용한 애플리케이션 개발을 위한 도구들입니다. 위 강의는 LangChain에서 운영하는 LangChain Academy에서 제작한 "Introduction to LangGraph" 강의의 내용을 정리 및 추가 설명한 내용입니다.
 
@@ -29,8 +39,7 @@ year: "2024"
 
   
 
-Lesson 1: Streaming
--------------------
+## Lesson 1: Streaming
 
 * 본 강의에서도 지난번에 사용했던 요약 LLM Agent를 사용하여 실습을 수행합니다.
 
@@ -351,10 +360,7 @@ async for event in graph.astream_events({"messages": [input_message]}, config, v
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/379ca224-8dd9-4741-bfce-5c9aeeeb8c2f/image.png)
 
----
-
-Lesson 2: Breakpoints
----------------------
+## Lesson 2: Breakpoints
 
 ### 개요
 
@@ -498,10 +504,7 @@ else:
     print("사용자에 의해 작업이 취소되었습니다.")
 ```
 
----
-
-Lesson 3: Editing State and Human Feedback
-------------------------------------------
+## Lesson 3: Editing State and Human Feedback
 
 ### 개요
 
@@ -643,10 +646,7 @@ graph.update_state(
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a05af497-f3f4-49f7-8e13-2f1cc5331577/image.png)
 
----
-
-Lesson 4: Dynamic Breakpoints
------------------------------
+## Lesson 4: Dynamic Breakpoints
 
 ### 개요
 
@@ -810,8 +810,7 @@ for event in graph.stream(None, thread_config, stream_mode="values"):
 > 
 > 4. **유연한 워크플로우 구성**: 동적 중단점을 사용하면, 사용자의 승인, 디버깅, 상태 수정 등을 유연하게 처리할 수 있습니다.
 
-Lesson 5: Time Travel
----------------------
+## Lesson 5: Time Travel
 
 ### 개요
 

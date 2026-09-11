@@ -1,18 +1,30 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] Text Splitting For Retrieval"
+description: "The 5 Levels of Text Splitting 영상을 바탕으로 문자 분할, 재귀적 문자 분할, 문서 특화 분할, 의미 기반 분할, 에이전트 기반 분할의 원리와 장단점을 예제 코드로 정리한다."
 date: "2024-09-16"
 tags:
-  - "rag"
+  - "RAG"
+  - "LangChain"
   - "강의노트"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/The-5-Levels-Of-Text-Splitting-For-Retrieval-강의요약"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:49:21Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/The-5-Levels-Of-Text-Splitting-For-Retrieval-강의요약"
+    title: "[강의노트] Text Splitting For Retrieval"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-16"
+status: "stable"
 year: "2024"
 ---
 
-# [강의노트] Text Splitting For Retrieval
-
 ![](https://velog.velcdn.com/images/euisuk-chung/post/cef4d420-1a78-40ab-a375-adbe72c50e60/image.png)
 
-Introduction
-------------
+## Introduction
 
 대규모 언어 모델(LLM, Large Language Model)을 이용한 애플리케이션의 성능을 향상시키는 가장 효과적인 전략 중 하나는 큰 텍스트 데이터를 더 작은 조각으로 분할하는 것입니다. LLM에게 필요한 정보만을 제공함으로써 모델의 작업 효율성을 극대화할 수 있습니다. 이러한 텍스트 분할 기술은 단순한 방법 같지만, 그 안에는 복잡한 과학과 예술이 숨어 있습니다.
 
@@ -22,15 +34,13 @@ Introduction
 이번 포스트에서는 **5가지의 텍스트 분할(Levels of Text Splitting)** 방법을 소개합니다.  
 (\*해당 글은 위 Youtube 영상 자료를 공부 후에 정리하였습니다.)
 
-Background
-----------
+## Background
 
 언어 모델은 일반적으로 **문맥 길이(Context Length)**라는 제한이 있습니다. 즉, 한 번에 처리할 수 있는 데이터의 양이 제한되어 있습니다. 따라서 대량의 데이터를 한꺼번에 모델에 넘기기보다는, 데이터를 작은 조각으로 나눠서 필요한 부분만 제공하는 것이 더 효율적입니다. 이때 중요한 것이 바로 **텍스트 분할**입니다.
 
 텍스트 분할은 단순히 데이터를 자르는 것이 아니라, **최적의 정보 구조를 만들기 위한 전략**입니다. 이를 통해 신호 대 잡음비(Signal-to-Noise Ratio)를 높여 모델이 보다 중요한 정보에 집중하게 만들 수 있습니다.
 
-The 5 Levels of Text Splitting
-------------------------------
+## The 5 Levels of Text Splitting
 
 텍스트 분할은 크게 **다섯 단계**로 나눌 수 있습니다. 각 단계는 점점 더 복잡한 방식으로 발전하며, 텍스트의 물리적 구조에서부터 의미적 구조까지 다양한 관점을 고려합니다.
 
@@ -44,10 +54,7 @@ The 5 Levels of Text Splitting
 
 ⑤ `Level 5`: **Agentic Splitting** - Experimental method of splitting text with an agent-like system.
 
----
-
-**Level 1: Character Splitting (캐릭터 분할)**
------------------------------------------
+## **Level 1: Character Splitting (캐릭터 분할)**
 
 첫 번째 단계는 가장 기본적인 방식인 **텍스트를 고정된 문자 수로 분할하는 방식**은 기본적인 텍스트 분할 방법입니다. 이 방법은 구현이 간단하지만, 텍스트의 문맥이나 의미를 고려하지 않기 때문에 실무에서 자주 사용되지는 않습니다.
 
@@ -73,10 +80,7 @@ for i in range(0, len(text), chunk_size):
 * 텍스트의 의미나 구조를 고려하지 않기 때문에, 실전에서 거의 사용되지 않습니다.
 * 단어 중간에서 분할이 발생하여 가독성에 문제가 생길 수 있습니다.
 
----
-
-**Level 2: Recursive Character Splitting (재귀적 캐릭터 분할)**
--------------------------------------------------------
+## **Level 2: Recursive Character Splitting (재귀적 캐릭터 분할)**
 
 두 번째 단계는 **재귀적 캐릭터 분할**입니다. `RecursiveCharacterTextSplitter`와 같은 도구를 사용해 텍스트를 재귀적으로 분할합니다. 주어진 구분자(예: 문장, 단락, 공백 등)에 따라 텍스트를 나누며, 각 구분자가 작동하지 않는 경우 다음 구분자를 사용하여 텍스트를 더 세분화할 수 있습니다.
 
@@ -99,10 +103,7 @@ texts = text_splitter.split_text(text)
 * 여전히 고정된 문자 수에 의존하여 분할됩니다.
 * 복잡한 문서에서는 추가적인 조정이 필요할 수 있습니다.
 
----
-
-**Level 3: Document-Specific Splitting (문서 특화 분할)**
----------------------------------------------------
+## **Level 3: Document-Specific Splitting (문서 특화 분할)**
 
 세 번째 단계는 문서의 종류에 따라 다르게 분할하는 **문서 특화 분할**입니다. 예를 들어, Markdown, Python 코드, PDF 문서 등 각각의 문서 형식에는 고유의 구조적 특징이 있습니다. Markdown 문서의 경우, 제목(Heading)을 기준으로, 코드 문서의 경우 함수나 클래스 단위로 분할할 수 있습니다.
 
@@ -173,10 +174,7 @@ chunks = text_splitter.split_text(markdown_text)
 * 각 문서 형식에 맞춘 맞춤형 코드가 필요합니다.
 * 여러 문서 형식을 동시에 처리하려면 추가적인 도구나 라이브러리가 필요할 수 있습니다.
 
----
-
-**Level 4: Semantic Splitting (의미 기반 분할)**
-------------------------------------------
+## **Level 4: Semantic Splitting (의미 기반 분할)**
 
 네 번째 단계는 **의미적 분할**입니다. 앞서 언급한 단계들은 텍스트의 물리적 구조(문단, 문장, 단어)를 기반으로 분할했지만, 이 단계에서는 **텍스트의 의미와 내용**을 기준으로 분할합니다. 즉, 각 문장이 다루는 주제나 내용의 유사성을 바탕으로 텍스트를 분할하는 것입니다.
 
@@ -203,10 +201,7 @@ distances = cosine_distances(embeddings)
 * 임베딩 및 유사도 계산을 사용하므로 계산 비용이 큽니다.
 * 대량의 데이터나 복잡한 문서의 경우 처리 시간이 길어질 수 있습니다.
 
----
-
-**Level 5: Agentic Splitting (에이전트 기반 분할)**
--------------------------------------------
+## **Level 5: Agentic Splitting (에이전트 기반 분할)**
 
 마지막 단계는 **에이전트 기반 분할**입니다. Agentic Splitting은 텍스트를 능동적으로 평가하여 분할하는 실험적인 방법입니다. 각 문장을 하나의 "Proposition"으로 보고, 각 Proposition을 평가하여 기존 청크에 포함할지 새로운 청크로 나눌지 결정합니다. 문장이 추가될 때마다 청크의 요약과 제목이 자동으로 업데이트됩니다.
 
@@ -250,10 +245,7 @@ class AgenticChunker:
 > * GPT-4를 통해 각 청크의 요약과 제목을 자동으로 생성 및 갱신.
 > * Proposition이 추가될 때마다 의미를 평가하고 청크를 동적으로 관리.
 
----
-
-Conclusion
-----------
+## Conclusion
 
 텍스트 분할은 언어 모델 애플리케이션의 성능을 극대화하기 위한 필수적인 과정입니다.
 

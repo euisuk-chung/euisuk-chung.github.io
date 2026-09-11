@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : Coursework"
+description: "LangChain의 Lance Martin이 만든 RAG From Scratch 14편 강의 시리즈의 구성과 각 파트별 주제, 강의 영상과 슬라이드 링크를 한눈에 정리한 목차 글이다."
 date: "2024-09-14"
 tags:
-  - "rag"
+  - "RAG"
+  - "LangChain"
   - "강의노트"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:51:21Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/LLM-RAG-From-Scratch"
+    title: "[강의노트] RAG From Scratch : Coursework"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] RAG From Scratch : Coursework
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a2375913-1244-4a82-b3cd-c278e98e252c/image.png)
 

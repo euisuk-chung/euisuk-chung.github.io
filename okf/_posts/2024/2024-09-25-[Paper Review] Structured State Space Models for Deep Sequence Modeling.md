@@ -1,33 +1,41 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Structured State Space Models for Deep Sequence Modeling"
+description: "SSM의 연속·재귀·합성곱 표현과 ZOH 이산화를 배경으로 HiPPO의 다항식 투영 메모리, LSSL의 세 가지 뷰, S4의 NPLR 파라미터화와 Cauchy 커널 기반 합성곱 계산까지 Albert Gu 연구 흐름을 정리한다."
 date: "2024-09-25"
 tags:
+  - "Paper Review"
+  - "State Space Model"
+  - "딥러닝"
+  - "시계열"
   - "NLP"
-  - "Timeseries"
-  - "paper-review"
+resource: "https://velog.io/@euisuk-chung/Structured-State-Space-Models-for-Deep-Sequence-Modeling"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:47:32Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Structured-State-Space-Models-for-Deep-Sequence-Modeling"
+    title: "[Paper Review] Structured State Space Models for Deep Sequence Modeling"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-25"
+status: "stable"
 year: "2024"
 ---
-
-# [Paper Review] Structured State Space Models for Deep Sequence Modeling
 
 시계열 데이터를 효율적으로 처리하는 방법은 지난 몇 년 동안 빠르게 발전했습니다. 특히, CMU에 계신 Albert Gu 교수님은 긴 시계열 의존성(Long-Range Dependencies, LRDs)을 처리하는 데 집중한 HiPPO(2020), LSSL(2021), 그리고 S4(2022)와 같은 연구들을 하고 계십니다.
 
 이번 글에서는 연구의 흐름과 각 모델의 기술적 배경과 주요 기여를 설명하고, 어려운 개념들을 풀어봅니다. 이미지들은 아래 Reference에 적어둔 강의, 블로그 또는 논문에에서 발췌하여 편집 또는 사용하였습니다.
 
----
+# Backgrounds
 
-Backgrounds
-===========
-
-1. Sequence Modeling의 필요성
--------------------------
+## 1. Sequence Modeling의 필요성
 
 `Sequence Modeling`은 시간에 따른 데이터의 패턴을 분석하고 예측하는 데 필수적인 기술입니다. 예를 들어, 음성 인식, 금융 시계열 분석, 바이오 신호 분석 등 다양한 분야에서 이러한 기술이 활용됩니다. 특히, 긴 시퀀스(long sequences)를 다루는 모델은 이러한 데이터를 효과적으로 처리하고 중요한 정보를 추출하는 데 중점을 둡니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9e365b14-efb4-434d-8abd-9fde6bf9dfd5/image.png)
 
-2. Sequence Modeling의 주요 과제
----------------------------
+## 2. Sequence Modeling의 주요 과제
 
 긴 시퀀스를 다루는 과정에서 두 가지 주요 과제가 있습니다.
 
@@ -36,8 +44,7 @@ Backgrounds
 
 이는 RNN이나 기존의 순차 모델들이 긴 시퀀스에서 발생하는 공통적인 문제로, 시간에 따라 신호가 점차 약해져 모델 학습에 어려움을 줍니다.
 
-3. State Space Model(SSM) 소개
-----------------------------
+## 3. State Space Model(SSM) 소개
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a9177d2b-ee8c-44c0-ad8d-9ffcf49d1d1d/image.png)
 
@@ -237,10 +244,7 @@ Recurrent Representation의 순차적인 상태 업데이트를 **Convolution Re
 2. **LSSL** : Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers (2021)
 3. **S4** : Efficiently Modeling Long Sequences with Structured State Spaces (2022)
 
----
-
-Research
-========
+# Research
 
 이 논문들은 각각 시계열 데이터를 다루는 **기존 모델의 한계**를 극복하는 중요한 기술적 발전을 담고 있습니다.
 
@@ -257,10 +261,7 @@ Research
    * **목적**: S4는 Convolution Representation의 효율성을 극대화하면서도, `장기적인 종속성을 더 잘 처리할 수 있게 최적화`되었습니다.
    * **효과**: S4는 특히 장기적인 패턴 학습에 강점이 있어, 기존의 모델보다 훨씬 긴 시퀀스에서도 우수한 성능을 보입니다.
 
----
-
-1. **HiPPO: Recurrent Memory with Optimal Polynomial Projections (Neurips 2020)**
----------------------------------------------------------------------------------
+## 1. **HiPPO: Recurrent Memory with Optimal Polynomial Projections (Neurips 2020)**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/58336a79-5631-46cd-bd99-6b0ec8b2bf41/image.png)
 
@@ -541,10 +542,7 @@ HiPPO는 함수 근사를 위한 일종의 동적 시스템 방법론으로, 주
 
 * HiPPO 프레임워크가 메모리 문제에 대한 근본적인 해결책을 제시하며, 기존의 메모리 메커니즘을 통합하고 확장하여 더 나은 성능을 발휘할 수 있음을 결론으로 제시합니다
 
----
-
-2. **LSSL: Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers (NeurIPS, 2021)**
---------------------------------------------------------------------------------------------------------------------------
+## 2. **LSSL: Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers (NeurIPS, 2021)**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0386d58b-7331-4cc9-8e9d-7125ec9fa96a/image.png)
 
@@ -711,10 +709,7 @@ HiPPO는 함수 근사를 위한 일종의 동적 시스템 방법론으로, 주
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/da9aec78-74d6-4382-9799-0b8e9ab85e44/image.png)
 
----
-
-3. **S4: Efficiently Modeling Long Sequences with Structured State Spaces (ICLR, 2022)**
-----------------------------------------------------------------------------------------
+## 3. **S4: Efficiently Modeling Long Sequences with Structured State Spaces (ICLR, 2022)**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/96841b8c-dade-4533-a053-e2e0eb126a9f/image.png)
 
@@ -914,10 +909,7 @@ HiPPO는 함수 근사를 위한 일종의 동적 시스템 방법론으로, 주
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b08384a4-a845-4370-91f8-33d699a8d724/image.png)
 
----
-
-Reference
-=========
+# Reference
 
 **Lectures**
 

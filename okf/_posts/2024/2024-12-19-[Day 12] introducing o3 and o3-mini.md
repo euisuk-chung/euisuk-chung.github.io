@@ -1,16 +1,24 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 12] introducing o3 and o3-mini"
+description: "12 Days of OpenAI 마지막 날 공개된 o3와 o3-mini의 SWE-bench, AIME, GPQA, ARC AGI 벤치마크 성과와 적응형 사고 시간, 함수 호출 정확도, Deliberative Alignment 기법을 정리한다."
 date: "2024-12-19"
 tags:
   - "OpenAI"
-  - "chatGPT"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/Day-12-introducing-o3-o3mini"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:33:36+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-12-introducing-o3-o3mini"
+    title: "[Day 12] introducing o3 and o3-mini"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-19"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 12] introducing o3 and o3-mini
-
-
-
 
 안녕하세요! **12 Days of OpenAI**의 마지막 날, **Day 12**에 오신 것을 환영합니다!
 
@@ -22,10 +30,7 @@ year: "2024"
 
 이 업데이트는 AI 기술의 한계를 확장하며, 더 복잡하고 다양한 작업을 수행할 수 있는 가능성을 열었습니다. 🎉
 
----
-
-**1. OpenAI o3와 o3-mini 소개**
-----------------------------
+## **1. OpenAI o3와 o3-mini 소개**
 
 이번에 공개된 **o3**와 **o3-mini**는 AI 기술의 정점을 보여주는 모델로, 고도의 문제 해결 능력과 효율성을 겸비하고 있습니다. 이 모델들은 코딩, 수학, 과학 등 여러 분야에서 우수한 성능을 입증하며, AI의 실질적인 응용 가능성을 크게 확장했습니다.
 
@@ -60,10 +65,7 @@ year: "2024"
 > 
 > ![](https://velog.velcdn.com/images/euisuk-chung/post/bed185ed-83ab-42c4-ba5d-7fe89aa9b0d6/image.png)
 
----
-
-**2. 벤치마크 결과 분석**
------------------
+## **2. 벤치마크 결과 분석**
 
 ### 1) 소프트웨어 코딩 벤치마크 (SWE-bench)
 
@@ -120,10 +122,7 @@ ARC 벤치마크는 AI의 학습 능력뿐만 아니라 창의적인 문제 해�
   
   ![](https://velog.velcdn.com/images/euisuk-chung/post/6bcfc79e-89d9-4f32-9ee5-4e0a9d6398b7/image.png)
 
----
-
-**3. o3-mini: 비용 효율성과 성능의 균형**
-------------------------------
+## **3. o3-mini: 비용 효율성과 성능의 균형**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/19e31a58-1860-48e5-9dff-49ce8d354de6/image.png)
 
@@ -158,10 +157,7 @@ ARC 벤치마크는 AI의 학습 능력뿐만 아니라 창의적인 문제 해�
 * AIME 2024에서 o3-mini는 low, medium, high 설정별로 각각 61.0%, 78.2%, **83.6%**의 정확도를 기록하며 o1-mini보다 높은 성능을 보였습니다.
 * 레이턴시 측면에서 o3-mini는 low 설정에서 가장 빠른 응답 시간을 제공하며, 고성능 설정(high)에서도 여전히 높은 정확도를 유지합니다.
 
----
-
-**4. API 호출 관련 기능 성능 분석**
--------------------------
+## **4. API 호출 관련 기능 성능 분석**
 
 o3와 o3-mini는 다양한 API 호출 시 더 효율적이고 구조화된 출력을 제공합니다.
 
@@ -188,10 +184,7 @@ o3와 o3-mini는 다양한 API 호출 시 더 효율적이고 구조화된 출�
 * 코딩 작업에서는 o3-mini의 high 설정이 **79.2%**로 가장 높은 성능을 보였으며, medium 설정도 **72.3%**로 안정적인 결과를 기록했습니다.
 * 이는 GPT-4o 및 o1 대비 성능이 향상되었음을 보여줍니다.
 
----
-
-**5. 새로운 기능: Deliberative Alignment**
--------------------------------------
+## **5. 새로운 기능: Deliberative Alignment**
 
 **Deliberative Alignment**는 새로운 안전성 훈련 기법으로, AI의 신뢰성과 안전성을 크게 향상시킵니다.
 
@@ -212,10 +205,7 @@ o3와 o3-mini는 다양한 API 호출 시 더 효율적이고 구조화된 출�
 
 이 기술은 AI 모델이 점점 더 복잡해지는 사용자 요구와 환경에 적응하면서도 안전성을 유지할 수 있도록 돕습니다.
 
----
-
-**맺음말**
--------
+## **맺음말**
 
 이번 **Day 12** 발표는 AI 기술의 새로운 장을 열었습니다.
 

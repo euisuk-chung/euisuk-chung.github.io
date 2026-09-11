@@ -1,13 +1,27 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : Query Translation"
+description: "RAG From Scratch 5~9편의 쿼리 변환 기법인 Multi-Query, RAG Fusion(RRF), Decomposition, Step-Back 프롬프팅, HyDE를 원리와 LangChain 구현 코드로 정리한다."
 date: "2024-09-14"
 tags:
-  - "rag"
+  - "RAG"
+  - "LangChain"
+  - "Prompt Engineering"
   - "강의노트"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-5-9"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:50:48Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-5-9"
+    title: "[강의노트] RAG From Scratch : Query Translation"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] RAG From Scratch : Query Translation
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e2749238-5885-4d38-8441-d29c7180d541/image.png)
 
@@ -20,8 +34,6 @@ year: "2024"
 | **Part 7 (분해)** | 복잡한 질문을 세분화된 하위 질문으로 나누어 상세한 답변을 제공하는 방법을 논의합니다. | 📌 [강의](https://www.youtube.com/watch?v=JChPi0CRnDY&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=7&pp=iAQB) | 📖 [슬라이드](https://docs.google.com/presentation/d/1O97KYrsmYEmhpQ6nkvOVAqQYMJvIaZulGFGmz4cuuVE/edit?usp=sharing) |
 | **Part 8 (단계적 후퇴)** | 근본적인 이해를 이끌어내는 추상적 질문을 생성하는 단계적 후퇴 프롬프팅을 탐구합니다. | 📌 [강의](https://www.youtube.com/watch?v=JChPi0CRnDY&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=8&pp=iAQB) | 📖 [슬라이드](https://docs.google.com/presentation/d/1L0MRGVDxYA1eLOR0L_6Ze1l2YV8AhN1QKUtmNA-fJlU/edit?usp=sharing) |
 | **Part 9 (HyDE)** | 인덱스 문서와 더 잘 일치하도록 가설적 문서를 생성하는 HyDE 기법을 소개합니다. | 📌 [강의](https://www.youtube.com/watch?v=JChPi0CRnDY&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&index=9&pp=iAQB) | 📖 [슬라이드](https://docs.google.com/presentation/d/10MmB_QEiS4m00xdyu-92muY-8jC3CdaMpMXbXjzQXsM/edit?usp=sharing) |
-
----
 
 ### Part 5 (다중 쿼리)
 
@@ -214,8 +226,6 @@ final_rag_chain.invoke({"question":question})
    * `itemgetter("question")`는 이 딕셔너리에서 "question" 값을 추출합니다.
    * 추출된 값은 프롬프트 템플릿의 {question} 부분을 채우는 데 사용됩니다.
 
----
-
 ### Part 6 (RAG Fusion)
 
 * 이 강의는 RAG(Retrieval-Augmented Generation) 파이프라인의 "Query Translation(쿼리 변환)" 두 번째 방법인 **RAG Fusion**에 대해 설명합니다.
@@ -394,8 +404,6 @@ RAG Fusion
 * **검색 과정:** 생성된 여러 쿼리로 각각 검색을 수행합니다.
 * **결과 통합:** 검색된 모든 문서를 단순히 합치거나, 중복을 제거하여 통합합니다.
 * **장점:** 단일 쿼리보다 더 다양한 관련 문서를 검색할 수 있어 recall이 향상됩니다.
-
----
 
 ### Part 7 (분해)
 
@@ -744,8 +752,6 @@ Together, these hardware and software components form a cohesive system that sup
 * 이 과정에서 이전 질문의 답변을 다음 질문에 활용하여 **점진적으로 문제를 해결**하는 방식이 핵심입니다.
 * 이를 통해 복잡한 문제를 체계적으로 해결하고, **검색 성능을 향상**시킬 수 있습니다.
 
----
-
 ### Part 8 (단계적 후퇴)
 
 * 이 강의는 RAG(Retrieval-Augmented Generation) 파이프라인의 "Query Translation(쿼리 변환)" 중 네 번째 방법인 **Step Back(스텝백) 프롬프팅**에 대해 설명합니다.
@@ -894,8 +900,6 @@ chain.invoke({"question": question})
 * **Step Back(스텝백)** 방식은 원래 질문을 **더 추상적인 수준**으로 변환하여 검색 성능을 향상시키는 방법입니다.
 * 이 기법은 원래 질문이 너무 구체적일 때, 더 일반적인 질문을 생성하여 **더 넓은 범위의 정보를 검색**하고, 그 결과를 결합하여 **최종 답변을 생성**합니다.
 * 특히, 개념적인 지식을 바탕으로 검색이 필요한 도메인에서 유용하며, **문서의 구조가 개념적 내용과 구체적 내용으로 나뉘는 경우** 효과적입니다.
-
----
 
 ### Part 9 (HyDE)
 

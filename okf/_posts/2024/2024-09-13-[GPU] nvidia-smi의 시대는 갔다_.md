@@ -1,13 +1,26 @@
 ---
+type: "Guide"
 title: "[GPU] nvidia-smi의 시대는 갔다?"
+description: "nvidia-smi를 대체하는 NVIDIA GPU 모니터링 도구 nvtop과 nvitop의 주요 기능, apt·pip·conda 설치 방법, 단축키와 옵션 사용법, 프로세스 관리 측면의 차이를 비교한다."
 date: "2024-09-13"
 tags:
-  - "linux"
-  - "환경"
+  - "NVIDIA"
+  - "Linux"
+  - "환경설정"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/nvidia-smi의-시대는-갔다"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:51:51Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/nvidia-smi의-시대는-갔다"
+    title: "[GPU] nvidia-smi의 시대는 갔다?"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-13"
+status: "stable"
 year: "2024"
 ---
-
-# [GPU] nvidia-smi의 시대는 갔다?
 
 안녕하세요! 리눅스 사용자이자 GPU 활용에 관심이 많은 분들을 위한 흥미로운 내용을 소개해 드리려고 합니다. 오늘은 **NVIDIA GPU 모니터링 도구**로 큰 인기를 끌고 있는 `nvtop`과 함께, 그보다 더 많은 기능을 제공하는 `nvitop`에 대해 알아보겠습니다.
 
@@ -15,10 +28,7 @@ year: "2024"
 
 그럼 이 두 가지 도구를 비교하며 자세히 살펴보겠습니다!
 
----
-
-nvtop이란?
---------
+## nvtop이란?
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/81b91b8e-73c9-4434-9f42-5569372d7c73/image.png)
 
@@ -31,10 +41,7 @@ nvtop이란?
 * 다중 GPU 모니터링 지원
 * 팬 속도, 전력 소비량 등 하드웨어 정보 확인 가능
 
----
-
-nvitop이란?
----------
+## nvitop이란?
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/17cca27a-c457-4dba-b3b4-997765a107d0/image.png)
 
@@ -50,10 +57,7 @@ nvitop은 **nvidia-smi의 정보 제공 능력**, **gpustat의 컬러링**, 그�
 4. **환경 변수 확인**: 프로세스의 환경 변수를 쉽게 확인 가능
 5. **사용자 친화적 인터페이스**: 정보가 풍부한 컬러 인터페이스 제공
 
----
-
-nvtop 설치 방법
------------
+## nvtop 설치 방법
 
 리눅스 배포판에 따라 설치 방법이 조금 다르지만, 일반적으로 **Ubuntu/Debian** 계열에서는 패키지 관리자를 통해 쉽게 설치할 수 있습니다.
 
@@ -72,10 +76,7 @@ make
 sudo make install
 ```
 
----
-
-nvitop 설치 방법
-------------
+## nvitop 설치 방법
 
 nvitop은 **pip**를 통해 설치할 수 있습니다. Python 환경에서 설치가 매우 간단하며, 다음 명령어를 사용하세요:
 
@@ -89,10 +90,7 @@ pip install --upgrade nvitop
 conda install -c conda-forge nvitop
 ```
 
----
-
-사용법 비교
-------
+## 사용법 비교
 
 ### nvtop 사용법
 
@@ -122,10 +120,7 @@ nvitop -t         # 트리 뷰 활성화
 
 nvitop은 Python API도 제공하여, 사용자가 원하는 방식으로 GPU 모니터링 데이터를 활용할 수 있습니다.
 
----
-
-주요 차이점
-------
+## 주요 차이점
 
 | 특징 | nvtop | nvitop |
 | --- | --- | --- |
@@ -135,10 +130,7 @@ nvitop은 Python API도 제공하여, 사용자가 원하는 방식으로 GPU �
 | **실시간 업데이트** | 실시간 업데이트 가능 | 실시간 업데이트 + 더 많은 세부 정보 제공 |
 | **다중 GPU 지원** | 지원 | 지원 |
 
----
-
-결론
---
+## 결론
 
 `nvtop`과 `nvitop`은 모두 **NVIDIA GPU 모니터링**에 매우 유용한 도구입니다.
 

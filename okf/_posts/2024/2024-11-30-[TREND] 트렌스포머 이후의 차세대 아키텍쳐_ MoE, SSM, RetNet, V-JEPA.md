@@ -1,17 +1,27 @@
-﻿---
+---
+type: "Trend Report"
 title: "[TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA"
+description: "트랜스포머의 O(n²) 연산·긴 시퀀스 한계를 짚고 대안으로 MoE(Switch Transformer), SSM(Mamba·Jamba), RetNet, V-JEPA의 원리와 특징을 안될공학 영상 서사에 따라 정리한다."
 date: "2024-11-30"
 tags:
+  - "Transformer"
+  - "트렌드"
+  - "딥러닝"
+  - "Paper Review"
   - "IT지식"
-  - "paper-review"
-  - "trend-review"
+resource: "https://velog.io/@euisuk-chung/트렌드-트렌스포머-이후의-차세대-아키텍쳐-MoE-SSM-RetNet-V-JEPA"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:37:39+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/트렌드-트렌스포머-이후의-차세대-아키텍쳐-MoE-SSM-RetNet-V-JEPA"
+    title: "[TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA"
+    author: "human:euisuk-chung"
+    last_modified: "2024-11-30"
+status: "stable"
 year: "2024"
 ---
-
-# [TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA
-
-
-
 
 2017년, **"Attention is All You Need"**라는 논문과 함께 등장한 트랜스포머(Transformer)는 AI 모델의 혁신적인 변화를 이끌었습니다. 현재, 대형 언어 모델(LLM)과 생성 AI는 언어, 비디오, 이미지 등의 데이터 처리에서 압도적인 성능을 발휘하며 우리 삶의 다양한 영역에서 활용되고 있습니다.
 
@@ -33,8 +43,6 @@ year: "2024"
 
 이 글에서는 안될공학님께서 다뤄주신 서사에 따라서 이러한 혁신적인 모델들을 통합적으로 살펴보며, 트렌스포머 이후의 미래 AI 기술의 발전 방향을 탐구합니다.
 
----
-
 ### **1. 트랜스포머: 혁신과 한계**
 
 #### 트랜스포머의 핵심: Attention 메커니즘
@@ -53,8 +61,6 @@ year: "2024"
 1. **연산 복잡도**: 모든 단어 간의 관계를 계산해야 하기 때문에 O(n2)O(n^2)O(n2)의 연산량을 요구하며, 데이터 길이가 길어질수록 계산 부담이 기하급수적으로 증가합니다.
 2. **자원 소모**: 대규모 GPU 메모리와 연산 자원이 필요해 높은 전력 소모와 비용이 뒤따릅니다.
 3. **장거리 의존성(Long-range Dependency)**: 초기 입력 정보와 뒷부분 정보를 연결짓는 데 한계를 보이며, 긴 문맥을 처리하는 데 비효율적입니다.
-
----
 
 ### **2. Mixture of Experts(MoE): Sparse 연산으로 효율성 향상**
 
@@ -92,8 +98,6 @@ year: "2024"
 2. **특화된 학습**: 각 전문가가 특정 데이터에 최적화되어 높은 성능을 발휘.  
 
 3. **자원 절약**: 필요한 전문가만 활성화하여 불필요한 계산을 방지.
-
----
 
 ### **3. State Space Models(SSM): 긴 시퀀스 처리의 혁신**
 
@@ -169,8 +173,6 @@ year: "2024"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/359018fc-0b64-478e-8619-13f7757b6ec3/image.png)
 
----
-
 ### 4. **기타 아키텍쳐 및 연구**
 
 #### RetNet: Retentive Network
@@ -206,8 +208,6 @@ RetNet은 기존 Transformer의 단점을 해결하기 위해 설계된 새로�
   + 학습: 병렬 표현 및 청크 병렬 표현을 활용해 긴 시퀀스 학습 속도 향상.
   + 추론: O(1) 복잡도로 효율적이며, 메모리 사용량과 대기 시간을 크게 감소.
 
----
-
 #### V-JEPA: Learning Visual Representations from Video
 
 * `링크` : <https://arxiv.org/pdf/2404.08471>
@@ -238,8 +238,6 @@ V-JEPA는 비디오 데이터를 활용한 **특징 예측(feature prediction)**
 * 유연한 네트워크 설계
   
   + 비디오 전용 아키텍처로 Vision Transformer(ViT)를 활용.
-
----
 
 ### 5. **새로운 기술의 통합과 향후 전망**
 

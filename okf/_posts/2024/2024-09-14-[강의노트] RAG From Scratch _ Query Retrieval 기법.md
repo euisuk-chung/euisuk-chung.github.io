@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] RAG From Scratch : Query Retrieval 기법"
+description: "RAG From Scratch 15~18편 실습 코드를 역으로 분석해 RRF 기반 재정렬, CRAG, Self-RAG, Active RAG, Adaptive RAG의 개념과 동작 방식을 예제 코드와 함께 설명한다."
 date: "2024-09-14"
 tags:
-  - "rag"
+  - "RAG"
+  - "LangChain"
   - "강의노트"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-15-18"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:49:59Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/RAG-From-Scratch-15-18"
+    title: "[강의노트] RAG From Scratch : Query Retrieval 기법"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-14"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] RAG From Scratch : Query Retrieval 기법
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/21bc5399-1580-45bb-bae4-5349f9a8fde3/image.png)
 
@@ -70,8 +83,6 @@ print("Reranked results:", reranked_results)
 * `reciprocal_rank_fusion` 함수는 각 검색 결과의 순위를 받아 해당 순위에 따라 점수를 계산합니다. 순위가 높은 결과는 역수 방식으로 높은 점수를 받습니다.
 * `k=60`은 역수 계산에서 추가적인 가중치를 부여하는 역할을 하며, 이를 통해 순위가 너무 낮은 결과에 대한 가중치가 지나치게 작아지지 않도록 조정합니다.
 
----
-
 ### 2. **Retrieval (CRAG)**
 
 * CRAG는 Retrieval-Augmented Generation(RAG) 기반 시스템의 개선된 형태로, 검색된 문서의 관련성을 평가하고 필요시 질문을 다시 작성하여 검색 과정을 반복하는 방식입니다. 이 시스템은 초기 검색이 충분하지 않거나 부정확할 때 **자체적으로 질문을 수정**하고 추가 검색을 수행해 최종적으로 더 정확한 답변을 생성합니다.
@@ -133,8 +144,6 @@ print(corrected_docs)
 * `corrective_rag` 함수는 검색된 결과를 평가하고, 그 결과가 충분하지 않을 경우 질문을 재작성하여 웹 검색을 수행하는 구조입니다.
 * 여기서 `rewrite_prompt`는 초기 질문을 다시 작성하는 LLM 호출을 통해 이루어지며, 이는 질문을 명확하게 하거나 세분화하여 더 나은 검색 결과를 유도합니다.
 
----
-
 ### 3. **Retrieval (Self-RAG)**
 
 * Self-RAG는 언어 모델이 자체적으로 정보를 검색하고, 생성한 결과를 비평하며 필요시 추가 검색을 수행하는 방식입니다. 이는 기존 RAG 시스템에서 발생할 수 있는 제한 사항을 보완하고, **모델이 스스로 생성 결과를 평가**하여 더 나은 답변을 만들 수 있는 유연성을 제공합니다. 즉, 모델은 생성된 답변이 충분히 관련성이 없다고 판단되면, 추가 정보를 검색해 이를 보완합니다.
@@ -195,8 +204,6 @@ print(answer)
 * `self_rag` 함수에서는 먼저 검색을 통해 문서를 가져온 후, 그 문서를 기반으로 LLM이 답변을 생성합니다.
 * 만약 모델이 답변을 생성한 후에 답변이 충분하지 않다고 판단하면, 추가 검색을 수행하여 답변을 개선합니다.
 
----
-
 ### 4. **Active RAG**
 
 * Active RAG는 LLM이 언제, 어디서 정보를 추가로 검색할지 스스로 판단하는 방식입니다. 이는 초기 질문에 대해 기본 응답을 생성한 후, 시스템이 **자율적으로 후속 질문을 생성**하거나 추가 검색을 통해 더 나은 답변을 생성하는 능력을 갖추고 있습니다. Active RAG의 주된 목표는 첫 번째 생성된 답변에 만족하지 않고, **더 나은 답변을 위해 적극적으로 추가 작업을 수행**하는 데 있습니다.
@@ -243,8 +250,6 @@ print(final_answer)
 
 * `active_rag` 함수는 초기 검색을 수행한 후, 검색된 문서가 부족하거나 관련성이 낮으면 웹 검색 도구를 이용해 추가 검색을 실행하는 구조입니다.
 * 이를 통해 더 풍부한 검색 결과를 얻어 최종적으로 더 나은 답변을 생성합니다.
-
----
 
 ### 5. **Adaptive RAG**
 

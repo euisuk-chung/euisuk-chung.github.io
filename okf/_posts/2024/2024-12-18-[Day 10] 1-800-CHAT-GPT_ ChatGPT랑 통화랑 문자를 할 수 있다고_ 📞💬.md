@@ -1,25 +1,30 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬"
+description: "미국 전화번호 1-800-CHAT-GPT와 WhatsApp으로 인터넷 없이도 ChatGPT와 대화할 수 있는 신규 채널의 사용법, 월 15분 무료 통화 한도, 텍스트 전용이라는 현재 제약을 정리한다."
 date: "2024-12-18"
 tags:
+  - "ChatGPT"
   - "OpenAI"
-  - "chatGPT"
+resource: "https://velog.io/@euisuk-chung/Day-10-1-800-CHAT-GPT-ChatGPT-talk-with-ChatGPT"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:34:10+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-10-1-800-CHAT-GPT-ChatGPT-talk-with-ChatGPT"
+    title: "[Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-18"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬
-
-
-
 
 안녕하세요! **12 Days of OpenAI: Day 10**에 오신 것을 환영합니다! 🎉
 
 이번 업데이트는 단순히 웹, 모바일 앱을 넘어 **전화와 WhatsApp**으로 ChatGPT를 사용할 수 있도록 하는 새로운 기능을 소개합니다.
 
----
-
-1-800-CHAT-GPT란?
-----------------
+## 1-800-CHAT-GPT란?
 
 이제 ChatGPT를 단순히 웹이나 모바일에서만 사용하는 시대는 지났습니다. OpenAI는 전화와 WhatsApp을 통해 더 많은 사용자들이 ChatGPT에 접근할 수 있도록 하여 **인공지능의 보편적 접근성**을 한 단계 더 진화시켰습니다.
 
@@ -33,10 +38,7 @@ year: "2024"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1a1ed979-0679-4c94-9b7a-fe31d6c1d011/image.png)
 
----
-
-주요 업데이트 하이라이트 🌟
----------------
+## 주요 업데이트 하이라이트 🌟
 
 ### 1. **전화로 ChatGPT와 대화하기**
 
@@ -53,8 +55,6 @@ year: "2024"
 
 * 최신 스마트폰부터 옛날 **플립폰**이나 심지어 **회전식 전화기**에서도 ChatGPT와 대화 가능합니다!
 
----
-
 ### 2. **WhatsApp에서 ChatGPT와 채팅하기**
 
 WhatsApp을 통해 ChatGPT와 텍스트 기반 대화를 나눌 수 있습니다. 간단히 **QR 코드를 스캔**하거나 WhatsApp에서 번호를 추가하면 바로 사용할 수 있습니다.
@@ -68,20 +68,14 @@ WhatsApp을 통해 ChatGPT와 텍스트 기반 대화를 나눌 수 있습니다
   
   → ChatGPT가 각각의 요청에 맞는 맞춤형 레시피를 제공.
 
----
-
-ChatGPT 전화/WhatsApp 서비스의 장점 🚀
------------------------------
+## ChatGPT 전화/WhatsApp 서비스의 장점 🚀
 
 1. **접근성 극대화**: 인터넷 연결이 불안정한 환경에서도 ChatGPT를 사용할 수 있습니다.
 2. **다양한 기기 호환**: 스마트폰뿐만 아니라, 구형 휴대폰과 회전식 전화기로도 AI와 대화할 수 있습니다.
 3. **글로벌 커버리지**: WhatsApp 통합으로 전 세계 사용자들이 손쉽게 ChatGPT를 이용할 수 있습니다.
 4. **실시간 상호작용**: 전화와 메시지를 통해 즉각적이고 개인화된 답변을 제공합니다.
 
----
-
-사용 방법 안내 📖
-----------
+## 사용 방법 안내 📖
 
 ### 1. 전화로 ChatGPT 사용하기
 
@@ -94,18 +88,12 @@ ChatGPT 전화/WhatsApp 서비스의 장점 🚀
 1. QR 코드를 스캔하여 ChatGPT를 연락처에 추가하세요.
 2. WhatsApp 대화창에서 원하는 질문을 보내고 실시간으로 답변을 받으세요.
 
----
-
-기술적 한계와 앞으로의 발전 🌱
------------------
+## 기술적 한계와 앞으로의 발전 🌱
 
 * 현재는 **텍스트 기반 대화**만 가능하며, 이미지 생성 및 검색 등의 고급 기능은 ChatGPT 웹 및 모바일 앱에서만 지원됩니다.
 * 향후 **계정 인증**을 통해 추가 기능(예: 이미지, 검색)을 사용할 수 있도록 확장할 예정입니다.
 
----
-
-맺음말 ✨
------
+## 맺음말 ✨
 
 **1-800-CHAT-GPT**는 OpenAI가 AI의 접근성을 대폭 확장하려는 의지를 보여주는 혁신적인 업데이트입니다.
 

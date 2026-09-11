@@ -1,22 +1,32 @@
 ---
+type: "Concept Note"
 title: "[개념] Deep Learning Normalization Techniques"
+description: "Batch, Layer, Instance, Group, RMS 정규화의 작동 원리와 수식을 PyTorch 구현 예시와 함께 설명하고 계산 단위, 장단점, 응용 모델을 표로 비교한다."
 date: "2024-07-02"
 tags:
-  - "개념정리"
   - "딥러닝"
+  - "개념정리"
+  - "PyTorch"
+resource: "https://velog.io/@euisuk-chung/개념정리-Deep-Learning-Normalization"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:57:28Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/개념정리-Deep-Learning-Normalization"
+    title: "[개념] Deep Learning Normalization Techniques"
+    author: "human:euisuk-chung"
+    last_modified: "2024-07-02"
+status: "stable"
 year: "2024"
 ---
 
-# [개념] Deep Learning Normalization Techniques
-
-딥러닝에서의 정규화 기법
-=============
+# 딥러닝에서의 정규화 기법
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/43cb32ac-32b0-4c8d-8196-552850ab11d1/image.png)  
 출처: <https://theaisummer.com/normalization/>
 
-정규화의 정의와 목적
------------
+## 정규화의 정의와 목적
 
 `정규화(Normalization)`는 데이터의 스케일을 조정하는 과정으로, 머신러닝과 딥러닝에서 모두 중요한 역할을 합니다. 그러나 전통적인 머신러닝에서의 정규화와 딥러닝에서의 정규화는 그 목적과 방법에 있어 약간의 차이가 있습니다.
 
@@ -74,8 +84,7 @@ year: "2024"
 * 그룹 정규화 (Group Normalization)
 * RMS 정규화 (RMS Normalization)
 
-배치 정규화 (Batch Normalization)
-----------------------------
+## 배치 정규화 (Batch Normalization)
 
 **개념**  
 배치 정규화는 2015년 Sergey Ioffe와 Christian Szegedy가 제안한 기법으로, 신경망의 각 층에서 입력을 정규화하는 방법입니다.
@@ -157,8 +166,7 @@ print(batch_norm(X))
 * EfficientNet: 이미지 분류를 위한 CNN 아키텍처
 * BERT: 자연어 처리를 위한 트랜스포머 기반 모델
 
-레이어 정규화 (Layer Normalization)
------------------------------
+## 레이어 정규화 (Layer Normalization)
 
 **개념**  
 `레이어 정규화`는 2016년 Jimmy Lei Ba 등이 제안한 기법으로, 각 샘플에 대해 모든 뉴런의 출력을 정규화합니다.
@@ -237,8 +245,7 @@ print(layer_norm(X))
 * GPT (Generative Pre-trained Transformer) 시리즈
 * ALBERT (A Lite BERT)
 
-인스턴스 정규화 (Instance Normalization)
----------------------------------
+## 인스턴스 정규화 (Instance Normalization)
 
 **개념**  
 `인스턴스 정규화`는 2016년 Dmitry Ulyanov 등이 제안한 기법으로, 주로 스타일 전이 작업에 사용됩니다.
@@ -393,8 +400,7 @@ print(instance_norm(X))
 * 스타일 전이(Style Transfer) 계열 모델
 * 이미지 생성 모델: GAN(Generative Adversarial Networks) 계열 모델
 
-그룹 정규화(Group Normalization)
----------------------------
+## 그룹 정규화(Group Normalization)
 
 `Group Normalization`은 2018년 Yuxin Wu와 Kaiming He가 제안한 정규화 기법입니다. 이 기법은 Batch Normalization (BN)의 한계를 극복하기 위해 개발되었습니다.
 
@@ -496,8 +502,7 @@ print(gn_pytorch)
 * 객체 탐지 및 세그먼테이션 모델에서 널리 사용됩니다.
 * 소규모 배치를 사용하는 고해상도 이미지 처리 작업에 적합합니다.
 
-RMS 정규화 (RMS Normalization)
----------------------------
+## RMS 정규화 (RMS Normalization)
 
 **개념**  
 `RMS Norm` (Root Mean Square Layer Normalization)은 2019년 Biao Zhang과 Rico Sennrich가 발표한 논문 "Root Mean Square Layer Normalization"에서 처음 소개되었습니다. RMS 정규화는 최근 대규모 언어 모델에서 주목받고 있는 기법으로, 레이어 정규화를 간소화한 버전입니다.
@@ -572,8 +577,7 @@ print(rms_norm(X))
 * PaLM (Pathways Language Model)
 * LLaMA (Large Language Model Meta AI)
 
-정규화 기법 비교
-=========
+# 정규화 기법 비교
 
 각 정규화 기법은 서로 다른 특성과 장단점을 가지고 있습니다. 아래 표는 이들을 간단히 비교한 것입니다:
 
@@ -585,8 +589,7 @@ print(rms_norm(X))
 | 그룹 정규화 | 채널 그룹 | 배치 크기 독립적, 작은 배치에서도 안정적 | 그룹 수 선택이 성능에 영향 | 객체 탐지, 세그멘테이션 |
 | RMS 정규화 | 개별 샘플 | 계산 효율성 높음, 대규모 모델에 적합 | 표현력 다소 제한 | 대규모 언어 모델 |
 
-결론
-==
+# 결론
 
 정규화 기법은 딥러닝 모델의 성능을 크게 향상시키는 중요한 요소입니다. 각 기법은 고유한 특성과 장단점을 가지고 있어, 작업의 성격과 모델 구조에 따라 적절한 기법을 선택하는 것이 중요합니다. 최근에는 이러한 기본적인 정규화 기법들을 조합하거나 변형하여 더 나은 성능을 얻으려는 연구도 활발히 진행되고 있습니다.
 

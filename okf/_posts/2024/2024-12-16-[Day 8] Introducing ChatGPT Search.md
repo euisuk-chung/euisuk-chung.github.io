@@ -1,13 +1,24 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 8] Introducing ChatGPT Search"
+description: "무료 사용자까지 확대된 ChatGPT Search의 속도·모바일 개선, Advanced Voice 통합, 기본 검색엔진 설정과 이벤트·음식점·영화 검색 활용 사례를 정리한다."
 date: "2024-12-16"
+tags:
+  - "ChatGPT"
+  - "OpenAI"
+resource: "https://velog.io/@euisuk-chung/Day-8-Introducing-ChatGPT-Search"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:34:52+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-8-Introducing-ChatGPT-Search"
+    title: "[Day 8] Introducing ChatGPT Search"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-16"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 8] Introducing ChatGPT Search
-
-
-
 
 **12 Days of OpenAI** 시리즈의 여덟 번째 날에 오신 것을 환영합니다! 오늘은 ChatGPT에 추가된 강력한 새로운 기능인 "**Search**"를 소개합니다.
 
@@ -15,8 +26,7 @@ year: "2024"
 
 이번 업데이트는 **무료 사용자까지 포함하여 전 세계적으로 제공**됩니다. 또한, 이 새로운 기능은 사용자의 일상적인 대화 및 작업 흐름을 혁신적으로 향상시키는 데 중점을 두고 있습니다.
 
-Search 기능의 주요 개선 사항
--------------------
+## Search 기능의 주요 개선 사항
 
 Kevin Wheel(OpenAI의 제품 총괄)과 Adam Fry(Search 제품 리드)의 발표에 따르면, 이번 Search 기능에는 다음과 같은 세 가지 핵심 업데이트가 포함되어 있습니다:
 
@@ -32,8 +42,7 @@ Kevin Wheel(OpenAI의 제품 총괄)과 Adam Fry(Search 제품 리드)의 발표
    
    * 오늘부터 전 세계 모든 무료 로그인 사용자도 Search 기능을 사용할 수 있습니다. 이를 통해 ChatGPT의 접근성이 대폭 향상되어, 더 많은 사용자가 최신 정보를 활용할 수 있습니다.
 
-Search 기능의 활용 방법
-----------------
+## Search 기능의 활용 방법
 
 Search는 기존 ChatGPT의 작동 방식과 크게 다르지 않으며, 다음과 같은 방식으로 사용할 수 있습니다:
 
@@ -84,8 +93,7 @@ Search는 기존 ChatGPT의 작동 방식과 크게 다르지 않으며, 다음�
 
 * 이는 사용자가 다른 일을 하면서, 손을 사용하지 않고도 편리하게 검색을 수행할 수 있도록 지원합니다.
 
-Search 기능의 실제 활용 사례
--------------------
+## Search 기능의 실제 활용 사례
 
 ### 1. 이벤트 및 여행 계획
 
@@ -125,8 +133,7 @@ Search 기능의 실제 활용 사례
 * 사용자가 현재 위치를 기반으로 근처에서 할 수 있는 활동이나 추천 장소를 검색할 수 있습니다.
 * 이 기능은 여행 중이거나 새로운 지역을 탐험할 때 특히 유용합니다.
 
-Search 기능의 장점
--------------
+## Search 기능의 장점
 
 * **실시간 최신 정보**: 실시간으로 업데이트된 웹 정보를 기반으로 답변을 제공합니다.
 * **사용자 편의성**: 대화 중 추가 검색을 자연스럽게 진행할 수 있습니다.
@@ -135,8 +142,7 @@ Search 기능의 장점
 * **시각적 정보 제공**: 단순한 텍스트에서 벗어나, 이미지 및 기타 시각적 요소를 활용하여 사용자 경험을 개선합니다.
 * **대화형 흐름**: 사용자는 검색을 통해 대화를 더욱 심화시키고, 원하는 정보를 점진적으로 얻을 수 있습니다.
 
-맺음말
----
+## 맺음말
 
 ChatGPT Search는 OpenAI가 사용자의 요구에 맞추어 ChatGPT를 더욱 강력한 도구로 발전시키는 데 중요한 역할을 하고 있습니다. 검색 기능의 업데이트로 인해 ChatGPT는 이제 단순한 대화 도구를 넘어, 실시간 정보 검색 및 개인화된 도움을 제공하는 강력한 AI 도구로 자리 잡고 있습니다.
 

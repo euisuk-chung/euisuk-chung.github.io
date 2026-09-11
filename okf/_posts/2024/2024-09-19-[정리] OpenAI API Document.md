@@ -1,19 +1,31 @@
 ---
+type: "Product Update"
 title: "[정리] OpenAI API Document"
+description: "OpenAI 플랫폼 문서를 바탕으로 Chat Completions, Fine-tuning, Embeddings, Whisper 등 주요 엔드포인트와 Function Calling, Structured Outputs 등 핵심 기능을 파이썬 예제와 함께 정리한다."
 date: "2024-09-19"
 tags:
   - "OpenAI"
+  - "Python"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/정리-OpenAI-API-Document"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:49:08Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/정리-OpenAI-API-Document"
+    title: "[정리] OpenAI API Document"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-19"
+status: "stable"
 year: "2024"
 ---
-
-# [정리] OpenAI API Document
 
 OpenAI는 최신 인공지능(AI) 모델과 API를 제공하여 개발자들이 다양한 AI 기능을 쉽게 애플리케이션에 통합할 수 있도록 지원합니다. 다음은 아래 `platform.openai.com`에서 제공하는 문서를 훑어보면서 정리한 내용입니다.
 
 * 참고 문서: <https://platform.openai.com/docs/overview>
 
-1. 소개
------
+## 1. 소개
 
 OpenAI를 활용하면, 자연어 처리, 이미지 생성, 음성 인식 등 다양한 AI 작업을 간단하게 구현할 수 있으며, 사용자 경험을 혁신적으로 개선할 수 있습니다. 이제 업무에서도 슬슬 사용하게 될 것 같아 이를 제대로 한번 살펴보는 시간을 가져보았습니다 ⭐
 
@@ -21,10 +33,7 @@ OpenAI를 활용하면, 자연어 처리, 이미지 생성, 음성 인식 등 �
 
 이 가이드는 (위에 블록 표기해 둔) OpenAI API의 주요 엔드포인트와 6가지 주요 기능을 중심으로, 초보자도 쉽게 따라할 수 있는 단계별 설명을 제공합니다.
 
----
-
-2. OpenAI API의 기본 구조
---------------------
+## 2. OpenAI API의 기본 구조
 
 OpenAI API는 **사전 학습된 AI 모델**을 호출하여 다양한 작업을 수행할 수 있게 합니다. API는 여러 가지 **엔드포인트(Endpoints)**를 제공하며, 각 엔드포인트는 특정 작업을 처리하는 역할을 합니다. API의 구조는 간단하지만 매우 강력하며, 이를 통해 AI 기능을 직관적으로 사용할 수 있습니다.
 
@@ -37,10 +46,7 @@ OpenAI API는 **사전 학습된 AI 모델**을 호출하여 다양한 작업을
   + `openai.ChatCompletion.create()`와 같은 함수 호출은 내부적으로 OpenAI API의 `/v1/completions` 엔드포인트로 요청을 보내는 방식입니다.
   + `OpenAI 라이브러리`를 사용할 때, 이런 함수들은 각각의 엔드포인트와 매핑되어 있어서, 개발자는 API의 엔드포인트 **URL을 신경 쓰지 않고도 편리하게 AI 기능을 사용**할 수 있습니다.
 
----
-
-3. 주요 엔드포인트 및 역할
-----------------
+## 3. 주요 엔드포인트 및 역할
 
 OpenAI는 다양한 AI 기능을 제공하는 여러 엔드포인트를 가지고 있으며, 각 엔드포인트는 고유한 역할을 수행합니다. 이 포스팅에서는 자주 사용되는 주요 엔드포인트와 그 역할을 설명하고, 각 엔드포인트에 대한 간단한 코드 예시를 제공하겠습니다.
 
@@ -210,10 +216,7 @@ response = openai.Moderation.create(
 print(response['results'])
 ```
 
----
-
-4. OpenAI의 6가지 주요 Capabilities
-------------------------------
+## 4. OpenAI의 6가지 주요 Capabilities
 
 OpenAI API는 다양한 기능을 제공하며, 이를 통해 텍스트 생성, 이미지 처리, 음성 인식 등 다양한 작업을 수행할 수 있습니다. 여기에서는 OpenAI의 6가지 주요 **Capabilities**에 대해 설명합니다.
 
@@ -386,10 +389,7 @@ for chunk in response:
     print(chunk.choices[0].delta.get("content", ""), end="")
 ```
 
----
-
-5. 파인튜닝된 모델 사용 방법
------------------
+## 5. 파인튜닝된 모델 사용 방법
 
 OpenAI API는 사전 학습된 모델뿐만 아니라, **파인튜닝**을 통해 특정 작업에 맞게 모델을 조정하여 사용할 수도 있습니다. 파인튜닝된 모델은 특정 도메인 또는 작업에 대해 성능을 개선하기 위해 미세 조정된 모델입니다.
 
@@ -409,10 +409,7 @@ response = openai.Completion.create(
 print(response.choices[0].text.strip())
 ```
 
----
-
-6. 결론
------
+## 6. 결론
 
 OpenAI API는 다양한 AI 기능을 제공하며, 텍스트 생성, 이미지 처리, 함수 호출, 구조화된 출력, 복잡한 추론 등 다양한 작업을 쉽게 수행할 수 있습니다. 또한, 사전 학습된 모델을 사용할 수 있을 뿐만 아니라, 특정 용도에 맞게 **파인튜닝된 모델**을 통해 더 나은 성능을 제공받을 수 있습니다.
 

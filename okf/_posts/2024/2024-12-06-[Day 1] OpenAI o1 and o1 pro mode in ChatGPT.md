@@ -1,16 +1,24 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 1] OpenAI o1 and o1 pro mode in ChatGPT"
+description: "12 Days of OpenAI 첫날 발표된 월 200달러 ChatGPT Pro 플랜과 o1 Pro 모드의 특징, 4/4 reliability 지표, AIME·Codeforces·GPQA 벤치마크 개선, 멀티모달 입력과 대상 사용자를 정리한다."
 date: "2024-12-06"
 tags:
   - "OpenAI"
-  - "chatGPT"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/Day-1-OpenAI-o1-and-o1-pro-mode"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:37:16+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-1-OpenAI-o1-and-o1-pro-mode"
+    title: "[Day 1] OpenAI o1 and o1 pro mode in ChatGPT"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-06"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 1] OpenAI o1 and o1 pro mode in ChatGPT
-
-
-
 
 오픈 AI 에서 오늘(24.12.06)부터 12일간 라이브를 매일 진행합니다 💌
 
@@ -24,8 +32,7 @@ year: "2024"
 
 > 💡 Day 1은 **O1 및 O1 Pro 모드 출시**를 통해 ChatGPT의 지능적 추론 능력과 신뢰성을 한층 강화한 **Pro 플랜**을 선보였습니다.
 
-ChatGPT Pro 플랜 개요
------------------
+## ChatGPT Pro 플랜 개요
 
 OpenAI는 AI 기술이 발전함에 따라 점점 더 복잡하고 중요한 문제를 해결하기 위해 막대한 연산(Compute) 자원이 필요하다는 점을 강조합니다. 이를 바탕으로 월 **$200의 "ChatGPT Pro" 플랜**을 선보였으며, 이는 가장 뛰어난 언어 모델들과 고사양 연산 모드를 자유롭게 활용할 수 있는 “최고급 액세스”를 제공합니다.
 
@@ -43,10 +50,7 @@ OpenAI는 AI 기술이 발전함에 따라 점점 더 복잡하고 중요한 문
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/99ea9da0-113a-49af-92bf-211e957be7e2/image.png)
 
----
-
-O1 모델과 O1 Pro 모드의 가치
---------------------
+## O1 모델과 O1 Pro 모드의 가치
 
 ### 향상된 “사고 시간”과 신뢰성 있는 해답
 
@@ -84,19 +88,13 @@ O1 모델은 텍스트뿐만 아니라 **이미지 등의 비정형 데이터에
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/687b07e4-5573-4f8b-8cbb-a2b8f36dfd37/image.png)
 
----
-
-누가 Pro 플랜을 선택할까?
-----------------
+## 누가 Pro 플랜을 선택할까?
 
 * **연구자 및 데이터 사이언티스트**: 매일 복잡한 데이터 분석, 모델 검증, 알고리즘 설계를 수행하는 이들에게 O1 Pro 모드는 압도적인 생산성 향상을 제공할 수 있습니다. 일관된 답변 정확도, 멀티모달 처리, 고급 수학 및 과학적 추론 능력은 학술 연구 및 산업 연구 모두에 강력한 파트너가 될 것입니다.
 * **엔지니어, 개발자 및 기업 사용자**: 대규모 코드베이스를 관리하고, 성능 최적화를 수행하며, 오류를 추적하고 해결하는 데 능숙한 엔지니어들에게 O1 Pro 모드는 한 단계 진화한 문제 해결 도구가 됩니다. 특히 대화형으로 코드를 검토하고, 아키텍처 개선안을 제안받는 것은 개발 효율성을 극적으로 향상시킵니다.
 * **법률, 의료, 금융 등 전문 영역 종사자**: 판례 분석, 의료 데이터 해석, 금융 모델링 등 각 분야에서 높은 정밀도와 신뢰성을 요구하는 상황이 증가하고 있습니다. O1 Pro 모드는 이런 고난이도 전문 영역에서도 더 정확하고 일관된 답변을 제공하여, 최종 의사결정에 참고할 수 있는 믿을 만한 AI 파트너로 작용합니다.
 
----
-
-결론
---
+## 결론
 
 ChatGPT Pro 플랜 및 O1 Pro 모드의 출시는 AI 언어 모델 활용에 있어 질적 전환을 의미합니다. 단순한 언어 모델을 넘어, 고도로 정교한 문제 해결 능력, 안정적인 성능, 연구급 신뢰성을 제공하는 새로운 표준을 제시하고 있습니다. 오랜 추론 시간, “4/4 reliability” 같은 엄격한 성능 지표, 다양한 벤치마크 테스트에서의 우수한 성능은 AI 기술이 단순한 정보 제공을 넘어 실제 연구, 개발, 산업 의사결정에 깊숙이 스며들 수 있음을 보여줍니다.
 

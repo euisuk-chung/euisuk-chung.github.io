@@ -1,16 +1,25 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 2] Reinforcement Fine-Tuning (RFT) 소개"
+description: "12 Days of OpenAI 둘째 날 공개된 강화 학습 기반 파인튜닝(RFT)의 채점기·보상 학습 원리, 소량 데이터로 추론 전략을 개선하는 특징, 희귀질환 유전자 예측 데모 결과와 알파 연구 프로그램을 소개한다."
 date: "2024-12-07"
 tags:
   - "OpenAI"
-  - "chatGPT"
+  - "ChatGPT"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Day-2-OpenAI-Reinforcement-Fine-Tuning"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:37:03+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-2-OpenAI-Reinforcement-Fine-Tuning"
+    title: "[Day 2] Reinforcement Fine-Tuning (RFT) 소개"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-07"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 2] Reinforcement Fine-Tuning (RFT) 소개
-
-
-
 
 안녕하세요!! 어제(**12 Days of OpenAI: Day 1**)에서 `O1 모델`을 공식 출시하며, ChatGPT의 추론 능력과 신뢰성을 강화한 **Pro 플랜을 소개**했는데요!!
 
@@ -18,10 +27,7 @@ year: "2024"
 
 이 기술은 고급 사용자, 연구자, 기업 고객 모두가 자신만의 **전문 분야 데이터**로 O1 모델을 단련시켜, 마치 고급 과외 선생님처럼 `특정 도메인`에 대한 “**전문가급 추론 모델**”을 만들어 낼 수 있습니다.
 
----
-
-Reinforcement Fine-Tuning(RFT)란 무엇인가?
--------------------------------------
+## Reinforcement Fine-Tuning(RFT)란 무엇인가?
 
 기존의 파인튜닝(Fine-Tuning)은 주로 지도학습 방식을 사용합니다. 즉, 모델에게 특정 스타일, 어조, 포맷을 모방하도록 학습시키는 방식입니다. 이는 모델이 특정 예제를 따라하는 "모방 학습" 수준으로 볼 수 있습니다. 그러나 **RFT**는 한 단계 더 나아갑니다. RFT는 단순히 정답 예제를 따라하는 것이 아니라, **강화 학습(Reinforcement Learning, RL)** 기법을 통해 모델이 새로운 추론 전략을 습득하도록 만듭니다.
 
@@ -43,10 +49,7 @@ Reinforcement Fine-Tuning(RFT)란 무엇인가?
    
    GPT-4, O1 시리즈와 같은 최첨단 모델을 개발할 때 OpenAI는 내부적으로 강화 학습 기법을 활용해왔습니다. 이제 그 동일한 RL 파이프라인을 고객과 연구 커뮤니티에 개방하여, 모두가 고급 AI 개발 기술에 접근할 수 있게 됩니다.
 
----
-
-실제 적용 사례: 희소질환 유전자 변이 분석
-------------------------
+## 실제 적용 사례: 희소질환 유전자 변이 분석
 
 이번 라이브 데모에서는 `샌프란시스코 Berkeley Lab`의 연구자들과 협력한 사례가 소개되었습니다. **유전자 변이로 인한 희소질환 진단**은 다음과 같은 과제가 있습니다.
 
@@ -137,10 +140,7 @@ Reinforcement Fine-Tuning(RFT)란 무엇인가?
 
 이러한 성능 개선은 모델이 단순히 과거 정답을 암기하거나 특정 패턴을 기계적으로 재현하는 것이 아니라, **"어떻게 생각해야 하는가"에 대한 추론 능력을 강화 학습을 통해 획득한 결과**라고 할 수 있습니다.
 
----
-
-RFT가 유용한 분야
------------
+## RFT가 유용한 분야
 
 RFT는 단순 질의응답을 넘어, 다음과 같은 고난이도 전문 분야에서 특히 돋보입니다.
 
@@ -152,10 +152,7 @@ RFT는 단순 질의응답을 넘어, 다음과 같은 고난이도 전문 분�
 
 이런 영역에서 모델은 곧 전문 지식을 체화한 고급 어시스턴트로 진화할 것입니다.
 
----
-
-RFT Research Program
---------------------
+## RFT Research Program
 
 OpenAI는 RFT의 잠재력을 최대화하기 위해 **Alpha 프로그램**을 확장하고 있습니다. 이 프로그램은 다음과 같은 대상에게 추천됩니다.
 
@@ -167,10 +164,7 @@ OpenAI는 RFT의 잠재력을 최대화하기 위해 **Alpha 프로그램**을 �
 
 > **참여 방법**: 다음 링크(<https://openai.com/form/rft-research-program/>)를 통해 지원서를 제출할 수 있습니다. OpenAI에서 제한된 수의 파트너를 선별하여, RFT 알파 테스트 기회를 준다고 합니다.
 
----
-
-마무리
----
+## 마무리
 
 RFT의 등장은 AI를 단순한 질문-응답 시스템에서 “특정 전문 영역에 대한 진짜 ‘추론 파트너’”로 한 단계 끌어올리는 이정표입니다. 이는 표면적 정보 복제에서 벗어나, 모델이 실제 세계의 복잡한 문제에 맞게 reasoning capability를 스스로 강화하는 혁신적 변화입니다. 향후 RFT를 이용해 모든 연구자, 기업, 기관은 자신만의 **전문 모델 에코시스템**을 구축할 수 있을 것입니다.
 

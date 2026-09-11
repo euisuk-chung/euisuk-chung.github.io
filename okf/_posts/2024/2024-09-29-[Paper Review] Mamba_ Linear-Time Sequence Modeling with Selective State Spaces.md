@@ -1,14 +1,27 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
+description: "Transformer의 이차 복잡도 한계를 배경으로 입력 의존적 파라미터 B, C, Δ를 도입한 선택적 SSM(S6), 커널 퓨전과 병렬 스캔 기반 하드웨어 최적화, Mamba 블록 구조와 언어·DNA·오디오 실험 결과를 정리한다."
 date: "2024-09-29"
 tags:
+  - "Paper Review"
+  - "State Space Model"
+  - "딥러닝"
   - "NLP"
-  - "Timeseries"
-  - "paper-review"
+  - "시계열"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Mamba-Linear-Time-Sequence-Modeling-with-Selective-State-Spaces"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:47:07Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Mamba-Linear-Time-Sequence-Modeling-with-Selective-State-Spaces"
+    title: "[Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
+    author: "human:euisuk-chung"
+    last_modified: "2024-09-29"
+status: "stable"
 year: "2024"
 ---
-
-# [Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces
 
 최근 딥러닝 아키텍처의 중심에는 `트랜스포머`가 자리 잡고 있습니다. 대규모 언어 모델(LLM)뿐만 아니라, 그림을 생성하는 데 쓰이는 디퓨전 모델 또한 트랜스포머 구조를 활용하고 있습니다. 이외에도 시계열 분석이나 추천 시스템과 같은 다양한 분야에서 트랜스포머가 핵심적인 역할을 하고 있습니다.
 
@@ -39,8 +52,6 @@ year: "2024"
 * **Mamba 모델의 등장**: **Mamba**는 `선택 메커니즘`을 도입한 **Selective State Space Model(선택적 상태 공간 모델)**을 기반으로 하며, **긴 시퀀스를 다루면서도 Transformer 수준의 성능을 유지**하면서도 계산 비용을 줄일 수 있는 모델입니다.
 
   + 특히, 텍스트, 오디오, 유전체학(genomics) 등의 다양한 데이터 유형에서 매우 우수한 성능을 보여줍니다.
-
----
 
 ### 2. **State Space Models (상태 공간 모델)**
 
@@ -152,8 +163,6 @@ year: "2024"
   + A∈Rn×n×dmodelA \in \mathbb{R}^{n \times n \times d\_{\text{model}}}A∈Rn×n×dmodel​
   + B∈Rn×dmodelB \in \mathbb{R}^{n \times d\_{\text{model}}}B∈Rn×dmodel​
   + C∈Rdmodel×nC \in \mathbb{R}^{d\_{\text{model}} \times n}C∈Rdmodel​×n
-
----
 
 ### 3. **Selective State Space Models (선택적 상태 공간 모델)**
 
@@ -400,8 +409,6 @@ year: "2024"
 >   + **S4**: 시간 불변성을 유지하는 SSM은 계산의 병렬화가 가능하여, 비교적 효율적인 계산을 수행할 수 있습니다.
 >   + **S6**: 선택 메커니즘을 추가함으로써 더 많은 계산이 필요할 수 있지만, GPU의 메모리 계층을 활용한 하드웨어 최적화가 가능해져 효율성을 유지합니다. 특히, 입력 데이터의 특성에 따라 동적인 계산을 수행하여 더 높은 성능을 낼 수 있습니다.
 
----
-
 #### 3.3 **Efficient Implementation of Selective SSMs (효율적인 선택적 SSM 구현)**
 
 이 섹션에서는 **Selective State Space Model(SSSM)**을 하드웨어에서 효율적으로 구현하는 방법을 다룹니다. 특히, GPU 등을 활용하여 **메모리 사용과 계산을 최적화**하는 방법에 대해 설명하고 있습니다.
@@ -547,8 +554,6 @@ year: "2024"
 * **실수 및 복소수 처리**: 선택적 SSM은 복소수와 실수를 모두 처리할 수 있지만, 특정 작업에서는 실수 기반 모델이 더 나은 성능을 보일 수 있습니다.
 * **초기화 및 파라미터화**: 선택적 파라미터의 초기화 방식에 따라 모델의 성능이 달라지며, 각 파라미터에 대한 자세한 설명을 통해 모델의 안정성을 유지합니다.
 
----
-
 ### 4. **Empirical Evaluation**
 
 Mamba 모델을 `다양한 데이터 유형`과 `시퀀스 길이`에서 테스트한 결과를 소개합니다.
@@ -591,8 +596,6 @@ Mamba 모델을 `다양한 데이터 유형`과 `시퀀스 길이`에서 테스�
 * **파라미터 분석**: 선택적 파라미터를 추가할수록 성능이 향상되며, 특히 Delta 파라미터가 모델 성능에 가장 중요한 영향을 미칩니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/087c93a9-3933-4830-b020-736de21af929/image.png)
-
----
 
 ### Reference
 

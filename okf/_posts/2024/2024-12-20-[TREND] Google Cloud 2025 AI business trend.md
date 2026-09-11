@@ -1,16 +1,26 @@
-﻿---
+---
+type: "Trend Report"
 title: "[TREND] Google Cloud 2025 AI business trend"
+description: "구글 클라우드의 2025 AI 비즈니스 트렌드 보고서를 바탕으로 멀티모달 AI, 6가지 AI 에이전트 유형, 보조 검색, AI 기반 고객 경험, 보안 강화라는 다섯 가지 흐름과 기업 사례를 요약한다."
 date: "2024-12-20"
 tags:
+  - "트렌드"
+  - "AI Agent"
+  - "Google"
   - "IT지식"
-  - "trend-review"
+resource: "https://velog.io/@euisuk-chung/TREND-Google-Cloud-2025-AI-business-trend"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:33:17+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/TREND-Google-Cloud-2025-AI-business-trend"
+    title: "[TREND] Google Cloud 2025 AI business trend"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-20"
+status: "stable"
 year: "2024"
 ---
-
-# [TREND] Google Cloud 2025 AI business trend
-
-
-
 
 구글은 2024년 12월 17일 '**2025 AI 비즈니스 트렌드**' 발표했습니다. (아래 링크 참고)
 
@@ -33,8 +43,6 @@ year: "2024"
 
 각각의 트렌드는 AI 기술 발전과 시장 변화의 흐름을 반영하며, 기업이 AI를 효과적으로 활용할 수 있는 방안을 제시합니다.
 
----
-
 ### **1. 멀티모달 AI: 맥락의 힘을 발휘**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/020af759-51ea-4d62-831b-950932ba6903/image.png)
@@ -53,8 +61,6 @@ year: "2024"
 * **산업별 전망**:
   + 제조업: 센서 데이터(소음, 진동) 분석으로 사전 유지보수 실행
   + 헬스케어: 의료 기록, 이미징 데이터, 유전체 정보 분석으로 개인 맞춤 의료 발전
-
----
 
 ### **2. AI 에이전트: 챗봇에서 다중 에이전트 시스템으로 진화**
 
@@ -141,8 +147,6 @@ year: "2024"
   + **미디어/엔터테인먼트**: 콘텐츠 생성 및 검색 최적화, 개인화된 글로벌 콘텐츠 제공.
   + **유선통신망**: 장애 원인 분석, 네트워크 용량 계획, 필드 기술자 교육 지원.
 
----
-
 ### **3. AI 보조 검색(Assistive Search): 지식 작업의 새로운 프론티어**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6b79e1aa-37e5-49f3-b797-c20075ca8156/image.png)
@@ -168,8 +172,6 @@ year: "2024"
 * **산업별 전망**:
   + **헬스케어**: 의료 전문용어와 복잡한 어휘를 이해하는 직관적 검색 시스템 도입 확대
   + **금융**: 역할별 맞춤형 내부 지식 검색 시스템 구축 (예: 대출 담당자와 리스크 분석가의 차별화된 검색 결과)
-
----
 
 ### **4. AI 기반 고객 경험(CX): 매끄럽고 개인화된 경험**
 
@@ -234,8 +236,6 @@ year: "2024"
   + **제조업 (Manufacturing)**: 재고-판매 모델에서 맞춤형 제작 모델로 변화. 실시간 운영 데이터 통합 및 제품 설계, 생산 최적화.
   + **유선통신망 (Telecommunications)**: 고객 여정을 개인화하며 서비스 번들 추천 에이전트 활용. 네트워크 안정성 증대 및 고객 경험 향상.
 
----
-
 ### **5. AI를 통한 보안 강화**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/ecdd7638-7750-4cee-b279-5e53a27e954c/image.png)
@@ -254,8 +254,6 @@ year: "2024"
   + **금융 서비스**: AI 기반 KYC(Know Your Customer) 시스템으로 위조 문서 탐지 및 미세한 조작 흔적 분석.
   + **제조업**: AI로 데이터 무결성 확인 및 잠재적 위험 탐지.
   + **미디어 산업**: AI 기반 생성 미디어(Synthetic Media)로 창의적 콘텐츠 제공.
-
----
 
 ### 결론
 

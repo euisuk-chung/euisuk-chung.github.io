@@ -1,10 +1,25 @@
 ---
+type: "Tip"
 title: "[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)"
+description: "VS Code에서 Shift+Enter, Ctrl+A 같은 단축키가 먹통이 될 때 Jupyter Keymap 확장 설치와 keybindings.json 직접 편집으로 해결하는 두 가지 방법을 정리한다."
 date: "2024-06-09"
+tags:
+  - "꿀팁"
+  - "Tools"
+  - "환경설정"
+resource: "https://velog.io/@euisuk-chung/꿀팁-vs-code-keymapping-오류해결하기-shiftenter-ctrlenter-등"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:58:12Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/꿀팁-vs-code-keymapping-오류해결하기-shiftenter-ctrlenter-등"
+    title: "[파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-06-09"
+status: "stable"
 year: "2024"
 ---
-
-# [파이썬] VS-Code keymap 오류 해결하기 (shift+enter, ctrl+a 등)
 
 안녕하세요🤗! 오늘은 제가 VS-Code를 사용하면서 자주 겪는 문제인 key-mapping 문제와 이를 해결하는 방법에 대해 다뤄보겠습니다.
 
@@ -15,8 +30,7 @@ Source: <https://code.visualstudio.com/docs/getstarted/keybindings>
 
 이번 포스팅에서는 이러한 keymapping (또는 keybinding) 문제를 해결하는 두 가지 방법을 소개하겠습니다.
 
-1. Extension 설치로 해결하기
----------------------
+## 1. Extension 설치로 해결하기
 
 가장 간단한 방법은 VSCode 마켓플레이스에서 제공하는 확장 프로그램(Extension)을 설치하는 것입니다.
 
@@ -31,8 +45,7 @@ Source: <https://code.visualstudio.com/docs/getstarted/keybindings>
 
 예를 들어, 저의 경우 Shift + Enter는 잘 작동하지만 Ctrl + A가 먹통이 되는 문제가 발생했습니다.
 
-2. 직접 키 바인딩 지정하여 해결하기
----------------------
+## 2. 직접 키 바인딩 지정하여 해결하기
 
 확장 프로그램 설치로 해결되지 않는 경우, 직접 키 바인딩을 지정하는 방법이 있습니다. 다음 단계를 따라 진행해 보세요.
 
@@ -106,8 +119,7 @@ Source: <https://code.visualstudio.com/docs/getstarted/keybindings>
 
 `editor.action.selectAll` 명령어는 현재 텍스트 편집기에서 모든 텍스트를 선택합니다. 이 명령어는 텍스트 편집기가 포커스된 상태이고, 편집기가 읽기 전용이 아닌 경우에만 작동합니다.
 
-마무리
----
+## 마무리
 
 이렇게 해서 VSCode에서 발생하는 keymapping 문제를 해결하는 두 가지 방법을 알아보았습니다. 해당 글이 도움이 되셨길 바라며 다음에 또 다른 유용한 팁으로 찾아뵙겠습니다.
 

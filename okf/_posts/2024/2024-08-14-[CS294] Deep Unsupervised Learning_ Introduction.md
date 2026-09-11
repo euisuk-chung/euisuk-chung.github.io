@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[CS294] Deep Unsupervised Learning: Introduction"
+description: "Pieter Abbeel의 CS294 첫 강의를 바탕으로 라벨 상태·학습 목적·데이터 양에 따라 딥러닝 학습 방법론을 계층적으로 분류하고, Hinton과 LeCun의 관점에서 비지도학습의 중요성을 정리한다."
 date: "2024-08-14"
 tags:
-  - "강의노트"
   - "비지도학습"
+  - "강의노트"
+  - "딥러닝"
+  - "머신러닝"
+resource: "https://velog.io/@euisuk-chung/비지도-Deep-Unsupervised-Learning-Intro"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:54:01Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/비지도-Deep-Unsupervised-Learning-Intro"
+    title: "[CS294] Deep Unsupervised Learning: Introduction"
+    author: "human:euisuk-chung"
+    last_modified: "2024-08-14"
+status: "stable"
 year: "2024"
 ---
-
-# [CS294] Deep Unsupervised Learning: Introduction
 
 다음은 아래 "Berkeley CS294 강의"에 대한 요약 및 필기 내용을 정리한 것입니다. 틀린 내용이 있다면 댓글 부탁드립니다 🙌
 
@@ -17,8 +30,7 @@ year: "2024"
 
 본 강의는 Introduction 강의라 개요를 다룹니다. 해당 포스트는 제가 별도로 자료 조사 및 정리를 수행해서 추가적으로 작성한 것이므로, 본 강의 내용과 상이합니다.
 
-딥러닝 학습 방법론의 계층적 분류
-==================
+# 딥러닝 학습 방법론의 계층적 분류
 
 딥러닝 방법론은 크게 지도(Supervised), 준지도(Semi-Supervised), 비지도(UnSupervised), 강화학습(Reinforced) learning으로 구분할 수 있습니다.
 
@@ -68,15 +80,11 @@ year: "2024"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/97e2bf21-abe2-40b6-b834-cc86772f58dd/image.png)
 
----
-
-1. 데이터 라벨링 상태에 따른 분류
-====================
+# 1. 데이터 라벨링 상태에 따른 분류
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/277e44e4-b6dc-4760-bf7d-566f93c05770/image.png)
 
-1.1 라벨이 있는 경우
--------------
+## 1.1 라벨이 있는 경우
 
 ### 1.1.1 Supervised Learning (지도 학습)
 
@@ -131,8 +139,7 @@ year: "2024"
   + **학습 방법**: Consistency Regularization, Entropy Minimization 등 다양한 기법을 사용해 의미 있는 패턴을 학습합니다.
   + **연구 예시**: MixMatch는 라벨링된 데이터와 비라벨링된 데이터를 혼합하여 이미지 분류 작업에서 뛰어난 성능을 발휘합니다.
 
-1.2 라벨이 없는 경우
--------------
+## 1.2 라벨이 없는 경우
 
 ### 1.2.1 Unsupervised Learning (비지도 학습)
 
@@ -170,13 +177,9 @@ year: "2024"
 >   4. 새로운 데이터셋으로 모델 재학습
 >   5. 2-4 과정 반복
 
----
+# 2. 학습 목적에 따른 분류
 
-2. 학습 목적에 따른 분류
-===============
-
-2.1 특정 작업의 성능 향상
-----------------
+## 2.1 특정 작업의 성능 향상
 
 ### 2.1.1 Transfer Learning (전이 학습)
 
@@ -205,8 +208,7 @@ year: "2024"
   + **학습 방법**: Cross-modal Attention, Joint Embedding, Transformer 기반 모델 등이 사용됩니다.
   + **연구 예시**: CLIP(OpenAI)은 이미지와 텍스트를 동시에 학습해, 텍스트 설명과 일치하는 이미지를 찾거나, 이미지를 설명할 수 있는 강력한 모델을 개발했습니다.
 
-2.2 새로운 상황에 대한 적응
------------------
+## 2.2 새로운 상황에 대한 적응
 
 ### 2.2.1 Reinforcement Learning (강화 학습)
 
@@ -253,11 +255,9 @@ year: "2024"
   + **학습 방법**: MAML, Reptile, Prototypical Networks 등의 알고리즘이 사용됩니다.
   + **연구 예시**: MAML 알고리즘은 새로운 작업에 대한 적응성을 높이는 메타 학습 방법을 제공합니다.
 
-3. 데이터의 양과 질에 따른 분류
-===================
+# 3. 데이터의 양과 질에 따른 분류
 
-3.1 데이터가 적은 경우
---------------
+## 3.1 데이터가 적은 경우
 
 ### 3.1.1 Zero-shot Learning (제로샷 학습)
 
@@ -318,10 +318,7 @@ year: "2024"
     - **SimCLR**: Self-Supervised Learning에서 대조적 손실을 사용해 이미지 표현을 학습하며, 지도 학습 없이도 강력한 성능을 발휘.
     - **Triplet Loss**: 얼굴 인식 모델에서 유사한 얼굴은 가깝게, 다른 얼굴은 멀리 배치되도록 학습해 높은 인식 정확도를 달성.
 
----
-
-4. Unsupervised Learning의 중요성
------------------------------
+## 4. Unsupervised Learning의 중요성
 
 **Unsupervised Learning**은 라벨이 없는 데이터에서 패턴과 구조를 학습하는 방법으로, 데이터의 숨겨진 구조를 발견하거나 데이터의 압축을 통해 더 효율적인 모델을 만드는 데 사용됩니다.
 

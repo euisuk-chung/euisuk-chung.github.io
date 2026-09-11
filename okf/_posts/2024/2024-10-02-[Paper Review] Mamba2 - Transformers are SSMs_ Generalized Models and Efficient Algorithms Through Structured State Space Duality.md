@@ -1,14 +1,27 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
+description: "SSM과 어텐션이 반분리 행렬을 매개로 쌍대 관계임을 보이는 SSD 프레임워크, 블록 분해 기반 하드웨어 효율 알고리즘, Mamba-2 아키텍처와 Transformer 대비 실험 결과를 장별로 정리한다."
 date: "2024-10-02"
 tags:
+  - "Paper Review"
   - "NLP"
-  - "Timeseries"
-  - "paper-review"
+  - "Transformer"
+  - "딥러닝"
+  - "시계열"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-Transformers-are-SSMs-Generalized-Models-and-Efficient-Algorithms-Through-Structured-State-Space-Duality"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:46:45Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-Transformers-are-SSMs-Generalized-Models-and-Efficient-Algorithms-Through-Structured-State-Space-Duality"
+    title: "[Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-02"
+status: "stable"
 year: "2024"
 ---
-
-# [Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/ec855bb4-7a26-485b-91de-2ca7a3efa510/image.png)
 
@@ -18,8 +31,7 @@ year: "2024"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/09942ae9-a026-44fb-9d23-b82b7422129a/image.png)
 
-1. **Introduction**
-===================
+# 1. **Introduction**
 
 > 💡 **Contributions**
 >
@@ -54,10 +66,7 @@ Transformer와 대조적으로, **Structured State Space Models (SSMs)**는 시�
 
 이 논문에서 제안하는 주요 아키텍처인 **Mamba-2**는 기존의 Mamba 모델을 개선한 것으로, SSD 프레임워크를 적용하여 더욱 효율적이고 빠르게 동작하는 모델입니다. Mamba-2는 기존의 Transformer와 경쟁할 수 있는 성능을 유지하면서도, **2배에서 8배 더 빠른 계산 속도**를 제공합니다. 이를 통해 Mamba-2는 Transformer가 가지고 있는 효율성 문제를 해결하고자 합니다.
 
----
-
-2. **Background and Overview**
-==============================
+# 2. **Background and Overview**
 
 > 💡 **SUMMARY**
 >
@@ -102,10 +111,7 @@ SSM의 가장 큰 장점 중 하나는 **시퀀스 길이에 비례하는 선형
 
 또한, SSM은 Transformer에서 사용하는 **소프트맥스 어텐션**을 대체할 수 있는 가능성을 제시합니다. 소프트맥스 어텐션은 시퀀스 길이에 따라 많은 계산 자원을 소모하게 되지만, SSM은 이를 더 효율적으로 처리할 수 있는 방법을 제공합니다.
 
----
-
-3. **State Space Models are Structured Matrices**
-=================================================
+# 3. **State Space Models are Structured Matrices**
 
 > 💡 **SUMMARY**
 >
@@ -164,10 +170,7 @@ SSM을 반분리 행렬로 표현하는 과정은 다음과 같이 설명할 수
 
 논문에서 강조하는 핵심 메시지는 **SSM의 계산 방식**이 여러 가지로 변형될 수 있으며, 이를 **행렬 곱셈 알고리즘**으로 재구성할 수 있다는 점입니다. 각기 다른 방법으로 상태 공간 모델을 계산하는 방식이 모두 **구조화된 행렬 계산**으로 환원될 수 있으며, 이를 통해 **효율적인 계산**이 가능해집니다.
 
----
-
-4. **Structured Masked Attention: Generalizing Linear Attention with Structured Matrices**
-==========================================================================================
+# 4. **Structured Masked Attention: Generalizing Linear Attention with Structured Matrices**
 
 > 💡 **SUMMARY**
 >
@@ -222,10 +225,7 @@ SMA는 단순히 기존의 선형 어텐션을 개선한 것에 그치지 않고
 
 SMA는 Transformer 기반 모델의 어텐션 메커니즘을 대체하거나 보완할 수 있습니다. 특히, 시퀀스 길이가 길고, 계산 자원이 제한된 상황에서 SMA는 기존 소프트맥스 어텐션보다 더 효율적인 선택이 될 수 있습니다. 이는 **언어 모델링**, **자연어 처리**, **시계열 분석** 등 다양한 분야에서 활용될 수 있습니다.
 
----
-
-5. **State Space Duality**
-==========================
+# 5. **State Space Duality**
 
 > 💡 **SUMMARY**
 >
@@ -285,10 +285,7 @@ SMA는 Transformer 기반 모델의 어텐션 메커니즘을 대체하거나 �
 
 상태 공간 이중성 프레임워크는 **SSM과 주의 메커니즘**이 같은 문제를 다른 방식으로 해결할 수 있음을 보여줍니다. 이 이중성 개념을 통해, 두 메커니즘의 강점을 결합하여 **더 효율적인 시퀀스 모델**을 설계할 수 있으며, Transformer와 같은 기존 모델의 성능을 향상시킬 수 있는 가능성을 제시합니다.
 
----
-
-6. **A Hardware-Efficient Algorithm for SSD Models**
-====================================================
+# 6. **A Hardware-Efficient Algorithm for SSD Models**
 
 > 💡 **SUMMARY**
 >
@@ -348,10 +345,7 @@ SSD 알고리즘의 또 다른 중요한 특징은 **Tensor Parallelism (텐서 
 
 Transformer는 변동 길이 시퀀스를 처리할 때 **패딩(padding)**을 사용해야 하며, 이는 효율성을 저하시킵니다. 반면 SSD 알고리즘은 **패딩이 필요 없고**, 변동 길이의 시퀀스를 효율적으로 처리할 수 있습니다. 이를 통해 **다양한 길이의 시퀀스를 처리할 때** 더 높은 효율성을 발휘할 수 있습니다.
 
----
-
-7. **The Mamba-2 Architecture**
-===============================
+# 7. **The Mamba-2 Architecture**
 
 > 💡 **SUMMARY**
 >
@@ -405,10 +399,7 @@ Mamba-2는 **SSM과 주의 메커니즘의 이중성(Duality)**을 최대한 활
 * **SSM의 병렬화 지원**: Mamba-2는 기존 SSM보다 더 큰 병렬화 성능을 제공하며, 이를 통해 하드웨어 가속기에서 더 높은 효율성을 발휘합니다.
 * **Transformer의 유연성 도입**: Mamba-2는 Transformer에서 사용되는 여러 병렬화 및 최적화 기법을 도입하여, 대규모 학습 환경에서 더 유연하게 동작합니다.
 
----
-
-8. **Systems Optimization for SSMs**
-====================================
+# 8. **Systems Optimization for SSMs**
 
 > 💡 **SUMMARY**
 >
@@ -458,10 +449,7 @@ Transformer에서 사용되는 최적화 기법을 SSM에 적용함으로써 다
 
 또한, **텐서 병렬화**와 **시퀀스 병렬화**를 사용하여 **GPU/TPU**의 계산 자원을 최대한 활용할 수 있기 때문에, **모델의 확장성**이 향상됩니다. 이는 대규모 언어 모델이나 시계열 데이터 분석 등의 작업에서 매우 중요한 요소입니다.
 
----
-
-9. **Empirical Validation**
-===========================
+# 9. **Empirical Validation**
 
 > 💡 **SUMMARY**
 >
@@ -509,10 +497,7 @@ Mamba-2는 **Chinchilla Scaling Laws**에 따라 다양한 크기의 모델로 �
 
 또한, Mamba-2의 성능을 **다양한 다운스트림 작업**에서 추가적으로 검증함으로써, 더 많은 응용 분야에서 Transformer를 대체할 수 있는 가능성을 탐구해야 한다고 제안합니다.
 
----
-
-10. **Related Work and Discussion**
-===================================
+# 10. **Related Work and Discussion**
 
 > 💡 **SUMMARY**
 >

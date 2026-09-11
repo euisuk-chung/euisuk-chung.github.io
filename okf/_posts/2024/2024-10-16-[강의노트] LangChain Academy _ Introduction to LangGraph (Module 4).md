@@ -1,16 +1,26 @@
-﻿---
+---
+type: "Lecture Note"
 title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 4)"
+description: "팬아웃·팬인 병렬화와 리듀서, 서브그래프 간 상태 공유, Send API 기반 Map-Reduce를 익힌 뒤 분석가 생성, Human-in-the-loop, 병렬 인터뷰, 보고서 작성으로 이어지는 STORM식 Research Assistant 멀티 에이전트를 구현한다."
 date: "2024-10-16"
 tags:
-  - "langgraph"
+  - "LangGraph"
   - "강의노트"
+  - "AI Agent"
+  - "LangChain"
+resource: "https://velog.io/@euisuk-chung/LangChain-Academy-Introduction-to-LangGraph-Module-4"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:40:14+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/LangChain-Academy-Introduction-to-LangGraph-Module-4"
+    title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 4)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-16"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] LangChain Academy : Introduction to LangGraph (Module 4)
-
-
-
 
 **랭체인(LangChain)**과 **랭그래프(LangGraph)**는 대규모 언어 모델(LLM)을 활용한 애플리케이션 개발을 위한 도구들입니다. 위 강의는 LangChain에서 운영하는 LangChain Academy에서 제작한 "Introduction to LangGraph" 강의의 내용을 정리 및 추가 설명한 내용입니다.
 
@@ -28,10 +38,7 @@ year: "2024"
 
   
 
----
-
-Lesson 1: Parallelization
--------------------------
+## Lesson 1: Parallelization
 
 ### 개요
 
@@ -524,10 +531,7 @@ LG전자의 2024년 3분기 실적은 다음과 같습니다:
 매출은 3분기 최대치를 기록했으며, 이는 가전제품과 전장 부문의 지속적인 성장 덕분입니다. 그러나 영업이익은 물류비 급등 및 마케팅비 증가로 인해 감소했습니다.
 ```
 
----
-
-Lesson 2: Sub-graphs
---------------------
+## Lesson 2: Sub-graphs
 
 ### 개요
 
@@ -938,10 +942,7 @@ ans
 > * 3. 두 서브그래프에서 처리된 로그 정보는 `processed_logs`에 기록됩니다.
 > * 4. 최종 결과로, 각 서브그래프의 결과(`fa_summary`와 `report`)와 처리된 로그 목록이 출력됩니다.
 
----
-
-Lesson 3: Map-reduce
---------------------
+## Lesson 3: Map-reduce
 
 ### 개요
 
@@ -1175,10 +1176,7 @@ Generated Subjects: ['Physics', 'Biology', 'Chemistry']
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/fd5300b2-a1ff-49b0-86e4-498b9afeb215/image.png)
 
----
-
-Lesson 4: Research Assistant
-----------------------------
+## Lesson 4: Research Assistant
 
 ### 개요
 
