@@ -364,7 +364,7 @@ def save_as_markdown(post, base_output_dir, existing_fm=None):
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(oc.render_front_matter(front_matter))
         f.write("\n")
-        f.write(body)
+        f.write(body.lstrip("\n"))
 
     # 환경 간 이식성을 위해 레포 루트 기준 POSIX 상대 경로 반환
     return os.path.relpath(filepath, _REPO_ROOT).replace(os.sep, '/')
