@@ -18,7 +18,6 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 # Tags
 
 * [AI Agent](_concepts/ai-agent.md) - LLM 기반 에이전트 설계, 프레임워크, 활용 사례.
-* [AI Summit Seoul](_concepts/ai-summit-seoul.md) - AI Summit Seoul 세션 정리.
 * [알고리즘](_concepts/algorithm.md) - 자료구조와 알고리즘의 개념 정리와 파이썬 구현, 문제 풀이.
 * [이상탐지](_concepts/anomaly-detection.md) - 이상 탐지 기법과 논문, 실전 적용.
 * [Anthropic](_concepts/anthropic.md) - Anthropic의 모델과 제품(Claude, Claude Code), 공개 자료를 다룬 글.
