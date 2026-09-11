@@ -11,6 +11,19 @@ source_url: "https://arxiv.org/abs/2609.10540v1"
 source_title: "Programmable World Model"
 source_authors: [Zheng-Hui Huang, Guixu Lin, Jiacheng Lin, Yi-Chuan Huang, Ruihan Yu, Muyao Niu, Siqi Yang, Yu-Lun Liu, Yung-Yu Chuang, Kaipeng Zhang, Zhixiang Wang]
 analyzed_at: "2026-09-11T06:10:00+09:00"
+visual_sources:
+  - path: "/img/reviews/2026/programmable-world-model-review/figure-3.png"
+    kind: paper-figure
+    source_url: "https://arxiv.org/pdf/2609.10540v1#page=6"
+    page: 6
+    figure: 3
+    caption: "Huang 외, Programmable World Model v1, Figure 3. 원문 도식 영역을 크롭했으며 영문 표기를 보존했습니다."
+  - path: "/img/reviews/2026/programmable-world-model-review/table-1.png"
+    kind: paper-table
+    source_url: "https://arxiv.org/pdf/2609.10540v1#page=12"
+    page: 12
+    table: 1
+    caption: "Huang 외, Programmable World Model v1, Table 1. 원문 표와 평가 조건 캡션을 함께 크롭했으며 수치와 영문 표기를 보존했습니다."
 ---
 
 ## 논문 개요와 전체 구조
@@ -96,6 +109,12 @@ $$
 
 **챕터의 위치와 역할:** 초기 관측에서 실행 가능한 세계를 만들고, 이를 장기 영상으로 변환하는 전체 시스템을 정의하는 핵심 장입니다.
 
+[![세계 프로그래밍, 제어 컴파일, 생성 렌더링의 세 단계와 시간·공간 메모리 연결을 보여 주는 PWM 아키텍처]({{ '/img/reviews/2026/programmable-world-model-review/figure-3.png' | relative_url }})]({{ '/img/reviews/2026/programmable-world-model-review/figure-3.png' | relative_url }})
+
+*그림 3. Huang 외, Programmable World Model v1, PDF 6쪽의 Figure 3을 크롭했습니다. 영문 표기는 원문 그대로이며 아래 설명은 한국어 해설입니다. [버전 고정 원문](https://arxiv.org/pdf/2609.10540v1#page=6)*
+
+그림의 왼쪽은 에이전트가 구성한 세계를 엔진이 실행하는 단계, 가운데는 OBB 상태를 identity·direction·semantic 제어 맵으로 투영하는 단계, 오른쪽은 제어 분기와 Diffusion Transformer로 영상을 생성하는 단계입니다. 하단의 시간 이력과 공간 메모리는 장기 렌더링에 사용됩니다. 아래에서는 이 흐름을 원문의 소절 순서대로 살펴봅니다. 그림을 누르면 원본 크기로 확인할 수 있습니다.
+
 **4.1 Problem Formulation:** 저자는 초기 관측 <span markdown="0">$I_0$</span>와 행동 <span markdown="0">$a_t$</span>를 정의하고 앞서 설명한 식 (3)의 처리 순서를 제시합니다. 엔진은 상태를 갱신하고, 컴파일러는 갱신된 상태를 읽으며, 렌더러는 해당 조건에서 관측을 만듭니다. 이 분리는 세계 좌표의 상태와 카메라 좌표의 시각 신호를 혼동하지 않게 합니다.
 
 **4.2 Agent-Orchestrated Box World — World representation and initialization:** 세계는 지속적인 객체와 그 OBB, 속성, 관계, 규칙을 함께 저장합니다. 원문의 식 (4)는 다음과 같습니다.
@@ -168,6 +187,12 @@ $$
 **VLM-based Evaluation:** 판정기는 Qwen3.6-27B이며 생성 RGB만 봅니다. 정답 상자·식별자·기대 객체 수·사망 위치는 주지 않습니다. Count Accuracy는 클립당 무작위 8프레임, 총 400프레임에서 화면에 살아 있는 인물 수가 엔진 기록과 정확히 같은 비율입니다. State Accuracy는 사망 사건마다 전이 이후 균등 추출한 3프레임 중 적어도 하나에 사망 인물이 보이는지를 묻고, 총 50사건에서 성공 비율을 구합니다. 어느 인물이 어디에서 죽었는지를 식별해야 하는 지표는 아닙니다.
 
 **Video Quality:** 원문 표 1의 모든 값은 백분율로 보고됩니다. Imaging은 프레임 선명도·노출·잡음 등의 품질, Subject Consistency는 전경 객체의 외형·구조·정체성 지속성, Background Consistency는 배경의 프레임 간 안정성입니다. Temporal Stability는 VBench의 temporal-flickering 점수에 기반하며 높을수록 깜박임이 적습니다.
+
+[![CombatStateBench의 세 모델 비교 표: 영상 품질 네 지표와 객체 수·상태 정확도, 모든 값은 백분율]({{ '/img/reviews/2026/programmable-world-model-review/table-1.png' | relative_url }})]({{ '/img/reviews/2026/programmable-world-model-review/table-1.png' | relative_url }})
+
+*표 1 원본. Huang 외, Programmable World Model v1, PDF 12쪽의 Table 1과 평가 조건 캡션을 크롭했습니다. 수치·열 이름·영문 캡션은 번역하거나 수정하지 않았습니다. [버전 고정 원문](https://arxiv.org/pdf/2609.10540v1#page=12)*
+
+원본 표의 앞 네 열은 영상 품질, 마지막 두 열은 엔진 상태와 영상의 일치도를 평가합니다. 아래는 같은 수치를 읽기 편하도록 옮긴 표입니다. 원본 이미지의 캡션에서도 객체 수는 400프레임, 상태 정확도는 50개 사망 사건을 기준으로 평가했음을 확인할 수 있습니다.
 
 | 방법 | Imaging | Subject Cons. | Background Cons. | Temporal Stability | Count Acc. | State Acc. |
 |---|---:|---:|---:|---:|---:|---:|
