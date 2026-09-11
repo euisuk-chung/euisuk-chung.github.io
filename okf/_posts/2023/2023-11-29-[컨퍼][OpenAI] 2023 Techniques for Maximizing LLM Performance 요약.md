@@ -1,32 +1,42 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약"
+description: "OpenAI DevDay 세션을 바탕으로 프롬프트 엔지니어링, RAG, 파인튜닝을 문맥 최적화와 모델 최적화 두 축으로 나누어 언제 무엇을 적용할지 판단하는 LLM 성능 최적화 여정을 정리한다."
 date: "2023-11-29"
 tags:
-  - "Conference"
   - "OpenAI"
+  - "Conference"
+  - "Prompt Engineering"
+  - "RAG"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/컨퍼OpenAI-2023-Techniques-for-Maximizing-LLM-Performance-요약"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:08:59Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼OpenAI-2023-Techniques-for-Maximizing-LLM-Performance-요약"
+    title: "[컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약"
+    author: "human:euisuk-chung"
+    last_modified: "2023-11-29"
+status: "stable"
 year: "2023"
 ---
 
-# [컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약
+# Techniques for Maximizing LLM Performance
 
-Techniques for Maximizing LLM Performance
-=========================================
-
-유튜브 링크
-------
+## 유튜브 링크
 
 [![Video Label](https://img.youtube.com/vi/ahnGLM-RC1Y/0.jpg)](https://youtu.be/ahnGLM-RC1Y?list=PLOXw6I10VTv-exVCRuRjbT6bqkfO74rWz)
 
 이 영상에서는 OpenAI의 개발자 컨퍼런스에서 "A Survey of Techniques for Maximizing LLM Performance"라는 주제로 진행된 세션의 내용을 더 자세히 다룹니다. 발표자들은 언어 모델(Large Language Models, LLMs)의 성능을 극대화하기 위한 다양한 기술과 접근 방법에 대해 설명합니다.
 
-발표자 소개
-------
+## 발표자 소개
 
 * **John Allard**: OpenAI의 Fine-tuning Product Team의 엔지니어링 리더.
 * **Colin Jarvis**: OpenAI의 EMEA 솔루션 책임자.
 
-주요 내용
------
+## 주요 내용
 
 1. **LLM 성능 최적화의 중요성**
 
@@ -60,7 +70,6 @@ Techniques for Maximizing LLM Performance
    * 문제를 식별하고 접근하는 방법에 대한 프레임워크 제공.
    * 다양한 최적화 도구와 기술의 사용을 권장.
 
-결론
---
+## 결론
 
 이 세션은 LLM의 성능을 극대화하기 위한 다양한 기술과 접근 방법을 제공하며, 개발자들이 이러한 도구를 활용하여 더 효율적이고 강력한 애플리케이션을 구축할 수 있도록 지원합니다.

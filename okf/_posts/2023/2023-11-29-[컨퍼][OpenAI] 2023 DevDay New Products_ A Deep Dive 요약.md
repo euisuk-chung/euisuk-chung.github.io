@@ -1,24 +1,33 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약"
+description: "OpenAI DevDay 세션에서 발표된 Assistants API의 스레드·Run·Steps 개념, 코드 인터프리터와 Retrieval 도구, JSON 모드와 병렬 함수 호출, 멀티모달·웹소켓 지원 계획을 정리한다."
 date: "2023-11-29"
 tags:
-  - "Conference"
   - "OpenAI"
+  - "Conference"
+  - "AI Agent"
+resource: "https://velog.io/@euisuk-chung/컨퍼OpenAI-2023-DevDay-New-Products-A-Deep-Dive-요약"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:09:19Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼OpenAI-2023-DevDay-New-Products-A-Deep-Dive-요약"
+    title: "[컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약"
+    author: "human:euisuk-chung"
+    last_modified: "2023-11-29"
+status: "stable"
 year: "2023"
 ---
 
-# [컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약
+# OpenAI DevDay: 새로운 API와 기능 소개
 
-OpenAI DevDay: 새로운 API와 기능 소개
-=============================
-
-유튜브 링크
-------
+## 유튜브 링크
 
 [![Video Label](https://img.youtube.com/vi/pq34V_V5j18/0.jpg)](https://youtu.be/pq34V_V5j18)
 
-영상 요약
------
+## 영상 요약
 
 이 영상은 OpenAI의 DevDay 행사에서 발표된 새로운 API와 기능들에 대한 소개를 담고 있습니다. 주요 내용은 다음과 같습니다.
 

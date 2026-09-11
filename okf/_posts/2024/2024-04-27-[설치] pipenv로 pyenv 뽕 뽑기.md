@@ -1,13 +1,25 @@
 ---
+type: "Guide"
 title: "[설치] pipenv로 pyenv 뽕 뽑기"
+description: "pipenv로 Pipfile과 Pipfile.lock 기반 의존성 관리와 프로젝트별 가상환경을 구성하는 방법, pipenv install과 lock의 차이, 주요 명령어와 pip 옵션 변환 팁을 정리한다."
 date: "2024-04-27"
 tags:
-  - "pyenv/pipenv"
-  - "환경"
+  - "환경설정"
+  - "Python"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/pipenv-너도-같이-오고-pyenv-pipenv"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:01:28Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/pipenv-너도-같이-오고-pyenv-pipenv"
+    title: "[설치] pipenv로 pyenv 뽕 뽑기"
+    author: "human:euisuk-chung"
+    last_modified: "2024-04-27"
+status: "stable"
 year: "2024"
 ---
-
-# [설치] pipenv로 pyenv 뽕 뽑기
 
 지난 번 포스팅에서는 `pyenv`에 대해서 살펴보고 이를 리눅스 환경(+Window환경)에 설치하는 방법에 대해서 살펴봤는데요([링크](https://velog.io/@euisuk-chung/Goodbye-Conda-Hello-PyENV)) 이번 포스팅에서는 pyenv의 효과를 극대화할 수 있는 pipenv에 대해서 살펴보고, 이를 어떻게 사용할지 알아보도록 하겠습니다 🤗
 

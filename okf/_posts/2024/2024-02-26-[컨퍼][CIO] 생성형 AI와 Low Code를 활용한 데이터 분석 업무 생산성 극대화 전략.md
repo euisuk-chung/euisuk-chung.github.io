@@ -1,28 +1,38 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략"
+description: "CIO SUMMIT 2024 비아이매트릭스 세션을 바탕으로 로우코드 BI 플랫폼에 LLM을 결합한 G-MATRIX의 메타 정의, 자연어 질의의 쿼리 변환, 결과 화면 생성 과정과 기업이 RAG를 도입하는 이유를 정리한다."
 date: "2024-02-26"
 tags:
   - "CIO"
   - "Conference"
+  - "RAG"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/컨퍼CIO-생성형-AI와-Low-Code를-활용한-데이터-분석-업무-생산성-극대화-전략"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:05:41Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼CIO-생성형-AI와-Low-Code를-활용한-데이터-분석-업무-생산성-극대화-전략"
+    title: "[컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-26"
+status: "stable"
 year: "2024"
 ---
 
-# [컨퍼][CIO] 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략
-
 본 내용은 CIO SUMMIT 2024에서 발표된 내용을 기반으로 제가 더 조사 및 정리해서 작성한 글입니다. 본 게시글은 발표 내용을 정리한 것이지 특정 회사를 옹호•홍보할 목적이 아님을 밝힙니다. 틀린 내용이 있다면 편하게 댓글 달아주세요!! 🤗
 
-제목
---
+## 제목
 
 생성형 AI와 Low Code를 활용한 데이터 분석 업무 생산성 극대화 전략
 
-발표자
----
+## 발표자
 
 비아이매트릭스 배영근 대표이사
 
-발표내용
-----
+## 발표내용
 
 ### 비아이매트릭스는 어떤 회사인가?
 

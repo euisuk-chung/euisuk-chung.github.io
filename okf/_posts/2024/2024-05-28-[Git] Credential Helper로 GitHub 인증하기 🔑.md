@@ -1,16 +1,27 @@
 ---
+type: "Guide"
 title: "[Git] Credential Helper로 GitHub 인증하기 🔑"
+description: "Git Credential Helper의 cache, store, osxkeychain, wincred 방식으로 GitHub 인증 정보를 저장하고 삭제하는 git config 명령을 정리하며 개인 PC는 store, 공용 PC는 cache를 권한다."
 date: "2024-05-28"
 tags:
-  - "git"
-  - "환경"
+  - "Git"
+  - "환경설정"
+  - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/Git-Credential-Helper로-GitHub-인증하기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:25:22Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Git-Credential-Helper로-GitHub-인증하기"
+    title: "[Git] Credential Helper로 GitHub 인증하기 🔑"
+    author: "human:euisuk-chung"
+    last_modified: "2024-05-28"
+status: "stable"
 year: "2024"
 ---
 
-# [Git] Credential Helper로 GitHub 인증하기 🔑
-
-Credential Helper로 GitHub 인증하기
-------------------------------
+## Credential Helper로 GitHub 인증하기
 
 GitHub를 사용하면서 매번 인증 정보를 입력하는 것이 번거로울 수 있습니다. 이를 해결하기 위해 Git은 `credential` 기능을 제공합니다.
 
@@ -154,8 +165,7 @@ Mac에서는 키체인 접근 앱에서 `github.com` 항목을 삭제합니다.
 
 Windows에서는 자격 증명 관리자에서 `github.com` 항목을 삭제합니다.
 
-결론
---
+## 결론
 
 이제 Git Credential Helper를 이용해 GitHub 인증 정보를 보다 편리하게 관리할 수 있습니다. 개인 컴퓨터에서는 `Store`를 사용하고, 공용 컴퓨터에서는 `Cache`를 사용하는 것을 추천합니다. Keychain 시스템을 이용하면 더욱 안전하게 인증 정보를 관리할 수 있습니다.
 

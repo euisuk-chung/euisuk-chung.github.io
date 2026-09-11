@@ -1,13 +1,25 @@
 ---
+type: "Concept Note"
 title: "[파이썬] 쉽게 설명한 Process vs Thread"
+description: "교실과 학생 비유로 프로세스와 스레드의 독립성·자원 공유·생성 비용 차이를 설명하고, 멀티프로세싱과 멀티스레딩을 각각 언제 선택해야 하는지 정리했다."
 date: "2024-02-19"
 tags:
-  - "python"
+  - "Python"
   - "개념정리"
+  - "IT지식"
+resource: "https://velog.io/@euisuk-chung/파이썬-Process-vs-Thread"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:07:40Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이썬-Process-vs-Thread"
+    title: "[파이썬] 쉽게 설명한 Process vs Thread"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-19"
+status: "stable"
 year: "2024"
 ---
-
-# [파이썬] 쉽게 설명한 Process vs Thread
 
 ### 프로세스(Process)란?
 

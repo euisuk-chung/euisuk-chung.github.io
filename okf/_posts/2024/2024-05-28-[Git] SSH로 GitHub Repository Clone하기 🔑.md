@@ -1,16 +1,27 @@
 ---
+type: "Guide"
 title: "[Git] SSH로 GitHub Repository Clone하기 🔑"
+description: "ssh-keygen으로 RSA 키를 만들어 GitHub에 등록하고 SSH URL로 저장소를 클론하는 과정과 함께 PowerShell 경로 오류, ssh-agent와 ~/.ssh/config 설정의 차이를 설명한다."
 date: "2024-05-28"
 tags:
-  - "git"
-  - "환경"
+  - "Git"
+  - "환경설정"
+  - "Linux"
+resource: "https://velog.io/@euisuk-chung/Git-SSH로-GitHub-Repository-Clone"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T21:25:35Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Git-SSH로-GitHub-Repository-Clone"
+    title: "[Git] SSH로 GitHub Repository Clone하기 🔑"
+    author: "human:euisuk-chung"
+    last_modified: "2024-05-28"
+status: "stable"
 year: "2024"
 ---
 
-# [Git] SSH로 GitHub Repository Clone하기 🔑
-
-SSH로 GitHub Repository Clone하는 방법
-=================================
+# SSH로 GitHub Repository Clone하는 방법
 
 오늘은 SSH를 이용해 GitHub 레포지토리를 클론(clone)하는 방법에 대해 설명하겠습니다⭐ GitHub/GitLab을 사용하다보면 매번 생기는 인증 문제!!! 너무 머리 아프시죠...! 그래서 저는 이제 SSH를 이용해서 보안도 챙기고, 한번에 인증도 할 수 있는 편의성도 챙겨가려고요 😎
 
@@ -18,8 +29,7 @@ SSH를 이용해 GitHub 레포지토리를 클론하면 매번 인증 정보를 
 
 SSH 키를 생성한 후 GitHub에 등록하면 매번 인증 정보를 입력하지 않아도 됩니다. 아래는 `Windows`와 `Ubuntu` 환경에서의 SSH 키 생성 과정을 설명합니다.
 
-1. SSH 키 생성 - 공통 명령어
---------------------
+## 1. SSH 키 생성 - 공통 명령어
 
 SSH 키를 생성할 때 사용하는 명령어와 옵션들에 대해 먼저 설명하겠습니다.
 
@@ -113,10 +123,7 @@ SSH 키를 생성할 때 사용하는 명령어와 옵션들에 대해 먼저 �
 
    * 출력된 키를 복사하여 GitHub에 등록합니다.
 
----
-
-2. SSH 키 GitHub에 등록하기
----------------------
+## 2. SSH 키 GitHub에 등록하기
 
 1. **GitHub 로그인 및 설정 페이지 이동**:
    * GitHub에 로그인한 후 오른쪽 상단 프로필 아이콘을 클릭하여 **Settings**로 이동합니다.
@@ -145,10 +152,7 @@ SSH 키를 생성할 때 사용하는 명령어와 옵션들에 대해 먼저 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/15f51dff-ff77-4da8-8f6a-bf8d80b79377/image.png)
 
----
-
-3. SSH를 이용한 GitHub Repository 클론하기
-----------------------------------
+## 3. SSH를 이용한 GitHub Repository 클론하기
 
 1. **레포지토리 URL 복사**:
 
@@ -161,10 +165,7 @@ SSH 키를 생성할 때 사용하는 명령어와 옵션들에 대해 먼저 �
 
    * `username`과 `repository`는 실제 복사한 URL에 맞게 변경합니다.
 
----
-
-4. (추가) Tips! id\_rsa말고 다른 이름으로 설정하기
-------------------------------------
+## 4. (추가) Tips! id\_rsa말고 다른 이름으로 설정하기
 
 🤦‍♂️ 가끔 사용하다 보면, **개인 키와 공개 키가 서로 다르다**는 에러와 마주치게 될때가 있습니다.
 
@@ -304,8 +305,7 @@ SSH 키를 생성할 때 사용하는 명령어와 옵션들에 대해 먼저 �
 
 이 과정을 따라 새로운 SSH 키를 생성하고, 공개 키를 등록하며, 인증을 재설정하면 문제가 해결됩니다! 😊
 
-결론
---
+## 결론
 
 이제 SSH 키를 생성하고 GitHub에 등록한 후, SSH를 이용해 레포지토리를 클론하는 방법을 익혔습니다. 이 과정을 통해 한 번 설정 후에는 매번 인증 정보를 입력할 필요 없이 GitHub에 접근할 수 있습니다. 이를 통해 작업 효율을 크게 높일 수 있습니다.
 

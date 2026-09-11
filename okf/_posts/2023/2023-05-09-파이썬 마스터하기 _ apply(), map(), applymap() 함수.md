@@ -1,24 +1,33 @@
 ---
+type: "Concept Note"
 title: "파이썬 마스터하기 : apply(), map(), applymap() 함수"
+description: "Pandas에서 혼동하기 쉬운 apply(), applymap(), map(), replace() 메소드의 차이를 열·원소·시리즈 단위 적용 예제와 람다 함수 활용 코드로 비교 설명한다."
 date: "2023-05-09"
 tags:
-  - "pandas"
-  - "python"
+  - "Pandas"
+  - "Python"
   - "개념정리"
+resource: "https://velog.io/@euisuk-chung/파이썬-마스터하기-apply-map-applymap-함수"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:10:43Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/파이썬-마스터하기-apply-map-applymap-함수"
+    title: "파이썬 마스터하기 : apply(), map(), applymap() 함수"
+    author: "human:euisuk-chung"
+    last_modified: "2023-05-09"
+status: "stable"
 year: "2023"
 ---
 
-# 파이썬 마스터하기 : apply(), map(), applymap() 함수
-
-파이썬 판다스 심화
-==========
+# 파이썬 판다스 심화
 
 `판다스(Pandas)`는 매우 다양한 함수와 메소드를 제공하기 때문에 **처음 사용하면 헷갈릴 수 있는 함수들**이 많습니다.
 
 이번 포스트에서는 `apply()`, `applymap()`, `map()`, `reduce()`와 같은 헷갈릴 수 있는 함수들을 중심으로 간단한 개념과 예제를 소개해보도록 하겠습니다.
 
-1. apply()
-----------
+## 1. apply()
 
 `apply()` 메소드는 시리즈(Series)나 데이터프레임(DataFrame)의 각 원소에 함수를 적용하여 결과를 반환합니다. 데이터프레임에서는 행(axis=0) 또는 열(axis=1)을 기준으로 함수를 적용할 수 있습니다. 예를 들어, 다음과 같은 데이터프레임이 있다고 가정해봅시다.
 
@@ -49,8 +58,7 @@ C    24
 dtype: int64
 ```
 
-2. applymap()
--------------
+## 2. applymap()
 
 `applymap()` 메소드는 데이터프레임(DataFrame)의 모든 원소에 함수를 적용하여 결과를 반환합니다. 예를 들어, 다음과 같은 데이터프레임이 있다고 가정해봅시다.
 
@@ -108,8 +116,7 @@ print(df2)
 2  CHERRY  BIRD  3
 ```
 
-3. map()
---------
+## 3. map()
 
 이어서 혼동하기 쉬운 함수로 `map()`과 `replace()`를 살펴보겠습니다.
 
@@ -137,8 +144,7 @@ print(s2)
 dtype: int64
 ```
 
-4. replace()
-------------
+## 4. replace()
 
 `replace()` 메소드는 데이터프레임(DataFrame)이나 시리즈(Series)에서 사용할 수 있는 메소드입니다. 데이터프레임이나 시리즈의 값을 다른 값으로 교체합니다. 예를 들어, 다음과 같은 시리즈가 있다고 가정해봅시다.
 

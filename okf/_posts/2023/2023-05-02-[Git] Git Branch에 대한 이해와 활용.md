@@ -1,17 +1,27 @@
 ---
+type: "Guide"
 title: "[Git] Git Branch에 대한 이해와 활용"
+description: "브랜치 생성·전환·삭제 명령어와 로컬·원격 브랜치의 관계, Git Flow·GitHub Flow·GitLab Flow 전략, 충돌 해결과 merge·rebase 비교까지 실습 예제로 정리합니다."
 date: "2023-05-02"
 tags:
-  - "git"
+  - "Git"
+  - "환경설정"
   - "개념정리"
-  - "환경"
+resource: "https://velog.io/@euisuk-chung/Git-Branch에-대한-이해와-활용"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:12:56Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Git-Branch에-대한-이해와-활용"
+    title: "[Git] Git Branch에 대한 이해와 활용"
+    author: "human:euisuk-chung"
+    last_modified: "2023-05-02"
+status: "stable"
 year: "2023"
 ---
 
-# [Git] Git Branch에 대한 이해와 활용
-
-Git Branch에 대한 이해와 활용
-=====================
+# Git Branch에 대한 이해와 활용
 
 `Git Branch`는 Git에서 매우 중요한 개념 중 하나입니다.
 
@@ -20,8 +30,7 @@ Git Branch에 대한 이해와 활용
 > * *"모든 버전 관리 시스템은 브랜치를 지원한다. 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다."*  
 >   ↳ 출처 : [Git 브랜치 - 브랜치란 무엇인가](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
 
-1. Git Branch란?
----------------
+## 1. Git Branch란?
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/99a8f881-2d2f-47fd-9317-ca44e9b3d408/image.png)
 
@@ -32,8 +41,7 @@ Git Branch는 Git에서 코드를 분기하여 관리하는 개념입니다.
 * Git에서는 기본적으로 `main` 혹은 `master`라는 하나의 브랜치를 가지고 있으며, 이 브랜치에서 새로운 브랜치를 만들어 작업을 진행합니다.
 * 새로운 브랜치를 만들면, 기존 브랜치와 **독립적으로** 코드를 변경할 수 있어 **기능 개발, 버그 수정, 실험적 시도** 등을 안전하게 수행할 수 있습니다.
 
-2. Git Branch 관리 방법
--------------------
+## 2. Git Branch 관리 방법
 
 ### 2.1. 현재 브랜치 정보 확인
 
@@ -163,10 +171,7 @@ $ git checkout <전환할 브랜치 이름>
 $ git switch feature/login
 ```
 
----
-
-🔧 Git 실무 예시
------------
+## 🔧 Git 실무 예시
 
 ### ✅ A. 새로운 기능 브랜치 생성 및 작업 (기획/기능 신규 착수 시)
 
@@ -187,8 +192,6 @@ $ git push -u origin feat/user-profile
 
 # 5. PR 생성 → 리뷰 → Merge → 브랜치 삭제
 ```
-
----
 
 ### ✅ B. 원격에 이미 존재하는 브랜치에서 작업 계속하기 (기존 브랜치 이어받기)
 
@@ -218,10 +221,7 @@ $ git commit -m "♻️ fix: 프로필 UI 수정"
 $ git push            # 이미 tracking 중이면 브랜치명 생략 가능
 ```
 
----
-
-3. Git Branch 전략
-----------------
+## 3. Git Branch 전략
 
 Git Branch 전략은 협업 시 **브랜치 명명 규칙, 생성/병합 흐름**을 명확히 하기 위한 전략적 선택입니다. 아래는 대표적인 3가지 전략입니다.
 
@@ -252,10 +252,7 @@ $ git checkout -b feature/search-filter develop
 * `main`, `production`, `feature`, `bugfix`, `release` 브랜치를 혼합적으로 운용
 * 환경(branch-to-environment) 기반 배포 연계가 자주 사용됨
 
----
-
-4. Git Branch 협업 방법
--------------------
+## 4. Git Branch 협업 방법
 
 ### 4.1. 코드 리뷰를 위한 Git Branch 활용
 
@@ -277,10 +274,7 @@ $ git push origin feature/payment
 | 배포 준비 | `release/<버전>` | QA 및 배포 전 최종 검수용 브랜치 |
 | 실험/개인 테스트 | `experiment/<주제>` | 실험적 코드 테스트 |
 
----
-
-5. 발생 가능 문제 및 해결방법
-------------------
+## 5. 발생 가능 문제 및 해결방법
 
 ### 5.1. 충돌 발생 예시 및 해결
 
@@ -300,16 +294,11 @@ $ git add app.py
 $ git commit -m "Resolve merge conflict in app.py"
 ```
 
----
-
-6. Git 충돌 해결 실습과 `rebase` vs `merge` 비교
----------------------------------------
+## 6. Git 충돌 해결 실습과 `rebase` vs `merge` 비교
 
 ### 6.1. 충돌(Conflict)이란?
 
 Git에서 **충돌(conflict)** 은 두 브랜치에서 동일한 파일의 **같은 라인**을 수정하고 병합할 때 발생합니다. Git은 어떤 변경을 적용해야 할지 자동으로 결정할 수 없기 때문에, 사용자가 수동으로 해결해야 합니다.
-
----
 
 ### 6.2. 실습 예제: 충돌 상황 만들기
 
@@ -332,8 +321,6 @@ $ git commit -am "Main: Change greeting message"
 ```
 
 이제 `feature` 브랜치를 `main`에 병합하려고 하면 충돌이 발생합니다.
-
----
 
 ### 6.3. 충돌 해결 및 병합
 
@@ -378,8 +365,6 @@ $ git commit -m "Resolve conflict in app.js"
 
 이제 충돌이 해결되었습니다.
 
----
-
 ### 6.4. Merge vs Rebase
 
 | 항목 | `merge` | `rebase` |
@@ -389,8 +374,6 @@ $ git commit -m "Resolve conflict in app.js"
 | 사용 상황 | 협업 기록을 명확히 남기고 싶을 때 | 개인 브랜치 정리, 깔끔한 히스토리 관리 시 |
 | 충돌 발생 시점 | 병합 시점 | `rebase` 과정 중 각 커밋마다 충돌 가능성 있음 |
 | 명령어 예시 | `$ git merge main` | `$ git rebase main` |
-
----
 
 ### 6.5. Rebase 실습
 
@@ -412,8 +395,6 @@ $ git rebase --continue
 ```
 $ git rebase --abort
 ```
-
----
 
 ### ✅ 정리
 

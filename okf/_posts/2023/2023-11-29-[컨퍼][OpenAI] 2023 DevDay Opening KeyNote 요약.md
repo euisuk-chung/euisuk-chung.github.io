@@ -1,26 +1,35 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약"
+description: "OpenAI DevDay 오프닝 키노트의 GPT-4 Turbo, 맞춤형 챗봇을 만드는 GPTs와 GPT 스토어, Assistants API, 코드 인터프리터·병렬 함수 호출, 음성 인식·TTS API 발표 내용을 요약한다."
 date: "2023-11-29"
 tags:
-  - "Conference"
   - "OpenAI"
+  - "Conference"
+  - "ChatGPT"
+resource: "https://velog.io/@euisuk-chung/컨퍼-OpenAI-DevDay-컨퍼런스-요약"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:09:35Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/컨퍼-OpenAI-DevDay-컨퍼런스-요약"
+    title: "[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약"
+    author: "human:euisuk-chung"
+    last_modified: "2023-11-29"
+status: "stable"
 year: "2023"
 ---
 
-# [컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약
+# OpenAI DevDay Opening KeyNote
 
-OpenAI DevDay Opening KeyNote
-=============================
-
-유튜브 링크
-------
+## 유튜브 링크
 
 [![Video Label](https://img.youtube.com/vi/U9mJuUkhUzk/0.jpg)](https://youtu.be/U9mJuUkhUzk)
 
 ※ 클릭 시 해당 영상으로 이동합니다.
 
-주요 발표 요약
---------
+## 주요 발표 요약
 
 ![GPT4-Turbo](https://velog.velcdn.com/images/euisuk-chung/post/19293cf3-2b44-43a7-b5a5-ad21725bd8f9/image.png)
 

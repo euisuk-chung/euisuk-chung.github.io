@@ -1,23 +1,33 @@
 ---
+type: "Conference Recap"
 title: "[컨퍼][CIO] GenAI, First!"
+description: "CIO SUMMIT 2024 패널 토크에서 논의된 생성형 AI의 산업 적용 현황, 정부의 AI 일상화 정책과 공공 도입 사례, 부작용 최소화 방안과 함께 제조 도메인에서 LLM이 Predictive AI의 보조 역할을 한다는 답변을 정리한다."
 date: "2024-02-25"
 tags:
   - "CIO"
   - "Conference"
+  - "트렌드"
+resource: "https://velog.io/@euisuk-chung/GenAI-First"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:06:01Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/GenAI-First"
+    title: "[컨퍼][CIO] GenAI, First!"
+    author: "human:euisuk-chung"
+    last_modified: "2024-02-25"
+status: "stable"
 year: "2024"
 ---
 
-# [컨퍼][CIO] GenAI, First!
-
 본 내용은 CIO SUMMIT 2024에서 발표된 내용을 기반으로 제가 더 조사 및 정리해서 작성한 글입니다. 본 게시글은 발표 내용을 정리한 것이지 특정 회사를 옹호•홍보할 목적이 아님을 밝힙니다. 틀린 내용이 있다면 편하게 댓글 달아주세요!! 🤗
 
-제목
---
+## 제목
 
 GenAI, First! (CIO Discussion)
 
-발표자
----
+## 발표자
 
 **[좌장]**  
 이경상 KAIST 문술미래전략대학원 겸직교수
@@ -27,8 +37,7 @@ GenAI, First! (CIO Discussion)
 진요한 LG CNS AI센터 상무  
 엄열 과학기술정보통신부 인공지능기반정책관
 
-발표내용
-----
+## 발표내용
 
 'CIO SUMMIT 2024' 패널 토크에서는 기술 지도자들이 모여 기존 디지털 전환의 성과를 돌아보고, 생성형 AI 기술의 지속 가능한 활용 전략에 대해 논의했습니다. KAIST 문술미래전략대학원의 이경상 교수가 패널 토의를 진행했으며, 생성형 AI가 산업과 기업에 미치는 영향, 성공 요인, 장애 요인 극복 방안에 대한 중요성을 강조했습니다.
 
