@@ -134,12 +134,23 @@ def page_paths_for_report(report: dict, site: Path) -> set[str]:
             pages.add((candidates[0] / "index.html").relative_to(site).as_posix())
             continue
         title = post_title(Path(site).parent / rel)
+        if not title:
+            continue
+        # 정확 일치 우선 (한 제목이 다른 제목의 부분 문자열인 같은 날 글 구분), 없으면 부분 일치
+        scored = []
         for c in candidates:
             page = (c / "index.html").read_text(encoding="utf-8", errors="replace")
             tt = re.search(r"<title>(.*?)</title>", page, re.S)
-            if title and tt and _fold(title) in _fold(tt.group(1)):
-                pages.add((c / "index.html").relative_to(site).as_posix())
-                break
+            if not tt:
+                continue
+            page_title = _fold(tt.group(1)).split(" | ")[0]
+            if page_title == _fold(title):
+                scored.append((0, c))
+            elif _fold(title) in page_title:
+                scored.append((1, c))
+        if scored:
+            scored.sort(key=lambda x: x[0])
+            pages.add((scored[0][1] / "index.html").relative_to(site).as_posix())
     return pages
 
 
@@ -189,12 +200,14 @@ def main(argv=None) -> int:
     if pages is not None:
         for rel in report:
             t = post_title(Path(after).parent / rel)
+            if not t:
+                continue
             for p in pages:
-                if t and p not in titles:
-                    page = (after / p).read_text(encoding="utf-8", errors="replace")
-                    tt = re.search(r"<title>(.*?)</title>", page, re.S)
-                    if tt and _fold(t) in _fold(tt.group(1)):
-                        titles[p] = t
+                page = (after / p).read_text(encoding="utf-8", errors="replace")
+                tt = re.search(r"<title>(.*?)</title>", page, re.S)
+                if tt and _fold(tt.group(1)).split(" | ")[0] == _fold(t):
+                    titles[p] = t
+                    break
     if pages is not None:
         print(f"[pages] {len(pages)} of {len(report)} report entries mapped to output pages")
     hr_delta = 0
