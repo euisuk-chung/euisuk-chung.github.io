@@ -9,6 +9,14 @@ source_id: "AlexsJones/llmfit"
 source_revision: "e5508a1bdd9184d59add7dc0382219e82f68483d"
 source_url: "https://github.com/AlexsJones/llmfit/tree/e5508a1bdd9184d59add7dc0382219e82f68483d"
 analyzed_at: "2026-09-10T23:45:11+09:00"
+visual_sources:
+  - path: "/img/reviews/2026/llmfit-review/recommend-flow.svg"
+    kind: reviewer-diagram
+    source_url: "https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-tui/src/main.rs#L1939"
+    caption: "리뷰어 작성, 분석 커밋 e5508a1bdd9184d59add7dc0382219e82f68483d 기준 CLI 추천 처리 흐름"
+    code_sources:
+      - "https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-core/src/analysis.rs#L284"
+      - "https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-core/src/fit.rs#L580"
 ---
 
 ## 들어가며
@@ -37,6 +45,12 @@ llmfit의 핵심은 **내 하드웨어에서 어떤 모델을 어떤 실행 조�
 | `main.rs`·`display.rs` | CLI 제어와 출력 | 옵션 해석, 필터·정렬, JSON·CSV·표 출력 |
 
 코어는 `sysinfo`, `serde`, `ureq` 등을 사용하고, CLI 패키지는 `clap`, `ratatui`, `crossterm`, `axum`, `tokio` 등을 사용합니다. 이름은 TUI 패키지이지만 HTTP API도 이 패키지 안에 있습니다. `serve_api.rs`에는 시스템·모델 조회뿐 아니라 다운로드와 계획 수립 경로도 등록되어 있습니다. [core 의존성](https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-core/Cargo.toml#L15), [API 라우팅](https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-tui/src/serve_api.rs#L255)
+
+[![llmfit의 CLI 입력, 하드웨어와 모델 확보, 개별 분석, 실측 보정, 필터와 정렬, 출력으로 이어지는 흐름]({{ '/img/reviews/2026/llmfit-review/recommend-flow.svg' | relative_url }})]({{ '/img/reviews/2026/llmfit-review/recommend-flow.svg' | relative_url }})
+
+*그림 1. 리뷰어 작성, 분석 커밋 `e5508a1bdd9184d59add7dc0382219e82f68483d` 기준입니다. [추천 진입점](https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-tui/src/main.rs#L1939), [공통 분석과 보정](https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-core/src/analysis.rs#L284), [개별 적합도 계산](https://github.com/AlexsJones/llmfit/blob/e5508a1bdd9184d59add7dc0382219e82f68483d/llmfit-core/src/fit.rs#L580)을 근거로 CLI 추천 경로를 도식화했습니다. 이미지를 누르면 확대할 수 있습니다.*
+
+화살표는 추천 처리의 순서를 나타냅니다. 두 번째 단계는 하드웨어 감지·모델 카탈로그·로컬 runtime의 설치 정보를 입력으로 모으는 경계입니다. 실측 연결 단계는 이미 확보된 측정 인덱스를 읽으며, 이 추천 경로 자체에서 새 추론 벤치마크를 실행한다는 뜻은 아닙니다. 보정 후에도 기본 정렬은 기존 `score`를 사용한다는 점을 함께 표시했습니다. TUI·Web API·다운로드의 별도 제어 흐름은 이 그림에서 생략했습니다.
 
 ## 작동 원리: recommend의 입력부터 출력까지
 
