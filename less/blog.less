@@ -179,6 +179,20 @@ samp {
     margin-top: 44px;
     margin-bottom: 30px;
   }
+  // A markdown `---` directly above an h2 renders <hr> + <h2>; the h2's
+  // ::before divider would draw a second line. Let the <hr> be the divider.
+  hr + h2 {
+    margin-top: 30px; // same gap as h2::before's margin-bottom
+    &::before {
+      display: none;
+    }
+  }
+  // Tag list at the end of the post body.
+  .post-tags-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
   h4 {
     font-size: 22px;
     font-weight: 600;
@@ -883,6 +897,46 @@ img::-moz-selection {
     @media only screen and (min-width: 768px) {
       margin-right: 5px;
     }
+  }
+}
+
+// Tag pills on light backgrounds: post footer, home/archive/tag-page cards.
+// (Base .tags is white-on-image for the hero header.)
+.tags.post-tags {
+  margin-bottom: 0;
+  a,
+  .tag {
+    color: @gray-dark;
+    border-color: #ddd;
+    background-color: #f3f5f5;
+    &:hover,
+    &:focus,
+    &:active {
+      color: white;
+      border-color: @brand-primary;
+      background-color: @brand-primary;
+      text-decoration: none;
+    }
+  }
+}
+.post-preview .post-tags {
+  margin-bottom: 6px;
+  a,
+  .tag {
+    font-size: 11px;
+    line-height: 22px;
+  }
+}
+// Tag concept page (/tags/<slug>/)
+.tag-page {
+  .tag-description {
+    margin: 20px 0 10px;
+    color: @gray-dark;
+  }
+  .tag-count {
+    color: @brand-gray;
+    font-size: 14px;
+    margin-bottom: 0;
   }
 }
 
