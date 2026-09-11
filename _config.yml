@@ -33,6 +33,7 @@ exclude:
     "README.zh.md",
     "_scripts",
     "processed_posts.csv",
+    "AGENTS.md",
   ]
 
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
