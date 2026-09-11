@@ -829,6 +829,17 @@ samp {
   margin-top: 44px;
   margin-bottom: 30px;
 }
+.post-container hr + h2 {
+  margin-top: 30px;
+}
+.post-container hr + h2::before {
+  display: none;
+}
+.post-container .post-tags-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
 .post-container h4 {
   font-size: 22px;
   font-weight: 600;
@@ -1538,6 +1549,43 @@ img::-moz-selection {
   .tags .tag {
     margin-right: 5px;
   }
+}
+.tags.post-tags {
+  margin-bottom: 0;
+}
+.tags.post-tags a,
+.tags.post-tags .tag {
+  color: #404040;
+  border-color: #ddd;
+  background-color: #f3f5f5;
+}
+.tags.post-tags a:hover,
+.tags.post-tags .tag:hover,
+.tags.post-tags a:focus,
+.tags.post-tags .tag:focus,
+.tags.post-tags a:active,
+.tags.post-tags .tag:active {
+  color: white;
+  border-color: #0085a1;
+  background-color: #0085a1;
+  text-decoration: none;
+}
+.post-preview .post-tags {
+  margin-bottom: 6px;
+}
+.post-preview .post-tags a,
+.post-preview .post-tags .tag {
+  font-size: 11px;
+  line-height: 22px;
+}
+.tag-page .tag-description {
+  margin: 20px 0 10px;
+  color: #404040;
+}
+.tag-page .tag-count {
+  color: #a3a3a3;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 #tag-heading {
   padding: 70px 0 60px;

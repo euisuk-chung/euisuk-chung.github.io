@@ -1,0 +1,12 @@
+{%- comment -%}
+    @param {array} tags - e.g. page.tags / post.tags
+    Tag pills for light backgrounds (post footer, list cards).
+{%- endcomment -%}
+{%- if include.tags.size > 0 -%}
+<div class="tags post-tags">
+  {%- for tag in include.tags -%}
+    {%- capture tag_url %}{% include tag-url.html tag=tag %}{% endcapture -%}
+    <a class="tag" href="{{ tag_url }}" title="{{ tag }}">{{ tag }}</a>
+  {%- endfor -%}
+</div>
+{%- endif -%}

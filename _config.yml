@@ -61,6 +61,18 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "concepts"
+    values:
+      layout: "tag"
+
+# 태그 사전(concept) 컬렉션. 파일 하나가 태그 하나를 정의하고 /tags/<slug>/ 페이지가 된다.
+# 컬렉션 이름을 `tags`로 두면 Jekyll 내장 site.tags(포스트 태그 집계)에 가려져 템플릿에서 읽을 수 없다.
+collections:
+  concepts:
+    output: true
+    permalink: /tags/:slug/
 
 # Markdown settings
 # replace redcarpet to kramdown,

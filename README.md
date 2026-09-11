@@ -47,7 +47,7 @@ npm run dev       # watch + jekyll serve 동시 실행
 
 빌드는 [esbuild](https://esbuild.github.io/)와 [less](https://lesscss.org/)만 사용합니다 (`build.mjs`). 산출물에는 Apache 2.0 준수를 위한 저작권 배너가 자동으로 삽입됩니다.
 
-Jekyll 템플릿은 `_includes/`와 `_layouts/`에 있으며 [Liquid](https://github.com/Shopify/liquid/wiki) 문법을 씁니다. 코드 하이라이팅은 Jekyll 기본 [Rouge](http://rouge.jneen.net/)를 쓰고, 테마는 `less/highlight.less`를 교체해 바꿀 수 있습니다.
+태그 사전은 `_concepts/`에 있으며 파일 하나가 `/tags/<slug>/` 페이지 하나가 됩니다(자세한 규칙은 `_doc/Manual.md`). Jekyll 템플릿은 `_includes/`와 `_layouts/`에 있으며 [Liquid](https://github.com/Shopify/liquid/wiki) 문법을 씁니다. 코드 하이라이팅은 Jekyll 기본 [Rouge](http://rouge.jneen.net/)를 쓰고, 테마는 `less/highlight.less`를 교체해 바꿀 수 있습니다.
 
 ---
 
