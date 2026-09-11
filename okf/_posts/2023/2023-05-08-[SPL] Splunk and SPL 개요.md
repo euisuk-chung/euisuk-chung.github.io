@@ -1,20 +1,33 @@
 ---
+type: "Concept Note"
 title: "[SPL] Splunk & SPL 개요"
+description: "실시간 기계 데이터 수집·검색·분석 솔루션 Splunk와, SQL과 유사한 문법으로 데이터를 필터링·집계·시각화하는 검색 언어 SPL의 개념과 활용 목적을 소개합니다."
 date: "2023-05-08"
+tags:
+  - "Splunk"
+  - "개념정리"
+  - "Tools"
+resource: "https://velog.io/@euisuk-chung/Splunk-SPL-language"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:11:28Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Splunk-SPL-language"
+    title: "[SPL] Splunk & SPL 개요"
+    author: "human:euisuk-chung"
+    last_modified: "2023-05-08"
+status: "stable"
 year: "2023"
 ---
 
-# [SPL] Splunk & SPL 개요
-
-Splunk & SPL(Splunk Processing Language)
-========================================
+# Splunk & SPL(Splunk Processing Language)
 
 `Splunk`는 실시간 데이터 처리 및 분석 솔루션입니다. 이를 통해 기업은 기계 데이터를 수집, 검색, 모니터링, 분석 및 시각화하여 보다 효율적인 의사 결정을 내릴 수 있습니다.
 
 `Splunk`의 검색 언어인 Splunk Processing Language(SPL)은 이러한 데이터를 검색하고 분석하기 위한 강력한 도구입니다.
 
-Splunk란 무엇인가?
--------------
+## Splunk란 무엇인가?
 
 `Splunk`는 대규모 데이터 처리를 위해 설계된 솔루션으로, 실시간으로 데이터를 수집, 분석, 모니터링, 검색, 시각화할 수 있습니다. Splunk는 기업의 IT 인프라, 보안 및 비즈니스 분야에서 사용됩니다.
 
@@ -25,8 +38,7 @@ Splunk란 무엇인가?
 
 Splunk는 다양한 데이터 소스에서 데이터를 수집할 수 있습니다. 이를 통해 IT 인프라, 보안 및 비즈니스 분야에서 필요한 데이터를 수집하고 검색할 수 있습니다. Splunk는 빠르게 데이터를 검색하고 분석할 수 있는 검색 엔진을 제공합니다.
 
-SPL이란 무엇인가?
------------
+## SPL이란 무엇인가?
 
 `Splunk Processing Language(SPL)`은 Splunk에서 제공하는 검색 언어입니다. SPL은 기계 데이터를 검색하고 분석하기 위한 강력한 도구입니다. SPL을 사용하여 기계 데이터를 필터링, 검색, 분석 및 시각화할 수 있습니다.
 
@@ -37,8 +49,7 @@ SPL은 데이터를 필터링하는 데 매우 유용합니다. 필터링은 데
 ![SPL_SPLUNK](https://velog.velcdn.com/images/euisuk-chung/post/04d5803e-1845-4a15-808e-9afe33e99e2d/image.png)  
 출처: Splunk.com
 
-결론
-==
+# 결론
 
 Splunk는 기업의 IT 인프라, 보안 및 비즈니스 분야에서 데이터 수집, 검색 및 분석을 위한 강력한 솔루션입니다. SPL은 이러한 데이터를 검색하고 분석하는 데 매우 유용한 언어입니다. SPL을 사용하면 기계 데이터를 필터링, 검색, 분석 및 시각화하여 보다 효율적인 의사 결정을 내릴 수 있습니다.
 

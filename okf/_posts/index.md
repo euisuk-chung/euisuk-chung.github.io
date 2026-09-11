@@ -259,24 +259,24 @@
 
 ## 2023
 
-* [[컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약](2023/2023-11-29-[컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약.md)
-* [[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약](2023/2023-11-29-[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약.md)
-* [[컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약](2023/2023-11-29-[컨퍼][OpenAI] 2023 DevDay New Products_ A Deep Dive 요약.md)
-* [[TS] 시계열 이상탐지 시각화](2023/2023-11-13-[TS] 시계열 이상탐지 시각화.md)
-* [[TS] 주/월별 초기 날짜 변환 함수](2023/2023-11-07-[TS] 주_월별 초기 날짜 변환 함수.md)
-* [파이썬 마스터하기 : 람다(Lambda) 함수](2023/2023-05-09-파이썬 마스터하기 _ 람다(Lambda) 함수.md)
-* [파이썬 마스터하기 : apply(), map(), applymap() 함수](2023/2023-05-09-파이썬 마스터하기 _ apply(), map(), applymap() 함수.md)
-* [파이썬 마스터하기 : Group By 함수](2023/2023-05-09-파이썬 마스터하기 _ Group By 함수.md)
-* [파이썬 마스터하기 : Pandas](2023/2023-05-08-파이썬 마스터하기 _ Pandas.md)
-* [파이썬 마스터하기 : Numpy](2023/2023-05-08-파이썬 마스터하기 _ Numpy.md)
-* [파이썬 마스터하기 : Jupyter](2023/2023-05-08-파이썬 마스터하기 _ Jupyter.md)
-* [[SPL] stats와 eventstats 차이점 이해하기](2023/2023-05-08-[SPL] stats와 eventstats 차이점 이해하기.md)
-* [[SPL] Splunk & SPL 개요](2023/2023-05-08-[SPL] Splunk and SPL 개요.md)
-* [[Git] 깃(Git)이란?](2023/2023-05-02-[Git] 깃(Git)이란_.md)
-* [[Git] 깃(Git)을 활용한 협업 방법](2023/2023-05-02-[Git] 깃(Git)을 활용한 협업 방법.md)
-* [[Git] 깃(Git)을 활용한 프로젝트 관리](2023/2023-05-02-[Git] 깃(Git)을 활용한 프로젝트 관리.md)
-* [[Git] Git 충돌 시 해결 방법](2023/2023-05-02-[Git] Git 충돌 시 해결 방법.md)
-* [[Git] Git Branch에 대한 이해와 활용](2023/2023-05-02-[Git] Git Branch에 대한 이해와 활용.md)
+* [[컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약](2023/2023-11-29-[컨퍼][OpenAI] 2023 Techniques for Maximizing LLM Performance 요약.md) - OpenAI DevDay 세션을 바탕으로 프롬프트 엔지니어링, RAG, 파인튜닝을 문맥 최적화와 모델 최적화 두 축으로 나누어 언제 무엇을 적용할지 판단하는 LLM 성능 최적화 여정을 정리한다.
+* [[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약](2023/2023-11-29-[컨퍼][OpenAI] 2023 DevDay Opening KeyNote 요약.md) - OpenAI DevDay 오프닝 키노트의 GPT-4 Turbo, 맞춤형 챗봇을 만드는 GPTs와 GPT 스토어, Assistants API, 코드 인터프리터·병렬 함수 호출, 음성 인식·TTS API 발표 내용을 요약한다.
+* [[컨퍼][OpenAI] 2023 DevDay New Products: A Deep Dive 요약](2023/2023-11-29-[컨퍼][OpenAI] 2023 DevDay New Products_ A Deep Dive 요약.md) - OpenAI DevDay 세션에서 발표된 Assistants API의 스레드·Run·Steps 개념, 코드 인터프리터와 Retrieval 도구, JSON 모드와 병렬 함수 호출, 멀티모달·웹소켓 지원 계획을 정리한다.
+* [[TS] 시계열 이상탐지 시각화](2023/2023-11-13-[TS] 시계열 이상탐지 시각화.md) - 다변량 시계열의 각 변수를 GridSpec 서브플롯에 그리고 IForest 등 모델이 탐지한 이상치를 빨간 점으로 표시하는 matplotlib 함수와 viridis 컬러맵, suptitle 겹침 해결법을 정리한다.
+* [[TS] 주/월별 초기 날짜 변환 함수](2023/2023-11-07-[TS] 주_월별 초기 날짜 변환 함수.md) - YYYYMMDD 문자열을 ISO 주 번호 기준 주 시작일과 월 시작일로 바꾸는 파이썬 함수 두 개를 정의하고, 연초 52·53주차 처리와 DataFrame apply 적용 예시를 제시한다.
+* [파이썬 마스터하기 : 람다(Lambda) 함수](2023/2023-05-09-파이썬 마스터하기 _ 람다(Lambda) 함수.md) - 파이썬 람다(익명) 함수의 정의 문법과 map(), filter(), sorted(), reduce()와 함께 사용하는 활용 예제를 통해 함수형 프로그래밍 기법을 소개한다.
+* [파이썬 마스터하기 : apply(), map(), applymap() 함수](2023/2023-05-09-파이썬 마스터하기 _ apply(), map(), applymap() 함수.md) - Pandas에서 혼동하기 쉬운 apply(), applymap(), map(), replace() 메소드의 차이를 열·원소·시리즈 단위 적용 예제와 람다 함수 활용 코드로 비교 설명한다.
+* [파이썬 마스터하기 : Group By 함수](2023/2023-05-09-파이썬 마스터하기 _ Group By 함수.md) - Pandas groupby로 학년·지역별 데이터를 묶어 agg로 평균·최소·최대·개수를 구하고, 막대그래프 시각화와 pivot_table을 이용한 다중 기준 집계까지 예제로 설명한다.
+* [파이썬 마스터하기 : Pandas](2023/2023-05-08-파이썬 마스터하기 _ Pandas.md) - Pandas의 DataFrame과 Series 생성·선택·조작부터 CSV/Excel 불러오기, info·describe로 살펴보기, 조건·isin 필터링, groupby 집계, 정렬, reset_index까지 기본 사용법을 예제로 정리한다.
+* [파이썬 마스터하기 : Numpy](2023/2023-05-08-파이썬 마스터하기 _ Numpy.md) - NumPy ndarray 생성과 shape 확인, 원소별 연산, 인덱싱·슬라이싱, reshape와 전치, concatenate·split, zeros·arange·linspace와 random 모듈의 난수 함수까지 기본 사용법을 예제로 정리합니다.
+* [파이썬 마스터하기 : Jupyter](2023/2023-05-08-파이썬 마스터하기 _ Jupyter.md) - Jupyter Notebook의 pip 설치와 실행 방법, 셀 실행·추가·삭제 등 주요 단축키, 코드 셀과 마크다운 셀, 패키지 설치, 파일 내보내기, 커널 재시작 같은 기본 사용법을 정리합니다.
+* [[SPL] stats와 eventstats 차이점 이해하기](2023/2023-05-08-[SPL] stats와 eventstats 차이점 이해하기.md) - Splunk SPL에서 집계 결과만 남기는 stats와 원본 이벤트를 유지한 채 집계 값을 각 이벤트에 덧붙이는 eventstats의 차이를 count by 예제 쿼리로 비교합니다.
+* [[SPL] Splunk & SPL 개요](2023/2023-05-08-[SPL] Splunk and SPL 개요.md) - 실시간 기계 데이터 수집·검색·분석 솔루션 Splunk와, SQL과 유사한 문법으로 데이터를 필터링·집계·시각화하는 검색 언어 SPL의 개념과 활용 목적을 소개합니다.
+* [[Git] 깃(Git)이란?](2023/2023-05-02-[Git] 깃(Git)이란_.md) - 분산 버전 관리 시스템 Git의 정의와 Repository·Commit·Branch 핵심 개념, 스냅샷으로 변경 이력을 추적하고 로컬과 원격 저장소를 오가며 협업하는 동작 원리를 소개합니다.
+* [[Git] 깃(Git)을 활용한 협업 방법](2023/2023-05-02-[Git] 깃(Git)을 활용한 협업 방법.md) - Pull Request, Merge, Fork를 이용한 Git 협업 흐름과 GitHub·GitLab 원격 저장소 활용법, 충돌·잘못된 머지·이전 버전 복구 등 협업 중 생기는 문제의 대처법을 정리합니다.
+* [[Git] 깃(Git)을 활용한 프로젝트 관리](2023/2023-05-02-[Git] 깃(Git)을 활용한 프로젝트 관리.md) - 저장소 초기화와 clone부터 add·commit, 브랜치, push·pull, log 확인, reset·revert·stash·rebase까지 자주 쓰는 Git 명령어를 설명과 사용 예시로 정리한 명령어 모음입니다.
+* [[Git] Git 충돌 시 해결 방법](2023/2023-05-02-[Git] Git 충돌 시 해결 방법.md) - 브랜치 병합 시 나타나는 HEAD 충돌 마커의 의미를 설명하고, 원하는 변경 사항을 골라 파일을 수정한 뒤 add와 commit으로 충돌을 마무리하는 절차를 정리합니다.
+* [[Git] Git Branch에 대한 이해와 활용](2023/2023-05-02-[Git] Git Branch에 대한 이해와 활용.md) - 브랜치 생성·전환·삭제 명령어와 로컬·원격 브랜치의 관계, Git Flow·GitHub Flow·GitLab Flow 전략, 충돌 해결과 merge·rebase 비교까지 실습 예제로 정리합니다.
 
 ## 2021
 

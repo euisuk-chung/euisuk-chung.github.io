@@ -1,16 +1,27 @@
 ---
+type: "Concept Note"
 title: "[SPL] stats와 eventstats 차이점 이해하기"
+description: "Splunk SPL에서 집계 결과만 남기는 stats와 원본 이벤트를 유지한 채 집계 값을 각 이벤트에 덧붙이는 eventstats의 차이를 count by 예제 쿼리로 비교합니다."
 date: "2023-05-08"
 tags:
-  - "splunk"
+  - "Splunk"
   - "개념정리"
+  - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/SPL-stats와-eventstats-차이점-이해하기"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T19:11:08Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/SPL-stats와-eventstats-차이점-이해하기"
+    title: "[SPL] stats와 eventstats 차이점 이해하기"
+    author: "human:euisuk-chung"
+    last_modified: "2023-05-08"
+status: "stable"
 year: "2023"
 ---
 
-# [SPL] stats와 eventstats 차이점 이해하기
-
-stats와 eventstats 차이점 이해하기
---------------------------
+## stats와 eventstats 차이점 이해하기
 
 Splunk에서 데이터를 분석하다 보면, 다양한 명령어를 사용하여 데이터를 집계하고 요약해야 할 때가 있습니다. 이러한 상황에서 자주 사용되는 두 가지 명령어가 stats와 eventstats입니다. 이 글에서는 이 두 명령어의 차이점과 사용법에 대해 알아봅니다.
 
