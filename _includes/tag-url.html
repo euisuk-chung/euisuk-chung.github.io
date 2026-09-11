@@ -1,0 +1,9 @@
+{%- comment -%}
+    @param {string} tag - a post tag string
+    Prints the URL for a tag: its concept page (/tags/<slug>/) when a
+    okf/_concepts/*.md file whose `title` equals the tag exists, otherwise the
+    archive filter. Use inside capture:
+      {% capture tag_url %}{% include tag-url.html tag=tag %}{% endcapture %}
+{%- endcomment -%}
+{%- assign _concept = site.concepts | where: "title", include.tag | first -%}
+{%- if _concept -%}{{ _concept.url | prepend: site.baseurl }}{%- else -%}{{ site.baseurl }}/archive/?tag={{ include.tag | url_encode }}{%- endif -%}

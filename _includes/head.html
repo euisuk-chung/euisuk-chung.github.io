@@ -23,7 +23,7 @@
     
     {% when 'post' %}
     <meta property="og:type" content="article">
-    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate:200 }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ page.excerpt | strip_html | truncate:200 }}{% endif %}">
     
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date: " %Y-%m-%dT%H:%M:%SZ" }}">
@@ -96,7 +96,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "{{ page.title | escape }}",
-      "description": "{{ page.excerpt | strip_html | truncate: 200 | escape }}",
+      "description": "{% if page.description %}{{ page.description | escape }}{% else %}{{ page.excerpt | strip_html | truncate: 200 | escape }}{% endif %}",
       "url": "{{ site.url }}{{ page.url }}",
       "datePublished": "{{ page.date | date_to_xmlschema }}",
       {% if page.last_modified_at %}

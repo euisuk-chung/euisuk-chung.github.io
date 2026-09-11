@@ -27,4 +27,12 @@ layout: null
     <priority>0.7</priority>
   </url>
   {% endfor %}
+  {% for concept in site.concepts %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ concept.url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
 </urlset>
