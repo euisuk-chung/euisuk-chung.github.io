@@ -1,16 +1,24 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 5] ChatGPT x Apple Intelligence"
+description: "Siri 연동, 문서 작성 도구, iPhone 16 카메라 비주얼 인텔리전스, macOS 통합 등 ChatGPT와 Apple Intelligence 결합 기능과 iOS·Mac에서의 활성화 절차를 정리한다."
 date: "2024-12-12"
 tags:
+  - "ChatGPT"
   - "OpenAI"
-  - "chatGPT"
+resource: "https://velog.io/@euisuk-chung/Day-5-ChatGPT-x-Apple-Intelligence"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:36:07+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-5-ChatGPT-x-Apple-Intelligence"
+    title: "[Day 5] ChatGPT x Apple Intelligence"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-12"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 5] ChatGPT x Apple Intelligence
-
-
-
 
 **12 Days of OpenAI** 시리즈의 다섯 번째 날에 오신 것을 환영합니다! 오늘의 주인공은 **ChatGPT와 Apple Intelligence**의 통합입니다.
 
@@ -18,10 +26,7 @@ year: "2024"
 
 Apple 디바이스에서 ChatGPT를 더욱 간편하게 사용할 수 있도록 한 혁신적인 업데이트로, iOS와 MacOS에 ChatGPT를 통합하는 새로운 기능을 공개했습니다.
 
----
-
-**ChatGPT x Apple Intelligence란?**
-----------------------------------
+## **ChatGPT x Apple Intelligence란?**
 
 이번 업데이트는 Apple 디바이스 사용자들이 ChatGPT를 **더욱 원활하고 간편하게** 사용할 수 있도록 설계되었습니다.
 
@@ -32,10 +37,7 @@ Apple 디바이스에서 ChatGPT를 더욱 간편하게 사용할 수 있도록 
 3. **카메라 제어 및 비주얼 인텔리전스**: iPhone 16의 카메라를 통해 시각적 정보와 관련된 분석 및 학습이 가능합니다.
 4. **MacOS에서의 생산성 향상**: PDF 요약, 문서 분석, 시각적 도표 생성 등 다양한 작업을 지원합니다.
 
----
-
-**활용 사례**
----------
+## **활용 사례**
 
 ### **1. Siri와의 통합**
 
@@ -104,10 +106,7 @@ MacOS에서도 ChatGPT를 더 쉽게 사용할 수 있습니다.
   
   ![](https://velog.velcdn.com/images/euisuk-chung/post/df34bb5e-bbec-40c0-a37f-69c2514bad43/image.png)
 
----
-
-**사용 방법**
----------
+## **사용 방법**
 
 1. **Apple Intelligence 활성화**
    
@@ -158,10 +157,7 @@ MacOS에서도 ChatGPT를 더 쉽게 사용할 수 있습니다.
      
      ![](https://velog.velcdn.com/images/euisuk-chung/post/bc9968d9-4f12-4c07-924e-156f256d0bc0/image.png)
 
----
-
-**맺음말**
--------
+## **맺음말**
 
 이번 ChatGPT와 Apple Intelligence의 통합은 AI와 사용자 간의 상호작용을 새로운 수준으로 끌어올렸습니다. Apple 디바이스의 강력한 생태계와 ChatGPT의 AI 기술이 결합되어 사용자들에게 더욱 직관적이고 창의적인 작업 환경을 제공합니다.
 

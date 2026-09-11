@@ -1,16 +1,24 @@
-﻿---
+---
+type: "Guide"
 title: "[꿀팁] Cursor AI - AI 기반 코드 편집기"
+description: "VS Code 기반 AI 코드 편집기 Cursor AI의 Tab 자동완성, Ctrl+K 편집, 코드베이스 챗, @ 참조 등 핵심 기능과 단축키, 요금제를 정리하고 GitHub Copilot·Replit·Devin과 비교한다."
 date: "2024-12-14"
 tags:
-  - "tools"
+  - "Tools"
   - "꿀팁"
+resource: "https://velog.io/@euisuk-chung/Cursor-AI-AI기반-코드-편집기"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:35:14+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Cursor-AI-AI기반-코드-편집기"
+    title: "[꿀팁] Cursor AI - AI 기반 코드 편집기"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-14"
+status: "stable"
 year: "2024"
 ---
-
-# [꿀팁] Cursor AI - AI 기반 코드 편집기
-
-
-
 
 **Cursor AI**는 **Visual Studio Code(VS Code)**를 기반으로 만들어진 AI 코드 편집기로, 코딩을 더 쉽고 빠르게 할 수 있도록 도와주는 도구입니다.
 
@@ -23,8 +31,6 @@ AI 기술을 활용해 코드 작성부터 수정까지 다양한 작업을 도�
 > 아래 이미지들은 Cursor AI 공식 [홈페이지 이미지](https://www.cursor.com/)를 활용했습니다.  
 > 
 > *The images used for this blog-post are from CursorAI Website.*
-
----
 
 ### 주요 특징
 
@@ -47,8 +53,6 @@ AI 기술을 활용해 코드 작성부터 수정까지 다양한 작업을 도�
 * **코드베이스 인식 챗(Chat)**: AI와 대화하며 현재 파일이나 특정 코드 블록에 대한 질문을 할 수 있습니다. 예를 들어, "여기 버그가 있나요?"와 같은 질문이 가능합니다.
 * **인스턴트 적용(Instant Apply)**: 챗에서 제공된 코드 제안을 코드베이스에 바로 적용할 수 있습니다.
 * **코드 참조(Reference your Code)**: `@` 기호를 사용하여 파일이나 코드 심볼을 AI에게 참조시켜 더 정확한 답변을 얻을 수 있습니다.
-
----
 
 ### 주요 기능
 
@@ -146,8 +150,6 @@ Cursor는 다음에 이동할 커서 위치를 예측하여 코드 탐색을 원
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/e7cfdae0-4bdb-4ff9-a01c-50edcd49d302/image.png)
 
----
-
 ### 주요 단축키
 
 Cursor AI의 주요 단축키는 다음과 같습니다. 이 단축키들을 익히면 Cursor의 대부분 기능을 효과적으로 사용할 수 있습니다.
@@ -179,8 +181,6 @@ Cursor AI의 주요 단축키는 다음과 같습니다. 이 단축키들을 익
 
 이 단축키들을 활용하면 Cursor AI에서 더 생산적이고 효율적인 코딩 경험을 누릴 수 있습니다.
 
----
-
 ### Cursor AI 설치 및 사용법
 
 #### 설치 방법
@@ -195,8 +195,6 @@ Cursor AI의 주요 단축키는 다음과 같습니다. 이 단축키들을 익
 * **Pro 플랜**: 월 $20로 무제한 사용 가능하며, 추가적인 생성량을 구매할 수 있습니다.
 * **Business 플랜**: 월 $40로 기업용 기능과 관리자 모드를 제공합니다.
 
----
-
 ### Cursor AI를 잘 활용하는 방법
 
 #### 1. 좋은 질문하기
@@ -210,8 +208,6 @@ Cursor AI의 주요 단축키는 다음과 같습니다. 이 단축키들을 익
 #### 3. 협업 도구로 사용
 
 * 팀 프로젝트에서도 Cursor AI를 사용하면 코드 통합과 수정 작업이 훨씬 간편해집니다. AI가 코드 리뷰를 도와주거나, 팀원들이 작성한 코드를 기반으로 새로운 코드를 작성할 수도 있습니다.
-
----
 
 ### 사용자 경험과 프로젝트 예시
 
@@ -237,8 +233,6 @@ Cursor AI는 쉽고 직관적인 인터페이스 덕분에 코딩을 처음 시�
 * **실시간 오류 감지 및 수정**: 코드를 작성하는 동안 발생할 수 있는 오류를 실시간으로 감지하고 수정 제안을 제공합니다.
   
   + 예를 들어, 변수명을 잘못 입력했을 때, AI가 이를 감지하고 올바른 변수명으로 수정하라는 제안을 합니다.
-
----
 
 ### 결론
 

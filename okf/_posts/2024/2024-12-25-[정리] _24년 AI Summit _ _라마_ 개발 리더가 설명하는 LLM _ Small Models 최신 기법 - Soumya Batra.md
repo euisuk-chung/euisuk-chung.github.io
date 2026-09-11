@@ -1,13 +1,26 @@
 ---
+type: "Conference Recap"
 title: "[정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra"
+description: "Meta의 Soumya Batra 세션을 정리하며 SLM의 정의와 수요 배경, 지식 증류·프루닝·양자화 기반 LLM 압축, Chinchilla 스케일링 법칙을 넘어선 학습 전략과 LLM의 비효율성 논의를 다룬다."
 date: "2024-12-25"
 tags:
-  - "AIS"
+  - "SK AI Summit"
   - "Conference"
+  - "Distillation"
+  - "NLP"
+resource: "https://velog.io/@euisuk-chung/정리-24년-AI-Summit-라마-개발-리더가-설명하는-LLM-Small-Models-최신-기법-Soumya-Batra"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:43:13Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/정리-24년-AI-Summit-라마-개발-리더가-설명하는-LLM-Small-Models-최신-기법-Soumya-Batra"
+    title: "[정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-25"
+status: "stable"
 year: "2024"
 ---
-
-# [정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra
 
 오전 미팅 일정을 마친 후, Day2 오후 세션에 참석하여 매우 유익한 시간을 보냈습니다. 모든 세션에 참가하지 못한 점은 아쉽지만, 참석한 세션들에서 얻은 내용과 인사이트를 중심으로 이번 시리즈를 구성해 보았습니다.
 
@@ -18,10 +31,7 @@ year: "2024"
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/aaea2950-426b-4d80-8d5c-328bd78ec8a9/image.png)
 
----
-
-서론
---
+## 서론
 
 최근 몇 년 동안 **대규모 언어 모델(LLM)**과 **소규모 언어 모델(SLM)**의 발전은 인공지능 분야에서 중요한 전환점을 맞이했습니다.
 
@@ -38,10 +48,7 @@ year: "2024"
 
 이는 특히 **데이터 프라이버시**🛡️와 **에너지 소비 절감**♻️이라는 현대의 주요 요구 사항을 충족시키는 데 있어 중요한 발전입니다.
 
----
-
-LLM과 SLM의 정의
-------------
+## LLM과 SLM의 정의
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/62ebdd7b-ea04-45f8-a90a-12f66b2389f4/image.png)
 
@@ -114,10 +121,7 @@ SLM의 증가는 대규모 데이터와 고성능 하드웨어가 필요했던 �
 > (정리) **LLM과 SLM의 차이 테이블**  
 > ![](https://velog.velcdn.com/images/euisuk-chung/post/1dd92d54-1aec-4f66-b934-ba1c74b1977c/image.png)
 
----
-
-SLM이 주목받는 이유
-------------
+## SLM이 주목받는 이유
 
 1. **SLM의 수요가 증가하는 주요 이유**  
    ![](https://velog.velcdn.com/images/euisuk-chung/post/bd2aad28-9052-4e4c-ae66-9fe5a8af597e/image.png)
@@ -164,10 +168,7 @@ SLM이 주목받는 이유
    * SLM은 이러한 문제를 해결할 수 있는 현실적인 대안입니다.
      + 에너지 소비 절감 외에도, SLM은 환경 영향을 최소화하는 방향으로 연구되고 있습니다.
 
----
-
-SLM 만드는 방법
-----------
+## SLM 만드는 방법
 
 본 발표에서 SLM을 만드는 방법에 대해서 소개합니다. **2가지 접근법**이 있다고 이야기하는데요.
 
@@ -249,8 +250,6 @@ Nvidia의 논문 "LLM Pruning and Distillation in Practice: The Minitron Approac
 
   + Llama 3.3 70B 모델은 텍스트 처리에 특화된 instruction-tuned 모델로, 이를 통해 같은 크기의 Llama 3.1 70B 모델보다 성능이 우수함을 보여줍니다.
   + 텍스트 전용 작업(text-only applications)에 한정할 경우, 더 큰 모델인 Llama 3.2 90B 또는 Llama 3.1 405B에 근접하거나 유사한 성능을 발휘할 수 있음이 강조되고 있습니다.
-
----
 
 ### 2. **처음부터 SLM 구축하는 팁**
 
@@ -336,8 +335,6 @@ Nvidia의 논문 "LLM Pruning and Distillation in Practice: The Minitron Approac
 
 > (결론) 현재의 LLM은 지식을 저장하는 방식이나 계산 효율성 측면에서 비효율적이라는 것을 의미합니다.
 
----
-
 ### LLM의 문제점
 
 발표자는 현재의 LLM(Large Language Models)이 **"무차별적인 brute force 방식"**으로 작동하고 있다는 점을 강조합니다
@@ -368,8 +365,6 @@ Nvidia의 논문 "LLM Pruning and Distillation in Practice: The Minitron Approac
      + 현재 사용되는 Transformer 아키텍처가 최적의 학습 방법이 아닐 가능성을 제기합니다.
      + **SSM(State Space Models)**와 **RNN 기반 모델**과 같은 더 효율적인 구조가 연구되고 있으며, 이는 LLM의 비효율성을 해결할 가능성이 있습니다.
      + 또한, 행렬 곱셈(matrix multiplication)을 최적화하는 아키텍처가 성능 향상을 제공할 수 있습니다.
-
----
 
 ### Research Frontiers
 
@@ -407,10 +402,7 @@ Nvidia의 논문 "LLM Pruning and Distillation in Practice: The Minitron Approac
      "The more we understand what’s going under the hood, the more we can  
      learn how best to train models" *("모델 내부에서 어떤 일이 일어나는지 이해할수록, 모델을 최적으로 훈련시키는 방법을 더 잘 배울 수 있다.")*
 
----
-
-결론
---
+## 결론
 
 SLM(Small Language Model)은 효율성, 실용성, 지속 가능성이라는 현대 AI의 핵심 요구를 충족하며, 특정 도메인에 특화된 해결책으로 자리잡고 있습니다. 에너지 소비와 탄소 배출의 감소, 더 낮은 계산 비용으로도 높은 성능을 발휘할 수 있는 가능성은 기업과 연구자들에게 실질적인 혜택을 제공합니다.
 

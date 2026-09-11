@@ -1,16 +1,25 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 7] Introducing Projects"
+description: "ChatGPT Projects의 대화 정리, 파일 업로드, 맞춤 지시사항, 캔버스 연동 기능을 비밀 산타·홈 관리·웹사이트 관리 사례로 살펴보고 Custom GPTs 및 Claude Projects와 차이를 비교한다."
 date: "2024-12-14"
 tags:
+  - "ChatGPT"
   - "OpenAI"
-  - "chatGPT"
+  - "Claude"
+resource: "https://velog.io/@euisuk-chung/Day-7-Introducing-Projects"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:35:29+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-7-Introducing-Projects"
+    title: "[Day 7] Introducing Projects"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-14"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 7] Introducing Projects
-
-
-
 
 안녕하세요! **12 Days of OpenAI: Day 7에 오신 것을 환영합니다!** 이번주 마지막 OpenAI 관련 포스팅이겠군요! 💌
 
@@ -28,10 +37,7 @@ year: "2024"
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/e9f0e783-90a2-4b4d-8c05-1426de5c2389/image.png)
 > * 그리고 글의 마지막에 한번 각각에 대해서 비교도 해보겠습니다! 🔎
 
----
-
-**Projects란?**
---------------
+## **Projects란?**
 
 **Projects**는 ChatGPT에서 작업을 체계적으로 정리하고 관리할 수 있는 새로운 기능입니다.
 
@@ -56,10 +62,7 @@ year: "2024"
 3. **맞춤형 지시사항 설정**: 특정 프로젝트에 적합한 지시사항을 설정하여 ChatGPT의 답변을 더욱 세밀하게 조정할 수 있습니다. 이를 통해 작업의 정확성과 품질을 높일 수 있습니다.
 4. **캔버스와 통합**: 캔버스 기능을 활용하여 문서를 작성하거나, 이메일 초안을 생성하며, 프로젝트의 전반적인 생산성을 극대화할 수 있습니다.
 
----
-
-**Projects 사용 방법**
-------------------
+## **Projects 사용 방법**
 
 ### 1. **새 프로젝트 생성**
 
@@ -80,10 +83,7 @@ year: "2024"
 * 프로젝트 내에서 생성된 데이터를 바탕으로 질문하거나, 필요한 작업을 수행할 수 있습니다. 예를 들어, 업로드된 파일 내용을 테이블로 정리하거나 특정 데이터를 추출하는 작업도 가능합니다.
 * 실시간 상호작용은 복잡한 작업을 즉각적으로 해결하는 데 유용합니다.
 
----
-
-**실제 활용 사례**
-------------
+## **실제 활용 사례**
 
 ### 1. **비밀 산타 이벤트 프로젝트**
 
@@ -161,10 +161,7 @@ year: "2024"
 
 > 이러한 기능은 어떻게 보면 **CursorAI**의 기능과 유사하다고도 볼 수 있겠군요!
 
----
-
-**Projects의 장점**
-----------------
+## **Projects의 장점**
 
 1. **효율적인 작업 관리**: 대화, 파일, 지시사항을 통합 관리하여 생산성을 향상시킵니다. 이를 통해 프로젝트의 진행 상황을 한눈에 파악할 수 있습니다.
 2. **맞춤형 상호작용**: 프로젝트에 적합한 지시사항을 설정하여 ChatGPT의 답변을 최적화할 수 있습니다. 이는 정확성과 신뢰성을 높이는 데 도움을 줍니다.
@@ -172,16 +169,11 @@ year: "2024"
 4. **Plus 및 Pro 사용자 우선 제공**: 오늘부터 Plus 및 Pro 사용자에게 순차적으로 제공되며, 내년 초에는 Enterprise 및 EDU 사용자에게도 제공될 예정입니다. 이로 인해 사용자층의 접근성이 확대됩니다.
 5. **확장 가능성**: 새로운 기능과의 통합을 통해 지속적으로 발전할 가능성이 있습니다. 이는 ChatGPT의 활용도를 더욱 높이는 결과를 가져옵니다.
 
----
-
-참고(프로그램 비교)
------------
+## 참고(프로그램 비교)
 
 **ChatGPT Projects와 Custom GPTs, 그리고 Claude Projects 간의 차이를 비교하면 다음과 같은 특징이 두드러집니다.**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/3aa6da9e-4e70-46df-9e55-49037b529d8a/image.png)
-
----
 
 ### **ChatGPT Projects**
 
@@ -196,8 +188,6 @@ year: "2024"
   + 대화와 파일을 통합 관리하여 복잡한 작업을 단순화.
   + 파일 기반의 데이터 활용이 강점.
 * **제공 대상:** Plus 및 Pro 사용자에게 우선 제공되며, Enterprise 및 EDU 사용자에게도 확대 예정.
-
----
 
 ### **Custom GPTs**
 
@@ -214,8 +204,6 @@ year: "2024"
   + 특정 도메인 또는 작업에 최적화된 고급 활용 사례 제공.
 * **제공 대상:** 개인 사용자 및 커뮤니티를 대상으로 설계.
 
----
-
 ### **Claude Projects (Anthropic)**
 
 * **목적:** 프로젝트별로 대화와 파일을 체계적으로 관리하며 팀원과의 협업을 지원.
@@ -230,8 +218,6 @@ year: "2024"
   + 지식 베이스를 활용한 높은 응답 정확성.
 * **제공 대상:** Claude Pro 및 Claude for Work 사용자.
 
----
-
 ### **차이점 요약**
 
 | 기능 | ChatGPT Projects | Custom GPTs | Claude Projects |
@@ -242,10 +228,7 @@ year: "2024"
 | **강점** | 캔버스 및 파일 활용 | 맞춤화된 고급 기능 | 팀 협업 및 정확성 강화 |
 | **확장성** | 작업 기반 확장성 | GPT 설계의 무한한 가능성 | 협업 도구로의 발전 가능 |
 
----
-
-**맺음말**
--------
+## **맺음말**
 
 **Projects**는 ChatGPT를 단순한 대화 도구에서 작업 관리 및 생산성 도구로 확장시키는 혁신적인 기능입니다. 이를 통해 사용자는 더 체계적이고 창의적인 작업을 수행할 수 있습니다. 앞으로도 OpenAI는 사용자의 요구에 부응하는 기능을 지속적으로 개발할 예정입니다.
 

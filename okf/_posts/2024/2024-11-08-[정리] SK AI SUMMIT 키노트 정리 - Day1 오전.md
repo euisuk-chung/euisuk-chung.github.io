@@ -1,16 +1,25 @@
-﻿---
+---
+type: "Conference Recap"
 title: "[정리] SK AI SUMMIT 키노트 정리 - Day1 오전"
+description: "최태원 회장 키노트, Greg Brockman 대담, SKT AI 인프라 슈퍼하이웨이, SK하이닉스 AI 메모리 로드맵을 정리하고 팹리스·파운드리·HBM 등 반도체 산업 구조와 8대 공정을 보충 설명한다."
 date: "2024-11-08"
 tags:
+  - "SK AI Summit"
   - "Conference"
-  - "Conference | SK-AI"
+  - "IT지식"
+resource: "https://velog.io/@euisuk-chung/SKAISUMMIT2024DAY1-오전"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:39:41+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/SKAISUMMIT2024DAY1-오전"
+    title: "[정리] SK AI SUMMIT 키노트 정리 - Day1 오전"
+    author: "human:euisuk-chung"
+    last_modified: "2024-11-08"
+status: "stable"
 year: "2024"
 ---
-
-# [정리] SK AI SUMMIT 키노트 정리 - Day1 오전
-
-
-
 
 '`SK AI 서밋 2024`'는 2024년 11월 4일부터 5일까지 서울 코엑스에서 개최된 대규모 인공지능 행사로, 국내외 AI 석학과 기업가들이 참여하여 AI 시대의 공존 방안을 논의하고 생태계 강화 방안을 모색했습니다.
 
@@ -42,8 +51,7 @@ year: "2024"
 
 본 포스트는 **Day 1 오전 세션 발표 주제 정리**를 목적으로 작성되었습니다.
 
-**Day 1 오전 발표 주제 정리**
-=====================
+# **Day 1 오전 발표 주제 정리**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/28221190-92bb-43f4-96e8-9780ad76995a/image.png)
 
@@ -67,8 +75,7 @@ year: "2024"
 * **발표자:** 곽노정 (SK하이닉스 CEO)
 * **내용:** 차세대 메모리 기술을 통해 일상 생활에서의 AI 활용 가능성 탐구.
 
-**1. 협력으로 만들어가는 AI 생태계: AI Tomorrow, AI Together**
---------------------------------------------------
+## **1. 협력으로 만들어가는 AI 생태계: AI Tomorrow, AI Together**
 
 > * **발표자:** 최태원 (SK그룹 회장)
 > * **내용:** AI 생태계를 강화하고 발전시키기 위한 글로벌 협력 방안 제시.
@@ -105,8 +112,6 @@ year: "2024"
   
   + NVIDIA의 젠슨 황과 협력하여 AI 가속기를 개발.
   + HBM(High Bandwidth Memory)을 기반으로 한 협업을 통해 AI 데이터 센터의 효율성을 극대화.
-
----
 
 #### **3. AI 생태계의 주요 과제 (Bottlenecks)**
 
@@ -316,8 +321,6 @@ year: "2024"
      ![](https://velog.velcdn.com/images/euisuk-chung/post/fc09b1d7-2d14-48da-a897-b24845ed10a3/image.png)
    * SK는 데이터 프라이버시를 보장하는 AI 기술 개발에 집중하며, 데이터 확보와 활용 방안을 연구.
 
----
-
 #### **4. SK의 전략과 비전**
 
 * SK는 에너지, 데이터 센터 운영, AI 서비스 개발 등 AI 생태계 전반을 아우르는 솔루션 제공자로서의 입지를 강화하고자 함.
@@ -332,8 +335,7 @@ year: "2024"
 
 **(후기)** 전반적으로 SK에서 어떤식으로 AI를 바라보고 있으며, 요즘 가장 핫하다고 해도 과언이 아닌 NVIDIA에 단순히 편승하는 것이 아닌 다양한 방면에서 연구하고 있다는 인상을 주었습니다.
 
-**2. 대담: AI의 미래**
------------------
+## **2. 대담: AI의 미래**
 
 > * **참여자:** Greg Brockman (OpenAI 회장 겸 사장, 공동창립자), 이준표 (SBVA 대표, Moderator)
 > * **내용:** AI의 미래 기술과 발전 방향에 대한 대담 형식의 논의.
@@ -482,10 +484,7 @@ year: "2024"
   + Greg는 AI가 더 많은 사람들에게 행복한 삶을 제공하고, 지속 가능한 지구를 만드는 데 기여할 것으로 기대.
   + 이는 기술적 혁신과 인류의 협력을 통해 가능하다고 강조.
 
----
-
-**3. Embracing the Future: SK's Approach to Next Era of AI**
-------------------------------------------------------------
+## **3. Embracing the Future: SK's Approach to Next Era of AI**
 
 > * **발표자:** 유영상 (SK텔레콤 CEO)
 > * **내용:** SK텔레콤의 AI 전략과 향후 계획 소개.
@@ -546,10 +545,7 @@ SKT 유영상 CEO는 대한민국 ICT 역사와 성공 사례를 AI 시대에 �
        
        ![](https://velog.velcdn.com/images/euisuk-chung/post/0e1bc79e-fc80-4865-ab6e-3c37652606c5/image.png)
 
----
-
-**4. 차세대 AI Memory의 새로운 여정, 하드웨어를 넘어 일상으로**
--------------------------------------------
+## **4. 차세대 AI Memory의 새로운 여정, 하드웨어를 넘어 일상으로**
 
 > * **발표자:** 곽노정 (SK하이닉스 CEO)
 > * **내용:** 차세대 메모리 기술을 통해 일상 생활에서의 AI 활용 가능성 탐구.

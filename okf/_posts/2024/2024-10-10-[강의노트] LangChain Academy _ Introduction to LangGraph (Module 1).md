@@ -1,13 +1,26 @@
 ---
+type: "Lecture Note"
 title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 1)"
+description: "StateGraph의 노드·엣지·조건부 엣지, MessagesState와 add_messages 리듀서, 도구 바인딩, Router와 ReAct 에이전트, MemorySaver 체크포인터, LangGraph Cloud 배포 구성을 정리한다."
 date: "2024-10-10"
 tags:
-  - "langgraph"
+  - "LangGraph"
   - "강의노트"
+  - "AI Agent"
+  - "LangChain"
+resource: "https://velog.io/@euisuk-chung/강의-LangChain-Academy-Introduction-to-LangGraph"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:44:45Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/강의-LangChain-Academy-Introduction-to-LangGraph"
+    title: "[강의노트] LangChain Academy : Introduction to LangGraph (Module 1)"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-10"
+status: "stable"
 year: "2024"
 ---
-
-# [강의노트] LangChain Academy : Introduction to LangGraph (Module 1)
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/69a7c459-42a4-403a-a983-7e3f6b705d11/image.png)
 
@@ -34,11 +47,9 @@ year: "2024"
 
   
 
-0. Introduction
-===============
+# 0. Introduction
 
-랭체인(LangChain)
---------------
+## 랭체인(LangChain)
 
 `랭체인`은 대규모 언어 모델(LLM)을 활용한 애플리케이션 개발을 위한 포괄적인 프레임워크입니다. 이 프레임워크는 LLM과 애플리케이션의 통합을 간소화하기 위해 설계되었으며, 개발자들이 LLM 기반 시스템을 더 쉽고 효율적으로 구축할 수 있도록 돕습니다.
 
@@ -57,8 +68,7 @@ year: "2024"
 
 랭체인은 이러한 구성 요소들을 통합하여 개발자가 LLM 기반 애플리케이션을 더 쉽게 구축할 수 있도록 돕습니다. 특히, 프롬프트 엔지니어링, API 호출, 결과 해석 등 LLM과의 상호작용에 필요한 다양한 작업을 추상화하여 제공합니다.
 
-랭그래프(LangGraph)
----------------
+## 랭그래프(LangGraph)
 
 `랭그래프`는 복잡한 에이전트 시스템을 위한 오케스트레이션 프레임워크입니다. 랭체인보다 더 낮은 수준의 제어를 제공하며, 기업의 고유한 요구사항에 맞는 복잡한 작업을 처리할 수 있는 유연성을 제공합니다.
 
@@ -74,8 +84,7 @@ year: "2024"
 
 랭그래프는 특히 복잡한 에이전트 시스템을 구축하는 데 적합합니다. 예를 들어, 여러 단계의 의사 결정이 필요한 작업, 다양한 외부 도구와의 상호작용이 필요한 시스템, 또는 동적으로 변화하는 환경에 적응해야 하는 에이전트 등을 구현하는 데 유용합니다.
 
-1. Course Overview
-==================
+# 1. Course Overview
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/b3a3e9f6-bdbb-49dc-861e-a36924bcefa5/image.png)
 
@@ -156,8 +165,6 @@ Langraph를 도입한 이유는 단순한 LLM(Language Model) 자체만으로는
 * **Memory**: 메모리 기능을 활용하여 상태를 기억하는 에이전트.
 * **Human-In-The-Loop**: 사람이 개입하여 에이전트를 감독하는 기능.
 * **Customization**: 맞춤형 에이전트를 구축하는 방법.
-
----
 
 ### **Lesson 2: Simple Graph**
 
@@ -270,8 +277,6 @@ display(Image(graph.get_graph().draw_mermaid_png()))
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/fc851844-4d90-490e-8e74-ce0ece91861b/image.png)
 
----
-
 ### **Lesson 3: LangGraph Studio**
 
 **Langraph Studio**는 시각적으로 그래프를 구축하고 디버깅할 수 있는 통합 개발 환경(IDE)입니다. Studio를 사용하면 에이전트를 시각적으로 디버깅하고, 각 노드에서 상태가 어떻게 변화하는지 쉽게 추적할 수 있습니다.
@@ -286,8 +291,6 @@ Studio에서는 상태를 직접 입력하고 각 노드의 실행 결과를 확
 Studio는 Docker를 백그라운드에서 실행하여 쉽게 로컬 환경에서 실행할 수 있으며, Studio에서 작성한 그래프는 Langraph API와 연결되어 클라우드에서도 실행할 수 있습니다.
 
 *저는 맥북 유저가 아니라 아직 사용이 불가하기 때문에 LangGraph Studio 부분들은 제외하고 진행하겠습니다.*
-
----
 
 ### **Lesson 4: Chain**
 
@@ -544,8 +547,6 @@ def tool_calling_llm(state: MessagesState):
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1f65c09f-247b-40fd-bd26-38fda49ce2de/image.png)
 
----
-
 ### **Lesson 5: Router**
 
 `Router`는 L**LM이 자연어 응답 또는 도구 호출 중 하나를 선택하는 구조**입니다.
@@ -657,8 +658,6 @@ def tool_calling_llm(state: MessagesState):
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/53d50228-77ea-48d8-9bf7-b9761bcc271e/image.png)
 
----
-
 ### **Lesson 6: Agent**
 
 이전에 구현한 라우터는 사용자 입력에 따라 도구 호출 여부를 결정했습니다. 조건부 엣지(`add_conditional_edges`)를 사용하여 도구 호출 노드나 종료로 라우팅했습니다.
@@ -729,8 +728,6 @@ for m in messages['messages']:
 아래는 LangSmith 결과인데 이를 보면 실제로도 Assitant가 Tool을 호출해서 실행하고 있는 것을 직접 확인해볼 수도 있습니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/62a70031-da05-451b-b3cd-4485b86e0691/image.png)
-
----
 
 ### **Lesson 7: Agent with Memory**
 
@@ -826,8 +823,6 @@ state1 = graph.get_state({"configurable": {"thread_id": "user1"}})
    ```
 
    ![](https://velog.velcdn.com/images/euisuk-chung/post/62e8b946-22f9-4995-82d5-db12c41ad4e5/image.png)
-
----
 
 ### **Lesson 8: Deployment**
 

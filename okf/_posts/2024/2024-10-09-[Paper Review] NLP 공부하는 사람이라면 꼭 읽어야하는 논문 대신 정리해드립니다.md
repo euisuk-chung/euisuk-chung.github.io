@@ -1,13 +1,25 @@
 ---
+type: "Paper Review"
 title: "[Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다"
+description: "Word2Vec, GloVe, Seq2Seq, 어텐션, Transformer, ELMo, ULMFiT, GPT 시리즈, BERT, T5, LLaMA 1~3, Mistral 등 NLP 필독 논문 17편의 핵심 아이디어와 기여를 요약한다."
 date: "2024-10-09"
 tags:
+  - "Paper Review"
   - "NLP"
-  - "paper-review"
+  - "Transformer"
+resource: "https://velog.io/@euisuk-chung/번역정리-NLP-공부하는-사람이라면-꼭-읽어야하는-논문-대신-정리해드립니다"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:45:21Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/번역정리-NLP-공부하는-사람이라면-꼭-읽어야하는-논문-대신-정리해드립니다"
+    title: "[Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-09"
+status: "stable"
 year: "2024"
 ---
-
-# [Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다
 
 > ✍️ **자연어 처리(NLP)**는 빠르게 발전하고 있는 분야로, 수많은 획기적인 연구 논문들이 매년 발표되고 있습니다. 만약 여러분이 NLP에 처음 발을 들이거나, 연구를 더 깊이 이해하고자 한다면, 다음에 소개할 논문들이 **핵심 개념과 최근 발전 동향**을 파악하는 데 큰 도움이 될 것입니다.
 
@@ -22,8 +34,7 @@ year: "2024"
   + 각 논문 원문 Figures 발췌
 * LLaMa2, LLaMa3은 개인적으로 궁금해서 추가했습니다.
 
-1. Word2Vec: Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013)
-================================================================================================
+# 1. Word2Vec: Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013)
 
 * <https://arxiv.org/abs/1301.3781>
 
@@ -52,8 +63,7 @@ year: "2024"
 
   + 이후 등장한 다양한 발전된 모델의 출발점이 되는 기초적인 연구로서, Word2Vec는 여전히 중요한 의의를 지닙니다.
 
-2. GloVe: Global Vectors for Word Representation (Pennington et al., 2014)
-==========================================================================
+# 2. GloVe: Global Vectors for Word Representation (Pennington et al., 2014)
 
 * <https://www.aclweb.org/anthology/D14-1162/>
 
@@ -84,8 +94,7 @@ year: "2024"
 * **다양한 NLP 과제에 적용**: GloVe는 기계 번역, 텍스트 분류, 정보 검색 등 다양한 자연어 처리 과제에서 기본적인 단어 표현 기법으로 널리 사용되고 있습니다.
 * **연구 및 응용의 기반**: 이 연구는 단어 임베딩 기법의 중요한 발전을 이루었으며, 이후의 많은 연구와 응용에서 단어 표현의 기초로서 활용되고 있습니다.
 
-3. Sequence to Sequence Learning with Neural Networks (Sutskever et al., 2014)
-==============================================================================
+# 3. Sequence to Sequence Learning with Neural Networks (Sutskever et al., 2014)
 
 * <https://proceedings.neurips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf>
 
@@ -115,8 +124,7 @@ year: "2024"
 * **기계 번역에서의 성과**: 이 모델은 특히 기계 번역 작업에서 탁월한 성능을 보였으며, 이후 텍스트 요약, 질의응답 시스템 등 다양한 자연어 처리 작업에 응용되었습니다.
 * **장문 처리 능력**: Seq2Seq 모델은 긴 문장에서도 우수한 성능을 유지하며, 기존의 LSTM 모델이 가졌던 문제를 해결하는 데 기여했습니다.
 
-4. Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau et al., 2015)
-================================================================================================
+# 4. Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau et al., 2015)
 
 * <https://arxiv.org/abs/1409.0473>
 
@@ -181,8 +189,7 @@ year: "2024"
 
   + 특히, 기계 번역뿐 아니라 다양한 자연어 처리 문제에 응용되어 큰 영향을 미쳤습니다.
 
-5. Attention is All You Need (Vaswani et al., 2017)
-===================================================
+# 5. Attention is All You Need (Vaswani et al., 2017)
 
 * <https://arxiv.org/abs/1706.03762>
 
@@ -241,8 +248,7 @@ year: "2024"
   + 이 모델의 병렬화 능력은 이후 BERT, GPT 등의 모델의 기초가 되었습니다.
 * **NLP 모델의 변화**: 트랜스포머는 NLP 모델의 새로운 표준으로 자리 잡았으며, 다양한 자연어 처리 과제에서 강력한 성능을 보여주는 중요한 기초 기술이 되었습니다.
 
-6. ELMo: Deep Contextualized Word Representations (Peters et al., 2018)
-=======================================================================
+# 6. ELMo: Deep Contextualized Word Representations (Peters et al., 2018)
 
 * <https://arxiv.org/abs/1802.05365>
 
@@ -274,8 +280,7 @@ year: "2024"
 * **다양한 NLP 과제에서의 응용**: ELMo는 기존의 많은 자연어 처리 모델에 적용되어 성능을 크게 향상시켰으며, 이후 등장한 BERT나 GPT 모델의 기초가 되었습니다.
 * **언어 모델의 중요성**: 이 연구는 대규모 텍스트 코퍼스에서 사전 학습된 언어 모델의 중요성을 강조했습니다.
 
-7. Universal Language Model Fine-tuning (ULMFiT) (Howard and Ruder, 2018)
-=========================================================================
+# 7. Universal Language Model Fine-tuning (ULMFiT) (Howard and Ruder, 2018)
 
 * <https://arxiv.org/pdf/1801.06146>
 
@@ -303,8 +308,7 @@ year: "2024"
 * **적은 데이터로도 우수한 성과**: 이 연구는 제한된 데이터로도 우수한 성과를 낼 수 있는 방법을 제안하였습니다.
 * **NLP 작업에서의 효율성 증대**: ULMFiT는 텍스트 분류, 감정 분석 등 다양한 작업에서 전이 학습의 가능성 입증 및 모델 학습 효율성을 크게 향상시켰습니다.
 
-8. GPT-1: Improving Language Understanding by Generative Pre-Training (Radford et al., 2018)
-============================================================================================
+# 8. GPT-1: Improving Language Understanding by Generative Pre-Training (Radford et al., 2018)
 
 * <https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf>
 
@@ -335,8 +339,7 @@ year: "2024"
 * **모델 아키텍처의 단순화**: GPT-1은 각 작업에 맞춘 복잡한 모델 아키텍처 없이, 하나의 일반적인 모델을 통해 다양한 NLP 작업에서 강력한 성능을 보였습니다.
 * **NLP의 새로운 패러다임 제시**: 이 논문은 BERT, GPT-2, GPT-3 등 이후 등장한 언어 모델의 기초가 되었으며, NLP에서 사전 학습 모델의 중요성을 대중화시켰습니다.
 
-9. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2019)
-=========================================================================================================
+# 9. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2019)
 
 * <https://arxiv.org/abs/1810.04805>
 
@@ -387,8 +390,7 @@ year: "2024"
 * **다양한 NLP 작업에서의 적용**: BERT는 질문 응답, 문장 유추, 감정 분석 등 다양한 NLP 작업에 적용할 수 있으며, 기존 모델보다 높은 성능을 일관되게 보였습니다.
 * **사전 학습 모델의 대중화**: BERT는 사전 학습된 언어 모델을 다양한 작업에 맞춰 미세 조정하는 방식을 보편화시켰으며, 이는 NLP 연구와 산업 응용에서 핵심 기술로 자리 잡았습니다.
 
-10. GPT-2: Language Models are Unsupervised Multitask Learners (Radford et al., 2019)
-=====================================================================================
+# 10. GPT-2: Language Models are Unsupervised Multitask Learners (Radford et al., 2019)
 
 * <https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf>
 
@@ -443,8 +445,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
 > * `정규화 방식`: **BERT**는 post-normalization을 사용합니다. **GPT-2**는 pre-normalization을 사용하여 학습 안정성을 개선했습니다.
 > * `시퀀스 길이`: **BERT**는 512 토큰의 시퀀스 길이를 사용합니다. **GPT-2**는 1024 토큰의 시퀀스 길이를 사용하여 더 긴 컨텍스트를 처리할 수 있습니다.
 
-11. T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (Raffel et al., 2019)
-===============================================================================================================
+# 11. T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (Raffel et al., 2019)
 
 * <https://arxiv.org/abs/1910.10683>
 
@@ -492,8 +493,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
 * **전이 학습의 선두주자**: T5는 전이 학습의 잠재력을 극대화하는 모델로, NLP 분야에서 가장 강력하고 효율적인 모델 중 하나로 자리 잡았습니다. 특히, 대규모 데이터와 모델의 스케일을 키우는 것이 성능 향상에 중요한 요인임을 입증했습니다.
 * **데이터와 모델 공개**: 연구진은 학습에 사용된 데이터와 사전 학습된 모델을 공개하여, 후속 연구자들이 이를 활용하여 다양한 NLP 문제를 해결할 수 있도록 했습니다. 이를 통해 NLP 연구 커뮤니티의 발전에 크게 기여했습니다.
 
-12. GPT-3: Language Models are Few-Shot Learners (Brown et al., 2020)
-=====================================================================
+# 12. GPT-3: Language Models are Few-Shot Learners (Brown et al., 2020)
 
 * <https://arxiv.org/pdf/2005.14165>
 
@@ -548,8 +548,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
 
   + 특히, 이전에 학습한 내용을 바탕으로 인간이 작성한 것과 구별하기 어려운 텍스트를 생성할 수 있어, 매우 정교한 언어 모델임을 보여줍니다.
 
-13. ChatGPT: Applications, Opportunities, and Threats (Bahrini, Aram, et al., 2023)
-===================================================================================
+# 13. ChatGPT: Applications, Opportunities, and Threats (Bahrini, Aram, et al., 2023)
 
 * <https://arxiv.org/pdf/2304.09103>
 
@@ -601,8 +600,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
   + 이를 위해서는 AI의 편향성을 줄이고, 개인 정보 보호 및 보안 문제를 해결하기 위한 명확한 **정책과 절차**가 마련되어야 합니다.
   + **윤리적 기준**을 준수하면서도 기술이 사회에 긍정적인 영향을 미치도록 관리하는 것이 중요합니다.
 
-14. LLaMA: Open and Efficient Foundation Language Models (Touvron et al., 2023)
-===============================================================================
+# 14. LLaMA: Open and Efficient Foundation Language Models (Touvron et al., 2023)
 
 * <https://arxiv.org/pdf/2302.13971>
 
@@ -659,8 +657,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
 
 **(개인 추가)**
 
-15. Llama 2: Open Foundation and Fine-Tuned Chat Models (2023, Meta AI)
-=======================================================================
+# 15. Llama 2: Open Foundation and Fine-Tuned Chat Models (2023, Meta AI)
 
 * <https://arxiv.org/pdf/2307.09288>
 
@@ -817,8 +814,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
 >   + **KV 캐시(KV Cache)**: 추론 과정에서 이전에 계산된 키(key)와 값(value)을 캐싱하여 재계산하지 않도록 최적화할 수 있도록 했습니다.
 >   + **Grouped-Query Attention (GQA)**: `GQA`는 특히 대규모 모델(34B, 70B)에서 `추론 확장성을 향상`시키기 위해 도입되었습니다. 이는 더 큰 모델들이 더 효율적으로 대규모 데이터를 처리할 수 있도록 도와줍니다.
 
-16. Mistral: A Next Generation Open Weight Language Model (Mistral Team, 2023)
-==============================================================================
+# 16. Mistral: A Next Generation Open Weight Language Model (Mistral Team, 2023)
 
 * <https://arxiv.org/pdf/2310.06825>
 
@@ -863,8 +859,7 @@ GPT-2 논문은 **대규모의 웹 텍스트** 데이터(WebText)를 기반으�
 
 **(개인 추가)**
 
-17. Llama 3 : Herd of Models (2024, Meta AI)
-============================================
+# 17. Llama 3 : Herd of Models (2024, Meta AI)
 
 * <https://arxiv.org/pdf/2407.21783>
 

@@ -1,13 +1,24 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 11] ChatGPT x Desktop Application 💻"
+description: "Mac·Windows용 ChatGPT 데스크톱 앱의 Work with Apps 기능으로 터미널, VS Code·Xcode 등 IDE, Apple Notes·Notion 문서 앱과 연동해 작업하는 방법과 지원 앱 목록, 단축키를 정리한다."
 date: "2024-12-19"
+tags:
+  - "ChatGPT"
+  - "OpenAI"
+resource: "https://velog.io/@euisuk-chung/Day-11-ChatGPT-x-Desktop-Application"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:33:56+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-11-ChatGPT-x-Desktop-Application"
+    title: "[Day 11] ChatGPT x Desktop Application 💻"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-19"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 11] ChatGPT x Desktop Application 💻
-
-
-
 
 안녕하세요! **12 Days of OpenAI: Day 11**에 오시는 것을 환영합니다!
 
@@ -15,10 +26,7 @@ year: "2024"
 
 오늘은 **ChatGPT 데스크톱 앱의 강력한 협업 기능**을 소개합니다. 이번 업데이트는 ChatGPT를 더 유연하고 효과적으로 활용할 수 있도록 설계되었으며, 사용자 워크플로우를 혁신적으로 변화시킬 수 있는 다양한 기능을 제공합니다. 🎉
 
----
-
-데스크톱 앱을 통한 협력 🌟
----------------
+## 데스크톱 앱을 통한 협력 🌟
 
 `OpenAI`는 **Mac 및 Windows용 ChatGPT 데스크톱 앱을 출시**하며, 더 직관적이고 강력한 **AI 협력 환경을 제공**합니다.  
 
@@ -68,8 +76,6 @@ ChatGPT와 **실행 중인 앱 간의 협**력을 적절히 활용하면, 사용
 * 이를 통해 앱의 데이터를 효과적으로 분석하고, 사용자의 요구를 적시에 반영하여 더욱 직관적이고 유용한 지원을 제공합니다.
 * 이러한 기능은 특히 개발 환경에서 실질적인 가치를 창출하며, 사용자에게 보다 원활하고 효율적인 작업 흐름을 가능하게 합니다.
 
----
-
 ### 2. 코딩 환경에서의 활용
 
 ChatGPT는 **다양한 IDE와의 통합**을 통해 사용자가 더 효율적으로 작업할 수 있도록 지원합니다.  
@@ -102,8 +108,6 @@ ChatGPT는 **다양한 IDE와의 통합**을 통해 사용자가 더 효율적�
 ChatGPT와 통합된 코딩 환경은 단순한 코드 제안을 넘어, 사용자가 놓칠 수 있는 중요한 로직 오류를 사전에 방지할 수 있도록 돕습니다.
 
 * 복잡한 API 호출과 설정 작업을 단축하여 개발자는 창의적인 작업에 더욱 집중할 수 있습니다.
-
----
 
 ### 3. **문서 작업과의 연동**
 
@@ -139,8 +143,6 @@ ChatGPT의 문서 연동 기능은 단순히 텍스트 생성을 넘어, 협업 
 
 * 또한, 스타일과 톤 분석 기능을 통해 특정 조직이나 팀의 표준 문서 형식에 맞는 콘텐츠를 자동으로 생성할 수 있습니다.
 
----
-
 ### 4. **음성 상호작용 지원**
 
 이제 ChatGPT의 음성 모드를 통해 문서나 코드와 상호작용할 수 있습니다. 이를 통해 손을 사용하지 않고도 작업을 효율적으로 처리할 수 있습니다.
@@ -160,10 +162,7 @@ ChatGPT의 문서 연동 기능은 단순히 텍스트 생성을 넘어, 협업 
 
 음성 기능은 단순한 음성 명령 처리뿐만 아니라, ChatGPT의 학습을 기반으로 사용자의 발화 습관을 학습하고 이를 반영한 맞춤형 응답을 제공할 수 있습니다.
 
----
-
-업데이트 요약 🚀
----------
+## 업데이트 요약 🚀
 
 1. **앱과의 심층적 통합**: ChatGPT가 실행 중인 애플리케이션과 상호작용하여 생산성 극대화.
 2. **멀티 태스킹 지원**: 코드 작성부터 문서 편집, 데이터 시각화까지 다양한 작업 지원.
@@ -195,10 +194,7 @@ ChatGPT의 문서 연동 기능은 단순히 텍스트 생성을 넘어, 협업 
 >   
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/3f45c401-8af9-4763-94ee-c7bb26ba504a/image.png)
 
----
-
-맺음말 ✨
------
+## 맺음말 ✨
 
 이번 **Day 11** 업데이트는 ChatGPT가 단순히 질문에 답변하는 AI를 넘어, 여러분의 데스크톱 환경에서 적극적으로 작업을 돕는 도구로 자리 잡게 합니다.
 

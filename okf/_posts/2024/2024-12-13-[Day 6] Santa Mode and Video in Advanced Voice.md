@@ -1,16 +1,24 @@
-﻿---
+---
+type: "Product Update"
 title: "[Day 6] Santa Mode & Video in Advanced Voice"
+description: "산타클로스와 음성으로 대화하는 Santa Mode와 Advanced Voice에 추가된 실시간 비디오·화면 공유 기능의 활성화 방법, 활용 사례, 플랜별 제공 일정을 정리한다."
 date: "2024-12-13"
 tags:
+  - "ChatGPT"
   - "OpenAI"
-  - "chatGPT"
+resource: "https://velog.io/@euisuk-chung/Day-6-Santa-Mode-Video-in-Advanced-Voice"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:35:52+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Day-6-Santa-Mode-Video-in-Advanced-Voice"
+    title: "[Day 6] Santa Mode & Video in Advanced Voice"
+    author: "human:euisuk-chung"
+    last_modified: "2024-12-13"
+status: "stable"
 year: "2024"
 ---
-
-# [Day 6] Santa Mode & Video in Advanced Voice
-
-
-
 
 안녕하세요!!! **12 Days of OpenAI** 시리즈의 여섯 번째 날에 오신 것을 환영합니다!
 
@@ -29,10 +37,7 @@ year: "2024"
 
 이 두 가지는 ChatGPT와의 상호작용을 더욱 풍부하고 직관적으로 만들어 줄 최신 기능들입니다.
 
----
-
-**Santa Mode란?**
-----------------
+## **Santa Mode란?**
 
 이제 ChatGPT를 통해 산타클로스와 직접 대화를 나눌 수 있는 **Santa Mode**가 추가되었습니다. 이 기능은 특히 크리스마스를 앞두고 사용자들에게 독특하고 재미있는 경험을 제공합니다.
 
@@ -58,10 +63,7 @@ year: "2024"
 
 특히, 산타의 음성은 고유한 크리스마스 분위기를 살려주는 따뜻하고 유쾌한 톤으로 설계되었습니다.
 
----
-
-**Advanced Voice의 Video 및 Screen Sharing 기능**
----------------------------------------------
+## **Advanced Voice의 Video 및 Screen Sharing 기능**
 
 오늘부터 **Advanced Voice 모드**에 **실시간 비디오 및 화면 공유** 기능이 추가됩니다. 이 기능은 ChatGPT와의 대화를 단순한 텍스트에서 실시간 시각적 상호작용으로 확장시켜줍니다.
 
@@ -102,10 +104,7 @@ year: "2024"
   ![](https://velog.velcdn.com/images/euisuk-chung/post/72a8891a-568a-4213-81bf-e275dc321384/image.png)
   + Apple Intelligence x ChatGPT를 같이 연동하면서 더 좋은 시너지를 기대해볼 수도 있겠군요!! 🤔
 
----
-
-**Santa Mode와 Advanced Voice의 특별한 점**
--------------------------------------
+## **Santa Mode와 Advanced Voice의 특별한 점**
 
 ### **Santa Mode의 장점**
 
@@ -122,10 +121,7 @@ year: "2024"
 
 > 비디오 및 화면 공유는 업무 및 학습 환경에서 생산성을 극대화할 수 있을 것이라고 생각됩니다👏
 
----
-
-**맺음말**
--------
+## **맺음말**
 
 이번 업데이트를 통해 ChatGPT와의 상호작용이 단순한 대화를 넘어, 더 창의적이고 직관적인 형태로 확장되었습니다.
 

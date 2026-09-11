@@ -1,18 +1,27 @@
 ---
-title: "[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND
-YOLO-NAS"
+type: "Paper Review"
+title: "[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS"
+description: "YOLOv1부터 YOLOv8, YOLO-NAS까지 각 버전의 구조 변화를 서베이 논문 기준으로 정리하고 mAP·IoU·NMS 지표, 앵커 박스, Backbone-Neck-Head 구조, anchor-free와 decoupled head 도입을 설명한다."
 date: "2024-10-02"
 tags:
-  - "CV"
-  - "paper-review"
+  - "Computer Vision"
+  - "Paper Review"
+  - "딥러닝"
+resource: "https://velog.io/@euisuk-chung/Paper-Review-A-COMPREHENSIVE-REVIEW-OF-YOLO-ARCHITECTURES-IN-COMPUTER-VISION-FROM-YOLOV1-TO-YOLOV8-ANDYOLO-NAS"
+generated:
+  by: "process:velog-sync"
+  at: "2026-02-18T18:46:22Z"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/Paper-Review-A-COMPREHENSIVE-REVIEW-OF-YOLO-ARCHITECTURES-IN-COMPUTER-VISION-FROM-YOLOV1-TO-YOLOV8-ANDYOLO-NAS"
+    title: "[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS"
+    author: "human:euisuk-chung"
+    last_modified: "2024-10-02"
+status: "stable"
 year: "2024"
 ---
 
-# [Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND
-YOLO-NAS
-
-YOLO 모델 서베이 페이퍼
-===============
+# YOLO 모델 서베이 페이퍼
 
 * 링크 : <https://www.mdpi.com/2504-4990/5/4/83>
 
@@ -33,24 +42,17 @@ YOLO 모델 서베이 페이퍼
 
 > (참고) 각 Header에 적은 논문의 년도는 각 논문(버전)의 발표 시기를 적은 것입니다. 버전 차이 등으로 인해서 자료 조사를 하면서 년도는 조금씩 상이할 수 있습니다.
 
-1. Abstract
------------
+## 1. Abstract
 
 `YOLO(You Only Look Once)` 모델은 객체 탐지 분야에서 실시간 성능과 높은 정확성을 갖춘 모델로, 최신 YOLO-NAS까지 발전해 왔습니다. 이 서베이 페이퍼는 YOLO의 진화를 요약하고, YOLOv1부터 YOLOv8까지의 발전을 다룹니다. YOLO-NAS, YOLO with Transformers 같은 최신 모델들을 포함하여, 각 버전이 도입한 기술적 혁신과 성능 향상을 설명합니다.
 
----
-
-2. Introduction
----------------
+## 2. Introduction
 
 YOLO는 실시간 객체 탐지의 효율성과 정확도에서 중대한 역할을 담당하며, 다양한 응용 분야에서 널리 사용됩니다. 이 논문은 YOLO의 발전 과정과 각 모델의 핵심적인 특징들을 분석합니다. YOLOv1부터 YOLOv8, 그리고 YOLO-NAS까지의 변화와 개선점을 탐구하며, YOLO 모델이 빠르게 객체를 탐지하면서도 높은 정확도를 유지할 수 있는 비결을 설명합니다.
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1b30bf90-5f51-410e-bca9-a53e22f9a075/image.png)
 
----
-
-3. YOLO Applications across Diverse Fields
-------------------------------------------
+## 3. YOLO Applications across Diverse Fields
 
 YOLO는 자율주행, 농업, 의료, 원격 탐사, 비디오 감시 등 다양한 분야에서 활용됩니다.
 
@@ -59,10 +61,7 @@ YOLO는 자율주행, 농업, 의료, 원격 탐사, 비디오 감시 등 다양
 * **의료**: 암 진단, 피부 세분화 등의 의료 분야에서 객체 탐지를 통해 진단 정확도를 향상시킵니다.
 * **원격 탐사**: 위성 및 항공 이미지를 분석하여 환경 모니터링, 도시 계획 등에 활용됩니다.
 
----
-
-4. Object Detection Metrics and Non-Maximum Suppression (NMS)
--------------------------------------------------------------
+## 4. Object Detection Metrics and Non-Maximum Suppression (NMS)
 
 이 챕터에서는 **객체 탐지 모델의 성능을 평가하기 위한 주요 메트릭**과 **객체 탐지 후처리 방법인 NMS(Non-Maximum Suppression)**에 대해 설명합니다.
 
@@ -214,8 +213,7 @@ NMS를 적용함으로써 객체 탐지 결과의 중복을 방지하고, 최종
 
 이는 객체 탐지에서 매우 중요한 후처리 단계로, 탐지 정확도를 높이고 불필요한 중복 예측을 줄이는 역할을 합니다.
 
-5. YOLO-v1: You Only Look Once (2016년)
---------------------------------------
+## 5. YOLO-v1: You Only Look Once (2016년)
 
 `YOLOv1`은 2015년에 Joseph Redmon에 의해 소개된 최초의 실시간 객체 탐지 모델로, "You Only Look Once"라는 이름에서 알 수 있듯이 단일 패스로 객체를 탐지할 수 있는 혁신적인 모델이었습니다. YOLOv1은 이미지 전체를 한 번에 분석하여 객체를 탐지하는 방식으로 기존의 객체 탐지 방식과는 크게 다른 접근 방식을 사용했습니다. YOLOv1은 실시간 객체 탐지 시스템의 효율성과 속도를 크게 개선했으며, 자율주행, 감시 시스템, 비디오 분석 등 다양한 분야에서 널리 사용되었습니다. (CVPR 2016)
 
@@ -322,10 +320,7 @@ YOLOv1은 간단한 아키텍처와 빠른 속도를 바탕으로 실시간 객�
 * **비표준적인 객체 비율 탐지 문제**: 훈련 데이터에서 본 적 없는 비율을 가진 객체의 경우 탐지 성능이 떨어졌습니다.
 * **다운샘플링 문제**: YOLOv1은 이미지의 해상도를 낮추어 특징을 추출하는 과정에서, 객체의 세부 정보를 놓치는 경우가 있었습니다.
 
----
-
-6. YOLOv2: Better, Faster, and Stronger (2017년)
------------------------------------------------
+## 6. YOLOv2: Better, Faster, and Stronger (2017년)
 
 `YOLOv2`는 2016년 Joseph Redmon과 Ali Farhadi가 발표한 모델로, YOLOv1에서 성능과 정확도를 개선하여 "**더 나은(Better), 더 빠른(Faster), 더 강력한(Stronger)**" 객체 탐지 시스템을 목표로 개발되었습니다.
 
@@ -432,8 +427,7 @@ YOLOv2와 함께 발표된 YOLO9000은 모델이 단일 훈련 과정에서 객�
 * YOLO9000은 COCO 데이터셋에서 객체 탐지 작업을, ImageNet 데이터셋에서 객체 분류 작업을 학습함으로써 더 많은 객체 클래스에 대한 탐지가 가능해졌습니다.
 * YOLO9000은 9000개 이상의 객체 클래스에 대한 탐지 성능을 자랑했으며, 이는 YOLOv2의 확장된 버전으로 강력한 성능을 제공합니다.
 
-7. YOLOv3 (2018년)
------------------
+## 7. YOLOv3 (2018년)
 
 `YOLOv3`는 2018년에 Joseph Redmon과 Ali Farhadi에 의해 발표된 모델로, YOLOv2의 성능을 개선하고 객체 탐지의 정확도를 높이는 데 중점을 둔 버전입니다.
 
@@ -489,8 +483,7 @@ YOLOv2와 함께 발표된 YOLO9000은 모델이 단일 훈련 과정에서 객�
 > * **고정된 길이의 피처 벡터 생성**: SPP는 다양한 크기의 입력 이미지로부터 고정된 크기의 피처 벡터를 생성하여, 후속 **완전 연결 층(Fully Connected Layers)**에서 처리할 수 있게 합니다. 이로 인해 네트워크의 유연성이 증가하며, 객체 탐지 성능이 향상됩니다.  
 >   ![](https://velog.velcdn.com/images/euisuk-chung/post/83ad0ee5-48ce-492a-be63-603c46c00748/image.png)
 
-(참고) Object Detection 유형
-------------------------
+## (참고) Object Detection 유형
 
 * 객체 탐지 모델은 **두 가지 유형**으로 크게 나뉩니다:
   + **싱글 스테이지(single-stage)** 객체 탐지기
@@ -548,8 +541,7 @@ YOLOv2와 함께 발표된 YOLO9000은 모델이 단일 훈련 과정에서 객�
 | **구조** | 단순 | 복잡 |
 | **용도** | 실시간 객체 탐지(예: 자율 주행, 보안) | 세밀한 객체 탐지(예: 의료 이미지 분석) |
 
-8. Backbone, Neck, and Head
----------------------------
+## 8. Backbone, Neck, and Head
 
 YOLO 모델의 성능을 이해하기 위해서는 객체 탐지에서 사용하는 네트워크 구조를 살펴봐야 하며, 이는 크게 **Backbone(백본)**, **Neck(넥)**, **Head(헤드)**로 나뉩니다.
 
@@ -589,8 +581,7 @@ YOLO 모델의 성능을 이해하기 위해서는 객체 탐지에서 사용하
 
 * **YOLOv3의 Head**: YOLOv3는 다중 스케일 예측을 사용하여 13×13, 26×26, 52×52 크기의 그리드에서 각각 다른 크기의 객체를 예측할 수 있었습니다. 이를 통해 큰 객체뿐만 아니라 작은 객체에 대한 탐지 성능도 크게 향상되었습니다.
 
-9. YOLOv4 (2020년 4월)
---------------------
+## 9. YOLOv4 (2020년 4월)
 
 `YOLOv4`는 2020년 Alexey Bochkovskiy, Chien-Yao Wang, 그리고 Hong-Yuan Mark Liao에 의해 발표된 모델로, YOLO 시리즈의 네 번째 버전입니다.
 
@@ -740,8 +731,7 @@ YOLO 모델의 성능을 이해하기 위해서는 객체 탐지에서 사용하
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/9baac1f1-9ed2-4d6e-b220-2d9a64234dc7/image.png)
 
-10. YOLOv5 (2020년 6월)
----------------------
+## 10. YOLOv5 (2020년 6월)
 
 `YOLOv5`는 2020년 Ultralytics에서 발표된 YOLO 시리즈의 다섯 번째 버전입니다. YOLOv5는 YOLOv4에서 이어지는 모델이지만, YOLOv4와는 달리 **PyTorch** 프레임워크로 처음부터 구현되었으며, 개발자들이 손쉽게 사용할 수 있는 **사용자 친화적인 구조**를 제공합니다. YOLOv5는 특히 경량화된 구조와 다양한 크기의 모델을 제공하여 성능과 사용 편의성 측면에서 큰 인기를 얻었습니다.
 
@@ -859,8 +849,7 @@ YOLOv5의 아키텍처는 크게 다음과 같은 구성 요소로 나뉩니다:
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/c24672ed-3aa3-4742-9f2f-0b0ae9caee1d/image.png)
 
-11. Scaled-YOLOv4 (2020년 11월)
------------------------------
+## 11. Scaled-YOLOv4 (2020년 11월)
 
 `Scaled-YOLOv4`는 YOLOv4의 확장 버전으로, 2021년 발표된 모델입니다. Scaled-YOLOv4는 YOLOv4의 성능을 더욱 향상시키기 위해 다양한 크기의 모델을 제공하고, 여러 크기 스케일에서 객체 탐지를 더 효율적으로 수행할 수 있도록 설계되었습니다. **모델의 스케일링**을 통해 실시간 객체 탐지 성능을 유지하면서도 고성능을 제공하는 것이 목표입니다.
 
@@ -925,8 +914,7 @@ Scaled-YOLOv4의 기본 아키텍처는 YOLOv4와 매우 유사합니다. 기본
 > * **확장 가능한(Scalable)**: Scaled-YOLOv4는 상황에 맞게 **모델의 크기(해상도), 깊이(레이어 수), 폭(필터 수)**를 유연하게 조정할 수 있도록 설계되었습니다. 이를 통해 작은 모델에서 큰 모델까지 다양한 요구를 충족할 수 있습니다.
 > * **조정 가능**: 모델이 적용될 **환경이나 성능 요구 사항**에 맞춰 **동적으로 크기, 깊이, 폭을 조절**할 수 있다는 뜻입니다. 예를 들어, 고성능 GPU에서는 더 큰 모델을 사용하고, 실시간 성능이 중요한 장치에서는 더 작은 모델을 사용할 수 있습니다.
 
-12. YOLOR (2021년 5월)
---------------------
+## 12. YOLOR (2021년 5월)
 
 `YOLOR(You Only Learn One Representation)`는 2021년에 발표된 객체 탐지 모델로, YOLO 시리즈와 마찬가지로 실시간 객체 탐지에서 뛰어난 성능을 제공합니다.
 
@@ -1047,8 +1035,7 @@ YOLOR은 YOLOv4와 YOLOv5의 기본 아키텍처를 기반으로 하지만, 더 
 
    * YOLOR의 Head는 기존 YOLO 모델과 유사하게, 여러 해상도에서 바운딩 박스와 객체의 클래스를 예측합니다. 또한, Non-Maximum Suppression (NMS)을 사용하여 중복된 바운딩 박스를 제거합니다. 하지만 YOLOR은 다중 작업 학습을 위해 Head에서 추가적인 출력을 지원하며, 포즈 추정 등 다양한 작업을 동시에 처리할 수 있습니다.
 
-13. YOLOX (2021년 7월)
---------------------
+## 13. YOLOX (2021년 7월)
 
 **YOLOX**는 2021년에 발표된 YOLO 시리즈의 확장 모델로, 기존 YOLO 모델들의 성능을 개선하고 몇 가지 새로운 기술적 접근 방식을 도입한 모델입니다.
 
@@ -1107,8 +1094,7 @@ YOLOX의 아키텍처는 기본적으로 기존 YOLO 모델들의 구조를 따�
 
    * YOLOX의 **디커플드 헤드(decoupled head)**는 세 가지 주요 작업(분류, 회귀, 객체성)을 독립적으로 처리하여 더 정밀한 탐지 결과를 도출합니다. 이를 통해 YOLOX는 객체의 위치, 크기, 그리고 클래스에 대한 예측을 더 정확하게 수행할 수 있습니다.
 
-14. YOLOv6 (2022년 9월)
----------------------
+## 14. YOLOv6 (2022년 9월)
 
 `YOLOv6`는 Meituan Vision AI 팀이 2022년에 발표한 모델로, YOLO 시리즈의 최신 발전 중 하나입니다. YOLOv6는 고성능 실시간 객체 탐지 모델로, YOLO 시리즈의 전통적인 속도와 정확도를 유지하면서도 효율성을 극대화할 수 있도록 설계되었습니다.
 
@@ -1150,8 +1136,7 @@ YOLOv6의 아키텍처는 기존 YOLO 모델들과 유사하지만, 성능과 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/7a170b15-a551-4975-80a4-05398a666d0a/image.png)
 
-15. YOLOv7 (2022년 7월)
----------------------
+## 15. YOLOv7 (2022년 7월)
 
 `YOLOv7`은 2022년 YOLO 모델의 개발자들이 발표한 최신 객체 탐지 모델로, 기존 YOLO 모델들의 장점을 계승하면서도 속도와 정확도에서 중요한 개선을 이루었습니다.
 
@@ -1192,8 +1177,7 @@ YOLOv7의 아키텍처는 기존 YOLO 모델들과 유사하지만, 몇 가지 �
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/6930a024-9af2-4079-a6ec-e780a01ce646/image.png)
 
-16. DAMO-YOLO (2022년 12월)
--------------------------
+## 16. DAMO-YOLO (2022년 12월)
 
 `DAMO-YOLO`는 2022년 알리바바의 DAMO Academy에서 개발한 최신 객체 탐지 모델로, YOLO 시리즈의 빠른 속도와 높은 정확도를 계승하면서도 여러 기술적 혁신을 통해 성능을 더욱 향상시킨 모델입니다.
 
@@ -1242,8 +1226,7 @@ DAMO-YOLO의 아키텍처는 기존 YOLO 모델들과 몇 가지 유사한 점�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/a14cdd5e-99c2-4358-962d-61e35c9424e7/image.png)
 
-17. YOLOv8 (2023년 1월)
----------------------
+## 17. YOLOv8 (2023년 1월)
 
 `YOLOv8`은 2023년 1월 **Ultralytics**에 의해 발표된 최신 객체 탐지 모델로, YOLO 시리즈의 가장 최근 버전입니다. YOLOv8은 이전 버전인 YOLOv5의 개선된 구조를 기반으로 더 높은 성능을 제공하며, 특히 **경량화와 정확도** 모두에서 큰 성장을 이루었습니다.
 
@@ -1294,8 +1277,7 @@ DAMO-YOLO의 아키텍처는 기존 YOLO 모델들과 몇 가지 유사한 점�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/03b446a5-277c-4ec0-9017-4f8e230b4aa7/image.png)
 
-18. PP-YOLO, PP-YOLOv2, PP-YOLOE
---------------------------------
+## 18. PP-YOLO, PP-YOLOv2, PP-YOLOE
 
 `PP-YOLO` 시리즈는 **PaddlePaddle** 프레임워크를 기반으로 한 객체 탐지 모델로, **Baidu**의 AI 연구소에서 개발되었습니다.
 
@@ -1363,8 +1345,7 @@ DAMO-YOLO의 아키텍처는 기존 YOLO 모델들과 몇 가지 유사한 점�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/0d0144fe-6a23-426e-b75f-cd8af4616afc/image.png)
 
-19. YOLO-NAS
-------------
+## 19. YOLO-NAS
 
 `YOLO-NAS`는 2023년 5월에 **Deci**라는 AI 스타트업에서 발표한 최신 객체 탐지 모델로, YOLO 시리즈의 강력한 성능을 기반으로 **자동 신경망 아키텍처 탐색(NAS: Neural Architecture Search)**을 통해 성능을 최적화한 모델입니다.
 
@@ -1412,8 +1393,7 @@ DAMO-YOLO의 아키텍처는 기존 YOLO 모델들과 몇 가지 유사한 점�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/587010b6-b2b5-413d-aa47-57e22c916988/image.png)
 
-20. YOLO with Transformers
---------------------------
+## 20. YOLO with Transformers
 
 **YOLO with Transformers**는 YOLO 모델과 **트랜스포머(Transformers)** 아키텍처를 결합한 새로운 객체 탐지 모델로, **자연어 처리(NLP)** 분야에서 성공적으로 사용된 트랜스포머 구조를 **컴퓨터 비전**에 적용하여 객체 탐지 성능을 극대화한 모델입니다.
 
@@ -1471,8 +1451,7 @@ DAMO-YOLO의 아키텍처는 기존 YOLO 모델들과 몇 가지 유사한 점�
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/513ceb8c-70ff-4e1c-8c84-fcbe2936ce6c/image.png)
 
-Discussion
-----------
+## Discussion
 
 * YOLO 버전 분석: 16개의 YOLO 버전을 분석하고, 각각의 주요 패턴을 식별합니다.
 * 앵커(Anchors): 원래 YOLO 모델은 앵커를 사용하지 않았으나, 이후 YOLOv2에서 앵커가 도입되어 바운딩 박스 예측 정확도 개선에 기여하였습니다. 이후 YOLOX는 앵커 없는 접근 방식을 도입해 상태에서의 최고의 결과를 달성했습니다.
@@ -1480,8 +1459,7 @@ Discussion
 * 백본(Backbone): YOLO 모델의 백본 아키텍처는 Darknet에서 시작하여, 이후 CSP, 재파라미터화 및 Neural Architecture Search를 포함한 다양한 구조로 발전하였습니다.
 * 성능: YOLO 모델은 속도와 정확성 간의 균형을 지속적으로 추구하여, 다양한 애플리케이션에 실시간 객체 감지를 가능하게 하는 것이 특징입니다.
 
-The Future of YOLO
-------------------
+## The Future of YOLO
 
 * 최신 기술 적용: YOLO 아키텍처를 지속적으로 개선하여 모델 성능과 효율성을 높이는 최신 딥러닝 및 데이터 증강 기법을 채택할 것으로 기대됩니다.
 * 벤치마크의 진화: 현재의 COCO 2017 벤치마크는 더 도전적인 기준으로 향후 대체될 가능성이 있으며, 이는 YOLO 모델의 발전과 함께 더욱 정교한 기준을 요구하는 필요성을 반영합니다.

@@ -135,43 +135,43 @@
 
 ## 2024
 
-* [Veo2: 차세대 AI 비디오 생성 모델 (Veo2 vs Sora)](2024/2024-12-31-Veo2_ 차세대 AI 비디오 생성 모델 (Veo2 vs Sora).md)
-* [[TREND] CES 2025 미리보기 : CES 2025에서 주목해야 할 트렌드 살펴보자!](2024/2024-12-30-[TREND] CES 2025 미리보기 _ CES 2025에서 주목해야 할 트렌드 살펴보자!.md)
-* [[파이썬] 데코레이터(Decorator) 사용법](2024/2024-12-25-[파이썬] 데코레이터(Decorator) 사용법.md)
-* [[정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석](2024/2024-12-25-[정리] _24년 AI Summit _ 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석.md)
-* [[정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra](2024/2024-12-25-[정리] _24년 AI Summit _ _라마_ 개발 리더가 설명하는 LLM _ Small Models 최신 기법 - Soumya Batra.md)
-* [[TREND] Google Cloud 2025 AI business trend](2024/2024-12-20-[TREND] Google Cloud 2025 AI business trend.md)
-* [[Day 12] introducing o3 and o3-mini](2024/2024-12-19-[Day 12] introducing o3 and o3-mini.md)
-* [[Day 11] ChatGPT x Desktop Application 💻](2024/2024-12-19-[Day 11] ChatGPT x Desktop Application 💻.md)
-* [[Day 9] OpenAI o1 및 개발자를 위한 새로운 도구](2024/2024-12-18-[Day 9] OpenAI o1 및 개발자를 위한 새로운 도구.md)
-* [[Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬](2024/2024-12-18-[Day 10] 1-800-CHAT-GPT_ ChatGPT랑 통화랑 문자를 할 수 있다고_ 📞💬.md)
-* [[Day 8] Introducing ChatGPT Search](2024/2024-12-16-[Day 8] Introducing ChatGPT Search.md)
-* [[꿀팁] Cursor AI - AI 기반 코드 편집기](2024/2024-12-14-[꿀팁] Cursor AI - AI 기반 코드 편집기.md)
-* [[Day 7] Introducing Projects](2024/2024-12-14-[Day 7] Introducing Projects.md)
-* [[Day 6] Santa Mode & Video in Advanced Voice](2024/2024-12-13-[Day 6] Santa Mode and Video in Advanced Voice.md)
-* [[Day 5] ChatGPT x Apple Intelligence](2024/2024-12-12-[Day 5] ChatGPT x Apple Intelligence.md)
-* [[Day 4] Canvas 기능, 전보다 확실히 더 좋아진듯?!](2024/2024-12-11-[Day 4] Canvas 기능, 전보다 확실히 더 좋아진듯_!.md)
-* [[Day 3] SORA 떴다!! 혁신적인 AI 비디오 생성 플랫폼의 등장](2024/2024-12-10-[Day 3] SORA 떴다!! 혁신적인 AI 비디오 생성 플랫폼의 등장.md)
-* [[Day 2] Reinforcement Fine-Tuning (RFT) 소개](2024/2024-12-07-[Day 2] Reinforcement Fine-Tuning (RFT) 소개.md)
-* [[Day 1] OpenAI o1 and o1 pro mode in ChatGPT](2024/2024-12-06-[Day 1] OpenAI o1 and o1 pro mode in ChatGPT.md)
-* [[TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA](2024/2024-11-30-[TREND] 트렌스포머 이후의 차세대 아키텍쳐_ MoE, SSM, RetNet, V-JEPA.md)
-* [[자료] KT 사내 직원 대상 RAG 교안 대방출?!](2024/2024-11-26-[자료] KT 사내 직원 대상 RAG 교안 대방출_!.md)
-* [[IT] 클라우드 컴퓨팅의 서비스 모델: IaaS, PaaS, SaaS와 최신 GPUaaS, IQaaS 비교](2024/2024-11-23-[IT] 클라우드 컴퓨팅의 서비스 모델_ IaaS, PaaS, SaaS와 최신 GPUaaS, IQaaS 비교.md)
-* [[정리] SK AI SUMMIT 키노트 정리 - Day2](2024/2024-11-10-[정리] SK AI SUMMIT 키노트 정리 - Day2.md)
-* [[정리] SK AI SUMMIT 키노트 정리 - Day1 오후](2024/2024-11-09-[정리] SK AI SUMMIT 키노트 정리 - Day1 오후.md)
-* [[정리] SK AI SUMMIT 키노트 정리 - Day1 오전](2024/2024-11-08-[정리] SK AI SUMMIT 키노트 정리 - Day1 오전.md)
-* [[Linux] 리눅스 파일 시스템 마운트 가이드](2024/2024-11-05-[Linux] 리눅스 파일 시스템 마운트 가이드.md)
-* [Unlearning : 머신러닝 모델도 '잊을 수 있다'](2024/2024-11-03-Unlearning _ 머신러닝 모델도 _잊을 수 있다_.md)
-* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 4)](2024/2024-10-16-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 4).md)
-* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 3)](2024/2024-10-16-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 3).md)
-* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 2)](2024/2024-10-16-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 2).md)
-* [[개념] GLU와 그 변형들: 역사와 주요 개념 정리](2024/2024-10-14-[개념] GLU와 그 변형들_ 역사와 주요 개념 정리.md)
-* [[꿀팁] .bashrc로 로컬에서 ALIAS를 활용한 여러 쿠다 활용하기](2024/2024-10-10-[꿀팁] .bashrc로 로컬에서 ALIAS를 활용한 여러 쿠다 활용하기.md)
-* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 1)](2024/2024-10-10-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 1).md)
-* [[Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다](2024/2024-10-09-[Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다.md)
-* [[트렌드] 2025년 트렌드 : LMM, LAM, AGENT, 그리고 FMOps](2024/2024-10-02-[트렌드] 2025년 트렌드 _ LMM, LAM, AGENT, 그리고 FMOps.md)
-* [[Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024/2024-10-02-[Paper Review] Mamba2 - Transformers are SSMs_ Generalized Models and Efficient Algorithms Through Structured State Space Duality.md)
-* [[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS](2024/2024-10-02-[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION_ FROM YOLOV1 TO YOLOV8 AND_YOLO-NAS.md)
+* [Veo2: 차세대 AI 비디오 생성 모델 (Veo2 vs Sora)](2024/2024-12-31-Veo2_ 차세대 AI 비디오 생성 모델 (Veo2 vs Sora).md) - 구글 딥마인드 Veo2의 4K 해상도, 물리 시뮬레이션, 카메라 제어 등 특징과 공식 예시 프롬프트를 소개하고, 김그륜의 베타 후기와 Sora 직접 비교로 프롬프트 충실도와 디테일 차이를 살펴본다.
+* [[TREND] CES 2025 미리보기 : CES 2025에서 주목해야 할 트렌드 살펴보자!](2024/2024-12-30-[TREND] CES 2025 미리보기 _ CES 2025에서 주목해야 할 트렌드 살펴보자!.md) - 최재홍 교수 패널 토크와 PwC 삼일회계법인 보고서를 바탕으로 CES 2025의 Core·Escort·Surpass 테마, 주요 기조연설, LVCC 전시관별 AI·모빌리티·ESG 트렌드와 Eureka Park 관전 포인트를 정리한다.
+* [[파이썬] 데코레이터(Decorator) 사용법](2024/2024-12-25-[파이썬] 데코레이터(Decorator) 사용법.md) - 고차 함수 개념부터 시작해 파이썬 데코레이터의 기본 구조와 @ 문법, args와 kwargs 처리, 로깅·실행 시간 측정·인증 예제, functools.wraps와 데코레이터 중첩 순서까지 예제로 설명한다.
+* [[정리] '24년 AI Summit : 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석](2024/2024-12-25-[정리] _24년 AI Summit _ 쉽게 이해하는 RAG와 에이전트 AI 기술의 현재와 미래 - 최윤석.md) - 마이크로소프트 최윤석 세션을 정리하며 GPU 발전과 LLM 성장, Reasoning Native AI, 벡터 검색 기반 RAG 원리, LLM에서 AI 에이전트로의 진화와 OmniParser, Copilot Studio를 소개한다.
+* [[정리] '24년 AI Summit : '라마' 개발 리더가 설명하는 LLM : Small Models 최신 기법 - Soumya Batra](2024/2024-12-25-[정리] _24년 AI Summit _ _라마_ 개발 리더가 설명하는 LLM _ Small Models 최신 기법 - Soumya Batra.md) - Meta의 Soumya Batra 세션을 정리하며 SLM의 정의와 수요 배경, 지식 증류·프루닝·양자화 기반 LLM 압축, Chinchilla 스케일링 법칙을 넘어선 학습 전략과 LLM의 비효율성 논의를 다룬다.
+* [[TREND] Google Cloud 2025 AI business trend](2024/2024-12-20-[TREND] Google Cloud 2025 AI business trend.md) - 구글 클라우드의 2025 AI 비즈니스 트렌드 보고서를 바탕으로 멀티모달 AI, 6가지 AI 에이전트 유형, 보조 검색, AI 기반 고객 경험, 보안 강화라는 다섯 가지 흐름과 기업 사례를 요약한다.
+* [[Day 12] introducing o3 and o3-mini](2024/2024-12-19-[Day 12] introducing o3 and o3-mini.md) - 12 Days of OpenAI 마지막 날 공개된 o3와 o3-mini의 SWE-bench, AIME, GPQA, ARC AGI 벤치마크 성과와 적응형 사고 시간, 함수 호출 정확도, Deliberative Alignment 기법을 정리한다.
+* [[Day 11] ChatGPT x Desktop Application 💻](2024/2024-12-19-[Day 11] ChatGPT x Desktop Application 💻.md) - Mac·Windows용 ChatGPT 데스크톱 앱의 Work with Apps 기능으로 터미널, VS Code·Xcode 등 IDE, Apple Notes·Notion 문서 앱과 연동해 작업하는 방법과 지원 앱 목록, 단축키를 정리한다.
+* [[Day 9] OpenAI o1 및 개발자를 위한 새로운 도구](2024/2024-12-18-[Day 9] OpenAI o1 및 개발자를 위한 새로운 도구.md) - API로 공개된 o1 모델의 함수 호출·구조화 출력·비전·reasoning_effort, WebRTC 기반 Realtime API와 가격 인하, Preference Fine-Tuning과 SFT의 차이, Go·Java SDK 예제를 정리한다.
+* [[Day 10] 1-800-CHAT-GPT: ChatGPT랑 통화랑 문자를 할 수 있다고? 📞💬](2024/2024-12-18-[Day 10] 1-800-CHAT-GPT_ ChatGPT랑 통화랑 문자를 할 수 있다고_ 📞💬.md) - 미국 전화번호 1-800-CHAT-GPT와 WhatsApp으로 인터넷 없이도 ChatGPT와 대화할 수 있는 신규 채널의 사용법, 월 15분 무료 통화 한도, 텍스트 전용이라는 현재 제약을 정리한다.
+* [[Day 8] Introducing ChatGPT Search](2024/2024-12-16-[Day 8] Introducing ChatGPT Search.md) - 무료 사용자까지 확대된 ChatGPT Search의 속도·모바일 개선, Advanced Voice 통합, 기본 검색엔진 설정과 이벤트·음식점·영화 검색 활용 사례를 정리한다.
+* [[꿀팁] Cursor AI - AI 기반 코드 편집기](2024/2024-12-14-[꿀팁] Cursor AI - AI 기반 코드 편집기.md) - VS Code 기반 AI 코드 편집기 Cursor AI의 Tab 자동완성, Ctrl+K 편집, 코드베이스 챗, @ 참조 등 핵심 기능과 단축키, 요금제를 정리하고 GitHub Copilot·Replit·Devin과 비교한다.
+* [[Day 7] Introducing Projects](2024/2024-12-14-[Day 7] Introducing Projects.md) - ChatGPT Projects의 대화 정리, 파일 업로드, 맞춤 지시사항, 캔버스 연동 기능을 비밀 산타·홈 관리·웹사이트 관리 사례로 살펴보고 Custom GPTs 및 Claude Projects와 차이를 비교한다.
+* [[Day 6] Santa Mode & Video in Advanced Voice](2024/2024-12-13-[Day 6] Santa Mode and Video in Advanced Voice.md) - 산타클로스와 음성으로 대화하는 Santa Mode와 Advanced Voice에 추가된 실시간 비디오·화면 공유 기능의 활성화 방법, 활용 사례, 플랜별 제공 일정을 정리한다.
+* [[Day 5] ChatGPT x Apple Intelligence](2024/2024-12-12-[Day 5] ChatGPT x Apple Intelligence.md) - Siri 연동, 문서 작성 도구, iPhone 16 카메라 비주얼 인텔리전스, macOS 통합 등 ChatGPT와 Apple Intelligence 결합 기능과 iOS·Mac에서의 활성화 절차를 정리한다.
+* [[Day 4] Canvas 기능, 전보다 확실히 더 좋아진듯?!](2024/2024-12-11-[Day 4] Canvas 기능, 전보다 확실히 더 좋아진듯_!.md) - ChatGPT Canvas의 협업 편집, 글쓰기·코딩 단축키, 버전 기록, Python 실행과 Custom GPT 연동을 예시로 살펴보고 시작 방법과 활용 팁을 정리한다.
+* [[Day 3] SORA 떴다!! 혁신적인 AI 비디오 생성 플랫폼의 등장](2024/2024-12-10-[Day 3] SORA 떴다!! 혁신적인 AI 비디오 생성 플랫폼의 등장.md) - 12 Days of OpenAI 3일차에 공개된 비디오 생성 플랫폼 Sora의 텍스트·이미지 기반 영상 생성, 스토리보드, 리믹스·블렌드·루프 기능과 Plus·Pro 요금제별 생성 한도를 정리한다.
+* [[Day 2] Reinforcement Fine-Tuning (RFT) 소개](2024/2024-12-07-[Day 2] Reinforcement Fine-Tuning (RFT) 소개.md) - 12 Days of OpenAI 둘째 날 공개된 강화 학습 기반 파인튜닝(RFT)의 채점기·보상 학습 원리, 소량 데이터로 추론 전략을 개선하는 특징, 희귀질환 유전자 예측 데모 결과와 알파 연구 프로그램을 소개한다.
+* [[Day 1] OpenAI o1 and o1 pro mode in ChatGPT](2024/2024-12-06-[Day 1] OpenAI o1 and o1 pro mode in ChatGPT.md) - 12 Days of OpenAI 첫날 발표된 월 200달러 ChatGPT Pro 플랜과 o1 Pro 모드의 특징, 4/4 reliability 지표, AIME·Codeforces·GPQA 벤치마크 개선, 멀티모달 입력과 대상 사용자를 정리한다.
+* [[TREND] 트렌스포머 이후의 차세대 아키텍쳐: MoE, SSM, RetNet, V-JEPA](2024/2024-11-30-[TREND] 트렌스포머 이후의 차세대 아키텍쳐_ MoE, SSM, RetNet, V-JEPA.md) - 트랜스포머의 O(n²) 연산·긴 시퀀스 한계를 짚고 대안으로 MoE(Switch Transformer), SSM(Mamba·Jamba), RetNet, V-JEPA의 원리와 특징을 안될공학 영상 서사에 따라 정리한다.
+* [[자료] KT 사내 직원 대상 RAG 교안 대방출?!](2024/2024-11-26-[자료] KT 사내 직원 대상 RAG 교안 대방출_!.md) - KT 사내 RAG 교안을 바탕으로 프롬프트·RAG·PEFT 비교, LangChain 기반 Naive RAG 구축, HyDE·Multi-Query·Ensemble·Re-Ranking 등 Advanced RAG, Ragas·DeepEval 평가까지 정리한다.
+* [[IT] 클라우드 컴퓨팅의 서비스 모델: IaaS, PaaS, SaaS와 최신 GPUaaS, IQaaS 비교](2024/2024-11-23-[IT] 클라우드 컴퓨팅의 서비스 모델_ IaaS, PaaS, SaaS와 최신 GPUaaS, IQaaS 비교.md) - 온프레미스부터 IaaS·PaaS·SaaS와 새로 등장한 GPUaaS·IQaaS까지 정의·비유·특징·제공업체·활용 사례를 비교하고, Coatue AI 리포트의 AI 스택 레이어와 연결해 장단점을 표로 정리한다.
+* [[정리] SK AI SUMMIT 키노트 정리 - Day2](2024/2024-11-10-[정리] SK AI SUMMIT 키노트 정리 - Day2.md) - K-스타트업 글로벌화 패널, SKT 개인 AI 에이전트 Aster와 글로벌 통신사 전략, SK하이닉스 HBM·CXL·PIM 대담, AI 에이전트 서비스 전망, 대한민국 AI G3 전략과 4대 플래그십을 정리한다.
+* [[정리] SK AI SUMMIT 키노트 정리 - Day1 오후](2024/2024-11-09-[정리] SK AI SUMMIT 키노트 정리 - Day1 오후.md) - Microsoft·Kai-Fu Lee·Penguin Solutions·Lambda·TerraPower·AMD·Arm·Perplexity 세션과 패널을 정리하며 AI 인프라, GPUaaS, 원자력 전력, 데이터 이동 에너지, 칩렛·패키징 논의를 담았다.
+* [[정리] SK AI SUMMIT 키노트 정리 - Day1 오전](2024/2024-11-08-[정리] SK AI SUMMIT 키노트 정리 - Day1 오전.md) - 최태원 회장 키노트, Greg Brockman 대담, SKT AI 인프라 슈퍼하이웨이, SK하이닉스 AI 메모리 로드맵을 정리하고 팹리스·파운드리·HBM 등 반도체 산업 구조와 8대 공정을 보충 설명한다.
+* [[Linux] 리눅스 파일 시스템 마운트 가이드](2024/2024-11-05-[Linux] 리눅스 파일 시스템 마운트 가이드.md) - /etc/fstab의 6개 필드 구조와 백업 요령, df -h·mount·umount·findmnt·blkid 명령어, 새 디스크·USB·NFS 마운트 사례와 noexec·nosuid 보안 옵션까지 다룬다.
+* [Unlearning : 머신러닝 모델도 '잊을 수 있다'](2024/2024-11-03-Unlearning _ 머신러닝 모델도 _잊을 수 있다_.md) - 머신 언러닝의 개념과 검증 절차, 정확·근사 언러닝 분류, 재학습·그라디언트 수정·지식 증류·SISA 기법, 프라이버시·편향 제거 관점의 필요성과 도전 과제를 정리한다.
+* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 4)](2024/2024-10-16-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 4).md) - 팬아웃·팬인 병렬화와 리듀서, 서브그래프 간 상태 공유, Send API 기반 Map-Reduce를 익힌 뒤 분석가 생성, Human-in-the-loop, 병렬 인터뷰, 보고서 작성으로 이어지는 STORM식 Research Assistant 멀티 에이전트를 구현한다.
+* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 3)](2024/2024-10-16-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 3).md) - stream/astream_events 스트리밍, interrupt_before 브레이크포인트와 update_state를 이용한 Human-in-the-loop, NodeInterrupt 동적 중단점, 체크포인트 기반 Time Travel 재생·포크를 정리한다.
+* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 2)](2024/2024-10-16-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 2).md) - TypedDict·Pydantic 상태 스키마, 병렬 업데이트 충돌을 푸는 리듀서, Input/Output/Private 다중 스키마, trim_messages 트리밍, 대화 요약 챗봇과 MemorySaver·SqliteSaver 체크포인터를 다룬다.
+* [[개념] GLU와 그 변형들: 역사와 주요 개념 정리](2024/2024-10-14-[개념] GLU와 그 변형들_ 역사와 주요 개념 정리.md) - Sigmoid부터 Swish까지 활성화 함수 계보를 훑고 GLU, Bilinear GLU, ReGLU, GEGLU, SwiGLU의 수식과 게이팅 원리, Transformer FFN에 적용했을 때의 성능 비교를 정리한다.
+* [[꿀팁] .bashrc로 로컬에서 ALIAS를 활용한 여러 쿠다 활용하기](2024/2024-10-10-[꿀팁] .bashrc로 로컬에서 ALIAS를 활용한 여러 쿠다 활용하기.md) - 시스템 전역이 아닌 홈 디렉토리에 CUDA 11.8·12.1.1과 cuDNN을 설치하고 .bashrc의 PATH·LD_LIBRARY_PATH alias로 버전을 전환하는 방법과 pyenv·pipenv 전환 alias 예시를 소개한다.
+* [[강의노트] LangChain Academy : Introduction to LangGraph (Module 1)](2024/2024-10-10-[강의노트] LangChain Academy _ Introduction to LangGraph (Module 1).md) - StateGraph의 노드·엣지·조건부 엣지, MessagesState와 add_messages 리듀서, 도구 바인딩, Router와 ReAct 에이전트, MemorySaver 체크포인터, LangGraph Cloud 배포 구성을 정리한다.
+* [[Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다](2024/2024-10-09-[Paper Review] NLP 공부하는 사람이라면 꼭 읽어야하는 논문 대신 정리해드립니다.md) - Word2Vec, GloVe, Seq2Seq, 어텐션, Transformer, ELMo, ULMFiT, GPT 시리즈, BERT, T5, LLaMA 1~3, Mistral 등 NLP 필독 논문 17편의 핵심 아이디어와 기여를 요약한다.
+* [[트렌드] 2025년 트렌드 : LMM, LAM, AGENT, 그리고 FMOps](2024/2024-10-02-[트렌드] 2025년 트렌드 _ LMM, LAM, AGENT, 그리고 FMOps.md) - 김지현 부사장 강연을 바탕으로 2025년 AI 키워드인 LMM, LAM, 온디바이스 AI, AI 에이전트, 임베디드 AI, FMOps가 왜 중요해지는지와 각각의 주요 특징을 정리한다.
+* [[Paper Review] Mamba2 - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024/2024-10-02-[Paper Review] Mamba2 - Transformers are SSMs_ Generalized Models and Efficient Algorithms Through Structured State Space Duality.md) - SSM과 어텐션이 반분리 행렬을 매개로 쌍대 관계임을 보이는 SSD 프레임워크, 블록 분해 기반 하드웨어 효율 알고리즘, Mamba-2 아키텍처와 Transformer 대비 실험 결과를 장별로 정리한다.
+* [[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS](2024/2024-10-02-[Paper Review] A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION_ FROM YOLOV1 TO YOLOV8 AND_YOLO-NAS.md) - YOLOv1부터 YOLOv8, YOLO-NAS까지 각 버전의 구조 변화를 서베이 논문 기준으로 정리하고 mAP·IoU·NMS 지표, 앵커 박스, Backbone-Neck-Head 구조, anchor-free와 decoupled head 도입을 설명한다.
 * [[Paper Review] Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2024/2024-09-29-[Paper Review] Mamba_ Linear-Time Sequence Modeling with Selective State Spaces.md) - Transformer의 이차 복잡도 한계를 배경으로 입력 의존적 파라미터 B, C, Δ를 도입한 선택적 SSM(S6), 커널 퓨전과 병렬 스캔 기반 하드웨어 최적화, Mamba 블록 구조와 언어·DNA·오디오 실험 결과를 정리한다.
 * [[Paper Review] Structured State Space Models for Deep Sequence Modeling](2024/2024-09-25-[Paper Review] Structured State Space Models for Deep Sequence Modeling.md) - SSM의 연속·재귀·합성곱 표현과 ZOH 이산화를 배경으로 HiPPO의 다항식 투영 메모리, LSSL의 세 가지 뷰, S4의 NPLR 파라미터화와 Cauchy 커널 기반 합성곱 계산까지 Albert Gu 연구 흐름을 정리한다.
 * [[개념] 인공지능을 위한 선형대수 : 행렬편](2024/2024-09-24-[개념] 인공지능을 위한 선형대수 _ 행렬편.md) - 행렬 곱셈, 역행렬, 전치 행렬부터 고윳값과 고유벡터, 기저, 대각화, 닮은 행렬, 직교 대각화, 특이값 분해(SVD)까지 딥러닝 논문 이해에 필요한 선형대수 개념을 예제 계산과 함께 정리한다.

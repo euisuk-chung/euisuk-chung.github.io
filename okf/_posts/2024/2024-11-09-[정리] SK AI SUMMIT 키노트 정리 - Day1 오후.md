@@ -1,16 +1,24 @@
-﻿---
+---
+type: "Conference Recap"
 title: "[정리] SK AI SUMMIT 키노트 정리 - Day1 오후"
+description: "Microsoft·Kai-Fu Lee·Penguin Solutions·Lambda·TerraPower·AMD·Arm·Perplexity 세션과 패널을 정리하며 AI 인프라, GPUaaS, 원자력 전력, 데이터 이동 에너지, 칩렛·패키징 논의를 담았다."
 date: "2024-11-09"
 tags:
+  - "SK AI Summit"
   - "Conference"
-  - "Conference | SK-AI"
+resource: "https://velog.io/@euisuk-chung/SKAISUMMIT2024DAY1-오후"
+generated:
+  by: "process:velog-sync"
+  at: "2024-12-21T17:39:19+09:00"
+sources:
+  - id: "velog"
+    resource: "https://velog.io/@euisuk-chung/SKAISUMMIT2024DAY1-오후"
+    title: "[정리] SK AI SUMMIT 키노트 정리 - Day1 오후"
+    author: "human:euisuk-chung"
+    last_modified: "2024-11-09"
+status: "stable"
 year: "2024"
 ---
-
-# [정리] SK AI SUMMIT 키노트 정리 - Day1 오후
-
-
-
 
 '`SK AI 서밋 2024`'는 2024년 11월 4일부터 5일까지 서울 코엑스에서 개최된 대규모 인공지능 행사로, 국내외 AI 석학과 기업가들이 참여하여 AI 시대의 공존 방안을 논의하고 생태계 강화 방안을 모색했습니다.
 
@@ -42,8 +50,7 @@ year: "2024"
 
 본 포스트는 **Day 1 오후 세션 발표 주제 정리**를 목적으로 작성되었습니다.
 
-**Day 1 오후 발표 주제 정리**
-=====================
+# **Day 1 오후 발표 주제 정리**
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/1f5bbaed-5b7b-44ba-ad27-54d1258fc833/image.png)
 
@@ -97,10 +104,7 @@ year: "2024"
 * **발표자:** Aravind Srinivas (Perplexity 공동창립자, CEO)
 * **내용:** Perplexity의 AI 검색 기술로 정보 탐구와 효율성을 높이는 방안.
 
----
-
-**5. AI의 미래**
--------------
+## **5. AI의 미래**
 
 > * **발표자:** Rani Borkar (Microsoft CVP)
 > * **내용:** Microsoft의 관점에서 본 AI 기술의 미래.
@@ -210,8 +214,7 @@ AI 시대는 새로운 기회와 도전을 제공합니다. 이는 아폴로 시
 
 > (후기) 가볍게 듣기 좋은 AI의 미래에 대한 이야기와, 현 시점의 중요성을 아폴로 달 탐사에 비유하여 `속도`, `규모`, `지속 가능성`이라는 키워드의 발전이 필요하다고 잘 서술한 것 같습니다. 😎
 
-**6. AI의 실현: GenAI의 잠재력을 발휘하고 더 건강한 생태계를 구축하기 위한 로드맵**
-------------------------------------------------------
+## **6. AI의 실현: GenAI의 잠재력을 발휘하고 더 건강한 생태계를 구축하기 위한 로드맵**
 
 > * **발표자:** Kai Fu Lee (Sinovation Ventures, Rhymes AI 회장)
 > * **영어 제목**: Making AI Work: A Roadmap to Unleash GenAI and Build a Healthier Ecosystem
@@ -329,10 +332,7 @@ AI 네이티브 앱이란 AI 기술을 핵심으로 하여 설계된 애플리�
 
 > (후기) 연구적인 측면 뿐만 아니라, 어플리케이션, 즉 실제 산업에서 어떻게 쓰일지, 그리고 유저에게 어떻게 접근해야하는지가 중요해지는 시대가 오는 거 같습니다 😎
 
----
-
-**7. AI Infra 구축 시장의 현황과 전망**
------------------------------
+## **7. AI Infra 구축 시장의 현황과 전망**
 
 > * **발표자:** Mark Adams (Penguin Solutions CEO)
 > * **영어 제목**: AI Infra Market: Current Status and Outlook
@@ -433,10 +433,7 @@ Penguin Solutions는 SK텔레콤과의 협력을 통해 AI 인프라의 최적�
 
 > (후기) Penguin Solutions는 AI 인프라를 관리하고 최적화하는 복잡성을 해결하고, AI 인프라의 신뢰성과 성능을 극대화함으로써 고객들에게 가치를 제공합니다. 기업들은 이러한 흐름에 발맞추어 AI를 활용해 경쟁력을 강화하고, 더 나아가 고객 중심의 혁신을 이루어야 할 것입니다. 본 강연에서는 이러한 **AI 시대를 준비하고 활용하기 위한 전략적 통찰**을 제공하고 있습니다.
 
----
-
-**8. 오픈 모델과 GPUs As-A-Service로 AI를 제어하라**
------------------------------------------
+## **8. 오픈 모델과 GPUs As-A-Service로 AI를 제어하라**
 
 > * **발표자:** Stephen Balaban (Lambda CEO)
 > * **영어 제목:** Take Control of AI with Open Models and GPUs As-A-Service(GPUaaS)
@@ -510,8 +507,7 @@ Penguin Solutions는 SK텔레콤과의 협력을 통해 AI 인프라의 최적�
 
 > (후기) 스티븐 발라반 CEO의 발표는 오픈 소스와 GPUaaS의 활용을 통해 AI 개발 환경이 어떻게 진화하고 있는지를 명확히 보여주었습니다. 오픈 소스 모델의 확산과 GPUaaS를 통해 누구나 AI 기술을 개발하고 활용할 수 있는 도구와 환경을 제공하는 것을 비즈니스 목표로 삼고 있다고 설명했습니다. 개인적으로 다른 GPU 제공 서비스들과 어떤 차별점이 있을지 궁금하네요 🤔
 
-**9. 패널토의: AI 시대 Infrastructure의 현재와 미래**
------------------------------------------
+## **9. 패널토의: AI 시대 Infrastructure의 현재와 미래**
 
 > * **내용:** AI 인프라의 발전 현황과 미래 방향에 대한 패널 토의.
 > * **참여자:**
@@ -602,10 +598,7 @@ AI 데이터센터 수요는 전 세계적으로 폭발적으로 증가하고 �
 
 > (후기) 이번 패널토론에서는 AI 시대 인프라의 현재와 미래를 이끄는 주요 기업과 인프라의 역할, 그리고 글로벌 파트너십의 중요성이 논의되었습니다. AI 데이터센터는 단순한 기술적 인프라를 넘어 AI 생태계의 핵심으로 자리 잡고 있으며, SK텔레콤과 같은 통신사는 AI 데이터센터 시장에서의 기회를 적극 활용하고 있다는 인식을 주었습니다.
 
----
-
-**10. 첨단 원자력 에너지로 AI 구동하기**
----------------------------
+## **10. 첨단 원자력 에너지로 AI 구동하기**
 
 > * **발표자:** Chris Levesque (TerraPower CEO)
 > * **내용:** 원자력 에너지를 통한 AI 구동 및 지속 가능한 에너지 전략.
@@ -682,10 +675,7 @@ TerraPower는 퇴역한 석탄 발전소를 활용해 새로운 원자력 발전
 
 > (후기) 첨단 원자력 발전을 AI에 도입한다는 개념을 이번 SK-Summit에서 처음 알게되었는데요. Chris Levesque CEO는 이 기술이 전 세계적인 전력 수요 증가에 대응할 중요한 솔루션이 될 것임을 확신하며, 특히 한국과의 협력을 통해 글로벌 에너지 문제를 해결하는 데 중요한 역할을 하기를 기대한다고 밝혔습니다. 앞으로 제대로만 유통/공급이 된다면 AI에 드는 수많은 전력 니즈를 충족해줄 수도 있겠다라는 생각이 들었습니다😋
 
----
-
-**11. AI 발전을 위한 기술적 요구사항**
---------------------------
+## **11. AI 발전을 위한 기술적 요구사항**
 
 > * **발표자:** Steve Scott (AMD Corporate Fellow)
 > * **내용:** AI 기술 발전을 위한 반도체와 기타 기술적 요구사항 논의.
@@ -950,10 +940,7 @@ AI 기술의 지속 가능한 발전과 확장은 단독 기업의 노력만으�
    * AMD는 AI 소프트웨어 개발 기업과 협력하여 하드웨어와 소프트웨어 간의 최적화를 도모합니다.
    * 이를 통해 하드웨어가 알고리즘의 연산 요구를 충족하도록 설계되고, 에너지 효율성도 높아질 수 있습니다.
 
----
-
-**12. Rethinking Silicon at the Dawn of the AI Era**
-----------------------------------------------------
+## **12. Rethinking Silicon at the Dawn of the AI Era**
 
 > * **발표자:** Mohamed Awad (Arm SVP)
 > * **내용:** AI 시대에 맞춰 실리콘 반도체 기술의 재구성 필요성.
@@ -1043,10 +1030,7 @@ AI 생태계 내에서 협력을 강화하기 위해 ARM은 **ARM Total Design**
 
 > (후기) 많은 세션들이 공통적으로 AI와 협력, 생태계 등을 키워드로 잡고 있는 것이 인상적이었습니다. ARM 역시 ARM Total Design이라는 협력 플랫폼을 통해 AI 생태계에서의 생존 전략을 펼치고 있는 것이 인상적이었습니다.
 
----
-
-**13. 패널토의: AI 반도체와 인프라의 진화**
------------------------------
+## **13. 패널토의: AI 반도체와 인프라의 진화**
 
 > * **참여자:** Steve Scott (AMD Corporate Fellow), Mohamed Awad (Arm SVP), Bryan Black (Chipletz CEO & Chairman), 이강욱 (SK하이닉스 부사장), Gary Grider (Los Alamos National Laboratory, HPC Division Leader, Moderator)
 > * **내용:** AI 반도체 기술의 진화와 인프라의 발전 방향.
@@ -1126,10 +1110,7 @@ Mohamed Awad는 AI의 잠재력을 실현하기 위해서는 생태계 전반에
 
 > (후기) 이번 패널 토론은 AI 칩과 인프라의 발전 방향을 논의하며, 기술적 과제와 협력의 중요성을 강조했습니다. ~~반도체쪽 지식이 부족해서 힘들었지만...ㅎ~~ 지속적인 혁신과 협력을 통해 더 나은 미래를 만들어가야 한다는 것을 강조했습니다.
 
----
-
-**14. Perplexity의 AI 검색으로 더욱 탐구적이고 효율적인 세상 만들기**
-------------------------------------------------
+## **14. Perplexity의 AI 검색으로 더욱 탐구적이고 효율적인 세상 만들기**
 
 > * **발표자:** Aravind Srinivas (Perplexity 공동창립자, CEO)
 > * **내용:** Perplexity의 AI 검색 기술로 정보 탐구와 효율성을 높이는 방안.
