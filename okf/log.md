@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-12
+* **Update**: Aligned review category tag order and explicit parent tags for [2026-09-11-openclaw-review.md](_posts/2026/2026-09-11-openclaw-review.md).
+
 ## 2026-09-11
 * **Update**: Converted [[Repo Review] OpenClaw — 메시지 한 건이 에이전트 실행과 응답으로 이어지는 구조](_posts/2026/2026-09-11-openclaw-review.md) to OKF for content review (PR #6); preserved existing article text.
 * **Update**: Migrated 16 posts of batch 2026 ([2026](_posts/2026/)) to OKF front matter and ATX headings.

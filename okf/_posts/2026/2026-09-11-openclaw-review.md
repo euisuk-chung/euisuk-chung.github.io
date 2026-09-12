@@ -8,6 +8,8 @@ tags:
   - "AI Agent"
   - "Network"
   - "Tools"
+  - "IT지식"
+  - "개념정리"
 resource: "https://github.com/openclaw/openclaw/tree/47918f787d845c1901887626e3cff14c245253e0"
 generated:
   by: "process:blog-review"
