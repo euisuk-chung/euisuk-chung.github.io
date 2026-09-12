@@ -238,8 +238,8 @@ featured-condition-size: 1   # 이 값보다 많은 글을 가진 태그만 노�
 
 ## 태그 페이지 (`okf/_concepts/`)
 
-태그는 세 곳에 노출됩니다: 포스트 상단 히어로(흰 pill), 포스트 본문 하단(`.post-tags-footer`),
-홈/아카이브/태그 페이지의 글 카드. 링크 대상은 `_includes/tag-url.html`이 한 곳에서 정합니다.
+태그는 두 곳에 노출됩니다: 포스트 상단 히어로(제목 위, 반투명 배경 pill)와
+홈/아카이브/태그 페이지의 글 카드. 본문 하단에는 중복 노출하지 않습니다. 링크 대상은 `_includes/tag-url.html`이 한 곳에서 정합니다.
 
 - `okf/_concepts/<slug>.md` 파일이 있는 태그 → `/tags/<slug>/` 전용 페이지(설명 + 해당 글 목록)
 - 없는 태그 → `/archive/?tag=<태그>` 클라이언트 필터로 폴백
