@@ -4,10 +4,10 @@ title: "[Paper Review] Programmable World Model: 실행 가능한 상태와 영�
 description: "명시적 엔진 상태를 3D OBB 제어 신호로 변환하여 영상의 객체 수와 상태 일관성을 높이는 Programmable World Model을 분석합니다."
 date: "2026-09-11"
 tags:
+  - "Paper Review"
   - "머신러닝"
   - "딥러닝"
   - "Computer Vision"
-  - "Paper Review"
 resource: "https://arxiv.org/abs/2609.10540v1"
 generated:
   by: "process:blog-review"

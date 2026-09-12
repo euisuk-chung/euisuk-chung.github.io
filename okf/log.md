@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-12
+* **Update**: Aligned review category tag order and explicit parent tags for [2026-09-11-programmable-world-model-review.md](_posts/2026/2026-09-11-programmable-world-model-review.md).
+
 ## 2026-09-11
 * **Update**: Converted [[Paper Review] Programmable World Model: 실행 가능한 상태와 영상 생성을 분리한 세계 모델](_posts/2026/2026-09-11-programmable-world-model-review.md) to OKF for content review (PR #5); preserved existing article text.
 * **Update**: Migrated 16 posts of batch 2026 ([2026](_posts/2026/)) to OKF front matter and ATX headings.
