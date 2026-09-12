@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-12
+* **Update**: Removed source-only HTML math wrappers from [2026-09-10-show-harness-review](_posts/2026/2026-09-10-show-harness-review.md); preserved all TeX and prose for GitHub and Jekyll rendering.
 * **Update**: Aligned review category tag order and explicit parent tags for [2026-09-10-show-harness-review.md](_posts/2026/2026-09-10-show-harness-review.md).
 
 ## 2026-09-11
