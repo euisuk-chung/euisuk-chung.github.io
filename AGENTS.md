@@ -44,3 +44,10 @@ Posts and tag concepts follow Google Cloud's Open Knowledge Format (OKF) v0.2: m
 - Concept files: the body is the `description` sentence, followed by `상위 개념: [Title](slug.md)` when `parent` is set; give a new concept `parent`/`related` when an obvious one exists, and back-apply it to existing posts on that topic (grep titles and bodies) in the same PR.
 - Duplicate posts (the crawler occasionally saves the same velog article twice): keep the copy that has `resource`, delete the other, and add `redirect_from` with the deleted post's pretty URL to the kept post (`jekyll-redirect-from` is enabled). Rows in `processed_posts.csv` reference the kept file only.
 
+
+## Review math and previews
+
+- Review source Markdown uses `$...$` inline and standalone `$$` lines around display math. Keep LaTeX commands and subscripts verbatim; do not escape `_` used for subscripts or add `markdown="0"` wrappers to source posts. Literal underscores such as `\text{file\_name}` stay escaped.
+- `_plugins/review_math.rb` protects review math during Jekyll builds only, preserving code examples and existing legacy wrappers. Test with `bundle exec ruby _scripts/test_review_math.rb` and inspect actual MathJax output. Standard review Markdown requires the custom Pages workflow; safe-mode legacy builds do not load this plugin.
+- `.github/workflows/pages.yml` builds published content from `master` and isolated previews at `/pr-preview/<PR number>/`. Preview builds load code/config only from `master` and allowlisted content/assets from same-repository review PRs. Never execute scripts, plugins, or workflows from PR heads for preview deployment.
+- Link the rendered preview at the top of content PR descriptions after its manifest SHA matches the current PR head. Keep the GitHub Markdown link for source review. Previews are labeled drafts and noindexed; content PRs still require human merging.
