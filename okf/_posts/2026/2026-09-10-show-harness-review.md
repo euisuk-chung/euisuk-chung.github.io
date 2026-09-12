@@ -4,9 +4,11 @@ title: "[Paper Review] Show-Harness 논문 리뷰: 의미 기반 행동 인터�
 description: "VLM의 판단을 작은 로봇 동작으로 연결하는 Show-Harness의 인터페이스, 실험, 부록을 원문 순서대로 분석합니다."
 date: "2026-09-10"
 tags:
+  - "Paper Review"
   - "AI Agent"
   - "Computer Vision"
-  - "Paper Review"
+  - "딥러닝"
+  - "머신러닝"
 resource: "https://arxiv.org/abs/2609.10522v1"
 generated:
   by: "process:blog-review"

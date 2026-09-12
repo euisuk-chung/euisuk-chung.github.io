@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-12
+* **Update**: Aligned review category tag order and explicit parent tags for [2026-09-10-show-harness-review.md](_posts/2026/2026-09-10-show-harness-review.md).
+
 ## 2026-09-11
 * **Update**: Converted [[Paper Review] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](_posts/2026/2026-09-10-show-harness-review.md) to OKF for content review (PR #2); preserved existing article text.
 * **Update**: Migrated 16 posts of batch 2026 ([2026](_posts/2026/)) to OKF front matter and ATX headings.
