@@ -199,7 +199,7 @@ SenseNova-U1.5는 이미지를 이해하는 모델과 이미지를 만드는 모
 **Unified Training Objectives.** 원문 식 (1)은 정답 텍스트 토큰의 조건부 음의 로그우도입니다.
 
 ```math
-\mathcal L_{\mathrm{AR}}=-\frac{1}{N}\sum_{n=1}^{N}\log p_\theta(x_n\mid x_{<n},\mathbf c).
+\mathcal L_{\mathrm{AR}}=-\frac{1}{N}\sum_{n=1}^{N}\log p_\theta(x_n\mid x_{\lt n},\mathbf c).
 ```
 
 N은 정답 토큰 수, x_n은 n번째 정답 토큰, x_{<n}은 이전 토큰, c는 앞선 멀티모달 문맥입니다. 정답을 순서대로 예측하도록 언어·이해 분기를 감독합니다.
