@@ -187,12 +187,10 @@ SenseNova-U1.5는 이미지를 이해하는 모델과 이미지를 만드는 모
 
 해상도 조건은 다음과 같습니다.
 
-<div markdown="0">
 $$
 \bar{\sigma}_R=\frac{\sigma_R(H,W)}{\sigma_{\max}},\qquad
 \mathbf{s}_t=\boldsymbol{\tau}_t+\mathrm{NSEmb}(\bar{\sigma}_R).
 $$
-</div>
 
 여기서 H와 W는 이미지 높이·너비, σ_R은 해당 해상도의 노이즈 크기, σ_max는 4096×4096 기준값입니다. τ_t는 diffusion 시간 임베딩이며 NSEmb는 정규화한 노이즈 크기를 인코딩하는 sinusoidal MLP입니다. 모델에는 “지금 어느 시간의 노이즈인가”와 “어떤 해상도에 대응하는 노이즈인가”를 함께 제공합니다. [원문 §3.1](https://arxiv.org/html/2609.11929v1#S3.SS1)
 
@@ -200,41 +198,33 @@ $$
 
 **Unified Training Objectives.** 원문 식 (1)은 정답 텍스트 토큰의 조건부 음의 로그우도입니다.
 
-<div markdown="0">
 $$
 \mathcal L_{\mathrm{AR}}=-\frac{1}{N}\sum_{n=1}^{N}\log p_\theta(x_n\mid x_{<n},\mathbf c).
 $$
-</div>
 
 N은 정답 토큰 수, x_n은 n번째 정답 토큰, x_{<n}은 이전 토큰, c는 앞선 멀티모달 문맥입니다. 정답을 순서대로 예측하도록 언어·이해 분기를 감독합니다.
 
 시각 생성에서는 정답 이미지 x와 표준 정규 노이즈 ε를 섞고, 모델이 깨끗한 종착점 x̂_θ를 예측합니다. 원문 식 (2)–(4)는 다음과 같습니다.
 
-<div markdown="0">
 $$
 \mathbf z_t=t\mathbf x+(1-t)\sigma_R(H,W)\boldsymbol\epsilon,
 \qquad \boldsymbol\epsilon\sim\mathcal N(0,\mathbf I),
 $$
-</div>
 
-<div markdown="0">
 $$
 \mathbf v_\theta=\frac{\hat{\mathbf x}_\theta-\mathbf z_t}{1-t},\qquad
 \mathbf v^\star=\frac{\mathbf x-\mathbf z_t}{1-t},\qquad
 \mathcal L_{\mathrm{Flow}}=\mathbb E[\|\mathbf v_\theta-\mathbf v^\star\|_2^2].
 $$
-</div>
 
 t는 0에서 1로 진행하는 경로 시간입니다. z_t는 중간 노이즈 상태이고, v_θ와 v★는 각각 예측 종착점과 정답 종착점으로 향하는 velocity입니다. 이 식은 픽셀 공간에서 두 velocity의 제곱 오차를 줄입니다. 분모가 있으므로 종착점 t=1을 식에 그대로 대입하는 계산과 구분해야 합니다. 본문은 이 경계의 구현 처리를 상세히 제시하지 않습니다.
 
 식 (5)–(6)은 지각 손실과 전체 가중합입니다.
 
-<div markdown="0">
 $$
 \mathcal L_{\mathrm{Perc}}=\mathrm{LPIPS}(\hat{\mathbf x}_\theta,\mathbf x),\qquad
 \mathcal L=\lambda_{\mathrm{AR}}\mathcal L_{\mathrm{AR}}+\lambda_{\mathrm{Flow}}\mathcal L_{\mathrm{Flow}}+\lambda_{\mathrm{Perc}}\mathcal L_{\mathrm{Perc}}.
 $$
-</div>
 
 LPIPS는 특징 공간에서 예측 이미지와 정답의 지각적 차이를 감독합니다. 세 λ는 각 손실의 가중치입니다. 따라서 VAE 없이 RGB를 생성한다는 설명과, 학습 때 특징 기반 지각 손실을 쓴다는 설명은 양립합니다. [원문 식 (1)–(6)](https://arxiv.org/html/2609.11929v1#S3.E1)
 
@@ -262,21 +252,17 @@ OCR 전문가는 영어 단어와 중국어 문자의 정확도에 집중합니�
 
 **Stage 5: Multi-Expert On-Policy Distillation.** 학생이 만든 중간 상태에서 해당 작업의 고정 교사가 velocity를 제공합니다. 원문 번호 없는 OPD 식은 다음과 같습니다.
 
-<div markdown="0">
 $$
 \mathcal L_{\mathrm{OPD}}=\mathbb E\left[\left\|\mathbf v_\theta(\operatorname{sg}(\hat{\mathbf x}_{\theta,t}),t,\mathbf c)-\mathbf v_m(\operatorname{sg}(\hat{\mathbf x}_{\theta,t}),t,\mathbf c)\right\|_2^2\right].
 $$
-</div>
 
 m은 작업별 교사, c는 텍스트 또는 텍스트·이미지 조건입니다. x̂_{θ,t}는 여기서는 학생이 생성한 경로상의 상태를 가리킵니다. sg는 stop-gradient로, 앞선 전체 샘플링 경로로 역전파하지 않습니다. 교사와 학생은 **같은 상태·같은 시간·같은 조건**에서 비교됩니다. 완성된 교사 이미지에만 맞추는 증류와 구별되는 지점입니다.
 
 교사에 질문할 경로 위치도 학습 중 바뀝니다.
 
-<div markdown="0">
 $$
 t_e\sim\mathrm{Beta}\left(2+\frac{3n}{N},\ 5-\frac{3n}{N}\right).
 $$
-</div>
 
 n은 현재 epoch, N은 전체 epoch 수입니다. Beta(2,5)에서 Beta(5,2) 쪽으로 이동해 초기 고노이즈 구조에서 후기 저노이즈 세부와 문자로 감독 중심을 옮깁니다. 두 종류의 작업 모두 30-step 결정론적 ODE를 사용하되 경로당 한 시점을 조회하고 그 뒤 불필요한 경로는 계산하지 않습니다.
 
@@ -288,11 +274,9 @@ n은 현재 epoch, N은 전체 epoch 수입니다. Beta(2,5)에서 Beta(5,2) 쪽
 
 **OCR Reward.** 프롬프트에서 목표 문자를 추출하고 생성 이미지에 PaddleOCR를 적용합니다. 대소문자·문장부호·공백을 정규화한 뒤 영어는 단어, 중국어는 문자로 나눕니다. 원문 식 (7)은 중복 개수를 보존하는 multiset IoU입니다.
 
-<div markdown="0">
 $$
 R_{\mathrm{ocr}}=\frac{\sum_u\min(g_u,o_u)}{\sum_u\max(g_u,o_u)}.
 $$
-</div>
 
 g_u와 o_u는 각 토큰 u의 목표·인식 횟수입니다. 시간 t와 혼동하지 않도록 여기서는 원문의 토큰 인덱스 t를 u로 표기했습니다. 분자는 일치한 횟수, 분모는 합집합 횟수이므로 누락·중복·잘못 추가된 문자 모두 점수에 영향을 줍니다. 읽기 순서가 불안정한 조밀한 배치에서도 사용하도록 설계했습니다. 점수 하나가 문자의 위치·스타일 전부를 평가한다는 뜻은 아닙니다.
 
@@ -300,11 +284,9 @@ g_u와 o_u는 각 토큰 u의 목표·인식 횟수입니다. 시간 t와 혼동
 
 **Editing Reward.** VLM이 지시 충족, 편집 실행 품질, 전체 시각 품질, 필요할 때 문자 편집, 비편집 영역 보존을 평가합니다. 여러 하위 차원이 있으면 그 안에서도 최솟값을 택하고, 정규화 후 식 (10)으로 합칩니다.
 
-<div markdown="0">
 $$
 R_{\mathrm{edit}}=\min\left(\{R_{\mathrm{inst}},R_{\mathrm{exec}},R_{\mathrm{visual}},R_{\mathrm{pres}}\}\cup\{R_{\mathrm{text}}\mid\text{text editing applies}\}\right).
 $$
-</div>
 
 각 R은 앞서 나열한 차원의 점수입니다. 문자 수정 요청이 없으면 R_text를 제외하고, 요청된 변화가 보이지 않으면 실행 점수를 0으로 만듭니다. 평균을 사용하면 잘 그린 이미지가 지시 불이행을 상쇄할 수 있지만, 최솟값은 가장 약한 차원을 드러냅니다.
 
