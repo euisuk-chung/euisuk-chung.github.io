@@ -2,12 +2,16 @@
 require 'cgi'
 
 module ReviewMath
-  TOKENS = /(?<legacy><div[ ]markdown="0">.*?<\/div>|<span[ ]markdown="0">.*?<\/span>)|(?<fence>^[ \t]*(?<ticks>`{3,}|~{3,})[^\n]*\n.*?^[ \t]*\k<ticks>[ \t]*$)|(?<code>(?<tick>`+)[^\n]*?\k<tick>)|(?<escaped>\\.)|(?<display>\$\$.*?\$\$)|(?<inline>\$(?![\s$])(?:\\.|[^$\n\\])*?(?<!\s)\$)/mx
+  TOKENS = /(?<legacy><div[ ]markdown="0">.*?<\/div>|<span[ ]markdown="0">.*?<\/span>)|(?<mathfence>^```math[ \t]*\n(?<mathbody>.*?)^```[ \t]*$)|(?<quoted>\$`(?<quotedbody>[^`\n]+)`\$)|(?<fence>^[ \t]*(?<ticks>`{3,}|~{3,})[^\n]*\n.*?^[ \t]*\k<ticks>[ \t]*$)|(?<code>(?<tick>`+)[^\n]*?\k<tick>)|(?<escaped>\\.)|(?<display>\$\$.*?\$\$)|(?<inline>\$(?![\s$])(?:\\.|[^$\n\\])*?(?<!\s)\$)/mx
 
   def self.protect(content)
     content.gsub(TOKENS) do |token|
       match = Regexp.last_match
-      if match[:display]
+      if match[:mathfence]
+        "\n<div markdown=\"0\">\n$$\n#{CGI.escapeHTML(match[:mathbody])}$$\n</div>\n"
+      elsif match[:quoted]
+        "<span markdown=\"0\">$#{CGI.escapeHTML(match[:quotedbody])}$</span>"
+      elsif match[:display]
         "\n<div markdown=\"0\">\n#{CGI.escapeHTML(token)}\n</div>\n"
       elsif match[:inline]
         "<span markdown=\"0\">#{CGI.escapeHTML(token)}</span>"

@@ -25,3 +25,10 @@ legacy = '<div markdown="0">' + "\n$$\nx_t\n$$\n</div>"
 raise 'legacy broken' unless ReviewMath.protect(legacy) == legacy
 raise 'escaped underscore changed' unless ReviewMath.protect('$\text{file\_name}$').include?('file\_name')
 puts 'Review math: formulas, HTML safety, code, currency, legacy and idempotence PASS'
+
+github = "```math\nx_t=\\left\\{y_t\\right\\}\n```\n$`x_i`$ and $`\\mathrm{Concat}`$\n"
+rendered = converter.convert(ReviewMath.protect(github))
+raise 'math fence lost TeX' unless rendered.include?('x_t=\\left\\{y_t\\right\\}')
+raise 'quoted inline not math' unless rendered.include?('$x_i$') && rendered.include?('$\\mathrm{Concat}$')
+raise 'math fence still code' if rendered.include?('<code')
+puts 'GitHub math fences and quoted inline math PASS'
