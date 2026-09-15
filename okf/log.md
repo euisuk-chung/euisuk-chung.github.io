@@ -1,5 +1,10 @@
 # Update Log
 
+## 2026-09-12
+* **Update**: Removed source-only HTML math wrappers from [2026-09-12-sensenova-u15-review](_posts/2026/2026-09-12-sensenova-u15-review.md); preserved all TeX and prose for GitHub and Jekyll rendering.
+
+* **Creation**: Added [SenseNova-U1.5 논문 리뷰](_posts/2026/2026-09-12-sensenova-u15-review.md), with version-pinned sources and Figures 3–4.
+
 ## 2026-09-11
 * **Update**: Added concept [Repo Review](_concepts/repo-review.md) as the category tag for repository reviews (`type: Repo Review`), mirroring [Paper Review](_concepts/paper-review.md).
 * **Update**: Removed 5 duplicate 2025 posts (Operator, Easy! 딥러닝, Perplexity/BLEU, Canvas LaTeX, Midjourney) that the crawler had saved twice; the kept posts carry `redirect_from` for the old URLs.
