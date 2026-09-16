@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-17
+* **Creation**: Added [Is Bash All You Need?](_posts/2026/2026-09-16-is-bash-all-you-need-review.md), a paper review comparing five enterprise-agent tool interfaces, with source Figure 1 and Table 1.
+
 ## 2026-09-11
 * **Update**: Added concept [Repo Review](_concepts/repo-review.md) as the category tag for repository reviews (`type: Repo Review`), mirroring [Paper Review](_concepts/paper-review.md).
 * **Update**: Removed 5 duplicate 2025 posts (Operator, Easy! 딥러닝, Perplexity/BLEU, Canvas LaTeX, Midjourney) that the crawler had saved twice; the kept posts carry `redirect_from` for the old URLs.
