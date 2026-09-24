@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-24
+* **Creation**: Added [TabPFN-3 technical report review](_posts/2026/2026-09-24-tabpfn-3-review.md), covering arXiv 2605.13986v2 with source figures and evaluation conditions.
+
 ## 2026-09-11
 * **Update**: Added concept [Repo Review](_concepts/repo-review.md) as the category tag for repository reviews (`type: Repo Review`), mirroring [Paper Review](_concepts/paper-review.md).
 * **Update**: Removed 5 duplicate 2025 posts (Operator, Easy! 딥러닝, Perplexity/BLEU, Canvas LaTeX, Midjourney) that the crawler had saved twice; the kept posts carry `redirect_from` for the old URLs.
