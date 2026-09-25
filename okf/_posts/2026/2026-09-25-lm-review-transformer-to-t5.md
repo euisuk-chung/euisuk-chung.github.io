@@ -298,8 +298,9 @@ class Seq2SeqTransformer(nn.Module):
         tgt_mask = self.transformer.generate_square_subsequent_mask(tgt_in.size(1))
         h = self.transformer(self.embed(self.src_emb, src), self.embed(self.tgt_emb, tgt_in),
                              tgt_mask=tgt_mask,                       # Decoder causal mask
-                             src_key_padding_mask=(src == PAD),
-                             tgt_key_padding_mask=(tgt_in == PAD))
+                             src_key_padding_mask=(src == PAD),       # Encoder self-attn: 원문 pad 가림
+                             tgt_key_padding_mask=(tgt_in == PAD),    # Decoder self-attn: 번역문 pad 가림
+                             memory_key_padding_mask=(src == PAD))    # Cross-attn: 원문 pad 가림
         return self.lm_head(h)                                        # (B, T_tgt, VOCAB)
 
 model = Seq2SeqTransformer()
