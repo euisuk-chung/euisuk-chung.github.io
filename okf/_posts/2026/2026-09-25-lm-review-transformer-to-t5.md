@@ -38,6 +38,7 @@ sources:
     title: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
 status: "stable"
 year: "2026"
+source_type: "paper"
 visual_sources:
   - path: "img/reviews/2026/lm-review-transformer-to-t5/transformer-architecture.png"
     kind: "paper-figure"
