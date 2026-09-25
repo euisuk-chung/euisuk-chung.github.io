@@ -91,16 +91,11 @@ visual_sources:
     source_url: "https://arxiv.org/abs/2005.14165"
     figure: "2.1"
     caption: "Zero-shot, One-shot, Few-shot과 전통적 파인튜닝 비교."
-  - path: "img/reviews/2026/lm-review-transformer-to-t5/bart-bert.png"
+  - path: "img/reviews/2026/lm-review-transformer-to-t5/bart-figure1.png"
     kind: "paper-figure"
     source_url: "https://arxiv.org/abs/1910.13461"
-    figure: "1a"
-    caption: "BERT 방식: 양방향 인코더."
-  - path: "img/reviews/2026/lm-review-transformer-to-t5/bart-gpt.png"
-    kind: "paper-figure"
-    source_url: "https://arxiv.org/abs/1910.13461"
-    figure: "1b"
-    caption: "GPT 방식: 자기회귀 디코더."
+    figure: "1"
+    caption: "BERT(a), GPT(b), BART(c) 구조 비교. arXiv 소스의 세 하위 그림을 원문 배치대로 한 장으로 이어 붙였습니다."
   - path: "img/reviews/2026/lm-review-transformer-to-t5/bart-overview.png"
     kind: "paper-figure"
     source_url: "https://arxiv.org/abs/1910.13461"
@@ -162,11 +157,11 @@ visual_sources:
 | BART | 2019, Facebook AI | Encoder–Decoder | 노이즈가 섞인 문서 → 원문 복원 | 요약, 생성, 분류 |
 | T5 | 2019, Google | Encoder–Decoder | Span corruption (가린 span만 생성) | 모든 태스크를 text-to-text로 |
 
-![Transformer 기반 사전학습 구조 비교: Encoder-Decoder, Language model, Prefix LM]({{ '/img/reviews/2026/lm-review-transformer-to-t5/t5-architectures.png' | relative_url }})
+![BERT의 양방향 인코더, GPT의 자기회귀 디코더, BART의 인코더-디코더 구조 비교]({{ '/img/reviews/2026/lm-review-transformer-to-t5/bart-figure1.png' | relative_url }})
 
-*T5 논문 Figure 4. 왼쪽부터 Encoder–Decoder(Transformer, BART, T5), Language model(GPT), Prefix LM입니다. 선의 연결이 곧 어텐션 마스크입니다. [원문](https://arxiv.org/abs/1910.10683)*
+*BART 논문 Figure 1. 왼쪽부터 (a) BERT: 양방향 인코더가 가려진 토큰(B, D)을 제자리에서 맞힘, (b) GPT: 자기회귀 디코더가 왼쪽만 보고 다음 토큰을 맞힘, (c) BART: 손상된 입력을 양방향 인코더로 읽고 자기회귀 디코더가 원문 전체를 생성. T5와 원래 Transformer도 (c)와 같은 Encoder–Decoder 구조입니다. 세 하위 그림을 원문 배치대로 한 장으로 이어 붙였습니다. [원문](https://arxiv.org/abs/1910.13461)*
 
-이 그림 한 장이 글 전체의 요약입니다. 이후의 모든 차이는 결국 **"각 위치의 토큰이 어느 토큰을 볼 수 있는가(어텐션 마스크)"**와 **"loss를 어느 위치에 거는가"** 두 가지로 설명됩니다.
+이 그림 한 장이 글 전체의 지도입니다. 인코더만 쓰는 BERT, 디코더만 쓰는 GPT, 둘을 모두 쓰는 Transformer·BART·T5로 나뉩니다. 이후의 모든 차이는 결국 **"각 위치의 토큰이 어느 토큰을 볼 수 있는가(어텐션 마스크)"**와 **"loss를 어느 위치에 거는가"** 두 가지로 설명됩니다.
 
 ## 1. 트랜스포머 (Transformer)
 
@@ -620,12 +615,9 @@ print(tok.decode(out[0], skip_special_tokens=True))
 
 BERT(양방향 인코더)는 이해에 강하고, GPT(단방향 디코더)는 생성에 강합니다. **둘을 합치면 어떨까?**라는 질문에 대한 2019년의 두 가지 답이 BART와 T5입니다. 둘 다 원래 Transformer와 같은 **Encoder–Decoder** 구조에 **노이즈 제거(denoising) 사전학습**을 결합했습니다.
 
-![BERT 방식: 양방향 인코더]({{ '/img/reviews/2026/lm-review-transformer-to-t5/bart-bert.png' | relative_url }})
-![GPT 방식: 자기회귀 디코더]({{ '/img/reviews/2026/lm-review-transformer-to-t5/bart-gpt.png' | relative_url }})
-
 ![BART: 양방향 인코더와 자기회귀 디코더의 결합]({{ '/img/reviews/2026/lm-review-transformer-to-t5/bart-overview.png' | relative_url }})
 
-*BART 논문 Figure 1. (a) BERT: 가린 토큰을 독립적으로 예측하므로 생성에 약합니다. (b) GPT: 왼쪽 문맥만 봅니다. (c) BART: 손상된 문서를 양방향 인코더로 읽고, 자기회귀 디코더로 **원문 전체**를 복원합니다. [원문](https://arxiv.org/abs/1910.13461)*
+*BART 논문 Figure 1(c). 글 맨 앞 그림의 오른쪽 부분입니다. (a) BERT는 가린 토큰을 서로 독립적으로 예측하므로 생성에 약하고, (b) GPT는 왼쪽 문맥만 봅니다. (c) BART는 손상된 문서를 양방향 인코더로 읽고, 자기회귀 디코더로 **원문 전체**를 복원합니다. [원문](https://arxiv.org/abs/1910.13461)*
 
 ### 5.1 BART
 
@@ -754,7 +746,7 @@ print(sum_tok.decode(summary_ids[0], skip_special_tokens=True))
 | 타깃 길이 | 길다 (원문 길이) | 짧다 (원문의 약 15%) → 학습 비용이 적음 |
 | 다운스트림 형식 | 태스크별 head(분류) 또는 생성 | 전부 텍스트 생성 (prefix로 구분) |
 
-**Contribution: 체계적인 비교 연구.** T5 논문은 새 모델 하나를 제안하는 데 그치지 않고, 구조(Encoder–Decoder vs LM vs Prefix LM), 사전학습 목표(LM, BERT식, deshuffling, span corruption 등), 데이터셋, 전이 학습 전략, 스케일을 **같은 조건에서 비교한 대규모 실험 보고서**입니다. 결론은 "Encoder–Decoder + span corruption + 대규모 정제 데이터 + 큰 모델"이 가장 좋았다는 것이고, 11B 모델로 GLUE, SuperGLUE(89.3, 사람 89.8), SQuAD, CNN/DM에서 SOTA를 기록했습니다.
+**Contribution: 체계적인 비교 연구.** T5 논문은 새 모델 하나를 제안하는 데 그치지 않고, 구조(Encoder–Decoder vs LM vs Prefix LM, 6.1절 참고), 사전학습 목표(LM, BERT식, deshuffling, span corruption 등), 데이터셋, 전이 학습 전략, 스케일을 **같은 조건에서 비교한 대규모 실험 보고서**입니다. 결론은 "Encoder–Decoder + span corruption + 대규모 정제 데이터 + 큰 모델"이 가장 좋았다는 것이고, 11B 모델로 GLUE, SuperGLUE(89.3, 사람 89.8), SQuAD, CNN/DM에서 SOTA를 기록했습니다.
 
 **후속 모델**: T5 v1.1(GeGLU, C4만 사용해 사전학습), mT5(101개 언어), **Flan-T5**(1,800여 개 태스크로 instruction tuning), UL2(여러 denoising 목표 혼합).
 
@@ -824,6 +816,44 @@ print(prefix_lm)
 1. **양방향 = 정보 누설 위험.** 양방향 어텐션에서 "다음 토큰 맞히기"를 하면 정답이 입력에 그대로 보입니다. 그래서 BERT는 **정답을 가리는(MASK)** 방식을 택했고, 그 대가로 전체 토큰 중 일부에서만 학습 신호를 얻습니다.
 2. **Causal = 누설 없음 + 전 위치 학습.** 오른쪽을 가려 두면 모든 위치에서 동시에 "다음 토큰"을 맞히는 문제를 낼 수 있습니다. 데이터 효율이 좋고 구조가 단순해서 스케일을 키우기 쉽습니다. 오늘날 LLM이 대부분 디코더 전용인 이유 중 하나입니다.
 3. **인코더–디코더 = 입력과 출력의 역할 분리.** 입력(원문)은 양방향으로 충분히 이해하고, 출력은 causal하게 생성합니다. 입력과 출력이 명확히 구분되는 번역·요약에 자연스럽게 맞습니다.
+
+### 6.1 Prefix LM: 읽기는 양방향, 쓰기는 causal
+
+위 Figure 3의 세 번째 마스크(Causal with prefix)를 쓰는 구조가 **Prefix LM**입니다. T5 논문은 세 가지 구조를 같은 조건에서 비교했습니다.
+
+![Encoder-Decoder, Language model, Prefix LM 구조 비교]({{ '/img/reviews/2026/lm-review-transformer-to-t5/t5-architectures.png' | relative_url }})
+
+*T5 논문 Figure 4. 왼쪽부터 Encoder–Decoder(Transformer, BART, T5), Language model(GPT), Prefix LM입니다. 선의 연결이 곧 어텐션 마스크입니다. Prefix LM에서는 아래쪽 `x1 x2 x3`끼리 모두 연결되어 있고(양방향), `y1 y2`는 prefix 전체와 자기 왼쪽만 봅니다. [원문](https://arxiv.org/abs/1910.10683)*
+
+**Prefix LM은 Decoder 하나만 쓰면서 어텐션 마스크만 바꿔서, 입력(prefix)은 인코더처럼 양방향으로 읽고 출력(target)은 GPT처럼 causal하게 생성하는 구조**입니다. Encoder–Decoder를 파라미터를 공유하는 한 스택 안에 합쳐 놓은 형태라고 볼 수 있습니다. 위 코드의 `prefix_lm` 행렬이 바로 이 마스크입니다. GPT의 causal mask에서 왼쪽 위 prefix 블록만 전부 1로 채운 것입니다.
+
+```
+          x1  x2  x3 | y1  y2
+x1         ✓   ✓   ✓ |  ✗   ✗     ← prefix끼리는 서로 다 봄 (양방향)
+x2         ✓   ✓   ✓ |  ✗   ✗
+x3         ✓   ✓   ✓ |  ✗   ✗
+y1         ✓   ✓   ✓ |  ✓   ✗     ← target은 prefix 전체 + 자기 왼쪽만 (causal)
+y2         ✓   ✓   ✓ |  ✓   ✓
+```
+
+**학습 방식.** prefix와 target을 한 시퀀스로 이어 붙이고, **loss는 target 위치에서만** 계산합니다(prefix 위치의 라벨은 `-100`). 7.3절의 GPT SFT와 같은 라벨 구성입니다. 차이는 SFT가 프롬프트를 causal하게 읽고, Prefix LM은 **프롬프트를 양방향으로** 읽는다는 점 하나입니다. T5 논문의 사전학습 실험에서는 라벨 없는 텍스트를 임의 지점에서 잘라 앞부분을 prefix, 뒷부분을 target으로 썼습니다.
+
+```
+시퀀스 : translate English to German: That is good.  |  Das ist gut. </s>
+         └──────────── prefix (양방향) ─────────────┘   └─ target (causal) ─┘
+labels : -100 ... -100                                  Das  ist  gut. </s>
+```
+
+| | Encoder–Decoder | Language model (GPT) | Prefix LM |
+|---|---|---|---|
+| Transformer 스택 | 2개 (Enc, Dec) | 1개 | **1개** |
+| 입력(prefix) 부분 | 양방향 (Encoder) | 왼쪽만 | **양방향** |
+| 출력(target) 부분 | causal + cross-attention | causal | causal (prefix 전체 + 자기 왼쪽) |
+| 입력을 참조하는 방법 | cross-attention | 같은 시퀀스의 self-attention | 같은 시퀀스의 self-attention |
+
+**Prefix LM = BERT인가?** 아닙니다. 양방향인 것은 **prefix 구간뿐**이고, prefix에는 맞힐 정답(loss)이 없습니다. BERT는 시퀀스 **전체**를 양방향으로 보면서 그 안의 빈칸을 제자리에서 맞히고, 정보 누설을 막으려고 정답을 `[MASK]`로 가립니다. Prefix LM은 가리는 대신 정답이 있는 target 구간을 **causal로 막아서** 누설을 피합니다. 그래서 Prefix LM은 BERT와 "읽는 방식"만 같고, 학습 목표와 용도(생성)는 GPT·T5 쪽입니다. 굳이 비유하면 **BERT처럼 읽고(prefix) GPT처럼 쓰는(target)** 구조이고, 구조적으로는 Encoder–Decoder에 가장 가깝습니다.
+
+**T5 논문의 결론과 그 이후.** T5 실험에서는 Encoder–Decoder가 가장 좋았고, Prefix LM은 그보다 조금 낮았으며, 순수 causal LM이 가장 낮았습니다. 입력을 양방향으로 보는 것이 분명히 도움이 된다는 뜻이고, 그래서 T5는 Encoder–Decoder를 택했습니다. 이후 UniLM(2019)은 한 모델에서 마스크만 바꿔 양방향·단방향·seq2seq(Prefix LM)를 함께 학습했고, UL2(2022)는 여러 denoising 목표 중 하나로 Prefix LM을 썼습니다. 다만 지금의 채팅 LLM은 대부분 순수 causal LM입니다. 모든 토큰에서 loss를 얻는 쪽이 학습 효율이 높고, 멀티턴 대화에서는 prefix 경계가 계속 뒤로 밀리기 때문입니다. Prefix LM에서는 새 턴이 오면 앞부분의 표현까지 바뀌어야 해서, 앞 토큰의 KV cache를 그대로 이어 쓰기 어렵습니다.
 
 ## 7. 학습·검증 데이터 샘플과 loss 계산 디테일
 
