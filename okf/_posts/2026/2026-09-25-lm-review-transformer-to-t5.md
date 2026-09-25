@@ -295,7 +295,8 @@ class Seq2SeqTransformer(nn.Module):
         return emb(ids) + self.pos(pos)
 
     def forward(self, src, tgt_in):
-        tgt_mask = self.transformer.generate_square_subsequent_mask(tgt_in.size(1))
+        T = tgt_in.size(1)
+        tgt_mask = torch.triu(torch.ones(T, T, dtype=torch.bool), diagonal=1)   # True = 가림 (대각선 위 = 미래)
         h = self.transformer(self.embed(self.src_emb, src), self.embed(self.tgt_emb, tgt_in),
                              tgt_mask=tgt_mask,                       # Decoder causal mask
                              src_key_padding_mask=(src == PAD),       # Encoder self-attn: 원문 pad 가림
