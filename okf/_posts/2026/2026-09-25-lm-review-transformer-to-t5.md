@@ -247,7 +247,9 @@ lr = d_{model}^{-0.5} \cdot \min\left(step^{-0.5},\ step \cdot warmup^{-1.5}\rig
 
 ### 1.5 코드로 보기
 
-**Scaled dot-product attention과 causal mask**
+두 단계로 봅니다. (1) Transformer의 핵심 연산인 어텐션 함수를 직접 구현해서 마스크가 어떻게 작동하는지 확인하고, (2) PyTorch의 `nn.Transformer`로 teacher forcing 학습 한 step을 돌려 봅니다.
+
+#### (1) Scaled dot-product attention과 마스크
 
 ```python
 import math
@@ -259,19 +261,56 @@ def scaled_dot_product_attention(q, k, v, mask=None):
     scores = q @ k.transpose(-2, -1) / math.sqrt(q.size(-1))   # (B, H, T_q, T_k)
     if mask is not None:
         scores = scores.masked_fill(mask == 0, float("-inf"))  # 볼 수 없는 위치는 -inf
-    attn = F.softmax(scores, dim=-1)
-    return attn @ v, attn
+    attn = F.softmax(scores, dim=-1)                           # 행(Query)마다 합이 1
+    return attn @ v, attn                                      # (B, H, T_q, d_k)
 
-T = 4
-causal_mask = torch.tril(torch.ones(T, T))   # 아래 삼각형만 1 → 자기 자신과 왼쪽만 볼 수 있음
-print(causal_mask)
-# tensor([[1., 0., 0., 0.],
-#         [1., 1., 0., 0.],
-#         [1., 1., 1., 0.],
-#         [1., 1., 1., 1.]])
+torch.manual_seed(0)
+x = torch.randn(1, 1, 4, 8)                  # B=1, H=1, 토큰 4개, d_k=8 (self-attention이라 q=k=v=x)
+
+_, a_enc = scaled_dot_product_attention(x, x, x)                                 # (a) Encoder: 마스크 없음
+causal = torch.tril(torch.ones(4, 4))                                            # 아래 삼각형만 1
+_, a_dec = scaled_dot_product_attention(x, x, x, causal)                         # (b) Decoder: causal mask
+pad = torch.tensor([1, 1, 1, 0]).view(1, 1, 1, 4)                                # 4번째 토큰이 <pad>
+_, a_pad = scaled_dot_product_attention(x, x, x, pad)                            # (c) Encoder: padding mask
+print(a_enc[0, 0].round(decimals=2), a_dec[0, 0].round(decimals=2), a_pad[0, 0].round(decimals=2), sep="\n")
 ```
 
-**`nn.Transformer`로 teacher forcing 학습 한 step**
+**한 줄씩 보기**
+
+- `q @ k.transpose(-2, -1)`: `q`는 (B, H, T_q, d_k), `k`를 전치하면 (B, H, d_k, T_k)이므로 결과는 **(B, H, T_q, T_k)**입니다. `scores[b, h, i, j]`는 **i번째 토큰(Query)이 j번째 토큰(Key)을 얼마나 볼지**를 나타내는 점수입니다. 행은 "보는 쪽", 열은 "보이는 쪽"입니다.
+- `/ math.sqrt(q.size(-1))`: d_k가 클수록 내적 값이 커져서 softmax가 한 칸으로 쏠립니다. 이를 막기 위해 나눕니다.
+- `masked_fill(mask == 0, -inf)`: mask가 0인 칸을 -∞로 바꾸면 softmax에서 `exp(-∞) = 0`이 되어 가중치가 **정확히 0**이 됩니다. 0을 곱하지 않고 -∞를 넣는 이유는, 가린 칸을 뺀 **나머지 칸끼리 합이 다시 1이 되도록** 정규화하기 위해서입니다.
+- `attn @ v`: 각 Query 토큰의 출력은 **Value 벡터들을 attn 비율로 가중평균**한 것입니다.
+
+**실행 결과: 같은 입력에 마스크만 바꾼 어텐션 행렬** (행 = 보는 토큰, 열 = 보이는 토큰)
+
+```
+(a) Encoder, 마스크 없음          (b) Decoder, causal mask          (c) Encoder, padding mask
+[[0.77, 0.07, 0.02, 0.13],       [[1.00, 0.00, 0.00, 0.00],       [[0.89, 0.09, 0.03, 0.00],
+ [0.16, 0.42, 0.06, 0.36],        [0.27, 0.73, 0.00, 0.00],        [0.25, 0.65, 0.10, 0.00],
+ [0.01, 0.01, 0.98, 0.00],        [0.01, 0.01, 0.98, 0.00],        [0.01, 0.01, 0.98, 0.00],
+ [0.17, 0.23, 0.01, 0.58]]        [0.17, 0.23, 0.01, 0.58]]        [0.41, 0.55, 0.03, 0.00]]
+```
+
+- (a) 모든 토큰이 모든 토큰을 봅니다(양방향).
+- (b) 위쪽 삼각형이 0입니다. 2번째 행은 (a)에서 `0.16, 0.42`였지만 (b)에서는 `0.27, 0.73`입니다. 가려진 칸이 빠지고 **남은 칸끼리 재정규화**된 것입니다. 마지막 행은 원래 전부 볼 수 있으므로 (a)와 같습니다.
+- (c) 모든 행에서 4번째 열(`<pad>`)이 0입니다.
+
+**Encoder에는 마스크가 필요 없나?** causal mask는 필요 없지만 **padding mask는 필요합니다.** 배치 안의 문장 길이를 맞추려고 짧은 문장 뒤를 `<pad>`로 채우는데, 이를 가리지 않으면 같은 문장이라도 배치에서 옆에 어떤 문장이 있느냐에 따라 표현이 달라집니다.
+
+| 어텐션 | Q | K, V | causal mask | padding mask |
+|---|---|---|---|---|
+| Encoder self-attn | 원문 | 원문 | ✗ | ✓ (원문 pad) |
+| Decoder masked self-attn | 번역문 | 번역문 | ✓ | ✓ (번역문 pad) |
+| Decoder cross-attn | 번역문 | Encoder 출력 | ✗ | ✓ (원문 pad) |
+
+cross-attention에 causal mask가 없는 이유는 원문이 이미 전부 주어져 있어서 가릴 "미래"가 없기 때문입니다.
+
+**마스크 모양과 broadcasting.** causal mask는 (T, T)이고 모든 배치와 head에 같으므로 (B, H, T, T)로 자동 broadcast됩니다. padding mask는 문장마다 다르고 **열(Key)만** 가리면 되므로 (B, 1, 1, T_k) 모양으로 만듭니다. Decoder에서는 둘을 곱해서(`causal * pad`) 둘 다 1인 칸만 볼 수 있게 합니다.
+
+pad 토큰 자신의 **행**은 가리지 않습니다. (c)의 4번째 행처럼 pad 위치에서도 출력이 계산되지만, 이 위치는 loss에서 제외되고 다른 토큰이 보지도 않으므로 결과에 영향이 없습니다. 반대로 한 행 전체를 -∞로 가리면 softmax가 0/0이 되어 NaN이 나옵니다.
+
+#### (2) `nn.Transformer`로 teacher forcing 학습 한 step
 
 ```python
 import torch
@@ -282,13 +321,13 @@ VOCAB, D_MODEL, PAD, BOS = 8000, 512, 0, 1
 class Seq2SeqTransformer(nn.Module):
     def __init__(self):
         super().__init__()
-        self.src_emb = nn.Embedding(VOCAB, D_MODEL)
-        self.tgt_emb = nn.Embedding(VOCAB, D_MODEL)
-        self.pos = nn.Embedding(512, D_MODEL)   # 간단히 learned position 사용
+        self.src_emb = nn.Embedding(VOCAB, D_MODEL)   # 원문 토큰 id → 512차원 벡터
+        self.tgt_emb = nn.Embedding(VOCAB, D_MODEL)   # 번역문 토큰 id → 512차원 벡터
+        self.pos = nn.Embedding(512, D_MODEL)         # 위치 0~511 → 512차원 벡터 (간단히 learned position 사용)
         self.transformer = nn.Transformer(d_model=D_MODEL, nhead=8,
                                           num_encoder_layers=6, num_decoder_layers=6,
                                           dim_feedforward=2048, batch_first=True)
-        self.lm_head = nn.Linear(D_MODEL, VOCAB)
+        self.lm_head = nn.Linear(D_MODEL, VOCAB)      # 512차원 → 단어 8000개의 점수
 
     def embed(self, emb, ids):
         pos = torch.arange(ids.size(1), device=ids.device)
@@ -307,14 +346,93 @@ class Seq2SeqTransformer(nn.Module):
 model = Seq2SeqTransformer()
 criterion = nn.CrossEntropyLoss(ignore_index=PAD, label_smoothing=0.1)
 
-src = torch.randint(2, VOCAB, (2, 10))           # 원문
+src = torch.randint(2, VOCAB, (2, 10))           # 원문 (0=PAD, 1=BOS를 피해 2부터 랜덤 id)
 tgt = torch.randint(2, VOCAB, (2, 8))            # 정답 번역문 (끝에 </s> 포함이라고 가정)
 tgt_in = torch.cat([torch.full((2, 1), BOS), tgt[:, :-1]], dim=1)   # 오른쪽으로 한 칸 shift
 
 logits = model(src, tgt_in)
 loss = criterion(logits.reshape(-1, VOCAB), tgt.reshape(-1))        # 모든 target 위치에서 CE
 loss.backward()                                                     # Encoder까지 gradient 전달
+print(logits.shape, loss.item())   # torch.Size([2, 8, 8000]) 약 9.1~9.3 (랜덤 초기화라 실행마다 조금 다름)
 ```
+
+**전체 흐름과 텐서 모양**
+
+```
+src (2,10) ──src_emb+pos──▶ (2,10,512) ──▶ Encoder ×6 ──▶ memory (2,10,512)
+                                                              │ cross-attn
+tgt_in (2,8) ──tgt_emb+pos──▶ (2,8,512) ──▶ Decoder ×6 ◀──────┘
+                                                │
+                                         h (2,8,512) ──lm_head──▶ logits (2,8,8000)
+                                                                        │
+                                          tgt (2,8) ─────────────▶ CrossEntropy ──▶ loss (스칼라)
+```
+
+**`__init__`: 부품 다섯 개**
+
+- `nn.Transformer` 안에는 **Encoder/Decoder 층만** 들어 있습니다(어텐션, FFN, LayerNorm). 토큰 임베딩, 위치 정보, 출력층(`lm_head`)은 직접 만들어 붙여야 합니다.
+- `batch_first=True`로 두면 텐서 모양이 (B, T, D)입니다. 기본값은 (T, B, D)라서 헷갈리기 쉽습니다.
+- `nhead=8`이면 head 하나당 d_k = 512 / 8 = 64입니다.
+
+**`embed`: 토큰 임베딩 + 위치 임베딩.** `torch.arange(T)`로 [0, 1, …, T−1]을 만들고 위치 임베딩을 꺼내 더합니다. (B, T, 512) + (T, 512)는 broadcast되어 배치마다 같은 위치 벡터가 더해집니다. 어텐션 자체는 순서를 모르기 때문에 "몇 번째 토큰인지"를 벡터에 넣어 주는 것입니다.
+
+**`forward`: 마스크 규약에 주의.** PyTorch `nn.Transformer`는 **`True` = 가림**입니다. 위 (1)의 직접 구현(`mask == 0`이면 가림, 즉 1 = 볼 수 있음)과 **반대**입니다.
+
+| 인자 | 모양 | 적용 위치 | 의미 |
+|---|---|---|---|
+| `tgt_mask` | (T_tgt, T_tgt) | Decoder self-attn | 미래 토큰 가림 (causal) |
+| `src_key_padding_mask` | (B, T_src) | Encoder self-attn | 원문 `<pad>` 열 가림 |
+| `tgt_key_padding_mask` | (B, T_tgt) | Decoder self-attn | 번역문 `<pad>` 열 가림 |
+| `memory_key_padding_mask` | (B, T_src) | Cross-attn | Decoder가 원문 `<pad>`를 보지 않게 가림 |
+
+`src == PAD`는 pad 위치가 `True`인 bool 텐서이므로 그대로 "가림" 표시가 됩니다. `memory_key_padding_mask`를 빼먹으면 Decoder가 cross-attention에서 원문의 pad를 보게 되니 주의해야 합니다.
+
+**데이터와 teacher forcing shift.** 실제 단어로 바꿔 보면 이렇습니다.
+
+```
+tgt    (정답) :  I     ate   an    apple  </s>
+tgt_in (입력) :  <s>   I     ate   an     apple     ← 앞에 BOS를 붙이고 정답의 마지막 토큰은 뺌
+               위치 0이 보는 것: <s>               → 맞혀야 할 것: I
+               위치 1이 보는 것: <s> I             → 맞혀야 할 것: ate
+               위치 4가 보는 것: <s> I ate an apple → 맞혀야 할 것: </s>
+```
+
+- `tgt[:, :-1]`에서 마지막 토큰을 빼는 이유는 `tgt_in`과 `tgt`의 길이를 같게(8) 맞추기 위해서입니다. `</s>`는 입력으로 넣을 필요가 없습니다.
+- causal mask 덕분에 위치 1은 자기 정답(`ate`)이 들어 있는 위치 2를 볼 수 없습니다. 그래서 8개 위치를 **한 번의 forward로 동시에** 학습해도 정답이 새지 않습니다.
+
+**loss 계산**
+
+- `CrossEntropyLoss`는 (N, C) 점수와 (N,) 정답을 받습니다. 그래서 (2, 8, 8000) → (16, 8000), (2, 8) → (16,)으로 펴서 **16개 위치를 16개 분류 문제처럼** 다룹니다.
+- `ignore_index=PAD`: 정답이 PAD인 위치를 평균에서 뺍니다. Hugging Face의 `-100`과 같은 역할입니다.
+- `label_smoothing=0.1`: 정답 분포를 one-hot 대신 "정답 클래스 0.9 + 0.1/8000, 나머지 7999개는 0.1/8000씩"으로 만듭니다. 모델이 과하게 확신하지 않도록 하는 장치이고, 논문도 0.1을 썼습니다.
+- **값이 맞는지 확인하는 법**: 학습 전 모델은 8000개 중에서 거의 균등하게 찍으므로 loss ≈ ln(8000) ≈ **8.99** 근처여야 합니다. 실행하면 약 9.1~9.3이 나오는데, label smoothing 때문에 조금 더 높습니다. 처음 loss가 ln(V)보다 훨씬 크면 초기화나 입력에 문제가 있다는 신호입니다.
+
+**`backward`와 실제 학습 루프.** `loss.backward()`는 `lm_head` → Decoder → **cross-attention** → Encoder → 임베딩까지 gradient를 계산합니다. loss는 Decoder 끝에만 있지만 Encoder가 cross-attention으로 연결되어 함께 학습되는 것, 이것이 E2E 학습입니다. 위 코드는 한 step만 보여 주므로, 실제로 학습하려면 optimizer와 루프가 필요합니다.
+
+```python
+opt = torch.optim.Adam(model.parameters(), lr=1.0, betas=(0.9, 0.98), eps=1e-9)   # 논문 설정
+warmup = 4000
+sched = torch.optim.lr_scheduler.LambdaLR(                                          # 1.4절의 warmup 스케줄
+    opt, lambda s: D_MODEL**-0.5 * min((s + 1)**-0.5, (s + 1) * warmup**-1.5))
+
+for src, tgt in loader:
+    tgt_in = torch.cat([torch.full((tgt.size(0), 1), BOS), tgt[:, :-1]], dim=1)
+    logits = model(src, tgt_in)
+    loss = criterion(logits.reshape(-1, VOCAB), tgt.reshape(-1))
+    opt.zero_grad()      # 이전 step의 gradient 초기화 (안 하면 누적됨)
+    loss.backward()
+    opt.step()           # 파라미터 업데이트
+    sched.step()         # 학습률 업데이트 (lr=1.0에 LambdaLR 값이 곱해져 실제 학습률이 됨)
+```
+
+**원 논문과 다른 점.** 설명을 위해 단순화한 부분입니다. 핵심인 어텐션 3종, 마스크, teacher forcing, loss는 논문과 같습니다.
+
+| | 이 코드 | 논문 |
+|---|---|---|
+| 위치 정보 | 학습되는 임베딩 | sin/cos 고정 |
+| 임베딩 스케일 | 그대로 | 임베딩에 √d_model을 곱함 |
+| 가중치 공유 | 없음 | 두 임베딩과 출력층의 가중치를 공유 |
+| LayerNorm 위치 | Post-LN (`nn.Transformer` 기본값) | Post-LN (같음) |
 
 ## 2. 구글의 BERT
 
@@ -384,7 +502,9 @@ loss.backward()                                                     # Encoder까
 
 ### 2.4 코드로 보기
 
-**80/10/10 마스킹 직접 구현**
+세 단계로 봅니다. (1) MLM의 80/10/10 마스킹을 직접 구현하고, (2) 학습된 MLM head가 빈칸을 어떻게 채우는지 확인한 뒤, (3) loss가 어느 위치에서 계산되는지 숫자로 봅니다.
+
+#### (1) 80/10/10 마스킹 직접 구현
 
 ```python
 import torch
@@ -406,24 +526,60 @@ def mask_tokens(input_ids, tokenizer, mlm_prob=0.15):
     return input_ids, labels                              # 나머지 10%는 원래 토큰 그대로
 ```
 
-실무에서는 `transformers.DataCollatorForLanguageModeling(tokenizer, mlm_probability=0.15)`가 같은 일을 해 줍니다.
+**한 줄씩 보기**
 
-**MLM 헤드로 빈칸 채우기**
+- `labels = input_ids.clone()`: 마스킹하기 **전** 원문을 정답으로 복사해 둡니다. 이후 `input_ids`는 제자리에서(in-place) 바뀌므로, 호출할 때도 `.clone()`한 텐서를 넘기는 것이 안전합니다.
+- `prob = torch.full(..., 0.15)`: 토큰마다 "예측 대상으로 뽑힐 확률" 0.15를 채운 텐서입니다.
+- `get_special_tokens_mask(...)`: `[CLS]`, `[SEP]` 위치를 1로 표시합니다. 이 위치의 확률을 0으로 만들어 마스킹 대상에서 뺍니다.
+- `torch.bernoulli(prob)`: 위치마다 확률 0.15로 동전을 던져 1(선택)/0을 뽑습니다. 결과 `masked`가 **예측 대상 15%**입니다.
+- `labels[~masked] = -100`: 선택되지 않은 위치의 정답을 -100으로 지웁니다. 이 위치는 loss에서 빠집니다.
+- `replace = bernoulli(0.8) & masked`: 선택된 위치 중 80%를 골라 `[MASK]`로 바꿉니다.
+- `rand = bernoulli(0.5) & masked & ~replace`: `[MASK]`가 되지 **않은** 나머지 20% 중 절반을 골라 랜덤 토큰으로 바꿉니다. 전체 기준으로는 0.2 × 0.5 = **10%**입니다.
+- 남은 10%는 원래 토큰 그대로 둡니다. 하지만 `labels`에는 정답이 남아 있으므로 **여전히 예측 대상**입니다.
+
+| 선택된 15% 안에서 | 확률 | 입력 | 정답 |
+|---|---|---|---|
+| `[MASK]`로 치환 | 0.8 | `[MASK]` | 원래 토큰 |
+| 랜덤 토큰으로 치환 | 0.2 × 0.5 = 0.1 | 아무 토큰 | 원래 토큰 |
+| 그대로 | 0.1 | 원래 토큰 | 원래 토큰 |
+
+실무에서는 `transformers.DataCollatorForLanguageModeling(tokenizer, mlm_probability=0.15)`가 배치 단위로 같은 일을 해 줍니다.
+
+#### (2) 빈칸 채우기: MLM head가 하는 일
+
+`pipeline("fill-mask", ...)` 한 줄로도 되지만, 안에서 무슨 일이 일어나는지 직접 풀어 쓰면 이렇습니다.
 
 ```python
-from transformers import pipeline
+import torch
+from transformers import AutoTokenizer, BertForMaskedLM
 
-fill = pipeline("fill-mask", model="google-bert/bert-base-uncased")
-for r in fill("The capital of France is [MASK].")[:3]:
-    print(f"{r['token_str']:>10s}  {r['score']:.3f}")
-#      paris  0.417
-#      lille  0.071
-#       lyon  0.063
+tok = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
+model = BertForMaskedLM.from_pretrained("google-bert/bert-base-uncased")
+
+enc = tok("The capital of France is [MASK].", return_tensors="pt")
+print(tok.convert_ids_to_tokens(enc.input_ids[0]))
+# ['[CLS]', 'the', 'capital', 'of', 'france', 'is', '[MASK]', '.', '[SEP]']
+
+with torch.no_grad():
+    logits = model(**enc).logits                              # (1, 9, 30522): 9개 위치 × vocab
+mask_pos = (enc.input_ids[0] == tok.mask_token_id).nonzero().item()   # 6
+probs = logits[0, mask_pos].softmax(-1)                        # [MASK] 위치의 분포만 꺼냄
+top = probs.topk(3)
+for p, i in zip(top.values, top.indices):
+    print(f"{tok.decode([i]):>6s} {p:.3f}")
+# paris 0.417 / lille 0.071 / lyon 0.063
 ```
 
-**MLM loss 계산**
+- **토크나이저**: 소문자로 바꾸고(uncased) 앞뒤에 `[CLS]`, `[SEP]`를 붙입니다. `[MASK]`는 특수 토큰 하나(id 103)로 인식됩니다.
+- **`with torch.no_grad()`**: 추론만 하므로 gradient 계산을 끕니다. 메모리와 시간이 절약됩니다.
+- **`logits` (1, 9, 30522)**: BERT는 **모든 위치**에서 vocab 30,522개에 대한 점수를 냅니다. 이 중 필요한 것은 `[MASK]` 위치(6번)의 점수뿐입니다.
+- **MLM head의 구조**: Encoder 출력(768차원) → Linear + GELU + LayerNorm → Linear(768 → 30,522)입니다. 마지막 Linear의 가중치는 **입력 단어 임베딩과 같은 행렬을 공유**합니다(weight tying). "입력에서 단어를 벡터로 바꾸는 표"를 거꾸로 써서 벡터를 단어 점수로 바꾸는 셈입니다.
+- **`softmax` → `topk`**: 점수를 확률로 바꾸고 상위 3개를 봅니다. 문맥상 수도가 와야 하므로 `paris`가 41.7%로 가장 높고, 프랑스 도시들이 뒤를 잇습니다.
+
+#### (3) MLM loss 계산
 
 ```python
+import torch
 from transformers import AutoTokenizer, BertForMaskedLM
 
 tok = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
@@ -439,6 +595,27 @@ print(out.logits.shape)   # torch.Size([1, 17, 30522]): 모든 위치에서 voca
 print(out.loss)           # loss는 labels != -100 인 위치(마스킹된 3개 위치)에서만 계산 → 약 1.40
 # 주의: 문장이 너무 짧으면 한 토큰도 선택되지 않아 loss가 nan이 될 수 있습니다.
 ```
+
+이 실행에서는 17개 토큰 중 3개가 선택되었고, 세 개 모두 80% 규칙에 따라 `[MASK]`가 되었습니다.
+
+| 위치 | 원래 토큰 | 입력 | `labels` |
+|---|---|---|---|
+| 2 | `dog` | `[MASK]` | 3899 (`dog`) |
+| 3 | `is` | `[MASK]` | 2003 (`is`) |
+| 12 | `the` | `[MASK]` | 1996 (`the`) |
+| 나머지 14개 | – | 원래 토큰 | -100 |
+
+- `input_ids[None]`: (17,) 텐서 앞에 배치 차원을 붙여 (1, 17)로 만듭니다. 모델은 항상 배치 단위로 받습니다.
+- `labels`를 함께 넘기면 모델이 내부에서 cross-entropy를 계산해 `out.loss`로 돌려줍니다. 직접 계산하면 다음과 같고, 값이 정확히 같습니다(1.3979).
+
+```python
+import torch.nn.functional as F
+manual = F.cross_entropy(out.logits.view(-1, out.logits.size(-1)),   # (17, 30522)
+                         labels.view(-1), ignore_index=-100)         # (17,) 중 -100이 아닌 3개만 평균
+```
+
+- 즉 loss는 **17개 위치가 아니라 3개 위치의 평균**입니다. BERT가 "15% 위치에서만 학습 신호를 얻는다"는 말이 이 뜻입니다.
+- 짧은 문장에서는 확률적으로 아무 위치도 선택되지 않을 수 있습니다. 그러면 평균을 낼 위치가 0개라서 `nan`이 나옵니다. 실제 학습에서는 512토큰 길이로 묶어서 쓰기 때문에 이런 일이 거의 없습니다.
 
 ## 3. BERT로 풀 수 있는 다양한 문제들
 
@@ -468,34 +645,93 @@ BERT는 출력층만 바꿔서 거의 모든 **이해(NLU)** 태스크를 풉니
 
 **코드로 보기**
 
+네 유형 모두 **같은 BERT 본체 위에 head만 다르게** 붙입니다. Hugging Face에서는 `AutoModelFor...` 클래스 이름이 곧 "어떤 head를 붙였는가"를 뜻합니다.
+
+**(a)/(b) 문장 분류: `AutoModelForSequenceClassification`**
+
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-# (a)/(b) 문장 분류: [CLS] 위에 Linear head. labels를 넣으면 CE loss가 계산됨
 tok = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 clf = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-uncased", num_labels=3)
-enc = tok("A man is playing guitar.", "A person plays music.", return_tensors="pt")  # 문장쌍 → token_type_ids 자동 생성
-out = clf(**enc, labels=torch.tensor([0]))
-print(out.logits.shape, out.loss)        # (1, 3) — 새로 붙인 head라 파인튜닝 전에는 무작위 예측
 
-# (c) 추출형 QA: 문단 토큰마다 start/end logit → 점수가 가장 높은 구간을 뽑음
+enc = tok("A man is playing guitar.", "A person plays music.", return_tensors="pt")  # 문장쌍
+print(tok.convert_ids_to_tokens(enc.input_ids[0]))
+# ['[CLS]', 'a', 'man', 'is', 'playing', 'guitar', '.', '[SEP]', 'a', 'person', 'plays', 'music', '.', '[SEP]']
+print(enc.token_type_ids[0].tolist())
+# [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]      ← 문장 A는 0, 문장 B는 1 (Segment embedding)
+
+out = clf(**enc, labels=torch.tensor([0]))       # 0 = entailment 라고 가정
+print(out.logits.shape, out.loss)                # torch.Size([1, 3]) — 파인튜닝 전이라 무작위 예측
+```
+
+- **입력**: 토크나이저에 문장을 두 개 넘기면 `[CLS] A [SEP] B [SEP]` 형태로 이어 붙이고, `token_type_ids`로 A(0)와 B(1)를 구분해 줍니다. 단일 문장 분류(SST-2)는 문장을 하나만 넘기면 됩니다.
+- **head 구조**: `[CLS]` 위치의 출력(768차원) → **pooler**(Linear 768→768 + tanh) → dropout → **classifier**(Linear 768→3)입니다. pooler는 사전학습 때 NSP용으로 학습된 층이고, classifier는 **새로 만들어진 층**입니다.
+- **경고 메시지**: 모델을 불러올 때 "Some weights ... are newly initialized" 경고가 나오는데 정상입니다. classifier가 랜덤 초기화 상태라는 뜻이고, 파인튜닝으로 학습해야 합니다.
+- **loss**: `labels`를 넘기면 `num_labels > 1`일 때 cross-entropy를 계산합니다. `num_labels=1`로 두면 STS-B 같은 **회귀**로 보고 MSE를 계산합니다.
+- **출력**: `logits` (1, 3) → `argmax`가 예측 클래스입니다. 문장 하나에 점수 3개가 나옵니다.
+
+**(c) 추출형 QA: `AutoModelForQuestionAnswering`**
+
+```python
 from transformers import AutoModelForQuestionAnswering
-name = "distilbert/distilbert-base-cased-distilled-squad"
+
+name = "distilbert/distilbert-base-cased-distilled-squad"   # SQuAD로 파인튜닝된 모델
 qa_tok = AutoTokenizer.from_pretrained(name)
 qa = AutoModelForQuestionAnswering.from_pretrained(name)
+
 enc = qa_tok("Where is the Eiffel Tower?",
              "The Eiffel Tower is a wrought-iron lattice tower in Paris, France.", return_tensors="pt")
 with torch.no_grad():
-    out = qa(**enc)                                   # start_logits, end_logits: (1, seq_len)
+    out = qa(**enc)
+print(out.start_logits.shape)                               # torch.Size([1, 28]): 토큰마다 "시작점 점수"
 start, end = out.start_logits.argmax(-1).item(), out.end_logits.argmax(-1).item()
-print(qa_tok.decode(enc.input_ids[0, start:end + 1]))  # Paris, France
+print(start, end, qa_tok.decode(enc.input_ids[0, start:end + 1]))   # 23 25 Paris, France
 
-# (d) 토큰 태깅: 토큰마다 Linear head
-ner = pipeline("ner", model="dslim/bert-base-NER", aggregation_strategy="simple")
-print(ner("Steve Jobs founded Apple in California."))
-# PER: Steve Jobs / ORG: Apple / LOC: California
+# 학습할 때: 정답 구간의 토큰 위치를 넘기면 loss = (CE(start) + CE(end)) / 2
+out = qa(**enc, start_positions=torch.tensor([23]), end_positions=torch.tensor([23]))
+print(out.loss)                                             # 약 1.21
 ```
+
+- **head 구조**: 토큰마다 Linear(768 → 2)를 적용해 **시작점 점수**와 **끝점 점수** 두 개를 냅니다. 그래서 `start_logits`, `end_logits`가 각각 (1, 28), 즉 토큰 28개 각각의 점수입니다.
+- **예측**: 시작점 점수가 가장 높은 토큰(23번 `Paris`)부터 끝점 점수가 가장 높은 토큰(25번 `France`)까지를 잘라 `Paris, France`를 답으로 냅니다. 답을 **생성하지 않고 문단에서 잘라 옵니다**.
+- **학습**: 정답 문자 위치(`answer_start`)를 토큰 위치로 바꿔(7.2절) `start_positions`, `end_positions`로 넘깁니다. 시작점 분류 CE와 끝점 분류 CE의 평균이 loss입니다. 위 예에서 정답을 `Paris`(23~23)로 주면 모델은 25를 끝점으로 골랐기 때문에 loss가 약 1.21로 나옵니다.
+- **실무 후처리**: 위 코드는 시작과 끝을 따로 `argmax`하는 가장 단순한 방법입니다. 실제로는 "끝 ≥ 시작", "질문이 아니라 문단 안의 토큰", "답 길이 제한" 조건을 만족하는 (시작, 끝) 조합 중 점수 합이 가장 높은 것을 고릅니다. 예전에는 `pipeline("question-answering")`이 이 처리를 해 줬지만, transformers 5.x에서는 이 pipeline이 빠져 있어 직접 호출하는 방식으로 적었습니다.
+
+**(d) 토큰 태깅(NER): `AutoModelForTokenClassification`**
+
+```python
+from transformers import AutoModelForTokenClassification
+
+name = "dslim/bert-base-NER"                      # CoNLL-2003으로 파인튜닝된 모델
+ner_tok = AutoTokenizer.from_pretrained(name)
+ner = AutoModelForTokenClassification.from_pretrained(name)
+
+enc = ner_tok("Steve Jobs founded Apple in California.", return_tensors="pt")
+with torch.no_grad():
+    logits = ner(**enc).logits                    # (1, 10, 9): 토큰 10개 × 태그 9종
+pred = logits[0].argmax(-1)                       # 토큰마다 가장 점수가 높은 태그
+for t, p in zip(ner_tok.convert_ids_to_tokens(enc.input_ids[0]), pred):
+    print(f"{t:>12s}  {ner.config.id2label[p.item()]}")
+```
+
+```
+       [CLS]  O
+       Steve  B-PER
+         Job  I-PER
+         ##s  I-PER
+     founded  O
+       Apple  B-ORG
+          in  O
+  California  B-LOC
+           .  O
+       [SEP]  O
+```
+
+- **head 구조**: 토큰마다 Linear(768 → 9)를 적용합니다. 태그 9종은 `O`와 PER/ORG/LOC/MISC 각각의 `B-`(시작), `I-`(내부)입니다.
+- **서브워드**: `Jobs`가 `Job`, `##s`로 잘렸고 둘 다 `I-PER`로 예측되었습니다. 태그는 단어 단위인데 BERT는 서브워드 단위로 보기 때문에, 학습할 때는 보통 **첫 서브워드에만 태그를 주고 나머지는 -100**으로 둡니다(7.2절).
+- **엔티티로 묶기**: `B-PER` + `I-PER` + `I-PER` → `Steve Jobs`(PER)처럼 이어진 태그를 하나의 엔티티로 합치는 후처리가 필요합니다. `pipeline("ner", aggregation_strategy="simple")`이 이 작업을 해 줍니다.
 
 **BERT가 잘 못하는 것**: 자유로운 텍스트 **생성**입니다. 학습할 때 항상 오른쪽 문맥까지 보고 예측했기 때문에, 오른쪽이 비어 있는 상태에서 왼쪽부터 한 토큰씩 이어 쓰는 상황은 학습 분포와 다릅니다. 그래서 요약·번역·대화에는 GPT나 BART, T5 계열을 씁니다. 반대로 문장 임베딩과 검색(Sentence-BERT, 각종 retriever 인코더), 분류, 추출 문제에서는 지금도 인코더 계열이 효율적입니다.
 
@@ -571,7 +807,9 @@ BERT는 전체 토큰의 15% 위치에서만 loss를 얻지만, GPT는 **100% �
 
 ### 4.5 코드로 보기
 
-**다음 토큰 예측 loss: shift를 직접 구현**
+세 단계로 봅니다. (1) "입력을 한 칸 민 것이 정답"이 코드에서 어떻게 구현되는지, (2) SFT에서 프롬프트를 loss에서 빼는 방법, (3) 생성할 때 다음 토큰을 고르는 방법입니다.
+
+#### (1) 다음 토큰 예측 loss: shift를 직접 구현
 
 ```python
 import torch
@@ -581,30 +819,48 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 tok = AutoTokenizer.from_pretrained("openai-community/gpt2")
 model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2")
 
-ids = tok("The quick brown fox jumps over the lazy dog", return_tensors="pt").input_ids
-logits = model(ids).logits                        # (1, T, 50257): 모든 위치에서 다음 토큰 분포
+ids = tok("The quick brown fox jumps over the lazy dog", return_tensors="pt").input_ids   # (1, 9)
+logits = model(ids).logits                        # (1, 9, 50257): 모든 위치에서 다음 토큰 분포
 
 # 위치 t의 출력으로 t+1번째 토큰을 맞힌다 → logits는 마지막 제외, 라벨은 첫 토큰 제외
 loss = F.cross_entropy(logits[:, :-1].reshape(-1, logits.size(-1)), ids[:, 1:].reshape(-1))
 
 # Hugging Face는 labels=input_ids만 넘기면 내부에서 같은 shift를 해 줍니다
 assert torch.allclose(loss, model(ids, labels=ids).loss, atol=1e-5)
+print(loss.item())                                # 약 5.43
 ```
 
-**SFT: 프롬프트 부분은 loss에서 제외**
+- **토큰화**: 9개 토큰 `The`, `Ġquick`, `Ġbrown`, `Ġfox`, `Ġjumps`, `Ġover`, `Ġthe`, `Ġlazy`, `Ġdog`가 나옵니다. `Ġ`는 GPT-2의 byte-level BPE에서 **앞에 공백이 있다**는 표시입니다.
+- **`logits` (1, 9, 50257)**: causal mask 덕분에 위치 t의 출력은 0~t번 토큰만 보고 만든 "다음 토큰" 분포입니다.
+- **shift**: 위치 0~7의 출력(`logits[:, :-1]`)이 토큰 1~8(`ids[:, 1:]`)을 맞히도록 짝을 맞춥니다. 마지막 위치(8번 `Ġdog`)의 출력은 정답(10번째 토큰)이 없으므로 버립니다.
+
+| 출력 위치 | 0 | 1 | 2 | … | 7 | 8 |
+|---|---|---|---|---|---|---|
+| 이 위치까지 본 것 | `The` | `The quick` | `The quick brown` | … | `… the lazy` | `… lazy dog` |
+| 맞혀야 할 토큰 | `Ġquick` | `Ġbrown` | `Ġfox` | … | `Ġdog` | (없음, 버림) |
+
+- **loss**: 8개 위치 CE의 평균 약 5.43입니다. vocab 50,257개 중에서 무작위로 찍으면 ln(50257) ≈ 10.8이 나오므로, 사전학습된 GPT-2가 이 문장을 꽤 잘 예측한다는 뜻입니다.
+- **HF 규약**: `labels=ids`를 그대로 넘기면 모델이 내부에서 위와 **같은 shift**를 합니다. `assert`는 두 값이 같은지 확인하는 줄입니다. 그래서 GPT 계열에서는 `labels`를 따로 밀어서 만들 필요가 없습니다.
+
+#### (2) SFT: 프롬프트 부분은 loss에서 제외
 
 ```python
 prompt = "Q: What is the capital of France?\nA:"
 answer = " Paris.<|endoftext|>"
-p_ids = tok(prompt).input_ids
-a_ids = tok(answer).input_ids
+p_ids = tok(prompt).input_ids                            # 12개 토큰
+a_ids = tok(answer).input_ids                            # 3개 토큰: ' Paris', '.', <|endoftext|>
 
-input_ids = torch.tensor([p_ids + a_ids])
-labels = torch.tensor([[-100] * len(p_ids) + a_ids])    # 프롬프트 위치는 -100 → CE에서 무시
+input_ids = torch.tensor([p_ids + a_ids])                # (1, 15): 프롬프트 + 응답을 한 시퀀스로
+labels = torch.tensor([[-100] * len(p_ids) + a_ids])     # 프롬프트 위치는 -100 → CE에서 무시
 loss = model(input_ids, labels=labels).loss              # 응답 토큰에서만 loss 계산
 ```
 
-**생성: 샘플링 옵션**
+- **입력**: 프롬프트와 응답을 **그냥 이어 붙입니다**. GPT에는 Encoder가 없으므로 질문도 같은 시퀀스 안에서 self-attention으로 읽습니다.
+- **labels**: 입력과 같은 길이(15)로 만들고, 프롬프트 12칸을 -100으로 채웁니다. 모델 안에서 한 칸 shift가 일어나므로, 실제로는 위치 11(`:`), 12(`ĠParis`), 13(`.`)의 출력이 각각 `ĠParis`, `.`, `<|endoftext|>`를 맞히는 **3개 위치에서만** loss가 계산됩니다(7.3절 표 참고).
+- **왜 프롬프트를 빼나**: 모델이 배워야 할 것은 "질문이 오면 이렇게 답한다"이지 "사용자 질문을 생성하는 법"이 아니기 때문입니다. 응답 끝의 `<|endoftext|>`까지 정답에 넣어야 모델이 **답을 끝내는 법**도 배웁니다.
+- 배치로 학습할 때 길이를 맞추는 padding 위치도 `labels = -100`, `attention_mask = 0`으로 둡니다. GPT-2에는 pad 토큰이 없어서 보통 `tok.pad_token = tok.eos_token`으로 지정합니다.
+
+#### (3) 생성: 다음 토큰은 어떻게 고르나
 
 ```python
 inputs = tok("Once upon a time", return_tensors="pt")
@@ -612,6 +868,30 @@ out = model.generate(**inputs, max_new_tokens=30, do_sample=True, top_p=0.9, tem
                      pad_token_id=tok.eos_token_id)
 print(tok.decode(out[0], skip_special_tokens=True))
 ```
+
+`generate()`는 "마지막 위치의 분포에서 토큰 하나 고르기 → 입력 뒤에 붙이기"를 `max_new_tokens`번 반복합니다(반복 구조는 8절에서 직접 구현합니다). 한 step에서 토큰을 고르는 과정을 풀어 쓰면 이렇습니다.
+
+```python
+ids = tok("Once upon a time", return_tensors="pt").input_ids
+with torch.no_grad():
+    logits = model(ids).logits[:, -1, :]         # (1, 50257): 마지막 위치의 분포만 사용
+
+logits = logits / 0.8                             # temperature: 1보다 작으면 분포가 뾰족해짐
+probs = logits.softmax(-1)
+sorted_p, sorted_idx = probs.sort(descending=True)
+cum = sorted_p.cumsum(-1)
+keep = (cum - sorted_p) < 0.9                     # 누적확률이 0.9에 도달하기 전까지의 후보만 유지
+print("후보 수:", keep.sum().item(), "/", probs.size(-1))   # 후보 수: 10 / 50257
+sorted_p = sorted_p * keep
+sorted_p = sorted_p / sorted_p.sum()              # 남은 후보끼리 다시 합이 1이 되게
+next_id = sorted_idx.gather(-1, torch.multinomial(sorted_p, 1))   # 확률에 비례해서 하나 뽑기
+```
+
+- **`[:, -1, :]`**: 생성에 필요한 것은 **마지막 위치**의 분포뿐입니다. 앞 위치들의 출력은 학습 때만 쓰입니다.
+- **temperature**: logits를 T로 나눕니다. T < 1이면 높은 점수가 더 도드라져서 보수적인 출력이, T > 1이면 분포가 평평해져서 다양한 출력이 나옵니다.
+- **top-p (nucleus)**: 확률이 높은 순으로 정렬해서 누적확률이 p(0.9)에 도달할 때까지만 후보로 남깁니다. 위 예에서는 50,257개 중 **10개**만 남았습니다. 이상한 저확률 토큰이 뽑히는 것을 막습니다.
+- **`multinomial`**: 남은 후보 중에서 확률에 비례해 하나를 **샘플링**합니다. `do_sample=False`(기본값)이면 대신 `argmax`로 가장 높은 것 하나를 고르는 greedy 방식이 됩니다.
+- **`pad_token_id=tok.eos_token_id`**: GPT-2에는 pad 토큰이 없어서 지정하지 않으면 경고가 나옵니다. 배치 생성할 때 길이를 맞출 토큰으로 eos를 쓰겠다는 뜻입니다.
 
 ## 5. BART와 T5
 
@@ -683,18 +963,44 @@ Decoder 정답   : A B C . D E .      ← loss는 항상 온전한 원문에 걸
 
 *BART 논문 Figure 3(a). 분류 태스크에서는 Decoder 마지막 위치의 표현을 사용합니다. [원문](https://arxiv.org/abs/1910.13461)*
 
+**코드로 보기**
+
+(1) 사전학습 loss가 어떻게 계산되는지, (2) 사전학습만 한 BART가 빈칸을 어떻게 채우는지, (3) 요약으로 파인튜닝한 BART를 쓰는 방법을 차례로 봅니다.
+
 ```python
 from transformers import AutoTokenizer, BartForConditionalGeneration
 
-# 1) Text infilling: <mask> 하나가 여러 토큰으로 복원되고, 문장 전체가 다시 생성됨
 tok = AutoTokenizer.from_pretrained("facebook/bart-large")
 model = BartForConditionalGeneration.from_pretrained("facebook/bart-large")
-batch = tok("UN Chief Says There Is No <mask> in Syria", return_tensors="pt")
-gen = model.generate(batch.input_ids, forced_bos_token_id=0, max_new_tokens=20)
+
+# 1) 사전학습 loss: 손상된 입력 → 원문 "전체"가 정답
+noised   = tok("UN Chief Says There Is No <mask> in Syria", return_tensors="pt").input_ids
+original = tok("UN Chief Says There Is No Plan to Stop Chemical Weapons in Syria", return_tensors="pt").input_ids
+out = model(input_ids=noised, labels=original)
+print(out.logits.shape, out.loss)   # torch.Size([1, 15, 50265]) 약 1.88
+
+# 2) Text infilling: <mask> 하나가 여러 토큰으로 복원되고, 문장 전체가 다시 생성됨
+gen = model.generate(noised, forced_bos_token_id=0, max_new_tokens=20)
 print(tok.batch_decode(gen, skip_special_tokens=True))
 # ['UN Chief Says There Is No Plan to Stop Chemical Weapons in Syria']
+```
 
-# 2) 요약: CNN/DailyMail로 파인튜닝한 BART. Encoder가 기사를 읽고 Decoder가 요약을 beam search로 생성
+**1) 사전학습 loss**
+
+- **Encoder 입력** (`noised`, 11토큰): `<s> UN ĠChief ĠSays ĠThere ĠIs ĠNo <mask> Ġin ĠSyria </s>`. 원래 5토큰(`Plan to Stop Chemical Weapons`)이던 구간이 `<mask>` **하나**로 줄어 있습니다.
+- **정답** (`original`, 15토큰): 원문 **전체**입니다. 가려진 부분만이 아니라 멀쩡했던 `UN Chief Says …`까지 전부 정답에 들어갑니다. T5와 가장 다른 점입니다.
+- **Decoder 입력**: `labels`만 넘기면 모델이 내부에서 오른쪽으로 한 칸 밀어 만듭니다. BART는 시작 토큰으로 `</s>`(id 2)를 쓰므로 `</s> <s> UN ĠChief … ĠSyria`가 됩니다.
+- **loss**: `logits` (1, 15, 50265)의 15개 위치 전부에서 계산한 CE 평균입니다. 모델은 "몇 개가 빠졌는지"(여기서는 5개)까지 스스로 판단해서 원문 길이만큼 생성해야 합니다.
+
+**2) 빈칸 채우기 생성**
+
+- `generate()`는 Encoder를 **한 번** 돌리고, Decoder를 한 토큰씩 반복합니다(8절).
+- **`forced_bos_token_id=0`**: 첫 생성 토큰을 `<s>`(id 0)로 강제합니다. 사전학습 때 Decoder 출력이 항상 `<s>`로 시작했기 때문에(위 정답 참고), 이 형식을 맞춰 줘야 정상적으로 이어 씁니다.
+- **왜 직접 넘기나**: Hub의 `facebook/bart-large` 설정 파일(`config.json`)에는 `forced_bos_token_id=0`, `num_beams=4` 같은 생성 옵션이 들어 있습니다. 그런데 transformers 5.x는 모델 설정 파일에 적힌 생성 옵션을 자동으로 적용하지 않아서, 필요한 값은 `generate()`에 직접 넘깁니다.
+- **결과**: `<mask>` 하나 자리에 `Plan to Stop Chemical Weapons` **5토큰**이 생성되었습니다. BERT였다면 `[MASK]` 하나에 토큰 하나만 채울 수 있습니다.
+
+```python
+# 3) 요약: CNN/DailyMail로 파인튜닝한 BART. Encoder가 기사를 읽고 Decoder가 요약을 beam search로 생성
 sum_tok = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
 summarizer = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
 long_article = ("The Transformer architecture, introduced in 2017, replaced recurrence with self-attention. "
@@ -703,7 +1009,17 @@ long_article = ("The Transformer architecture, introduced in 2017, replaced recu
 inputs = sum_tok(long_article, return_tensors="pt", truncation=True)
 summary_ids = summarizer.generate(**inputs, num_beams=4, min_length=10, max_length=40)
 print(sum_tok.decode(summary_ids[0], skip_special_tokens=True))
+# The Transformer architecture, introduced in 2017, replaced recurrence with self-attention.
+# It enabled highly parallel training and became the basis of BERT, GPT and T5.
 ```
+
+**3) 요약 모델 쓰기**
+
+- **모델**: `bart-large-cnn`은 사전학습된 BART를 CNN/DailyMail 뉴스 요약 데이터(기사 → 하이라이트 문장)로 파인튜닝한 것입니다. 구조는 같고 가중치만 다릅니다.
+- **`truncation=True`**: 입력이 모델 최대 길이(1,024토큰)를 넘으면 잘라냅니다.
+- **`num_beams=4`**: beam search입니다. 매 step에서 확률이 높은 후보 시퀀스 4개를 동시에 유지하다가 최종 점수가 가장 높은 것을 고릅니다. 요약처럼 "그럴듯한 정답"이 비교적 정해진 태스크에서 greedy보다 안정적입니다.
+- **`min_length`, `max_length`**: 생성 길이를 **토큰 수**로 제한합니다. Hub 설정의 기본값은 뉴스 기사 길이에 맞춰 최소 56, 최대 142토큰이라서, 짧은 예시 글에 맞게 줄였습니다.
+- **결과 해석**: 원문의 앞 두 문장을 거의 그대로 가져왔습니다. CNN/DailyMail 요약 정답이 기사 문장과 많이 겹치기 때문에, 이 데이터로 학습한 모델은 원문 문장을 골라 붙이는 경향이 있습니다.
 
 ### 5.2 T5
 
@@ -752,6 +1068,8 @@ print(sum_tok.decode(summary_ids[0], skip_special_tokens=True))
 
 **후속 모델**: T5 v1.1(GeGLU, C4만 사용해 사전학습), mT5(101개 언어), **Flan-T5**(1,800여 개 태스크로 instruction tuning), UL2(여러 denoising 목표 혼합).
 
+**코드로 보기**
+
 ```python
 import torch
 from transformers import AutoTokenizer, T5ForConditionalGeneration
@@ -762,7 +1080,8 @@ model = T5ForConditionalGeneration.from_pretrained("google-t5/t5-small")
 # 1) Span corruption 사전학습 loss: labels만 넘기면 decoder_input_ids는 내부에서 shift해서 만듦
 inp = tok("Thank you <extra_id_0> me to your party <extra_id_1> week.", return_tensors="pt").input_ids
 tgt = tok("<extra_id_0> for inviting <extra_id_1> last <extra_id_2>", return_tensors="pt").input_ids
-print(model(input_ids=inp, labels=tgt).loss)
+out = model(input_ids=inp, labels=tgt)
+print(out.logits.shape, out.loss)   # torch.Size([1, 7, 32128]) 약 3.10
 
 # 2) 다운스트림도 text-to-text: prefix만 바꾸면 됨
 for text in ["translate English to German: That is good.",
@@ -774,6 +1093,25 @@ for text in ["translate English to German: That is good.",
 # acceptable     ← 정답은 "unacceptable". 가장 작은 t5-small은 이렇게 틀리기도 합니다.
 # Transformer replaces recurrence with attention, making training highly parallel.
 ```
+
+**1) Span corruption loss: 텐서로 보기**
+
+| | 토큰 |
+|---|---|
+| Encoder 입력 (11개) | `▁Thank` `▁you` `<extra_id_0>` `▁me` `▁to` `▁your` `▁party` `<extra_id_1>` `▁week` `.` `</s>` |
+| `labels` (7개) | `<extra_id_0>` `▁for` `▁inviting` `<extra_id_1>` `▁last` `<extra_id_2>` `</s>` |
+| `decoder_input_ids` (자동 생성) | `<pad>` `<extra_id_0>` `▁for` `▁inviting` `<extra_id_1>` `▁last` `<extra_id_2>` |
+
+- **sentinel 토큰**: `<extra_id_0>`, `<extra_id_1>`, …은 vocab 끝쪽에 미리 만들어 둔 특수 토큰입니다(id 32099, 32098, … 순으로 **거꾸로** 매겨짐). `▁`는 SentencePiece에서 "앞에 공백이 있음"을 뜻합니다.
+- **`labels`**: 가린 두 구간(`for inviting`, `last`)만 sentinel과 함께 나열하고, 마지막 sentinel(`<extra_id_2>`)과 `</s>`로 끝냅니다. BART와 달리 **멀쩡한 부분(`Thank you`, `me to your party`)은 정답에 없습니다**. 그래서 target이 7토큰으로 짧고 학습 비용이 적습니다.
+- **`decoder_input_ids`**: `labels`를 오른쪽으로 한 칸 밀고 맨 앞에 시작 토큰을 넣습니다. T5는 시작 토큰으로 `<pad>`(id 0)를 씁니다. 위치 t의 입력을 보고 `labels[t]`를 맞히도록 짝이 맞춰집니다.
+- **loss**: `logits` (1, 7, 32128)의 7개 위치 CE 평균입니다. vocab이 토크나이저의 32,100개(일반 토큰 32,000 + sentinel 100)보다 조금 큰 32,128인 것은 임베딩 행렬에 여유분을 둔 것으로, 남는 id는 쓰이지 않습니다.
+
+**2) Text-to-text 추론**
+
+- **prefix가 태스크 지정자**입니다. 모델 구조, 가중치, 호출 방법은 세 경우 모두 같고 입력 문자열 앞부분만 다릅니다. 공개된 T5 체크포인트는 사전학습 중에 이런 지도학습 태스크를 섞어서 학습했기 때문에 prefix를 알아듣습니다.
+- **`generate()` 기본값**: 따로 지정하지 않으면 **greedy**(매 step 최고 확률 토큰)로 생성합니다. `max_new_tokens=30`은 최대 30토큰까지만 생성하라는 뜻이고, 그 전에 `</s>`가 나오면 멈춥니다.
+- **CoLA 결과**: `The course is jumping well.`은 문법적으로 어색한 문장이라 정답은 `unacceptable`인데, t5-small은 `acceptable`이라고 답했습니다. 60M짜리 가장 작은 모델이라 틀릴 수 있습니다. 출력이 **클래스 이름을 텍스트로 생성한 것**이라는 점을 보면 됩니다.
 
 ## 6. 인코더와 디코더가 문제를 학습하는 방식의 차이
 
@@ -1107,9 +1445,12 @@ tok = AutoTokenizer.from_pretrained(name)
 model = AutoModelForSequenceClassification.from_pretrained(name)
 
 with torch.no_grad():
-    logits = model(**tok("this movie was surprisingly good", return_tensors="pt")).logits
+    logits = model(**tok("this movie was surprisingly good", return_tensors="pt")).logits   # (1, 2)
 print(model.config.id2label[logits.argmax(-1).item()])   # POSITIVE — forward 한 번 + argmax
 ```
+
+- 문장 전체를 **한 번에** 넣고 한 번 계산하면 `[CLS]` 위치에서 클래스 점수 2개(NEGATIVE, POSITIVE)가 나옵니다. 반복이 없으므로 출력 길이와 관계없이 비용이 일정합니다.
+- `id2label`은 클래스 번호를 이름으로 바꾸는 표입니다. 파인튜닝할 때 모델 설정에 저장해 둔 값입니다.
 
 **디코더: 한 토큰씩 반복 + KV cache**
 
@@ -1136,6 +1477,12 @@ print(tok.decode(ids[0]))
 # (GPT-2 small + greedy라 반복적인 출력이 나옵니다)
 ```
 
+- **첫 step**: 프롬프트 5토큰을 전부 넣습니다. 이때 각 층의 어텐션이 계산한 **Key와 Value**가 `past_key_values`에 저장됩니다. GPT-2 small은 12개 층마다 K, V가 각각 (배치 1, head 12, 토큰 5, 64차원) 모양으로 쌓입니다.
+- **두 번째 step부터**: `ids[:, -1:]`, 즉 **방금 만든 토큰 하나만** 넣습니다. 새 토큰의 Query는 cache에 저장된 앞 토큰들의 K, V와 어텐션을 계산하고, 자기 K, V를 cache 뒤에 추가합니다.
+- **왜 가능한가**: causal mask 때문에 앞 토큰의 표현은 뒤에 어떤 토큰이 오든 **바뀌지 않습니다**. 그래서 한 번 계산한 K, V를 계속 재사용할 수 있습니다. cache가 없으면 매 step 전체 시퀀스를 처음부터 다시 계산해야 합니다.
+- **`argmax`**: greedy decoding입니다. GPT-2 small에 greedy를 쓰면 위처럼 같은 말을 반복하기 쉬워서, 실제로는 4.5절의 샘플링이나 반복 억제 옵션을 함께 씁니다.
+- **종료 조건**: `<|endoftext|>`(eos)가 나오거나 최대 step 수에 도달하면 멈춥니다.
+
 **인코더–디코더: Encoder는 한 번, Decoder는 반복**
 
 ```python
@@ -1158,6 +1505,11 @@ with torch.no_grad():
             break
 print(tok.decode(dec_ids[0], skip_special_tokens=True))          # Das ist gut.
 ```
+
+- **`get_encoder()`**: Encoder만 떼어서 원문을 **한 번** 인코딩합니다. 결과 `enc_out`은 원문 토큰마다의 벡터이고, 반복하는 동안 계속 재사용합니다.
+- **`decoder_start_token_id`**: T5는 `<pad>`(id 0)로 Decoder를 시작합니다. 학습 때 `decoder_input_ids` 맨 앞에 넣었던 토큰과 같습니다(5.2절).
+- **`encoder_outputs=enc_out`**: 이미 계산한 Encoder 출력을 넘기면 모델이 Encoder를 다시 돌리지 않고 Decoder만 계산합니다. `attention_mask`는 cross-attention에서 원문의 pad를 가리는 데 쓰입니다.
+- **반복**: 매 step Decoder 입력 전체(`dec_ids`)를 넣고 마지막 위치의 분포에서 다음 토큰을 고릅니다. `</s>`가 나오면 멈춥니다.
 
 (설명을 위해 Decoder 쪽 KV cache는 생략했습니다. 실제로는 `model.generate()`가 cache와 beam search를 모두 처리해 줍니다.)
 
