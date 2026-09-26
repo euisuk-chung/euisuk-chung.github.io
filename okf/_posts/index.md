@@ -2,6 +2,7 @@
 
 ## 2026
 
+* [[Paper Review] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](2026/2026-09-22-tabpfn-review.md) - 합성 데이터의 사전분포로 Bayesian 예측을 학습한 TabPFN의 구조와 수식, 작은 정형 데이터 분류 실험 및 속도 비교 조건을 원문 순서대로 분석합니다.
 * [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.
 * [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md) - Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다.
 * [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md) - Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다.

@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-25
+* **Creation**: Added [TabPFN paper review](_posts/2026/2026-09-22-tabpfn-review.md), covering the original ICLR 2023 paper (arXiv:2207.01848v6), Bayesian prior-fitting, architecture, and small-tabular classification experiments.
 * **Creation**: Added [language model review: Transformer to T5](_posts/2026/2026-09-25-lm-review-transformer-to-t5.md), a concept note covering Transformer, BERT, GPT, BART and T5 with 19 original paper figures, per-model train/validation samples, loss computation details and verified code snippets.
 
 ## 2026-09-11
