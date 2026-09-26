@@ -28,7 +28,7 @@
 * 2026-09-25 **Review**: [\[복습\] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/38) — 병합 완료 · PR #38 · `4d2ca4a`
 * 2026-09-25 **Review**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · PR #36 · `33bce55`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/35) — 병합 완료 · PR #35 · `4e938c5`
-* 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 검토 대기 · PR #34 · `541761c`
+* 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 검토 대기 · PR #34 · `e37279e`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/33) — 병합 완료 · PR #33 · `cfe3bd4`
 * 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · PR #32 · `ed81a28`
 * 2026-09-22 **Review**: [\[Paper Review\] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/31) — 병합 완료 · PR #31 · `e4f43e0`
