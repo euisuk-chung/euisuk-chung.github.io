@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-25
+* **Creation**: Added [language model review: Transformer to T5](_posts/2026/2026-09-25-lm-review-transformer-to-t5.md), a concept note covering Transformer, BERT, GPT, BART and T5 with 19 original paper figures, per-model train/validation samples, loss computation details and verified code snippets.
+
 ## 2026-09-11
 * **Update**: Added concept [Repo Review](_concepts/repo-review.md) as the category tag for repository reviews (`type: Repo Review`), mirroring [Paper Review](_concepts/paper-review.md).
 * **Update**: Removed 5 duplicate 2025 posts (Operator, Easy! 딥러닝, Perplexity/BLEU, Canvas LaTeX, Midjourney) that the crawler had saved twice; the kept posts carry `redirect_from` for the old URLs.

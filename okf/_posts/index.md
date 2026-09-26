@@ -2,6 +2,7 @@
 
 ## 2026
 
+* [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.
 * [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md) - Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다.
 * [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md) - Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다.
 * [[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대](2026/2026-05-25-[구글] 2026 Google I_O Developer Keynote정리_ Agent가 주도하는 개발의 새 시대.md) - Google I/O 2026 Developer Keynote의 Managed Agents, Antigravity 2.0과 CLI, Gemma 4 LoRA 파인튜닝 데모, Android CLI, WebMCP와 DevTools for Agents 발표를 정리합니다.
