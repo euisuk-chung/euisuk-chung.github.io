@@ -2,7 +2,7 @@
 type: "Paper Review"
 title: "[Paper Review] TabPFN v2: Accurate predictions on small data with a tabular foundation model"
 description: "합성 데이터로 사전학습한 TabPFN v2의 인컨텍스트 추론 구조와 소규모 표 데이터 성능을 원문·Methods·보충자료의 평가 조건에 따라 분석합니다."
-date: "2026-09-24"
+date: "2026-09-22"
 tags:
   - "Paper Review"
   - "Transformer"
@@ -20,6 +20,8 @@ status: "stable"
 year: "2026"
 analyzed_at: "2026-09-24T19:17:26+09:00"
 doi: "10.1038/s41586-024-08328-6"
+redirect_from:
+  - "/2026/09/24/tabpfn-v2-review/"
 source_authors:
   - "Noah Hollmann"
   - "Samuel Müller"

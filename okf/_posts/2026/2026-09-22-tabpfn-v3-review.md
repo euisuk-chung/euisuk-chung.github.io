@@ -2,7 +2,7 @@
 type: "Paper Review"
 title: "[Paper Review] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장"
 description: "TabPFN-3의 행 압축 아키텍처와 캐시 최적화, Thinking 변형을 설명하고 표·시계열·관계형 데이터의 성능을 평가 조건별로 분석합니다."
-date: "2026-09-24"
+date: "2026-09-22"
 tags:
   - "Paper Review"
   - "Transformer"
@@ -24,6 +24,8 @@ status: "stable"
 year: "2026"
 analyzed_at: "2026-09-24T19:57:10+09:00"
 doi: "10.48550/arXiv.2605.13986"
+redirect_from:
+  - "/2026/09/24/tabpfn-3-review/"
 source_authors:
   - "Prior Labs Team"
 source_id: "2605.13986"
