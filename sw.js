@@ -135,6 +135,8 @@ self.addEventListener('activate', event => {
  *  void respondWith(Promise<Response> r);
  */
 self.addEventListener('fetch', event => {
+  // Draft previews must reflect the current PR, never a stale offline copy.
+  if (new URL(event.request.url).pathname.startsWith('/pr-preview/')) return;
   // logs for debugging
   //console.log(`fetch ${event.request.url}`)
   //console.log(` - type: ${event.request.type}; destination: ${event.request.destination}`)

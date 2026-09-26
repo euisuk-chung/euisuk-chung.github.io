@@ -7,8 +7,7 @@ tags:
   - "OpenAI"
   - "AI Agent"
   - "Prompt Engineering"
-  - "Vibe Coding"
-  - "ChatGPT"
+  - "Tools"
 resource: "https://velog.io/@euisuk-chung/GPT-5-Codex-완벽-가이드-AI-코딩-에이전트의-새로운-패러다임"
 generated:
   by: "process:velog-sync"

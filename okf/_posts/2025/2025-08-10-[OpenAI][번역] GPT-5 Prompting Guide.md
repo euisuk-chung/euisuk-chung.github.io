@@ -1,5 +1,5 @@
 ---
-type: "Product Update"
+type: "Guide"
 title: "[OpenAI][번역] GPT-5 Prompting Guide"
 description: "OpenAI 공식 GPT-5 프롬프팅 가이드를 번역해 reasoning_effort와 verbosity 매개변수, 에이전트 적극성 조절, tool preamble, Cursor의 시스템 프롬프트 튜닝 사례와 메타프롬프팅 템플릿을 정리한다."
 date: "2025-08-10"
@@ -7,7 +7,6 @@ tags:
   - "Prompt Engineering"
   - "OpenAI"
   - "AI Agent"
-  - "ChatGPT"
 resource: "https://velog.io/@euisuk-chung/OpenAI번역-GPT-5-Prompting-Guide"
 generated:
   by: "process:velog-sync"

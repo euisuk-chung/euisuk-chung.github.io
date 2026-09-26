@@ -1,8 +1,30 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · CORDIAL이 순서형 LLM 평가의 편향과 분산을 소수 라벨로 보정하는 방법을 설명하고, Bayesian 채널의 순서 보장과 표본 규모에 따른 성능 역전을 분석합니다.
+* [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · CAST의 정상 문맥·이상 구조 조건부 flow matching과 두 단계 학습을 설명하고, 생성 품질과 실제 이상탐지 성능을 원문 실험 조건에 따라 분석합니다.
+* [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 검토 대기 · TabPFN v2의 내부 표현과 성능 특성을 분석하고 고차원·다중 클래스·대규모 데이터로 확장하는 추론 시 분할 전략을 살펴봅니다.
+* [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · GravityOCR의 확산 초안과 자기회귀 검증, 공동 학습과 GRPO를 원문 순서대로 해설하고 OCR 품질 및 영역·페이지별 속도 향상의 측정 조건을 분석합니다.
+* [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 검토 대기 · 연속 그룹 선택과 계층 간 예측 프리페치, 선택적 캐시 수정을 결합한 GroupKV의 원리와 장문맥 확산 언어 모델에서의 메모리·처리량·정확도 절충을 분석합니다.
+* [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/29) — 검토 대기 · 동일 모델로 셸·typed tools·PTC·도구 합성을 비교한 기업 업무 실험을 통해 성능, 토큰 비용, 재사용과 평가 지표의 해석 범위를 살펴봅니다.
+* [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/28) — 검토 대기 · 고정 게임 트리의 CFR 계산을 평탄한 배열과 CUDA graph로 실행하는 GPU-CFR의 설계, 정확성 증명, 성능 비교 조건과 재풀이 비용을 분석합니다.
+* [\[Paper Review\] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/26) — 검토 대기 · SenseNova-U1.5의 공간 디코더, 작업별 강화학습과 on-policy 증류를 원문 순서로 분석하고 생성·편집·추론 평가의 개선과 조건별 차이를 검토합니다.
+* [\[Repo Review\] Hermes Agent: 도구 실행과 기억을 연결하는 에이전트 런타임](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/7) — 검토 대기 · Hermes Agent의 대화 루프, 실행 전 영속화, 충돌을 고려한 도구 병렬 처리, 세션·메모리·스킬의 분리를 코드로 살펴봅니다.
+* [\[Repo Review\] OpenClaw — 메시지 한 건이 에이전트 실행과 응답으로 이어지는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/6) — 검토 대기 · OpenClaw의 Gateway, 세션 라우팅, 실행 큐, 도구 구성과 응답 전달을 Control UI의 chat.send 경로로 추적합니다.
+* [\[Paper Review\] Programmable World Model: 실행 가능한 상태와 영상 생성을 분리한 세계 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/5) — 검토 대기 · 명시적 엔진 상태를 3D OBB 제어 신호로 변환하여 영상의 객체 수와 상태 일관성을 높이는 Programmable World Model을 분석합니다.
+* [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 검토 대기 · Superpowers 6.3.0의 세션 초기화, 스킬 선택, 계획 분해와 리뷰 흐름을 추적하고 코드가 보장하는 동작과 자연어 지침의 경계를 분석합니다.
+* [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 검토 대기 · 하드웨어 감지부터 양자화 선택, 메모리 적합도와 속도 추정, 실측 보정까지 llmfit의 추천 경로를 코드로 분석합니다.
+* [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 검토 대기 · VLM의 판단을 작은 로봇 동작으로 연결하는 Show-Harness의 인터페이스, 실험, 부록을 원문 순서대로 분석합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
-* [[Repo Review] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](2026/2026-09-11-superpowers-review.md) - Superpowers 6.3.0의 세션 초기화, 스킬 선택, 계획 분해와 리뷰 흐름을 추적하고 코드가 보장하는 동작과 자연어 지침의 경계를 분석합니다.
+* [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.
+* [[Paper Review] TabPFN v2: Accurate predictions on small data with a tabular foundation model](2026/2026-09-24-tabpfn-v2-review.md) - 합성 데이터로 사전학습한 TabPFN v2의 인컨텍스트 추론 구조와 소규모 표 데이터 성능을 원문·Methods·보충자료의 평가 조건에 따라 분석합니다.
+* [[Paper Review] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](2026/2026-09-24-tabpfn-3-review.md) - TabPFN-3의 행 압축 아키텍처와 캐시 최적화, Thinking 변형을 설명하고 표·시계열·관계형 데이터의 성능을 평가 조건별로 분석합니다.
+* [[Paper Review] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](2026/2026-09-22-tabpfn-review.md) - 합성 데이터의 사전분포로 Bayesian 예측을 학습한 TabPFN의 구조와 수식, 작은 정형 데이터 분류 실험 및 속도 비교 조건을 원문 순서대로 분석합니다.
 * [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md) - Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다.
 * [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md) - Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다.
 * [[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대](2026/2026-05-25-[구글] 2026 Google I_O Developer Keynote정리_ Agent가 주도하는 개발의 새 시대.md) - Google I/O 2026 Developer Keynote의 Managed Agents, Antigravity 2.0과 CLI, Gemma 4 LoRA 파인튜닝 데모, Android CLI, WebMCP와 DevTools for Agents 발표를 정리합니다.
@@ -85,7 +107,6 @@
 * [[구글] Google I/O '25 키노트 ✨](2025/2025-05-21-[구글] Google I_O _25 키노트 ✨.md) - Google I/O 2025 키노트에서 발표된 Gemini 2.5 Pro·Flash와 Deep Think, Project Astra·Mariner 에이전트, AI Mode 검색, Imagen 4·Veo 3, Android XR 안경 등 주요 내용을 요약한다.
 * [🔍 Codex 연구 프리뷰: AI 개발 에이전트의 시대](2025/2025-05-18-🔍 Codex 연구 프리뷰_ AI 개발 에이전트의 시대.md) - OpenAI가 공개한 클라우드 기반 AI 개발 에이전트 Codex의 codex-1 모델, 격리 샌드박스 병렬 작업 방식, AGENTS.md 지침 파일, 데모 영상의 버그 수정·PR 생성 사례와 Codex CLI 요금을 정리한다.
 * [ChatGPT를 진짜 "쓸모 있게" 만드는 간단한 방법](2025/2025-05-12-ChatGPT를 진짜 _쓸모 있게_ 만드는 간단한 방법.md) - GPT-4o의 아첨(sycophancy) 문제가 RLHF 보상 신호에서 비롯된 배경을 설명하고, 솔직한 조언을 유도하는 프롬프트 문장과 Custom Instructions·영구 메모리 설정 방법을 제안한다.
-* [미드저니(Midjourney) 기초 가이드](2025/2025-05-01-미드저니(Midjourney) 기초 가이드.md) - 텍스트 프롬프트로 이미지를 만드는 Midjourney의 가입과 요금제, 웹 Create 페이지와 Creation Actions 사용법, 주요 파라미터와 프롬프트 가중치, V6·V6.1·V7·Niji 6 버전 선택 기준을 단계별로 안내한다.
 * [[꿀팁] 미드저니(Midjourney) 기초 가이드](2025/2025-05-01-[꿀팁] 미드저니(Midjourney) 기초 가이드.md) - Midjourney 공식 문서를 바탕으로 웹 UI의 Create·Edit·Organize 페이지, Vary·Upscale·Pan 등 Creation Actions, 주요 파라미터와 멀티 프롬프트 가중치, V6.1·V7·Niji 6 버전 차이를 정리한 입문 가이드.
 * [[개념] API에 대해서 이해해보자!](2025/2025-04-27-[개념] API에 대해서 이해해보자!.md) - API의 요청·응답 구조와 동기/비동기 통신, REST·GraphQL·gRPC·JSON-RPC 형식, HTTP·WebSocket·SSE·STDIO 프로토콜, FastAPI를 설명하고 Python requests로 Kakao 검색 API를 호출하는 예제를 다룬다.
 * [💻 내가 보려고 작성한 UV 완벽 가이드](2025/2025-04-24-💻 내가 보려고 작성한 UV 완벽 가이드.md) - Rust 기반 Python 환경 관리 도구 UV의 설치, Python 버전 관리, uv init·venv·sync, uv add와 uv tool·uvx의 차이, 실무 프로젝트 템플릿과 기존 도구 대비 성능까지 정리한다.
@@ -113,16 +134,12 @@
 * [OpenAI o3-mini: 새로운 비용 효율적 AI 모델 출시](2025/2025-02-01-OpenAI o3-mini_ 새로운 비용 효율적 AI 모델 출시.md) - OpenAI o3-mini의 reasoning effort(Low/Medium/High) 옵션과 가격, 컨텍스트 윈도우를 소개하고 AIME, GPQA, Codeforces, SWE-bench 등 벤치마크에서 o1·o1-mini 대비 성능을 비교한다.
 * [(설명추가) 웨이트 초기화 (Weight Initialization)](2025/2025-02-01-(설명추가) 웨이트 초기화 (Weight Initialization).md) - LeCun, Xavier(Glorot), He(Kaiming) 초기화가 활성화 함수별로 가중치 분산을 어떻게 조절하는지 수식으로 설명하고, 시그모이드 포화와 기울기 소실 문제, PyTorch·Keras 적용 코드, 초기화 선택 기준을 정리한다.
 * [(설명추가) Q-Learning: 강화학습의 핵심 개념과 이해](2025/2025-01-31-(설명추가) Q-Learning_ 강화학습의 핵심 개념과 이해.md) - 혁펜하임의 『Easy! 딥러닝』을 바탕으로 강화학습의 상태·행동·보상 개념과 Q-Table, 벨만 방정식 기반 Q-값 갱신, ε-greedy 탐색 전략, 할인율, DQN으로의 확장까지 Q-Learning을 정리한다.
-* [[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법](2025/2025-01-29-[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법.md) - GPT Canvas의 LaTeX 렌더링 버그를 정리하고 MathJax·KaTeX 문법 차이를 설명한 뒤, @ 기호 대체 프롬프트와 Python 후처리로 수식을 보존하는 방법을 소개한다.
 * [[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법](2025/2025-01-28-[꿀팁] GPT Canvas에서 LaTeX 수식 랜더링 문제 및 해결 방법.md) - GPT Canvas에서 LaTeX 수식이 깨지는 문제를 살펴보고, $ 대신 @ 기호로 수식을 작성한 뒤 찾기/바꾸기나 Python 스크립트로 복구하는 우회 방법을 제시한다.
 * [[NLP] 6. Topic Modeling이란?](2025/2025-01-28-[NLP] 6. Topic Modeling이란_.md) - 행렬 분해 기반 LSA와 확률 모델 기반 pLSA, LDA의 원리를 비교하고 SVD, EM 알고리즘, Gibbs Sampling을 설명하며 뉴스 기사로 LSA 실습을 수행한다.
 * [[NLP] 5. 자연어 차원 축소(Dimension Reduction) 기법](2025/2025-01-28-[NLP] 5. 자연어 차원 축소(Dimension Reduction) 기법.md) - DSBA 강필성 교수 강의를 바탕으로 텍스트 데이터의 특징 선택 지표 10가지와 SVD, LSA, SNE, Symmetric SNE, t-SNE 등 특징 추출 기법을 정리한다.
-* [(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명](2025/2025-01-27-(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명.md) - 『Easy! 딥러닝』 19쪽의 보충으로 Perplexity의 정의와 지수 -1/N을 쓰는 이유, BLEU의 n-그램 정밀도와 Brevity Penalty, 두 지표의 차이를 설명한다.
 * [(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명](2025/2025-01-26-(설명추가) Perplexity와 BLEU 스코어에 대한 보충 설명.md) - 언어 모델 평가 지표인 Perplexity의 정의와 엔트로피와의 관계, BLEU 스코어의 n-그램 정밀도와 Brevity Penalty 계산 과정 및 한계를 수식과 함께 정리한다.
 * [[도서소개] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』](2025/2025-01-25-[도서소개] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』.md) - 혁펜하임의 『Easy! 딥러닝』 입문서를 소개하며 저자 소개와 책의 특징, 챕터별 구성을 정리하고 경사 하강법 최적화 기법과 정규화 기법 리뷰 계획을 예고한다.
-* [[도서리뷰] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』](2025/2025-01-25-[도서리뷰] 딥러닝 입문자를 위한 책 추천, 혁펜하임 『Easy! 딥러닝』.md) - 혁펜하임의 『Easy! 딥러닝』을 소개하며 저자 배경, 책의 특징, 8개 챕터와 기초 수학 부록의 목차, 이어질 리뷰에서 다룰 배치·레이어 정규화 주제를 안내한다.
 * [[OpenAI] Operator & Agents : Computer-Using Agent](2025/2025-01-24-[OpenAI] Operator and Agents _ Computer-Using Agent.md) - GUI를 직접 조작하는 OpenAI CUA의 작동 방식과 Operator 데모 사례(Instacart, OpenTable, Saved Prompts), 벤치마크 성능과 오용·실수·적대적 공격 대응책을 다룬다.
-* [[OpenAI] Introduction to Operator & Agents : Computer-Using Agent](2025/2025-01-24-[OpenAI] Introduction to Operator and Agents _ Computer-Using Agent.md) - OpenAI의 Computer-Using Agent(CUA)와 Operator의 개념 차이, 지각·추론·행동 루프, OSWorld·WebArena·WebVoyager 벤치마크 결과와 안전 장치를 정리한다.
 * [[꿀팁] 유니코드 문자표 모음집 사이트 소개!!](2025/2025-01-22-[꿀팁] 유니코드 문자표 모음집 사이트 소개!!.md) - 유니코드 기호를 검색하고 복사할 수 있는 사이트 SYMBL을 소개하며, 박스 도면, 수학 기호, 화살표 등 자주 쓰는 기호의 활용 예를 정리한다.
 * [ChatGPT Tasks: 혁신적인 작업 관리 도구](2025/2025-01-18-ChatGPT Tasks_ 혁신적인 작업 관리 도구.md) - ChatGPT의 예약 작업 기능 Tasks의 설정·편집·일시정지 방법을 화면과 함께 안내하고, AI 뉴스 요약, 주식 정보, 단편 소설 생성 등 직접 적용한 자동화 사례를 소개한다.
 * [[CES 2025] Keynote : Volvo Group President and CEO, Martin Lundstedt](2025/2025-01-09-[CES 2025] Keynote _ Volvo Group President and CEO, Martin Lundstedt.md) - 전기 트럭·굴착기, 충전 인프라, 화석 연료 없는 철강, Daimler와의 SDV 플랫폼, Aurora와의 자율 주행 트럭 등 Volvo Group의 지속 가능한 운송 전략과 스웨덴 장관의 발표를 정리한다.

@@ -7,8 +7,8 @@ tags:
   - "Transformer"
   - "트렌드"
   - "딥러닝"
-  - "Paper Review"
   - "IT지식"
+  - "State Space Model"
 resource: "https://velog.io/@euisuk-chung/트렌드-트렌스포머-이후의-차세대-아키텍쳐-MoE-SSM-RetNet-V-JEPA"
 generated:
   by: "process:velog-sync"

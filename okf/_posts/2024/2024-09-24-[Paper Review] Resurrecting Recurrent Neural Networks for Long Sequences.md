@@ -8,7 +8,6 @@ tags:
   - "State Space Model"
   - "딥러닝"
   - "시계열"
-  - "NLP"
 resource: "https://velog.io/@euisuk-chung/Paper-Review-Resurrecting-Recurrent-Neural-Networks-for-Long-Sequences"
 generated:
   by: "process:velog-sync"
