@@ -15,19 +15,35 @@ from pathlib import Path
 
 import okf_common as oc
 
+PENDING_BEGIN = "<!-- okf-review-index:start -->"
+PENDING_END = "<!-- okf-review-index:end -->"
+
+
+def stored_review_index(posts_dir: Path) -> str:
+    path = posts_dir / "index.md"
+    text = path.read_text(encoding="utf-8") if path.exists() else ""
+    if PENDING_BEGIN not in text and PENDING_END not in text:
+        return ""
+    if text.count(PENDING_BEGIN) != 1 or text.count(PENDING_END) != 1 or text.index(PENDING_BEGIN) > text.index(PENDING_END):
+        raise ValueError("Invalid review index markers")
+    return text[text.index(PENDING_BEGIN):text.index(PENDING_END) + len(PENDING_END)]
+
 
 def _desc(fm: dict) -> str:
     return " ".join(str(fm.get("description") or "").split())
 
 
-def posts_index(posts_dir: Path) -> str:
+def posts_index(posts_dir: Path, pending_block: str | None = None) -> str:
     by_year: dict[str, list[tuple[str, str, str, str]]] = {}
     for p in oc.iter_post_files(posts_dir):
         fm = oc.parse_document(p.read_text(encoding="utf-8")).front_matter
         year = p.name[:4]
         rel = p.relative_to(posts_dir).as_posix()
         by_year.setdefault(year, []).append((p.name[:10], rel, str(fm.get("title", p.stem)), _desc(fm)))
+    pending = stored_review_index(posts_dir) if pending_block is None else pending_block
     out = ["# Posts", ""]
+    if pending:
+        out.extend([pending, ""])
     for year in sorted(by_year, reverse=True):
         out.append(f"## {year}")
         out.append("")
@@ -61,11 +77,11 @@ def root_index(okf_root: Path, posts_dir: Path, concepts_dir: Path) -> str:
     return "\n".join(out) + "\n"
 
 
-def targets(cfg: dict) -> list[tuple[Path, str]]:
+def targets(cfg: dict, pending_block: str | None = None) -> list[tuple[Path, str]]:
     posts_dir = oc.REPO_ROOT / cfg["posts_dir"]
     concepts_dir = oc.REPO_ROOT / cfg["concepts_dir"]
     okf_root = oc.REPO_ROOT / cfg["okf_root"]
-    result = [(posts_dir / "index.md", posts_index(posts_dir))]
+    result = [(posts_dir / "index.md", posts_index(posts_dir, pending_block))]
     if okf_root.exists() and posts_dir.resolve().is_relative_to(okf_root.resolve()):
         result.append((okf_root / "index.md", root_index(okf_root, posts_dir, concepts_dir)))
     return result
