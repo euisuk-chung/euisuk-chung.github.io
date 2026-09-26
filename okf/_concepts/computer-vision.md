@@ -6,6 +6,8 @@ description: "이미지·영상 인식 모델과 컴퓨터 비전 연구."
 aliases:
   - "CV"
 parent: "deep-learning"
+related:
+  - "cnn"
 status: "stable"
 ---
 

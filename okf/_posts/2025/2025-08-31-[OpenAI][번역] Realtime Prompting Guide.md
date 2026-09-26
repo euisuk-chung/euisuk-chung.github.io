@@ -1,5 +1,5 @@
 ---
-type: "Product Update"
+type: "Guide"
 title: "[OpenAI][번역] Realtime Prompting Guide"
 description: "OpenAI Realtime API 프롬프팅 가이드를 번역해 역할·톤·언어 제약·발음 규칙 등 프롬프트 구조, 도구 호출 서문과 도구별 동작 규칙, 상태 머신 기반 대화 흐름과 에스컬레이션 설계를 다룬다."
 date: "2025-08-31"
@@ -7,7 +7,6 @@ tags:
   - "Prompt Engineering"
   - "OpenAI"
   - "AI Agent"
-  - "ChatGPT"
 resource: "https://velog.io/@euisuk-chung/OpenAI-Realtime-Prompting-Guide"
 generated:
   by: "process:velog-sync"

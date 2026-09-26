@@ -7,7 +7,6 @@ tags:
   - "Paper Review"
   - "Distillation"
   - "딥러닝"
-  - "개념정리"
 resource: "https://velog.io/@euisuk-chung/Paper-Review-Transferring-Inductive-Bias-Through-Knowledge-Distillation"
 generated:
   by: "process:velog-sync"

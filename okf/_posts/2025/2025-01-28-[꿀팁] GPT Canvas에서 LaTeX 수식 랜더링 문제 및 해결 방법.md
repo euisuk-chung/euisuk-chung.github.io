@@ -19,6 +19,8 @@ sources:
     last_modified: "2025-01-28"
 status: "stable"
 year: "2025"
+redirect_from:
+  - "/2025/01/29/꿀팁-GPT-Canvas에서-LaTeX-수식-랜더링-문제-및-해결-방법/"
 ---
 
 ## (복습) GPT Canvas란?

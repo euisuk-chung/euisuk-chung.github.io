@@ -7,6 +7,7 @@ tags:
   - "Computer Vision"
   - "Paper Review"
   - "딥러닝"
+  - "CNN"
 resource: "https://velog.io/@euisuk-chung/Paper-Review-A-COMPREHENSIVE-REVIEW-OF-YOLO-ARCHITECTURES-IN-COMPUTER-VISION-FROM-YOLOV1-TO-YOLOV8-ANDYOLO-NAS"
 generated:
   by: "process:velog-sync"

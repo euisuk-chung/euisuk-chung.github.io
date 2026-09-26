@@ -1,0 +1,70 @@
+name: Build site and review previews
+
+on:
+  push:
+    branches: [master]
+  pull_request_target:
+    types: [opened, synchronize, reopened, closed]
+    branches: [master]
+  workflow_dispatch:
+  # GITHUB_TOKEN metadata commits do not trigger push workflows.
+  workflow_run:
+    workflows: [OKF Metadata]
+    types: [completed]
+    branches: [master]
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      # Never check out or execute PR code, including for pull_request_target.
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v4
+      - name: Generate merged-content indexes
+        run: uv run --frozen --project _scripts python _scripts/okf_index.py --write
+      - name: Test math rendering
+        run: bundle exec ruby _scripts/test_review_math.rb
+      - name: Build published site
+        run: bundle exec jekyll build --destination _site
+      - name: Build isolated review previews from content only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python _scripts/build_review_previews.py --destination _site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy site and previews
+        id: deployment
+        uses: actions/deploy-pages@v4

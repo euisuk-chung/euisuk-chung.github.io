@@ -7,6 +7,7 @@ tags:
   - "Google"
   - "IT지식"
   - "트렌드"
+  - "Sora"
 resource: "https://velog.io/@euisuk-chung/Veo2-차세대-AI-비디오-생성-모델-Veo2-vs-Sora"
 generated:
   by: "process:velog-sync"
