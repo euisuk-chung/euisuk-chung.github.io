@@ -42,4 +42,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 검토 대기 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 검토 대기 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 검토 대기 · PR #2 · `2e038f5`
+* 2026-09-26 **Creation**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](_posts/2026/2026-09-22-tabpfn-v2-review.md) — `40e3013`
+* 2026-09-26 **Creation**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](_posts/2026/2026-09-22-tabpfn-v3-review.md) — `40e3013`
+* 2026-09-26 **Deletion**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/blob/d72c93e3f2c467b3ce2f7adc7c837b12e9ded438/okf/_posts/2026/2026-09-24-tabpfn-3-review.md) — `40e3013`
+* 2026-09-26 **Deletion**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](https://github.com/euisuk-chung/euisuk-chung.github.io/blob/d72c93e3f2c467b3ce2f7adc7c837b12e9ded438/okf/_posts/2026/2026-09-24-tabpfn-v2-review.md) — `40e3013`
 <!-- okf-metadata:end -->
