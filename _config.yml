@@ -51,6 +51,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-redirect-from   # 중복 글 정리 시 남긴 글에 redirect_from 으로 옛 URL 유지
 
 # 기본 레이아웃
 # velog 동기화 포스트에는 front-matter에 layout이 없다.

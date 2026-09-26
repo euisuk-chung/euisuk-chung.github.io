@@ -1,0 +1,28 @@
+---
+title: Tags
+layout: default
+description: "「🏷️ 태그 사전」"
+header-img: "img/bg-little-universe.jpg"
+permalink: /tags/
+---
+
+<!-- Page Header -->
+{% include intro-header.html type='page' short=true %}
+
+<!-- Main Content: one entry per okf/_concepts/*.md, linking to /tags/<slug>/ -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<section class="tag-index">
+				{%- assign _concepts = site.concepts | sort: "title" -%}
+				{%- for _c in _concepts -%}
+				{%- assign _n = site.posts | where_exp: "p", "p.tags contains _c.title" | size -%}
+				<div class="tag-index-item">
+					<a class="tag" href="{{ _c.url | prepend: site.baseurl }}" title="{{ _c.title }}">{{ _c.title }}<sup>{{ _n }}</sup></a>
+					<span class="tag-index-desc">{{ _c.description }}</span>
+				</div>
+				{%- endfor -%}
+			</section>
+		</div>
+	</div>
+</div>

@@ -6,7 +6,6 @@ date: "2025-03-22"
 tags:
   - "OpenAI"
   - "AI Agent"
-  - "ChatGPT"
 resource: "https://velog.io/@euisuk-chung/OpenAI-Audio-Models-in-the-API-출시"
 generated:
   by: "process:velog-sync"

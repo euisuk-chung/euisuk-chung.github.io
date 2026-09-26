@@ -8,7 +8,6 @@ tags:
   - "State Space Model"
   - "딥러닝"
   - "시계열"
-  - "NLP"
 resource: "https://velog.io/@euisuk-chung/Structured-State-Space-Models-for-Deep-Sequence-Modeling"
 generated:
   by: "process:velog-sync"

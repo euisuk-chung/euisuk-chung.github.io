@@ -5,7 +5,6 @@ description: "AIKive가 주최한 AI 이미지 창작 대회 AI FC의 참여 방
 date: "2025-01-05"
 tags:
   - "Prompt Engineering"
-  - "Tools"
 resource: "https://velog.io/@euisuk-chung/제1회-AI-FC-AI-Fight-Club-대회-소개-및-참여후기"
 generated:
   by: "process:velog-sync"

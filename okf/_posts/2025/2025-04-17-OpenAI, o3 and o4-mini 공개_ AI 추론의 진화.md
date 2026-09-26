@@ -6,7 +6,6 @@ date: "2025-04-17"
 tags:
   - "OpenAI"
   - "AI Agent"
-  - "ChatGPT"
 resource: "https://velog.io/@euisuk-chung/OpenAI-o3-o4-mini-공개-AI-추론의-진화"
 generated:
   by: "process:velog-sync"

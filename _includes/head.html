@@ -1,9 +1,9 @@
 <head>
+    {% if site.review_preview %}<meta name="robots" content="noindex,nofollow">{% endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{{ site.keyword }}">
     <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
     
@@ -23,7 +23,6 @@
     
     {% when 'post' %}
     <meta property="og:type" content="article">
-    <meta property="og:description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ page.excerpt | strip_html | truncate:200 }}{% endif %}">
     
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date: " %Y-%m-%dT%H:%M:%SZ" }}">
@@ -39,8 +38,6 @@
 
     {% else %}
     <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
         
     {% endcase %}
     
