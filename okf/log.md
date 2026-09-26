@@ -28,7 +28,7 @@
 * 2026-09-25 **Review**: [\[복습\] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/38) — 병합 완료 · PR #38 · `4d2ca4a`
 * 2026-09-25 **Review**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · PR #36 · `33bce55`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/35) — 병합 완료 · PR #35 · `4e938c5`
-* 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 검토 대기 · PR #34 · `09ecb06`
+* 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 병합 완료 · PR #34 · `09ecb06`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/33) — 병합 완료 · PR #33 · `cfe3bd4`
 * 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · PR #32 · `ed81a28`
 * 2026-09-22 **Review**: [\[Paper Review\] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/31) — 병합 완료 · PR #31 · `e4f43e0`
@@ -42,6 +42,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 검토 대기 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 검토 대기 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 검토 대기 · PR #2 · `2e038f5`
+* 2026-09-26 **Creation**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](_posts/2026/2026-09-22-tabpfn-v2-study-closer-look-review.md) — `96436e0`
 * 2026-09-26 **Creation**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](_posts/2026/2026-09-22-tabpfn-v2-review.md) — `40e3013`
 * 2026-09-26 **Creation**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](_posts/2026/2026-09-22-tabpfn-v3-review.md) — `40e3013`
 * 2026-09-26 **Deletion**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/blob/d72c93e3f2c467b3ce2f7adc7c837b12e9ded438/okf/_posts/2026/2026-09-24-tabpfn-3-review.md) — `40e3013`
