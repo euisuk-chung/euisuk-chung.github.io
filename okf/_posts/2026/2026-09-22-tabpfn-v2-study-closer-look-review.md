@@ -2,7 +2,7 @@
 type: "Paper Review"
 title: "[Paper Review] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략"
 description: "TabPFN v2의 내부 표현과 성능 특성을 분석하고 고차원·다중 클래스·대규모 데이터로 확장하는 추론 시 분할 전략을 살펴봅니다."
-date: "2026-09-24"
+date: "2026-09-22"
 tags:
   - "Paper Review"
   - "Transformer"
