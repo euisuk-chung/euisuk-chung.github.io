@@ -6,7 +6,7 @@ date: "2023-05-02"
 tags:
   - "Git"
   - "환경설정"
-  - "개념정리"
+  - "꿀팁"
 resource: "https://velog.io/@euisuk-chung/Git-Branch에-대한-이해와-활용"
 generated:
   by: "process:velog-sync"

@@ -7,4 +7,4 @@ aliases: []
 status: "stable"
 ---
 
-Qwen 관련 글 모음.
+Alibaba의 Qwen 계열 언어·멀티모달 모델 기술 보고서와 리뷰.

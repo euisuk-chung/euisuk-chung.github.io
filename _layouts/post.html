@@ -18,19 +18,19 @@ layout: default
                 col-md-10 col-md-offset-1
                 post-container">
 
+                {% if site.review_preview %}
+                <aside class="alert alert-info" role="note">
+                    검토용 초안 · <a href="https://github.com/euisuk-chung/euisuk-chung.github.io/pull/{{ site.review_pr }}">PR #{{ site.review_pr }}</a>
+                    · {{ site.review_sha | slice: 0, 7 }} · 아직 발행되지 않은 글입니다.
+                </aside>
+                {% endif %}
+
                 <!-- Multi-Lingual -->
                 {% if page.multilingual %}
                     {% include multilingual-sel.html %}
                 {% endif %}
 
 				{{ content }}
-
-                <!-- Tags -->
-                {% if page.tags.size > 0 %}
-                <div class="post-tags-footer">
-                    {% include post-tags.html tags=page.tags %}
-                </div>
-                {% endif %}
 
                 <!-- Google AdSense Ad -->
                 {% include adsense.html %}
