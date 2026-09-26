@@ -8,7 +8,7 @@ tags:
   - "NLP"
   - "Transformer"
   - "딥러닝"
-  - "시계열"
+  - "State Space Model"
 resource: "https://velog.io/@euisuk-chung/Paper-Review-Transformers-are-SSMs-Generalized-Models-and-Efficient-Algorithms-Through-Structured-State-Space-Duality"
 generated:
   by: "process:velog-sync"

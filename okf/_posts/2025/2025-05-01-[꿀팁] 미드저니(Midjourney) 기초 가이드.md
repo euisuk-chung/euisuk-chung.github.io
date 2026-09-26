@@ -20,6 +20,8 @@ sources:
     last_modified: "2025-05-01"
 status: "stable"
 year: "2025"
+redirect_from:
+  - "/2025/05/01/미드저니(Midjourney)-기초-가이드/"
 ---
 
 ![](https://velog.velcdn.com/images/euisuk-chung/post/227cf000-f55c-401f-b1a8-8995877b7f3b/image.png)

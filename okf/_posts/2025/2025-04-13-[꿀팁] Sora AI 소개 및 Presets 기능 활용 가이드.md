@@ -7,6 +7,7 @@ tags:
   - "OpenAI"
   - "Prompt Engineering"
   - "꿀팁"
+  - "Sora"
 resource: "https://velog.io/@euisuk-chung/꿀팁-Sora-AI-소개-및-Presets-기능-활용-가이드"
 generated:
   by: "process:velog-sync"

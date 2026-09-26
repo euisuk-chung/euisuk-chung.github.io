@@ -187,12 +187,6 @@ samp {
       display: none;
     }
   }
-  // Tag list at the end of the post body.
-  .post-tags-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-  }
   h4 {
     font-size: 22px;
     font-weight: 600;
@@ -529,14 +523,18 @@ samp {
         margin-bottom: 15px;
       }
     }
-    .tags {
+    // More specific than `.post-heading .tags` below so text-only headers
+    // keep flat pills.
+    .post-heading .tags {
       a,
       .tag {
         border-color: @gray-dark;
         color: @gray-dark;
+        background-color: transparent;
         &:hover,
         &:active {
           background-color: rgba(0, 0, 0, 0.05);
+          color: @gray-dark;
         }
       }
     }
@@ -588,6 +586,23 @@ samp {
     }
   }
   .post-heading {
+    // Hero tags sit on an arbitrary header image; give them a translucent
+    // dark backdrop so they stay legible on light/busy backgrounds.
+    .tags {
+      margin-bottom: 4px;
+      a,
+      .tag {
+        background-color: rgba(0, 0, 0, 0.35);
+        border-color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        &:hover,
+        &:active {
+          background-color: rgba(255, 255, 255, 0.85);
+          color: @gray-dark;
+        }
+      }
+    }
     h1 {
       font-size: 30px;
       margin-bottom: 24px;
@@ -900,7 +915,7 @@ img::-moz-selection {
   }
 }
 
-// Tag pills on light backgrounds: post footer, home/archive/tag-page cards.
+// Tag pills on light backgrounds: home/archive/tag-page cards.
 // (Base .tags is white-on-image for the hero header.)
 .tags.post-tags {
   margin-bottom: 0;
@@ -928,6 +943,24 @@ img::-moz-selection {
   }
 }
 // Tag concept page (/tags/<slug>/)
+// /tags/ index: one row per concept (tags.html).
+.tag-index {
+  margin: 20px 0;
+  .tag-index-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid @gray-light;
+    .tag { flex: 0 0 auto; }
+    .tag-index-desc {
+      color: @gray-dark;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
 .tag-page {
   .tag-description {
     margin: 20px 0 10px;

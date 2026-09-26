@@ -5,7 +5,6 @@ description: "12 Days of OpenAI 둘째 날 공개된 강화 학습 기반 파인
 date: "2024-12-07"
 tags:
   - "OpenAI"
-  - "ChatGPT"
   - "딥러닝"
 resource: "https://velog.io/@euisuk-chung/Day-2-OpenAI-Reinforcement-Fine-Tuning"
 generated:
