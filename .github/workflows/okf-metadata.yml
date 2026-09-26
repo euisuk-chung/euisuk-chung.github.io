@@ -1,0 +1,55 @@
+name: OKF Metadata
+
+on:
+  push:
+    branches: [master]
+    paths: ["okf/**", "_scripts/okf_metadata.py", "_scripts/okf_index.py", ".github/workflows/okf-metadata.yml"]
+  workflow_dispatch:
+  pull_request_target:
+    branches: [master]
+    types: [opened, synchronize, reopened, closed, edited]
+
+concurrency:
+  group: okf-metadata-master
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Only merged, trusted master code. Never check out a PR head here.
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync --frozen --project _scripts
+      - name: Refresh shared metadata and fast-forward push
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin master
+            git checkout --detach origin/master
+            uv run --frozen --project _scripts python _scripts/okf_metadata.py --write
+            uv run --frozen --project _scripts python _scripts/okf_lint.py --strict --allow-draft --check-index
+            git add -- okf/_posts/index.md okf/index.md okf/log.md
+            if git diff --cached --quiet; then exit 0; fi
+            git diff --cached --check
+            git commit -m 'chore(okf): sync review index and log'
+            if git push origin HEAD:master; then exit 0; fi
+            # A concurrent merge may move master. Recompute from its new tree;
+            # never force-push or merge stale generated text.
+          done
+          echo 'Metadata push failed after three attempts; inspect permissions or concurrent updates.' >&2
+          exit 1
