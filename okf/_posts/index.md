@@ -3,6 +3,9 @@
 ## 2026
 
 * [[Paper Review] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](2026/2026-09-24-tabpfn-3-review.md) - TabPFN-3의 행 압축 아키텍처와 캐시 최적화, Thinking 변형을 설명하고 표·시계열·관계형 데이터의 성능을 평가 조건별로 분석합니다.
+* [[Paper Review] TabPFN v2: Accurate predictions on small data with a tabular foundation model](2026/2026-09-24-tabpfn-v2-review.md) - 합성 데이터로 사전학습한 TabPFN v2의 인컨텍스트 추론 구조와 소규모 표 데이터 성능을 원문·Methods·보충자료의 평가 조건에 따라 분석합니다.
+* [[Paper Review] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](2026/2026-09-22-tabpfn-review.md) - 합성 데이터의 사전분포로 Bayesian 예측을 학습한 TabPFN의 구조와 수식, 작은 정형 데이터 분류 실험 및 속도 비교 조건을 원문 순서대로 분석합니다.
+* [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.
 * [Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows·Linux)](2026/2026-06-17-Claude Code에서 디폴트로 Auto Mode 사용하기 (Windows_Linux).md) - Claude Code Auto Mode의 동작 원리와 permission mode 비교, Windows·Linux 사용자 설정 파일에 defaultMode를 지정하는 절차, Bedrock·Vertex 환경 변수, classifier 차단 규칙을 설명합니다.
 * [[구글] 2026 Google I/O KeyNote 정리: Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화](2026/2026-05-25-[구글] 2026 Google I_O KeyNote 정리_ Gemini 3.5, Omni, Antigravity 2.0 그리고 Agentic AI의 본격화.md) - Google I/O 2026 키노트의 Gemini 3.5 Flash와 Omni World Model, TPU 8세대, Antigravity 2.0의 12시간 OS 빌드, Gemini Spark, Generative UI, Audio Glasses 발표를 정리합니다.
 * [[구글] 2026 Google I/O Developer Keynote정리: Agent가 주도하는 개발의 새 시대](2026/2026-05-25-[구글] 2026 Google I_O Developer Keynote정리_ Agent가 주도하는 개발의 새 시대.md) - Google I/O 2026 Developer Keynote의 Managed Agents, Antigravity 2.0과 CLI, Gemma 4 LoRA 파인튜닝 데모, Android CLI, WebMCP와 DevTools for Agents 발표를 정리합니다.
