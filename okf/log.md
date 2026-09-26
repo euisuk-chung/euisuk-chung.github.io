@@ -24,15 +24,15 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-09-26 **Review**: [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · PR #39 · `5cda76e`
+* 2026-09-26 **Review**: [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · PR #39 · `afd8339`
 * 2026-09-25 **Review**: [\[복습\] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/38) — 병합 완료 · PR #38 · `4d2ca4a`
-* 2026-09-25 **Review**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · PR #36 · `cd16234`
+* 2026-09-25 **Review**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · PR #36 · `33bce55`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/35) — 병합 완료 · PR #35 · `4e938c5`
-* 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 검토 대기 · PR #34 · `e12e502`
+* 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 검토 대기 · PR #34 · `541761c`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/33) — 병합 완료 · PR #33 · `cfe3bd4`
-* 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · PR #32 · `e2dcedd`
+* 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · PR #32 · `ed81a28`
 * 2026-09-22 **Review**: [\[Paper Review\] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/31) — 병합 완료 · PR #31 · `e4f43e0`
-* 2026-09-19 **Review**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 검토 대기 · PR #30 · `f4ed3a0`
+* 2026-09-19 **Review**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 검토 대기 · PR #30 · `8036a64`
 * 2026-09-17 **Review**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/29) — 검토 대기 · PR #29 · `5e64b4f`
 * 2026-09-13 **Review**: [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/28) — 검토 대기 · PR #28 · `722001a`
 * 2026-09-12 **Review**: [\[Paper Review\] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/26) — 검토 대기 · PR #26 · `da927b9`
