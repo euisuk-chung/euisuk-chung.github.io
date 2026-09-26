@@ -835,11 +835,6 @@ samp {
 .post-container hr + h2::before {
   display: none;
 }
-.post-container .post-tags-footer {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-}
 .post-container h4 {
   font-size: 22px;
   font-weight: 600;
@@ -1165,16 +1160,18 @@ samp {
 .intro-header.style-text .page-heading .subheading {
   margin-bottom: 15px;
 }
-.intro-header.style-text .tags a,
-.intro-header.style-text .tags .tag {
+.intro-header.style-text .post-heading .tags a,
+.intro-header.style-text .post-heading .tags .tag {
   border-color: #404040;
   color: #404040;
+  background-color: transparent;
 }
-.intro-header.style-text .tags a:hover,
-.intro-header.style-text .tags .tag:hover,
-.intro-header.style-text .tags a:active,
-.intro-header.style-text .tags .tag:active {
+.intro-header.style-text .post-heading .tags a:hover,
+.intro-header.style-text .post-heading .tags .tag:hover,
+.intro-header.style-text .post-heading .tags a:active,
+.intro-header.style-text .post-heading .tags .tag:active {
   background-color: rgba(0, 0, 0, 0.05);
+  color: #404040;
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
@@ -1237,6 +1234,23 @@ samp {
   .intro-header .page-heading h1 {
     font-size: 80px;
   }
+}
+.intro-header .post-heading .tags {
+  margin-bottom: 4px;
+}
+.intro-header .post-heading .tags a,
+.intro-header .post-heading .tags .tag {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.intro-header .post-heading .tags a:hover,
+.intro-header .post-heading .tags .tag:hover,
+.intro-header .post-heading .tags a:active,
+.intro-header .post-heading .tags .tag:active {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #404040;
 }
 .intro-header .post-heading h1 {
   font-size: 30px;
