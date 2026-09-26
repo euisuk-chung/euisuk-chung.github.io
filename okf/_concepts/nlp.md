@@ -5,6 +5,8 @@ slug: "nlp"
 description: "자연어 처리와 언어 모델의 원리와 응용."
 aliases: []
 parent: "deep-learning"
+related:
+  - "transformer"
 status: "stable"
 ---
 

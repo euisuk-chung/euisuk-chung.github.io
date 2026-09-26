@@ -37,7 +37,6 @@ Blog posts (concepts of kind Blog Post, Paper Review, …) and the tag vocabular
 * [Distillation](_concepts/distillation.md) - 지식 증류(knowledge distillation) 기법과 논문.
 * [EXAONE](_concepts/exaone.md) - LG AI연구원의 EXAONE 계열 모델 기술 보고서와 리뷰.
 * [Gemini](_concepts/gemini.md) - Google의 Gemini 모델과 관련 도구, 해커톤을 다룬 글.
-* [글또](_concepts/geultto.md) - 글쓰는 개발자 모임 글또 참가기와 회고, 관련 소식을 다룬 글.
 * [Git](_concepts/git.md) - Git 명령어, 브랜치 전략, GitHub 활용 팁.
 * [Google](_concepts/google.md) - Google의 AI 모델, 제품, 개발자 행사(Google I/O 등)를 다룬 글.
 * [Graph](_concepts/graph.md) - 그래프 이론과 그래프 신경망(GNN).

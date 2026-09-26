@@ -38,6 +38,10 @@ jobs:
       - name: Unit tests
         run: uv run --frozen --project _scripts python -m pytest _scripts/tests -q
 
+      # Shared indexes are materialized for validation, not committed by PRs.
+      - name: Generate indexes for this checkout
+        run: uv run --frozen --project _scripts python _scripts/okf_index.py --write
+
       - name: Lint posts and tag concepts
         run: uv run --frozen --project _scripts python _scripts/okf_lint.py --strict --allow-draft --check-index
 
