@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-09-28 **Review**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 검토 대기 · PR #45 · `69b681c`
 * 2026-09-28 **Review**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/43) — 병합 완료 · PR #43 · `c9a5cb6`
 * 2026-09-28 **Review**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 검토 대기 · PR #41 · `dc85d17`
 * 2026-09-27 **Review**: [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/40) — 검토 대기 · PR #40 · `b0ae4b5`
