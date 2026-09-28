@@ -14,7 +14,7 @@ layout: default
 
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-2
+                {% if page.no-catalog %}col-lg-8 col-lg-offset-2{% else %}col-lg-9 col-lg-offset-0 col-lg-push-3{% endif %}
                 col-md-10 col-md-offset-1
                 post-container">
 
@@ -76,7 +76,7 @@ layout: default
     <!-- Side Catalog Container -->
         {% unless page.no-catalog %}
             <div class="
-                col-lg-2 col-lg-offset-0
+                col-lg-3 col-lg-pull-9
                 visible-lg-block
                 sidebar-container
                 catalog-container">
@@ -92,7 +92,7 @@ layout: default
 
     <!-- Sidebar Container -->
             <div class="
-                col-lg-8 col-lg-offset-2
+                {% if page.no-catalog %}col-lg-8 col-lg-offset-2{% else %}col-lg-9 col-lg-offset-3{% endif %}
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
