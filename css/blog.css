@@ -1753,8 +1753,19 @@ img::-moz-selection {
 .post-container img {
   display: block;
   max-width: 100%;
+  max-height: 640px;
+  width: auto;
   height: auto;
   margin: 1.5em auto 1.6em auto;
+}
+.post-container a.post-image-original {
+  display: block;
+  cursor: zoom-in;
+}
+@media print {
+  .post-container img {
+    max-height: none;
+  }
 }
 /* Hux Optimize UserExperience */
 .navbar-default .navbar-toggle:focus,

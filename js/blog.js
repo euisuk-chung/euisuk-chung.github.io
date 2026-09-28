@@ -31,6 +31,25 @@ $(document).ready(function() {
     $("table").addClass("table");
 });
 
+// Keep dense figures readable at their original resolution after inline scaling.
+// Existing image links retain their destination and behavior.
+$(document).ready(function() {
+    document.querySelectorAll('.post-container img').forEach(function(image) {
+        if (image.closest('a') || !image.getAttribute('src')) return;
+        var source = new URL(image.currentSrc || image.src, document.baseURI);
+        if (source.protocol !== 'https:' && source.protocol !== 'http:') return;
+        var link = document.createElement('a');
+        link.href = source.href;
+        link.className = 'post-image-original';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.title = '원본 이미지 보기 (새 탭)';
+        link.setAttribute('aria-label', (image.alt || '이미지') + ' — 원본 보기 (새 탭)');
+        image.parentNode.insertBefore(link, image);
+        link.appendChild(image);
+    });
+});
+
 // responsive embed videos
 $(document).ready(function() {
     $('iframe[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
