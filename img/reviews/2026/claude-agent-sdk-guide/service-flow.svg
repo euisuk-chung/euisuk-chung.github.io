@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+<title id="title">서비스 설계 제안: 접수와 실행 분리</title><desc id="desc">위: 작업 접수 / 아래: 실행과 결과 관리 — 큐·저장소·승인 흐름은 앱에서 구현합니다.</desc>
+<rect width="1000" height="360" rx="18" fill="#f5f8fc"/>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="#536a84"/></marker></defs>
+<text x="35" y="43" font-family="sans-serif" font-size="25" font-weight="bold" fill="#163554">서비스 설계 제안: 접수와 실행 분리</text>
+<rect x="35" y="75" width="285" height="90" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="177" y="110" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#163554">클라이언트</text>
+<text x="177" y="140" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#405774">요청 · 상태 확인</text>
+<path d="M322,120 H351" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="355" y="75" width="285" height="90" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="497" y="110" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#163554">인증 API</text>
+<text x="497" y="140" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#405774">사용자 · 작업 권한 검사</text>
+<path d="M642,120 H671" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="675" y="75" width="285" height="90" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="817" y="110" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#163554">작업 큐</text>
+<text x="817" y="140" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#405774">작업 ID · 재시도 관리</text>
+<rect x="35" y="193" width="285" height="90" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="177" y="228" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#163554">격리된 SDK worker</text>
+<text x="177" y="258" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#405774">작업 공간 · 실행 한도</text>
+<path d="M322,238 H351" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="355" y="193" width="285" height="90" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="497" y="228" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#163554">상태와 파일 저장</text>
+<text x="497" y="258" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#405774">세션 기록 · 산출물</text>
+<path d="M642,238 H671" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="675" y="193" width="285" height="90" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="817" y="228" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#163554">검토와 결과 제공</text>
+<text x="817" y="258" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#405774">필요한 외부 변경 승인</text>
+<text x="35" y="329" font-family="sans-serif" font-size="18" fill="#405774">위: 작업 접수 / 아래: 실행과 결과 관리 — 큐·저장소·승인 흐름은 앱에서 구현합니다.</text>
+</svg>
