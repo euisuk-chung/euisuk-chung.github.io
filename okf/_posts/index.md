@@ -3,7 +3,6 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/43) — 검토 대기 · Opus 5.5 영상 사례 자료집의 데이터·검증 구조를 살펴보고, 제작 경로별 사례와 한국어 프롬프트 예시로 영상 제작의 입력·분업·검수 방법을 정리합니다.
 * [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 검토 대기 · 지연되거나 개정되는 정답 아래 고정 예측기와 두 보정기를 결합하는 방법을, 초기 가중치·최악 악화·평가 버전의 조건 및 실패 사례와 함께 분석합니다.
 * [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/40) — 검토 대기 · 검색 근거로 초안을 수정할 때의 이득과 정답 훼손을 함께 예측하고, 신뢰도 학습·표준 RAG 대안·통계적 불확실성을 비교한 연구를 분석합니다.
 * [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · CORDIAL이 순서형 LLM 평가의 편향과 분산을 소수 라벨로 보정하는 방법을 설명하고, Bayesian 채널의 순서 보장과 표본 규모에 따른 성능 역전을 분석합니다.
@@ -23,6 +22,7 @@
 
 ## 2026
 
+* [[Repo Review] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](2026/2026-09-28-opus-55-video-prompting.md) - Opus 5.5 영상 사례 자료집의 데이터·검증 구조를 살펴보고, 제작 경로별 사례와 한국어 프롬프트 예시로 영상 제작의 입력·분업·검수 방법을 정리합니다.
 * [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.
 * [[Paper Review] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](2026/2026-09-22-tabpfn-v3-review.md) - TabPFN-3의 행 압축 아키텍처와 캐시 최적화, Thinking 변형을 설명하고 표·시계열·관계형 데이터의 성능을 평가 조건별로 분석합니다.
 * [[Paper Review] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](2026/2026-09-22-tabpfn-v2-study-closer-look-review.md) - TabPFN v2의 내부 표현과 성능 특성을 분석하고 고차원·다중 클래스·대규모 데이터로 확장하는 추론 시 분할 전략을 살펴봅니다.

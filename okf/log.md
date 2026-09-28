@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-09-28 **Review**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/43) — 검토 대기 · PR #43 · `c9a5cb6`
+* 2026-09-28 **Review**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/43) — 병합 완료 · PR #43 · `c9a5cb6`
 * 2026-09-28 **Review**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 검토 대기 · PR #41 · `dc85d17`
 * 2026-09-27 **Review**: [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/40) — 검토 대기 · PR #40 · `b0ae4b5`
 * 2026-09-26 **Review**: [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · PR #39 · `afd8339`
@@ -45,6 +45,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 검토 대기 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 검토 대기 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 검토 대기 · PR #2 · `2e038f5`
+* 2026-09-28 **Creation**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](_posts/2026/2026-09-28-opus-55-video-prompting.md) — `3383987`
+* 2026-09-28 **Update**: [\[복습\] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](_posts/2026/2026-09-25-lm-review-transformer-to-t5.md) — `5ad899a`
 * 2026-09-26 **Creation**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](_posts/2026/2026-09-22-tabpfn-v2-study-closer-look-review.md) — `96436e0`
 * 2026-09-26 **Creation**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](_posts/2026/2026-09-22-tabpfn-v2-review.md) — `40e3013`
 * 2026-09-26 **Creation**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](_posts/2026/2026-09-22-tabpfn-v3-review.md) — `40e3013`
