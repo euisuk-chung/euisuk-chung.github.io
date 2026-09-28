@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
 * [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.
 * [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 검토 대기 · SkillGym이 사람의 스킬을 검증 가능한 환경과 실행 궤적으로 바꾸는 과정을 분석하고, 하네스별 SFT 성능과 스킬 내재화 해석의 범위를 살펴봅니다.
 * [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 검토 대기 · 지연되거나 개정되는 정답 아래 고정 예측기와 두 보정기를 결합하는 방법을, 초기 가중치·최악 악화·평가 버전의 조건 및 실패 사례와 함께 분석합니다.
