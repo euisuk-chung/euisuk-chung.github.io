@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+<title id="title">공개 데이터에서 사례 문서와 통계 도표까지</title>
+<desc id="desc">위 경로: cases.csv를 generate_cases.py가 검증하여 사례 목록을 생성합니다. 아래 경로: cases.csv, corpus-snapshot.json, domain-style.csv를 generate_statistics.py의 summary가 집계하며 통계 문서와 generate_stat_charts.py를 통한 SVG 도표를 만듭니다. 영상 제작이나 원본 미디어 재검증 경로는 아닙니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#55718a"/></marker></defs>
+<rect width="960" height="420" rx="18" fill="#f5f8fc"/>
+<g font-family="Arial, 'Apple SD Gothic Neo', sans-serif" fill="#17324d">
+<text x="32" y="42" font-size="24" font-weight="700">공개 데이터 → 검증·집계 → 문서·도표</text>
+<text x="32" y="72" font-size="17" fill="#536779">리뷰어 작성 · 분석 커밋 f0728e6f 기준 · 대상 스크립트 미실행</text>
+<rect x="32" y="102" width="232" height="102" rx="12" fill="#e2edf9" stroke="#b5cee6"/>
+<text x="148" y="138" text-anchor="middle" font-size="21" font-weight="700">cases.csv</text>
+<text x="148" y="170" text-anchor="middle" font-size="18">설명·관찰·원문·길이</text>
+<path d="M270 153 H322" stroke="#55718a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="334" y="102" width="290" height="102" rx="12" fill="#e4f2ed" stroke="#acd1bf"/>
+<text x="479" y="136" text-anchor="middle" font-size="20" font-weight="700">generate_cases.py</text>
+<text x="479" y="168" text-anchor="middle" font-size="18">열·ID·분류·썸네일 검사</text>
+<path d="M630 153 H681" stroke="#55718a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="694" y="102" width="234" height="102" rx="12" fill="#fff0d8" stroke="#e6c995"/>
+<text x="811" y="140" text-anchor="middle" font-size="21" font-weight="700">사례 목록 문서</text>
+<text x="811" y="172" text-anchor="middle" font-size="18">경로별 표·원문 링크</text>
+<rect x="32" y="236" width="232" height="126" rx="12" fill="#e2edf9" stroke="#b5cee6"/>
+<text x="148" y="268" text-anchor="middle" font-size="20" font-weight="700">공개 집계 입력</text>
+<text x="148" y="298" text-anchor="middle" font-size="18">사례 + 분류 CSV</text>
+<text x="148" y="328" text-anchor="middle" font-size="18">고정 스냅샷 JSON</text>
+<path d="M270 299 H322" stroke="#55718a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="334" y="236" width="290" height="126" rx="12" fill="#e4f2ed" stroke="#acd1bf"/>
+<text x="479" y="269" text-anchor="middle" font-size="19" font-weight="700">generate_statistics.py</text>
+<text x="479" y="300" text-anchor="middle" font-size="18">summary(): 분모·연결 검사</text>
+<text x="479" y="330" text-anchor="middle" font-size="18">yes / yes+likely 분리 집계</text>
+<path d="M630 299 H681" stroke="#55718a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="694" y="236" width="234" height="126" rx="12" fill="#fff0d8" stroke="#e6c995"/>
+<text x="811" y="267" text-anchor="middle" font-size="21" font-weight="700">통계 문서</text>
+<text x="811" y="299" text-anchor="middle" font-size="17">generate_stat_charts.py</text>
+<text x="811" y="330" text-anchor="middle" font-size="18">→ 통계 SVG 3종</text>
+<text x="32" y="397" font-size="17" fill="#536779">공개 데이터의 일관성 검사 ≠ 원본 영상·제작 과정·완성품 품질의 검증</text>
+</g>
+</svg>
