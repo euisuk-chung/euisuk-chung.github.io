@@ -48,7 +48,7 @@
 <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ "/js/blog.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/blog.min.js" | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}"></script>
 
 <!-- Simple Jekyll Search -->
 <script src="{{ "/js/simple-jekyll-search.min.js" | prepend: site.baseurl }}"></script>
