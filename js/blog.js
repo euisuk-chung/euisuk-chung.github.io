@@ -48,6 +48,20 @@ $(document).ready(function() {
         image.parentNode.insertBefore(link, image);
         link.appendChild(image);
     });
+    // A paragraph containing only two images is a paired comparison figure.
+    // Do not group images across paragraphs or absorb captions into the layout.
+    document.querySelectorAll('.post-container p').forEach(function(paragraph) {
+        var panels = Array.from(paragraph.children).filter(function(node) {
+            return node.tagName !== 'BR';
+        });
+        if (paragraph.textContent.trim() || panels.length !== 2) return;
+        if (!panels.every(function(node) {
+            return node.tagName === 'IMG' ||
+                (node.tagName === 'A' && node.children.length === 1 &&
+                 node.firstElementChild.tagName === 'IMG');
+        })) return;
+        paragraph.classList.add('post-image-pair');
+    });
 });
 
 // responsive embed videos
