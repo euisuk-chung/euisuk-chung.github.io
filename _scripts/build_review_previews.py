@@ -40,7 +40,7 @@ def main():
     archive = run('git', 'archive', 'HEAD')
     for pr in prs:
         number, branch, sha = pr['number'], pr['headRefName'], pr['headRefOid']
-        if pr['isCrossRepository'] or not re.fullmatch(r'codex/(?:paper|repo)-[a-z0-9.-]+', branch):
+        if pr['isCrossRepository'] or not re.fullmatch(r'codex/(?:paper|repo|guide)-[a-z0-9.-]+', branch):
             continue
         if args.numbers is not None and number not in args.numbers:
             continue
