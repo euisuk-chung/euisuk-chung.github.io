@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · 장기 과제의 분기 판단을 실행 기록으로 평가하는 Taste-Bench와 정답 방향을 아는 교사의 추론 증류를 분석하고, 판단 정확도와 조언 기반 과제 성공률의 조건을 구분합니다.
 * [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 검토 대기 · CLM의 상태·후보 텍스트 변환부터 임베딩과 투영 캐시, 대조학습 헤드 미세조정, 궤적 선택 평가까지 고정 커밋의 코드 흐름을 분석합니다.
 * [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · Netflix GenRec의 두 단계 학습, 자연어 사용자 이력, 보상 가중 순위 학습과 prefill-only 추론을 분석하고 온라인 개선과 문맥 압축의 조건을 검토합니다.
 * [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
