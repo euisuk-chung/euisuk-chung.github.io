@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · Netflix GenRec의 두 단계 학습, 자연어 사용자 이력, 보상 가중 순위 학습과 prefill-only 추론을 분석하고 온라인 개선과 문맥 압축의 조건을 검토합니다.
 * [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
 * [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.
 * [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 검토 대기 · SkillGym이 사람의 스킬을 검증 가능한 환경과 실행 궤적으로 바꾸는 과정을 분석하고, 하네스별 SFT 성능과 스킬 내재화 해석의 범위를 살펴봅니다.

@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-09-29 **Review**: [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · PR #48 · `d5a48d2`
 * 2026-09-29 **Review**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · PR #47 · `c235cea`
 * 2026-09-29 **Review**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · PR #46 · `09c660f`
 * 2026-09-28 **Review**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 검토 대기 · PR #45 · `69b681c`
