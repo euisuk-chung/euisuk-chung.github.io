@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-09-30 **Review**: [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · PR #50 · `e6a3edc`
+* 2026-09-30 **Review**: [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · PR #50 · `3377ada`
 * 2026-09-30 **Review**: [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 검토 대기 · PR #49 · `0df9ce5`
 * 2026-09-29 **Review**: [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · PR #48 · `d5a48d2`
 * 2026-09-29 **Review**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · PR #47 · `c235cea`
