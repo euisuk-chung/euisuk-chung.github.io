@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 검토 대기 · CLM의 상태·후보 텍스트 변환부터 임베딩과 투영 캐시, 대조학습 헤드 미세조정, 궤적 선택 평가까지 고정 커밋의 코드 흐름을 분석합니다.
 * [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · Netflix GenRec의 두 단계 학습, 자연어 사용자 이력, 보상 가중 순위 학습과 prefill-only 추론을 분석하고 온라인 개선과 문맥 압축의 조건을 검토합니다.
 * [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
 * [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.
