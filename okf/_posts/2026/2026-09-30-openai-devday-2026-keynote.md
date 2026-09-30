@@ -32,7 +32,6 @@ sources:
     title: "OpenAI makes 20+ announcements at DevDay"
 status: "stable"
 year: "2026"
-source_type: "paper"
 ---
 
 ## 들어가며
