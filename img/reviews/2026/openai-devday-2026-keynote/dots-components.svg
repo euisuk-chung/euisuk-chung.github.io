@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+<title id="title">Dot의 구성 요소</title><desc id="desc">GPT-6 Astra 모델, Codex harness, 메모리로 이루어진 Dot이 자체 클라우드 컴퓨터, 사용자 권한, 기존 plugin을 사용하고 ChatGPT, Slack, Teams, 문자 메시지, 전화로 대화합니다.</desc>
+<rect width="1000" height="560" rx="18" fill="#f5f8fc"/>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="#536a84"/></marker></defs>
+<text x="35" y="43" font-family="sans-serif" font-size="25" font-weight="bold" fill="#163554">Dot의 구성 요소</text>
+<rect x="35" y="65" width="930" height="175" rx="14" fill="#e3edf8" stroke="#7f9cc0" stroke-width="2"/>
+<text x="55" y="95" font-family="sans-serif" font-size="20" font-weight="bold" fill="#163554">Dot</text>
+<rect x="55" y="110" width="280" height="112" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="195" y="146" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#163554">Model</text>
+<text x="195" y="176" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">GPT-6 Astra</text>
+<rect x="360" y="110" width="280" height="112" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="500" y="146" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#163554">Harness</text>
+<text x="500" y="176" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">Codex harness</text>
+<text x="500" y="201" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">도구 호출 · 컨텍스트 관리</text>
+<rect x="665" y="110" width="280" height="112" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="805" y="146" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#163554">Memory</text>
+<text x="805" y="176" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">업무 방식 · 우선순위를</text>
+<text x="805" y="201" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">시간에 따라 학습</text>
+<path d="M195,242 V283" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M500,242 V283" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M805,242 V283" stroke="#536a84" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="55" y="288" width="280" height="100" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="195" y="324" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#163554">자체 클라우드 컴퓨터</text>
+<text x="195" y="354" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">코드 작성 · 테스트</text>
+<rect x="360" y="288" width="280" height="100" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="500" y="324" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#163554">사용자 권한 상속</text>
+<text x="500" y="354" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">사용자가 가진 권한 범위</text>
+<rect x="665" y="288" width="280" height="100" rx="10" fill="white" stroke="#adc2dc"/>
+<text x="805" y="324" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#163554">기존 Plugins</text>
+<text x="805" y="354" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#405774">연결된 앱</text>
+<rect x="35" y="420" width="930" height="110" rx="14" fill="white" stroke="#adc2dc"/>
+<text x="60" y="482" font-family="sans-serif" font-size="20" font-weight="bold" fill="#163554">인터페이스</text>
+<rect x="210" y="450" width="135" height="50" rx="25" fill="#eef3fa" stroke="#adc2dc"/>
+<text x="277" y="482" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#163554">ChatGPT</text>
+<rect x="360" y="450" width="135" height="50" rx="25" fill="#eef3fa" stroke="#adc2dc"/>
+<text x="427" y="482" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#163554">Slack</text>
+<rect x="510" y="450" width="135" height="50" rx="25" fill="#eef3fa" stroke="#adc2dc"/>
+<text x="577" y="482" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#163554">Teams</text>
+<rect x="660" y="450" width="135" height="50" rx="25" fill="#eef3fa" stroke="#adc2dc"/>
+<text x="727" y="482" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#163554">문자 메시지</text>
+<rect x="810" y="450" width="135" height="50" rx="25" fill="#eef3fa" stroke="#adc2dc"/>
+<text x="877" y="482" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#163554">전화</text>
+</svg>
