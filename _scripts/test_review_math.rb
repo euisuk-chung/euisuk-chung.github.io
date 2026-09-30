@@ -32,3 +32,11 @@ raise 'math fence lost TeX' unless rendered.include?('x_t=\\left\\{y_t\\right\\}
 raise 'quoted inline not math' unless rendered.include?('$x_i$') && rendered.include?('$\\mathrm{Concat}$')
 raise 'math fence still code' if rendered.include?('<code')
 puts 'GitHub math fences and quoted inline math PASS'
+
+post = "Input: $2.00 and $10.00 per 1M tokens.\n\n$$\nx_t\n$$\n\n$a_i$ and $`b_j`$\n\n```math\ny_t\n```\n"
+plain = ReviewMath.protect(post, legacy: false)
+raise 'currency changed in post' unless plain.include?('Input: $2.00 and $10.00 per 1M tokens.')
+raise 'bare math changed in post' unless plain.include?("$$\nx_t\n$$") && plain.include?('$a_i$ and')
+raise 'portable math not protected in post' unless plain.include?('<span markdown="0">$b_j$</span>') && plain.include?("$$\ny_t\n$$")
+raise 'post protection not idempotent' unless ReviewMath.protect(plain, legacy: false) == plain
+puts 'Non-review posts: portable math only, bare dollars untouched PASS'
