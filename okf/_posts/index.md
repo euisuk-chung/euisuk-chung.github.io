@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] TypeLLM: 타입별 디코딩과 의존성 그래프로 구성하는 LLM 출력](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/54) — 검토 대기 · TypeLLM의 스키마 컴파일부터 후보 토큰 채점, 문법 기반 생성, 의존성·조건부 실행과 결과 조립까지 고정 커밋의 코드를 따라 분석합니다.
 * [\[Repo Review\] AutoHarness: Claude Code의 경험을 스킬로 저장하고 관리하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/53) — 검토 대기 · Claude Code 세션에서 교훈을 추출하고 MCP 제안 큐와 자동 검사를 거쳐 스킬로 반영하는 흐름, 사용량 기반 생명주기와 구현상 경계를 분석합니다.
 * [\[Paper Review\] AutoTailor — 웹 에이전트의 도구를 사용자 수요에 맞게 고르고 다시 구성하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/52) — 검토 대기 · 웹 행동 기록을 MCP 도구로 바꾸고 품질·예상 수요·실행 기록으로 재선택하는 AutoTailor의 구조와, 106개 과제 평가의 효율 및 해석 범위를 분석합니다.
 * [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · 장기 과제의 분기 판단을 실행 기록으로 평가하는 Taste-Bench와 정답 방향을 아는 교사의 추론 증류를 분석하고, 판단 정확도와 조언 기반 과제 성공률의 조건을 구분합니다.
