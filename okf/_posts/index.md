@@ -28,6 +28,7 @@
 
 ## 2026
 
+* [[OpenAI] DevDay 2026 키노트 정리: 상시 동작 에이전트 Dots, GPT-6.1 Sol, Ultrafast, Codex Cloud까지](2026/2026-09-30-openai-devday-2026-keynote.md) - OpenAI DevDay 2026 키노트의 Dots와 ChatGPT Space, GPT-6.1 Sol·Ultrafast·Pro 500·Decisions API, Codex Cloud·Agents API·Private Intelligence, Sign in with ChatGPT와 Marketplace 발표를 순서대로 정리합니다.
 * [[Repo Review] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](2026/2026-09-28-opus-55-video-prompting.md) - Opus 5.5 영상 사례 자료집의 데이터·검증 구조를 살펴보고, 제작 경로별 사례와 한국어 프롬프트 예시로 영상 제작의 입력·분업·검수 방법을 정리합니다.
 * [[가이드] Claude Agent SDK 입문: Claude Code 연동부터 첫 실행과 서비스 배포까지](2026/2026-09-28-claude-agent-sdk-guide.md) - Claude Agent SDK와 API·CLI·Managed Agents의 차이부터 Python 첫 실행, Claude Code 설정 재사용, 공식 Docker 서비스 예제와 운영 원칙까지 입문자의 순서로 설명합니다.
 * [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.

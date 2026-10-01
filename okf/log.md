@@ -51,6 +51,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 검토 대기 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 검토 대기 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 검토 대기 · PR #2 · `2e038f5`
+* 2026-10-01 **Creation**: [\[OpenAI\] DevDay 2026 키노트 정리: 상시 동작 에이전트 Dots, GPT-6.1 Sol, Ultrafast, Codex Cloud까지](_posts/2026/2026-09-30-openai-devday-2026-keynote.md) — `1077ac9`
 * 2026-09-28 **Creation**: [\[가이드\] Claude Agent SDK 입문: Claude Code 연동부터 첫 실행과 서비스 배포까지](_posts/2026/2026-09-28-claude-agent-sdk-guide.md) — `2ca6716`
 * 2026-09-28 **Creation**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](_posts/2026/2026-09-28-opus-55-video-prompting.md) — `3383987`
 * 2026-09-28 **Update**: [\[복습\] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](_posts/2026/2026-09-25-lm-review-transformer-to-t5.md) — `5ad899a`
