@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/58) — 검토 대기 · 중앙 관리자 없이 협업하는 Agensh의 반복 절차와 공유 인프라를 분석하고, ProgramBench의 6시간 평가 및 1,024개 에이전트 확장 결과를 해설합니다.
 * [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/57) — 검토 대기 · 문맥 key와 층별 토큰 메모리로 value projection을 대체하는 Memory Attention의 원리, CPU offload, 캐시 재구성 분석과 실험의 측정 범위를 살펴봅니다.
 * [\[Repo Review\] Laya: 텍스트 생성 없이 선택·점수·확률을 반환하는 의사결정 엔진](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/56) — 검토 대기 · Laya의 모델 라우팅, 질문별 입력 구성, 선택지 점수화와 확률 보정·보류 과정을 코드로 추적하고 Hugging Face 모델·데모 및 조건별 평가의 의미를 살펴봅니다.
 * [\[Paper Review\] JEV-as-a-Judge: 확신할 때 판정하고 불확실할 때 추론 판정기로 넘기기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/55) — 검토 대기 · 라벨 확률만 반환하는 JEV의 작업별 판정 능력과 확신도 기반 상위 모델 호출을 분석하고, 비용 절감·사람 재판정·사전 고정 검증의 의미를 살펴봅니다.
