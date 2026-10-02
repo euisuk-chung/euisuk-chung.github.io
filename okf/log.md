@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-03 **Review**: [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/59) — 검토 대기 · PR #59 · `e89d869`
 * 2026-10-03 **Review**: [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/58) — 검토 대기 · PR #58 · `f0f3b05`
 * 2026-10-02 **Review**: [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/57) — 검토 대기 · PR #57 · `9959fd2`
 * 2026-10-02 **Review**: [\[Repo Review\] Laya: 텍스트 생성 없이 선택·점수·확률을 반환하는 의사결정 엔진](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/56) — 검토 대기 · PR #56 · `c1ed9ac`
