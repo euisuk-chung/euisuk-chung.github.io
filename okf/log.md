@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-02 **Review**: [\[Repo Review\] Laya: 텍스트 생성 없이 선택·점수·확률을 반환하는 의사결정 엔진](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/56) — 검토 대기 · PR #56 · `c1ed9ac`
 * 2026-10-02 **Review**: [\[Paper Review\] JEV-as-a-Judge: 확신할 때 판정하고 불확실할 때 추론 판정기로 넘기기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/55) — 검토 대기 · PR #55 · `2a2edef`
 * 2026-10-02 **Review**: [\[Repo Review\] TypeLLM: 타입별 디코딩과 의존성 그래프로 구성하는 LLM 출력](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/54) — 검토 대기 · PR #54 · `5c93c3f`
 * 2026-10-01 **Review**: [\[Repo Review\] AutoHarness: Claude Code의 경험을 스킬로 저장하고 관리하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/53) — 검토 대기 · PR #53 · `013f1d4`
