@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/60) — 검토 대기 · Learn Harness Engineering의 하네스 생성·구조 채점·benchmark 흐름과 그래프 예제를 추적하며 문서 규칙과 실제 실행 검증의 경계를 살펴봅니다.
 * [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/59) — 검토 대기 · Understand Anything이 파일 스캔과 구조 추출, 모델의 의미 분석, 그래프 병합과 증분 검증을 거쳐 탐색용 대시보드로 연결되는 과정을 고정 커밋의 코드로 분석합니다.
 * [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/58) — 검토 대기 · 중앙 관리자 없이 협업하는 Agensh의 반복 절차와 공유 인프라를 분석하고, ProgramBench의 6시간 평가 및 1,024개 에이전트 확장 결과를 해설합니다.
 * [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/57) — 검토 대기 · 문맥 key와 층별 토큰 메모리로 value projection을 대체하는 Memory Attention의 원리, CPU offload, 캐시 재구성 분석과 실험의 측정 범위를 살펴봅니다.
