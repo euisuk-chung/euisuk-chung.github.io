@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-04 **Review**: [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 검토 대기 · PR #61 · `e23e829`
 * 2026-10-04 **Review**: [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/60) — 검토 대기 · PR #60 · `8ec1288`
 * 2026-10-03 **Review**: [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/59) — 검토 대기 · PR #59 · `e89d869`
 * 2026-10-03 **Review**: [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/58) — 검토 대기 · PR #58 · `f0f3b05`
