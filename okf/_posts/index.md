@@ -25,7 +25,6 @@
 * [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · CAST의 정상 문맥·이상 구조 조건부 flow matching과 두 단계 학습을 설명하고, 생성 품질과 실제 이상탐지 성능을 원문 실험 조건에 따라 분석합니다.
 * [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · GravityOCR의 확산 초안과 자기회귀 검증, 공동 학습과 GRPO를 원문 순서대로 해설하고 OCR 품질 및 영역·페이지별 속도 향상의 측정 조건을 분석합니다.
 * [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 검토 대기 · 연속 그룹 선택과 계층 간 예측 프리페치, 선택적 캐시 수정을 결합한 GroupKV의 원리와 장문맥 확산 언어 모델에서의 메모리·처리량·정확도 절충을 분석합니다.
-* [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/29) — 검토 대기 · 동일 모델로 셸·typed tools·PTC·도구 합성을 비교한 기업 업무 실험을 통해 성능, 토큰 비용, 재사용과 평가 지표의 해석 범위를 살펴봅니다.
 <!-- okf-review-index:end -->
 
 ## 2026
@@ -38,6 +37,7 @@
 * [[Paper Review] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](2026/2026-09-22-tabpfn-v2-study-closer-look-review.md) - TabPFN v2의 내부 표현과 성능 특성을 분석하고 고차원·다중 클래스·대규모 데이터로 확장하는 추론 시 분할 전략을 살펴봅니다.
 * [[Paper Review] TabPFN v2: Accurate predictions on small data with a tabular foundation model](2026/2026-09-22-tabpfn-v2-review.md) - 합성 데이터로 사전학습한 TabPFN v2의 인컨텍스트 추론 구조와 소규모 표 데이터 성능을 원문·Methods·보충자료의 평가 조건에 따라 분석합니다.
 * [[Paper Review] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](2026/2026-09-22-tabpfn-review.md) - 합성 데이터의 사전분포로 Bayesian 예측을 학습한 TabPFN의 구조와 수식, 작은 정형 데이터 분류 실험 및 속도 비교 조건을 원문 순서대로 분석합니다.
+* [[Paper Review] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](2026/2026-09-16-is-bash-all-you-need-review.md) - 동일 모델로 셸·typed tools·PTC·도구 합성을 비교한 기업 업무 실험을 통해 성능, 토큰 비용, 재사용과 평가 지표의 해석 범위를 살펴봅니다.
 * [[Paper Review] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](2026/2026-09-13-gpu-cfr-review.md) - 고정 게임 트리의 CFR 계산을 평탄한 배열과 CUDA graph로 실행하는 GPU-CFR의 설계, 정확성 증명, 성능 비교 조건과 재풀이 비용을 분석합니다.
 * [[Paper Review] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](2026/2026-09-12-sensenova-u15-review.md) - SenseNova-U1.5의 공간 디코더, 작업별 강화학습과 on-policy 증류를 원문 순서로 분석하고 생성·편집·추론 평가의 개선과 조건별 차이를 검토합니다.
 * [[Repo Review] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](2026/2026-09-11-superpowers-review.md) - Superpowers 6.3.0의 세션 초기화, 스킬 선택, 계획 분해와 리뷰 흐름을 추적하고 코드가 보장하는 동작과 자연어 지침의 경계를 분석합니다.

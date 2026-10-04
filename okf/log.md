@@ -52,7 +52,7 @@
 * 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · PR #32 · `ed81a28`
 * 2026-09-22 **Review**: [\[Paper Review\] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/31) — 병합 완료 · PR #31 · `e4f43e0`
 * 2026-09-19 **Review**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 검토 대기 · PR #30 · `8036a64`
-* 2026-09-17 **Review**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/29) — 검토 대기 · PR #29 · `b65f969`
+* 2026-09-17 **Review**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/29) — 병합 완료 · PR #29 · `b65f969`
 * 2026-09-13 **Review**: [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/28) — 병합 완료 · PR #28 · `f37429b`
 * 2026-09-12 **Review**: [\[Paper Review\] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/26) — 병합 완료 · PR #26 · `a9178b2`
 * 2026-09-11 **Review**: [\[Repo Review\] Hermes Agent: 도구 실행과 기억을 연결하는 에이전트 런타임](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/7) — 병합 완료 · PR #7 · `dbf5836`
@@ -61,6 +61,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-10-04 **Creation**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](_posts/2026/2026-09-16-is-bash-all-you-need-review.md) — `96a5737`
 * 2026-10-04 **Creation**: [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](_posts/2026/2026-09-13-gpu-cfr-review.md) — `13fe0ab`
 * 2026-10-04 **Creation**: [\[Paper Review\] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](_posts/2026/2026-09-12-sensenova-u15-review.md) — `a9c30b6`
 * 2026-10-04 **Creation**: [\[Repo Review\] Hermes Agent: 도구 실행과 기억을 연결하는 에이전트 런타임](_posts/2026/2026-09-11-hermes-agent-review.md) — `73c845b`
