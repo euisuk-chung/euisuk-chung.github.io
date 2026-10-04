@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 검토 대기 · OpenDots의 대화 실행부터 검색·컴퓨터 도구·승인 저장까지 추적하고, 영수증·revision·lease가 중복과 충돌을 처리하는 경계를 분석합니다.
 * [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 검토 대기 · 생성 영상의 오류를 질문과 답변으로 진단하고 프롬프트 개선과 전역 선택을 분리하는 VQQA의 구조, 실험 결과, 수렴 조건과 호출 비용을 분석합니다.
 * [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/60) — 검토 대기 · Learn Harness Engineering의 하네스 생성·구조 채점·benchmark 흐름과 그래프 예제를 추적하며 문서 규칙과 실제 실행 검증의 경계를 살펴봅니다.
 * [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/59) — 검토 대기 · Understand Anything이 파일 스캔과 구조 추출, 모델의 의미 분석, 그래프 병합과 증분 검증을 거쳐 탐색용 대시보드로 연결되는 과정을 고정 커밋의 코드로 분석합니다.
