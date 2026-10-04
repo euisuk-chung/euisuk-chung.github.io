@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-05 **Review**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 검토 대기 · PR #63 · `0aa9200`
 * 2026-10-05 **Review**: [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 검토 대기 · PR #62 · `36a3b42`
 * 2026-10-04 **Review**: [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 검토 대기 · PR #61 · `e23e829`
 * 2026-10-04 **Review**: [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/60) — 검토 대기 · PR #60 · `8ec1288`
