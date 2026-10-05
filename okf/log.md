@@ -24,6 +24,8 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · PR #65 · `6336c18`
+* 2026-10-06 **Review**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 검토 대기 · PR #64 · `07ca00d`
 * 2026-10-05 **Review**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 검토 대기 · PR #63 · `0aa9200`
 * 2026-10-05 **Review**: [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 검토 대기 · PR #62 · `36a3b42`
 * 2026-10-04 **Review**: [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 검토 대기 · PR #61 · `e23e829`

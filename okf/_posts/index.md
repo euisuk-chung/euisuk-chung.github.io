@@ -3,6 +3,8 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · Co-Director의 계층적 에이전트, 창작 방향의 밴딧 탐색, 대본·키프레임 자기 수정과 GenAd-Bench 평가를 원문 본문·부록 순서로 분석합니다.
+* [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 검토 대기 · FinanceHarness의 질문 입력부터 도구 공개, 구조화 결과 참조, 금융 계산, 웹 인용과 보고서 출력까지 추적하고 각 단계의 검증 경계를 살펴봅니다.
 * [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 검토 대기 · 인물 외형·장소·소품 상태를 전역 계획과 시각 메모리로 관리하는 CANVAS의 생성 절차, 연속성 평가, 제거 실험과 영상 확장 결과를 분석합니다.
 * [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 검토 대기 · OpenDots의 대화 실행부터 검색·컴퓨터 도구·승인 저장까지 추적하고, 영수증·revision·lease가 중복과 충돌을 처리하는 경계를 분석합니다.
 * [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 검토 대기 · 생성 영상의 오류를 질문과 답변으로 진단하고 프롬프트 개선과 전역 선택을 분리하는 VQQA의 구조, 실험 결과, 수렴 조건과 호출 비용을 분석합니다.
