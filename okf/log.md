@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-07 **Review**: [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/66) — 검토 대기 · PR #66 · `36a0738`
 * 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · PR #65 · `6336c18`
 * 2026-10-06 **Review**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 검토 대기 · PR #64 · `07ca00d`
 * 2026-10-05 **Review**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 검토 대기 · PR #63 · `0aa9200`
