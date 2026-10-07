@@ -26,7 +26,7 @@
 
 * 2026-10-07 **Review**: [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/67) — 검토 대기 · PR #67 · `2e738ed`
 * 2026-10-07 **Review**: [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/66) — 검토 대기 · PR #66 · `36a0738`
-* 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · PR #65 · `6336c18`
+* 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · PR #65 · `10dca55`
 * 2026-10-06 **Review**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 검토 대기 · PR #64 · `07ca00d`
 * 2026-10-05 **Review**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 검토 대기 · PR #63 · `0aa9200`
 * 2026-10-05 **Review**: [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 검토 대기 · PR #62 · `36a3b42`
