@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-10-07 **Review**: [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/67) — 검토 대기 · PR #67 · `2e738ed`
+* 2026-10-07 **Review**: [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/67) — 검토 대기 · PR #67 · `2f6d27c`
 * 2026-10-07 **Review**: [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/66) — 검토 대기 · PR #66 · `36a0738`
 * 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · PR #65 · `10dca55`
 * 2026-10-06 **Review**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 검토 대기 · PR #64 · `07ca00d`
