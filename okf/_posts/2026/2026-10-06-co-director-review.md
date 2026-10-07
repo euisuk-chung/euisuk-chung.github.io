@@ -72,6 +72,16 @@ visual_sources:
     caption: "제작 에이전트 영역 크롭, 번역·재배열 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/W0r8EJU2NKo"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=W0r8EJU2NKo">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 Co-Director는 간단한 아이디어와 제품·로고 참조 이미지에서 출발해 대본, 장면 이미지, 영상, 음향을 만드는 다중 에이전트 시스템입니다. 연구의 초점은 개별 생성 모델의 가중치를 학습하는 데 있지 않습니다. 여러 생성 단계가 **같은 창작 의도에 맞춰 움직이도록 제어하고, 완성 결과의 평가를 다음 제작에 반영하는 방법**을 설계합니다. 이 리뷰는 Yale Song 외 저자들의 [arXiv:2604.24842v1](https://arxiv.org/abs/2604.24842v1), 2026년 4월 27일 제출본을 기준으로 합니다.
