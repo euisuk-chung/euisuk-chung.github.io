@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/68) — 검토 대기 · 시간 제약 검색과 기준일 전후 루브릭으로 금융 보고서를 평가하는 FinanceGym의 데이터 구축, FinanceHarness의 계층 설계·절제 실험·계산 사례를 분석합니다.
 * [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/67) — 검토 대기 · A²RD의 멀티모달 메모리, 적응적 외삽·보간, 계층적 검증·수정이 긴 영상의 일관성과 이야기 진행을 개선하는 원리와 평가 조건을 분석합니다.
 * [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/66) — 검토 대기 · Raven의 요청 처리부터 DAG 검증·전문 에이전트 실행·파일 기반 결과 전달까지 추적하고, 모듈형 하네스와 자기 개선 도구의 구현 경계를 분석합니다.
 * [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · Co-Director의 계층적 에이전트, 창작 방향의 밴딧 탐색, 대본·키프레임 자기 수정과 GenAd-Bench 평가를 원문 본문·부록 순서로 분석합니다.
