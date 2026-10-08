@@ -77,6 +77,16 @@ visual_sources:
     caption: "비용과 전체 루브릭 점수 frontier. 범례·축·모델 라벨을 보존한 크롭."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/twF5h4dCEgM"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=twF5h4dCEgM">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 금융 보고서를 잘 쓰는 일은 과거의 사실을 많이 찾는 일보다 어렵습니다. 분석가는 기업·산업·정책 사이의 관계를 연결하고, 당시 알려진 정보로 이후 전개를 판단해야 합니다. 미래에 공개된 기사를 검색해 과거 시점의 보고서를 작성한다면, 문장은 설득력 있어도 평가에는 미래 정보 누출이 섞입니다. **FinanceHarness는 금융 조사 에이전트의 실행 구조와 시간 제약을 가진 평가 환경을 함께 설계한 연구**입니다.
