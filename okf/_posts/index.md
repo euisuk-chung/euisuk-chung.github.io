@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 검토 대기 · 에이전트의 다음 계산 선택을 네 단계 메타추론으로 분리하는 하네스를 설명하고, 예산 확장과 정답 발견·판별·제출의 차이를 원문 실험과 구현 조건으로 분석합니다.
 * [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/70) — 검토 대기 · 개발 문제의 소속과 분기별 제안 지침을 함께 갱신하는 하네스 탐색을 분석하고, 실행 전 라우팅의 성능과 상보성 및 탐색 비용을 구분해 살펴봅니다.
 * [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/69) — 검토 대기 · 현재 문맥을 파일처럼 편집하는 CLM의 설계와 ContextBench 진단, 스킬 진화·강화학습, Suffix Cache Reuse의 효율과 근사 조건을 원문 순서대로 분석합니다.
 * [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/68) — 검토 대기 · 시간 제약 검색과 기준일 전후 루브릭으로 금융 보고서를 평가하는 FinanceGym의 데이터 구축, FinanceHarness의 계층 설계·절제 실험·계산 사례를 분석합니다.
