@@ -264,7 +264,7 @@ $`i`$는 작업자 번호입니다. 모든 작업자가 같은 과제 $`x`$를 �
 
 *Figure 1 중앙 왼쪽 상세, PDF 1쪽, v1. 원문 영역만 크롭했습니다. Assess는 상태를 다시 쓰고 Propose는 다음 계산 후보를 열거합니다. 전체 연결은 위 개요 그림에서 확인할 수 있습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=1)*
 
-**Assess: What have we learned?**는 이전 판단과 새 결과를 통합합니다.
+**Assess: What have we learned?** 단계는 이전 판단과 새 결과를 통합합니다.
 
 ```math
 s_t=\mathrm{Assess}(x,s_{t-1},\Delta M_t;M_t).
@@ -272,7 +272,7 @@ s_t=\mathrm{Assess}(x,s_{t-1},\Delta M_t;M_t).
 
 $`s_{t-1}`$는 이전 상태, $`\Delta M_t`$는 직전 작업자 묶음에서 새로 생긴 산출물입니다. 세미콜론 뒤의 $`M_t`$는 전체 원문이 프롬프트에 복사된다는 뜻이 아니라, 필요하면 조회할 수 있는 기억에 접근한다는 뜻입니다. 무엇이 믿을 만하고 어떤 보조정리가 미검증인지 등을 갱신합니다.
 
-**Propose: What could we do next?**는 다음 계산 후보를 만듭니다.
+**Propose: What could we do next?** 단계는 다음 계산 후보를 만듭니다.
 
 ```math
 \mathcal{A}_t=\mathrm{Propose}(x,s_t;M_t).
@@ -284,7 +284,7 @@ $`\mathcal{A}_t`$는 가능한 작업들의 집합입니다. 이 단계는 남�
 
 *Figure 1 중앙 오른쪽 상세, PDF 1쪽, v1. 원문 영역만 크롭했습니다. Evaluate는 예산 아래에서 선택하고 Dispatch는 지시와 문맥을 작업자에게 전달합니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=1)*
 
-**Evaluate: Which option is worth its cost?**는 계산 가치와 비용을 비교합니다.
+**Evaluate: Which option is worth its cost?** 단계는 계산 가치와 비용을 비교합니다.
 
 ```math
 \tilde a_t=\mathrm{Evaluate}
@@ -293,7 +293,7 @@ $`\mathcal{A}_t`$는 가능한 작업들의 집합입니다. 이 단계는 남�
 
 $`b_t^{\mathrm{eval}}`$은 앞 단계 비용이 이미 차감된 평가 시작 시점의 예산, $`\tilde a_t`$는 선택한 제안입니다. 불확실한 보조정리가 전체 증명을 좌우한다면 새로운 증명 전체를 만드는 것보다 그 부분을 검사하는 편이 가치 있을 수 있습니다. 그러나 이 평가는 프롬프트에 의한 **정성적 판단**입니다. 정확한 최적화 문제의 해나 학습된 계산 가치 추정기를 사용했다고 해석하면 안 됩니다.
 
-**Dispatch: What should the worker receive?**는 선택을 실행 가능한 행동으로 변환합니다.
+**Dispatch: What should the worker receive?** 단계는 선택을 실행 가능한 행동으로 변환합니다.
 
 ```math
 a_t=\mathrm{Dispatch}(x,s_t,\tilde a_t;M_t).
@@ -339,7 +339,7 @@ $`B`$는 최초 명목 호출 예산, $`b_t`$는 주기 시작 시 남은 예산
 
 #### 4.1 What Did the Agent Do with Its Budget?
 
-**Did it use the available calls?**에서 예산 이용률을 정의합니다.
+**Did it use the available calls?** 항목에서 예산 이용률을 정의합니다.
 
 ```math
 U=\frac{N_{\mathrm{ctrl}}+N_{\mathrm{work}}}{B}.
@@ -347,9 +347,9 @@ U=\frac{N_{\mathrm{ctrl}}+N_{\mathrm{work}}}{B}.
 
 $`N_{\mathrm{ctrl}}`$와 $`N_{\mathrm{work}}`$는 각각 실제 컨트롤러·작업자 호출 수, $`B`$는 허용량입니다. 이용률이 높다는 사실만으로 좋은 시스템이라고 할 수 없습니다. 이미 정답이 확실하면 일찍 멈추는 것이 합리적이고, 끝까지 계산해도 결과가 나빠질 수 있습니다. 그래서 성능 곡선과 함께 읽습니다.
 
-**Did later work build on earlier work?**에서는 노드·간선 수, 뿌리와 후손, 평균·최대 fan-in, 깊이와 너비를 셉니다. Fan-in은 노드에 들어오는 의존성 간선 수입니다. 깊이는 뿌리에서 해당 노드까지의 최장 경로를 간선 수로 재며 뿌리는 0입니다. 너비는 같은 깊이에 있는 노드 수의 최댓값입니다. 계산량의 증가와 과거 결과를 이용하는 구조의 증가를 구분할 수 있습니다.
+**Did later work build on earlier work?** 항목에서는 노드·간선 수, 뿌리와 후손, 평균·최대 fan-in, 깊이와 너비를 셉니다. Fan-in은 노드에 들어오는 의존성 간선 수입니다. 깊이는 뿌리에서 해당 노드까지의 최장 경로를 간선 수로 재며 뿌리는 0입니다. 너비는 같은 깊이에 있는 노드 수의 최댓값입니다. 계산량의 증가와 과거 결과를 이용하는 구조의 증가를 구분할 수 있습니다.
 
-**What information did the controller reuse?**는 어떤 작업자 출력과 자체 메모를 저장·조회했는지, 어느 단계가 조회했는지, 상태 크기는 어떻게 변했는지 봅니다. 메모리를 많이 썼다는 집계뿐 아니라, 실제 다시 읽은 내용과 읽지 않은 내용을 나누는 진단입니다.
+**What information did the controller reuse?** 항목은 어떤 작업자 출력과 자체 메모를 저장·조회했는지, 어느 단계가 조회했는지, 상태 크기는 어떻게 변했는지 봅니다. 메모리를 많이 썼다는 집계뿐 아니라, 실제 다시 읽은 내용과 읽지 않은 내용을 나누는 진단입니다.
 
 #### 4.2 Did the Agent Find and Submit a Correct Answer?
 
@@ -361,7 +361,7 @@ $`N_{\mathrm{ctrl}}`$와 $`N_{\mathrm{work}}`$는 각각 실제 컨트롤러·�
 
 첫 항은 **정답을 발견할 확률**, 둘째 항은 **정답이 있는 실행에서 그것을 제출할 확률**입니다. 인과효과를 분해한 식이 아니라 사건의 포함 관계에 따른 확률 항등식입니다.
 
-**Coverage: Did a correct answer appear?**는 중간 후보 중 하나라도 맞으면 해당 실행을 성공으로 셉니다.
+**Coverage: Did a correct answer appear?** 항목은 중간 후보 중 하나라도 맞으면 해당 실행을 성공으로 셉니다.
 
 ```math
 \mathrm{Coverage}(k)=\Pr\!\left(
@@ -371,7 +371,7 @@ $`N_{\mathrm{ctrl}}`$와 $`N_{\mathrm{work}}`$는 각각 실제 컨트롤러·�
 
 $`k`$는 컨트롤러와 작업자를 모두 포함한 누적 호출 체크포인트이고, $`V_{\mathrm{sol},\leq k}`$는 그때까지 생성한 풀이 집합입니다. 이미 있는 답을 완벽하게 고를 수 있는 선택기의 도달 가능한 성공률로 읽을 수 있습니다. 여기의 binary correctness는 IMO 본 성능 표의 부분 점수 정규화와 다른 지표입니다.
 
-**Monitoring: Could the agent recognize correct work?**는 정답의 존재를 아는 신호를 봅니다. 작업자는 HIGH·MEDIUM·LOW confidence를, Meta-Reasoning의 Assess는 후보 판정을 제공합니다. 평가할 신호를 $`r(y)`$, 정답 후보와 오답 후보를 각각 $`Y^+`$, $`Y^-`$로 두면 다음과 같습니다.
+**Monitoring: Could the agent recognize correct work?** 항목은 정답의 존재를 아는 신호를 봅니다. 작업자는 HIGH·MEDIUM·LOW confidence를, Meta-Reasoning의 Assess는 후보 판정을 제공합니다. 평가할 신호를 $`r(y)`$, 정답 후보와 오답 후보를 각각 $`Y^+`$, $`Y^-`$로 두면 다음과 같습니다.
 
 ```math
 \begin{aligned}
@@ -383,7 +383,7 @@ $`k`$는 컨트롤러와 작업자를 모두 포함한 누적 호출 체크포�
 
 정답의 평가가 오답보다 높을 확률에 동률의 절반을 더합니다. 0.5는 이 순위 판별에서의 우연 수준입니다. 이것은 자신의 답의 정오를 판단하는 **Type-2 AUC**이며, 자신감 수치가 실제 정답 확률과 맞는지 평가하는 calibration 지표는 아닙니다. Direct Control에는 대응하는 컨트롤러 판정 신호가 없어 동일 비교를 계산하지 않습니다.
 
-**Selection: Did it submit a correct answer it had found?**는 다음 조건부 확률입니다.
+**Selection: Did it submit a correct answer it had found?** 항목은 다음 조건부 확률입니다.
 
 ```math
 \mathrm{Selection}=\Pr(\mathcal S\mid\mathcal C).
@@ -415,7 +415,7 @@ q_F(G)=\frac{1}{|F(G)|}
 \right].
 ```
 
-**Frontier selection gain(FSG)**이 양수라면 해당 실행의 frontier에서 무작위 선택하는 것보다 실제 제출이 낫다는 뜻입니다. 최종 답이 frontier에 있어야 하는 것은 아니므로, 더 얕은 올바른 답을 골라도 이득이 생길 수 있습니다. 비교군마다 자신의 그래프에서 만든 기준선을 쓰며, FSG 자체를 최종 정확도나 동일 후보 집합의 직접 비교와 혼동하면 안 됩니다.
+**Frontier selection gain(FSG)** 값이 양수라면 해당 실행의 frontier에서 무작위 선택하는 것보다 실제 제출이 낫다는 뜻입니다. 최종 답이 frontier에 있어야 하는 것은 아니므로, 더 얕은 올바른 답을 골라도 이득이 생길 수 있습니다. 비교군마다 자신의 그래프에서 만든 기준선을 쓰며, FSG 자체를 최종 정확도나 동일 후보 집합의 직접 비교와 혼동하면 안 됩니다.
 
 **챕터의 핵심 기여:** 계산 사용, 정답 생성, 정오 판별, 제출 선택을 서로 다른 측정 대상으로 만듭니다.
 
@@ -783,7 +783,7 @@ mini-SWE Agent·Claude Code·Codex는 제어와 작업이 한 에이전트에 �
 
 이에 AST allowlist로 실행 전 문법을 검사하는 제한 workspace로 바꿉니다. 변수 저장·인덱싱·슬라이싱·리터럴·f-string·문자열 조작·연결·동등성·포함 검사·출력과 제공 모델 호출 함수 등을 허용합니다. 루프·컴프리헨션·생성기·함수 및 클래스 정의·람다·import·산술·비트 연산·대소 비교·일부 제어 구문 등은 거부합니다. 문맥을 다루는 코디네이션은 유지하면서 실제 문제 계산을 모델 호출로 보내려는 설계입니다. 본문은 이 제한을 사전에 프롬프트에 알립니다.
 
-**Full-Python run for Opus 4.8 on LongCoT-mini.** 제한 환경의 Opus가 분해 대신 계속 workspace 계산을 시도해 이 셀만 unrestricted 결과를 보고합니다. Table 1의 **64.3***가 그것입니다. 다른 8개 RLM 셀은 제한 환경입니다. 따라서 별표 셀과 나머지를 같은 실행 능력으로 묶거나, 제한 RLM 결과를 정규 full Python RLM 전체의 결과라고 부르면 안 됩니다.
+**Full-Python run for Opus 4.8 on LongCoT-mini.** 제한 환경의 Opus가 분해 대신 계속 workspace 계산을 시도해 이 셀만 unrestricted 결과를 보고합니다. Table 1의 **64.3**(별표) 값이 그것입니다. 다른 8개 RLM 셀은 제한 환경입니다. 따라서 별표 셀과 나머지를 같은 실행 능력으로 묶거나, 제한 RLM 결과를 정규 full Python RLM 전체의 결과라고 부르면 안 됩니다.
 
 **Budget awareness.** 참조 구현에는 호출 예산 인식이 없어 재귀 깊이와 무관하게 모든 모델 호출을 같은 허용량으로 계수합니다. 10% 구간마다 알리고 90%에서 최종 제출을 요구합니다. 종료 방식은 `finish`가 아니라 `answer` 사전의 내용과 준비 상태를 설정하는 형태이므로 강제 종료 안내도 이를 따릅니다.
 
