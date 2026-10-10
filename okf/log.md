@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-10-11 **Review**: [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 검토 대기 · PR #71 · `4dd8e6b`
+* 2026-10-11 **Review**: [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 검토 대기 · PR #71 · `444b4a1`
 * 2026-10-10 **Review**: [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/70) — 검토 대기 · PR #70 · `5cd0dc4`
 * 2026-10-09 **Review**: [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/69) — 검토 대기 · PR #69 · `78e1aff`
 * 2026-10-08 **Review**: [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/68) — 검토 대기 · PR #68 · `799e85f`
