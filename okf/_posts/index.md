@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 검토 대기 · MIMESIS의 사용자 시뮬레이터 학습·평가와 에이전트 GRPO·CSD를 입력, 보상, 비공개 코칭, 토큰 정렬까지 고정 커밋 코드로 추적합니다.
 * [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/74) — 검토 대기 · 모델 가중치를 고정한 채 연구 문헌을 모듈별 구현과 조합 검증으로 연결하는 ScholarEvolve의 설계, 반복 진화 실험과 실패 분석을 살펴봅니다.
 * [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 검토 대기 · 고정 언어 모델의 실행 하네스를 피드백으로 수정하는 메타학습을 분석하고, 미학습 추론·질의응답 과제로의 이전과 반복 적응의 평가 조건을 검토합니다.
 * [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 검토 대기 · 에이전트의 다음 계산 선택을 네 단계 메타추론으로 분리하는 하네스를 설명하고, 예산 확장과 정답 발견·판별·제출의 차이를 원문 실험과 구현 조건으로 분석합니다.
