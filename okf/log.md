@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-10-12 **Review**: [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 검토 대기 · PR #72 · `61b7823`
+* 2026-10-12 **Review**: [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 검토 대기 · PR #72 · `de227c2`
 * 2026-10-11 **Review**: [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 검토 대기 · PR #71 · `db00eb4`
 * 2026-10-10 **Review**: [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/70) — 검토 대기 · PR #70 · `ce3a5a6`
 * 2026-10-09 **Review**: [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/69) — 검토 대기 · PR #69 · `79c8b90`
