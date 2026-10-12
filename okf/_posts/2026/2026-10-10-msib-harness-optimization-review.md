@@ -75,6 +75,16 @@ visual_sources:
     license: "CC BY 4.0"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Z-0kLWBWLmo"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=Z-0kLWBWLmo">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 *Mixture of Self-Improving Branches for Agent Harness Optimization*은 LLM 에이전트를 둘러싼 하네스(harness)를 자동으로 개선할 때, 후보 코드뿐 아니라 후보를 평가하는 개발 문제의 구성과 다음 후보를 만드는 지침까지 함께 바꾸는 연구입니다. 하네스는 모델에 전달할 검색 자료, 사용 가능한 도구, 실행 순서, 검증과 종료 조건을 정하는 프로그램입니다. 따라서 같은 모델도 어떤 하네스에서 실행되는지에 따라 다른 문제 해결 능력을 보일 수 있습니다. 이 논문은 모델의 가중치를 학습하는 대신, 하네스를 작성하고 평가하는 탐색 과정 자체를 적응적으로 구성합니다. 분석 대상은 2026년 9월 29일 제출된 [arXiv:2609.37834v1 원문](https://arxiv.org/html/2609.37834v1)입니다.
