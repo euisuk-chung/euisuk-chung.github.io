@@ -27,6 +27,13 @@ def permitted(path):
                 or re.fullmatch(r'img/reviews/[a-zA-Z0-9_./-]+\.(?:png|jpg|jpeg|webp|svg)', path)) and '..' not in Path(path).parts
 
 
+def preview_candidate(pr):
+    # Reports and other single-post content use codex/<slug> too. Branch names
+    # select candidates; permitted() remains the content-only security boundary.
+    return not pr['isCrossRepository'] and bool(
+        re.fullmatch(r'codex/[a-z0-9][a-z0-9.-]*', pr['headRefName']))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--destination', default='_site')
@@ -39,8 +46,8 @@ def main():
     manifest = []
     archive = run('git', 'archive', 'HEAD')
     for pr in prs:
-        number, branch, sha = pr['number'], pr['headRefName'], pr['headRefOid']
-        if pr['isCrossRepository'] or not re.fullmatch(r'codex/(?:paper|repo|guide)-[a-z0-9.-]+', branch):
+        number, sha = pr['number'], pr['headRefOid']
+        if not preview_candidate(pr):
             continue
         if args.numbers is not None and number not in args.numbers:
             continue
