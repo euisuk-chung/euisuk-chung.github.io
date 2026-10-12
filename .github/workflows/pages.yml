@@ -11,10 +11,13 @@ on:
   workflow_run:
     workflows: [OKF Metadata]
     types: [completed]
-    branches: [master]
+    # PR-triggered metadata also writes trusted master with GITHUB_TOKEN.
+    # Its workflow_run head_branch is the PR branch, not master.
 
 concurrency:
-  group: github-pages
+  # A cancelled metadata run still emits workflow_run. Its skipped build must
+  # not replace the pending merge deployment in GitHub's one-slot queue.
+  group: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success' && format('github-pages-ignored-{0}', github.run_id) || 'github-pages' }}
   cancel-in-progress: false
 
 permissions:
