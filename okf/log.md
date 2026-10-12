@@ -72,6 +72,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-10-12 **Creation**: [\[TREND\] State of AI Report 2026 — 하네스·추론 경제·안전으로 읽는 AI의 변화](_posts/2026/2026-10-12-state-of-ai-2026-report.md) — `a50d452`
 * 2026-10-04 **Creation**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](_posts/2026/2026-09-16-is-bash-all-you-need-review.md) — `96a5737`
 * 2026-10-04 **Creation**: [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](_posts/2026/2026-09-13-gpu-cfr-review.md) — `13fe0ab`
 * 2026-10-04 **Creation**: [\[Paper Review\] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](_posts/2026/2026-09-12-sensenova-u15-review.md) — `a9c30b6`
