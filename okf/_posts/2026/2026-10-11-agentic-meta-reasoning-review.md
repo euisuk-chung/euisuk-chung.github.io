@@ -125,6 +125,16 @@ visual_sources:
     license: "CC BY 4.0"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/jAZgwjwUfHY"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=jAZgwjwUfHY">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 **Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning**은 에이전트가 문제를 푸는 능력과, 무엇을 다음에 계산할지 결정하는 능력을 분리해 연구합니다. 증명을 새로 시도할지, 유망한 풀이의 보조정리를 검증할지, 이미 얻은 답을 제출할지는 서로 다른 계산 선택입니다. 저자들은 이러한 선택도 한 번의 즉흥적인 모델 응답에 맡기지 않고, 기억을 조회하고 대안을 비교하는 별도의 에이전트 과정으로 구성합니다.
