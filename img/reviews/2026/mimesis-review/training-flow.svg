@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="480" viewBox="0 0 520 480" role="img" aria-labelledby="title desc">
+<title id="title">MIMESIS의 두 학습 단계</title><desc id="desc">위쪽은 사용자 모델의 감독학습과 강화학습, 아래쪽은 고정한 사용자 모델을 API 환경으로 사용하는 별도 에이전트 학습입니다. 연결에는 모델을 별도로 서빙하는 과정이 필요합니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#526274"/></marker></defs>
+<rect width="520" height="480" rx="14" fill="#f7f9fc"/>
+<g font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#142c43" text-anchor="middle">
+<text x="260" y="30" font-size="22" font-weight="700">MIMESIS · 두 모델의 학습 경계</text>
+<text x="260" y="57" font-size="18" fill="#376f79">Stage I · 사용자 시뮬레이터 가중치 학습</text>
+<rect x="30" y="72" width="460" height="55" rx="9" fill="#e4f2f2" stroke="#9dbec3"/>
+<text x="260" y="95" font-size="19" font-weight="700">대화 Parquet → 출처별 역할 변환</text>
+<text x="260" y="117" font-size="17">생성할 화자 선택 → loss_mask → SFT</text>
+<path d="M260 128 V145" stroke="#526274" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="149" width="460" height="55" rx="9" fill="#e4f2f2" stroke="#9dbec3"/>
+<text x="260" y="172" font-size="19" font-weight="700">ThoughtTrace → 추론 + 사용자 발화</text>
+<text x="260" y="194" font-size="17">역할 교환 · assistant_only_loss · TRL SFT</text>
+<path d="M260 205 V222" stroke="#526274" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="226" width="460" height="55" rx="9" fill="#e4f2f2" stroke="#9dbec3"/>
+<text x="260" y="249" font-size="19" font-weight="700">24개 과제 → AgentHubLoop → 보상</text>
+<text x="260" y="271" font-size="17">foldgrpo → simulator 체크포인트</text>
+<path d="M260 282 V322" stroke="#526274" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<rect x="106" y="289" width="308" height="25" fill="#f7f9fc"/>
+<text x="260" y="308" font-size="17" fill="#526274">모델을 별도로 고정·서빙합니다</text>
+<text x="260" y="347" font-size="18" fill="#7457a4">Stage II · 별도 에이전트 가중치 학습</text>
+<rect x="30" y="360" width="460" height="66" rx="9" fill="#eee8fa" stroke="#b5a0d1"/>
+<text x="260" y="385" font-size="19" font-weight="700">공개 대화 ↔ Agent ↔ Gym / 사용자 API</text>
+<text x="260" y="410" font-size="18">다중 턴 GRPO + 학습 전용 CSD</text>
+<path d="M260 427 V444" stroke="#526274" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="260" y="466" font-size="19" font-weight="700">출력: agent 체크포인트 · 평가 지표</text>
+</g></svg>
