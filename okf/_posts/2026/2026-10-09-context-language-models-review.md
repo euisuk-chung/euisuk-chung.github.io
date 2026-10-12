@@ -106,6 +106,16 @@ visual_sources:
     license: "CC BY 4.0"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/QoRAPwbe3Gc"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=QoRAPwbe3Gc">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 장시간 동작하는 에이전트는 검색 결과, 실행 로그, 중간 계획과 실패한 시도를 계속 축적합니다. 문제는 문맥 창의 크기만이 아닙니다. 다음 모델 호출에 어떤 정보를 남기고, 이미 끝난 작업의 기록을 언제 지우며, 여러 에이전트의 진행 상황을 어떻게 유지할지가 함께 중요해집니다.
