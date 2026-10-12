@@ -216,6 +216,16 @@ visual_sources:
     translated: false
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/cIWi8ZcZCcc"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=cIWi8ZcZCcc">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 언어 모델 에이전트의 행동은 모델 가중치만으로 결정되지 않습니다. 어떤 문맥을 모델에 전달하고, 언제 도구를 실행하며, 그 결과를 다음 호출에 어떻게 연결하는지 정하는 실행 프로그램도 성능에 영향을 줍니다. 이 논문은 그 프로그램을 **하네스(harness)** 라고 부르고, 실행 피드백을 읽어 하네스를 수정하는 능력을 학습합니다. 문제 풀이 모델인 solver는 고정한 채, 별도의 수정 제안 모델인 proposer를 학습한다는 점이 출발점입니다.
