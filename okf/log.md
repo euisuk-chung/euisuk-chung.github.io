@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-14 **Review**: [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 검토 대기 · PR #76 · `cdc54b0`
 * 2026-10-13 **Review**: [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 검토 대기 · PR #75 · `91cfc18`
 * 2026-10-13 **Review**: [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/74) — 검토 대기 · PR #74 · `d4a3a46`
 * 2026-10-12 **Review**: [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 검토 대기 · PR #72 · `de227c2`

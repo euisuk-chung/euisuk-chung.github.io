@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 검토 대기 · 여러 실행의 불일치와 공유 오류를 환경 증거로 조사하는 VeriHarness의 검증 구조, 스킬 진화, 업무 벤치마크와 비용을 분석합니다.
 * [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 검토 대기 · MIMESIS의 사용자 시뮬레이터 학습·평가와 에이전트 GRPO·CSD를 입력, 보상, 비공개 코칭, 토큰 정렬까지 고정 커밋 코드로 추적합니다.
 * [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/74) — 검토 대기 · 모델 가중치를 고정한 채 연구 문헌을 모듈별 구현과 조합 검증으로 연결하는 ScholarEvolve의 설계, 반복 진화 실험과 실패 분석을 살펴봅니다.
 * [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 검토 대기 · 고정 언어 모델의 실행 하네스를 피드백으로 수정하는 메타학습을 분석하고, 미학습 추론·질의응답 과제로의 이전과 반복 적응의 평가 조건을 검토합니다.
