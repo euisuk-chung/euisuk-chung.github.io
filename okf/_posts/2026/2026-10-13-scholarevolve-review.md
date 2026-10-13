@@ -83,6 +83,16 @@ visual_sources:
     render_scale: 4
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/oKAZyvB1SXs"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=oKAZyvB1SXs">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 언어 모델 에이전트의 성능은 모델 가중치뿐 아니라 도구를 호출하고, 과거 관측을 보존하며, 다음 행동을 결정하는 실행 소프트웨어에도 좌우됩니다. 이 실행 소프트웨어를 **하네스(harness)**라고 합니다. Jingbo Yang 외의 「Learning from Research: Toward Lifelong Agent Harness Evolution」은 모델을 고정한 채 연구 문헌에서 새로운 실행 메커니즘을 찾아 하네스를 개선하는 **ScholarEvolve**를 제안합니다. 이 리뷰는 2026년 9월 30일 제출된 [arXiv 2609.40169v1](https://arxiv.org/abs/2609.40169v1)의 본문과 부록 A–D를 분석합니다.
