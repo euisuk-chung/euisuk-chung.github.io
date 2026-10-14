@@ -69,6 +69,16 @@ visual_sources:
     figure: "8"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/nSaay_2Ul-w"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=nSaay_2Ul-w">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 보고서에 적힌 매출이 맞는지 확인하려면 문장의 자연스러움보다 원본 파일의 버전, 통화 단위, 계산 범위를 살펴야 합니다. 여러 에이전트가 같은 답을 내놓아도 모두 오래된 자료를 읽었을 수 있습니다. **VeriHarness는 생성에 사용한 모델을 그대로 검증에도 사용하되, 여러 실행 결과를 비교하고 실제 작업 환경에서 근거를 찾아 결과물을 선택·수정하는 하네스입니다.** 하네스(harness)는 모델 주변의 도구, 파일 접근, 실행 절차와 기억을 묶어 에이전트의 행동을 조직하는 층을 뜻합니다. 이 연구는 모델 가중치를 학습하지 않고 이 층을 바꾸어 검증 능력을 높입니다. [원문 초록·1절](https://arxiv.org/html/2610.00972v1#S1)
