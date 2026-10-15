@@ -64,9 +64,9 @@
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/35) — 병합 완료 · PR #35 · `4e938c5`
 * 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 병합 완료 · PR #34 · `09ecb06`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/33) — 병합 완료 · PR #33 · `cfe3bd4`
-* 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 검토 대기 · PR #32 · `ed81a28`
+* 2026-09-24 **Review**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/32) — 병합 완료 · PR #32 · `ed81a28`
 * 2026-09-22 **Review**: [\[Paper Review\] TabPFN: 작은 정형 데이터의 학습을 Transformer 추론으로 바꾸다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/31) — 병합 완료 · PR #31 · `e4f43e0`
-* 2026-09-19 **Review**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 검토 대기 · PR #30 · `8036a64`
+* 2026-09-19 **Review**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/30) — 병합 완료 · PR #30 · `8036a64`
 * 2026-09-17 **Review**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/29) — 병합 완료 · PR #29 · `b65f969`
 * 2026-09-13 **Review**: [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/28) — 병합 완료 · PR #28 · `f37429b`
 * 2026-09-12 **Review**: [\[Paper Review\] SenseNova-U1.5: 공간 복원과 전문가 증류로 통합하는 시각 지능](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/26) — 병합 완료 · PR #26 · `a9178b2`
@@ -76,6 +76,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-10-15 **Creation**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](_posts/2026/2026-09-24-gravityocr-review.md) — `bb43860`
+* 2026-10-15 **Creation**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](_posts/2026/2026-09-18-groupkv-review.md) — `3b7b232`
 * 2026-10-12 **Creation**: [\[TREND\] State of AI Report 2026 — 하네스·추론 경제·안전으로 읽는 AI의 변화](_posts/2026/2026-10-12-state-of-ai-2026-report.md) — `a50d452`
 * 2026-10-04 **Creation**: [\[Paper Review\] Is Bash All You Need? 기업 업무 에이전트의 다섯 도구 인터페이스 비교](_posts/2026/2026-09-16-is-bash-all-you-need-review.md) — `96a5737`
 * 2026-10-04 **Creation**: [\[Paper Review\] GPU-CFR: 게임을 정적 데이터 흐름으로 컴파일하는 균형 계산](_posts/2026/2026-09-13-gpu-cfr-review.md) — `13fe0ab`
