@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-16 **Review**: [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/78) — 검토 대기 · PR #78 · `f7b0248`
 * 2026-10-15 **Review**: [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/77) — 검토 대기 · PR #77 · `2b7154b`
 * 2026-10-14 **Review**: [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 검토 대기 · PR #76 · `ddf3e1a`
 * 2026-10-13 **Review**: [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 검토 대기 · PR #75 · `91cfc18`

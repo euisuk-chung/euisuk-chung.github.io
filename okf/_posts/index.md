@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/78) — 검토 대기 · Mid-Harness의 실행 전 후보 비교와 검증기 증류를 분석하고, 행동·전체 실행 확대의 성능·비용·신뢰구간 및 명령 판단 오류를 함께 살펴봅니다.
 * [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/77) — 검토 대기 · SelfSearch의 두 계보 자기 수정, 실행 기록 공유와 고정 런타임을 살펴보고 여섯 평가 설정의 성능·비용·모델 전이 결과를 구분해 분석합니다.
 * [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 검토 대기 · 여러 실행의 불일치와 공유 오류를 환경 증거로 조사하는 VeriHarness의 검증 구조, 스킬 진화, 업무 벤치마크와 비용을 분석합니다.
 * [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 검토 대기 · MIMESIS의 사용자 시뮬레이터 학습·평가와 에이전트 GRPO·CSD를 입력, 보상, 비공개 코칭, 토큰 정렬까지 고정 커밋 코드로 추적합니다.
