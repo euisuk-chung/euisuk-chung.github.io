@@ -61,6 +61,16 @@ visual_sources:
     figure: "3 (central detail)"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/I7MP-9bUSFQ"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=I7MP-9bUSFQ">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 에이전트가 코드를 수정할 수 있다면 자신을 실행하는 도구와 지침도 바꿀 수 있습니다. 문제는 어떤 수정이 좋은지 알아내는 비용입니다. 후보를 만들 때마다 실제 문제를 풀게 하고 점수를 확인하면, 평가 문제 수와 반복 횟수에 따라 탐색 비용이 누적됩니다. **SelfSearch는 자기 수정 과정에서 생긴 행동 기록을 다음 수정의 근거로 사용하고, 탐색 중에는 downstream 벤치마크의 문제나 정답 보상을 제공하지 않는 방법**입니다. 여기서 downstream은 개선된 에이전트가 나중에 수행하는 소프트웨어 수정·터미널 작업을 뜻합니다. [초록·1절](https://arxiv.org/html/2609.37968v2#S1)
