@@ -89,6 +89,16 @@ visual_sources:
     figure: "5 (right detail)"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/8RHxrMW4dYs"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=8RHxrMW4dYs">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 터미널 에이전트는 명령을 하나 실행할 때마다 다음에 마주할 환경을 바꿉니다. 잘못된 패키지를 설치하거나 엉뚱한 파일을 수정하면, 이후 판단이 출발하는 상태 자체가 나빠집니다. 모델이 좋은 대안을 생성할 수 있어도 첫 번째 행동을 그대로 실행하는 구조에서는 그 능력을 활용하지 못할 수 있습니다. **Mid-Harness는 같은 상황에서 여러 다음 행동을 제안받고, 실제 실행 전에 비교하여 하나만 실행하는 방법**입니다.
