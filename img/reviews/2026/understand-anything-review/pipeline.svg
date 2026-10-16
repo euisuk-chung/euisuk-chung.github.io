@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+<title id="title">Understand Anything 분석과 소비 흐름</title><desc id="desc">소스 파일을 스캔하고 배치를 나눠 구조 추출과 모델 의미 분석을 수행합니다. 병합과 검토 이후 저장한 그래프를 대시보드가 읽습니다. 스킬은 이 단계들을 조정합니다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#596b83"/></marker></defs>
+<rect width="720" height="480" fill="#f8fafc" rx="16"/>
+<g font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172b43" text-anchor="middle">
+<text x="360" y="35" font-size="24" font-weight="700">소스에서 설명 가능한 그래프로</text>
+<text x="360" y="64" font-size="17">상위 조정: /understand 스킬을 읽는 코딩 에이전트</text>
+<g stroke="#596b83" stroke-width="2" marker-end="url(#arrow)"><path d="M 218 129 H 259"/><path d="M 458 129 H 499"/><path d="M 600 164 V 215"/><path d="M 500 254 H 459"/><path d="M 260 254 H 219"/><path d="M 119 294 V 340"/><path d="M 220 378 H 499"/></g>
+<g stroke="#adc4dc" stroke-width="1.5"><rect x="20" y="94" width="200" height="70" rx="10" fill="#fff"/><rect x="260" y="94" width="200" height="70" rx="10" fill="#e6f1fe"/><rect x="500" y="94" width="200" height="70" rx="10" fill="#e6f1fe"/><rect x="500" y="215" width="200" height="79" rx="10" fill="#e6f1fe"/><rect x="260" y="215" width="200" height="79" rx="10" fill="#f0e9ff" stroke="#c7b5eb"/><rect x="20" y="215" width="200" height="79" rx="10" fill="#e6f1fe"/><rect x="20" y="340" width="200" height="79" rx="10" fill="#e7f5ed"/><rect x="500" y="340" width="200" height="79" rx="10" fill="#fff"/></g>
+<g font-size="21" font-weight="700"><text x="120" y="123">소스 · README</text><text x="360" y="123">스캔 · import</text><text x="600" y="123">배치 계획</text><text x="600" y="245">구조 추출</text><text x="360" y="245">모델 의미 분석</text><text x="120" y="245">병합 · 검토</text><text x="120" y="371">지식 그래프 JSON</text><text x="600" y="371">대시보드</text></g>
+<g font-size="17"><text x="120" y="148">분석 입력</text><text x="360" y="148">현재 파일 · 내부 관계</text><text x="600" y="148">Louvain · 이웃 문맥</text><text x="600" y="275">Tree-sitter · 전용 파서</text><text x="360" y="275">설명 · 태그 · 관계</text><text x="120" y="275">ID 정리 · import 복구</text><text x="120" y="400">노드 · 간선 · 계층 · 투어</text><text x="600" y="400">검증 → 상태 → 탐색</text><text x="360" y="364">계층 · 투어는 별도 모델 단계</text><text x="360" y="402">저장 결과를 읽는 경계</text></g>
+<text x="360" y="454" font-size="16" fill="#516174">리뷰어 작성 · 1d7418b 기준 · 파랑: 도우미 / 보라: 모델</text>
+</g></svg>
