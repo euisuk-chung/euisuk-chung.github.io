@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="470" viewBox="0 0 360 470" role="img" aria-labelledby="title desc">
+<title id="title">AKV 에이전트와 추론 서버의 책임 경계</title><desc id="desc">하네스가 원본 이력을 보존하고 정책이 캐시 지시를 덧붙인 다음, HTTP로 커스텀 SGLang 서버에 보내 응답과 사용량을 돌려받습니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#375a7f"/></marker></defs>
+<rect width="360" height="470" rx="12" fill="#f6f8fb"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#152d46">
+<text x="180" y="25" font-size="17" font-weight="700">AKV: 결정은 agent, 실행은 system</text>
+<rect x="20" y="43" width="320" height="58" rx="8" fill="#e5efff" stroke="#7191b8"/><text x="180" y="66" font-size="15" font-weight="700">1. Harness: messages + tools</text><text x="180" y="87" font-size="14">원본 대화와 operation history 보관</text>
+<path d="M180 102 V121" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="126" width="320" height="63" rx="8" fill="#e5efff" stroke="#7191b8"/><text x="180" y="150" font-size="15" font-weight="700">2. CachePolicy.process</text><text x="180" y="173" font-size="14">messages 유지 + Drop / Reposition 추가</text>
+<path d="M180 190 V209" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="214" width="320" height="52" rx="8" fill="#fff2d9" stroke="#b29456"/><text x="180" y="236" font-size="15" font-weight="700">3. HTTP Chat Completions</text><text x="180" y="256" font-size="14">최종 JSON을 변환 없이 전송</text>
+<path d="M180 267 V286" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="291" width="320" height="62" rx="8" fill="#e4f4e9" stroke="#6d9d7c"/><text x="180" y="315" font-size="15" font-weight="700">4. AKV System: patched SGLang</text><text x="180" y="338" font-size="14">이벤트 컴파일 · KV 재사용 · 모델 계산</text>
+<path d="M180 354 V373" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="378" width="320" height="58" rx="8" fill="#e5efff" stroke="#7191b8"/><text x="180" y="401" font-size="15" font-weight="700">5. SSE → GenerationResult</text><text x="180" y="423" font-size="14">응답 / tool calls / usage → 하네스</text>
+<text x="180" y="456" font-size="12">리뷰어 작성 · c567a429a058 · source-pinned</text>
+</g></svg>
