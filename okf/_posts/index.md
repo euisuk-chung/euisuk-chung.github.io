@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] AKV — 에이전트가 KV 캐시를 직접 관리하는 구조와 SGLang 실행 경로](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/79) — 검토 대기 · AKV의 에이전트 정책부터 SGLang의 토큰 이벤트·캐시 재사용·위치 변환까지 추적하고, 실제 연동 방식과 지원 제약을 살펴봅니다.
 * [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/78) — 검토 대기 · Mid-Harness의 실행 전 후보 비교와 검증기 증류를 분석하고, 행동·전체 실행 확대의 성능·비용·신뢰구간 및 명령 판단 오류를 함께 살펴봅니다.
 * [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/77) — 검토 대기 · SelfSearch의 두 계보 자기 수정, 실행 기록 공유와 고정 런타임을 살펴보고 여섯 평가 설정의 성능·비용·모델 전이 결과를 구분해 분석합니다.
 * [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 검토 대기 · 여러 실행의 불일치와 공유 오류를 환경 증거로 조사하는 VeriHarness의 검증 구조, 스킬 진화, 업무 벤치마크와 비용을 분석합니다.
