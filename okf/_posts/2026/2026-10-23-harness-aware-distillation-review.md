@@ -88,6 +88,16 @@ visual_sources:
     figure: 9
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Z9n114AdVOg"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=Z9n114AdVOg">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 작은 언어 모델 에이전트에게 큰 모델의 행동을 가르칠 때, 모델 바깥의 소프트웨어가 이미 제공하는 정보까지 다시 학습시켜야 할까요? **Harness-Aware Distillation(HAD)**은 이 질문에서 출발합니다. 하네스(harness)는 현재 위치와 소지품을 기록하고, 사용할 수 있는 행동을 보여 주며, 같은 실패가 반복되는지 알려 주는 실행 소프트웨어입니다. 교사와 학생이 배포 시점에도 같은 하네스를 사용한다면, 학생이 배워야 할 핵심은 그 기록 자체를 암기하는 능력보다 **기록을 읽고 다음 행동을 바꾸는 교사의 판단 능력**입니다.
