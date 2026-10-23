@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-10-24 **Review**: [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/82) — 검토 대기 · PR #82 · `b5adc92`
+* 2026-10-24 **Review**: [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/82) — 검토 대기 · PR #82 · `9be34aa`
 * 2026-10-23 **Review**: [\[Repo Review\] LLM Council — 여러 모델의 답변과 상호 평가를 함께 읽는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/81) — 검토 대기 · PR #81 · `704b695`
 * 2026-10-23 **Review**: [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/80) — 검토 대기 · PR #80 · `70511ed`
 * 2026-10-23 **Review**: [\[Repo Review\] AKV — 에이전트가 KV 캐시를 직접 관리하는 구조와 SGLang 실행 경로](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/79) — 검토 대기 · PR #79 · `1a20fe8`
