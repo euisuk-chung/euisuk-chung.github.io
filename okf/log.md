@@ -25,7 +25,7 @@
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
 * 2026-10-23 **Review**: [\[Repo Review\] LLM Council — 여러 모델의 답변과 상호 평가를 함께 읽는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/81) — 검토 대기 · PR #81 · `704b695`
-* 2026-10-23 **Review**: [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/80) — 검토 대기 · PR #80 · `207046c`
+* 2026-10-23 **Review**: [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/80) — 검토 대기 · PR #80 · `70511ed`
 * 2026-10-23 **Review**: [\[Repo Review\] AKV — 에이전트가 KV 캐시를 직접 관리하는 구조와 SGLang 실행 경로](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/79) — 검토 대기 · PR #79 · `1a20fe8`
 * 2026-10-16 **Review**: [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/78) — 검토 대기 · PR #78 · `ec29960`
 * 2026-10-15 **Review**: [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/77) — 검토 대기 · PR #77 · `2b7154b`
