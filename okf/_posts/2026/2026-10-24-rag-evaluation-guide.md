@@ -84,6 +84,16 @@ visual_sources:
     caption: "작성 도식: 사람이 관련성을 고정한 가상 D1/D2/D3 순위 비교, 실제 평가 결과 아님"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Syv0M1xrfS4"
+    title="개념 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=Syv0M1xrfS4">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## RAG는 자료를 보고 답하는 AI입니다
 
 사내 챗봇에 “연간 교육비 한도는 얼마이고, 신청 전에 누구의 승인을 받아야 하나요?”라고 물었다고 생각해 보겠습니다. 답변은 매끄럽습니다. 그런데 한도는 맞고 승인자는 틀렸다면, 이 챗봇을 잘 만들었다고 할 수 있을까요?
