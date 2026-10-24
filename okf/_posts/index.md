@@ -39,10 +39,6 @@
 * [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
 * [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.
 * [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 검토 대기 · SkillGym이 사람의 스킬을 검증 가능한 환경과 실행 궤적으로 바꾸는 과정을 분석하고, 하네스별 SFT 성능과 스킬 내재화 해석의 범위를 살펴봅니다.
-* [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 검토 대기 · 지연되거나 개정되는 정답 아래 고정 예측기와 두 보정기를 결합하는 방법을, 초기 가중치·최악 악화·평가 버전의 조건 및 실패 사례와 함께 분석합니다.
-* [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/40) — 검토 대기 · 검색 근거로 초안을 수정할 때의 이득과 정답 훼손을 함께 예측하고, 신뢰도 학습·표준 RAG 대안·통계적 불확실성을 비교한 연구를 분석합니다.
-* [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · CORDIAL이 순서형 LLM 평가의 편향과 분산을 소수 라벨로 보정하는 방법을 설명하고, Bayesian 채널의 순서 보장과 표본 규모에 따른 성능 역전을 분석합니다.
-* [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · CAST의 정상 문맥·이상 구조 조건부 flow matching과 두 단계 학습을 설명하고, 생성 품질과 실제 이상탐지 성능을 원문 실험 조건에 따라 분석합니다.
 <!-- okf-review-index:end -->
 
 ## 2026
@@ -50,8 +46,12 @@
 * [[TREND] State of AI Report 2026 — 하네스·추론 경제·안전으로 읽는 AI의 변화](2026/2026-10-12-state-of-ai-2026-report.md) - State of AI Report 2026의 연구·산업·정치·안전·전망을 주요 슬라이드 13장과 함께 정리하고, 에이전트 평가와 추론 경제의 의미를 살펴봅니다.
 * [[OpenAI] DevDay 2026 키노트 정리: 상시 동작 에이전트 Dots, GPT-6.1 Sol, Ultrafast, Codex Cloud까지](2026/2026-09-30-openai-devday-2026-keynote.md) - OpenAI DevDay 2026 키노트의 Dots와 ChatGPT Space, GPT-6.1 Sol·Ultrafast·Pro 500·Decisions API, Codex Cloud·Agents API·Private Intelligence, Sign in with ChatGPT와 Marketplace 발표를 순서대로 정리합니다.
 * [[Repo Review] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](2026/2026-09-28-opus-55-video-prompting.md) - Opus 5.5 영상 사례 자료집의 데이터·검증 구조를 살펴보고, 제작 경로별 사례와 한국어 프롬프트 예시로 영상 제작의 입력·분업·검수 방법을 정리합니다.
+* [[Paper Review] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](2026/2026-09-28-downside-controlled-forecast-review.md) - 지연되거나 개정되는 정답 아래 고정 예측기와 두 보정기를 결합하는 방법을, 초기 가중치·최악 악화·평가 버전의 조건 및 실패 사례와 함께 분석합니다.
 * [[가이드] Claude Agent SDK 입문: Claude Code 연동부터 첫 실행과 서비스 배포까지](2026/2026-09-28-claude-agent-sdk-guide.md) - Claude Agent SDK와 API·CLI·Managed Agents의 차이부터 Python 첫 실행, Claude Code 설정 재사용, 공식 Docker 서비스 예제와 운영 원칙까지 입문자의 순서로 설명합니다.
+* [[Paper Review] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](2026/2026-09-27-return-or-revise-review.md) - 검색 근거로 초안을 수정할 때의 이득과 정답 훼손을 함께 예측하고, 신뢰도 학습·표준 RAG 대안·통계적 불확실성을 비교한 연구를 분석합니다.
+* [[Paper Review] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](2026/2026-09-26-cordial-review.md) - CORDIAL이 순서형 LLM 평가의 편향과 분산을 소수 라벨로 보정하는 방법을 설명하고, Bayesian 채널의 순서 보장과 표본 규모에 따른 성능 역전을 분석합니다.
 * [[복습] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](2026/2026-09-25-lm-review-transformer-to-t5.md) - Transformer, BERT, GPT, BART, T5의 모델 정보·핵심 기여·푸는 문제·학습 방식을 원 논문 그림과 입력/출력 예시, PyTorch·Hugging Face 코드로 정리하고 인코더와 디코더가 학습하고 추론하는 방식의 차이를 비교합니다.
+* [[Paper Review] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](2026/2026-09-25-cast-review.md) - CAST의 정상 문맥·이상 구조 조건부 flow matching과 두 단계 학습을 설명하고, 생성 품질과 실제 이상탐지 성능을 원문 실험 조건에 따라 분석합니다.
 * [[Paper Review] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](2026/2026-09-24-gravityocr-review.md) - GravityOCR의 확산 초안과 자기회귀 검증, 공동 학습과 GRPO를 원문 순서대로 해설하고 OCR 품질 및 영역·페이지별 속도 향상의 측정 조건을 분석합니다.
 * [[Paper Review] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](2026/2026-09-22-tabpfn-v3-review.md) - TabPFN-3의 행 압축 아키텍처와 캐시 최적화, Thinking 변형을 설명하고 표·시계열·관계형 데이터의 성능을 평가 조건별로 분석합니다.
 * [[Paper Review] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](2026/2026-09-22-tabpfn-v2-study-closer-look-review.md) - TabPFN v2의 내부 표현과 성능 특성을 분석하고 고차원·다중 클래스·대규모 데이터로 확장하는 추론 시 분할 전략을 살펴봅니다.

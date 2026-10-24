@@ -61,11 +61,11 @@
 * 2026-09-29 **Review**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · PR #46 · `09c660f`
 * 2026-09-28 **Review**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 검토 대기 · PR #45 · `69b681c`
 * 2026-09-28 **Review**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/43) — 병합 완료 · PR #43 · `c9a5cb6`
-* 2026-09-28 **Review**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 검토 대기 · PR #41 · `dc85d17`
-* 2026-09-27 **Review**: [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/40) — 검토 대기 · PR #40 · `b0ae4b5`
-* 2026-09-26 **Review**: [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 검토 대기 · PR #39 · `afd8339`
+* 2026-09-28 **Review**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 병합 완료 · PR #41 · `dc85d17`
+* 2026-09-27 **Review**: [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/40) — 병합 완료 · PR #40 · `b0ae4b5`
+* 2026-09-26 **Review**: [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/39) — 병합 완료 · PR #39 · `afd8339`
 * 2026-09-25 **Review**: [\[복습\] 다시 근본으로, 언어모델을 오랜만에 복습해보자: Transformer to T5](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/38) — 병합 완료 · PR #38 · `4d2ca4a`
-* 2026-09-25 **Review**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 검토 대기 · PR #36 · `33bce55`
+* 2026-09-25 **Review**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/36) — 병합 완료 · PR #36 · `33bce55`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN-3: Technical Report — 대규모 표 데이터와 추론 시 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/35) — 병합 완료 · PR #35 · `4e938c5`
 * 2026-09-24 **Review**: [\[Paper Review\] A Closer Look at TabPFN v2: 강점의 원리와 추론 시 확장 전략](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/34) — 병합 완료 · PR #34 · `09ecb06`
 * 2026-09-24 **Review**: [\[Paper Review\] TabPFN v2: Accurate predictions on small data with a tabular foundation model](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/33) — 병합 완료 · PR #33 · `cfe3bd4`
@@ -81,6 +81,10 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-10-24 **Creation**: [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](_posts/2026/2026-09-27-return-or-revise-review.md) — `412472d`
+* 2026-10-24 **Creation**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](_posts/2026/2026-09-28-downside-controlled-forecast-review.md) — `0eea0cc`
+* 2026-10-24 **Creation**: [\[Paper Review\] CORDIAL: Calibrating Ordinal LLM Outputs from Few Labels](_posts/2026/2026-09-26-cordial-review.md) — `9b12068`
+* 2026-10-24 **Creation**: [\[Paper Review\] CAST: Context- and Anomaly Structure-Conditioned Time Series Anomaly Generation](_posts/2026/2026-09-25-cast-review.md) — `1ffbe03`
 * 2026-10-15 **Creation**: [\[Paper Review\] Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](_posts/2026/2026-09-24-gravityocr-review.md) — `bb43860`
 * 2026-10-15 **Creation**: [\[Paper Review\] GroupKV: 장문맥 확산 언어 모델의 계층적 KV 캐시 관리](_posts/2026/2026-09-18-groupkv-review.md) — `3b7b232`
 * 2026-10-12 **Creation**: [\[TREND\] State of AI Report 2026 — 하네스·추론 경제·안전으로 읽는 AI의 변화](_posts/2026/2026-10-12-state-of-ai-2026-report.md) — `a50d452`
