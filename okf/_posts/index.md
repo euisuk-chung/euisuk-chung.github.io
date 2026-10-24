@@ -36,14 +36,14 @@
 * [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · 장기 과제의 분기 판단을 실행 기록으로 평가하는 Taste-Bench와 정답 방향을 아는 교사의 추론 증류를 분석하고, 판단 정확도와 조언 기반 과제 성공률의 조건을 구분합니다.
 * [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 검토 대기 · CLM의 상태·후보 텍스트 변환부터 임베딩과 투영 캐시, 대조학습 헤드 미세조정, 궤적 선택 평가까지 고정 커밋의 코드 흐름을 분석합니다.
 * [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · Netflix GenRec의 두 단계 학습, 자연어 사용자 이력, 보상 가중 순위 학습과 prefill-only 추론을 분석하고 온라인 개선과 문맥 압축의 조건을 검토합니다.
-* [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
-* [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
 * [[TREND] State of AI Report 2026 — 하네스·추론 경제·안전으로 읽는 AI의 변화](2026/2026-10-12-state-of-ai-2026-report.md) - State of AI Report 2026의 연구·산업·정치·안전·전망을 주요 슬라이드 13장과 함께 정리하고, 에이전트 평가와 추론 경제의 의미를 살펴봅니다.
 * [[OpenAI] DevDay 2026 키노트 정리: 상시 동작 에이전트 Dots, GPT-6.1 Sol, Ultrafast, Codex Cloud까지](2026/2026-09-30-openai-devday-2026-keynote.md) - OpenAI DevDay 2026 키노트의 Dots와 ChatGPT Space, GPT-6.1 Sol·Ultrafast·Pro 500·Decisions API, Codex Cloud·Agents API·Private Intelligence, Sign in with ChatGPT와 Marketplace 발표를 순서대로 정리합니다.
+* [[Repo Review] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](2026/2026-09-29-openresearch-review.md) - OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.
+* [[Paper Review] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](2026/2026-09-29-casd-review.md) - CASD가 코딩 에이전트의 실행 기록 집계와 사례 분석으로 프롬프트를 개선하는 원리, 탐색 기반 방법과의 평가 조건 및 비용·통계 해석을 살펴봅니다.
 * [[Paper Review] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](2026/2026-09-28-skillgym-review.md) - SkillGym이 사람의 스킬을 검증 가능한 환경과 실행 궤적으로 바꾸는 과정을 분석하고, 하네스별 SFT 성능과 스킬 내재화 해석의 범위를 살펴봅니다.
 * [[Repo Review] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](2026/2026-09-28-opus-55-video-prompting.md) - Opus 5.5 영상 사례 자료집의 데이터·검증 구조를 살펴보고, 제작 경로별 사례와 한국어 프롬프트 예시로 영상 제작의 입력·분업·검수 방법을 정리합니다.
 * [[Paper Review] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](2026/2026-09-28-downside-controlled-forecast-review.md) - 지연되거나 개정되는 정답 아래 고정 예측기와 두 보정기를 결합하는 방법을, 초기 가중치·최악 악화·평가 버전의 조건 및 실패 사례와 함께 분석합니다.

@@ -57,8 +57,8 @@
 * 2026-09-30 **Review**: [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · PR #50 · `3377ada`
 * 2026-09-30 **Review**: [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 검토 대기 · PR #49 · `0df9ce5`
 * 2026-09-29 **Review**: [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · PR #48 · `d5a48d2`
-* 2026-09-29 **Review**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 검토 대기 · PR #47 · `c235cea`
-* 2026-09-29 **Review**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 검토 대기 · PR #46 · `09c660f`
+* 2026-09-29 **Review**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 병합 완료 · PR #47 · `c235cea`
+* 2026-09-29 **Review**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 병합 완료 · PR #46 · `09c660f`
 * 2026-09-28 **Review**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 병합 완료 · PR #45 · `69b681c`
 * 2026-09-28 **Review**: [\[Repo Review\] Opus 5.5 영상 프롬프팅: 사례에서 배우는 제작 경로와 검수 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/43) — 병합 완료 · PR #43 · `c9a5cb6`
 * 2026-09-28 **Review**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/41) — 병합 완료 · PR #41 · `dc85d17`
@@ -81,6 +81,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-10-24 **Creation**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](_posts/2026/2026-09-29-openresearch-review.md) — `8879dc1`
+* 2026-10-24 **Creation**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](_posts/2026/2026-09-29-casd-review.md) — `3748010`
 * 2026-10-24 **Creation**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](_posts/2026/2026-09-28-skillgym-review.md) — `a25b447`
 * 2026-10-24 **Creation**: [\[Paper Review\] Return or Revise? — 검색 근거로 답을 고칠 때와 지킬 때](_posts/2026/2026-09-27-return-or-revise-review.md) — `412472d`
 * 2026-10-24 **Creation**: [\[Paper Review\] Downside-Controlled Online Forecast Combination under Delayed and Revised Outcomes](_posts/2026/2026-09-28-downside-controlled-forecast-review.md) — `0eea0cc`
