@@ -105,6 +105,16 @@ visual_sources:
     figure: 12
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/uzhLjqZHTJI"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=uzhLjqZHTJI">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 LLM 에이전트가 사람과 일을 잘하려면 정답을 한 번 말하는 능력만으로는 부족합니다. 사용자가 필요한 정보를 조금씩 알려 주거나, 이미 진행한 뒤 요구사항을 바꾸거나, 명확화 질문에 제대로 답하지 않는 상황에서도 대화를 이어 가야 합니다. 그런데 에이전트 훈련에 사용하는 가상 사용자를 일반적인 assistant 모델에 맡기면, 실제 사람보다 지나치게 협조적이고 명시적인 상대를 만날 수 있습니다. **MIMESIS는 에이전트 자체보다 먼저, 에이전트가 연습할 상대를 학습하는 연구**입니다.
