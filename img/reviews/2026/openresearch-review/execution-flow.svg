@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="464" viewBox="0 0 460 464" role="img" aria-labelledby="title desc">
+<title id="title">OpenResearch 로컬 실행 흐름</title><desc id="desc">CLI 또는 대시보드 API에서 공통 제출, 커밋 아카이브 생성, 로컬 실행, 감독과 기록으로 이어지는 다섯 단계입니다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#52657a"/></marker></defs>
+<rect width="460" height="464" rx="16" fill="#f5f8fc"/>
+<g font-family="sans-serif" text-anchor="middle" fill="#182c42">
+<text x="230" y="32" font-size="22" font-weight="700">OpenResearch 로컬 실행</text>
+<rect x="25" y="49" width="410" height="63" rx="10" fill="#e5edff" stroke="#9eb5df"/>
+<text x="230" y="76" font-size="22">CLI / 대시보드 API</text><text x="230" y="101" font-size="17">실험 ID와 실행 설정을 제출</text>
+<path d="M230 114 V134" stroke="#52657a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="25" y="138" width="410" height="63" rx="10" fill="#d9f2ef" stroke="#7bbeb4"/>
+<text x="230" y="165" font-size="22">compute::submit</text><text x="230" y="190" font-size="17">준비 점검 · 소스 고정 · 실행 예약</text>
+<path d="M230 203 V223" stroke="#52657a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="25" y="227" width="410" height="63" rx="10" fill="#fff1d7" stroke="#d7b575"/>
+<text x="230" y="254" font-size="22">커밋 SHA → 소스 아카이브</text><text x="230" y="279" font-size="17">git archive · SHA-256 digest</text>
+<path d="M230 292 V312" stroke="#52657a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="25" y="316" width="410" height="63" rx="10" fill="#e5edff" stroke="#9eb5df"/>
+<text x="230" y="343" font-size="22">로컬 실행 · run.sh</text><text x="230" y="368" font-size="17">별도 디렉터리 · 호스트 환경</text>
+<path d="M230 381 V401" stroke="#52657a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="25" y="405" width="410" height="45" rx="10" fill="#d9f2ef" stroke="#7bbeb4"/>
+<text x="230" y="435" font-size="21">supervise → 로그 + SQLite</text>
+</g></svg>
