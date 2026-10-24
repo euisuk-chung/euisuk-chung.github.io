@@ -40,6 +40,7 @@
 
 ## 2026
 
+* [[가이드] RAG 평가지표 입문: RAGAS·TruLens·DeepEval로 검색과 답변 나누어 보기](2026/2026-10-24-rag-evaluation-guide.md) - RAG의 검색과 답변을 분리해 평가하는 원리를 가상 사내 규정으로 배우고, RAGAS·TruLens RAG Triad·DeepEval의 지표와 실무 적용 순서를 비교합니다.
 * [[TREND] State of AI Report 2026 — 하네스·추론 경제·안전으로 읽는 AI의 변화](2026/2026-10-12-state-of-ai-2026-report.md) - State of AI Report 2026의 연구·산업·정치·안전·전망을 주요 슬라이드 13장과 함께 정리하고, 에이전트 평가와 추론 경제의 의미를 살펴봅니다.
 * [[OpenAI] DevDay 2026 키노트 정리: 상시 동작 에이전트 Dots, GPT-6.1 Sol, Ultrafast, Codex Cloud까지](2026/2026-09-30-openai-devday-2026-keynote.md) - OpenAI DevDay 2026 키노트의 Dots와 ChatGPT Space, GPT-6.1 Sol·Ultrafast·Pro 500·Decisions API, Codex Cloud·Agents API·Private Intelligence, Sign in with ChatGPT와 Marketplace 발표를 순서대로 정리합니다.
 * [[Repo Review] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](2026/2026-09-29-openresearch-review.md) - OpenResearch의 실험 브랜치 생성부터 커밋 아카이브, 로컬 실행과 로그 저장까지 추적하며 소스 재현성과 실행 환경의 경계를 살펴봅니다.

@@ -81,6 +81,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-10-24 **Creation**: [\[가이드\] RAG 평가지표 입문: RAGAS·TruLens·DeepEval로 검색과 답변 나누어 보기](_posts/2026/2026-10-24-rag-evaluation-guide.md) — `3aba4d8`
 * 2026-10-24 **Creation**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](_posts/2026/2026-09-29-openresearch-review.md) — `8879dc1`
 * 2026-10-24 **Creation**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](_posts/2026/2026-09-29-casd-review.md) — `3748010`
 * 2026-10-24 **Creation**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](_posts/2026/2026-09-28-skillgym-review.md) — `a25b447`
