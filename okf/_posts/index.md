@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/88) — 검토 대기 · 실제 데이터베이스에서 탐색·오류 복구·제출 궤적을 학습하는 HarnessSQL의 설계와 실험을 살펴보고, 공유 DB 평가와 새로운 환경으로의 전이를 구분합니다.
 * [\[Repo Review\] Memento — LLM 가중치 대신 경험을 축적하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/87) — 검토 대기 · Memento의 Planner–Executor와 MCP 도구 흐름을 추적하고, 성공·실패 사례 검색과 별도 검색기 학습이 에이전트의 입력을 어떻게 바꾸는지 분석합니다.
 * [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/86) — 검토 대기 · 모델 가중치를 고정한 채 실행 하네스를 대조 실험으로 개선하고 경험을 다음 과제로 이전하는 Harness²의 두 재귀·실험·한계를 원문 순서로 분석합니다.
 * [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/85) — 검토 대기 · MASS의 워크플로 검색과 협업 기록 학습을 따라가며, 두 주기의 자기 개선 결과·토큰 효율·평가 통계와 실제 검증 실패의 의미를 분석합니다.
