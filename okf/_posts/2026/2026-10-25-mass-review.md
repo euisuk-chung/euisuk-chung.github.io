@@ -81,6 +81,16 @@ visual_sources:
     table: "8"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Q1N42rXLakw"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=Q1N42rXLakw">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 같은 언어 모델이 문제를 풀고, 자신의 결과를 평가하고, 다음 문제 해결 방식을 설계한다면 실제로 더 나아질 수 있을까요? **MASS(Multi-Agent Self-Supervision)** 는 이 질문을 다루는 자기 개선 방법입니다. 한 모델을 여러 역할의 에이전트로 나누어 협업하게 한 뒤, 그 협업 과정의 대화를 다시 같은 모델의 학습 데이터로 사용합니다. 여기서 **재귀적 자기 개선(Recursive Self-Improvement, RSI)** 이란 한 번 좋아진 모델이 다음 세대의 실행자·평가자·최적화자가 되어 개선 절차를 반복하는 것을 뜻합니다. [원문 §1–3](https://arxiv.org/html/2610.12176v1#S1)
