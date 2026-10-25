@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-26 **Review**: [\[Repo Review\] Memento — LLM 가중치 대신 경험을 축적하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/87) — 검토 대기 · PR #87 · `aef4d62`
 * 2026-10-25 **Review**: [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/86) — 검토 대기 · PR #86 · `0e04666`
 * 2026-10-25 **Review**: [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/85) — 검토 대기 · PR #85 · `ed78cda`
 * 2026-10-24 **Review**: [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/82) — 검토 대기 · PR #82 · `8967e6a`
