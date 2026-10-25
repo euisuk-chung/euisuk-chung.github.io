@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/86) — 검토 대기 · 모델 가중치를 고정한 채 실행 하네스를 대조 실험으로 개선하고 경험을 다음 과제로 이전하는 Harness²의 두 재귀·실험·한계를 원문 순서로 분석합니다.
 * [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/85) — 검토 대기 · MASS의 워크플로 검색과 협업 기록 학습을 따라가며, 두 주기의 자기 개선 결과·토큰 효율·평가 통계와 실제 검증 실패의 의미를 분석합니다.
 * [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/82) — 검토 대기 · 인간의 대화·추론과 13개 행동을 학습한 사용자 시뮬레이터 MIMESIS, 그리고 사후 코칭을 토큰 학습에 활용하는 CSD의 원리와 전이 실험을 분석합니다.
 * [\[Repo Review\] LLM Council — 여러 모델의 답변과 상호 평가를 함께 읽는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/81) — 검토 대기 · 여러 LLM의 병렬 답변·익명 평가·의장 종합이 React 화면과 단계별 SSE, JSON 저장으로 이어지는 과정을 추적하고 순위와 대화 상태의 한계를 분석합니다.
