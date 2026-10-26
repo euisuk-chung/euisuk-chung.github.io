@@ -93,6 +93,16 @@ visual_sources:
     caption: "Figure 9; Xu et al.; arXiv 2610.14224v1; CC BY 4.0; PDF 영역 크롭, 번역·수치 변경 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/doaXdf-2OvQ"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=doaXdf-2OvQ">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 LLM 에이전트가 일을 잘하는지는 모델의 지식만으로 결정되지 않습니다. 어떤 자료부터 읽는지, 언제 도구를 호출하는지, 작성한 파일을 다시 열어 검사하는지, 과거 경험을 어떻게 불러오는지가 결과를 바꿉니다. 이러한 실행 환경을 **하네스**(harness)라고 부릅니다. Harness²는 모델 가중치를 고정한 채 하네스를 수정하고, 수정 과정에서 얻은 경험을 다음 과제의 개선에 활용하는 연구입니다.
