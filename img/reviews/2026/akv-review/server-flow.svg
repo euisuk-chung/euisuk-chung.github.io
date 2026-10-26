@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="485" viewBox="0 0 360 485" role="img" aria-labelledby="title desc">
+<title id="title">AKV 서버의 메시지 지시에서 GPU KV까지</title><desc id="desc">메시지별 토큰 소유권을 추적하고 Drop과 Reposition을 컴파일합니다. 구조화된 캐시 키로 버전을 구분하고 필요한 KV만 재사용 또는 복구한 뒤 위치 변환과 attention을 수행합니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#375a7f"/></marker></defs>
+<rect width="360" height="485" rx="12" fill="#f6f8fb"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#152d46">
+<text x="180" y="25" font-size="17" font-weight="700">토큰 내용 + 사건 + 위치를 함께 추적</text>
+<rect x="20" y="43" width="320" height="55" rx="8" fill="#e5efff" stroke="#7191b8"/><text x="180" y="65" font-size="15" font-weight="700">Template provenance</text><text x="180" y="86" font-size="14">message ID → 실제 토큰 범위</text>
+<path d="M180 99 V116" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="121" width="320" height="55" rx="8" fill="#e5efff" stroke="#7191b8"/><text x="180" y="143" font-size="15" font-weight="700">ContextProgram / ContextLayout</text><text x="180" y="164" font-size="14">Drop 먼저 → Reposition · 가시성 기록</text>
+<path d="M180 177 V194" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="199" width="320" height="55" rx="8" fill="#fff2d9" stroke="#b29456"/><text x="180" y="221" font-size="15" font-weight="700">Structured Radix match</text><text x="180" y="242" font-size="14">같은 텍스트라도 캐시 버전 구분</text>
+<path d="M180 255 V272" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="277" width="320" height="62" rx="8" fill="#e4f4e9" stroke="#6d9d7c"/><text x="180" y="300" font-size="15" font-weight="700">Recovery + Occurrence plan</text><text x="180" y="322" font-size="14">필요 KV 복구 · 재사용 · 새 슬롯 배정</text>
+<path d="M180 340 V357" stroke="#375a7f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="362" width="320" height="70" rx="8" fill="#e4f4e9" stroke="#6d9d7c"/><text x="180" y="385" font-size="15" font-weight="700">GPU: KV 위치 변환 + Attention</text><text x="180" y="407" font-size="14">K: RoPE 위치 변환 / V: 복사</text><text x="180" y="424" font-size="13">원본 페이지와 대상 버전 소유권 분리</text>
+<text x="180" y="453" font-size="13">완료 후 cache publication · usage 집계</text>
+<text x="180" y="473" font-size="12">리뷰어 작성 · c567a429a058 · source-pinned</text>
+</g></svg>
