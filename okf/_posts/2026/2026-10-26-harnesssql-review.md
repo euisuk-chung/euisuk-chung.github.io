@@ -80,6 +80,16 @@ visual_sources:
     table: "8"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/PUIdIVQyZyg"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=PUIdIVQyZyg">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 데이터베이스에 “2023년에 구매한 고객은 몇 명인가요?”라고 질문한다고 생각해 보겠습니다. 정답 SQL을 바로 쓰려면 어떤 테이블에 구매 기록이 있는지, 고객 식별자가 무엇인지, 날짜와 취소 주문을 어떻게 처리하는지 알아야 합니다. 실제 SQL 에이전트는 테이블을 찾고, 스키마와 값을 살펴보고, 시험 쿼리의 오류를 읽은 뒤 수정합니다. HarnessSQL은 이러한 **탐색–실행–수정–제출 과정 자체를 학습 대상으로 삼는 연구**입니다.
