@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-10-27 **Review**: [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/90) — 검토 대기 · PR #90 · `b07f102`
+* 2026-10-27 **Review**: [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/90) — 검토 대기 · PR #90 · `5eb8c32`
 * 2026-10-27 **Review**: [\[Repo Review\] FDE Gym — 코드를 넘어 고객 문제의 해결을 평가하는 실행 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/89) — 검토 대기 · PR #89 · `900e139`
 * 2026-10-26 **Review**: [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/88) — 검토 대기 · PR #88 · `65f474c`
 * 2026-10-26 **Review**: [\[Repo Review\] Memento — LLM 가중치 대신 경험을 축적하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/87) — 검토 대기 · PR #87 · `aef4d62`
