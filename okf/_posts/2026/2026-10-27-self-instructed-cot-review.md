@@ -138,6 +138,16 @@ visual_sources:
       - 229
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/fLAzZuC6DZ4"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=fLAzZuC6DZ4">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 추론 모델에게 “생각하는 동안 특정 단어를 쓰지 마세요”라고 요청했는데도 모델이 그 단어를 계속 사용한다면, 모델에게 그런 능력이 없다고 판단해도 될까요? 이 논문은 **모델이 할 수 있는 일과, 평가 프롬프트가 실제로 끌어낸 일을 구분해야 한다**고 주장합니다. 사용자 메시지에만 제약을 넣는 기존 평가와 달리, 모델의 사고사슬(Chain of Thought, CoT) 안에 자기 지시를 두면 같은 모델의 텍스트 제약 준수율이 크게 달라집니다.
