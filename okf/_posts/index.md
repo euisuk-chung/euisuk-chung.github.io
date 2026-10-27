@@ -3,6 +3,8 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/92) — 검토 대기 · 과제 실행 기록에서 특화 하네스 계층을 진화시키는 OO-Harness를 분석하고, 상속·라우팅·기본 결과 재사용의 효과를 세 벤치마크의 지표와 조건에 따라 설명합니다.
+* [\[Repo Review\] GitMCP — 저장소 문서를 AI 도구로 제공하는 서버의 실제 흐름](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/91) — 검토 대기 · GitMCP의 URL 해석부터 문서 확보·AutoRAG 검색·캐시·응답까지 추적하고, README의 최신성·개인정보 표현과 구현의 차이를 구분합니다.
 * [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/90) — 검토 대기 · 자기 지시를 추론 안에 배치한 CoT 제어 평가를 살펴보고, 제약 준수·정답률·다중 턴 유지와 모니터 탐지율의 의미를 원문 실험 조건에 따라 구분합니다.
 * [\[Repo Review\] FDE Gym — 코드를 넘어 고객 문제의 해결을 평가하는 실행 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/89) — 검토 대기 · FDE Gym의 사례 버전 관리와 웹·runner·Python 하네스 흐름을 추적하고, 고객 대화·코딩 에이전트·운영 재생·개입 비용이 최종 평가로 이어지는 구조를 분석합니다.
 * [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/88) — 검토 대기 · 실제 데이터베이스에서 탐색·오류 복구·제출 궤적을 학습하는 HarnessSQL의 설계와 실험을 살펴보고, 공유 DB 평가와 새로운 환경으로의 전이를 구분합니다.

@@ -24,6 +24,8 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-10-28 **Review**: [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/92) — 검토 대기 · PR #92 · `79325aa`
+* 2026-10-28 **Review**: [\[Repo Review\] GitMCP — 저장소 문서를 AI 도구로 제공하는 서버의 실제 흐름](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/91) — 검토 대기 · PR #91 · `bcdf35d`
 * 2026-10-27 **Review**: [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/90) — 검토 대기 · PR #90 · `5eb8c32`
 * 2026-10-27 **Review**: [\[Repo Review\] FDE Gym — 코드를 넘어 고객 문제의 해결을 평가하는 실행 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/89) — 검토 대기 · PR #89 · `900e139`
 * 2026-10-26 **Review**: [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/88) — 검토 대기 · PR #88 · `65f474c`
