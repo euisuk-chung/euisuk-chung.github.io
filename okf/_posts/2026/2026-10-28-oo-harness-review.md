@@ -187,6 +187,16 @@ visual_sources:
     height: 433
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/XvD4sFgK6q4"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=XvD4sFgK6q4">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 같은 언어 모델이 어떤 과제에서는 잘 작동하고 다른 과제에서는 필요한 작업을 끝내지 못하는 이유가 모델의 능력에만 있을까요? 에이전트는 프롬프트, 도구, 문맥 관리, 종료 조건을 구현한 **하네스(harness)** 안에서 실행됩니다. 보고서를 만드는 과제에는 올바른 파일 형식이 중요하고, 고객 관리 시스템을 수정하는 과제에는 실제 쓰기 작업이 수행됐는지 확인하는 절차가 중요합니다. 모든 과제에 하나의 실행 방식을 적용하면 이런 요구가 충돌할 수 있습니다.
