@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] RSI-Anything — world model의 예측을 행동 선택과 자기개선으로 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/95) — 검토 대기 · RSI-Anything의 공통 실행기와 코드 수정·GUI 학습 흐름을 추적하고, 실험실·화학 도메인의 고정 추론을 구분해 공개 구현의 실제 범위를 살펴봅니다.
 * [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/94) — 검토 대기 · 에이전트의 활성 KV를 제어하는 drop·repos 연산과 AKV의 이력 기반 재사용·복원을 분석하고, 과제 점수·환산 비용·서빙 성능을 조건별로 해석합니다.
 * [\[Repo Review\] JevAgentHarness — 작은 결정 모델이 코딩 에이전트의 다음 LLM을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/93) — 검토 대기 · JevAgentHarness의 모델 라우팅·종료 재검사·임계값 조정·API 변환 흐름을 추적하고, 논문 결과와 프록시 실험 및 운영 경계를 구분합니다.
 * [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/92) — 검토 대기 · 과제 실행 기록에서 특화 하네스 계층을 진화시키는 OO-Harness를 분석하고, 상속·라우팅·기본 결과 재사용의 효과를 세 벤치마크의 지표와 조건에 따라 설명합니다.
