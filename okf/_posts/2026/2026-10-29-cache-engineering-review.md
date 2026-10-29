@@ -180,6 +180,16 @@ visual_sources:
     figure: 14
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/_7AY5-nxS7A"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=_7AY5-nxS7A">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 에이전트가 웹페이지를 검색하고 코드를 수정하는 과정은 질문과 답변 한 번으로 끝나지 않습니다. 추론, 도구 호출, 긴 도구 응답이 수십·수백 턴 쌓입니다. 언어 모델은 앞선 토큰을 다시 계산하지 않도록 **KV 캐시(Key-Value cache)**를 보관하지만, 긴 캐시를 매번 읽고 GPU 메모리에 유지하는 비용도 커집니다. 과거 대화를 요약하면 문맥은 짧아지지만, 앞부분이 바뀌어 남겨 둔 뒷부분의 캐시까지 다시 계산해야 할 수 있습니다.
