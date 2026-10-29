@@ -145,7 +145,7 @@ P=\frac{1}{K}\sum_{k=1}^{K}\big(A[\tau_k,k]-B_k\big),
 ```
 
 ```math
-I_k=\frac{1}{M_k}\sum_{0<t_m\leq\sigma_k}
+I_k=\frac{1}{M_k}\sum_{0\lt t_m\leq\sigma_k}
 \max\big(0,B_k-A[t_m,k]\big),\qquad
 F_k=\max\big(0,A[\tau_k,k]-A[T,k]\big),
 ```
