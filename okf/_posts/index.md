@@ -3,6 +3,8 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 검토 대기 · MemoryTax의 메모리·원문 검색 비교를 통해 모델 능력, 구축비, 캡션 정보 차이와 채점 조건이 에이전트 평가에 미치는 영향을 살펴봅니다.
+* [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 검토 대기 · decode의 모델·도구 루프에서 승인·샌드박스·컨텍스트·결과 회수까지 추적하며, 대화형 실행과 원격 무인 실행의 실제 경계를 살펴봅니다.
 * [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/96) — 검토 대기 · 자기진화 에이전트가 공유 프롬프트와 외부 기억을 갱신할 때 나타나는 학습·간섭·망각을 네 가지 업무 변화 실험과 가소성·안정성 지표로 분석합니다.
 * [\[Repo Review\] RSI-Anything — world model의 예측을 행동 선택과 자기개선으로 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/95) — 검토 대기 · RSI-Anything의 공통 실행기와 코드 수정·GUI 학습 흐름을 추적하고, 실험실·화학 도메인의 고정 추론을 구분해 공개 구현의 실제 범위를 살펴봅니다.
 * [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/94) — 검토 대기 · 에이전트의 활성 KV를 제어하는 drop·repos 연산과 AKV의 이력 기반 재사용·복원을 분석하고, 과제 점수·환산 비용·서빙 성능을 조건별로 해석합니다.
