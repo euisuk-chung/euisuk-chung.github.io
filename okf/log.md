@@ -26,7 +26,7 @@
 
 * 2026-10-31 **Review**: [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 검토 대기 · PR #98 · `637ae56`
 * 2026-10-31 **Review**: [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 검토 대기 · PR #97 · `f790645`
-* 2026-10-30 **Review**: [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/96) — 검토 대기 · PR #96 · `ff64463`
+* 2026-10-30 **Review**: [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/96) — 검토 대기 · PR #96 · `56f0a5e`
 * 2026-10-30 **Review**: [\[Repo Review\] RSI-Anything — world model의 예측을 행동 선택과 자기개선으로 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/95) — 검토 대기 · PR #95 · `93fbf53`
 * 2026-10-29 **Review**: [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/94) — 검토 대기 · PR #94 · `91d0079`
 * 2026-10-29 **Review**: [\[Repo Review\] JevAgentHarness — 작은 결정 모델이 코딩 에이전트의 다음 LLM을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/93) — 검토 대기 · PR #93 · `f83692f`
