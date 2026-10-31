@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-01 **Review**: [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/100) — 검토 대기 · PR #100 · `e91486f`
 * 2026-11-01 **Review**: [\[Repo Review\] Open Ontologies — 온톨로지 변경 계획과 검증 가능한 증거의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/99) — 검토 대기 · PR #99 · `aecdbd8`
 * 2026-10-31 **Review**: [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 검토 대기 · PR #98 · `5aba88c`
 * 2026-10-31 **Review**: [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 검토 대기 · PR #97 · `f790645`

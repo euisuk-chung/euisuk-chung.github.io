@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/100) — 검토 대기 · 기반 LLM을 동결한 채 과거 계획과 성공·실패 사례를 검색하고 사례 선택 정책을 학습하는 Memento의 수학적 구조와 심층 조사 평가 조건을 분석합니다.
 * [\[Repo Review\] Open Ontologies — 온톨로지 변경 계획과 검증 가능한 증거의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/99) — 검토 대기 · Open Ontologies의 변경 계획부터 적용·복구와 추론 증거 검사를 추적하고, exactMatch 검사와 호출자 승인 정책의 보장 범위를 코드로 분석합니다.
 * [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 검토 대기 · MemoryTax의 메모리·원문 검색 비교를 통해 모델 능력, 구축비, 캡션 정보 차이와 채점 조건이 에이전트 평가에 미치는 영향을 살펴봅니다.
 * [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 검토 대기 · decode의 모델·도구 루프에서 승인·샌드박스·컨텍스트·결과 회수까지 추적하며, 대화형 실행과 원격 무인 실행의 실제 경계를 살펴봅니다.
