@@ -70,6 +70,16 @@ visual_sources:
     caption: "원문 Figure 4, PDF 11쪽. 그림 영역 크롭, 내용과 패널 순서 변경 없음. CC BY 4.0."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/kUkRX8uAhpQ"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=kUkRX8uAhpQ">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 에이전트가 실패를 회고하여 새로운 규칙을 저장했다면, 다음에는 더 잘할 것이라고 기대하기 쉽습니다. 그러나 SQL 과제를 위해 만든 규칙이 API 사용 과제에 끼어들거나, 새 업무의 처리 절차가 이전 업무의 지침을 덮어쓴다면 어떨까요? **모델의 가중치를 바꾸지 않아도 에이전트는 이전에 익힌 행동을 잊을 수 있습니다.** 이 논문은 이 문제를 지속학습(continual learning)의 관점에서 측정합니다.
