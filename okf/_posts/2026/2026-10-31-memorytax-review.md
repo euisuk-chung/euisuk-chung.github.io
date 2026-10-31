@@ -56,6 +56,16 @@ visual_sources:
     caption: "표 전체 영역 크롭. 아래 Markdown 표는 Claude Opus 5.5 열을 원문 대조하여 전사. 원문 배포 조건: arXiv perpetual non-exclusive; CC 라이선스로 표시하지 않음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/xiDFmLjXFng"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=xiDFmLjXFng">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 사용자의 대화 이력을 기억하는 AI Agent를 만들 때에는 먼저 무엇을 저장할지 결정해야 합니다. 중요한 사실을 추출해 별도 메모리로 보관할 수도 있고, 원문을 그대로 둔 채 질문이 들어올 때마다 필요한 부분을 찾아 읽을 수도 있습니다. **MemoryTax는 모델이 강해져도 미리 설계한 메모리 시스템이 유리한지**를 묻는 짧은 실증 연구입니다. 여기서 메모리는 모델 가중치에 학습된 지식이 아니라, 대화 이후 별도 저장소에 남겨 다음 질문에 활용하는 정보를 뜻합니다.
