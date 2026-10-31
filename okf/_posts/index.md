@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] Open Ontologies — 온톨로지 변경 계획과 검증 가능한 증거의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/99) — 검토 대기 · Open Ontologies의 변경 계획부터 적용·복구와 추론 증거 검사를 추적하고, exactMatch 검사와 호출자 승인 정책의 보장 범위를 코드로 분석합니다.
 * [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 검토 대기 · MemoryTax의 메모리·원문 검색 비교를 통해 모델 능력, 구축비, 캡션 정보 차이와 채점 조건이 에이전트 평가에 미치는 영향을 살펴봅니다.
 * [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 검토 대기 · decode의 모델·도구 루프에서 승인·샌드박스·컨텍스트·결과 회수까지 추적하며, 대화형 실행과 원격 무인 실행의 실제 경계를 살펴봅니다.
 * [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/96) — 검토 대기 · 자기진화 에이전트가 공유 프롬프트와 외부 기억을 갱신할 때 나타나는 학습·간섭·망각을 네 가지 업무 변화 실험과 가소성·안정성 지표로 분석합니다.
