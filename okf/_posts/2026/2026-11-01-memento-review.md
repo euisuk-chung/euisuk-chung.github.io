@@ -90,6 +90,16 @@ visual_sources:
     translated: false
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/CfXrXrg4Gsc"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=CfXrXrg4Gsc">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 Memento는 배포된 대규모 언어 모델(Large Language Model, LLM) 에이전트가 경험을 쌓으며 개선되는 방법을 다룹니다. Huichi Zhou 등의 질문은 명확합니다. 새로운 경험이 생길 때마다 기반 LLM을 다시 미세조정하지 않고도 에이전트의 문제 해결 방식을 바꿀 수 있을까요? 저자들은 과거의 문제·계획·성공 여부를 외부 사례 저장소에 남기고, 다음 문제를 계획할 때 이를 검색하는 사례 기반 추론(Case-Based Reasoning, CBR)을 제안합니다. 이 리뷰는 2025년 8월 25일 수정된 **arXiv:2508.16153v2**의 본문과 부록을 기준으로 합니다. [논문 v2](https://arxiv.org/html/2508.16153v2), [서지 정보](https://arxiv.org/abs/2508.16153v2)
