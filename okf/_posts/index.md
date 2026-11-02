@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/103) — 검토 대기 · 연구 에이전트가 등록한 실험과 확률·순위를 고정한 뒤 GPU 재실행, 모델 감사, 공개 데이터 집계로 연구 판단을 평가하는 rTaste의 구현과 재현 경계를 추적합니다.
 * [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/102) — 검토 대기 · 잠재 벡터와 텍스트를 오가는 HybridAgent의 구조, 자기 조건화 학습과 강화학습, 작업 메모리 보존 및 성능·효율·감사 가능성 평가를 분석합니다.
 * [\[Repo Review\] MemoryTax: 에이전트 기억 평가의 데이터·프롬프트·판정 경계 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/101) — 검토 대기 · MemoryTax의 고정 데이터·표본 준비, QA 메시지 생성과 judge 파싱을 추적하고, 아직 공개되지 않은 검색·API 계측·평가 실행기의 경계를 분석합니다.
 * [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/100) — 검토 대기 · 기반 LLM을 동결한 채 과거 계획과 성공·실패 사례를 검색하고 사례 선택 정책을 학습하는 Memento의 수학적 구조와 심층 조사 평가 조건을 분석합니다.

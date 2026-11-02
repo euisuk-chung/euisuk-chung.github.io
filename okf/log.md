@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-03 **Review**: [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/103) — 검토 대기 · PR #103 · `3f7ec89`
 * 2026-11-02 **Review**: [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/102) — 검토 대기 · PR #102 · `124f630`
 * 2026-11-02 **Review**: [\[Repo Review\] MemoryTax: 에이전트 기억 평가의 데이터·프롬프트·판정 경계 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/101) — 검토 대기 · PR #101 · `71c73ce`
 * 2026-11-01 **Review**: [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/100) — 검토 대기 · PR #100 · `49f6c7c`
