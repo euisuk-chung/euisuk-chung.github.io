@@ -105,6 +105,16 @@ visual_sources:
     figure: 12
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/4xcFUXi94tg"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=4xcFUXi94tg">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 **Hybrid Reasoning Agents**는 언어 모델이 내부 계산은 연속적인 잠재 표현으로 수행하면서 검색·코드 실행·사용자에게 보여 줄 판단은 텍스트로 표현하도록 만드는 연구입니다. 기존 텍스트 에이전트는 모든 중간 사고를 토큰으로 생성해야 하고, 잠재 추론 모델은 외부 도구를 호출하거나 내부 계산을 살펴보기 어렵다는 문제에서 출발합니다. 저자들은 두 표현을 하나의 자기회귀 생성 과정 안에서 전환하는 **HybridAgent**를 제안합니다. 핵심 장치는 마지막 은닉 상태를 입력 임베딩 공간으로 되돌리는 **HybridLink**, 여러 턴에 걸쳐 텍스트·잠재 상태·도구 응답을 보존하는 **continuous working memory**, 이를 학습하는 **HybridSFT와 HybridRL**입니다. [원문 §1–4](https://arxiv.org/html/2610.18861v1#S1)
