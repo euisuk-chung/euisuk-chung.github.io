@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · 검증된 실행 재작성과 critic을 이어받는 강화학습을 결합한 Terminal-RSI의 수식, 보상 보정, 다섯 단계 평가와 전체 부록의 근거를 분석합니다.
 * [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/104) — 검토 대기 · 생성 메커니즘과 정본 상태에서 불완전한 관측 파일·분석 질문·평가 기준을 함께 합성하는 Data World의 설계와 세계 분리 강화학습 효용을 분석합니다.
 * [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/103) — 검토 대기 · 연구 에이전트가 등록한 실험과 확률·순위를 고정한 뒤 GPU 재실행, 모델 감사, 공개 데이터 집계로 연구 판단을 평가하는 rTaste의 구현과 재현 경계를 추적합니다.
 * [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/102) — 검토 대기 · 잠재 벡터와 텍스트를 오가는 HybridAgent의 구조, 자기 조건화 학습과 강화학습, 작업 메모리 보존 및 성능·효율·감사 가능성 평가를 분석합니다.
