@@ -105,6 +105,16 @@ visual_sources:
     caption: "네 학습 곡선 패널 전체 영역 비례 크롭, 축·제목 보존, 번역·재배열 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/9UMZ08jQlgc"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=9UMZ08jQlgc">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 **Data World: Scaling Data Environments from Scratch**는 데이터 분석 에이전트의 학습 환경과 평가 기준을 함께 합성하는 연구입니다. 데이터 에이전트는 CSV·Excel·로그처럼 서로 다른 파일을 코드로 조사하고, 수치를 계산한 뒤 그 결과로 설명 가능한 결론을 작성합니다. 이때 필요한 것은 파일의 양뿐 아니라, 어떤 결론이 자료로 뒷받침되는지 판정할 수 있는 감독 신호입니다. 저자들은 이미 존재하는 자료에서 질문과 모범 통찰을 찾아내는 대신, **자료를 발생시키는 세계의 메커니즘을 먼저 명세하고 그로부터 관측 파일·질문·평가 기준을 생성**합니다. 이 리뷰는 [arXiv:2610.21656v1](https://arxiv.org/abs/2610.21656v1), 2026년 10월 15일 제출본의 본문과 부록 A를 기준으로 합니다.
