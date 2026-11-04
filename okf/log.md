@@ -25,7 +25,7 @@
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
 * 2026-11-04 **Review**: [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/106) — 검토 대기 · PR #106 · `af77726`
-* 2026-11-04 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · PR #105 · `6703c0a`
+* 2026-11-04 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · PR #105 · `214c543`
 * 2026-11-03 **Review**: [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/104) — 검토 대기 · PR #104 · `e35730d`
 * 2026-11-03 **Review**: [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/103) — 검토 대기 · PR #103 · `3f7ec89`
 * 2026-11-02 **Review**: [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/102) — 검토 대기 · PR #102 · `124f630`
