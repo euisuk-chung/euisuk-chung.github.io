@@ -129,6 +129,16 @@ visual_sources:
       - 539
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/oh4OkSZlkgA"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=oh4OkSZlkgA">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 Terminal-RSI는 터미널에서 명령을 실행하는 언어 모델 에이전트가 **성공한 실행을 다시 학습하는 과정**과 **검증 보상으로 정책을 개선하는 과정**을 번갈아 수행하도록 구성한 연구입니다. Junyao Yang 외 8명의 논문이며, 이 리뷰는 최초 제출일인 2026년 10월 15일과 구분하여 **2026년 10월 30일 수정된 arXiv v3**를 분석합니다. 원문은 [버전 고정 HTML](https://arxiv.org/html/2610.22192v3), [PDF](https://arxiv.org/pdf/2610.22192v3), [서지·버전 이력](https://arxiv.org/abs/2610.22192v3)에서 확인할 수 있습니다. DOI는 출판 논문 DOI가 아니라 arXiv 식별자인 [10.48550/arXiv.2610.22192](https://doi.org/10.48550/arXiv.2610.22192)입니다.
