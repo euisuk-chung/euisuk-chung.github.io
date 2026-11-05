@@ -194,6 +194,16 @@ visual_sources:
     sha256: "49900fcf296e41e78c1a5eafed6ce599bc26da4d77980d699eaa0413076741c8"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/scpUVlUjeLA"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=scpUVlUjeLA">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 코딩 에이전트가 저장소를 수정했더라도, 최종 출력이 패치가 아닌 설명문이라면 실제 문제 해결로 인정받지 못할 수 있습니다. 이처럼 에이전트의 성능은 언어 모델의 능력뿐 아니라 관찰할 문맥, 도구 실행, 피드백, 종료를 관리하는 **하니스(harness)**에도 좌우됩니다. *Self-Evolving Coding Agents via Harness-Policy Optimization*은 현재 정책 모델이 자신의 실패를 분석하여 하니스를 수정하고, 선택된 하니스 아래에서 강화학습한 다음, 남아 있는 실패를 다음 탐색 대상으로 삼는 Self-HPO를 제안합니다. 이 리뷰는 [arXiv:2610.22791v1 원문](https://arxiv.org/abs/2610.22791v1)의 본문과 부록을 분석합니다.
