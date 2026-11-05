@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-05 **Review**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 검토 대기 · PR #107 · `d38e852`
+* 2026-11-05 **Review**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 검토 대기 · PR #107 · `0e967d7`
 * 2026-11-04 **Review**: [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/106) — 검토 대기 · PR #106 · `af77726`
 * 2026-11-04 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · PR #105 · `214c543`
 * 2026-11-03 **Review**: [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/104) — 검토 대기 · PR #104 · `e35730d`
