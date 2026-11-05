@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 검토 대기 · OpenLIT의 Python 계측, Go OTLP 수신·ClickHouse 조회, 코딩 에이전트 훅과 평가·가드레일 흐름을 고정 커밋의 코드로 추적합니다.
 * [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 검토 대기 · 자신의 실패를 분석해 하니스를 제안하고 강화학습으로 정책을 갱신하는 Self-HPO의 교대 최적화, 코딩 벤치마크 평가와 제출 제어 사례를 살펴봅니다.
 * [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/106) — 검토 대기 · 가중치를 읽고 직접 수정한 여덟 실험의 기록과 코드를 따라가며 외부 실행기, Qwen 반복 완화, 가중치 복원 및 평가 조건의 경계를 분석합니다.
 * [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · 검증된 실행 재작성과 critic을 이어받는 강화학습을 결합한 Terminal-RSI의 수식, 보상 보정, 다섯 단계 평가와 전체 부록의 근거를 분석합니다.

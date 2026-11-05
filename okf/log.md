@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-06 **Review**: [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 검토 대기 · PR #108 · `dba6725`
 * 2026-11-05 **Review**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 검토 대기 · PR #107 · `0e967d7`
 * 2026-11-04 **Review**: [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/106) — 검토 대기 · PR #106 · `af77726`
 * 2026-11-04 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · PR #105 · `214c543`
