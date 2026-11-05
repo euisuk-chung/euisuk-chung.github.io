@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="448" viewBox="0 0 440 448" role="img" aria-labelledby="title desc"><title id="title">Codex 훅에서 세션 trace까지</title><desc id="desc">훅 JSON과 sessionstate를 adapter가 사용해 session, tool call, LLM turn, event를 정규화합니다. emitter가 세션과 vendor로 정한 Trace ID를 공유하는 자식 span을 OTLP로 보냅니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#475569"/></marker></defs>
+<rect width="440" height="448" rx="16" fill="#f8fafc"/>
+<text x="220" y="32" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Codex 훅에서 세션 trace까지</text>
+<rect x="24" y="54" width="186" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="117.0" y="79.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">훅 JSON</text>
+<text x="117.0" y="103.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">stdin</text>
+<rect x="230" y="54" width="186" height="60" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+<text x="323.0" y="79.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">sessionstate</text>
+<text x="323.0" y="103.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">로컬 JSON</text>
+<rect x="24" y="150" width="392" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="220.0" y="175.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">Codex adapter</text>
+<text x="220.0" y="199.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">tool 즉시 · turn은 Stop에서</text>
+<rect x="24" y="248" width="392" height="60" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+<text x="220.0" y="273.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">OTLP emitter</text>
+<text x="220.0" y="297.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">세션·vendor → 공통 Trace ID</text>
+<rect x="24" y="346" width="392" height="48" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+<text x="220.0" y="377.0" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="20">자식 span → OTLP 수신기</text>
+<path d="M117 114V132H195V148" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M323 114V132H245V148" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M220 210V246" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M220 308V344" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="220" y="416" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="18">EmitEvent도 짧은 자식 span 생성</text>
+<text x="220" y="437" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="18">본문 capture 기본 full · 전송 실패 가능</text>
+</svg>
