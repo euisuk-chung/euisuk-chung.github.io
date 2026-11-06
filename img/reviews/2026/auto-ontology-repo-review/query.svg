@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="480" viewBox="0 0 440 480" role="img" aria-labelledby="title desc">
+<title id="title">기본 계산 질의 경로</title><desc id="desc">질문과 의미 검색 문맥으로 SQL을 만들고 정적 및 의도 검사를 거칩니다. 사전 검사는 선택적이고 실행 오류는 재작성으로 돌아갑니다. 반환 SQL이 실행을 보장하지 않는 최종 fallback은 본문에 설명합니다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker></defs>
+<rect width="440" height="480" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+<rect x="30" y="12" width="370" height="58" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="215.0" y="38.0" font-size="21" font-weight="600" fill="#0f172a">질문 → 의도 · 엔터티</text>
+<text x="215.0" y="62.0" font-size="17" font-weight="400" fill="#334155">의미 검색 → 후보 · 조인 문맥</text>
+<path d="M215 70 L215 89" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="92" width="370" height="52" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="215.0" y="125.0" font-size="21" font-weight="600" fill="#0f172a">LLM SQL 생성</text>
+<path d="M215 144 L215 163" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="166" width="370" height="70" rx="12" fill="#fef3c7" stroke="#94a3b8"/>
+<text x="215.0" y="198.0" font-size="21" font-weight="600" fill="#0f172a">정적 검사 → 의도 검사</text>
+<text x="215.0" y="222.0" font-size="17" font-weight="400" fill="#334155">의도 모델 예외·None이면 허용</text>
+<path d="M215 236 L215 255" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="258" width="370" height="58" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="215.0" y="284.0" font-size="21" font-weight="600" fill="#0f172a">선택적 DB 사전 검사</text>
+<text x="215.0" y="308.0" font-size="17" font-weight="400" fill="#334155">값 · 조인 · JSONB 경로</text>
+<path d="M215 316 L215 335" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="338" width="370" height="58" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="215.0" y="364.0" font-size="21" font-weight="600" fill="#0f172a">소유 커넥터에서 DB 실행</text>
+<text x="215.0" y="388.0" font-size="17" font-weight="400" fill="#334155">오류·빈 결과에 따라 재작성</text>
+<path d="M400 367 L423 367 L423 118 L400 118" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M215 396 L215 415" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="418" width="370" height="50" rx="12" fill="#dcfce7" stroke="#94a3b8"/>
+<text x="215.0" y="450.0" font-size="21" font-weight="600" fill="#0f172a">답변 · SQL · 행 · 단계 기록</text>
+</g></svg>

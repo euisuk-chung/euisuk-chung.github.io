@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="480" viewBox="0 0 440 480" role="img" aria-labelledby="title desc">
+<title id="title">카탈로그 수집과 의미 컴파일</title><desc id="desc">인제스트는 메타데이터와 검색 벡터를 저장합니다. 별도 컴파일은 Term과 열 속성을 생성하고 관계와 계산식을 보강합니다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker></defs>
+<rect width="440" height="480" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+<rect x="40" y="12" width="360" height="58" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="220.0" y="38.0" font-size="21" font-weight="600" fill="#0f172a">소스 DB 메타데이터</text>
+<text x="220.0" y="62.0" font-size="17" font-weight="400" fill="#334155">커넥터로 스키마 추출</text>
+<path d="M220 70 L220 92" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="95" width="360" height="62" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="220.0" y="123.0" font-size="21" font-weight="600" fill="#0f172a">카탈로그 저장 · 임베딩</text>
+<text x="220.0" y="147.0" font-size="17" font-weight="400" fill="#334155">첫 유효 청크에서 벡터 초기화</text>
+<path d="M220 157 L220 182" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="330" y="178" font-size="16" font-weight="400" fill="#475569">별도 컴파일</text>
+<rect x="40" y="187" width="360" height="76" rx="12" fill="#fef3c7" stroke="#94a3b8"/>
+<text x="220.0" y="222.0" font-size="21" font-weight="600" fill="#0f172a">열 샘플 · 외래 키 후보</text>
+<text x="220.0" y="246.0" font-size="17" font-weight="400" fill="#334155">LLM으로 용어와 열 배정 생성</text>
+<path d="M220 263 L220 286" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="289" width="360" height="70" rx="12" fill="#dcfce7" stroke="#94a3b8"/>
+<text x="220.0" y="321.0" font-size="21" font-weight="600" fill="#0f172a">Term · 열 속성 저장</text>
+<text x="220.0" y="345.0" font-size="17" font-weight="400" fill="#334155">순서 조정 후 용어별 임베딩</text>
+<path d="M220 359 L220 382" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="385" width="360" height="72" rx="12" fill="#e0f2fe" stroke="#94a3b8"/>
+<text x="220.0" y="420.0" font-size="21" font-weight="600" fill="#0f172a">관계 · SQL 계산식 보강</text>
+<text x="220.0" y="444.0" font-size="17" font-weight="400" fill="#334155">의미 FK → 쿼리 이력 → 브리지</text>
+<text x="220" y="475" font-size="16" font-weight="400" fill="#475569">취소 시 후속 보강 생략 · 본문 조건 참고</text>
+</g></svg>
