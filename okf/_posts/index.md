@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 검토 대기 · 고정 모델이 ARC-AGI-3 하네스를 구성하고 두 번 수정한 27개 계보를 통해 개발 성능과 수정에 쓰지 않은 게임으로의 전이, 비용, 수정 과정의 신뢰도를 분석합니다.
 * [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/109) — 검토 대기 · 희소화한 MLP 뉴런과 transcoder를 재구성·예측 보존·개념 분리·Jacobian·초기화 안정성으로 비교하고, 뉴런 특징과 소수 뉴런 조합의 의미를 살펴봅니다.
 * [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 검토 대기 · OpenLIT의 Python 계측, Go OTLP 수신·ClickHouse 조회, 코딩 에이전트 훅과 평가·가드레일 흐름을 고정 커밋의 코드로 추적합니다.
 * [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 검토 대기 · 자신의 실패를 분석해 하니스를 제안하고 강화학습으로 정책을 갱신하는 Self-HPO의 교대 최적화, 코딩 벤치마크 평가와 제출 제어 사례를 살펴봅니다.
