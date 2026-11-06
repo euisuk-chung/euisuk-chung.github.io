@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/111) — 검토 대기 · NVIDIA Auto Ontology의 메타데이터 수집·의미 컴파일부터 자연어 SQL 생성·검증·실행과 MCP 연결까지 추적하고 인증·준비 상태·실패 처리의 실제 경계를 분석합니다.
 * [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 검토 대기 · 고정 모델이 ARC-AGI-3 하네스를 구성하고 두 번 수정한 27개 계보를 통해 개발 성능과 수정에 쓰지 않은 게임으로의 전이, 비용, 수정 과정의 신뢰도를 분석합니다.
 * [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/109) — 검토 대기 · 희소화한 MLP 뉴런과 transcoder를 재구성·예측 보존·개념 분리·Jacobian·초기화 안정성으로 비교하고, 뉴런 특징과 소수 뉴런 조합의 의미를 살펴봅니다.
 * [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 검토 대기 · OpenLIT의 Python 계측, Go OTLP 수신·ClickHouse 조회, 코딩 에이전트 훅과 평가·가드레일 흐름을 고정 커밋의 코드로 추적합니다.

@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-07 **Review**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/111) — 검토 대기 · PR #111 · `f49eca0`
 * 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 검토 대기 · PR #110 · `5680b8b`
 * 2026-11-06 **Review**: [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/109) — 검토 대기 · PR #109 · `87dcb7e`
 * 2026-11-06 **Review**: [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 검토 대기 · PR #108 · `dba6725`
