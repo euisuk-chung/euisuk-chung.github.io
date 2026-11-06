@@ -101,6 +101,16 @@ visual_sources:
     caption: "arXiv:2610.24521v1, Figure 46, PDF p.56; PDF 영역 크롭, 번역·재배열 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/rPYT2sC_pOs"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=rPYT2sC_pOs">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 **Transcoder가 찾아낸 해석 가능한 특징 가운데 얼마나 많은 부분이 원래 MLP 뉴런에 이미 존재할까요?** Stepan Shabalin과 Mateusz Piotrowski의 이 논문은 Transformer 언어 모델의 다층 퍼셉트론(MLP)을 희소한 특징 사전으로 바꾸어 분석하는 관행을, 원래 뉴런을 적절히 가공한 기준선과 비교합니다. 분석 대상은 [arXiv:2610.24521v1](https://arxiv.org/abs/2610.24521v1)이며, 아래 절·그림·표 번호는 이 버전을 따릅니다. 주된 비교는 Gemma·Qwen·Llama 계열의 공개 transcoder 13개를 대상으로 하며, MoE와 층간 transcoder 등은 부록의 예비 조사로 확장합니다.
