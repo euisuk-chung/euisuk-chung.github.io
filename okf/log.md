@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-08 **Review**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/113) — 검토 대기 · PR #113 · `33f529f`
+* 2026-11-08 **Review**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/113) — 병합 완료 · PR #113 · `33f529f`
 * 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/112) — 병합 완료 · PR #112 · `0be828c`
 * 2026-11-07 **Review**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/111) — 병합 완료 · PR #111 · `f49eca0`
 * 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 병합 완료 · PR #110 · `5680b8b`
@@ -110,6 +110,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-08 **Creation**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](_posts/2026/2026-11-08-raw-rag-review.md) — `b1862d5`
 * 2026-11-07 **Update**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](_posts/2026/2026-11-07-autonomous-harness-adaptation-review.md) — `244f299`
 * 2026-11-07 **Creation**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](_posts/2026/2026-11-07-auto-ontology-repo-review.md) — `968f1dc`
 * 2026-11-07 **Creation**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](_posts/2026/2026-11-07-autonomous-harness-adaptation-review.md) — `48bcd23`
