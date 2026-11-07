@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-08 **Review**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/113) — 검토 대기 · PR #113 · `33f529f`
 * 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/112) — 병합 완료 · PR #112 · `0be828c`
 * 2026-11-07 **Review**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/111) — 병합 완료 · PR #111 · `f49eca0`
 * 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 병합 완료 · PR #110 · `5680b8b`
