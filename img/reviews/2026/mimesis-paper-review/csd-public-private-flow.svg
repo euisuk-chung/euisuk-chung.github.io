@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="490" viewBox="0 0 360 490" role="img" aria-labelledby="title desc">
+<title id="title">공개 대화와 훈련 전용 사후 코칭의 경계</title>
+<desc id="desc">공개 이력으로 생성한 에이전트 답변에 시뮬레이터가 반응합니다. 공개 다음 발화는 대화를 이어 가고 생성된 비공개 추론과 후속 발화는 코치와 teacher를 거쳐 훈련 가중치만 제공합니다. 배포 에이전트는 공개 이력만 사용합니다.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#475569" stroke-width="1.4"/></marker></defs>
+<rect width="360" height="490" fill="#fff"/>
+<g font-family="Arial, sans-serif" font-size="14" fill="#172033" text-anchor="middle">
+<rect x="24" y="15" width="312" height="42" rx="8" fill="#eef6ff" stroke="#2563eb"/><text x="180" y="41">공개 대화 이력 H</text>
+<rect x="24" y="78" width="312" height="43" rx="8" fill="#eef6ff" stroke="#2563eb"/><text x="180" y="104">에이전트 → 응답 y 생성</text>
+<rect x="24" y="143" width="312" height="43" rx="8" fill="#f2f0ff" stroke="#6d28d9"/><text x="180" y="169">고정된 사용자 시뮬레이터</text>
+<rect x="18" y="210" width="150" height="49" rx="8" fill="#eef6ff" stroke="#2563eb"/><text x="93" y="231">공개 다음 발화 x</text><text x="93" y="249" font-size="12">대화 이력에 추가</text>
+<rect x="191" y="210" width="151" height="49" rx="8" fill="#fff5ef" stroke="#c2410c" stroke-dasharray="4 3"/><text x="266" y="230">생성된 비공개 z</text><text x="266" y="249" font-size="12">+ 후속 반응 x</text>
+<rect x="191" y="280" width="151" height="42" rx="8" fill="#fff5ef" stroke="#c2410c"/><text x="266" y="306">코치 → 사후 노트 h</text>
+<rect x="191" y="345" width="151" height="52" rx="8" fill="#fff5ef" stroke="#c2410c"/><text x="266" y="366">Teacher: H + h</text><text x="266" y="386" font-size="12">같은 응답 y 재점수</text>
+<rect x="18" y="345" width="150" height="52" rx="8" fill="#f0fdf4" stroke="#15803d"/><text x="93" y="366">Student: H만 사용</text><text x="93" y="386" font-size="12">토큰 가중 손실로 학습</text>
+<text x="93" y="296" font-size="12" fill="#2563eb">대화는 공개 정보로 진행</text>
+<text x="180" y="424" font-size="12" fill="#c2410c">주황색 경로는 훈련 전용 · 역전파 차단</text>
+<rect x="18" y="442" width="324" height="33" rx="7" fill="#f0fdf4" stroke="#15803d"/><text x="180" y="464">배포: 공개 H만 사용 · z와 h 없음</text>
+</g>
+<g fill="none" stroke="#475569" stroke-width="1.4" marker-end="url(#arrow)">
+<path d="M180 57V75"/><path d="M180 121V140"/><path d="M119 186V198H93V207"/><path d="M242 186V198H266V207"/><path d="M266 259V277"/><path d="M266 322V342"/><path d="M191 371H172" stroke-dasharray="4 3"/><path d="M93 397V416H18V458"/>
+</g>
+</svg>
