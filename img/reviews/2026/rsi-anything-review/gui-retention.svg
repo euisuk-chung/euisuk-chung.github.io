@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="490" viewBox="0 0 420 490" role="img" aria-labelledby="title desc">
+<title id="title">GUI의 학습과 승격</title>
+<desc id="desc">두 generation을 수행한 뒤 테스트합니다</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#475569"/></marker></defs>
+<rect width="420" height="490" rx="16" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+<text x="210" y="32" font-size="21" font-weight="700" fill="#0f172a">GUI의 학습과 승격</text>
+<text x="210" y="56" font-size="15" fill="#475569">두 generation을 수행한 뒤 테스트합니다</text>
+<rect x="28" y="76" width="364" height="58" rx="10" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="210" y="100" font-size="18" font-weight="650" fill="#0f172a">현재 policy · world로 경험 수집</text>
+<text x="210" y="121" font-size="15.5" fill="#334155">실제 브라우저 전이와 학습 피드백</text>
+<path d="M210 135 V147" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="28" y="151" width="364" height="58" rx="10" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="210" y="175" font-size="18" font-weight="650" fill="#0f172a">정책 SFT + world model 갱신</text>
+<text x="210" y="196" font-size="15.5" fill="#334155">성공 행동 · replay → 새 후보 pair</text>
+<path d="M210 210 V222" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="28" y="226" width="364" height="58" rx="10" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="210" y="250" font-size="18" font-weight="650" fill="#0f172a">개발셋에서 controller 선택</text>
+<text x="210" y="271" font-size="15.5" fill="#334155">현재 pair와 새 pair를 비교</text>
+<path d="M210 285 V297" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="28" y="301" width="364" height="58" rx="10" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="210" y="325" font-size="18" font-weight="650" fill="#0f172a">성공률 향상 + 유효 비용 조건</text>
+<text x="210" y="346" font-size="15.5" fill="#334155">통과하면 승격 · 아니면 현재 버전 유지</text>
+<path d="M210 360 V372" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="28" y="376" width="364" height="58" rx="10" fill="#ecfdf5" stroke="#94a3b8"/>
+<text x="210" y="400" font-size="18" font-weight="650" fill="#0f172a">두 generation 버전 고정</text>
+<text x="210" y="421" font-size="15.5" fill="#334155">old / new policy × world 교차 테스트</text>
+<text x="210" y="472" font-size="14.5" fill="#475569">보고된 selected controller는 alpha = 0입니다</text></g></svg>
