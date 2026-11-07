@@ -24,66 +24,66 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-07 **Review**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/111) — 검토 대기 · PR #111 · `f49eca0`
-* 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 검토 대기 · PR #110 · `5680b8b`
-* 2026-11-06 **Review**: [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/109) — 검토 대기 · PR #109 · `87dcb7e`
-* 2026-11-06 **Review**: [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 검토 대기 · PR #108 · `dba6725`
-* 2026-11-05 **Review**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 검토 대기 · PR #107 · `0e967d7`
-* 2026-11-04 **Review**: [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/106) — 검토 대기 · PR #106 · `af77726`
-* 2026-11-04 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 검토 대기 · PR #105 · `214c543`
-* 2026-11-03 **Review**: [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/104) — 검토 대기 · PR #104 · `e35730d`
-* 2026-11-03 **Review**: [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/103) — 검토 대기 · PR #103 · `3f7ec89`
-* 2026-11-02 **Review**: [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/102) — 검토 대기 · PR #102 · `124f630`
-* 2026-11-02 **Review**: [\[Repo Review\] MemoryTax: 에이전트 기억 평가의 데이터·프롬프트·판정 경계 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/101) — 검토 대기 · PR #101 · `71c73ce`
-* 2026-11-01 **Review**: [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/100) — 검토 대기 · PR #100 · `49f6c7c`
-* 2026-11-01 **Review**: [\[Repo Review\] Open Ontologies — 온톨로지 변경 계획과 검증 가능한 증거의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/99) — 검토 대기 · PR #99 · `aecdbd8`
-* 2026-10-31 **Review**: [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 검토 대기 · PR #98 · `5aba88c`
-* 2026-10-31 **Review**: [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 검토 대기 · PR #97 · `f790645`
-* 2026-10-30 **Review**: [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/96) — 검토 대기 · PR #96 · `56f0a5e`
-* 2026-10-30 **Review**: [\[Repo Review\] RSI-Anything — world model의 예측을 행동 선택과 자기개선으로 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/95) — 검토 대기 · PR #95 · `93fbf53`
-* 2026-10-29 **Review**: [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/94) — 검토 대기 · PR #94 · `91d0079`
-* 2026-10-29 **Review**: [\[Repo Review\] JevAgentHarness — 작은 결정 모델이 코딩 에이전트의 다음 LLM을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/93) — 검토 대기 · PR #93 · `f83692f`
-* 2026-10-28 **Review**: [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/92) — 검토 대기 · PR #92 · `bd05797`
-* 2026-10-28 **Review**: [\[Repo Review\] GitMCP — 저장소 문서를 AI 도구로 제공하는 서버의 실제 흐름](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/91) — 검토 대기 · PR #91 · `bcdf35d`
-* 2026-10-27 **Review**: [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/90) — 검토 대기 · PR #90 · `5eb8c32`
-* 2026-10-27 **Review**: [\[Repo Review\] FDE Gym — 코드를 넘어 고객 문제의 해결을 평가하는 실행 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/89) — 검토 대기 · PR #89 · `900e139`
-* 2026-10-26 **Review**: [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/88) — 검토 대기 · PR #88 · `65f474c`
-* 2026-10-26 **Review**: [\[Repo Review\] Memento — LLM 가중치 대신 경험을 축적하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/87) — 검토 대기 · PR #87 · `aef4d62`
-* 2026-10-25 **Review**: [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/86) — 검토 대기 · PR #86 · `a9ccf71`
-* 2026-10-25 **Review**: [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/85) — 검토 대기 · PR #85 · `ed78cda`
-* 2026-10-24 **Review**: [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/82) — 검토 대기 · PR #82 · `8967e6a`
-* 2026-10-23 **Review**: [\[Repo Review\] LLM Council — 여러 모델의 답변과 상호 평가를 함께 읽는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/81) — 검토 대기 · PR #81 · `704b695`
-* 2026-10-23 **Review**: [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/80) — 검토 대기 · PR #80 · `70511ed`
-* 2026-10-23 **Review**: [\[Repo Review\] AKV — 에이전트가 KV 캐시를 직접 관리하는 구조와 SGLang 실행 경로](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/79) — 검토 대기 · PR #79 · `1a20fe8`
-* 2026-10-16 **Review**: [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/78) — 검토 대기 · PR #78 · `ec29960`
-* 2026-10-15 **Review**: [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/77) — 검토 대기 · PR #77 · `2b7154b`
-* 2026-10-14 **Review**: [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 검토 대기 · PR #76 · `ddf3e1a`
-* 2026-10-13 **Review**: [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 검토 대기 · PR #75 · `91cfc18`
-* 2026-10-13 **Review**: [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/74) — 검토 대기 · PR #74 · `d4a3a46`
-* 2026-10-12 **Review**: [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 검토 대기 · PR #72 · `de227c2`
-* 2026-10-11 **Review**: [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 검토 대기 · PR #71 · `db00eb4`
-* 2026-10-10 **Review**: [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/70) — 검토 대기 · PR #70 · `ce3a5a6`
-* 2026-10-09 **Review**: [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/69) — 검토 대기 · PR #69 · `79c8b90`
-* 2026-10-08 **Review**: [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/68) — 검토 대기 · PR #68 · `799e85f`
-* 2026-10-07 **Review**: [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/67) — 검토 대기 · PR #67 · `2f6d27c`
-* 2026-10-07 **Review**: [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/66) — 검토 대기 · PR #66 · `36a0738`
-* 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 검토 대기 · PR #65 · `10dca55`
-* 2026-10-06 **Review**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 검토 대기 · PR #64 · `07ca00d`
-* 2026-10-05 **Review**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 검토 대기 · PR #63 · `0aa9200`
-* 2026-10-05 **Review**: [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 검토 대기 · PR #62 · `36a3b42`
-* 2026-10-04 **Review**: [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 검토 대기 · PR #61 · `e23e829`
-* 2026-10-04 **Review**: [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/60) — 검토 대기 · PR #60 · `8ec1288`
-* 2026-10-03 **Review**: [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/59) — 검토 대기 · PR #59 · `e89d869`
-* 2026-10-03 **Review**: [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/58) — 검토 대기 · PR #58 · `f0f3b05`
-* 2026-10-02 **Review**: [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/57) — 검토 대기 · PR #57 · `9959fd2`
-* 2026-10-02 **Review**: [\[Repo Review\] Laya: 텍스트 생성 없이 선택·점수·확률을 반환하는 의사결정 엔진](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/56) — 검토 대기 · PR #56 · `c1ed9ac`
-* 2026-10-02 **Review**: [\[Paper Review\] JEV-as-a-Judge: 확신할 때 판정하고 불확실할 때 추론 판정기로 넘기기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/55) — 검토 대기 · PR #55 · `2a2edef`
-* 2026-10-02 **Review**: [\[Repo Review\] TypeLLM: 타입별 디코딩과 의존성 그래프로 구성하는 LLM 출력](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/54) — 검토 대기 · PR #54 · `5c93c3f`
-* 2026-10-01 **Review**: [\[Repo Review\] AutoHarness: Claude Code의 경험을 스킬로 저장하고 관리하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/53) — 검토 대기 · PR #53 · `013f1d4`
-* 2026-10-01 **Review**: [\[Paper Review\] AutoTailor — 웹 에이전트의 도구를 사용자 수요에 맞게 고르고 다시 구성하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/52) — 검토 대기 · PR #52 · `db680ed`
-* 2026-09-30 **Review**: [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 검토 대기 · PR #50 · `3377ada`
-* 2026-09-30 **Review**: [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 검토 대기 · PR #49 · `0df9ce5`
-* 2026-09-29 **Review**: [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 검토 대기 · PR #48 · `d5a48d2`
+* 2026-11-07 **Review**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/111) — 병합 완료 · PR #111 · `f49eca0`
+* 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/110) — 병합 완료 · PR #110 · `5680b8b`
+* 2026-11-06 **Review**: [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/109) — 병합 완료 · PR #109 · `87dcb7e`
+* 2026-11-06 **Review**: [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/108) — 병합 완료 · PR #108 · `dba6725`
+* 2026-11-05 **Review**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/107) — 병합 완료 · PR #107 · `0e967d7`
+* 2026-11-04 **Review**: [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/106) — 병합 완료 · PR #106 · `af77726`
+* 2026-11-04 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/105) — 병합 완료 · PR #105 · `214c543`
+* 2026-11-03 **Review**: [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/104) — 병합 완료 · PR #104 · `e35730d`
+* 2026-11-03 **Review**: [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/103) — 병합 완료 · PR #103 · `3f7ec89`
+* 2026-11-02 **Review**: [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/102) — 병합 완료 · PR #102 · `124f630`
+* 2026-11-02 **Review**: [\[Repo Review\] MemoryTax: 에이전트 기억 평가의 데이터·프롬프트·판정 경계 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/101) — 병합 완료 · PR #101 · `71c73ce`
+* 2026-11-01 **Review**: [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/100) — 병합 완료 · PR #100 · `49f6c7c`
+* 2026-11-01 **Review**: [\[Repo Review\] Open Ontologies — 온톨로지 변경 계획과 검증 가능한 증거의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/99) — 병합 완료 · PR #99 · `aecdbd8`
+* 2026-10-31 **Review**: [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/98) — 병합 완료 · PR #98 · `5aba88c`
+* 2026-10-31 **Review**: [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/97) — 병합 완료 · PR #97 · `f790645`
+* 2026-10-30 **Review**: [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/96) — 병합 완료 · PR #96 · `56f0a5e`
+* 2026-10-30 **Review**: [\[Repo Review\] RSI-Anything — world model의 예측을 행동 선택과 자기개선으로 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/95) — 병합 완료 · PR #95 · `93fbf53`
+* 2026-10-29 **Review**: [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/94) — 병합 완료 · PR #94 · `91d0079`
+* 2026-10-29 **Review**: [\[Repo Review\] JevAgentHarness — 작은 결정 모델이 코딩 에이전트의 다음 LLM을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/93) — 병합 완료 · PR #93 · `f83692f`
+* 2026-10-28 **Review**: [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/92) — 병합 완료 · PR #92 · `bd05797`
+* 2026-10-28 **Review**: [\[Repo Review\] GitMCP — 저장소 문서를 AI 도구로 제공하는 서버의 실제 흐름](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/91) — 병합 완료 · PR #91 · `bcdf35d`
+* 2026-10-27 **Review**: [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/90) — 병합 완료 · PR #90 · `5eb8c32`
+* 2026-10-27 **Review**: [\[Repo Review\] FDE Gym — 코드를 넘어 고객 문제의 해결을 평가하는 실행 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/89) — 병합 완료 · PR #89 · `900e139`
+* 2026-10-26 **Review**: [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/88) — 병합 완료 · PR #88 · `65f474c`
+* 2026-10-26 **Review**: [\[Repo Review\] Memento — LLM 가중치 대신 경험을 축적하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/87) — 병합 완료 · PR #87 · `aef4d62`
+* 2026-10-25 **Review**: [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/86) — 병합 완료 · PR #86 · `a9ccf71`
+* 2026-10-25 **Review**: [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/85) — 병합 완료 · PR #85 · `ed78cda`
+* 2026-10-24 **Review**: [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/82) — 병합 완료 · PR #82 · `8967e6a`
+* 2026-10-23 **Review**: [\[Repo Review\] LLM Council — 여러 모델의 답변과 상호 평가를 함께 읽는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/81) — 병합 완료 · PR #81 · `704b695`
+* 2026-10-23 **Review**: [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/80) — 병합 완료 · PR #80 · `70511ed`
+* 2026-10-23 **Review**: [\[Repo Review\] AKV — 에이전트가 KV 캐시를 직접 관리하는 구조와 SGLang 실행 경로](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/79) — 병합 완료 · PR #79 · `1a20fe8`
+* 2026-10-16 **Review**: [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/78) — 병합 완료 · PR #78 · `ec29960`
+* 2026-10-15 **Review**: [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/77) — 병합 완료 · PR #77 · `2b7154b`
+* 2026-10-14 **Review**: [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/76) — 병합 완료 · PR #76 · `ddf3e1a`
+* 2026-10-13 **Review**: [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/75) — 병합 완료 · PR #75 · `91cfc18`
+* 2026-10-13 **Review**: [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/74) — 병합 완료 · PR #74 · `d4a3a46`
+* 2026-10-12 **Review**: [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/72) — 병합 완료 · PR #72 · `de227c2`
+* 2026-10-11 **Review**: [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/71) — 병합 완료 · PR #71 · `db00eb4`
+* 2026-10-10 **Review**: [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/70) — 병합 완료 · PR #70 · `ce3a5a6`
+* 2026-10-09 **Review**: [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/69) — 병합 완료 · PR #69 · `79c8b90`
+* 2026-10-08 **Review**: [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/68) — 병합 완료 · PR #68 · `799e85f`
+* 2026-10-07 **Review**: [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/67) — 병합 완료 · PR #67 · `2f6d27c`
+* 2026-10-07 **Review**: [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/66) — 병합 완료 · PR #66 · `36a0738`
+* 2026-10-06 **Review**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/65) — 병합 완료 · PR #65 · `10dca55`
+* 2026-10-06 **Review**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/64) — 병합 완료 · PR #64 · `07ca00d`
+* 2026-10-05 **Review**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/63) — 병합 완료 · PR #63 · `0aa9200`
+* 2026-10-05 **Review**: [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/62) — 병합 완료 · PR #62 · `36a3b42`
+* 2026-10-04 **Review**: [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/61) — 병합 완료 · PR #61 · `e23e829`
+* 2026-10-04 **Review**: [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/60) — 병합 완료 · PR #60 · `8ec1288`
+* 2026-10-03 **Review**: [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/59) — 병합 완료 · PR #59 · `e89d869`
+* 2026-10-03 **Review**: [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/58) — 병합 완료 · PR #58 · `f0f3b05`
+* 2026-10-02 **Review**: [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/57) — 병합 완료 · PR #57 · `9959fd2`
+* 2026-10-02 **Review**: [\[Repo Review\] Laya: 텍스트 생성 없이 선택·점수·확률을 반환하는 의사결정 엔진](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/56) — 병합 완료 · PR #56 · `c1ed9ac`
+* 2026-10-02 **Review**: [\[Paper Review\] JEV-as-a-Judge: 확신할 때 판정하고 불확실할 때 추론 판정기로 넘기기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/55) — 병합 완료 · PR #55 · `2a2edef`
+* 2026-10-02 **Review**: [\[Repo Review\] TypeLLM: 타입별 디코딩과 의존성 그래프로 구성하는 LLM 출력](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/54) — 병합 완료 · PR #54 · `5c93c3f`
+* 2026-10-01 **Review**: [\[Repo Review\] AutoHarness: Claude Code의 경험을 스킬로 저장하고 관리하는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/53) — 병합 완료 · PR #53 · `013f1d4`
+* 2026-10-01 **Review**: [\[Paper Review\] AutoTailor — 웹 에이전트의 도구를 사용자 수요에 맞게 고르고 다시 구성하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/52) — 병합 완료 · PR #52 · `db680ed`
+* 2026-09-30 **Review**: [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/50) — 병합 완료 · PR #50 · `3377ada`
+* 2026-09-30 **Review**: [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/49) — 병합 완료 · PR #49 · `0df9ce5`
+* 2026-09-29 **Review**: [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/48) — 병합 완료 · PR #48 · `d5a48d2`
 * 2026-09-29 **Review**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/47) — 병합 완료 · PR #47 · `c235cea`
 * 2026-09-29 **Review**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/46) — 병합 완료 · PR #46 · `09c660f`
 * 2026-09-28 **Review**: [\[Paper Review\] SkillGym: 사람의 스킬을 LLM의 실행 능력으로 학습시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/45) — 병합 완료 · PR #45 · `69b681c`
@@ -108,6 +108,67 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-07 **Creation**: [\[Repo Review\] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](_posts/2026/2026-11-07-auto-ontology-repo-review.md) — `968f1dc`
+* 2026-11-07 **Creation**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](_posts/2026/2026-11-07-autonomous-harness-adaptation-review.md) — `48bcd23`
+* 2026-11-07 **Creation**: [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](_posts/2026/2026-11-06-sparsified-mlps-transcoders-review.md) — `e289786`
+* 2026-11-07 **Creation**: [\[Repo Review\] OpenLIT: SDK·코딩 에이전트의 실행을 관측·평가·가드로 연결하는 구조](_posts/2026/2026-11-06-openlit-repo-review.md) — `0a53fbb`
+* 2026-11-07 **Creation**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](_posts/2026/2026-11-05-self-hpo-review.md) — `42e3c89`
+* 2026-11-07 **Creation**: [\[Repo Review\] Weight-Space Programming — LLM이 신경망 가중치를 읽고 고치는 실험 기록](_posts/2026/2026-11-04-weight-space-programming-repo-review.md) — `abe7b9d`
+* 2026-11-07 **Creation**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](_posts/2026/2026-11-04-terminal-rsi-review.md) — `1ea1b74`
+* 2026-11-07 **Creation**: [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](_posts/2026/2026-11-03-data-world-review.md) — `1a2cc63`
+* 2026-11-07 **Creation**: [\[Repo Review\] rTaste: 연구 에이전트의 실험 선택을 등록·예측·재실행으로 평가하기](_posts/2026/2026-11-03-rtaste-repo-review.md) — `90f3d11`
+* 2026-11-07 **Creation**: [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](_posts/2026/2026-11-02-hybrid-reasoning-agents-review.md) — `d139eef`
+* 2026-11-07 **Creation**: [\[Repo Review\] MemoryTax: 에이전트 기억 평가의 데이터·프롬프트·판정 경계 읽기](_posts/2026/2026-11-02-memorytax-repo-review.md) — `fca0c93`
+* 2026-11-07 **Creation**: [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](_posts/2026/2026-11-01-memento-review.md) — `9331298`
+* 2026-11-07 **Creation**: [\[Repo Review\] Open Ontologies — 온톨로지 변경 계획과 검증 가능한 증거의 경계](_posts/2026/2026-11-01-open-ontologies-review.md) — `6182514`
+* 2026-11-07 **Creation**: [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](_posts/2026/2026-10-31-memorytax-review.md) — `121774c`
+* 2026-11-07 **Creation**: [\[Repo Review\] Building a Coding Agent From Scratch — decode로 배우는 하네스의 실행 경계](_posts/2026/2026-10-31-coding-agent-course-review.md) — `fbef572`
+* 2026-11-07 **Creation**: [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](_posts/2026/2026-10-30-continual-learners-review.md) — `dd0d7f4`
+* 2026-11-07 **Creation**: [\[Repo Review\] RSI-Anything — world model의 예측을 행동 선택과 자기개선으로 연결하기](_posts/2026/2026-10-30-rsi-anything-review.md) — `d1b76d1`
+* 2026-11-07 **Creation**: [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](_posts/2026/2026-10-29-cache-engineering-review.md) — `c4277ec`
+* 2026-11-07 **Creation**: [\[Repo Review\] JevAgentHarness — 작은 결정 모델이 코딩 에이전트의 다음 LLM을 고르는 방법](_posts/2026/2026-10-29-jevagentharness-review.md) — `b136494`
+* 2026-11-07 **Creation**: [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](_posts/2026/2026-10-28-oo-harness-review.md) — `72a6b80`
+* 2026-11-07 **Creation**: [\[Repo Review\] GitMCP — 저장소 문서를 AI 도구로 제공하는 서버의 실제 흐름](_posts/2026/2026-10-28-git-mcp-review.md) — `7cdc744`
+* 2026-11-07 **Creation**: [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](_posts/2026/2026-10-27-self-instructed-cot-review.md) — `3132b6c`
+* 2026-11-07 **Creation**: [\[Repo Review\] FDE Gym — 코드를 넘어 고객 문제의 해결을 평가하는 실행 환경](_posts/2026/2026-10-27-fde-gym-review.md) — `bb63770`
+* 2026-11-07 **Creation**: [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](_posts/2026/2026-10-26-harnesssql-review.md) — `2e02a5e`
+* 2026-11-07 **Creation**: [\[Repo Review\] Memento — LLM 가중치 대신 경험을 축적하는 에이전트](_posts/2026/2026-10-26-memento-review.md) — `5a3d9fc`
+* 2026-11-07 **Creation**: [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](_posts/2026/2026-10-25-harness2-review.md) — `0d472d0`
+* 2026-11-07 **Creation**: [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](_posts/2026/2026-10-25-mass-review.md) — `f87b4aa`
+* 2026-11-07 **Update**: [\[가이드\] RAG 평가지표 입문: RAGAS·TruLens·DeepEval로 검색과 답변 나누어 보기](_posts/2026/2026-10-24-rag-evaluation-guide.md) — `3869ca4`
+* 2026-11-07 **Creation**: [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](_posts/2026/2026-10-24-mimesis-paper-review.md) — `daf7140`
+* 2026-11-07 **Creation**: [\[Repo Review\] LLM Council — 여러 모델의 답변과 상호 평가를 함께 읽는 방법](_posts/2026/2026-10-23-llm-council-review.md) — `9410d48`
+* 2026-11-07 **Creation**: [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](_posts/2026/2026-10-23-harness-aware-distillation-review.md) — `f640a23`
+* 2026-11-07 **Creation**: [\[Repo Review\] AKV — 에이전트가 KV 캐시를 직접 관리하는 구조와 SGLang 실행 경로](_posts/2026/2026-10-23-akv-review.md) — `c94c265`
+* 2026-11-07 **Creation**: [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](_posts/2026/2026-10-16-mid-harness-review.md) — `4a0cdd4`
+* 2026-11-07 **Creation**: [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](_posts/2026/2026-10-15-selfsearch-review.md) — `6ab6d0c`
+* 2026-11-07 **Creation**: [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](_posts/2026/2026-10-14-veriharness-review.md) — `9a68f1c`
+* 2026-11-07 **Creation**: [\[Repo Review\] MIMESIS: 사용자 시뮬레이터 학습에서 GRPO와 CSD까지 코드로 따라가기](_posts/2026/2026-10-13-mimesis-review.md) — `afa010d`
+* 2026-11-07 **Creation**: [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](_posts/2026/2026-10-13-scholarevolve-review.md) — `1410d92`
+* 2026-11-07 **Creation**: [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](_posts/2026/2026-10-12-harness-learning-review.md) — `c3775f8`
+* 2026-11-07 **Creation**: [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](_posts/2026/2026-10-11-agentic-meta-reasoning-review.md) — `fb708ff`
+* 2026-11-07 **Creation**: [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](_posts/2026/2026-10-10-msib-harness-optimization-review.md) — `7d50fb0`
+* 2026-11-07 **Creation**: [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](_posts/2026/2026-10-09-context-language-models-review.md) — `ff447fe`
+* 2026-11-07 **Creation**: [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](_posts/2026/2026-10-08-financeharness-paper-review.md) — `b3b1de6`
+* 2026-11-07 **Creation**: [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](_posts/2026/2026-10-07-a2rd-review.md) — `63f5de8`
+* 2026-11-07 **Creation**: [\[Repo Review\] Raven: 여러 에이전트의 하네스를 조합하고 실행 근거를 남기는 방법](_posts/2026/2026-10-07-raven-review.md) — `6f8c3a9`
+* 2026-11-07 **Creation**: [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](_posts/2026/2026-10-06-co-director-review.md) — `1c9b536`
+* 2026-11-07 **Creation**: [\[Repo Review\] FinanceHarness — 검색·계산·인용을 잇는 금융 리서치 에이전트의 내부 구조](_posts/2026/2026-10-06-financeharness-review.md) — `65407df`
+* 2026-11-07 **Creation**: [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](_posts/2026/2026-10-05-canvas-review.md) — `09ee8c6`
+* 2026-11-07 **Creation**: [\[Repo Review\] OpenDots: 지속 대화와 문서·도구 실행을 연결하는 AI 작업 공간](_posts/2026/2026-10-05-opendots-review.md) — `e1e62ef`
+* 2026-11-07 **Creation**: [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](_posts/2026/2026-10-04-vqqa-review.md) — `f19bdb9`
+* 2026-11-07 **Creation**: [\[Repo Review\] Learn Harness Engineering — 에이전트의 작업 환경을 만들고 검증하는 코드 읽기](_posts/2026/2026-10-04-learn-harness-engineering-review.md) — `7097f63`
+* 2026-11-07 **Creation**: [\[Repo Review\] Understand Anything: 코드를 설명 가능한 지식 그래프로 바꾸는 분석 파이프라인](_posts/2026/2026-10-03-understand-anything-review.md) — `27352f9`
+* 2026-11-07 **Creation**: [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](_posts/2026/2026-10-03-agensh-review.md) — `a6f3330`
+* 2026-11-07 **Creation**: [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](_posts/2026/2026-10-02-memory-attention-review.md) — `58cacd9`
+* 2026-11-07 **Creation**: [\[Repo Review\] Laya: 텍스트 생성 없이 선택·점수·확률을 반환하는 의사결정 엔진](_posts/2026/2026-10-02-laya-review.md) — `e0148cc`
+* 2026-11-07 **Creation**: [\[Paper Review\] JEV-as-a-Judge: 확신할 때 판정하고 불확실할 때 추론 판정기로 넘기기](_posts/2026/2026-10-02-jev-as-a-judge-review.md) — `187c1af`
+* 2026-11-07 **Creation**: [\[Repo Review\] TypeLLM: 타입별 디코딩과 의존성 그래프로 구성하는 LLM 출력](_posts/2026/2026-10-02-typellm-review.md) — `a13a8f5`
+* 2026-11-07 **Creation**: [\[Repo Review\] AutoHarness: Claude Code의 경험을 스킬로 저장하고 관리하는 구조](_posts/2026/2026-10-01-autoharness-review.md) — `6c88a23`
+* 2026-11-07 **Creation**: [\[Paper Review\] AutoTailor — 웹 에이전트의 도구를 사용자 수요에 맞게 고르고 다시 구성하기](_posts/2026/2026-10-01-autotailor-review.md) — `cee7953`
+* 2026-11-07 **Creation**: [\[Paper Review\] The Tasteful Agent — 장기 과제의 좋은 선택을 측정하고 증류하기](_posts/2026/2026-09-30-tasteful-agent-review.md) — `8df7ad6`
+* 2026-11-07 **Creation**: [\[Repo Review\] CLM: 상태와 행동을 따로 읽고, 대조학습으로 후보를 고르는 언어 모델](_posts/2026/2026-09-30-clm-review.md) — `bba03b9`
+* 2026-11-07 **Creation**: [\[Paper Review\] GenRec: Netflix의 LLM 기반 추천 순위 모델](_posts/2026/2026-09-29-genrec-review.md) — `9ecfa90`
 * 2026-10-24 **Creation**: [\[가이드\] RAG 평가지표 입문: RAGAS·TruLens·DeepEval로 검색과 답변 나누어 보기](_posts/2026/2026-10-24-rag-evaluation-guide.md) — `3aba4d8`
 * 2026-10-24 **Creation**: [\[Repo Review\] OpenResearch: Git 스냅샷으로 연구 에이전트의 실험을 추적하는 작업 공간](_posts/2026/2026-09-29-openresearch-review.md) — `8879dc1`
 * 2026-10-24 **Creation**: [\[Paper Review\] Coding Agents are Strong Prompt Optimizers — 실행 기록 전체를 분석하는 프롬프트 최적화](_posts/2026/2026-09-29-casd-review.md) — `3748010`
