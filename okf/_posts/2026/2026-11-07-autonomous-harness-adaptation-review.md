@@ -155,6 +155,16 @@ visual_sources:
     caption: "Table 17, PDF 24쪽. 원문 영역 크롭, 번역 및 수치 변경 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/0d06oCseY8s"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=0d06oCseY8s">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 Jens Lehmann과 Sahar Vahdati의 **Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3**는 언어 모델이 자신을 둘러싼 실행 소프트웨어를 만들고, 실행 기록을 보고 수정하며, 그 수정으로 새로운 과제에서 더 좋은 성능을 얻을 수 있는지 조사합니다. 여기서 **하네스(harness)**는 모델의 관찰 표현, 기억, 도구, 행동 선택, 실패 복구와 추론 예산을 조직하는 실행 프로그램입니다. 모델 가중치는 고정하고 이 프로그램만 바꾸므로, 모델을 학습시키는 능력과 모델을 사용하는 시스템을 개선하는 능력을 구분할 수 있습니다. 이 리뷰는 [arXiv 2610.30499v1 원문](https://arxiv.org/html/2610.30499v1)과 [동일 버전 PDF](https://arxiv.org/pdf/2610.30499v1)를 기준으로 합니다.
