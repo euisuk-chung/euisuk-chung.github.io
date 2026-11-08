@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/121) — 검토 대기 · Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [Weight-Space Programming 읽기 — 가중치를 해석하고 고치는 여덟 실험](2026/2026-11-09-weight-space-programming-review.md) - 신경망 가중치를 읽고 직접 설계·수정한 여덟 실험을 입력 정보와 피드백 조건으로 나누어 살펴보고, 행동 식별·수정 성공·일반화 주장의 의미를 구분합니다.
