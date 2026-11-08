@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/119) — 검토 대기 · 영상의 샷·픽셀·음향·시각 검토를 결합하는 rea-video의 처리 흐름과 재제작 경로를 추적하고 평가 수치의 분모·캐시·독립성 조건을 분석합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [Weight-Space Programming 읽기 — 가중치를 해석하고 고치는 여덟 실험](2026/2026-11-09-weight-space-programming-review.md) - 신경망 가중치를 읽고 직접 설계·수정한 여덟 실험을 입력 정보와 피드백 조건으로 나누어 살펴보고, 행동 식별·수정 성공·일반화 주장의 의미를 구분합니다.

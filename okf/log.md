@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-09 **Review**: [\[Repo Review\] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/119) — 검토 대기 · PR #119 · `c6e0374`
 * 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/118) — 병합 완료 · PR #118 · `4006983`
 * 2026-11-09 **Review**: [\[Repo Review\] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/116) — 병합 완료 · PR #116 · `6ad2f5c`
 * 2026-11-09 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/115) — 병합 완료 · PR #115 · `8dff628`
