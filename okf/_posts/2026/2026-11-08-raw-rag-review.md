@@ -106,6 +106,16 @@ visual_sources:
     caption: "Figure 5, PDF 9쪽. 원문 영역 크롭, 번역 및 수치 변경 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/wRa7F5BJ95w"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=wRa7F5BJ95w">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 장기 대화형 AI의 기억을 만들 때는 대화를 요약하고, 사실을 추출하고, 서로 연결하고, 오래된 값을 갱신하는 과정이 자주 등장합니다. 이 논문은 그 과정에 앞서 **“원래 대화를 잘 검색해서 읽히는 방법을 충분히 강한 기준선으로 평가했는가?”**를 묻습니다. 원문 기록을 보존한 Raw-RAG는 평가한 일곱 가지 벤치마크·모델 조합 중 여섯 가지에서 비교 대상 메모리 시스템보다 높은 점수를 냈습니다. 다만 이 순위에서 Full-context는 제외되며, 모든 차이에 대한 통계적 유의성이 입증된 것은 아닙니다. [초록·§4.2](https://arxiv.org/html/2610.30755v1#S4.SS2)
