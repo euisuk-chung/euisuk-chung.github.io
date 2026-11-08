@@ -1,7 +1,7 @@
 ---
 type: "Paper Review"
 title: "[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계"
-description: "Claude Opus 5.5의 무도구 CNN 가중치 읽기 실험을 따라가며 출력 순열·SAT-6 대조가 드러내는 국소 계산과 의미 추론의 차이를 분석합니다."
+description: "Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다."
 date: "2026-11-09"
 tags:
   - "Paper Review"
@@ -20,10 +20,16 @@ sources:
     title: "Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids? Exploring \"Weight-Space Programming\""
     author: "Nazmus Sakib Ahmed"
     last_modified: "2026-11-05"
+  - id: "weight-space-programming-author-blog"
+    resource: "https://rikiyat.github.io/blog/weight-space-programming/"
+    title: "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights"
+    author: "Rikiya Takehi, Jayden Teoh, Alex Zhang, Omar Khattab"
 status: "stable"
 year: "2026"
 analyzed_at: "2026-11-09T06:18:24+09:00"
 doi: "10.48550/arXiv.2611.08070"
+redirect_from:
+  - "/2026/11/09/weight-space-programming-review/"
 source_authors:
   - "Nazmus Sakib Ahmed"
 source_id: "2611.08070"
@@ -68,6 +74,14 @@ visual_sources:
     page: 14
     caption: "수정 질문에서 영상 유형 답변의 확신도와 채점 결과 (원문 PDF 영역 크롭, 번역·수치 변경 없음)"
     figure: "7"
+  - path: "/img/reviews/2026/weight-space-programming-review/reading-writing.svg"
+    kind: "reviewer-diagram"
+    source_url: "https://rikiyat.github.io/blog/weight-space-programming/"
+    caption: "리뷰어 작성: 원문의 가중치 읽기·수정·작성 실험과 검증 경로를 구분한 개념도입니다."
+  - path: "/img/reviews/2026/weight-space-programming-review/qwen-results.svg"
+    kind: "reviewer-diagram"
+    source_url: "https://rikiyat.github.io/blog/weight-space-programming/"
+    caption: "리뷰어 재도표화: 원문 실험 8의 Qwen 성능과 토큰 상한 도달 비율을 그렸습니다."
 ---
 
 ## 논문 개요와 전체 구조
@@ -76,7 +90,7 @@ visual_sources:
 
 검토 대상은 Nazmus Sakib Ahmed의 *Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids? Exploring “Weight-Space Programming”*, **arXiv:2611.08070v1**입니다. v1 원문 제출일은 **2026년 11월 5일**이며, 이 글은 해당 버전의 HTML 전체와 23쪽 PDF를 분석했습니다. 논문이 시험한 대상은 **Claude Opus 5.5 한 모델, xhigh effort, 도구 없는 약 12만 5천 파라미터 이미지 분류 신경망 읽기**입니다. 아래 실험 수치는 저자 보고값이며, 리뷰어가 학습이나 LLM 질의를 재실행한 결과가 아닙니다. [버전·저자·제출 이력](https://arxiv.org/abs/2611.08070v1), [실험 설정](https://arxiv.org/html/2611.08070v1#S4)
 
-원래 Weight-Space Programming 연구는 가중치 **읽기·쓰기·수정**을 포괄합니다. 이 논문은 다른 모델과 과제로 읽기를 감사한 탐색적 연구이며, 원래 연구의 GPT-6 Astra 쓰기·수정 성과 전체를 재현하거나 반증한 논문은 아닙니다. 원 연구의 맥락은 [원문 블로그 리뷰](/2026/11/09/weight-space-programming-review/), 공개 실험 기록과 코드의 범위는 [관련 저장소 리뷰](/2026/11/04/weight-space-programming-repo-review/)에서 별도로 다룹니다.
+이 주제는 Takehi 외가 GPT-6 Astra로 가중치 **읽기·수정·작성**을 시도한 여덟 실험에서 출발했습니다. Ahmed의 후속 논문은 그중 **읽기** 주장을 다른 모델과 이미지 분류 과제로 점검합니다. 두 연구의 결과와 도구 사용 조건은 아래 [배경 장](#-chapter-3-background-weight-space-programming)에서 함께 비교합니다. 공개 실험 로그와 코드는 [관련 저장소 리뷰](/2026/11/04/weight-space-programming-repo-review/)에서 확인할 수 있습니다. [Takehi 외 원 블로그](https://rikiyat.github.io/blog/weight-space-programming/) · [감사 논문 §3](https://arxiv.org/html/2611.08070v1#S3)
 
 원문의 실제 전개 순서는 다음과 같습니다. 번호 없는 공개 고지와 참고문헌도 원래 위치를 유지해 상세 리뷰에 반영합니다.
 
@@ -154,13 +168,40 @@ $`a`$는 해당 채널의 정규화 전 값, $`\mu_{\mathrm{run}}`$과 $`v_{\mat
 
 ### 📖 **Chapter 3: Background: Weight-Space Programming**
 
-저자는 Takehi 등의 WSP를 자연어 명세를 중심으로 범용 LLM이 신경망 가중치를 직접 읽고 쓰는 접근으로 소개합니다. **읽기**에서는 정책 신경망의 게임, 확산 모델의 생성 도형, 작은 언어 모델의 언어를 알아내는 사례가 나옵니다. 어느 언어 모델이 아첨 성향을 가졌는지는 가중치만으로 구별하지 못했고, attention 패턴 접근 후 구별한 사례도 함께 적습니다.
+Ahmed가 감사 대상으로 삼은 Weight-Space Programming(WSP)은 범용 LLM이 자연어 요구에 맞춰 신경망 가중치를 직접 읽고, 고치고, 처음부터 작성하는 접근입니다. Rikiya Takehi, Jayden Teoh, Alex Zhang, Omar Khattab이 2026년 11월 2일 공개한 기술 블로그는 GPT-6 Astra로 이 세 작업을 시도했습니다. 읽기는 숨겨 둔 과제나 측정값으로 채점하고, 수정·작성은 바뀐 네트워크를 실제로 실행해 검증합니다. [논문 §3](https://arxiv.org/html/2611.08070v1#S3) · [Takehi 외 원 블로그](https://rikiyat.github.io/blog/weight-space-programming/)
 
-**쓰기**에서는 작은 게임 정책을 처음부터 구성하고 약 150만 파라미터 규모의 Go 정책도 작성한 결과를 소개합니다. **수정**에서는 제어망 가중치의 3.5%를 고친 사례와, Qwen3.5-0.8B 가중치 중 131,072개, 약 0.016%를 수정하여 MATH-500이 7.9%에서 48.1%가 됐다는 원 연구 보고를 인용합니다. 이 숫자들은 이 감사 논문이 다시 수행한 편집 실험이 아닙니다.
+#### 원 블로그의 여덟 실험
 
-이어 조건 차이를 짚습니다. 원래 게임 과제는 입력 채널이 에이전트·움직이는 물체·보상·장애물·이전 프레임 중 무엇인지를 알려 주고, 첫 층 가중치는 격자 위치와 직접 대응했습니다. 이는 숫자에 의미를 붙일 기준점을 제공합니다. 본 실험은 입력을 빨강·초록·파랑으로만 설명하고 클래스 이름을 숨깁니다. 원 연구의 여러 실험은 Python 환경이나 순전파 예산을 제공했지만, 본 연구는 둘 다 제공하지 않습니다. 다만 원래 게임 읽기 실험에는 그러한 도구가 없었다는 예외도 보존합니다.
+아래는 Takehi 외가 보고한 실험입니다. 가중치를 갱신하는 일반적인 학습 루프를 사용하지 않았고, 제공된 입력 정보와 Python 분석·실행 피드백의 범위는 과제마다 달랐습니다. [원 블로그 실험 1–8](https://rikiyat.github.io/blog/weight-space-programming/)
 
-이 장의 결론은 **읽기 실패만으로 편집 결과의 존재를 부정할 수 없다**는 것입니다. 편집 성공이 이해인지 탐색인지 따로 평가해야 한다는 문제를 제기하지만, 어느 쪽인지 본 실험이 결정하지는 않습니다. 이 차이를 전제로 다음 장이 실제 감사 조건을 명세합니다. [§3](https://arxiv.org/html/2611.08070v1#S3)
+![가중치를 읽어 가설을 세우는 경로와 가중치를 수정·작성해 실행으로 검증하는 경로]({{ '/img/reviews/2026/weight-space-programming-review/reading-writing.svg' | relative_url }})
+
+*리뷰어 도식. 원 블로그의 읽기·수정·작성과 각각의 검증 방법을 구분했습니다.*
+
+| 실험 | 제공한 정보와 도구 | 원 블로그의 결과 |
+| --- | --- | --- |
+| 1. 게임 이름 읽기 | 같은 구조의 17,253개 가중치와 입력 채널·행동 설명을 제공했습니다. 게임 이름과 실행 도구는 숨겼습니다. | Breakout, Pong, Pac-Man, Freeway 네 게임을 식별했습니다. |
+| 2. 생성 도형 읽기 | 작은 확산 모델의 가중치를 제공하고 도구와 순전파를 막았습니다. | 원·사각형·삼각형을 맞혔지만, 실제로는 속이 찬 도형을 생성하는 모델을 테두리만 그리는 모델로 해석했습니다. |
+| 3. 중간층 읽기 | 문자 단위 Transformer의 입출력층을 제거했습니다. Python 분석을 최대 100회 허용하고 신경망 실행을 막았습니다. | Python 코드·로마자 일본어·영어를 각 두 시도에서 맞혔습니다. 앞서 본 문자의 다음 문자를 복사하는 attention head도 연구진의 사후 실행 측정과 일치했습니다. |
+| 4. 차량 정책 수정 | 전체 가중치, 환경 설명과 실패한 실행 기록 한 건을 주고 한 번에 고치도록 했습니다. | 가중치 3.5%를 편집했습니다. 별도 평가에서 편집 전 0/256회, 편집 후 1,024/1,024회 성공했습니다. |
+| 5. MinAtar 정책 작성 | 영 행렬과 게임 규칙·코드를 주고, 게임 실행 없이 한 번에 작성하게 했습니다. | 세 게임 모두 PPO 1억 단계 기준선을 앞섰습니다. 5억 단계 기준과 비교하면 Breakout은 517.4 대 25.3, Seaquest는 53.1 대 88.9, Asterix는 53.2 대 55.2였습니다. |
+| 6. 바둑 정책 작성 | 약 148만 가중치를 Python으로 작성하고 별도로 실행 반응을 조회할 수 있는 예산을 설정했습니다. | 평가 호출을 쓰지 않고 만든 9×9 정책이 작은 PPO 상대를 이겼다고 보고했습니다. 호출을 허용한 조건에서는 연습 경기 결과를 보고 정책을 수정했습니다. |
+| 7. 아첨 성향 읽기 | 가중치 비교 뒤, 같은 텍스트에서 두 모델의 attention 분포를 비교할 수 있게 했습니다. | 가중치만 비교한 네 시도에서 아첨 모델을 구별하지 못했습니다. 내부 관측을 추가한 뒤에는 학습한 세 쌍에서 구별했습니다. |
+| 8. Qwen 반복 수정 | 가중치를 불러온 Python 커널과 연습 문제, 제한된 평가 호출을 제공했습니다. 시험 문제는 편집 과정에서 숨겼습니다. | 50회 호출 조건에서 Qwen3.5-0.8B의 MATH-500은 7.9%에서 48.1%로 상승했습니다. 반복이 드문 Gemma 3 270M에서는 뚜렷한 향상이 확인되지 않았습니다. |
+
+실험 3에서 Astra가 본 것은 중간층 가중치와 Python 분석 결과입니다. 연구진이 **별도로** 모델을 실행해 확인한 복사 동작 점수는 지목한 head에서 0.22–0.55, 나머지에서 최대 0.02였습니다. 이 사례의 검증 대상은 구체적인 head의 동작입니다. 실험 7은 반대로, 응답을 사용자의 말에 맞추는 성향을 구별하려면 어떤 토큰에 주목했는지 실행 중에 관측해야 했던 사례입니다. [원 블로그 실험 3·7](https://rikiyat.github.io/blog/weight-space-programming/)
+
+Qwen 편집은 15·19층 MLP가 반복과 관련된 방향을 쓰는 것으로 보고, 두 행렬에서 총 **131,072개 가중치**를 바꿨습니다. 약 0.016%에 해당합니다. 50회 조건에서 GSM8K는 **13.8% → 67.1%**, IFEval은 **21.0% → 62.3%**로 올랐고, MATH-500에서 32,768토큰 상한에 도달한 비율은 **93.0% → 33.1%**로 줄었습니다. 여기서 호출 한 번은 최대 512문제에 대한 응답 또는 최대 1,024개 텍스트 읽기를 뜻합니다. 토큰 상한에 도달하는 경우가 드문 Gemma의 MATH-500은 기본 6.8%에서 편집 조건 중 최고 7.7%였습니다. 원 블로그 저자들은 반복을 줄여 이미 풀 수 있는 답을 끝까지 쓰게 한 효과와 새로운 수학 능력을 얻는 효과를 구분합니다. [원 블로그 실험 8·추가 실험](https://rikiyat.github.io/blog/weight-space-programming/)
+
+![평가 호출 예산별 Qwen의 성능과 토큰 상한 도달 비율]({{ '/img/reviews/2026/weight-space-programming-review/qwen-results.svg' | relative_url }})
+
+*리뷰어 재도표화. 원 블로그 실험 8의 보고값을 같은 0–100% 축으로 그렸습니다.*
+
+#### 감사 논문이 바꾼 조건
+
+원 블로그의 게임 식별에는 실행 도구가 없었지만, 입력 채널이 에이전트·움직이는 물체·보상·장애물·이전 프레임 중 무엇인지 알려 줬습니다. 첫 층 가중치의 위치도 게임 격자와 직접 대응했습니다. Ahmed는 이미지 분류 과제에서 입력을 빨강·초록·파랑으로 설명하고 클래스 이름을 숨겼습니다. 해석 모델도 Claude Opus 5.5로 바꾸고 Python이나 순전파 없이 질의했습니다. [논문 §3–4](https://arxiv.org/html/2611.08070v1#S3) · [원 블로그 실험 1](https://rikiyat.github.io/blog/weight-space-programming/)
+
+이 차이 때문에 후속 논문의 질문은 **데이터셋에 대한 사전 지식과 가중치에서 얻은 수치 증거를 어떻게 가를 수 있는가**로 좁아집니다. 수정된 정책이 평가에서 성공하는지, 그리고 모델이 수정이 작동하는 이유를 정확히 설명하는지는 각각의 실험 증거로 판단해야 합니다. 다음 장에서 가중치 읽기만 시험하는 감사 조건을 명세합니다. [논문 §3](https://arxiv.org/html/2611.08070v1#S3)
 
 ### 📖 **Chapter 4: Experimental Setup**
 
