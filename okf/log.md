@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-09 **Review**: [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/122) — 검토 대기 · PR #122 · `d59e621`
 * 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/121) — 병합 완료 · PR #121 · `36a4036`
 * 2026-11-09 **Review**: [\[Repo Review\] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/119) — 병합 완료 · PR #119 · `c6e0374`
 * 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/118) — 병합 완료 · PR #118 · `4006983`
