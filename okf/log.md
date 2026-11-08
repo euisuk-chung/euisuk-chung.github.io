@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-09 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/115) — 검토 대기 · PR #115 · `8dff628`
 * 2026-11-08 **Review**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/114) — 병합 완료 · PR #114 · `1d72f66`
 * 2026-11-08 **Review**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/113) — 병합 완료 · PR #113 · `33f529f`
 * 2026-11-07 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/112) — 병합 완료 · PR #112 · `0be828c`
