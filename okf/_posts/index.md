@@ -1,16 +1,11 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/123) — 검토 대기 · RelayVSR가 큰 생성 모델의 키프레임 참조를 경량 모델에서 재사용하는 원리와, 화질·처리량·입력 대기 사이의 관계를 분석합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](2026/2026-11-09-weight-reading-audit-review.md) - Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
 * [AI 에이전트로 영상과 3D 만들기, 스킬과 도구 12가지](2026/2026-11-09-video-3d-agent-skills.md) - X에서 소개된 영상·모션·Blender·웹 3D 프로젝트 12개를 살펴보고, 만들고 싶은 결과물에 따라 제작 엔진과 에이전트 스킬을 고르는 기준을 정리합니다.
 * [[Paper Review] Training Small Language Models for Transferable Tool Selection](2026/2026-11-09-transferable-tool-selection-review.md) - 작은 Qwen3 모델이 계획·검색·선택을 SFT와 강화학습으로 익혀 새 도구 목록과 검색기로 전이하는 원리와 정확 일치 평가의 조건을 분석합니다.
+* [[Paper Review] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](2026/2026-11-09-relayvsr-review.md) - RelayVSR가 큰 생성 모델의 키프레임 참조를 경량 모델에서 재사용하는 원리와, 화질·처리량·입력 대기 사이의 관계를 분석합니다.
 * [[Repo Review] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](2026/2026-11-09-rea-video-repo-review.md) - 영상의 샷·픽셀·음향·시각 검토를 결합하는 rea-video의 처리 흐름과 재제작 경로를 추적하고 평가 수치의 분모·캐시·독립성 조건을 분석합니다.
 * [[Repo Review] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](2026/2026-11-09-pixelfx-repo-review.md) - Pixelfx의 픽셀·빛 버퍼, 시드 기반 효과 재생, 3D 뼈대와 타격 정지, 스프라이트 출력 및 제작 스킬의 관찰·수정 흐름을 고정 커밋 코드로 분석합니다.
 * [[Paper Review] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](2026/2026-11-09-phoneharness-review.md) - PhoneHarness가 Android 작업을 GUI·CLI·MCP에 배분하고 상태 변화를 검증하는 방식과 124개 과제에서 나타난 성능 차이를 분석합니다.
