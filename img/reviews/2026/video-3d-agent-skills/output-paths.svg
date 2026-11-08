@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title description">
+  <title id="title">제품을 설명하는 두 제작 경로</title>
+  <desc id="description">제품 자료에서 시작합니다. 영상 경로는 컷과 자막을 편집해 MP4를 만들고, 웹 경로는 부품과 상호작용을 설계해 브라우저 도해를 만듭니다.</desc>
+  <rect width="640" height="440" rx="24" fill="#10182a"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <rect x="132" y="32" width="376" height="72" rx="16" fill="#263550"/>
+    <text x="320" y="77" font-size="30" font-weight="700" fill="#f5f8ff">제품 자료</text>
+    <path d="M320 104v26m-152 26v-26h304v26m-310-7 6 7 6-7m292 0 6 7 6-7" fill="none" stroke="#a6b8d7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="164" width="288" height="244" rx="16" fill="#20324c"/>
+    <rect x="328" y="164" width="288" height="244" rx="16" fill="#202c49"/>
+    <g font-size="30" font-weight="700">
+      <text x="168" y="214" fill="#9feaf1">영상</text>
+      <text x="472" y="214" fill="#d2c5ff">웹 도해</text>
+    </g>
+    <path d="M52 236h232m72 0h232" stroke="#607696"/>
+    <g font-size="24" fill="#f5f8ff">
+      <text x="168" y="278">컷·자막 구성</text>
+      <text x="472" y="278">부품·동작 설계</text>
+      <text x="168" y="316">시간축을 렌더링</text>
+      <text x="472" y="316">브라우저에서 검사</text>
+    </g>
+    <g font-size="25" font-weight="700">
+      <text x="168" y="374" fill="#9feaf1">MP4</text>
+      <text x="472" y="374" fill="#d2c5ff">SVG·3D 장면</text>
+    </g>
+  </g>
+</svg>
