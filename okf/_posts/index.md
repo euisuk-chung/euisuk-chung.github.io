@@ -3,6 +3,7 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
+* [\[Repo Review\] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/116) — 검토 대기 · Pixelfx의 픽셀·빛 버퍼, 시드 기반 효과 재생, 3D 뼈대와 타격 정지, 스프라이트 출력 및 제작 스킬의 관찰·수정 흐름을 고정 커밋 코드로 분석합니다.
 * [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/115) — 검토 대기 · 작은 Qwen3 모델이 계획·검색·선택을 SFT와 강화학습으로 익혀 새 도구 목록과 검색기로 전이하는 원리와 정확 일치 평가의 조건을 분석합니다.
 <!-- okf-review-index:end -->
 
