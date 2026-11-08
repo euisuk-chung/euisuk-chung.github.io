@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-09 **Review**: [\[Repo Review\] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/119) — 검토 대기 · PR #119 · `c6e0374`
+* 2026-11-09 **Review**: [\[Repo Review\] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/119) — 병합 완료 · PR #119 · `c6e0374`
 * 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/118) — 병합 완료 · PR #118 · `4006983`
 * 2026-11-09 **Review**: [\[Repo Review\] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/116) — 병합 완료 · PR #116 · `6ad2f5c`
 * 2026-11-09 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/115) — 병합 완료 · PR #115 · `8dff628`
@@ -115,6 +115,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-09 **Creation**: [\[Repo Review\] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](_posts/2026/2026-11-09-rea-video-repo-review.md) — `8badc30`
 * 2026-11-09 **Creation**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](_posts/2026/2026-11-09-weight-reading-audit-review.md) — `ff5a413`
 * 2026-11-09 **Creation**: [Weight-Space Programming 읽기 — 가중치를 해석하고 고치는 여덟 실험](_posts/2026/2026-11-09-weight-space-programming-review.md) — `d8389e3`
 * 2026-11-09 **Creation**: [\[Repo Review\] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](_posts/2026/2026-11-09-pixelfx-repo-review.md) — `860e8fd`
