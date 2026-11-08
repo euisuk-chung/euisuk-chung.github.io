@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/122) — 검토 대기 · PhoneHarness가 Android 작업을 GUI·CLI·MCP에 배분하고 상태 변화를 검증하는 방식과 124개 과제에서 나타난 성능 차이를 분석합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](2026/2026-11-09-weight-reading-audit-review.md) - Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
@@ -13,6 +7,7 @@
 * [[Paper Review] Training Small Language Models for Transferable Tool Selection](2026/2026-11-09-transferable-tool-selection-review.md) - 작은 Qwen3 모델이 계획·검색·선택을 SFT와 강화학습으로 익혀 새 도구 목록과 검색기로 전이하는 원리와 정확 일치 평가의 조건을 분석합니다.
 * [[Repo Review] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](2026/2026-11-09-rea-video-repo-review.md) - 영상의 샷·픽셀·음향·시각 검토를 결합하는 rea-video의 처리 흐름과 재제작 경로를 추적하고 평가 수치의 분모·캐시·독립성 조건을 분석합니다.
 * [[Repo Review] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](2026/2026-11-09-pixelfx-repo-review.md) - Pixelfx의 픽셀·빛 버퍼, 시드 기반 효과 재생, 3D 뼈대와 타격 정지, 스프라이트 출력 및 제작 스킬의 관찰·수정 흐름을 고정 커밋 코드로 분석합니다.
+* [[Paper Review] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](2026/2026-11-09-phoneharness-review.md) - PhoneHarness가 Android 작업을 GUI·CLI·MCP에 배분하고 상태 변화를 검증하는 방식과 124개 과제에서 나타난 성능 차이를 분석합니다.
 * [[Paper Review] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](2026/2026-11-08-raw-rag-review.md) - 원문 대화 검색과 재순위화만으로 구성한 Raw-RAG의 일곱 평가 설정과 근거 도달률·활용률·경로 보존 진단을 통해 복잡한 에이전트 기억의 효과와 비교 조건을 분석합니다.
 * [[Paper Review] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](2026/2026-11-07-autonomous-harness-adaptation-review.md) - 고정 모델이 ARC-AGI-3 하네스를 구성하고 두 번 수정한 27개 계보를 통해 개발 성능과 수정에 쓰지 않은 게임으로의 전이, 비용, 수정 과정의 신뢰도를 분석합니다.
 * [[Repo Review] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](2026/2026-11-07-auto-ontology-repo-review.md) - NVIDIA Auto Ontology의 메타데이터 수집·의미 컴파일부터 자연어 SQL 생성·검증·실행과 MCP 연결까지 추적하고 인증·준비 상태·실패 처리의 실제 경계를 분석합니다.
