@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/114) — 검토 대기 · 원문 대화 검색과 재순위화만으로 구성한 Raw-RAG의 일곱 평가 설정과 근거 도달률·활용률·경로 보존 진단을 통해 복잡한 에이전트 기억의 효과와 비교 조건을 분석합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](2026/2026-11-08-raw-rag-review.md) - 원문 대화 검색과 재순위화만으로 구성한 Raw-RAG의 일곱 평가 설정과 근거 도달률·활용률·경로 보존 진단을 통해 복잡한 에이전트 기억의 효과와 비교 조건을 분석합니다.
