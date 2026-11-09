@@ -84,6 +84,16 @@ visual_sources:
     caption: "리뷰어 재도표화: 원문 실험 8의 Qwen 성능과 토큰 상한 도달 비율을 그렸습니다."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/He_3Mgamb0g"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=He_3Mgamb0g">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 숫자로 된 신경망 가중치만 보여 주면, 대규모 언어 모델(LLM)은 그 신경망이 무엇을 분류하는지 알아낼 수 있을까요? 이 논문은 **가중치에서 수치적 특징을 읽는 능력**과 **그 특징에 올바른 의미를 부여하는 능력**을 구분합니다. 출력층에서 함께 움직이는 부류를 찾더라도, 그것이 비행기인지 새인지 맞히는 일은 별개의 문제입니다. 유명 데이터셋의 이름을 맞힌 결과만으로 두 능력을 모두 입증했다고 볼 수 있는지 실험합니다.
