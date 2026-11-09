@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-10 **Review**: [\[Repo Review\] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/129) — 검토 대기 · PR #129 · `d87411c`
 * 2026-11-09 **Review**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/128) — 병합 완료 · PR #128 · `9ee2679`
 * 2026-11-09 **Review**: [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/127) — 병합 완료 · PR #127 · `48c791b`
 * 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/125) — 병합 완료 · PR #125 · `93163eb`

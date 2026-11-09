@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/129) — 검토 대기 · AgentScope 콘솔의 입력이 모델 호출과 도구 실행을 거쳐 답변으로 돌아오는 흐름을 따라가며 승인 대기, 응답 취소, MCP, OpenTelemetry의 연결 지점을 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](2026/2026-11-09-weight-reading-audit-review.md) - Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
