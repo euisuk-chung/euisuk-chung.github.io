@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/125) — 검토 대기 · PR #125 · `93163eb`
 * 2026-11-09 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/124) — 병합 완료 · PR #124 · `fb83536`
 * 2026-11-09 **Review**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/123) — 병합 완료 · PR #123 · `e58fb0f`
 * 2026-11-09 **Review**: [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/122) — 병합 완료 · PR #122 · `d59e621`
