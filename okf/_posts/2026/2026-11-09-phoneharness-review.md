@@ -85,6 +85,16 @@ visual_sources:
     caption: "Task 109의 매물 탐색·가격 집계·메일 발송·검증 기록 한 행 (원문 PDF 영역 발췌)"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/hiyzcguaKAc"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=hiyzcguaKAc">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 휴대전화에서 매물 목록을 찾고, 상위 10개 가격의 평균을 내고, 막대그래프를 만들어 이메일로 보내 달라는 요청을 생각해 봅시다. 앱에서 매물을 찾는 동안에는 화면을 읽어야 합니다. 평균과 그래프는 코드로 계산할 수 있고, 발송 단계는 도구가 돌려준 결과와 수신자 기록으로 확인할 수 있습니다. PhoneHarness는 이 세 종류의 작업을 한 에이전트가 이어서 실행하도록 구성합니다. [원문 Figure 5](https://arxiv.org/pdf/2606.14832v1#page=10)
