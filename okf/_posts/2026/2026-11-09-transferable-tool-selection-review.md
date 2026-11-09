@@ -83,6 +83,16 @@ visual_sources:
     caption: "Figure 5, PDF 9쪽. 원본 영역 크롭, 번역 및 수치 변경 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/DkDMmNLRrwc"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=DkDMmNLRrwc">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 도구를 쓰는 AI 에이전트가 좋은 답을 내려면, 먼저 **어떤 도구가 필요한지** 알아야 합니다. 검색·예약·분석 API가 수천 개를 넘어가면 설명서를 모두 언어 모델에 넣을 수 없습니다. 검색기로 후보를 줄일 수는 있지만, 질문과 비슷한 설명을 찾는 일과 여러 요구사항을 빠짐없이 충족하는 도구 집합을 정하는 일은 다릅니다. 이 논문은 그 선택 작업을 작은 언어 모델에 학습시키면, 새로운 도구 목록이나 검색기를 만나도 재학습 없이 사용할 수 있는지 살펴봅니다. [초록·§1](https://arxiv.org/html/2610.31483v1#S1)
