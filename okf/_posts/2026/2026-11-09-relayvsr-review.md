@@ -64,6 +64,16 @@ visual_sources:
     caption: "1080p 처리량과 UDM10 LPIPS·DOVER 절충 (원문 PDF 영역 발췌)"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/dnz66KtPgSA"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=dnz66KtPgSA">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 흐릿한 동영상에서 창틀이나 글자 같은 작은 구조를 선명하게 만들려면, 개별 프레임의 디테일과 시간에 따른 일관성을 함께 복원해야 합니다. 대형 생성 모델은 그럴듯한 디테일을 합성할 수 있지만, 영상 전체를 처리하면 비용이 커집니다. **RelayVSR**은 대형 모델이 일정 간격의 키프레임에서만 참조 정보를 만들고, 경량 모델이 그 정보와 저해상도 영상으로 모든 프레임을 복원하는 4배 영상 초해상도 시스템입니다. [원문 §1](https://arxiv.org/html/2609.37850v1#S1)
