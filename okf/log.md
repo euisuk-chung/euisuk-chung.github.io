@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-09 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/124) — 검토 대기 · PR #124 · `fb83536`
+* 2026-11-09 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/124) — 병합 완료 · PR #124 · `fb83536`
 * 2026-11-09 **Review**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/123) — 병합 완료 · PR #123 · `e58fb0f`
 * 2026-11-09 **Review**: [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/122) — 병합 완료 · PR #122 · `d59e621`
 * 2026-11-09 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/121) — 병합 완료 · PR #121 · `36a4036`
@@ -119,6 +119,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-09 **Update**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](_posts/2026/2026-11-09-transferable-tool-selection-review.md) — `4c26b37`
 * 2026-11-09 **Creation**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](_posts/2026/2026-11-09-relayvsr-review.md) — `6bb3bce`
 * 2026-11-09 **Creation**: [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](_posts/2026/2026-11-09-phoneharness-review.md) — `47029a4`
 * 2026-11-09 **Update**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](_posts/2026/2026-11-09-weight-reading-audit-review.md) — `228f3da`
