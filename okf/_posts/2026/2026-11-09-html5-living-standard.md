@@ -168,4 +168,4 @@ HTML 4.01은 1999년에 나온 W3C 권고안입니다. 이 글에서는 ‘옛�
 </div>
 ```
 
-‘HTML5’라는 넓은 표현 안에는 여러 표준이 섞여 쓰이기도 합니다. `video`와 `popover`는 HTML 표준에서 정의합니다. JavaScript에서 네트워크에 요청하는 `fetch()`는 Fetch 표준에서, 위치를 요청하는 API는 Geolocation 표준에서 정의합니다. 모바일에서 읽기 좋은 배치는 HTML 구조 위에 적용하는 CSS와도 관련이 있습니다. 쓰려는 기능의 이름으로 해당 표준과 지원 범위를 확인하면, ‘HTML5를 지원한다’는 말보다 구체적으로 판단할 수 있습니다. [WHATWG HTML의 위치](https://html.spec.whatwg.org/multipage/introduction.html#where-does-this-specification-fit?) · [Fetch 표준](https://fetch.spec.whatwg.org/) · [Geolocation 표준](https://www.w3.org/TR/geolocation/)
+‘HTML5’라는 넓은 표현 안에는 여러 표준이 섞여 쓰이기도 합니다. `video`와 `popover`는 HTML 표준에서 정의합니다. JavaScript에서 네트워크에 요청하는 `fetch()`는 Fetch 표준에서, 위치를 요청하는 API는 Geolocation 표준에서 정의합니다. 모바일에서 읽기 좋은 배치는 HTML 구조 위에 적용하는 CSS와도 관련이 있습니다. 쓰려는 기능의 이름으로 해당 표준과 지원 범위를 확인하면, ‘HTML5를 지원한다’는 말보다 구체적으로 판단할 수 있습니다. [WHATWG HTML의 범위](https://html.spec.whatwg.org/multipage/introduction.html#scope) · [Fetch 표준](https://fetch.spec.whatwg.org/) · [Geolocation 표준](https://www.w3.org/TR/geolocation/)
