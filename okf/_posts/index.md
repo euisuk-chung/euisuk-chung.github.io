@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/128) — 검토 대기 · RelayVSR가 큰 생성 모델의 키프레임 참조를 경량 모델에서 재사용하는 원리와, 화질·처리량·입력 대기 사이의 관계를 분석합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](2026/2026-11-09-weight-reading-audit-review.md) - Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
