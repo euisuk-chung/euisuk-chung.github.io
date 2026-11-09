@@ -3,11 +3,12 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Repo Review\] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/129) — 검토 대기 · AgentScope 콘솔의 입력이 모델 호출과 도구 실행을 거쳐 답변으로 돌아오는 흐름을 따라가며 승인 대기, 응답 취소, MCP, OpenTelemetry의 연결 지점을 살펴봅니다.
+* [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/130) — 검토 대기 · Evo²가 하네스 편집과 진단을 한 정책으로 학습하는 방식, 교차 탐색과 궤적 복구, 코딩·기억 과제의 전이 및 가중치 비교를 분석합니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
+* [[Repo Review] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](2026/2026-11-10-agentscope-repo-review.md) - AgentScope 콘솔의 입력이 모델 호출과 도구 실행을 거쳐 답변으로 돌아오는 흐름을 따라가며 승인 대기, 응답 취소, MCP, OpenTelemetry의 연결 지점을 살펴봅니다.
 * [[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](2026/2026-11-09-weight-reading-audit-review.md) - Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
 * [AI 에이전트로 영상과 3D 만들기, 스킬과 도구 12가지](2026/2026-11-09-video-3d-agent-skills.md) - X에서 소개된 영상·모션·Blender·웹 3D 프로젝트 12개를 살펴보고, 만들고 싶은 결과물에 따라 제작 엔진과 에이전트 스킬을 고르는 기준을 정리합니다.
 * [[Paper Review] Training Small Language Models for Transferable Tool Selection](2026/2026-11-09-transferable-tool-selection-review.md) - 작은 Qwen3 모델이 계획·검색·선택을 SFT와 강화학습으로 익혀 새 도구 목록과 검색기로 전이하는 원리와 정확 일치 평가의 조건을 분석합니다.
