@@ -9,6 +9,7 @@
 * [[Repo Review] rea-video — 영상의 제작 흔적을 근거와 재제작 계획으로 바꾸는 구조](2026/2026-11-09-rea-video-repo-review.md) - 영상의 샷·픽셀·음향·시각 검토를 결합하는 rea-video의 처리 흐름과 재제작 경로를 추적하고 평가 수치의 분모·캐시·독립성 조건을 분석합니다.
 * [[Repo Review] Pixelfx — 코드로 그린 픽셀 효과에 동작과 타격감을 붙이는 방법](2026/2026-11-09-pixelfx-repo-review.md) - Pixelfx의 픽셀·빛 버퍼, 시드 기반 효과 재생, 3D 뼈대와 타격 정지, 스프라이트 출력 및 제작 스킬의 관찰·수정 흐름을 고정 커밋 코드로 분석합니다.
 * [[Paper Review] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](2026/2026-11-09-phoneharness-review.md) - PhoneHarness가 Android 작업을 GUI·CLI·MCP에 배분하고 상태 변화를 검증하는 방식과 124개 과제에서 나타난 성능 차이를 분석합니다.
+* [[개념] HTML5란 무엇인가 — HTML 4.01에서 오늘날의 웹 표준까지](2026/2026-11-09-html5-living-standard.md) - HTML 4.01과 현대 HTML로 같은 페이지를 작성해 문서 구조, 양식 검증, 미디어의 차이를 살펴보고 HTML Living Standard가 무엇인지 설명합니다.
 * [[Paper Review] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](2026/2026-11-08-raw-rag-review.md) - 원문 대화 검색과 재순위화만으로 구성한 Raw-RAG의 일곱 평가 설정과 근거 도달률·활용률·경로 보존 진단을 통해 복잡한 에이전트 기억의 효과와 비교 조건을 분석합니다.
 * [[Paper Review] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](2026/2026-11-07-autonomous-harness-adaptation-review.md) - 고정 모델이 ARC-AGI-3 하네스를 구성하고 두 번 수정한 27개 계보를 통해 개발 성능과 수정에 쓰지 않은 게임으로의 전이, 비용, 수정 과정의 신뢰도를 분석합니다.
 * [[Repo Review] NVIDIA Auto Ontology — 기업 메타데이터에서 질의 근거까지 이어지는 의미 계층](2026/2026-11-07-auto-ontology-repo-review.md) - NVIDIA Auto Ontology의 메타데이터 수집·의미 컴파일부터 자연어 SQL 생성·검증·실행과 MCP 연결까지 추적하고 인증·준비 상태·실패 처리의 실제 경계를 분석합니다.
