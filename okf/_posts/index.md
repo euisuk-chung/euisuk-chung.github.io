@@ -1,14 +1,9 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/133) — 검토 대기 · AI-Newton이 46개 모의 역학 실험에서 측정 절차를 개념으로 저장하고 기존 식에 항을 더해 뉴턴 역학의 법칙을 재발견하는 과정을 살펴봅니다.
-* [\[Repo Review\] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/132) — 검토 대기 · AI-Newton이 물리 시뮬레이션에서 관측값을 수집하고, Python과 Rust로 후보식을 찾은 뒤 Maple과 재실험으로 걸러내는 과정을 추적합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Repo Review] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](2026/2026-11-11-ai-newton-repo-review.md) - AI-Newton이 물리 시뮬레이션에서 관측값을 수집하고, Python과 Rust로 후보식을 찾은 뒤 Maple과 재실험으로 걸러내는 과정을 추적합니다.
+* [[Paper Review] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](2026/2026-11-11-ai-newton-paper-review.md) - AI-Newton이 46개 모의 역학 실험에서 측정 절차를 개념으로 저장하고 기존 식에 항을 더해 뉴턴 역학의 법칙을 재발견하는 과정을 살펴봅니다.
 * [[Paper Review] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](2026/2026-11-10-evo2-weight-harness-review.md) - Evo²가 하네스 편집과 진단을 한 정책으로 학습하는 방식, 교차 탐색과 궤적 복구, 코딩·기억 과제의 전이 및 가중치 비교를 분석합니다.
 * [[Repo Review] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](2026/2026-11-10-agentscope-repo-review.md) - AgentScope 콘솔의 입력이 모델 호출과 도구 실행을 거쳐 답변으로 돌아오는 흐름을 따라가며 승인 대기, 응답 취소, MCP, OpenTelemetry의 연결 지점을 살펴봅니다.
 * [[Paper Review] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](2026/2026-11-09-weight-reading-audit-review.md) - Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
