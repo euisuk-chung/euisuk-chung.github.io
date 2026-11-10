@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="540" viewBox="0 0 680 540" role="img" aria-labelledby="title desc">
+  <title id="title">AI-Newton의 실험 및 법칙 발견 흐름</title>
+  <desc id="desc">시뮬레이터의 관측값과 객체를 받아 Python이 탐색 대상을 고르고 Rust와 PCA가 후보식을 만듭니다. Maple의 중복 검사와 새 실험 조건을 통과한 후보를 일반화하고 지식과 탐색 상태를 저장합니다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#41536a"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="678" height="538" rx="22" fill="#f5f8fc" stroke="#b8c6d6"/>
+  <g font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" text-anchor="middle" fill="#142c42">
+    <text x="340" y="42" font-size="28" font-weight="700">AI-Newton의 발견 루프</text>
+    <g stroke="#41536a" stroke-width="2.6" marker-end="url(#arrow)">
+      <path d="M340 117 V136"/>
+      <path d="M340 194 V213"/>
+      <path d="M340 271 V290"/>
+      <path d="M340 348 V367"/>
+      <path d="M340 425 V444"/>
+      <path d="M566 475 H624 V164 H567" fill="none" stroke-dasharray="6 5"/>
+    </g>
+    <g font-size="22">
+      <rect x="114" y="61" width="452" height="56" rx="12" fill="#dcedff" stroke="#779dbc"/>
+      <text x="340" y="96">실험 설정과 관측 시계열</text>
+      <rect x="114" y="138" width="452" height="56" rx="12" fill="#dcedff" stroke="#779dbc"/>
+      <text x="340" y="173">Python · 실험과 개념 선택</text>
+      <rect x="114" y="215" width="452" height="56" rx="12" fill="#e2edf8" stroke="#779dbc"/>
+      <text x="340" y="250">Rust와 PCA · 후보식 탐색</text>
+      <rect x="114" y="292" width="452" height="56" rx="12" fill="#f9ead8" stroke="#b79365"/>
+      <text x="340" y="327">Maple 축약과 조건을 바꾼 재실험</text>
+      <rect x="114" y="369" width="452" height="56" rx="12" fill="#f9ead8" stroke="#b79365"/>
+      <text x="340" y="404">객체 타입으로 일반화 · 교차 실험</text>
+      <rect x="114" y="446" width="452" height="56" rx="12" fill="#d9eee7" stroke="#6e9d8b"/>
+      <text x="340" y="481">법칙·개념·탐색 상태 저장</text>
+    </g>
+    <text x="636" y="319" font-size="18" font-weight="600" transform="rotate(-90 636 319)">개념과 보상 재사용</text>
+  </g>
+</svg>
