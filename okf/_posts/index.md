@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/131) — 검토 대기 · Evo²가 하네스 편집과 진단을 한 정책으로 학습하는 방식, 교차 탐색과 궤적 복구, 코딩·기억 과제의 전이 및 가중치 비교를 분석합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](2026/2026-11-10-evo2-weight-harness-review.md) - Evo²가 하네스 편집과 진단을 한 정책으로 학습하는 방식, 교차 탐색과 궤적 복구, 코딩·기억 과제의 전이 및 가중치 비교를 분석합니다.
