@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/131) — 검토 대기 · PR #131 · `0dde344`
+* 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/131) — 병합 완료 · PR #131 · `0dde344`
 * 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/130) — 병합 완료 · PR #130 · `4ddeaa7`
 * 2026-11-10 **Review**: [\[Repo Review\] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/129) — 병합 완료 · PR #129 · `d87411c`
 * 2026-11-09 **Review**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/128) — 병합 완료 · PR #128 · `9ee2679`
@@ -125,6 +125,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-10 **Update**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](_posts/2026/2026-11-10-evo2-weight-harness-review.md) — `9d9f9fe`
 * 2026-11-10 **Creation**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](_posts/2026/2026-11-10-evo2-weight-harness-review.md) — `821884e`
 * 2026-11-10 **Creation**: [\[Repo Review\] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](_posts/2026/2026-11-10-agentscope-repo-review.md) — `e939229`
 * 2026-11-09 **Update**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](_posts/2026/2026-11-09-relayvsr-review.md) — `a631bd5`
