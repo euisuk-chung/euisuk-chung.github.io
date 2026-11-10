@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-11 **Review**: [\[Repo Review\] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/132) — 검토 대기 · PR #132 · `099fc2f`
 * 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/131) — 병합 완료 · PR #131 · `0dde344`
 * 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/130) — 병합 완료 · PR #130 · `4ddeaa7`
 * 2026-11-10 **Review**: [\[Repo Review\] AgentScope — 모델·도구 호출과 사용자 승인으로 보는 ReAct 루프](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/129) — 병합 완료 · PR #129 · `d87411c`
