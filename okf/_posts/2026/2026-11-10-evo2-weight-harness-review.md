@@ -78,6 +78,16 @@ visual_sources:
     caption: "Figure 3, PDF 10쪽. 원본 영역 크롭, 번역·수치 변경 없음. CC BY 4.0."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/2bjYi09HrDw"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=2bjYi09HrDw">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 하네스는 모델에 어떤 프롬프트와 도구를 주고, 실행 결과를 어떻게 읽어 다음 단계로 넘길지 정하는 프로그램입니다. 같은 모델도 하네스에 따라 다른 결과를 냅니다. Evo²는 하네스를 개선하는 모델도 학습할 수 있다는 데서 출발합니다. 어떤 코드 변경이 과제 점수를 높였고 어떤 진단이 효과 있는 수정으로 이어졌는지 기록해, 다음 탐색에서 더 나은 변경을 고르도록 개선 모델을 훈련합니다. [논문 초록](https://arxiv.org/abs/2610.13025v1)
