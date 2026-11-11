@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-11 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/134) — 검토 대기 · PR #134 · `52693cd`
+* 2026-11-11 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/134) — 병합 완료 · PR #134 · `52693cd`
 * 2026-11-11 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/133) — 병합 완료 · PR #133 · `7bcaafb`
 * 2026-11-11 **Review**: [\[Repo Review\] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/132) — 병합 완료 · PR #132 · `099fc2f`
 * 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/131) — 병합 완료 · PR #131 · `0dde344`
@@ -128,6 +128,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-11 **Update**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](_posts/2026/2026-11-11-ai-newton-paper-review.md) — `d7d00c0`
 * 2026-11-11 **Creation**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](_posts/2026/2026-11-11-ai-newton-paper-review.md) — `3324634`
 * 2026-11-11 **Creation**: [\[Repo Review\] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](_posts/2026/2026-11-11-ai-newton-repo-review.md) — `93d406e`
 * 2026-11-10 **Update**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](_posts/2026/2026-11-10-evo2-weight-harness-review.md) — `9d9f9fe`
