@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-11 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/134) — 검토 대기 · PR #134 · `52693cd`
 * 2026-11-11 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/133) — 병합 완료 · PR #133 · `7bcaafb`
 * 2026-11-11 **Review**: [\[Repo Review\] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/132) — 병합 완료 · PR #132 · `099fc2f`
 * 2026-11-10 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/131) — 병합 완료 · PR #131 · `0dde344`

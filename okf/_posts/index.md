@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/134) — 검토 대기 · AI-Newton이 46개 모의 역학 실험에서 측정 절차를 개념으로 저장하고 기존 식에 항을 더해 뉴턴 역학의 법칙을 재발견하는 과정을 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](2026/2026-11-11-ai-newton-repo-review.md) - AI-Newton이 물리 시뮬레이션에서 관측값을 수집하고, Python과 Rust로 후보식을 찾은 뒤 Maple과 재실험으로 걸러내는 과정을 추적합니다.
