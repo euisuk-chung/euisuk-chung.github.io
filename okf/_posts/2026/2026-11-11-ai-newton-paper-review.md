@@ -58,6 +58,16 @@ visual_sources:
     caption: "Figure 3, PDF 4쪽. 원본 그림 영역 크롭. CC BY 4.0."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/OeTxuB98MPU"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=OeTxuB98MPU">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 용수철에 연결된 공이 움직일 때 위치를 여러 번 기록하면, 그 궤적에 잘 맞는 식을 찾을 수 있습니다. 공이 부딪히거나 경사면을 내려가는 경우에도 각각 식을 구할 수 있습니다. 그런데 처음 찾은 식을 다음 실험에도 활용하려면 무엇을 기억해야 할까요? AI-Newton은 **실험에서 재사용할 수 있는 개념의 정의와, 그 개념을 조합한 법칙**을 함께 저장합니다. 예를 들어 공끼리 탄성 충돌할 때 찾은 운동에너지 보존식은 용수철이 움직이는 실험에서 그대로 성립하지 않습니다. 시스템은 그 불일치에서 출발해 어떤 항을 더하면 보존 관계를 회복할 수 있는지 탐색합니다. [원문 1쪽과 3쪽](https://arxiv.org/pdf/2504.01538v2#page=3)
 
 ## 논문 개요와 전체 구조
