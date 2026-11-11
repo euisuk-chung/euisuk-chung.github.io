@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/136) — 검토 대기 · 에이전트의 도구와 인수 선택을 결정 모델에 위임할 때 확신도 임계값, 실행 상태 학습, 배포 조건이 성공률과 비용에 어떻게 작용하는지 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](2026/2026-11-12-single-agent-loop-kit-review.md) - Anthropic의 Single Agent Loop Kit에서 서브에이전트 전환 절차, 스킬과 도구를 호출하는 Python 루프, 고객 지원 예제의 전후 평가를 따라갑니다.
