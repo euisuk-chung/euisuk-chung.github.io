@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/135) — 검토 대기 · Anthropic의 Single Agent Loop Kit에서 서브에이전트 전환 절차, 스킬과 도구를 호출하는 Python 루프, 고객 지원 예제의 전후 평가를 따라갑니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](2026/2026-11-11-ai-newton-repo-review.md) - AI-Newton이 물리 시뮬레이션에서 관측값을 수집하고, Python과 Rust로 후보식을 찾은 뒤 Maple과 재실험으로 걸러내는 과정을 추적합니다.
