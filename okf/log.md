@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-12 **Review**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/137) — 검토 대기 · PR #137 · `ab295b7`
 * 2026-11-12 **Review**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/136) — 병합 완료 · PR #136 · `522e3dd`
 * 2026-11-12 **Review**: [\[Repo Review\] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/135) — 병합 완료 · PR #135 · `b85ce0c`
 * 2026-11-11 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/134) — 병합 완료 · PR #134 · `52693cd`
