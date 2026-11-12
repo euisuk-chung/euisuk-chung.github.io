@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/139) — 검토 대기 · Collaborative Intelligence가 같은 과제를 혼자, 평상시 팀, 문제가 생긴 팀으로 나눠 실행하고 대화와 행동 기록을 점수로 바꾸는 과정을 추적합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](2026/2026-11-12-single-agent-loop-kit-review.md) - Anthropic의 Single Agent Loop Kit에서 서브에이전트 전환 절차, 스킬과 도구를 호출하는 Python 루프, 고객 지원 예제의 전후 평가를 따라갑니다.
