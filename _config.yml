@@ -11,6 +11,10 @@ baseurl: ""  # for example, '/blog' if your blog hosted on 'host/blog'
 # Publish posts or collection documents with a future date.
 future: true
 
+# Leave manual In-Article ads off until an actual AdSense ad unit ID is issued.
+# Auto ads use the head script and do not use data-ad-slot="auto".
+adsense_in_article_slot: ""
+
 # SNS settings
 RSS: false
 instagram_username: chung_es

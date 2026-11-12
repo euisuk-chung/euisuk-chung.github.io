@@ -1,0 +1,4 @@
+{%- comment -%}One eligibility rule for Google and Kakao, including review previews.{%- endcomment -%}
+{%- if page.layout == 'post' and page.ads != false and page.status != 'draft' and page.noindex != true and site.review_preview != true -%}
+true
+{%- endif -%}

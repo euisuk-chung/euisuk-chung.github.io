@@ -1,3 +1,5 @@
+{% capture ads_enabled %}{% include ads-enabled.html %}{% endcapture %}
+{% if ads_enabled == 'true' %}
 <!-- Kakao AdFit 광고 삽입 -->
 <ins class="kakao_ad_area" 
     style="display:none;width:100%;"
@@ -8,3 +10,4 @@
 <script async type="text/javascript" charset="utf-8" 
     src="https://t1.kakaocdn.net/kas/static/ba.min.js">
 </script>
+{% endif %}
