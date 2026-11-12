@@ -308,6 +308,19 @@ iframe은 화면 크기와 방향에 맞춰 자동으로 리사이즈됩니다.
   (`ca-pub-5020393432718583`), 루트 `ads.txt`에도 동일 ID가 기재돼 있어야 합니다.
 - **Kakao AdFit** — `_includes/ads.html` (`DAN-vJwtOu7THEmP3LXP`)
 
+광고 로딩 조건은 `_includes/ads-enabled.html`에서 공통으로 관리합니다.
+`post` 레이아웃의 게시글에만 로드하며, 검토용 프리뷰·`status: draft`·
+`noindex: true`·`ads: false`인 글에는 Google/Kakao 광고를 로드하지 않습니다.
+홈·아카이브·태그·소개·정책·연락처·404·오프라인 화면에도 광고를 로드하지 않습니다.
+AdSense 소유 확인용 `google-adsense-account` 메타 태그는 유지합니다.
+
+AdSense 수동 본문 광고는 `_config.yml`의 `adsense_in_article_slot`이 비어 있으면
+출력하지 않습니다. AdSense에서 본문 광고 단위를 만든 뒤 발급된 숫자 ID를
+문자열로 넣으세요. 숫자가 아닌 값은 출력하지 않으며, `auto`는 광고 단위 ID가 아닙니다.
+자동 광고는 게시글의 공통 스크립트를 사용하고 이 설정을 필요로 하지 않습니다.
+
+검증: `bundle exec ruby _scripts/test_ad_policy.rb`
+
 ---
 
 ## Analytics
@@ -337,6 +350,11 @@ twitter:
 Google Search Console 소유 확인 파일은 `google35d12b88d96acbcd.html`이며,
 `_config.yml`의 `include:` 목록에 들어가 있어야 배포됩니다 (`ads.txt`,
 `robots.txt`도 동일).
+
+404·오프라인 페이지는 `noindex: true`, `sitemap: false`로 검색 색인과
+사이트맵에서 제외합니다. 사이트맵은 JSON 데이터와 리디렉션 페이지를 제외하고,
+홈 URL은 한 번만 출력합니다. 다른 HTML 페이지도 `noindex: true` 또는
+`sitemap: false`로 제외할 수 있습니다.
 
 ---
 

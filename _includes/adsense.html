@@ -1,3 +1,7 @@
+{% capture ads_enabled %}{% include ads-enabled.html %}{% endcapture %}
+{% assign ad_slot = site.adsense_in_article_slot | default: '' | append: '' | strip %}
+{% assign non_digits = ad_slot | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' %}
+{% if ads_enabled == 'true' and ad_slot != '' and non_digits == '' %}
 <!-- Google AdSense In-Article Ad -->
 <div class="adsense-container" style="margin: 20px 0; text-align: center;">
   <ins class="adsbygoogle"
@@ -5,8 +9,9 @@
        data-ad-layout="in-article"
        data-ad-format="fluid"
        data-ad-client="ca-pub-5020393432718583"
-       data-ad-slot="auto"></ins>
+       data-ad-slot="{{ ad_slot }}"></ins>
   <script>
        (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
+{% endif %}

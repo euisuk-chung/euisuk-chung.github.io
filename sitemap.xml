@@ -10,7 +10,10 @@ layout: null
     <priority>1.0</priority>
   </url>
   {% for page in site.pages %}
-  {% if page.url != "/404.html" and page.url != "/feed.xml" and page.url != "/sitemap.xml" %}
+  {% assign last_char = page.url | slice: -1 %}
+  {% assign extension = page.url | split: '.' | last %}
+  {% if page.sitemap != false and page.noindex != true and page.layout != 'redirect' and page.url != '/' and page.url != '/index.html' and page.url != '/sitemap.xml' %}
+  {% if last_char == '/' or extension == 'html' %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: "index.html" | xml_escape }}</loc>
     {% if page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
@@ -18,14 +21,17 @@ layout: null
     <priority>0.8</priority>
   </url>
   {% endif %}
+  {% endif %}
   {% endfor %}
   {% for post in site.posts %}
+  {% if post.sitemap != false and post.noindex != true and post.redirect_to == nil %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ post.url | xml_escape }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  {% endif %}
   {% endfor %}
   {% for concept in site.concepts %}
   <url>

@@ -48,6 +48,8 @@ jobs:
         run: uv run --frozen --project _scripts python _scripts/okf_index.py --write
       - name: Test math rendering
         run: bundle exec ruby _scripts/test_review_math.rb
+      - name: Test ad policy and sitemap
+        run: bundle exec ruby _scripts/test_ad_policy.rb
       - name: Build published site
         run: bundle exec jekyll build --destination _site
       - name: Build isolated review previews from content only
