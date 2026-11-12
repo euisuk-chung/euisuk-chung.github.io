@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 576" role="img" aria-labelledby="title description">
+  <title id="title">Collaborative Intelligence의 기본 평가 흐름</title>
+  <desc id="description">공개 벤치마크 세트와 시나리오에서 단독 실행을 먼저 만듭니다. 단독 통과 시 평상시 팀과 문제가 생긴 팀을 실행합니다. 체커가 대화와 행동 로그를 판정하고 테스트 점수는 시드, 문항, 영역 순으로 집계합니다.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="9" refY="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="576" rx="24" fill="#f3f6fa"/>
+  <g font-family="system-ui, sans-serif" fill="#1b2a3e">
+    <text x="32" y="49" font-size="24" font-weight="700">문항에서 팀워크 점수까지</text>
+    <g stroke-width="2">
+      <rect x="240" y="74" width="320" height="62" rx="12" fill="#fff" stroke="#acb9cb"/>
+      <rect x="240" y="168" width="320" height="65" rx="12" fill="#dbeafe" stroke="#4e78aa"/>
+      <rect x="590" y="167" width="181" height="66" rx="12" fill="#fff" stroke="#acb9cb"/>
+      <rect x="54" y="283" width="310" height="70" rx="12" fill="#d9f4ee" stroke="#388679"/>
+      <rect x="436" y="283" width="310" height="70" rx="12" fill="#feedd7" stroke="#bd783b"/>
+      <rect x="139" y="402" width="522" height="64" rx="12" fill="#fff" stroke="#acb9cb"/>
+      <rect x="139" y="502" width="522" height="49" rx="12" fill="#edf0fb" stroke="#7d86b5"/>
+    </g>
+    <g fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)">
+      <path d="M400 136 V166"/>
+      <path d="M560 200 H588"/>
+      <path d="M400 234 V258 H209 V281"/>
+      <path d="M400 234 V258 H591 V281"/>
+      <path d="M209 354 V376 H337 V400"/>
+      <path d="M591 354 V376 H463 V400"/>
+      <path d="M400 468 V500"/>
+    </g>
+    <g text-anchor="middle">
+      <g font-size="21" font-weight="700">
+        <text x="400" y="101">공개 세트와 시나리오</text>
+        <text x="400" y="196">Alone · 단독 실행</text>
+        <text x="209" y="311">Baseline · 평상시 팀</text>
+        <text x="591" y="311">Test · 문제가 생긴 팀</text>
+        <text x="400" y="430">체커가 대화와 행동 기록을 판정</text>
+        <text x="400" y="534">Test 집계 · 시드 → 문항 → 영역 평균</text>
+      </g>
+      <g font-size="17" fill="#40516a">
+        <text x="400" y="124">final_set.json · episode.yaml · record.json</text>
+        <text x="400" y="219">seed 0 · 통과하면 팀 실행</text>
+        <text x="680" y="194">단독 미통과</text>
+        <text x="680" y="217">팀 실행 생략</text>
+        <text x="209" y="336">seed 0 · 평상시 스크립트</text>
+        <text x="591" y="336">seed 0·1·2 · 반응별 분기</text>
+        <text x="400" y="454">발언 · 분류 라벨 · 실행 상태 · 최종 답변</text>
+      </g>
+    </g>
+  </g>
+</svg>
