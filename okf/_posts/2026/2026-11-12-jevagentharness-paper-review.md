@@ -54,6 +54,16 @@ visual_sources:
     caption: "리뷰어 작성. §2의 Cascade와 §4의 도구·인수 처리를 근거로 결정별 확신도 분기를 그렸습니다."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/hBwuLVibi-E"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=hBwuLVibi-E">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 고객 지원 에이전트는 주문 번호를 조회하고, 누락된 정보를 묻고, 취소 API를 호출할 수 있습니다. 하네스는 이처럼 모델에 도구를 건네고, 실행 결과를 다음 단계에 돌려주는 프로그램입니다. JevAgentHarness는 하네스가 후보를 열거할 수 있는 단계에 별도의 **결정 모델**을 배치합니다. 결정 모델은 후보별 확률을 반환하고, 하네스는 해당 결정에 맞춰 정한 임계값으로 결과를 받아들일지 판단합니다. 주문을 조회할지 묻는 문제와 취소 사유를 고객에게 설명하는 문제에 서로 다른 호출 경로가 생깁니다. [원문 서론과 예시](https://arxiv.org/html/2610.21412v1#S1)
