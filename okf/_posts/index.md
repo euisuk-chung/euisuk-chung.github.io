@@ -3,11 +3,12 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/139) — 검토 대기 · Collaborative Intelligence가 같은 과제를 혼자, 평상시 팀, 문제가 생긴 팀으로 나눠 실행하고 대화와 행동 기록을 점수로 바꾸는 과정을 추적합니다.
+* [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/140) — 검토 대기 · 고객사에 배치된 에이전트가 숨은 제약을 찾아 운영 시스템을 개선할 때, 업무 지표와 연락 비용을 FDE-Gym이 어떻게 측정하는지 살펴봅니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
+* [[Repo Review] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](2026/2026-11-13-collaborative-intelligence-repo-review.md) - Collaborative Intelligence가 같은 과제를 혼자, 평상시 팀, 문제가 생긴 팀으로 나눠 실행하고 대화와 행동 기록을 점수로 바꾸는 과정을 추적합니다.
 * [[Repo Review] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](2026/2026-11-12-single-agent-loop-kit-review.md) - Anthropic의 Single Agent Loop Kit에서 서브에이전트 전환 절차, 스킬과 도구를 호출하는 Python 루프, 고객 지원 예제의 전후 평가를 따라갑니다.
 * [[Paper Review] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](2026/2026-11-12-jevagentharness-paper-review.md) - 에이전트의 도구와 인수 선택을 결정 모델에 위임할 때 확신도 임계값, 실행 상태 학습, 배포 조건이 성공률과 비용에 어떻게 작용하는지 살펴봅니다.
 * [[Repo Review] AI-Newton, 실험 데이터에서 보존식을 찾고 법칙으로 남기는 코드](2026/2026-11-11-ai-newton-repo-review.md) - AI-Newton이 물리 시뮬레이션에서 관측값을 수집하고, Python과 Rust로 후보식을 찾은 뒤 Maple과 재실험으로 걸러내는 과정을 추적합니다.

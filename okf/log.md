@@ -24,7 +24,8 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-13 **Review**: [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/139) — 검토 대기 · PR #139 · `b2b3f40`
+* 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/140) — 검토 대기 · PR #140 · `d89bf81`
+* 2026-11-13 **Review**: [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/139) — 병합 완료 · PR #139 · `b2b3f40`
 * 2026-11-12 **Review**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/137) — 병합 완료 · PR #137 · `ab295b7`
 * 2026-11-12 **Review**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/136) — 병합 완료 · PR #136 · `522e3dd`
 * 2026-11-12 **Review**: [\[Repo Review\] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/135) — 병합 완료 · PR #135 · `b85ce0c`
@@ -132,6 +133,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-13 **Creation**: [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](_posts/2026/2026-11-13-collaborative-intelligence-repo-review.md) — `e02da5f`
 * 2026-11-12 **Update**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](_posts/2026/2026-11-12-jevagentharness-paper-review.md) — `9ef8bc3`
 * 2026-11-12 **Creation**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](_posts/2026/2026-11-12-jevagentharness-paper-review.md) — `62aabae`
 * 2026-11-12 **Creation**: [\[Repo Review\] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](_posts/2026/2026-11-12-single-agent-loop-kit-review.md) — `e3b148d`
