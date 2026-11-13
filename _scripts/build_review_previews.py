@@ -28,10 +28,33 @@ def permitted(path):
 
 
 def preview_candidate(pr):
-    # Reports and other single-post content use codex/<slug> too. Branch names
+    # Reports and other content use codex/<slug> too. Branch names
     # select candidates; permitted() remains the content-only security boundary.
     return not pr['isCrossRepository'] and bool(
         re.fullmatch(r'codex/[a-z0-9][a-z0-9.-]*', pr['headRefName']))
+
+
+def index_pages(output, number, sha, posts):
+    entries = []
+    links = []
+    for post in posts:
+        _, year, month, day, slug = POST.fullmatch(post).groups()
+        url = f'/pr-preview/{number}/{year}/{month}/{day}/{slug}/'
+        if not (output / year / month / day / slug / 'index.html').is_file():
+            raise RuntimeError(f'Expected review page missing: {url}')
+        entries.append({'pr': number, 'sha': sha, 'path': post, 'url': url})
+        links.append(f'<a href="{html.escape(url, quote=True)}">{html.escape(f"{year}-{month}-{day} {slug}")}</a>')
+
+    head = ('<!doctype html><html lang="ko"><head><meta charset="utf-8">'
+            '<meta name="robots" content="noindex,nofollow"><title>리뷰 미리보기</title>')
+    if len(entries) == 1:
+        url = html.escape(entries[0]['url'], quote=True)
+        head += f'<meta http-equiv="refresh" content="0;url={url}">'
+        body = f'<a href="{url}">리뷰 미리보기</a>'
+    else:
+        body = '<h1>리뷰 미리보기</h1><ul>' + ''.join(f'<li>{link}</li>' for link in links) + '</ul>'
+    (output / 'index.html').write_text(head + '</head><body>' + body + '</body></html>')
+    return entries
 
 
 def main():
@@ -56,8 +79,8 @@ def main():
             raise RuntimeError(f'PR {number} changed during collection; rerun against fresh heads')
         paths = run('git', 'diff', '--name-only', '--diff-filter=AM', '--no-renames', f'HEAD...{sha}').decode().splitlines()
         posts = [p for p in paths if POST.fullmatch(p)]
-        if len(posts) != 1:
-            print(f'Skip PR {number}: expected one review post')
+        if not posts:
+            print(f'Skip PR {number}: no review posts')
             continue
         with tempfile.TemporaryDirectory(prefix='review-preview-') as tmp:
             source = Path(tmp) / 'source'
@@ -78,16 +101,7 @@ def main():
             subprocess.run(['bundle', 'exec', 'jekyll', 'build', '--source', str(source),
                             '--destination', str(output), '--baseurl', f'/pr-preview/{number}',
                             '--config', f'{source / "_config.yml"},{config}'], cwd=base, check=True)
-            match = POST.fullmatch(posts[0])
-            _, year, month, day, slug = match.groups()
-            url = f'/pr-preview/{number}/{year}/{month}/{day}/{slug}/'
-            if not (output / year / month / day / slug / 'index.html').is_file():
-                raise RuntimeError(f'Expected review page missing: {url}')
-            (output / 'index.html').write_text('<!doctype html><html lang="ko"><head><meta charset="utf-8">'
-                '<meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url='
-                + html.escape(url, quote=True) + '"></head><body><a href="' + html.escape(url, quote=True)
-                + '">리뷰 미리보기</a></body></html>')
-            manifest.append({'pr': number, 'sha': sha, 'path': posts[0], 'url': url})
+            manifest.extend(index_pages(output, number, sha, posts))
     (destination / 'pr-preview').mkdir(parents=True, exist_ok=True)
     (destination / 'pr-preview/manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     print(json.dumps(manifest, ensure_ascii=False, indent=2))
