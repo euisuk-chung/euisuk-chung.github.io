@@ -192,7 +192,8 @@ U_q&=\frac{\sum_{c\in\mathcal R(q)}\mathrm{score}(q,c)}{4|\mathcal R(q)|},\\
 
 ![웹 자료와 PIT 검색 환경에서 금융 그래프·질문 생성·전문가 검토·학습 환경으로 이어지는 FinanceGym 구성도]({{ '/img/reviews/2026/financeharness-paper-review/figure1-construction.png' | relative_url }})
 
-*Figure 1, PDF 4쪽. 웹 기사 필터링, FAISS와 PIT 저장소, 금융 개체 그래프와 상황 추출, 기준일 선정, 질문 생성, 큐레이션·균형화·전문가 검토를 연결합니다. 원문 그림 영역을 크롭했으며 패널을 재배열하거나 번역하지 않았습니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=4)*
+Figure 1, PDF 4쪽. 웹 기사 필터링, FAISS와 PIT 저장소, 금융 개체 그래프와 상황 추출, 기준일 선정, 질문 생성, 큐레이션·균형화·전문가 검토를 연결합니다. 원문 그림 영역을 크롭했으며 패널을 재배열하거나 번역하지 않았습니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=4)
+{: .caption}
 
 #### 3.1 Point-in-Time Financial Search Sandbox
 
@@ -202,9 +203,12 @@ U_q&=\frac{\sum_{c\in\mathcal R(q)}\mathrm{score}(q,c)}{4|\mathcal R(q)|},\\
 
 ![Figure 1의 상단 상세: 웹 코퍼스와 임베딩·FAISS 검색 환경, FinanceHarness 실행 계층]({{ '/img/reviews/2026/financeharness-paper-review/figure1-infrastructure.png' | relative_url }})
 
-*Figure 1 상단 상세, PDF 4쪽. 작은 라벨을 읽을 수 있도록 원본의 상단 영역을 추가 크롭했습니다. 전체 그림의 대체물이 아닌 상세 보기입니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=4)*
+Figure 1 상단 상세, PDF 4쪽. 작은 라벨을 읽을 수 있도록 원본의 상단 영역을 추가 크롭했습니다. 전체 그림의 대체물이 아닌 상세 보기입니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=4)
+{: .caption}
 
 이 설계에서 날짜는 단순 정렬 키가 아닙니다. 같은 질의라도 질문별 cutoff에 따라 이용 가능한 문서 집합이 달라집니다. 출판일 메타데이터를 검색 접근 제어까지 연결한다는 점이 PIT의 작동 원리입니다.
+
+어떤 기업의 분기 실적을 발표 당일 기준으로 설명하는 가상의 과제를 보겠습니다. 그날 공개된 공시에서 매출을 읽고, 다음 주 정정 공시는 기준일 이후이므로 검색에서 제외합니다. 답변에는 비교한 기간과 수치가 나온 문서를 함께 남깁니다. 같은 기업이라도 기준일에 따라 사용할 수 있는 증거가 달라집니다. [원문 방법](https://arxiv.org/html/2607.27853v2#S3.SS1)
 
 #### 3.2 FinanceGym: Situation-Driven Benchmark Construction
 
@@ -224,7 +228,8 @@ U_q&=\frac{\sum_{c\in\mathcal R(q)}\mathrm{score}(q,c)}{4|\mathcal R(q)|},\\
 
 ![Figure 1의 하단 상세: 상황 추출에서 기준일·질문 생성·품질 게이트·학습으로 이어지는 과정]({{ '/img/reviews/2026/financeharness-paper-review/figure1-generation.png' | relative_url }})
 
-*Figure 1 하단 상세, PDF 4쪽. 그래프 구축, 질문 생성, 큐레이션과 학습 패널을 원래 배치대로 크롭했습니다. 연결선과 패널명을 보존했습니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=4)*
+Figure 1 하단 상세, PDF 4쪽. 그래프 구축, 질문 생성, 큐레이션과 학습 패널을 원래 배치대로 크롭했습니다. 연결선과 패널명을 보존했습니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=4)
+{: .caption}
 
 #### 3.3 Evaluation Contract
 
@@ -292,7 +297,8 @@ Figure 5는 질문당 추정 비용과 전체 루브릭 점수의 관계를 그�
 
 ![질문당 추정 비용과 FinanceGym 점수를 비교하는 Figure 5; 오른쪽으로 갈수록 저렴하며 FinanceHarness 여러 모델 조합을 포함합니다]({{ '/img/reviews/2026/financeharness-paper-review/figure5-cost-quality.png' | relative_url }})
 
-*Figure 5, PDF 11쪽. 전체 루브릭 점수와 질문당 추정 비용의 frontier입니다. 그림 영역을 크롭했고 범례·축·log scale 방향·모델 라벨을 보존했습니다. Opus-5 조합은 Table 2의 표 행과 별도 범위입니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=11)*
+Figure 5, PDF 11쪽. 전체 루브릭 점수와 질문당 추정 비용의 frontier입니다. 그림 영역을 크롭했고 범례·축·log scale 방향·모델 라벨을 보존했습니다. Opus-5 조합은 Table 2의 표 행과 별도 범위입니다. [원문 v2](https://arxiv.org/pdf/2607.27853v2#page=11)
+{: .caption}
 
 다음 표는 원문 Table 2에서 비교 목적이 분명한 행을 발췌했습니다. 전체 18행을 모두 전사한 표가 아닙니다. Pre/Post는 기준일 전후 루브릭 점수이며, SE는 Overall의 bootstrap 표준오차입니다.
 

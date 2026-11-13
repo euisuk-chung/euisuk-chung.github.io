@@ -270,10 +270,12 @@ solver는 실제 질문을 풉니다. proposer는 solver의 답을 직접 대신
 ![고정 solver를 둘러싼 하네스를 proposer가 실행 보고서에 따라 수정하는 전체 과정]({{ '/img/reviews/2026/harness-learning-review/figure-1-harness-learning.png' | relative_url }})
 
 원문 Figure 1, PDF p.2. [2609.35738v1](https://arxiv.org/pdf/2609.35738v1#page=2), CC BY 4.0. 그림 영역을 크롭했으며 번역·재배열하지 않았습니다. 점선의 정책 갱신은 학습에만 해당하고, 하단 피드백은 다음 하네스 수정으로 이어집니다.
+{: .caption}
 
 ![Figure 1에서 실행 보고서와 proposer 및 검색·교체 코드 편집 부분을 확대한 상세 영역]({{ '/img/reviews/2026/harness-learning-review/figure-1-detail-edit.png' | relative_url }})
 
-Figure 1 상세 크롭, PDF p.2, 동일 출처·라이선스. 이 부분은 실행 보고서에서 코드를 수정하는 연결을 보여 줍니다. 예시 편집은 답을 검증하고 필요하면 재시도하는 흐름을 추가합니다.
+Figure 1 상세 크롭, PDF p.2, CC BY 4.0. 이 부분은 실행 보고서에서 코드를 수정하는 연결을 보여 줍니다. 예시 편집은 답을 검증하고 필요하면 재시도하는 흐름을 추가합니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=2)
+{: .caption}
 
 ### 보상, 평가 집합, 메타학습 목적
 
@@ -405,6 +407,8 @@ GRPO의 핵심은 모든 후보에 절대적인 정답 편집을 제공하지 �
 
 마지막으로 실제 구현은 각 수정의 즉시 성과를 최종 목적의 대리 목표로 사용한다고 밝힙니다. 따라서 Multistep RL의 여러 상태 학습과 장기 보상 최적화는 구별해야 합니다. 상태 분포는 바뀌지만 보상은 각 후보 자체의 실행 결과에 귀속됩니다.
 
+풀이기가 검색 문서에서 근거 한 줄을 놓친 가상의 실행을 보겠습니다. Proposer는 실행 보고서를 읽고, 풀이기가 답을 쓰기 전에 관련 문단을 한 번 더 찾도록 하네스 코드를 수정합니다. 같은 풀이기와 수정된 하네스로 과제를 다시 실행하고 검증 가능한 보상을 계산합니다. 이 보상은 풀이기를 호출하는 방식을 바꾼 수정안을 평가합니다. [원문 방법](https://arxiv.org/html/2609.35738v1#S4.SS2)
+
 #### 4.3 Training the proposer
 
 먼저 선택적 SFT 초기화입니다. 교사가 seed와 실행 보고서를 받아 편집을 생성하고, seed를 개선하며 품질 검사를 통과한 응답을 보존합니다. 이는 proposer가 자신의 실행 결과로 배우기 전에 성공적인 편집 형태를 익히게 합니다.
@@ -412,6 +416,7 @@ GRPO의 핵심은 모든 후보에 절대적인 정답 편집을 제공하지 �
 ![여덟 후보 하네스의 실행 보상에서 GRPO 갱신과 후속 상태 구성으로 이어지는 학습 과정]({{ '/img/reviews/2026/harness-learning-review/figure-2-training.png' | relative_url }})
 
 원문 Figure 2, PDF p.5. [2609.35738v1](https://arxiv.org/pdf/2609.35738v1#page=5), CC BY 4.0. 그림 영역 크롭, 번역·재배열 없음. 주황 점선은 proposer 갱신, 초록 흐름은 다단계 상태 학습에서 다음 보고서를 만드는 경로입니다.
+{: .caption}
 
 이어서 RL은 한 문맥의 후보들을 공통 scoring 질문에서 실행합니다. 이 질문은 입력 보고서를 만든 질문과 분리됩니다. task 점수에 유효성 보상을 더한 식 (6)으로 그룹 이점을 계산하며, 편집 실패 시 Reasoning Gym은 실패 전까지 획득한 유효성 점수만 받습니다. 명시적으로 변경하지 않겠다고 응답하면 부모를 실행해 점수를 구합니다.
 
@@ -432,10 +437,12 @@ Seed는 수정 전 코드이고 Base는 학습 전 proposer가 만든 수정입�
 ![본 계열과 미학습 계열의 단일 하네스 수정 점수 및 21개 미학습 계열 평균]({{ '/img/reviews/2026/harness-learning-review/figure-3-single-step.png' | relative_url }})
 
 원문 Figure 3, PDF p.6. [2609.35738v1](https://arxiv.org/pdf/2609.35738v1#page=6), CC BY 4.0. 전체 그림 영역 크롭, 번역·재배열 없음. 막대는 8개 시도 평균, 검은 선은 교사, 원은 held-out 점수로 선택한 oracle best-of-eight입니다.
+{: .caption}
 
 ![Figure 3c의 21개 미학습 계열 평균과 표준오차 및 oracle 점수 상세]({{ '/img/reviews/2026/harness-learning-review/figure-3c-ood.png' | relative_url }})
 
-Figure 3(c) 상세 크롭, PDF p.6, 동일 출처·라이선스. 색상은 회색 Base, 파랑 SFT, 빨강 RL, 짙은 회색 Teacher입니다. 오차 막대는 계열 간 한 표준오차이고 점선은 seed입니다. 원으로 표시한 최고 후보는 숨긴 평가 점수를 본 뒤 고른 값입니다.
+Figure 3(c) 상세 크롭, PDF p.6, CC BY 4.0. 색상은 회색 Base, 파랑 SFT, 빨강 RL, 짙은 회색 Teacher입니다. 오차 막대는 계열 간 한 표준오차이고 점선은 seed입니다. 원으로 표시한 최고 후보는 숨긴 평가 점수를 본 뒤 고른 값입니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=6)
+{: .caption}
 
 **Comparison with the teacher.** 같은 21개 계열에서 학습된 4B proposer의 평균 0.62는 교사 0.56보다 높지만, oracle best-of-eight는 RL 0.83, 교사 0.85로 교사가 높습니다. 학습은 후보 분포의 평균을 높였으며 최고 가능 후보에 대한 우열은 다릅니다. 고정 Python tool loop의 같은 집계 0.69도 RL 평균 0.62보다 높으므로 모든 기준선을 능가했다고 말할 수 없습니다.
 
@@ -444,10 +451,12 @@ Figure 3(c) 상세 크롭, PDF p.6, 동일 출처·라이선스. 색상은 회�
 ![15개 미학습 계열에서 다섯 라운드 수정과 독립 제안 예산을 비교한 전체 그림]({{ '/img/reviews/2026/harness-learning-review/figure-4-multistep.png' | relative_url }})
 
 원문 Figure 4, PDF p.7. [2609.35738v1](https://arxiv.org/pdf/2609.35738v1#page=7), CC BY 4.0. 전체 그림 영역 크롭, 번역·재배열 없음. (a,b)는 개발 점수로 유지한 하네스의 held-out 성능, (c)는 독립 평균·oracle과 순차 수정의 비교입니다.
+{: .caption}
 
 ![Figure 4a와 4b의 canonical 및 format-varied 수정 라운드 곡선 상세]({{ '/img/reviews/2026/harness-learning-review/figure-4ab-rounds.png' | relative_url }})
 
-Figure 4(a,b) 상세 크롭, PDF p.7, 동일 출처·라이선스. 회색 Base, 파랑 SFT, 빨강 Single-step RL, 보라 최종점 Multistep RL입니다. 전체 그림의 (c)와 범례도 위에 함께 보존했습니다.
+Figure 4(a,b) 상세 크롭, PDF p.7, CC BY 4.0. 회색 Base, 파랑 SFT, 빨강 Single-step RL, 보라 최종점 Multistep RL입니다. 전체 그림의 (c)와 범례도 위에 함께 보존했습니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=7)
+{: .caption}
 
 **Sequential versus independent revision.** 다섯 순차 제안으로 유지한 하네스는 여덟 독립 제안의 평균을 넘고 oracle best-of-eight에 접근하거나 이를 넘습니다. 다만 부록 B.1은 두 프로토콜의 지시문·보고서·부모·선택 방식도 다르다고 명시합니다. 이 비교는 실제 수정 프로토콜의 결과이며 피드백 자체의 효과만 분리한 실험은 아닙니다. [원문 §5.2](https://arxiv.org/html/2609.35738v1#S5.SS2)
 
@@ -458,16 +467,19 @@ Figure 4(a,b) 상세 크롭, PDF p.7, 동일 출처·라이선스. 회색 Base, 
 ![HotpotQA와 두 미학습 QA 벤치마크의 순차 수정 및 독립 수정 비교 전체]({{ '/img/reviews/2026/harness-learning-review/figure-5-qa.png' | relative_url }})
 
 원문 Figure 5, PDF p.8. [2609.35738v1](https://arxiv.org/pdf/2609.35738v1#page=8), CC BY 4.0. 전체 그림 영역 크롭, 번역·재배열 없음. (a–c) 실선은 4회 실행 평균, 점선은 실행들에서 지금까지 도달한 최고 held-out 점수입니다. (d,e)에는 독립 후보 평균과 열 라운드 최종 평균을 함께 표시합니다.
+{: .caption}
 
 ![Figure 5a부터 5c까지 QA의 열 라운드 held-out exact match 곡선 상세]({{ '/img/reviews/2026/harness-learning-review/figure-5abc-qa-rounds.png' | relative_url }})
 
-Figure 5(a–c) 상세 크롭, PDF p.8, 동일 출처·라이선스. 회색은 Base, 빨강은 Single-step RL, 보라는 Multistep RL입니다. 실선의 평균과 점선의 최고값은 서로 다른 통계입니다.
+Figure 5(a–c) 상세 크롭, PDF p.8, CC BY 4.0. 회색은 Base, 빨강은 Single-step RL, 보라는 Multistep RL입니다. 실선의 평균과 점선의 최고값은 서로 다른 통계입니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=8)
+{: .caption}
 
 **Sequential versus independent revision.** MuSiQue의 Single-step RL 독립 수정 평균은 정확히 0.1467이고 독립 평가 seed는 0.1438입니다. 반면 열 라운드 뒤 평균은 본문에서 약 0.27로 보고합니다. 두 미학습 벤치마크 모두 RL의 최종 실행 평균이 독립 후보 80개의 oracle 최고보다 높습니다. 이는 작은 독립 평균 개선만으로 반복 적응 능력을 판단하면 중요한 효과를 놓칠 수 있음을 보여 줍니다.
 
 ![Figure 5d와 5e의 MuSiQue와 2Wiki 독립 평균 및 순차 수정 평균 상세]({{ '/img/reviews/2026/harness-learning-review/figure-5de-qa-budget.png' | relative_url }})
 
-Figure 5(d,e) 상세 크롭, PDF p.8, 동일 출처·라이선스. 빨강은 Single-step RL, 보라는 Multistep RL이며, 옅은 막대는 독립 80개 평균, 진한 막대는 열 라운드 실행 4회의 최종 평균입니다. 원은 Oracle@8, 마름모는 독립 80개 최고, 삼각형은 4개 수정 사슬의 전 라운드 최고입니다. 범례 전체는 위의 원본 그림에 보존했습니다.
+Figure 5(d,e) 상세 크롭, PDF p.8, CC BY 4.0. 빨강은 Single-step RL, 보라는 Multistep RL이며, 옅은 막대는 독립 80개 평균, 진한 막대는 열 라운드 실행 4회의 최종 평균입니다. 원은 Oracle@8, 마름모는 독립 80개 최고, 삼각형은 4개 수정 사슬의 전 라운드 최고입니다. 범례 전체는 위의 원본 그림에 보존했습니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=8)
+{: .caption}
 
 여기서 예산을 정확히 구분해야 합니다. 순차 실행 하나는 10라운드×8후보=80개를 사용하므로 독립 풀 80개와 제안 수가 같습니다. 그러나 최종 평균은 그런 실행 4회의 통계이며 전체 320개 후보를 사용합니다. 전체 실행 중 최고값은 이 320개와 여러 라운드의 test 측정을 거친 값이므로 독립 80개 최고와 예산이 맞지 않습니다. 독립 수정은 seed 보고서 네 개를 공유하고 순차 수정은 중간 하네스의 새 피드백을 얻습니다. 총 계산량·피드백도 통제된 비교가 아닙니다. [원문 §5.3·부록 D.4](https://arxiv.org/html/2609.35738v1#A4.SS4)
 
@@ -484,10 +496,12 @@ Reasoning Gym에서 Multistep RL은 canonical 최종점에서는 Single-step RL�
 ![추론 및 QA의 실패율과 생성 하네스 구조 및 도구 조합을 분석한 전체 그림]({{ '/img/reviews/2026/harness-learning-review/figure-6-analysis.png' | relative_url }})
 
 원문 Figure 6, PDF p.9. [2609.35738v1](https://arxiv.org/pdf/2609.35738v1#page=9), CC BY 4.0. 전체 그림 영역 크롭, 번역·재배열 없음. (a–c)는 Reasoning Gym 신뢰성·구조·조합, (d,e)는 QA 신뢰성·유지된 하네스 구조입니다.
+{: .caption}
 
 ![Figure 6a부터 6c까지 Reasoning Gym의 실패율과 interpreter 구조 및 도구 조합 상세]({{ '/img/reviews/2026/harness-learning-review/figure-6abc-reasoning.png' | relative_url }})
 
-Figure 6(a–c) 상세 크롭, PDF p.9, 동일 출처·라이선스. 조합 막대의 실색은 구조적 조합, 빗금은 답에 기여한 기능적 조합입니다. 비율의 분모는 패널과 실험별로 다릅니다.
+Figure 6(a–c) 상세 크롭, PDF p.9, CC BY 4.0. 조합 막대의 실색은 구조적 조합, 빗금은 답에 기여한 기능적 조합입니다. 비율의 분모는 패널과 실험별로 다릅니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=9)
+{: .caption}
 
 QA의 진단도 벤치마크·방법별 320개 후보를 대상으로 RL 이후 실패 또는 0점 비율의 큰 감소를 보여 줍니다. 저자는 더 많은 유효 후보가 반복 선택의 진전을 도울 수 있다고 해석합니다. 이는 후보 신뢰성의 변화에 관한 분석이며, 모든 점수 이득을 이 요인 하나로 설명하는 인과 분해는 아닙니다. [원문 §6.1·Table 10](https://arxiv.org/html/2609.35738v1#A3.T10)
 
@@ -499,7 +513,8 @@ QA의 진단도 벤치마크·방법별 320개 후보를 대상으로 RL 이후 
 
 ![Figure 6d와 6e의 QA 실패율 및 passage와 summary 기반 검색 구조 상세]({{ '/img/reviews/2026/harness-learning-review/figure-6de-qa.png' | relative_url }})
 
-Figure 6(d,e) 상세 크롭, PDF p.9, 동일 출처·라이선스. (e)는 세 벤치마크의 유지된 하네스를 합친 방법별 120개 감사입니다. Passages는 원문 단락, Summaries는 solver 요약에서 답하는 다중 홉 구조이며 나머지는 단일 호출 또는 solver 제거입니다. 색상 범례 전체는 위 원본 그림에 있습니다.
+Figure 6(d,e) 상세 크롭, PDF p.9, CC BY 4.0. (e)는 세 벤치마크의 유지된 하네스를 합친 방법별 120개 감사입니다. Passages는 원문 단락, Summaries는 solver 요약에서 답하는 다중 홉 구조이며 나머지는 단일 호출 또는 solver 제거입니다. 색상 범례 전체는 위 원본 그림에 있습니다. [원문 출처](https://arxiv.org/pdf/2609.35738v1#page=9)
+{: .caption}
 
 마지막으로 QA에서 RL은 다중 홉 검색 구조를 보존하며 Base는 때때로 단일 호출로 축소하거나 solver를 없앱니다. 흔한 RL 편집은 첫 홉 요약을 다음 검색어 생성에는 쓰되, 최종 답변에는 검색된 원문 단락을 직접 제공합니다. 검색어 구성에 필요한 정보와 정답 근거를 분리하는 수정입니다. 다른 편집은 세 번째 검색 홉을 추가하거나, 초안 답이 검색 단락에 없으면 추가 검색합니다. 원문 Figure 7과 HTML Figure 15(PDF Figure 12)는 이런 변경을 보여 줍니다. [원문 §6.2](https://arxiv.org/html/2609.35738v1#S6.SS2)
 

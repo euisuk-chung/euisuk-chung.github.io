@@ -225,6 +225,8 @@ $`I_k`$와 $`F_k`$는 다른 시점을 봅니다. 아직 배운 적 없는 업�
 
 **챕터의 핵심 기여:** 순차적 경험의 효과를 최종 점수 하나로 압축하지 않고, 학습 전·학습 직후·전체 종료를 구분하는 평가 틀을 제공합니다. **다음 챕터로의 연결:** 정의한 업무 변화와 지표를 실제 벤치마크에 적용합니다. [원문 §3](https://arxiv.org/html/2610.25858v1#S3)
 
+가상의 업무 스트림에서 코드 검색에 익숙한 에이전트가 도구 호출 업무를 연달아 받았다고 하겠습니다. 도구 호출 점수가 초기보다 오르고 코드 검색 점수가 내려갔다면, 새 업무를 학습하는 가소성과 이전 성능을 보존하는 안정성이 서로 다른 방향으로 움직인 것입니다. 마지막 구간 점수 하나로 집계하면 이전 업무에서 생긴 변화가 가려질 수 있습니다. [원문 방법](https://arxiv.org/html/2610.25858v1#S3.SS2)
+
 ### 📖 **Chapter 4: Experiments**
 
 **챕터의 위치와 역할:** 공통 실험 조건에서 전체 결과를 제시한 다음, 자기수정과 기억 검색의 서로 다른 실패 메커니즘을 순서대로 분석합니다.
@@ -254,7 +256,8 @@ Topic에서는 SQL이라는 큰 작업은 같지만 데이터베이스 스키마
 
 ![세 방법과 네 drift 조건의 업무군별 seed 대비 정확도 변화]({{ '/img/reviews/2026/continual-learners-review/figure-1-learning-dynamics.png' | relative_url }})
 
-*원문 Figure 1, PDF 8쪽. 그림 영역 크롭, 내용·패널 순서 변경 없음. 곡선의 단위는 pp.이며 작은 눈금은 원본 이미지로 확대해 확인할 수 있습니다. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=8), CC BY 4.0.*
+원문 Figure 1, PDF 8쪽. 그림 영역 크롭, 내용·패널 순서 변경 없음. 곡선의 단위는 pp.이며 작은 눈금은 원본 이미지로 확대해 확인할 수 있습니다. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=8), CC BY 4.0.
+{: .caption}
 
 먼저 전체 성능은 대체로 개선됩니다. 아래는 Table 1의 네 스트림 평균을 옮긴 것입니다. 각 수치는 각 방법의 seed 대비 pp.이고, 안정성은 0에 가까울수록 좋습니다.
 
@@ -270,7 +273,8 @@ Meta-Harness는 더 넓은 수정 자유도를 갖지만 모든 조건에서 더
 
 ![가소성과 안정성의 조건별 산점도 및 전체 12개 조합의 상관관계]({{ '/img/reviews/2026/continual-learners-review/figure-2-plasticity-stability.png' | relative_url }})
 
-*원문 Figure 2, PDF 9쪽. 그림 영역 크롭, 내용 변경 없음. 오른쪽은 4개 조건 × 3개 방법의 12점과 회귀선·95% 신뢰구간입니다. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=9), CC BY 4.0.*
+원문 Figure 2, PDF 9쪽. 그림 영역 크롭, 내용 변경 없음. 오른쪽은 4개 조건 × 3개 방법의 12점과 회귀선·95% 신뢰구간입니다. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=9), CC BY 4.0.
+{: .caption}
 
 Figure 2에는 r = −0.72, p = 0.008이 보고되어 있습니다. 이는 해당 12개 방법·조건 조합에서 P와 S의 음의 상관관계에 관한 값입니다. 개별 방법 간 정확도 차이가 유의하다는 검정 결과와 같은 의미가 아닙니다. [원문 §4.2, Table 1, Figure 2](https://arxiv.org/html/2610.25858v1#S4.SS2)
 
@@ -282,7 +286,8 @@ Figure 2에는 r = −0.72, p = 0.008이 보고되어 있습니다. 이는 해�
 
 ![GEPA 공유 지침의 업무별 문자 비중과 BFCL-Miss의 추가 질문 비율 변화]({{ '/img/reviews/2026/continual-learners-review/figure-3-forgetting-mechanisms.png' | relative_url }})
 
-*원문 Figure 3, PDF 10쪽. (a) topic, (b) compound의 프롬프트 구성, (c) BFCL-Miss의 질문 행동을 원래 패널 순서대로 크롭했습니다. 수치 변경 없음. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=10), CC BY 4.0.*
+원문 Figure 3, PDF 10쪽. (a) topic, (b) compound의 프롬프트 구성, (c) BFCL-Miss의 질문 행동을 원래 패널 순서대로 크롭했습니다. 수치 변경 없음. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=10), CC BY 4.0.
+{: .caption}
 
 **Spontaneous additive updates across distant domains are fragile.** 덮어쓰기가 언제나 생기는 것은 아닙니다. Domain drift에서는 GEPA가 기존 ScienceWorld 여섯 절을 그대로 두고 BFCL·BIRD 절을 덧붙입니다. 전략 길이는 4,372 → 5,650 → 7,621자로 늘고 평균 post-block forgetting은 0.0pp.입니다. 그러나 같은 방법이 compound의 도메인 전환에서는 SQL 절을 압축합니다. 저자는 이 추가형 보존 행동이 안정적으로 나타나지 않는다고 설명합니다. 프롬프트가 길어진다는 사실 자체가 망각 방지를 보장하는 결과는 아닙니다.
 
@@ -298,7 +303,8 @@ Figure 2에는 r = −0.72, p = 0.008이 보고되어 있습니다. 이는 해�
 
 ![다른 업무군 기억을 검색한 비율과 질문 임베딩의 최근접 cosine similarity]({{ '/img/reviews/2026/continual-learners-review/figure-4-retrieval-collision.png' | relative_url }})
 
-*원문 Figure 4, PDF 11쪽. 원래 (a) 검색 비율과 (b) 유사도 행렬을 함께 크롭했으며 축·범례·패널 순서를 보존했습니다. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=11), CC BY 4.0.*
+원문 Figure 4, PDF 11쪽. 원래 (a) 검색 비율과 (b) 유사도 행렬을 함께 크롭했으며 축·범례·패널 순서를 보존했습니다. [고정 버전 원문](https://arxiv.org/pdf/2610.25858v1#page=11), CC BY 4.0.
+{: .caption}
 
 마지막에는 BFCL-Miss 평가의 52%가 BFCL-Base 기억을, BFCL-Base의 46%가 BFCL-Miss 기억을 가져옵니다. Workflow에서 ReasoningBank의 BFCL-Miss 이득은 +12.5 → +4.5pp.로 줄어 8.0pp.를 잃습니다. 저장된 기억을 삭제하지 않았는데도, **현재 요청에 맞지 않는 기억이 선택되어 행동상 망각이 나타난 것**입니다. 이 실험에서 cosine similarity가 포착하는 주제 유사성과 절차 호환성이 다르다는 것이 저자의 결론입니다. [원문 §4.4, Figure 4, Table 4](https://arxiv.org/html/2610.25858v1#S4.SS4)
 

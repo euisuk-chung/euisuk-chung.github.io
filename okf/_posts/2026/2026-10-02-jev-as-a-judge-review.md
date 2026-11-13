@@ -106,9 +106,8 @@ $`p_1(A,B)`$는 A를 먼저 보여주었을 때 첫 위치의 답변이 낫다�
 
 ![JEV가 라벨 확률의 최댓값을 임계값과 비교하여 판정을 수용하거나 강한 판정기를 호출하는 흐름]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-2-routing.png' | relative_url }})
 
-[그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-2-routing.png' | relative_url }})
-
-*원문 Figure 2, PDF 2쪽. [2609.26550v2](https://arxiv.org/pdf/2609.26550v2#page=2)에서 그림 영역을 크롭했으며 번역·수치 수정은 없습니다. 그림의 확률은 설명용 예시입니다.*
+원문 Figure 2, PDF 2쪽. [2609.26550v2](https://arxiv.org/pdf/2609.26550v2#page=2)에서 그림 영역을 크롭했으며 번역·수치 수정은 없습니다. 그림의 확률은 설명용 예시입니다. [그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-2-routing.png' | relative_url }})
+{: .caption}
 
 정확도는 무효 호출까지 분모에 포함합니다. 반면 확률 평가에는 유효 출력만 사용합니다. Brier 점수는 모든 클래스에서 예측 확률과 정답 지시값 사이 제곱오차를 더한 값이고, 음의 로그우도(NLL)는 실제 정답에 낮은 확률을 줄수록 커집니다. NLL 계산에서는 확률 하한을 $`10^{-6}`$으로 둡니다. ECE는 확신도를 10개 구간으로 나누어 확신도와 관측 정확도의 차이를 측정합니다. 오류 탐지 AUROC는 $`1-q`$로 오답을 높은 순위에 놓는 능력입니다. **확률이 실제 빈도와 맞는 보정 성질과 오류 순위화 능력은 서로 다른 평가 대상**입니다. [원문 §4·7](https://arxiv.org/html/2609.26550v2#S4)
 
@@ -177,9 +176,8 @@ GPT-6는 가장 비싸고 순서 변화에 안정적이며 최종 답안과 Judg
 
 ![능력별 JEV와 GPT-6의 정확도 차이, 다른 판정기의 오답 수에 따른 난도, 문체별 차이를 비교한 세 패널]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-4-operating-boundary.png' | relative_url }})
 
-[그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-4-operating-boundary.png' | relative_url }})
-
-*원문 Figure 4, PDF 7쪽. [v2 그림](https://arxiv.org/pdf/2609.26550v2#page=7)을 크롭했으며 번역·수치 수정은 없습니다. 왼쪽은 능력별 차이와 95% 구간, 가운데는 다른 13개 모델의 오답 수에 따른 난도, 오른쪽은 RM-Bench의 문체 조건입니다.*
+원문 Figure 4, PDF 7쪽. [v2 그림](https://arxiv.org/pdf/2609.26550v2#page=7)을 크롭했으며 번역·수치 수정은 없습니다. 왼쪽은 능력별 차이와 95% 구간, 가운데는 다른 13개 모델의 오답 수에 따른 난도, 오른쪽은 RM-Bench의 문체 조건입니다. [그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-4-operating-boundary.png' | relative_url }})
+{: .caption}
 
 **The gap sits at middle difficulty.** JEV와 GPT-6를 제외한 13개 모델의 오답 개수로 난도를 정의합니다. 모두 맞힌 3,286개에서는 JEV 99.8%, GPT-6 99.7%이고, 10개 이상이 틀린 311개에서는 둘 다 9.6%입니다. 차이는 3–5개 모델이 틀린 구간의 13.1%p, 6–9개가 틀린 구간의 15.3%p에 집중됩니다. 쉬운 문제의 불규칙한 실패보다 추론 모델은 여전히 풀지만 JEV는 어려워하는 중간 난도가 주된 차이입니다.
 
@@ -197,9 +195,8 @@ GPT-6는 가장 비싸고 순서 변화에 안정적이며 최종 답안과 Judg
 
 ![JEV 확신도 구간별로 같은 항목에서 JEV와 GPT-6 정확도를 비교하고 각 구간의 표본 수를 표시한 그래프]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-5-confidence.png' | relative_url }})
 
-[그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-5-confidence.png' | relative_url }})
-
-*원문 Figure 5, PDF 10쪽. [v2 그림](https://arxiv.org/pdf/2609.26550v2#page=10)을 크롭했으며 번역·수치 수정은 없습니다. 두 모델을 각자 다른 확신도 구간에 넣은 비교가 아니라 JEV 확신도로 선택한 동일 항목의 비교입니다.*
+원문 Figure 5, PDF 10쪽. [v2 그림](https://arxiv.org/pdf/2609.26550v2#page=10)을 크롭했으며 번역·수치 수정은 없습니다. 두 모델을 각자 다른 확신도 구간에 넣은 비교가 아니라 JEV 확신도로 선택한 동일 항목의 비교입니다. [그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-5-confidence.png' | relative_url }})
+{: .caption}
 
 `Who is confidently wrong?`은 분모의 중요성을 보여줍니다. 단일 호출에서 JEV의 확신도 0.9 이상 오답률은 RewardBench 24/1,155=2.1%, JudgeBench 9/138=6.5%입니다. 이 오답이 전체 JEV 오류에서 차지하는 비중은 각각 21%, 12%입니다. **고확신 항목 중 오류율**과 **전체 오류 중 고확신 오류의 비율**은 다릅니다. JudgeBench에서는 오류 대부분을 넘길 수 있어도 남겨 둔 항목이 GPT-6보다 안전하다고 단정할 수 없습니다.
 
@@ -244,6 +241,8 @@ L&\geq -0.02.
 
 여기서 $`d`$는 각 항목에서 캐스케이드와 fallback의 정답 점수 차이이며, $`\bar d`$는 평균, $`s_d`$는 표준편차, $`k`$는 선택용 라벨 수입니다. 1.645는 단측 95% 하한에 쓰인 계수입니다. 평균이 기준을 만족하는지만 보지 않고 추정 불확실성까지 고려합니다. $`k=96`$에서 단일 임계값의 손실 초과율은 44.0%에서 5.2%로 줄고, 작업별 임계값을 따로 고르면 0.6%입니다. 다만 같은 자료 집합을 재사용한 탐색적 모의실험이므로 분포 이동을 반영하지 않습니다. 다음 절이 새 작업에서 이 절차를 검증합니다. [원문 §8·Table 3–4·부록 K Table 30](https://arxiv.org/html/2609.26550v2#S8)
 
+두 순서의 판정에서 ‘원래 답변 A가 더 낫다’의 확률이 각각 0.94와 0.88이라고 가정하겠습니다. 순서를 원래 라벨로 맞춘 뒤 평균하면 0.91이므로 0.90 문턱을 넘고 JEV 판정을 수용합니다. 두 번째 확률이 0.82였다면 평균은 0.88이므로 GPT-6에 넘깁니다. 두 호출의 확률을 평균하기 전에 같은 답변을 가리키도록 맞춰야 합니다. [원문 방법](https://arxiv.org/html/2609.26550v2#S8)
+
 ### 📖 **Chapter 9: A prospective live test**
 
 이 절은 모델을 한 번도 호출하기 전에 프로토콜을 고정한 별도 실험입니다. PPE 정답성 500쌍은 MMLU-Pro·MATH·GPQA·MBPP-Plus·IFEval에서 각 100쌍을 뽑고, JudgeBench Claude-3.5-Sonnet 분할은 전체 270쌍을 사용합니다. 후자의 답변은 새롭지만 질문 91개는 앞선 GPT-4o 분할과 겹칩니다. 이를 감추지 않고 별도 분석합니다.
@@ -260,9 +259,8 @@ L&\geq -0.02.
 
 ![PPE와 새 JudgeBench 분할에서 임계값별 비용 및 평균 지연시간과 정확도를 비교하고 실제 적용 임계값을 원으로 표시한 그래프]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-9-prospective.png' | relative_url }})
 
-[그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-9-prospective.png' | relative_url }})
-
-*원문 Figure 9, PDF 16쪽. [v2 그림](https://arxiv.org/pdf/2609.26550v2#page=16)을 크롭했으며 번역·수치 수정은 없습니다. 원으로 표시한 임계값만 실제 정책으로 실행했고, 나머지 점은 동일 출력의 재계산입니다. 오른쪽 가로축은 중앙값이 아닌 평균 지연시간입니다.*
+원문 Figure 9, PDF 16쪽. [v2 그림](https://arxiv.org/pdf/2609.26550v2#page=16)을 크롭했으며 번역·수치 수정은 없습니다. 원으로 표시한 임계값만 실제 정책으로 실행했고, 나머지 점은 동일 출력의 재계산입니다. 오른쪽 가로축은 중앙값이 아닌 평균 지연시간입니다. [그림 원본 확대]({{ '/img/reviews/2026/jev-as-a-judge-review/figure-9-prospective.png' | relative_url }})
+{: .caption}
 
 일반 임계값 0.9를 그대로 쓰는 반사실적 계산에서는 전체 59.8%를 넘겨 비용 61.9%, 정확도 89.6%로 GPT-6보다 0.53%p 낮아집니다. 더 낮은 0.8에서는 3.0%p를 잃습니다. IFEval의 확신도 AUROC는 0.57로 다른 PPE 출처 0.69–0.81보다 약합니다. 알려진 질문 57쌍과 새로운 질문 113쌍에서 배포 정책의 동률이 모두 유지된 점도 확인합니다. 이 절의 결론은 저비용 단계가 약할 때 더 많이 지출하도록 한 절차가 실제 새 표본에서도 작동했다는 것입니다. [원문 §9·Table 5](https://arxiv.org/html/2609.26550v2#S9)
 

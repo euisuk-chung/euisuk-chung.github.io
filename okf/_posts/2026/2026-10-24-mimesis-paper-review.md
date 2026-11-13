@@ -157,13 +157,15 @@ Hoang Phan 등은 Qwen3.5 기반 4B·9B 사용자 시뮬레이터를 학습하�
 
 ![MIMESIS의 사용자 학습 단계와 고정된 사용자 시뮬레이터를 이용한 에이전트 학습 전체 구조]({{ '/img/reviews/2026/mimesis-paper-review/figure-03-training-overview.png' | relative_url }})
 
-*Figure 3, PDF 3페이지. 위쪽은 사용자 모델 학습, 가운데는 에이전트 학습, 아래쪽은 두 종류의 평가입니다. 같은 v2 PDF에서 그림 영역만 크롭했으며 번역·재배열하지 않았습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=3)*
+Figure 3, PDF 3페이지. 위쪽은 사용자 모델 학습, 가운데는 에이전트 학습, 아래쪽은 두 종류의 평가입니다. 같은 v2 PDF에서 그림 영역만 크롭했으며 번역·재배열하지 않았습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=3)
+{: .caption}
 
 가운데 단계의 파란 실선은 공개 사용자 발화와 에이전트 답변의 교환입니다. 빨간 점선 경로는 사용자 모델의 생성된 thought와 후속 반응을 코칭으로 바꾸는 **훈련 전용 경로**입니다. 아래 리뷰어 도식과 본문의 수식에서 이 둘을 분리해 읽는 것이 중요합니다.
 
 ![공개 대화와 훈련 전용 비공개 코칭을 분리한 CSD 흐름도]({{ '/img/reviews/2026/mimesis-paper-review/csd-public-private-flow.svg' | relative_url }})
 
-*리뷰어 작성 도식. Figure 3과 §5.2의 정보 흐름을 재구성했습니다. 원문 그림이 아니며, 공개 대화의 진행과 사후 코칭을 구분하기 위한 설명입니다. 주황색 정보는 배포 입력이 아닙니다. [원문 §5.2](https://arxiv.org/html/2610.09484v2#S5.SS2)*
+리뷰어 작성 도식. Figure 3과 §5.2의 정보 흐름을 재구성했습니다. 원문 그림이 아니며, 공개 대화의 진행과 사후 코칭을 구분하기 위한 설명입니다. 주황색 정보는 배포 입력이 아닙니다. [원문 §5.2](https://arxiv.org/html/2610.09484v2#S5.SS2)
+{: .caption}
 
 핵심 기호는 다음과 같습니다.
 
@@ -189,7 +191,8 @@ Hoang Phan 등은 Qwen3.5 기반 4B·9B 사용자 시뮬레이터를 학습하�
 
 ![같은 GPT-5.5 에이전트의 성공률이 사용자 모델 선택에 따라 달라지는 τ-bench 결과]({{ '/img/reviews/2026/mimesis-paper-review/figure-02-task-difficulty.png' | relative_url }})
 
-*Figure 2, PDF 2페이지. 실제 사용자 기준에서 벗어나는 성공률 차이(%p)를 표시합니다. v2 PDF의 그래프만 크롭했으며 축·오차막대·모델명·숫자를 보존했습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=2)*
+Figure 2, PDF 2페이지. 실제 사용자 기준에서 벗어나는 성공률 차이(%p)를 표시합니다. v2 PDF의 그래프만 크롭했으며 축·오차막대·모델명·숫자를 보존했습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=2)
+{: .caption}
 
 인간 기준 63.6%에 대해 MIMESIS-4B는 65.5%, MIMESIS-9B는 66.1%입니다. 이는 이 고정 에이전트·해당 평가에서 인간 성공률에 가까웠다는 뜻입니다. 모든 과제에서 사람과 동일하다는 뜻도, 시뮬레이터가 더 쉬우면 에이전트가 더 좋아졌다는 뜻도 아닙니다. Figure 2의 핵심 비교 대상은 **사용자를 바꾸기 전후의 동일 에이전트**입니다.
 
@@ -286,13 +289,15 @@ ThoughtTrace에서 반복되는 13개 행동을 도출하고 ABCD 고객지원 �
 
 ![RealUserSim PT3의 다섯 행동 차원에서 모델별 인간 참조 궤적 일치율을 비교한 레이더 그래프]({{ '/img/reviews/2026/mimesis-paper-review/figure-04-fidelity.png' | relative_url }})
 
-*Figure 4, PDF 7페이지. 왼쪽부터 frontier API, 공개 시뮬레이터, 사전학습 모델 비교이며, 바깥쪽일수록 인간 참조와의 일치율이 높습니다. 같은 v2 PDF에서 그림만 크롭했습니다. 작은 축 글씨의 의미와 주요 수치는 아래 문단과 부록 B에서 풀어 설명합니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=7)*
+Figure 4, PDF 7페이지. 왼쪽부터 frontier API, 공개 시뮬레이터, 사전학습 모델 비교이며, 바깥쪽일수록 인간 참조와의 일치율이 높습니다. 같은 v2 PDF에서 그림만 크롭했습니다. 작은 축 글씨의 의미와 주요 수치는 아래 문단과 부록 B에서 풀어 설명합니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=7)
+{: .caption}
 
 frontier 모델과의 차이는 아래 왼쪽 패널 상세에서 확인할 수 있습니다. 파란 실선·점선은 각각 MIMESIS-9B·4B이며, 정보 흐름(Interact)과 대화 속도·진행(Pacing)에서의 차이를 비교합니다.
 
 ![Figure 4의 왼쪽 패널 상세: MIMESIS와 frontier API 모델의 행동 충실도]({{ '/img/reviews/2026/mimesis-paper-review/figure-04-frontier-panel.png' | relative_url }})
 
-*Figure 4 왼쪽 Frontier APIs 패널 상세, PDF 7페이지. 원문 전체 그림을 위에 보존하고, 축·패널명·범례를 포함한 왼쪽 패널만 추가 크롭했습니다. 원문 데이터를 재배열하거나 번역하지 않았습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=7)*
+Figure 4 왼쪽 Frontier APIs 패널 상세, PDF 7페이지. 원문 전체 그림을 위에 보존하고, 축·패널명·범례를 포함한 왼쪽 패널만 추가 크롭했습니다. 원문 데이터를 재배열하거나 번역하지 않았습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=7)
+{: .caption}
 
 두 번째 평가는 RealUserSim PT3입니다. MIMESIS-9B의 Fidelity Index는 **94.0**, 4B는 **89.7**, 가장 강한 baseline Claude-Opus-5는 **80.6**입니다. 9B의 차이 13.4점은 persona 복원만의 개선이 아닙니다. persona는 GPT-5.5도 99.3으로 이미 높으며, MIMESIS의 큰 이점은 **정보 흐름 91.3 대 69.5, pacing 91.2 대 72.5**입니다. 정적인 인물 설정보다 대화에서 무엇을 언제 말하는지가 중요하다는 해석을 뒷받침합니다.
 
@@ -366,19 +371,23 @@ $`\mathcal C`$는 코칭이 붙은 응답의 토큰 위치에 대한 경험 분�
 
 이 보조 손실의 기울기는 student만 갱신합니다. teacher 점수, 코칭 모델, 사용자 시뮬레이터로 역전파하지 않습니다. rollout과 배포에서 사용하는 정책은 여전히 공개 이력만 조건으로 갖습니다. 논문의 private thought는 사람이 직접 제공하는 실시간 마음 정보가 아니며, 실제 사용 시 이를 요구하지 않습니다.
 
+가상의 예약 변경에서 사용자가 ‘오후 시간만 가능해요’라고 답하면 이 말은 공개 대화에 남습니다. ‘시간대를 더 일찍 확인했다면 조회를 한 번 줄일 수 있었다’는 사후 코칭은 훈련용 교사가 참고합니다. 배포된 학생은 공개 대화를 읽고 다음 행동을 결정합니다. [원문 방법](https://arxiv.org/html/2610.09484v2#S5.SS2)
+
 #### 5.3 Agent evaluation
 
 실험은 두 비교를 분리합니다. **GPT-5.5+GRPO 대 MIMESIS-9B+GRPO**는 훈련 상대의 효과, **MIMESIS-9B+GRPO 대 같은 상대+CSD**는 코칭 목적 함수의 추가 효과를 봅니다. 평가는 8개 Gym 환경에서 하며 그중 3개는 에이전트 훈련에서 제외합니다. 9개 평가 사용자 모델 모두 두 훈련 사용자와 다릅니다.
 
 ![9개 미지 사용자 모델 각각에서 GRPO와 CSD로 학습한 에이전트의 집계 점수를 비교한 원문 표]({{ '/img/reviews/2026/mimesis-paper-review/table-02-agent-transfer.png' | relative_url }})
 
-*Table 2, PDF 9페이지. 8개 환경의 저자 보고 집계 점수를 9개 평가 사용자별로 비교합니다. 원문 표 영역만 크롭했으며 번역·수치 변경하지 않았습니다. 아래에 핵심 수치를 다시 설명합니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=9)*
+Table 2, PDF 9페이지. 8개 환경의 저자 보고 집계 점수를 9개 평가 사용자별로 비교합니다. 원문 표 영역만 크롭했으며 번역·수치 변경하지 않았습니다. 아래에 핵심 수치를 다시 설명합니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=9)
+{: .caption}
 
 9개 사용자에 걸친 보고 평균은 **26.10 → 29.54 → 31.09**입니다. “9개 모두”는 **각 사용자별 환경 집계값**이 개선됐다는 뜻이며, 모든 개별 환경에서 CSD가 가장 높다는 뜻은 아닙니다. Table 15·16의 세부 결과는 부록 D에서 다룹니다.
 
 ![동일한 MIMESIS-9B 사용자 아래 CSD와 GRPO의 100단계 훈련 및 검증 보상 곡선]({{ '/img/reviews/2026/mimesis-paper-review/figure-05-optimization.png' | relative_url }})
 
-*Figure 5, PDF 9페이지. 같은 훈련 사용자에서 100 optimization step 동안의 보상 곡선입니다. v2 PDF의 그래프만 크롭했습니다. 원문 가로축·실선과 점선·범례를 보존했습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=9)*
+Figure 5, PDF 9페이지. 같은 훈련 사용자에서 100 optimization step 동안의 보상 곡선입니다. v2 PDF의 그래프만 크롭했습니다. 원문 가로축·실선과 점선·범례를 보존했습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=9)
+{: .caption}
 
 Figure 5에서 CSD는 초기 구간 이후 검증 보상이 GRPO보다 높습니다. 이 비교는 훈련 상대가 같다는 점에서 코칭 추가의 기여를 읽기 좋습니다. 다만 곡선상의 보상을 사람 대상 실사용 성능이나 통계적 유의성으로 치환할 수는 없습니다.
 
@@ -528,7 +537,8 @@ Mistakes 과제에서 Qwen3.5-9B의 정확도는 60.7, 답변 전 생성 단어 
 
 ![추론 지도 유무에 따른 Mistakes 정확도와 답변 전 생성 단어 수 중앙값]({{ '/img/reviews/2026/mimesis-paper-review/figure-10-reasoning.png' | relative_url }})
 
-*Figure 10, PDF 25페이지. 막대는 정확도(왼쪽 축), 검은 선은 답변 전 단어 수 중앙값(오른쪽 로그 축)입니다. 같은 v2 PDF에서 전체 그래프와 범례를 크롭했으며 값을 변경하지 않았습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=25)*
+Figure 10, PDF 25페이지. 막대는 정확도(왼쪽 축), 검은 선은 답변 전 단어 수 중앙값(오른쪽 로그 축)입니다. 같은 v2 PDF에서 전체 그래프와 범례를 크롭했으며 값을 변경하지 않았습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=25)
+{: .caption}
 
 이 결과가 뒷받침하는 주장은 이 설정에서 **추론을 출력할 수 있도록 훈련하는 과정이 단순한 추론 스위치보다 중요했다**는 것입니다. 단어 수가 길수록 언제나 성능이 좋다거나 생성된 추론이 인간의 진짜 사고라는 증거는 아닙니다.
 
@@ -540,7 +550,8 @@ Figure 11은 4B·9B의 RL 과정에서 reasoning 활성화가 기록된 SOUL 점
 
 ![현실적 행동 목표를 포함하거나 제외했을 때의 세 시뮬레이션 평가 결과]({{ '/img/reviews/2026/mimesis-paper-review/figure-12-behavior-ablation.png' | relative_url }})
 
-*Figure 12, PDF 26페이지. 파란색은 행동 목표 포함, 주황색은 제외 조건입니다. v2 PDF의 세 패널을 원래 순서 그대로 크롭했습니다. 오른쪽 SimulatorArena는 Turing distance이므로 낮을수록 좋습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=26)*
+Figure 12, PDF 26페이지. 파란색은 행동 목표 포함, 주황색은 제외 조건입니다. v2 PDF의 세 패널을 원래 순서 그대로 크롭했습니다. 오른쪽 SimulatorArena는 Turing distance이므로 낮을수록 좋습니다. [원문 PDF](https://arxiv.org/pdf/2610.09484v2#page=26)
+{: .caption}
 
 Figure 13은 행동별 15개씩 총 195개 held-out 시나리오와 neutral 49개에서 500 step 동안 평가합니다. aggregate behavior reward는 9B에서 0.647→0.875, 4B에서 0.572→0.839입니다. 큰 개선은 행동 표현과 적절한 시점에서 나타나며 자연스러움도 높아집니다. task consistency 변화는 9B +0.03, 4B −0.01이고 neutral 협조성은 둘 다 0.98–0.99입니다. 조건을 주지 않았는데 항상 비협조적인 사용자가 된 것은 아니라는 통제 결과입니다.
 

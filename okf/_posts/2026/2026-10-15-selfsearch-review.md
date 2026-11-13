@@ -145,7 +145,8 @@ capability 계보는 부족한 능력을 해결할 재사용 도구·절차에, 
 
 ![현재 에이전트가 편집 가능한 자기 복사본과 이전 에피소드 기록을 이용해 후속 에이전트와 새 기록을 만드는 SelfSearch 구조]({{ '/img/reviews/2026/selfsearch-review/figure-1-selfsearch.png' | relative_url }})
 
-*Figure 1, PDF 2쪽. 같은 버전 PDF의 그림 영역을 크롭했으며 번역·수치 변경은 없습니다. 쌓인 상자는 병렬 계보를 나타내고, 구현과 기록은 서로 다른 산출물로 다음 세대에 전달됩니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S1.F1)*
+Figure 1, PDF 2쪽. 같은 버전 PDF의 그림 영역을 크롭했으며 번역·수치 변경은 없습니다. 쌓인 상자는 병렬 계보를 나타내고, 구현과 기록은 서로 다른 산출물로 다음 세대에 전달됩니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S1.F1)
+{: .caption}
 
 **4. 보상 부재의 범위와 가설을 명확히 합니다.** 탐색에는 downstream 과제·평가 결과를 제공하지 않습니다. 그러나 파일 조회, 도구 오류, 로컬 검사 결과는 사용할 수 있습니다. 저자의 가설은 생소한 코드 조사, 오류 진단, 수정 구현, 효과 확인이 자기 수정과 downstream 작업 모두에 필요하다는 것입니다. 따라서 자기 수정을 개선하는 도구가 실제 과제에도 도움이 될 수 있습니다.
 
@@ -234,7 +235,8 @@ GPT Terminal의 표기값 차이는 55.1−43.8=11.3 percentage points이지만 
 
 ![Terminal-Bench 2.1의 과제당 비용과 성공률을 함께 나타낸 그래프, GPT와 DeepSeek에서 초기·capability·adaptive 지점을 비교]({{ '/img/reviews/2026/selfsearch-review/figure-2-accuracy-cost.png' | relative_url }})
 
-*Figure 2, PDF 5쪽. 동일 버전 PDF 그림 크롭이며 축·범례와 모든 지점을 보존했습니다. 가로축은 US cents이며 위 표의 dollar와 단위가 다릅니다. 점선은 평가된 에이전트 중 성공률·비용 frontier의 점들을 연결합니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S3.F2)*
+Figure 2, PDF 5쪽. 동일 버전 PDF 그림 크롭이며 축·범례와 모든 지점을 보존했습니다. 가로축은 US cents이며 위 표의 dollar와 단위가 다릅니다. 점선은 평가된 에이전트 중 성공률·비용 frontier의 점들을 연결합니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S3.F2)
+{: .caption}
 
 저자들은 공통 성공 집합도 별도로 비교합니다. DeepSeek adaptive의 Multilingual 성공률은 전체 60개에서 5.0 percentage points 높아졌고, **두 에이전트가 모두 성공한 39개 과제에서 비용이 38.5% 줄었습니다.** 성공률 분모 60과 비용 비교 분모 39를 한 문장 안에서도 구분해야 합니다. [3.2절·Table 10](https://arxiv.org/html/2609.37968v2#A4.T10)
 
@@ -323,6 +325,8 @@ DeepSeek Pro로 탐색한 capability 구현을 DeepSeek Flash로 실행해 공�
 
 **DeepSeek search-output repair.** 5세대 adaptive는 긴 검색 출력의 앞뒤만 남겼는데, 일치 텍스트가 가운데 있으면 사라질 수 있었습니다. 6세대 capability가 이 기록을 읽고 일치 지점을 중심으로 excerpt를 보여주도록 고칩니다. 7세대 adaptive는 실패를 재현하고 상대의 수정을 가져와 일치 텍스트가 보이는지 검사합니다. 뒤에서는 파일 조회·수정 시 tab과 줄바꿈을 보존하는 변경도 이루어집니다. 이는 논문이 실제 기록에서 분석한 실패·복구 사례입니다. [4.2절·부록 E.1](https://arxiv.org/html/2609.37968v2#S4.SS2)
 
+가령 기록에서 테스트 오류의 앞부분만 남고 호출 위치가 잘렸다고 하겠습니다. Improver가 기록을 보고, 로그 전체 대신 호출 이름 주변을 찾는 도구를 자기 복사본에 추가할 수 있습니다. 다음 과제는 그 도구로 호출 경로를 추적할 수 있습니다. 원문의 검색 도구 사례를 기록과 재사용 단계로 나눈 예입니다. [원문 방법](https://arxiv.org/html/2609.37968v2#S4.SS2)
+
 #### 4.3 Downstream Use of Evolved Tools
 
 최종 두 에이전트를 각각 269개 과제(120+60+89)에서 관찰합니다. 두 계보 평균으로 텍스트 검색을 사용한 과제 비율은 GPT 8.6%, DeepSeek 23.6%, 행 범위 조회는 40.3%, 33.8%입니다. **호출 횟수의 비율이 아니라 해당 연산을 한 번 이상 쓴 과제의 비율**입니다. 상세 집계는 부록 E.2에 있습니다.
@@ -331,13 +335,15 @@ GPT trajectory reader는 downstream에서 한 번도 호출되지 않았습니�
 
 ![잘린 에피소드 기록이 검색 도구 개발을 유도하고 그 도구가 Sphinx 과제의 호출 코드 조사에 재사용되는 세 패널]({{ '/img/reviews/2026/selfsearch-review/figure-3-tool-transfer.png' | relative_url }})
 
-*Figure 3, PDF 8쪽. 같은 버전 PDF의 전체 패널을 크롭했으며 번역·코드·수치 변경은 없습니다. 왼쪽의 잘린 기록, 가운데 검색 도구 추가, 오른쪽 실제 과제의 코드 검색으로 이어집니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S4.F3)*
+Figure 3, PDF 8쪽. 같은 버전 PDF의 전체 패널을 크롭했으며 번역·코드·수치 변경은 없습니다. 왼쪽의 잘린 기록, 가운데 검색 도구 추가, 오른쪽 실제 과제의 코드 검색으로 이어집니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S4.F3)
+{: .caption}
 
 그림을 왼쪽부터 읽으면 세 단계가 드러납니다. **왼쪽**에서는 이전 trajectory를 길게 출력하다 응답이 잘려 필요한 오류 내용을 얻지 못합니다. **가운데**에서는 파일 경로와 검색어를 입력받아 파일 위치와 일치 excerpt를 돌려주는 `editor.search`를 추가합니다. **오른쪽**에서는 이 도구로 Sphinx 저장소의 `signature_from_str(` 호출을 찾아 함수와 호출 코드의 연결을 조사합니다. 잘린 기록을 읽기 위해 만든 기능이 새 과제의 코드 검증에 쓰인 것입니다.
 
 ![Figure 3 중앙 상세: 출력이 잘린 경험을 근거로 editor.search 검색 도구의 입력과 출력을 정의하는 패널]({{ '/img/reviews/2026/selfsearch-review/figure-3-tool-detail.png' | relative_url }})
 
-*Figure 3 중앙 패널 상세, PDF 8쪽. 전체 그림을 위에 유지하면서 작은 도구 설명을 읽을 수 있도록 중앙 패널만 추가 크롭했습니다. 번역·코드 변경은 없습니다. 입력은 path·query이고 출력은 파일 위치와 일치 excerpt입니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S4.F3)*
+Figure 3 중앙 패널 상세, PDF 8쪽. 전체 그림을 위에 유지하면서 작은 도구 설명을 읽을 수 있도록 중앙 패널만 추가 크롭했습니다. 번역·코드 변경은 없습니다. 입력은 path·query이고 출력은 파일 위치와 일치 excerpt입니다. [원문 그림](https://arxiv.org/html/2609.37968v2#S4.F3)
+{: .caption}
 
 Sphinx 사례에서 GPT capability는 함수를 수정한 뒤 검색 도구로 관련 테스트와 호출 코드를 찾고, 호출 코드를 조사하고 테스트를 실행합니다. 자기 수정 기록을 읽기 위해 만든 검색 기능이 실제 저장소의 검증에도 재사용된 사례입니다. 도구 사용률만으로 성능 개선의 모든 원인을 분리해 증명하는 것은 아니며, 논문은 제거 실험과 사례·기록 분석을 함께 제시합니다.
 
