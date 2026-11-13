@@ -19,6 +19,10 @@ sources:
 status: "stable"
 year: "2026"
 visual_sources:
+  - path: "/img/reviews/2026/rooftop-chill-intro/sansa-courtyard.jpg"
+    kind: "service-screenshot"
+    source_url: "https://sansatemple.com/"
+    caption: "동자승 캐릭터들이 돌길을 따라 법당으로 향하는 산사 마당. 산사 공식 사이트에서 직접 캡처."
   - path: "/img/reviews/2026/rooftop-chill-intro/office-entry.jpg"
     kind: "service-screenshot"
     source_url: "https://rooftop-chill.lovable.app/"
@@ -52,6 +56,11 @@ visual_sources:
 ## 온라인 절을 보고 회사 옥상을 떠올렸습니다 {#온라인-산사에서-회사-옥상으로}
 
 얼마 전 바이브 코딩으로 만든 [온라인 절 산사](https://sansatemple.com/)가 화제였습니다. 브라우저에서 돌길을 따라 법당에 들어가 염주를 굴리거나 절을 할 수 있는 곳입니다. 앉아 있는 자리는 그대로인데, 캐릭터를 움직여 돌길을 걷다 보면 잠깐 다른 데 다녀온 기분이 들더라고요. [산사를 만든 개발자의 인터뷰](https://www.yna.co.kr/view/AKR20261031034300005)
+
+![산사 마당의 돌길 위 동자승 캐릭터들과 연등이 켜진 법당]({{ '/img/reviews/2026/rooftop-chill-intro/sansa-courtyard.jpg' | relative_url }})
+
+*동자승 캐릭터로 돌길을 따라 법당에 들어가는 산사 마당. 출처: [산사 공식 사이트](https://sansatemple.com/) 직접 캡처.*
+
 
 산사 이야기를 하다가 이런 질문이 나왔습니다. “회사에서도 잠깐 저렇게 쉬다 올 곳이 있으면 어떨까?” 그러다 나온 말이 **회사, 심호흡, 그리고 일탈(?)**이었습니다. 회의가 끝나고 다음 일정까지 어중간하게 시간이 남을 때, 업무 화면을 잠깐 덮고 숨을 돌리는 정도의 일탈이요. 그 장면에 어울리는 곳을 떠올리다 보니 회사 옥상이 나왔습니다.
 
