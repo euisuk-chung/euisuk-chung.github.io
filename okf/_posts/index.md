@@ -1,13 +1,8 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/153) — 검토 대기 · Épi가 분기·계층형 기억·고정 검증으로 세션을 잇고, 수학 기록과 알고리즘 설계 성과를 어떤 기준으로 입증하는지 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Paper Review] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](2026/2026-11-14-epi-research-agent-review.md) - Épi가 분기·계층형 기억·고정 검증으로 세션을 잇고, 수학 기록과 알고리즘 설계 성과를 어떤 기준으로 입증하는지 살펴봅니다.
 * [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 아이디어를 얻어, 닉네임으로 수다를 나누고 게임과 간식 뽑기를 즐기는 온라인 회사 옥상 한숨두숨을 만들었습니다.
 * [[Paper Review] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](2026/2026-11-13-fde-gym-paper-review.md) - 고객사에 배치된 에이전트가 숨은 제약을 찾아 운영 시스템을 개선할 때, 업무 지표와 연락 비용을 FDE-Gym이 어떻게 측정하는지 살펴봅니다.
 * [[Repo Review] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](2026/2026-11-13-collaborative-intelligence-repo-review.md) - Collaborative Intelligence가 같은 과제를 혼자, 평상시 팀, 문제가 생긴 팀으로 나눠 실행하고 대화와 행동 기록을 점수로 바꾸는 과정을 추적합니다.
