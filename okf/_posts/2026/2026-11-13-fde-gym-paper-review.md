@@ -105,6 +105,12 @@ visual_sources:
     page: 8
     figure: "Figure 5"
     caption: "Dongxu Yang 외, CC BY 4.0. 원 PDF에서 핵심 사실 확보율과 개선도, 모델 사용료와 점수의 관계를 그린 두 패널을 잘라냈습니다."
+  - path: "/img/reviews/2026/fde-gym-paper-review/figure-7-scenario-scores.png"
+    kind: "paper-figure"
+    source_url: "https://arxiv.org/html/2610.22350v1#S5.F7"
+    page: 10
+    figure: "Figure 7"
+    caption: "Dongxu Yang 외, CC BY 4.0. 시나리오별 L3 평균 점수를 비교한 논문 v1의 Figure 7."
 ---
 
 <!-- paper-video:start -->
@@ -135,7 +141,8 @@ Dongxu Yang 외 25명의 2026년 10월 15일 제출본을 다룹니다. 원문�
 
 ![FDE-Gym 과제 입력에서 에이전트의 읽기·질문·수정·테스트, 배포와 평가를 거쳐 점수가 계산되는 흐름]({{ '/img/reviews/2026/fde-gym-paper-review/figure-3-task-components.png' | relative_url }})
 
-*Figure 3. 평가용 트래픽은 제출된 시스템을 통과합니다. 아래 축은 무변경 기준선, 문자 그대로의 구현, 지름길, 전문가 해법에 대한 과제 채택 기준을 보여 줍니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 그림 영역을 잘라냈습니다.* [원문 그림](https://arxiv.org/html/2610.22350v1#S2.F3) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+Figure 3. 평가용 트래픽은 제출된 시스템을 통과합니다. 아래 축은 무변경 기준선, 문자 그대로의 구현, 지름길, 전문가 해법에 대한 과제 채택 기준을 보여 줍니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 그림 영역을 잘라냈습니다. [원문 그림](https://arxiv.org/html/2610.22350v1#S2.F3) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 **식 (1)의 정규화된 업무 개선도** $`U`$는 배포 시스템이 기존 시스템에서 개선한 양을 전문가 해법의 개선량으로 나눕니다. 세 KPI는 동일한 평가 데이터에서 구합니다. 0이면 기존 시스템과 같고, 1이면 전문가 해법과 같은 개선량입니다. 음수는 기존 시스템보다 업무 결과가 나빠졌다는 뜻입니다. [원문 식 (1)](https://arxiv.org/html/2610.22350v1#S2.E1)
 
@@ -199,7 +206,8 @@ L0는 설계에 필요한 사실을 제공해도 어떤 시스템을 만들지 �
 
 ![시추 원본 과제의 요청과 실제 문제, 올바른 귀속과 잘못된 귀속을 반영하는 KPI 및 L3 평가 결과]({{ '/img/reviews/2026/fde-gym-paper-review/figure-4-drilling-example.png' | relative_url }})
 
-*Figure 4. 시추 사례의 결과는 `oil_npt` 원본 과제에 해당합니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 그림 영역을 잘라냈습니다.* [원문 그림](https://arxiv.org/html/2610.22350v1#S2.F4) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+Figure 4. 시추 사례의 결과는 `oil_npt` 원본 과제에 해당합니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 그림 영역을 잘라냈습니다. [원문 그림](https://arxiv.org/html/2610.22350v1#S2.F4) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 ### 📖 **Chapter 3: Building the Benchmark**
 
@@ -231,6 +239,18 @@ L0는 설계에 필요한 사실을 제공해도 어떤 시스템을 만들지 �
 
 **프로토콜.** L3의 95개는 원본 20개와 변형 75개입니다. 원본 과제 비교에서는 세 과제의 L2 지시가 L3와 같아 L3 실행을 L2 결과에도 사용합니다. 직접 실행한 조합은 구성당 L0 20개, L1 20개, L2 17개, L3 95개로 152개입니다. 13개 구성의 1,976개 조합을 각각 세 번 실행합니다. 제출하거나 200턴, 150분, 모델 사용료 8달러 중 하나에 도달하면 현재 시스템 상태로 배포·평가합니다. [§4](https://arxiv.org/html/2610.22350v1#S4)
 
+아래 의사코드는 제출 여부와 실행 한도를 확인한 뒤 어느 상태를 평가하는지 보여 줍니다. 결과는 반복 실행 세 번의 점수로 집계합니다. [원문 §4](https://arxiv.org/html/2610.22350v1#S4)
+
+```text
+각 모델 구성과 과제·지시 수준 조합에 대해:
+    3회 반복:
+        과제의 초기 시스템에서 실행을 시작한다.
+        제출, 200턴, 150분, 모델 사용료 8달러 중
+        가장 먼저 발생한 조건에서 실행을 멈춘다.
+        멈췄을 때의 시스템을 배포하고 평가한다.
+    세 번의 점수를 평균한다.
+```
+
 **결과 보고.** L3 전체의 95% 신뢰구간은 과제를 재표집하는 부트스트랩으로 계산합니다. 고객 접촉 비용 차감 전의 개선도와 실행당 모델 사용료도 보고합니다. [§4](https://arxiv.org/html/2610.22350v1#S4)
 
 **외부 벤치마크 비교.** 동일한 출처의 Terminal-Bench 2.1, Vibe Code Bench, Finance Agent 결과를 사용합니다. 세 평가에서 모두 결과가 있는 구성 중 제공사별 FDE-Gym 최고 구성을 표시합니다. [§4](https://arxiv.org/html/2610.22350v1#S4)
@@ -247,7 +267,8 @@ L3 전체 95개에서 평균 점수는 Claude Opus 5.5가 0.56(95% 신뢰구간 
 
 ![L3에서 구성별 비용 차감 점수와 정규화 개선도를 비교한 막대그래프 및 지시 수준별 평균 점수]({{ '/img/reviews/2026/fde-gym-paper-review/figure-2-instruction-levels.png' | relative_url }})
 
-*Figure 2. 왼쪽의 진한 막대는 비용을 차감한 점수, 연한 막대는 비용을 차감하기 전의 정규화 개선도입니다. 오른쪽은 L0–L2에 원본 20개, L3에 전체 95개를 사용하므로 같은 과제끼리 지시 효과를 비교할 때는 Table 3 왼쪽을 읽어야 합니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 두 패널을 잘라냈습니다.* [원문 그림](https://arxiv.org/html/2610.22350v1#S0.F2) · [Table 3](https://arxiv.org/html/2610.22350v1#S5.T3) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+Figure 2. 왼쪽의 진한 막대는 비용을 차감한 점수, 연한 막대는 비용을 차감하기 전의 정규화 개선도입니다. 오른쪽은 L0–L2에 원본 20개, L3에 전체 95개를 사용하므로 같은 과제끼리 지시 효과를 비교할 때는 Table 3 왼쪽을 읽어야 합니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 두 패널을 잘라냈습니다. [원문 그림](https://arxiv.org/html/2610.22350v1#S0.F2) · [Table 3](https://arxiv.org/html/2610.22350v1#S5.T3) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 #### 5.2 제약이 명시되지 않을 때의 하락
 
@@ -263,7 +284,8 @@ L3에서 상위 세 모델은 과제당 10.0–12.3개 질문을 던지고 담�
 
 ![L3에서 모델별 핵심 사실 확보율과 정규화 개선도, 실행당 평균 모델 사용료와 FDE-Gym 점수를 나타낸 산점도]({{ '/img/reviews/2026/fde-gym-paper-review/figure-5-facts-and-cost.png' | relative_url }})
 
-*Figure 5. 왼쪽의 세로축은 정규화 개선도이고 오른쪽의 세로축은 FDE-Gym 점수입니다. 오른쪽의 가로축은 달러로 측정한 실행당 모델 사용료를 로그 척도로 표시합니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 두 패널을 잘라냈습니다.* [원문 그림](https://arxiv.org/html/2610.22350v1#S5.F5) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+Figure 5. 왼쪽의 세로축은 정규화 개선도이고 오른쪽의 세로축은 FDE-Gym 점수입니다. 오른쪽의 가로축은 달러로 측정한 실행당 모델 사용료를 로그 척도로 표시합니다. Dongxu Yang 외, CC BY 4.0. 원 PDF에서 두 패널을 잘라냈습니다. [원문 그림](https://arxiv.org/html/2610.22350v1#S5.F5) · [라이선스](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 #### 5.4 기존 시스템보다 업무를 악화시킨 결과
 
@@ -272,6 +294,13 @@ L3에서 Claude Haiku 4.5는 79개, GPT-6 Luna는 63개 과제에서 점수 0 �
 #### 5.5 시나리오와 변형에 따른 차이
 
 Opus는 20개 시나리오 중 11개에서 평균이 가장 높았고, 5개 시나리오에서는 어느 구성도 평균 0.5에 이르지 못했습니다. 최고 점수가 가장 낮은 `news_incident`와 `revenue_dispute`의 시나리오 평균 최고값은 0.18과 0.27입니다. 상위 모델 하나를 고정해도 한 시나리오 안에서 과제별 최고·최저 점수 차이의 중앙값은 구성에 따라 0.34–0.44였고, 이 차이가 0.5를 넘긴 시나리오는 6–8개였습니다. [§5.5](https://arxiv.org/html/2610.22350v1#S5.SS5) · [Figure 7](https://arxiv.org/html/2610.22350v1#S5.F7)
+
+![20개 시나리오의 행과 13개 모델 구성의 열로 L3 평균 점수를 비교한 히트맵]({{ '/img/reviews/2026/fde-gym-paper-review/figure-7-scenario-scores.png' | relative_url }})
+
+Figure 7. 시나리오별 L3 평균 점수이며, 테두리는 각 행의 최고점을 표시합니다. Dongxu Yang 외, 논문 v1의 그림을 그대로 실었습니다. [원문 그림](https://arxiv.org/html/2610.22350v1#S5.F7) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
+
+예를 들어 `revenue_dispute`에서는 Claude Opus 5.5가 0.12, Claude Sonnet 5.5가 0.27, GPT-6 Astra가 −0.44를 기록했습니다. 전체 L3 평균에서는 Opus가 앞섰지만, 이 시나리오에서는 Sonnet이 가장 높았습니다. [원문 Figure 7](https://arxiv.org/html/2610.22350v1#S5.F7)
 
 #### 5.6 사용료, 작업량과 점수
 
