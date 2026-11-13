@@ -110,7 +110,8 @@ Co-Director는 간단한 아이디어와 제품·로고 참조 이미지에서 �
 
 ![입력에서 제작 단계와 최종 평가를 거쳐 밴딧으로 돌아오는 Co-Director 구조]({{ '/img/reviews/2026/co-director-review/figure1-pipeline.png' | relative_url }})
 
-*원문 Figure 1, PDF 3쪽에서 전체 도식 영역을 크롭했습니다. 번역·재배열 없이 원본을 사용했습니다. [버전 고정 PDF](https://arxiv.org/pdf/2604.24842v1#page=3). 아래 챕터 분석에서 위·아래 부분을 나누어 설명합니다.*
+원문 Figure 1, PDF 3쪽에서 전체 도식 영역을 크롭했습니다. 번역·재배열 없이 원본을 사용했습니다. [버전 고정 PDF](https://arxiv.org/pdf/2604.24842v1#page=3). 아래 챕터 분석에서 위·아래 부분을 나누어 설명합니다.
+{: .caption}
 
 시스템은 Gemini 3 Pro로 추론·평가, Nano Banana Pro로 이미지 생성, Veo 3.1로 영상 생성, Gemini 2.5 Pro TTS로 음성 합성, Lyria 2로 음악 생성을 수행합니다. 최종 결과는 **4개 샷, 총 12초**이며 전역 실행 예산은 **4회**, 국소 수정은 최대 **3회 재시도**입니다. 이 값은 논문의 실험 구성이지 모든 제작 환경의 고정 요구사항은 아닙니다. [§5](https://arxiv.org/html/2604.24842v1#S5)
 
@@ -190,11 +191,13 @@ $`\mathcal S`$는 스토리보드, $`\mathcal A`$는 전역 음향 트랙, $`F`$
 
 ![브리프와 스토리라인에서 시각 자산과 스토리보드로 이어지는 사전 제작 에이전트]({{ '/img/reviews/2026/co-director-review/figure1-pre-production.png' | relative_url }})
 
-*Figure 1의 사전 제작 영역 상세, PDF 3쪽 크롭·번역 없음. 빨간 반복 표시는 스토리라인 수정 지점을 나타냅니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=3).*
+Figure 1의 사전 제작 영역 상세, PDF 3쪽 크롭·번역 없음. 빨간 반복 표시는 스토리라인 수정 지점을 나타냅니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=3).
+{: .caption}
 
 ![키프레임·영상·음향 에이전트가 각각 이미지·클립·음향을 만드는 제작 단계]({{ '/img/reviews/2026/co-director-review/figure1-production.png' | relative_url }})
 
-*Figure 1의 제작 영역 상세, PDF 3쪽 크롭·번역 없음. 키프레임 수정 후 이미지를 영상 생성의 조건으로 사용하며, 음향은 별도 에이전트가 생성합니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=3).*
+Figure 1의 제작 영역 상세, PDF 3쪽 크롭·번역 없음. 키프레임 수정 후 이미지를 영상 생성의 조건으로 사용하며, 음향은 별도 에이전트가 생성합니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=3).
+{: .caption}
 
 #### 3.2 Local Optimization via Agentic Self-Refinement
 
@@ -203,6 +206,8 @@ $`\mathcal S`$는 스토리보드, $`\mathcal A`$는 전역 음향 트랙, $`F`$
 **Storyline.** 스토리보드 확장 전에 LLM이 도입부의 주목도, 서사 연결, 제품 통합, 감정적 관여, 입력 준수를 평가합니다. 점수가 임계값 $`\tau_{\mathcal L}`$보다 낮으면 비평에 맞게 프롬프트를 수정해 대본을 다시 생성합니다. 제품을 잘못 이해한 상태로 시각 자산까지 만드는 것을 막는 위치에 이 검사를 둡니다.
 
 **Keyframe.** 멀티모달 대규모 언어 모델(MLLM)은 이미지를 따로 평가하지 않고 장면열 전체를 함께 봅니다. 인물과 제품이 장면을 넘어 같은 대상으로 보이는지, 배경 변화가 논리적인지 확인해야 하기 때문입니다. 점수가 $`\tau_{\mathcal K}`$보다 낮으면 문제 프레임의 인덱스와 수정 지침을 제공하고, 통과한 프레임은 보존합니다. 논문은 임계값 기호를 제시하지만 이 절에서 구체적 수치를 주지는 않습니다. [§3.2](https://arxiv.org/html/2604.24842v1#S3.SS2)
+
+가상의 음료 광고에서 스토리보드는 통과했는데 제작한 클립에서 캔의 라벨이 가려졌다고 하겠습니다. 제작 단계의 평가가 문제를 잡으면 해당 에이전트가 피드백을 받아 산출물을 다시 생성합니다. 최종 광고 전체의 평가 결과는 이후 시도에서 어떤 에이전트 설정을 탐색할지 정하는 데 쓰입니다. [원문 방법](https://arxiv.org/html/2604.24842v1#S3.SS2)
 
 #### 3.3 Global Optimization via Multi-Armed Bandits
 
@@ -220,7 +225,8 @@ $`\theta_{cs}`$는 창작 전략으로 정보 전달, 경험·정체성을 강�
 
 ![창작 전략·서사 방식·미학 유형을 선택하는 세 축의 밴딧 상세]({{ '/img/reviews/2026/co-director-review/figure1-global.png' | relative_url }})
 
-*Figure 1 상단의 밴딧 선택 영역 상세, PDF 3쪽 크롭·번역 없음. 세 축의 선택을 한 제작 방향으로 합성하는 구조입니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=3).*
+Figure 1 상단의 밴딧 선택 영역 상세, PDF 3쪽 크롭·번역 없음. 세 축의 선택을 한 제작 방향으로 합성하는 구조입니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=3).
+{: .caption}
 
 **Reward.** 최종 판정자는 두 출력을 만듭니다. 종합 품질 점수는 여러 실행에서 반환할 최종 영상을 고릅니다. 반면 아래의 축별 보상은 선택한 전략·서사·미학 유형의 효과를 평가하여 밴딧을 갱신합니다.
 
@@ -254,7 +260,8 @@ Figure 2는 10회까지의 탐색을 비교하며 저자들은 warm start와 MAB
 
 ![Figure 2의 평균 점수 패널에서 무작위 탐색과 warm start 및 MAB의 반복별 비교]({{ '/img/reviews/2026/co-director-review/figure2-average.png' | relative_url }})
 
-*Figure 2의 오른쪽 Average 패널, PDF 9쪽 크롭·번역 없음. 파랑은 Random Search, 빨강은 Warm-Up + MAB입니다. 축·범례·음영을 보존했습니다. [전체 그림과 원문 캡션](https://arxiv.org/pdf/2604.24842v1#page=9).*
+Figure 2의 오른쪽 Average 패널, PDF 9쪽 크롭·번역 없음. 파랑은 Random Search, 빨강은 Warm-Up + MAB입니다. 축·범례·음영을 보존했습니다. [전체 그림과 원문 캡션](https://arxiv.org/pdf/2604.24842v1#page=9).
+{: .caption}
 
 #### 5.2 MLLM Metric Validation via Human Evaluation
 
@@ -336,11 +343,13 @@ Table 5에서 Co-Director의 스타일 일관성 Cross/Self는 0.499/0.743, 인�
 
 ![수정 전 네 키프레임에서 주인공과 작업 공간이 달라진 사례]({{ '/img/reviews/2026/co-director-review/figure10-before.png' | relative_url }})
 
-*Figure 10(a), PDF 30쪽 크롭·번역 없음. 원문 패널 표시를 보존했습니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=30).*
+Figure 10(a), PDF 30쪽 크롭·번역 없음. 원문 패널 표시를 보존했습니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=30).
+{: .caption}
 
 ![수정 후 네 키프레임에서 회색 머리의 인물과 작업실이 일관되게 이어지는 사례]({{ '/img/reviews/2026/co-director-review/figure10-after.png' | relative_url }})
 
-*Figure 10(b), PDF 30쪽 크롭·번역 없음. 원문의 피드백 전문은 두 이미지 사이에서 제외하고 위 문단에 내용을 풀었습니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=30).*
+Figure 10(b), PDF 30쪽 크롭·번역 없음. 원문의 피드백 전문은 두 이미지 사이에서 제외하고 위 문단에 내용을 풀었습니다. [원문](https://arxiv.org/pdf/2604.24842v1#page=30).
+{: .caption}
 
 이 사례의 핵심은 한 프레임의 미학 점수를 올리는 것보다 장면 간 관계를 검사한다는 데 있습니다. 다음 세 부록은 이러한 수정과 전역 탐색에 사용하는 판정 지침을 공개합니다.
 

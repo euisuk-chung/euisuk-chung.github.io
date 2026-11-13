@@ -104,13 +104,15 @@ Transformer의 attention은 query와 key로 어느 위치를 얼마나 참고할
 
 ![표준 attention의 독립 value 선형 변환이 MA의 key와 토큰 메모리 합으로 바뀌고 MA-Offload에서 메모리 테이블이 GPU 밖으로 이동하는 구조]({{ '/img/reviews/2026/memory-attention-review/figure-1-architecture.png' | relative_url }})
 
-*Figure 1, [원문 PDF 1쪽](https://arxiv.org/pdf/2609.28399v1#page=1). 세 패널의 그림 영역만 크롭했으며 영문 표기를 유지했습니다. RoPE 등 일부 실험 구성요소는 원문 그림에서도 생략되어 있습니다. 그림에는 CPU/SSD가 표시되지만 §4.3의 실제 offload 측정은 CPU 메모리를 사용합니다.*
+Figure 1, [원문 PDF 1쪽](https://arxiv.org/pdf/2609.28399v1#page=1). 세 패널의 그림 영역만 크롭했으며 영문 표기를 유지했습니다. RoPE 등 일부 실험 구성요소는 원문 그림에서도 생략되어 있습니다. 그림에는 CPU/SSD가 표시되지만 §4.3의 실제 offload 측정은 CPU 메모리를 사용합니다.
+{: .caption}
 
 왼쪽에서는 hidden state로부터 Q, K, V를 각각 계산합니다. 가운데에서는 V용 선형 층이 사라지고, K 경로와 토큰 ID 기반 embedding 경로가 덧셈에서 만납니다. 오른쪽에서는 embedding 경로를 GPU 밖으로 옮깁니다. 그림의 M 표기는 정규화 이전 조회 벡터를 가리키지만, 이후 수식 설명은 원문 식 (7)에 맞춰 **정규화된 메모리를 M으로 정의**합니다.
 
 ![key 경로와 토큰 embedding 경로가 합쳐져 value를 만드는 Memory Attention 중앙 패널 확대]({{ '/img/reviews/2026/memory-attention-review/figure-1-memory-attention-detail.png' | relative_url }})
 
-*Figure 1 중앙 MA 패널 상세, [원문 PDF 1쪽](https://arxiv.org/pdf/2609.28399v1#page=1). 원문에서 별도 크롭했으며 번역·재구성하지 않았습니다. 토큰 ID는 embedding 조회로, hidden state는 query/key 계산으로 들어갑니다. [전체 구조 그림 원본]({{ '/img/reviews/2026/memory-attention-review/figure-1-architecture.png' | relative_url }})도 열어 비교할 수 있습니다.*
+Figure 1 중앙 MA 패널 상세, [원문 PDF 1쪽](https://arxiv.org/pdf/2609.28399v1#page=1). 원문에서 별도 크롭했으며 번역·재구성하지 않았습니다. 토큰 ID는 embedding 조회로, hidden state는 query/key 계산으로 들어갑니다. [전체 구조 그림 원본]({{ '/img/reviews/2026/memory-attention-review/figure-1-architecture.png' | relative_url }})도 열어 비교할 수 있습니다.
+{: .caption}
 
 서론 후반은 이 표현의 시스템적 결과를 연결합니다. 추론에서 정규화를 미리 계산하고, 토큰과 층을 알면 주소가 정해지는 성질로 선인출(prefetch)을 수행합니다. 또한 key와 토큰 ID를 보관하면 value를 다시 만들 수 있다는 관찰을 MA-Recall로 확장합니다. 이 장의 핵심은 표현과 저장 위치를 함께 바꾸는 문제 설정이며, 다음 장은 MA가 기존 메모리 주입 방법과 어떻게 다른지 정리합니다. [원문 §1](https://arxiv.org/html/2609.28399v1#S1)
 
@@ -189,6 +191,8 @@ RoPE를 사용하면 점수 계산용 표현과 value 구성용 표현을 구분
 ```
 
 식 (9)의 위첨자 R은 위치 회전 후 표현입니다. attention 가중치는 $`\mathbf Q^R`$와 $`\mathbf K^R`$로 계산하지만 V에는 회전 전 K를 넣습니다. 이는 뒤의 MA-Recall에서 회전된 key만 캐시했을 때 역회전 작업이 필요해지는 이유입니다. 이 절의 기여는 독립 value projection을 제거해도 동적인 문맥 내용과 토큰별 저장 내용을 함께 전달하는 구체적인 규칙입니다. [원문 §3.1](https://arxiv.org/html/2609.28399v1#S3.SS1)
+
+같은 토큰 ID가 짧은 문장에 두 번 나온다고 하겠습니다. 두 위치에서 메모리 테이블을 조회한 결과는 같습니다. 앞뒤 문맥이 달라 각 위치의 hidden state에서 계산한 key는 달라질 수 있습니다. 두 value에는 공유하는 메모리 항과 위치별 key에서 온 항이 함께 들어갑니다. [원문 방법](https://arxiv.org/html/2609.28399v1#S3.SS1)
 
 #### 3.2 Connection to MLA through Attention Aggregation
 

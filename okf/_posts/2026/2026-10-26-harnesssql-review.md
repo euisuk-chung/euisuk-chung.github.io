@@ -175,7 +175,8 @@ SFT 데이터는 79개 데이터베이스에서 확보한 2,512개 검증 궤적
 
 ![정적 SQL 생성, 환경 없는 궤적 재생, 샌드박스와 하네스 상호작용의 비교]({{ '/img/reviews/2026/harnesssql-review/figure-01-interaction.png' | relative_url }})
 
-*원문 Figure 1, PDF 1쪽. 원본 그림 영역을 크롭했으며 번역·수치 변경은 없습니다. 실행 환경, 관찰, 수정, 제출을 연결하는 차이를 보여줍니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Figure 1, PDF 1쪽. 원본 그림 영역을 크롭했으며 번역·수치 변경은 없습니다. 실행 환경, 관찰, 수정, 제출을 연결하는 차이를 보여줍니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 다음으로 세 가지 요구를 순서대로 도출합니다. 환경은 실제 스키마·값·오류를 제공하며 재현 가능해야 합니다. 하네스는 가능한 행동과 종료 의미를 결정합니다. 감독 데이터는 최종 SQL뿐 아니라 탐색과 오류 복구를 포함해야 합니다. 이에 대응해 실행 환경 구축, SQL용 하네스 적응, 하네스 안에서의 후속 학습을 제안합니다.
 
@@ -212,7 +213,8 @@ $`y^*`$는 정답 SQL이고 $`\mathcal{S}`$는 정적 스키마 설명입니다.
 
 ![실행 환경과 네 가지 SQL 도구, 전체 궤적 SFT와 실행 보상 RL을 연결한 HarnessSQL 프레임워크]({{ '/img/reviews/2026/harnesssql-review/figure-02-framework.png' | relative_url }})
 
-*원문 Figure 2, PDF 4쪽. 전체 패널을 보존한 영역 크롭이며 번역·수치 변경은 없습니다. 위쪽은 환경과 하네스, 가운데는 SFT와 RL, 아래쪽은 오류를 거쳐 제출하는 예시입니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Figure 2, PDF 4쪽. 전체 패널을 보존한 영역 크롭이며 번역·수치 변경은 없습니다. 위쪽은 환경과 하네스, 가운데는 SFT와 RL, 아래쪽은 오류를 거쳐 제출하는 예시입니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 #### 3.1 Executable SQL Environment Construction
 
@@ -225,6 +227,19 @@ $`y^*`$는 정답 SQL이고 $`\mathcal{S}`$는 정적 스키마 설명입니다.
 저자는 DSH의 공용 에이전트 기반을 사용하면서 SQL 프로파일을 특화합니다. 모델에게 네 도구를 노출하고, 셸·파일시스템·일반 코드 런타임 같은 무관한 도구는 비활성화합니다. 에이전트가 감당할 행동 공간을 데이터베이스 작업에 맞추는 설계입니다.
 
 관찰 미들웨어는 큰 결과를 일정하게 자르고, 동일 호출이 반복되면 알림을 주며, 문맥이 길어지면 압력 조건에 따라 요약합니다. 모든 미들웨어가 매 에피소드에서 실제로 발동하는 것은 아닙니다. 이 장은 기능을 소개하고 부록 A는 실제 활성화 로그를 구분하여 제시합니다.
+
+가상의 주문 DB에서 고객 테이블의 지역 열로 매출을 집계했는데 해당 열이 없다는 오류가 돌아왔다고 하겠습니다. 에이전트는 스키마를 확인해 지역이 매장 테이블에 있음을 찾고, 주문과 매장을 연결하는 쿼리로 고쳐 실행할 수 있습니다. 결과를 확인해 SQL을 제출합니다. 훈련에 쓰이는 궤적에는 첫 쿼리에서 최종 쿼리에 이르기까지 오류, 관찰, 수정이 함께 남습니다.
+
+설명용 실행 흐름입니다.
+
+```text
+스키마 확인 → 지역별 매출 SQL 실행
+  → 오류: 고객 테이블에 지역 열이 없음
+  → 매장 테이블 확인 → 주문과 매장을 조인해 다시 실행
+  → 결과 확인 → 최종 SQL 제출
+```
+
+[원문 방법](https://arxiv.org/html/2610.12274v1#S3.SS2)
 
 #### 3.3 Harness-Native Post-Training
 
@@ -256,7 +271,8 @@ SFT에서는 앞서 설명한 식 (6)으로 전체 궤적의 assistant 구간을
 
 ![기존 SQL 모델과 HarnessSQL의 세 벤치마크 실행 정확도를 비교한 원문 표]({{ '/img/reviews/2026/harnesssql-review/table-01-results.png' | relative_url }})
 
-*원문 Table 1, PDF 6쪽. 표 본체를 크롭했으며 수치를 변경하지 않았습니다. 기존 모델은 native 추론 방식이라는 조건을 함께 읽어야 합니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Table 1, PDF 6쪽. 표 본체를 크롭했으며 수치를 변경하지 않았습니다. 기존 모델은 native 추론 방식이라는 조건을 함께 읽어야 합니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 표의 주요 수치를 읽기 쉽게 옮기면 다음과 같습니다. `—`는 원문에서 결과를 보고하지 않은 셀입니다.
 
@@ -285,7 +301,8 @@ SFT에서는 앞서 설명한 식 (6)으로 전체 궤적의 assistant 구간을
 
 ![학습과 추론의 하네스 일치 여부를 분리해 비교한 Table 3]({{ '/img/reviews/2026/harnesssql-review/table-03-alignment.png' | relative_url }})
 
-*원문 Table 3, PDF 7쪽. 표 영역을 크롭했으며 번역·수치 변경은 없습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Table 3, PDF 7쪽. 표 영역을 크롭했으며 번역·수치 변경은 없습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 | 후속 학습 | 추론 | S2-SQLite | BI-mini | LSB-SQLite |
 |---|---|---:|---:|---:|
@@ -301,7 +318,8 @@ SFT에서는 앞서 설명한 식 (6)으로 전체 궤적의 assistant 구간을
 
 ![턴별 학습과 전체 궤적 학습을 세 벤치마크에서 비교한 막대그래프]({{ '/img/reviews/2026/harnesssql-review/figure-03-trajectory.png' | relative_url }})
 
-*원문 Figure 3, PDF 7쪽. 축·범례·수치를 보존한 크롭이며 번역하지 않았습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Figure 3, PDF 7쪽. 축·범례·수치를 보존한 크롭이며 번역하지 않았습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 그림의 S2-SQLite는 19.3% → 23.0%, BI-mini는 3.0% → 4.0%, LSB-SQLite는 11.5% → 14.8%입니다. 이 그림의 full-trajectory 23.0%를 전체 코퍼스 SFT의 30.4%와 혼용하면 안 됩니다. Figure 3의 그림·설명 자체는 학습 예제 수를 명시하지 않으므로 같은 수치가 나타나는 다른 부분의 조건을 임의로 붙이지 않습니다.
 
@@ -309,7 +327,8 @@ SFT에서는 앞서 설명한 식 (6)으로 전체 궤적의 assistant 구간을
 
 ![SFT와 RL의 문맥 길이를 함께 늘렸을 때 실행 정확도 변화]({{ '/img/reviews/2026/harnesssql-review/figure-04-context.png' | relative_url }})
 
-*원문 Figure 4, PDF 8쪽. 축·범례·모든 데이터 지점을 보존한 영역 크롭이며 수치를 변경하지 않았습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Figure 4, PDF 8쪽. 축·범례·모든 데이터 지점을 보존한 영역 크롭이며 수치를 변경하지 않았습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 | SFT/RL 문맥 상한 | S2-SQLite | BI-mini | LSB-SQLite |
 |---|---:|---:|---:|
@@ -389,7 +408,8 @@ Qwen3-8B와 고정된 1,000개 합성 예제 조건에서 교사와 하네스를
 
 ![Base, SFT, SFT와 DAPO 모델의 호출·오류 복구·제출 행동 통계]({{ '/img/reviews/2026/harnesssql-review/table-08-behavior.png' | relative_url }})
 
-*원문 Table 8, PDF 16쪽. 표 영역 크롭이며 수치를 변경하지 않았습니다. 지표마다 궤적 또는 호출·오류 등 측정 단위가 다르므로 하나의 공통 정답률로 읽지 않습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.*
+원문 Table 8, PDF 16쪽. 표 영역 크롭이며 수치를 변경하지 않았습니다. 지표마다 궤적 또는 호출·오류 등 측정 단위가 다르므로 하나의 공통 정답률로 읽지 않습니다. [버전 고정 PDF](https://arxiv.org/pdf/2610.12274v1), CC BY 4.0.
+{: .caption}
 
 | 행동 지표 | Base | SFT | SFT+DAPO |
 |---|---:|---:|---:|

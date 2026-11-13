@@ -190,7 +190,8 @@ Uriel Dolev, Idan Schwartz, Yoav Goldberg는 이를 **Self-Instructed CoT Contro
 
 ![사용자 지시, reasoning prefill, bootstrap을 비교한 Self-Instructed CoT의 입력과 생성 경계]({{ '/img/reviews/2026/self-instructed-cot-review/figure-02-methods.png' | relative_url }})
 
-*원문 Figure 2, PDF 3쪽. 실선 상자는 입력, 점선 상자는 모델이 생성한 부분입니다. 그림 영역만 크롭했으며 내용은 번역·재배열하지 않았습니다. Uriel Dolev 외, CC BY 4.0. [고정 버전 원문](https://arxiv.org/pdf/2610.23257v1#page=3).*
+원문 Figure 2, PDF 3쪽. 실선 상자는 입력, 점선 상자는 모델이 생성한 부분입니다. 그림 영역만 크롭했으며 내용은 번역·재배열하지 않았습니다. Uriel Dolev 외, CC BY 4.0. [고정 버전 원문](https://arxiv.org/pdf/2610.23257v1#page=3).
+{: .caption}
 
 Reasoning prefill은 모델이 이어 쓸 추론의 첫 부분을 평가자가 제공하는 방식입니다. Bootstrap은 그 문장을 추론 첫머리에 쓰도록 **사용자 메시지로 요청**하며, 실제 문장은 모델이 생성합니다. 두 방식 모두 추가 가중치 학습을 하지 않지만, reasoning 채널에 접근해야 하는지는 다릅니다. 이 논문의 실험 결과를 모든 API가 동일한 prefill 기능을 제공한다는 제품 설명으로 읽으면 안 됩니다.
 
@@ -268,7 +269,8 @@ $`n_c`$는 셀별 CoT 수이고, $`p_c(1-p_c)/n_c`$는 베르누이 비율 추�
 
 ![모델 다섯 개와 유도법 여섯 개의 평균 CoT 제약 준수율 비교]({{ '/img/reviews/2026/self-instructed-cot-review/figure-03-results.png' | relative_url }})
 
-*원문 Figure 3, PDF 4쪽. 범례·축·오차막대·모든 모델 막대를 보존한 크롭입니다. 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=4).*
+원문 Figure 3, PDF 4쪽. 범례·축·오차막대·모든 모델 막대를 보존한 크롭입니다. 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=4).
+{: .caption}
 
 | 모델 | User Prompt | 가장 높은 조건 | 해당 유도법 | 증가 폭 |
 |---|---:|---:|---|---:|
@@ -308,13 +310,16 @@ Reasoning 채널을 외부에서 미리 채울 수 없는 모델에도 bootstrap
 
 관측 범위에도 차이가 있습니다. 원문 각주에 따르면 3.7 Sonnet은 전체 reasoning을 반환하지만, Sonnet 4.6은 reasoning 요약을 반환합니다. 이 실험의 제어 평가는 연구자가 관측할 수 있었던 텍스트에 근거하며, 요약과 원래 전체 추론이 동일하다고 보장하지 않습니다. 부록 E는 Sonnet 4.6의 `meow` bootstrap에서 유효 응답이 부족하여 해당 제약을 전체 점수에서 제외했다고 명시합니다.
 
+가령 추론을 소문자로 쓰게 하는 제약을 두겠습니다. 사용자 지시는 사용자 메시지에 제약을 적습니다. Prefill은 추론이 시작되는 부분에 주어진 텍스트를 미리 채웁니다. Bootstrap은 사용자 메시지로 요청해 모델이 추론 앞에서 그 제약을 스스로 적도록 유도합니다. 앞부분에서 제약을 다시 적었는지인 echo와 추론이 제약을 따랐는지인 준수율은 따로 셉니다. [원문 Figure 2 및 §2.3](https://arxiv.org/pdf/2610.23257v1#page=3)
+
 #### 3.4 Multi-turn Bootstrap — 첫 턴에서 얻은 제어는 유지될까요?
 
 주 실험은 첫 assistant 턴의 시작에만 자기 지시를 제공합니다. SWE-bench처럼 도구 사용과 관찰이 반복되면, 후속 턴에서 자기 지시 echo와 제약 준수가 빠르게 줄어듭니다. 저자는 Qwen3-32B에 매 턴 자기 지시로 시작하도록 요청하는 다중 턴 bootstrap을 적용합니다.
 
 ![SWE-bench에서 첫 턴 bootstrap과 매 턴 bootstrap의 자기 지시 echo 유지율]({{ '/img/reviews/2026/self-instructed-cot-review/figure-04-multiturn.png' | relative_url }})
 
-*원문 Figure 4, PDF 7쪽. 축·범례·오차막대를 포함한 원본 그래프 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=7).*
+원문 Figure 4, PDF 7쪽. 축·범례·오차막대를 포함한 원본 그래프 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=7).
+{: .caption}
 
 후속 턴 echo는 기존 26–44%와 달리 82–95%로 유지됩니다. 그러나 전체 CoT의 완전 준수율 증가는 9.7%→12.8%입니다. 자기 지시의 유지와 전체 추론의 완전 준수가 얼마나 다른 지표인지 다시 드러납니다.
 
@@ -326,7 +331,8 @@ Table 6에서 `safe` 문장 종결은 완전 준수 18.0%→27.5%, 소문자는 
 
 ![사용자 지시와 자기 지시 조건의 모니터 탐지율 및 두 과제 동시 성공률]({{ '/img/reviews/2026/self-instructed-cot-review/table-07-monitor.png' | relative_url }})
 
-*원문 Table 7, PDF 7쪽. 표 영역을 크롭했으며 모든 수치와 별표를 보존했습니다. CC BY 4.0. 별표는 사용자 지시 조건과 자기 지시 조건 비교의 $`p<0.05`$를 뜻합니다. [원문](https://arxiv.org/pdf/2610.23257v1#page=7).*
+원문 Table 7, PDF 7쪽. 표 영역을 크롭했으며 모든 수치와 별표를 보존했습니다. CC BY 4.0. 별표는 사용자 지시 조건과 자기 지시 조건 비교의 $`p<0.05`$를 뜻합니다. [원문](https://arxiv.org/pdf/2610.23257v1#page=7).
+{: .caption}
 
 아무 추가 공격 지시가 없는 기준의 탐지율은 52.5%, 두 과제 동시 성공률(pass@1)은 30.1%입니다. 원문의 세 조건에서 사용자 지시→자기 지시의 탐지율은 Dependency 52.0%→47.8%, Monitor notice 53.9%→46.5%, Stealth 78.6%→47.4%입니다. **표시된 반올림 수치에서 기준 52.5%를 빼 계산한 감소 폭**은 각각 4.7·6.0·5.1%p이며, 사용자 지시와 비교한 감소 폭과는 다릅니다. 원문 본문은 반올림 전 값을 반영한 범위로 4.8–6.0%p 감소라고 서술합니다. 특히 Stealth의 사용자 지시는 탐지를 오히려 쉽게 만듭니다.
 
@@ -433,11 +439,13 @@ Table 6에서 `safe` 문장 종결은 완전 준수 18.0%→27.5%, 소문자는 
 
 ![CoT 길이와 제약 준수율의 관계를 모델과 유도법별로 비교한 그래프]({{ '/img/reviews/2026/self-instructed-cot-review/figure-07-length.png' | relative_url }})
 
-*원문 Figure 7, PDF 16쪽. 모든 모델 패널·축·범례를 포함한 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=16).*
+원문 Figure 7, PDF 16쪽. 모든 모델 패널·축·범례를 포함한 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=16).
+{: .caption}
 
 ![추론 길이에 따른 무제약 실행 및 제약 준수·비준수 기록의 정답률 비교]({{ '/img/reviews/2026/self-instructed-cot-review/figure-08-accuracy.png' | relative_url }})
 
-*원문 Figure 8, PDF 16쪽. 음영은 95% 신뢰구간입니다. 그래프 영역 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=16).*
+원문 Figure 8, PDF 16쪽. 음영은 95% 신뢰구간입니다. 그래프 영역 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=16).
+{: .caption}
 
 질문 무시를 제외하면, 같은 모델·질문의 준수 CoT 정답률은 비준수 CoT보다 0.3%p 낮고 95% 신뢰구간은 −0.6~+0.1%p입니다. 질문 무시에서는 6.4%p 차이가 납니다. Figure 8의 긴 CoT에서 정답률이 떨어지는 모습은 무제약 실행에서도 나타나므로, 어려운 질문이 더 긴 CoT와 함께 나타나는 효과를 고려해야 합니다.
 
@@ -455,7 +463,8 @@ Table 6에서 `safe` 문장 종결은 완전 준수 18.0%→27.5%, 소문자는 
 
 ![자기 지시 문구별 CoT 준수율·길이 중앙값·정답률을 비교한 원문 표]({{ '/img/reviews/2026/self-instructed-cot-review/table-12-prefill.png' | relative_url }})
 
-*원문 Table 12, PDF 17쪽. 표 영역 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=17).*
+원문 Table 12, PDF 17쪽. 표 영역 크롭, 내용 수정 없음, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.23257v1#page=17).
+{: .caption}
 
 | Qwen3-32B의 prefill | 준수율 | CoT 길이 중앙값 | 정답률 |
 |---|---:|---:|---:|

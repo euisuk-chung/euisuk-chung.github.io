@@ -227,7 +227,8 @@ Tianyu Fu 등 9명의 **Cache Engineering for Agents**는 이 문제를 대화 �
 
 ![텍스트 이력과 KV 상태의 처리 방식이 다른 전체 문맥·문맥 편집·캐시 제어 비교]({{ '/img/reviews/2026/cache-engineering-review/figure-01-comparison.png' | relative_url }})
 
-*원문 Figure 1, PDF 2쪽의 그림 영역을 크롭했습니다. 중첩 색은 남은 캐시가 앞선 이력의 영향을 받아 계산됐음을 나타냅니다. 원문 그림·저작권: Tianyu Fu 외. arXiv 비독점 배포 라이선스이며 CC BY 자료로 표시하지 않습니다. [고정 버전 원문](https://arxiv.org/pdf/2610.28577v1#page=2).*
+원문 Figure 1, PDF 2쪽의 그림 영역을 크롭했습니다. 중첩 색은 남은 캐시가 앞선 이력의 영향을 받아 계산됐음을 나타냅니다. 원문 그림·저작권: Tianyu Fu 외. arXiv 비독점 배포 라이선스이며 CC BY 자료로 표시하지 않습니다. [고정 버전 원문](https://arxiv.org/pdf/2610.28577v1#page=2).
+{: .caption}
 
 ### 세 연산과 위치 인코딩
 
@@ -328,7 +329,8 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 ![A를 제외한 시점에 따라 같은 B·C의 KV가 달라지고 확장 radix tree가 이를 다른 가지에 저장하는 그림]({{ '/img/reviews/2026/cache-engineering-review/figure-05-history.png' | relative_url }})
 
-*원문 Figure 5, PDF 5쪽. 세 경로와 색 범례를 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=5).*
+원문 Figure 5, PDF 5쪽. 세 경로와 색 범례를 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=5).
+{: .caption}
 
 원문 Figure 5의 경로 ①은 A와 B를 조건으로 C를 만든 뒤 A를 제외합니다. ②는 A와 B를 만든 뒤 A를 제외하고 C를 만듭니다. ③은 A 없이 B부터 만들어 C를 이어 붙입니다. 세 경우에 최종 B와 C가 남아도, ①·②의 B만 A를 조건으로 계산됐고 C는 세 경우 모두 다른 상태입니다.
 
@@ -350,7 +352,15 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 이 **operate-after** 문법은 현재 어떤 KV가 GPU에 남았는지를 클라이언트가 추측할 필요를 없앱니다. 서버가 턴 사이에 상태를 퇴거해도, 요청만으로 필요한 상태를 다시 구성해야 합니다. 다른 요청이 공유 prefix에서 drop을 실행했다고 현재 요청의 출력 분포가 바뀌어서는 안 됩니다.
 
-원문 Figure 6은 메시지 경계와 연산을 함께 보여주는 **설명용 요청 도식**입니다. 여기서는 그 주석을 실행 가능한 JSON 예제로 재구성하지 않고 문법의 의미를 설명합니다. SDK 설치나 특정 호스팅 서비스에서의 즉시 사용 가능성을 이 논문만으로 검증하지는 않았습니다.
+Figure 6에서 왼쪽 요청 필드와 오른쪽 주석을 읽는 순서를 짧은 의사코드로 옮겼습니다. 0·1·2는 메시지 인덱스입니다.
+
+```text
+메시지 0을 추가한다.
+메시지 1을 추가한 뒤 → 메시지 0의 KV를 이후 attention에서 제외한다.
+메시지 2를 추가한 뒤 → 메시지 1의 KV를 제외하고 → 남은 위치를 재배치한다.
+```
+
+메시지 1은 계산할 때 0을 볼 수 있었고, 메시지 2는 계산할 때 1을 볼 수 있었습니다. 서버는 이 연산 순서를 알아야 같은 상태를 복원할 수 있습니다. [원문 방법](https://arxiv.org/html/2610.28577v1#S4.SS1)
 
 #### 4.2 Cache State Management
 
@@ -366,7 +376,8 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 ![다른 요청이 쓰는 원래 B를 보존한 채 B·C의 새 위치 버전을 만들고 별도 가지에 기록하는 과정]({{ '/img/reviews/2026/cache-engineering-review/figure-08-reposition.png' | relative_url }})
 
-*원문 Figure 8, PDF 7쪽. 세 패널과 위치 표기를 보존한 그림 영역 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=7).*
+원문 Figure 8, PDF 7쪽. 세 패널과 위치 표기를 보존한 그림 영역 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=7).
+{: .caption}
 
 각 위치 버전은 독립적으로 사용 여부를 추적해 퇴거합니다. 복원 과정도 repos 경계에서 query를 나누고, 구간마다 원래 사용했던 위치의 임시 KV 버전을 제공합니다. 하나의 최종 위치로 모두 덮어쓰는 방법으로는 원래 hidden state를 복구할 수 없기 때문입니다.
 
@@ -398,7 +409,8 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 ![세 모델의 네 벤치마크 pass rate와 비용을 비교한 원문 전체 결과표]({{ '/img/reviews/2026/cache-engineering-review/table-01-results.png' | relative_url }})
 
-*원문 Table 1, PDF 9쪽의 표 영역. Score는 pass rate(%), Cost는 미국 센트입니다. 아래에는 평균 열을 읽기 쉬운 표로 옮겼습니다. 표·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=9).*
+원문 Table 1, PDF 9쪽의 표 영역. Score는 pass rate(%), Cost는 미국 센트입니다. 아래에는 평균 열을 읽기 쉬운 표로 옮겼습니다. 표·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=9).
+{: .caption}
 
 | 모델 | Standard 평균 점수 / 비용 | Text Engineering 평균 점수 / 비용 | AKV 평균 점수 / 비용 |
 |---|---:|---:|---:|
@@ -416,7 +428,8 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 ![동시성 8부터 16까지 GPT-OSS-120B의 요청 지연·첫 토큰 시간·토큰 시간·처리량을 비교한 원문 표]({{ '/img/reviews/2026/cache-engineering-review/table-02-serving.png' | relative_url }})
 
-*원문 Table 2, PDF 9쪽. 요청 지연·TTFT는 초, TPOT는 ms/token, throughput은 tokens/s입니다. 단위와 동시성 C를 보존한 크롭이며 주요 비교는 아래에 재작성했습니다. 표·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=9).*
+원문 Table 2, PDF 9쪽. 요청 지연·TTFT는 초, TPOT는 ms/token, throughput은 tokens/s입니다. 단위와 동시성 C를 보존한 크롭이며 주요 비교는 아래에 재작성했습니다. 표·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=9).
+{: .caption}
 
 원문은 각 방식의 **최대 출력 처리량 설정끼리** 비교합니다. Standard는 동시성 12, AKV는 14입니다.
 
@@ -439,7 +452,8 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 ![Standard와 전문가 정책을 기준선으로 표시한 캐시 정책 자기 개선 비용 곡선]({{ '/img/reviews/2026/cache-engineering-review/figure-04-rsi.png' | relative_url }})
 
-*원문 Figure 4, PDF 4쪽. 기준 정확도 충족 여부와 비용 기준선을 그대로 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=4).*
+원문 Figure 4, PDF 4쪽. 기준 정확도 충족 여부와 비용 기준선을 그대로 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=4).
+{: .caption}
 
 마지막 **Cache-As-Tool(CAT)**은 에이전트가 도구로 캐시 감소 시점과 대상을 정하게 합니다. 별도 100과제 BCP 부분집합에서 GPT-OSS-120B와 MiniMax는 각각 61.0%, 64.0%로 해당 비교 중 가장 높은 pass rate를 얻습니다. GPT 비용은 13.4→12.1센트로 낮아지지만 MiniMax는 더 많은 턴을 실행해 5.4→5.9센트로 높아집니다. 높은 정확도가 항상 최저 비용과 함께 오지는 않습니다.
 
@@ -481,7 +495,8 @@ $`m`$은 토큰 수가 아니라 **연산 수**입니다. 같은 모델에서 �
 
 ![drop과 repos 경계에 따라 네 구간이 서로 다른 키·위치를 사용하면서 하나의 prefill forward로 복원되는 예]({{ '/img/reviews/2026/cache-engineering-review/figure-10-restoration.png' | relative_url }})
 
-*원문 Figure 10, PDF 15쪽. 요청 순서·네 attention 구간·Q/K 위치와 색 칸을 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=15).*
+원문 Figure 10, PDF 15쪽. 요청 순서·네 attention 구간·Q/K 위치와 색 칸을 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=15).
+{: .caption}
 
 예시를 순서대로 보면, 첫 구간은 A0·B1·C2를 계산합니다. B를 제외하고 위치를 옮긴 다음 D2를 계산할 때는 A0·C1·D2를 봅니다. D를 제외한 세 번째 구간의 E3는 A0·C1·E3를 봅니다. Drop만으로 위치를 압축하지 않으므로 E의 인덱스가 3인 점이 중요합니다. 다시 repos하면 E가 2로 옮겨지고 네 번째 구간의 F3는 A0·C1·E2·F3를 봅니다.
 
@@ -544,7 +559,8 @@ $`\phi`$는 **저장된 위치만 제거하는 투영**이고, $`\Delta P`$는 �
 
 ![요약 시 크게 줄어드는 Standard와 오래된 도구 응답을 계속 제외하며 완만하게 증가하는 AKV 활성 문맥 길이]({{ '/img/reviews/2026/cache-engineering-review/figure-14-active-context.png' | relative_url }})
 
-*원문 Figure 14, PDF 20쪽. 턴·입력 길이 축, 96K 기준선, 두 방식과 음영을 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=20).*
+원문 Figure 14, PDF 20쪽. 턴·입력 길이 축, 96K 기준선, 두 방식과 음영을 보존한 크롭입니다. 그림·저작권: Tianyu Fu 외, arXiv 비독점 배포 라이선스. [원문](https://arxiv.org/pdf/2610.28577v1#page=20).
+{: .caption}
 
 추론 KV를 모두 남기므로 AKV의 활성 문맥도 계속 증가합니다. 최근 도구 응답만 제한했다고 **전체 활성 캐시가 고정된 크기**가 되는 것은 아닙니다. Figure 14는 성장 속도를 늦추는 rolling drop과 임계 요약으로 급감하는 Standard의 차이를 보여줍니다.
 

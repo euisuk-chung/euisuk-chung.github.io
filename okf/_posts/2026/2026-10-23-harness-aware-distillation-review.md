@@ -136,7 +136,8 @@ HAD의 데이터 흐름은 **학생의 하네스 포함 실행 → 같은 상태
 
 ![학생 실행, 교사의 하네스 유무 비교, 두 학습 손실을 연결한 HAD 전체 구조]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-3-overview.png' | relative_url }})
 
-*원문 Figure 3, PDF 5쪽. 그림 전체 영역을 크롭했으며 내용과 배치는 변경하지 않았습니다. 학생 실행에서 얻은 같은 상태가 두 교사 질의와 두 손실로 이어집니다. [고정 버전 PDF](https://arxiv.org/pdf/2610.02858v1#page=5)*
+원문 Figure 3, PDF 5쪽. 그림 전체 영역을 크롭했으며 내용과 배치는 변경하지 않았습니다. 학생 실행에서 얻은 같은 상태가 두 교사 질의와 두 손실로 이어집니다. [고정 버전 PDF](https://arxiv.org/pdf/2610.02858v1#page=5)
+{: .caption}
 
 핵심 비교를 간단히 쓰기 위해 하네스를 본 교사 행동을 $`a^{+}`$, 제거한 교사 행동을 $`a^{-}`$, 학생이 생성한 추론을 $`z_s`$라고 하겠습니다. 이는 원문 식 (5)의 기호를 짧게 쓴 것입니다.
 
@@ -184,11 +185,13 @@ Figure 2의 오른쪽 비교에서는 하네스를 사용한 증류로 HU가 65.
 
 ![기존 증류와 하네스 포함 증류 및 HAD의 하네스 활용도와 성능 비교]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-2-results.png' | relative_url }})
 
-*원문 Figure 2 전체, PDF 2쪽. 축·범례·수치를 보존한 크롭입니다. 왼쪽은 방법별 하네스 추가 효과, 오른쪽은 학생·증류·하네스 포함 증류·HAD를 비교합니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=2)*
+원문 Figure 2 전체, PDF 2쪽. 축·범례·수치를 보존한 크롭입니다. 왼쪽은 방법별 하네스 추가 효과, 오른쪽은 학생·증류·하네스 포함 증류·HAD를 비교합니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=2)
+{: .caption}
 
 ![Figure 2 오른쪽 상세 패널의 HU 81.0과 성공률 57.4]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-2-had-detail.png' | relative_url }})
 
-*Figure 2 오른쪽 상세 크롭입니다. 전체 그림과 같은 범례를 사용하며, 회색부터 주황색까지 순서대로 기본 학생·증류·하네스 포함 증류·HAD입니다. [원문 PDF 2쪽](https://arxiv.org/pdf/2610.02858v1#page=2)*
+Figure 2 오른쪽 상세 크롭입니다. 전체 그림과 같은 범례를 사용하며, 회색부터 주황색까지 순서대로 기본 학생·증류·하네스 포함 증류·HAD입니다. [원문 PDF 2쪽](https://arxiv.org/pdf/2610.02858v1#page=2)
+{: .caption}
 
 **3. 제안으로 이어지는 논리**
 
@@ -262,7 +265,8 @@ $`j`$는 응답 토큰 위치이며, 앞선 교사 토큰을 조건으로 현재
 
 ![같은 학생 상태에서 하네스를 본 교사는 크기를 먼저 선택하고 제거한 교사는 즉시 구매하는 예]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-3-teacher-contrast.png' | relative_url }})
 
-*원문 Figure 3의 2단계 상세 크롭, PDF 5쪽. 전체 그림에서 교사의 두 조건 질의 부분을 발췌했습니다. 오른쪽으로 나가는 연결선은 전체 그림에서 손실로 이어집니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=5)*
+원문 Figure 3의 2단계 상세 크롭, PDF 5쪽. 전체 그림에서 교사의 두 조건 질의 부분을 발췌했습니다. 오른쪽으로 나가는 연결선은 전체 그림에서 손실로 이어집니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=5)
+{: .caption}
 
 그림의 예에서는 사용자가 파란색 M 사이즈 셔츠를 원합니다. 하네스는 아직 크기를 선택하지 않았다고 보고합니다. 이를 본 교사는 크기 M을 먼저 선택하고, 보지 않은 교사는 바로 구매합니다. 학생의 추론이 “이 셔츠가 맞는다” 수준이어도 다음 행동에서는 크기 선택을 우선하도록 감독하는 예입니다.
 
@@ -282,7 +286,10 @@ $`\nu`$는 수집된 학습 기록의 분포, $`\lambda`$는 두 항을 조절�
 
 ![응답 증류와 행동 선호, 양성 행동의 유효성 마스크를 보여 주는 학습 목적 상세]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-3-objective.png' | relative_url }})
 
-*원문 Figure 3의 3단계 상세 크롭, PDF 5쪽. 같은 행동을 출력한 쌍은 선호 기울기가 없고, 양성 행동이 무효하면 선호 쌍을 버립니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=5)*
+원문 Figure 3의 3단계 상세 크롭, PDF 5쪽. 같은 행동을 출력한 쌍은 선호 기울기가 없고, 양성 행동이 무효하면 선호 쌍을 버립니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=5)
+{: .caption}
+
+가령 학생 에이전트가 인벤토리를 확인해야 하는 턴이라고 하겠습니다. 경고를 읽은 교사는 상태를 다시 확인하는 행동을, 경고가 빠진 교사는 직전 명령을 반복하는 행동을 제안할 수 있습니다. 두 행동이 다르고 하네스가 있는 쪽의 행동이 유효하면 학생에게 그 행동을 선호하도록 학습시키는 사례가 됩니다. [원문 방법](https://arxiv.org/html/2610.02858v1#S3.SS1)
 
 #### 3.2 What Harness Awareness Adds to Distillation
 
@@ -358,7 +365,8 @@ AdamW, 학습률 0.00001, weight decay 0.01, gradient clipping 1.0, 유효 배�
 
 ![하네스 유무 평가값과 ScienceWorld 점수 부호를 포함한 원문 주요 결과 표]({{ '/img/reviews/2026/harness-aware-distillation-review/table-2-main-results.png' | relative_url }})
 
-*원문 Table 2의 표 전체 영역 크롭, PDF 7쪽. 각 셀은 진한 값이 하네스 사용, 회색 값이 하네스 제거 평가입니다. 위 Markdown 표는 진한 값만 옮겼습니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=7)*
+원문 Table 2의 표 전체 영역 크롭, PDF 7쪽. 각 셀은 진한 값이 하네스 사용, 회색 값이 하네스 제거 평가입니다. 위 Markdown 표는 진한 값만 옮겼습니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=7)
+{: .caption}
 
 ALFWorld unseen에서는 가장 높은 기준선 OPD보다 **16.42%p** 높고, seen에서는 가장 높은 기준선 41.43%보다 **10.00%p** 높습니다. 이 조건에서는 Qwen3-8B 교사의 성공률도 넘어섭니다. WebShop은 학생 기준으로 점수와 SR 모두 가장 높지만, 점수 47.19는 교사 49.96에 미치지 못합니다. ScienceWorld에서도 학생 중 가장 높지만 교사의 점수 20.26·SR 20.13%와는 차이가 큽니다. 따라서 “교사를 넘어섰다”는 표현은 ALFWorld의 해당 결과로 한정해야 합니다.
 
@@ -370,7 +378,8 @@ Figure 4에서는 컵을 데운 뒤 캐비닛에 놓아야 합니다. 이 환경
 
 ![컵을 전자레인지에 둔 채 가열하던 반복에서 HAD가 컵을 다시 들고 가열하는 회복 과정]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-4-recovery.png' | relative_url }})
 
-*원문 Figure 4 전체 영역 크롭, PDF 7쪽. HAD도 처음에는 정체되지만 21턴의 경고 뒤 컵을 꺼내고, 22턴에 소지 상태를 확인하여 가열한 뒤 25턴에 성공합니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=7)*
+원문 Figure 4 전체 영역 크롭, PDF 7쪽. HAD도 처음에는 정체되지만 21턴의 경고 뒤 컵을 꺼내고, 22턴에 소지 상태를 확인하여 가열한 뒤 25턴에 성공합니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=7)
+{: .caption}
 
 HAD 역시 처음부터 오류를 피한 것은 아닙니다. 14–20턴에 반복하다가 새 관측이 5단계 동안 없다는 경고를 받은 뒤 컵을 꺼냅니다. 그다음 하네스가 컵을 들고 있다고 보고하자 가열하고 과제를 완료합니다. 이 사례의 의미는 완벽한 초기 계획보다 **실패 상태에서 보고를 읽고 행동을 수정하는 과정**에 있습니다.
 
@@ -770,7 +779,8 @@ HAD는 하네스를 사용한 성공 에피소드에서 15.42턴으로 기준선
 
 ![에피소드 진행 구간별로 두 교사 행동이 달라진 비율을 보여 주는 세 환경의 그래프]({{ '/img/reviews/2026/harness-aware-distillation-review/figure-9-action-changes.png' | relative_url }})
 
-*원문 Figure 9 전체 크롭, PDF 28쪽. 가로축은 에피소드 내 상대 위치, 세로축은 행동이 달라진 비율입니다. 축·범례·환경별 전체 비율을 보존했습니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=28)*
+원문 Figure 9 전체 크롭, PDF 28쪽. 가로축은 에피소드 내 상대 위치, 세로축은 행동이 달라진 비율입니다. 축·범례·환경별 전체 비율을 보존했습니다. [원문](https://arxiv.org/pdf/2610.02858v1#page=28)
+{: .caption}
 
 학습 중 학생이 방문한 상태에서 두 교사의 행동이 달라진 비율은 ALFWorld 15.5%, WebShop 25.6%, ScienceWorld 19.3%입니다. 그래프는 그 차이가 초반에만 모이지 않고 진행 구간 전반에 존재함을 보여 줍니다. 이는 소수의 초기 결정만 대비하는 방식이 아니라 여러 시점에서 감독이 발생한다는 근거입니다.
 

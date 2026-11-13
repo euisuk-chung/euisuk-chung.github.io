@@ -236,13 +236,15 @@ Gaotang Li 등 12명의 **Object-Oriented Harness: Evolving Agent Harnesses thro
 
 ![전역 하네스, 독립 특화 하네스, 상속으로 코드를 공유하는 OO-Harness의 차이]({{ '/img/reviews/2026/oo-harness-review/figure-01-organizations.png' | relative_url }})
 
-*원문 Figure 1, PDF 2쪽. 청록색은 상속, 주황색 점선은 선택, 회색은 실행 경로입니다. 원문 영역만 크롭했으며 내용은 바꾸지 않았습니다. Gaotang Li 외, CC BY 4.0. [고정 버전 원문](https://arxiv.org/pdf/2610.28380v1#page=2).*
+원문 Figure 1, PDF 2쪽. 청록색은 상속, 주황색 점선은 선택, 회색은 실행 경로입니다. 원문 영역만 크롭했으며 내용은 바꾸지 않았습니다. Gaotang Li 외, CC BY 4.0. [고정 버전 원문](https://arxiv.org/pdf/2610.28380v1#page=2).
+{: .caption}
 
 상속 구조만 크게 보면 다음과 같습니다. 아래 (c) 패널에서 선택된 주황색 자식은 조상의 코드를 물려받지만, 실행 화살표는 선택된 인스턴스 하나에서 executor로 이어집니다. 계층의 모든 노드를 차례로 실행하는 구조가 아닙니다.
 
 ![Figure 1의 OO-Harness 패널 상세로, 상속된 클래스 중 하나를 선택해 하나의 실행 인스턴스로 사용하는 구조]({{ '/img/reviews/2026/oo-harness-review/figure-01c-inheritance-detail.png' | relative_url }})
 
-*원문 Figure 1(c)와 범례의 상세 크롭, PDF 2쪽. 위의 전체 그림에서 해당 패널만 따로 제시했으며 배치나 내용을 바꾸지 않았습니다. Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=2).*
+원문 Figure 1(c)와 범례의 상세 크롭, PDF 2쪽. 위의 전체 그림에서 해당 패널만 따로 제시했으며 배치나 내용을 바꾸지 않았습니다. Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=2).
+{: .caption}
 
 ### 후보 수용과 테스트 선택을 나누어 읽어야 합니다
 
@@ -308,7 +310,8 @@ $`t`$는 새 과제, $`\omega(t)`$는 기본 하네스에서 관찰한 수행 �
 
 ![기본 실행으로 군집을 만들고 하위 클래스를 진화시킨 뒤 계층과 교훈을 고정해 테스트 과제에 적용하는 절차]({{ '/img/reviews/2026/oo-harness-review/figure-03-pipeline.png' | relative_url }})
 
-*원문 Figure 3, PDF 4쪽. 위는 발견 단계, 아래는 고정된 테스트 단계입니다. 교훈 저장소의 사용은 구현별로 다르며 테스트 채점 결과로 라우터를 갱신하지 않습니다. 원문 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=4).*
+원문 Figure 3, PDF 4쪽. 위는 발견 단계, 아래는 고정된 테스트 단계입니다. 교훈 저장소의 사용은 구현별로 다르며 테스트 채점 결과로 라우터를 갱신하지 않습니다. 원문 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=4).
+{: .caption}
 
 #### 3.2 Representing the harness hierarchy
 
@@ -338,6 +341,8 @@ $`t`$는 새 과제, $`\omega(t)`$는 기본 하네스에서 관찰한 수행 �
 
 **다음 챕터로의 연결**: 같은 executor와 분리된 과제 집합에서 이 구조가 어떤 효과를 내는지 측정합니다. [3절·Algorithm 1, PDF 3–5쪽](https://arxiv.org/pdf/2610.28380v1#page=3)
 
+코드 탐색과 표 계산에 특화한 두 가상의 하위 클래스를 생각해 보겠습니다. 파일 읽기는 부모 클래스에 두고, 코드 탐색 클래스는 검색 규칙을, 계산 클래스는 검산 규칙을 각각 바꿉니다. 라우터가 표 계산 요청에 계산 클래스를 선택하면, 해당 인스턴스는 부모의 파일 읽기와 계산 클래스의 검산을 사용합니다. [원문 방법](https://arxiv.org/html/2610.28380v1#S3.SS5)
+
 ### 📖 **Chapter 4: Experiments**
 
 **챕터의 위치와 역할**: 개선량을 해석하는 데 필요한 데이터 분할·점수 정의·기준선을 먼저 고정하고, 주 결과와 탐색 과정을 비교합니다.
@@ -364,7 +369,8 @@ OO-Harness는 기본 궤적을 추가로 사용하므로, 추가 추론 자체�
 
 ![동일 executor에서 Base, 테스트 시 확장, 전역 하네스, 특화 하네스를 비교한 전체 결과표]({{ '/img/reviews/2026/oo-harness-review/table-01-results.png' | relative_url }})
 
-*원문 Table 1, PDF 7쪽의 표 영역. 점수는 백분율이며 아래첨자는 독립 executor 실행 3회의 표준편차입니다. 표 전체를 크롭했으며 주요 지표는 아래에 큰 글씨의 Markdown 표로도 옮겼습니다. Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=7).*
+원문 Table 1, PDF 7쪽의 표 영역. 점수는 백분율이며 아래첨자는 독립 executor 실행 3회의 표준편차입니다. 표 전체를 크롭했으며 주요 지표는 아래에 큰 글씨의 Markdown 표로도 옮겼습니다. Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=7).
+{: .caption}
 
 | 방법 | Automation Mean | Workspace Mean | Toolathlon PASS |
 |---|---:|---:|---:|
@@ -387,7 +393,8 @@ OO-Harness의 Base 대비 주 지표 개선은 차례대로 **15.79·14.03·6.30
 
 ![OO-Harness와 Meta-Harness의 기록된 탐색 진행·시간 및 held-out 요약 점수 비교]({{ '/img/reviews/2026/oo-harness-review/figure-04-search.png' | relative_url }})
 
-*원문 Figure 4, PDF 6쪽. (a)의 가로축은 각 실행에서 기록된 갱신 진행 비율이며, (b)는 기록된 평균 탐색 시간입니다. 축·범례·값을 보존한 크롭입니다. Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=6).*
+원문 Figure 4, PDF 6쪽. (a)의 가로축은 각 실행에서 기록된 갱신 진행 비율이며, (b)는 기록된 평균 탐색 시간입니다. 축·범례·값을 보존한 크롭입니다. Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=6).
+{: .caption}
 
 Figure 4는 OO-Harness가 발견 곡선 초기에 더 크게 개선되고, 기록된 평균 탐색 시간이 109.1시간에서 29.0시간으로 짧아졌음을 보여줍니다. Held-out 요약 막대는 Base 39.4, Meta 42.3, OO 51.4입니다. 이는 개별 벤치마크의 모든 지표를 대체하는 단일 보편 점수가 아닙니다. 가로축도 동일한 과제 평가 횟수나 동일 누적 API 사용량이 아닌 **기록된 갱신의 진행 비율**로 맞췄다는 점이 중요합니다. 논문은 대상 군집만 평가하는 구조가 후보별 API 호출과 비용을 줄일 수 있다고 해석합니다. 전체 운영 비용의 완전한 분해표를 제공한 것으로 확대하지 않습니다.
 
@@ -417,7 +424,8 @@ Figure 4는 OO-Harness가 발견 곡선 초기에 더 크게 개선되고, 기�
 
 ![코드를 새로 시작한 Base-reset, 복사 재사용한 Flat, 상속한 OO의 Workspace micro rubric pass 비교]({{ '/img/reviews/2026/oo-harness-review/figure-05-inheritance.png' | relative_url }})
 
-*원문 Figure 5, PDF 8쪽. Base-reset 29.39%, Flat 35.60%, OO 40.56%입니다. 원문 그래프 영역 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=8).*
+원문 Figure 5, PDF 8쪽. Base-reset 29.39%, Flat 35.60%, OO 40.56%입니다. 원문 그래프 영역 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=8).
+{: .caption}
 
 같은 발견 288과제, 초기 군집·기본 실행 기록, 명목 탐색 예산과 라우팅 절차를 사용하지만, **각 변형이 별도로 진화한 결과물**을 Lite-100에서 한 번씩 평가합니다. Base-reset→Flat의 차이는 유용한 코드를 다음 개정에 가져가는 것, Flat→OO의 4.96%p 차이는 그 재사용을 상속으로 조직하는 것과 관련된 근거입니다. 동일한 최종 코드에 상속 문법만 바꾼 실험은 아니므로, 차이 전체를 언어 문법 자체의 인과 효과로 좁혀 말하지 않습니다.
 
@@ -437,7 +445,8 @@ OOD는 발견 단계와 다른 분포를 뜻합니다. 저자는 응용 계열�
 
 ![응용 계열을 분리한 OOD 49과제에서 Base와 OO-Harness는 같은 PASS를 유지하고 전역 Meta-Harness는 낮아진 결과]({{ '/img/reviews/2026/oo-harness-review/figure-07-ood.png' | relative_url }})
 
-*원문 Figure 7, PDF 9쪽. Task PASS는 Base 59.18%, Meta-Harness 44.90%, OO-Harness 59.18%입니다. 원문 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=9).*
+원문 Figure 7, PDF 9쪽. Task PASS는 Base 59.18%, Meta-Harness 44.90%, OO-Harness 59.18%입니다. 원문 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=9).
+{: .caption}
 
 이 결과의 의미는 OO-Harness가 새로운 도메인에서도 특화 실행으로 Base를 더 높였다는 것이 아닙니다. 이 설정에서는 **적합하지 않은 특화를 강제하지 않고 기본 성능을 그대로 보존**했습니다. 주 실험의 특화 성능 향상과 OOD의 보존 효과를 구분해야 합니다.
 
@@ -561,7 +570,8 @@ Parallel은 Base를 K번 독립 실행한 뒤 Opus 4.8이 궤적으로 하나를
 
 ![s9의 쓰기 누락 완료 검사에 s12의 예산 근접 알림과 s29의 도구 오류 지침을 상속으로 누적하는 계보]({{ '/img/reviews/2026/oo-harness-review/figure-09-checks.png' | relative_url }})
 
-*원문 Figure 9, PDF 19쪽. 테두리 노드 s9·s12는 비활성 조상으로 동작을 공급하고, 채워진 s29가 활성 하네스입니다. 원문 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=19).*
+원문 Figure 9, PDF 19쪽. 테두리 노드 s9·s12는 비활성 조상으로 동작을 공급하고, 채워진 s29가 활성 하네스입니다. 원문 크롭, Gaotang Li 외, CC BY 4.0. [원문](https://arxiv.org/pdf/2610.28380v1#page=19).
+{: .caption}
 
 세 노드를 세 번 순차 실행하는 것이 아니라, 활성 자식 한 인스턴스가 상속된 검사와 자신의 지침을 함께 갖습니다. 따라서 비활성 조상도 코드상 역할이 사라지는 것은 아닙니다.
 

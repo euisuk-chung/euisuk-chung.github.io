@@ -184,7 +184,8 @@ visual_sources:
 
 ![네 단계 컨트롤러가 압축 상태와 영구 메모리, 작업자를 연결하는 원문 개요]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure1-overview.png' | relative_url }})
 
-*원문 Figure 1, PDF 1쪽, v1. 그림 영역만 크롭했으며 번역·재배열·수치 변경은 하지 않았습니다. 중앙은 제어 순환, 아래는 상태·메모리·작업자, 양옆은 기존 설계와 제안 설계의 대비입니다. [버전 고정 원문](https://arxiv.org/pdf/2609.38147v1#page=1)*
+원문 Figure 1, PDF 1쪽, v1. 그림 영역만 크롭했으며 번역·재배열·수치 변경은 하지 않았습니다. 중앙은 제어 순환, 아래는 상태·메모리·작업자, 양옆은 기존 설계와 제안 설계의 대비입니다. [버전 고정 원문](https://arxiv.org/pdf/2609.38147v1#page=1)
+{: .caption}
 
 ### 네 단계의 책임과 예산
 
@@ -272,7 +273,8 @@ $`i`$는 작업자 번호입니다. 모든 작업자가 같은 과제 $`x`$를 �
 
 ![원문 Figure 1의 Assess와 Propose 단계 상세]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure1-assess-propose-detail.png' | relative_url }})
 
-*Figure 1 중앙 왼쪽 상세, PDF 1쪽, v1. 원문 영역만 크롭했습니다. Assess는 상태를 다시 쓰고 Propose는 다음 계산 후보를 열거합니다. 전체 연결은 위 개요 그림에서 확인할 수 있습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=1)*
+Figure 1 중앙 왼쪽 상세, PDF 1쪽, v1. 원문 영역만 크롭했습니다. Assess는 상태를 다시 쓰고 Propose는 다음 계산 후보를 열거합니다. 전체 연결은 위 개요 그림에서 확인할 수 있습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=1)
+{: .caption}
 
 **Assess: What have we learned?** 단계는 이전 판단과 새 결과를 통합합니다.
 
@@ -292,7 +294,8 @@ $`\mathcal{A}_t`$는 가능한 작업들의 집합입니다. 이 단계는 남�
 
 ![원문 Figure 1의 Evaluate와 Dispatch 단계 상세]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure1-evaluate-dispatch-detail.png' | relative_url }})
 
-*Figure 1 중앙 오른쪽 상세, PDF 1쪽, v1. 원문 영역만 크롭했습니다. Evaluate는 예산 아래에서 선택하고 Dispatch는 지시와 문맥을 작업자에게 전달합니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=1)*
+Figure 1 중앙 오른쪽 상세, PDF 1쪽, v1. 원문 영역만 크롭했습니다. Evaluate는 예산 아래에서 선택하고 Dispatch는 지시와 문맥을 작업자에게 전달합니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=1)
+{: .caption}
 
 **Evaluate: Which option is worth its cost?** 단계는 계산 가치와 비용을 비교합니다.
 
@@ -310,6 +313,8 @@ a_t=\mathrm{Dispatch}(x,s_t,\tilde a_t;M_t).
 ```
 
 $`a_t`$는 실제 작업자 실행 또는 종료 행동입니다. 검증 작업에는 기존 증명과 비평을 전달하고, 새로운 시도에는 과거 산출물을 전혀 주지 않을 수도 있습니다. 문맥 선택 자체가 어떤 계산을 할지 정하는 일의 일부입니다. 종료라면 이미 있는 답을 선택하고, 실행이라면 새 결과가 다음 주기의 Assess에 들어갑니다. 부록 B의 구현 지침에서는 여러 추천 작업을 하나의 작업자 호출 묶음으로 변환합니다.
+
+서로 다른 풀이 두 개가 남은 가상의 실행에서 컨트롤러가 한 후보의 근거가 부족하다고 판단했다고 하겠습니다. 원래 작업자에게 재검토를 맡기거나, 다른 작업자에게 독립 검증을 맡길 수 있습니다. 반환된 검증 결과는 산출물로 남습니다. 다음 제어 사이클에서 후보와 검증 결과를 함께 읽어 제출 여부를 판단할 수 있습니다. [원문 방법](https://arxiv.org/html/2609.38147v1#S3.SS3)
 
 #### 3.4 Recording the Artifact Graph
 
@@ -509,7 +514,8 @@ IMO에서 94.6이라는 수치는 “문제의 94.6%를 완전히 증명했다�
 
 ![명목 예산 증가에 따른 실제 호출 사용량과 최종 점수를 비교하는 원문 그래프]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure3-budget-scaling.png' | relative_url }})
 
-*원문 Figure 3 전체, PDF 10쪽, v1. 그림 영역만 크롭했습니다. 왼쪽 두 패널은 실제 호출 수, 오른쪽 두 패널은 점수이며 색은 모델, 실선·사각형은 Meta-Reasoning, 점선·빈 원은 Direct Control입니다. 축·범례를 보존했습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=10)*
+원문 Figure 3 전체, PDF 10쪽, v1. 그림 영역만 크롭했습니다. 왼쪽 두 패널은 실제 호출 수, 오른쪽 두 패널은 점수이며 색은 모델, 실선·사각형은 Meta-Reasoning, 점선·빈 원은 Direct Control입니다. 축·범례를 보존했습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=10)
+{: .caption}
 
 원문은 먼저 **허용량이 실제 사용으로 이어지는가**를 봅니다. GPT-5.5의 Direct Control은 ProgramBench 1200허용량에서 약 18%만 사용합니다. Meta-Reasoning은 같은 설정에서 모델별 약 89–101%를 사용합니다. 101%는 새로운 예산 정의가 아니라, 예산 아래에서 시작한 작업자가 주기 사이의 감시 전에 완료되며 조금 넘는 실행 방식 때문입니다.
 
@@ -517,7 +523,8 @@ IMO에서 94.6이라는 수치는 “문제의 94.6%를 완전히 증명했다�
 
 ![ProgramBench에서 예산별 점수 변화를 보여 주는 Figure 3 마지막 패널 상세]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure3-programbench-detail.png' | relative_url }})
 
-*Figure 3 마지막 패널 상세, PDF 10쪽, v1. 원문 패널만 크롭했습니다. 가로축은 명목 호출 예산, 세로축은 평균 문제별 테스트 통과율입니다. 파랑은 Gemini 3.1 Pro, 초록은 GPT-5.5, 주황은 Opus 4.8이며 선·마커 의미는 전체 그림과 같습니다. 전역 범례는 전체 그림에 보존했습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=10)*
+Figure 3 마지막 패널 상세, PDF 10쪽, v1. 원문 패널만 크롭했습니다. 가로축은 명목 호출 예산, 세로축은 평균 문제별 테스트 통과율입니다. 파랑은 Gemini 3.1 Pro, 초록은 GPT-5.5, 주황은 Opus 4.8이며 선·마커 의미는 전체 그림과 같습니다. 전역 범례는 전체 그림에 보존했습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=10)
+{: .caption}
 
 조기 종료만이 설명은 아닙니다. Opus Direct Control은 실제 호출이 **376 → 768**로 대략 두 배가 되지만 점수는 **62.7 → 65.3**이고 중간 예산에서 최고입니다. 계속 일한다는 사실보다 어떤 일을 추가하는지가 중요하다는 관찰입니다.
 
@@ -531,13 +538,15 @@ Figure 4는 ProgramBench의 노드·간선·깊이·너비가 예산에 따라 �
 
 ![네 벤치마크의 대응 문제에서 기록된 작업자 산출물 그래프를 비교한 원문 그림]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure5-artifact-graphs.png' | relative_url }})
 
-*원문 Figure 5 전체, PDF 13쪽, v1. 그림 영역만 크롭했습니다. 위는 Meta-Reasoning, 아래는 Direct Control이며 원으로 둘러싼 노드는 최종 제출 산출물입니다. 간선은 선택해 전달한 문맥 의존성입니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=13)*
+원문 Figure 5 전체, PDF 13쪽, v1. 그림 영역만 크롭했습니다. 위는 Meta-Reasoning, 아래는 Direct Control이며 원으로 둘러싼 노드는 최종 제출 산출물입니다. 간선은 선택해 전달한 문맥 의존성입니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=13)
+{: .caption}
 
 Figure 5의 ARC 대응 실행에서 Direct Control은 **독립 시도 6개와 1-hop 후속 4개**를 만듭니다. Meta-Reasoning은 더 많은 독립 시도를 출발점으로 삼고 과거 결과를 연결하며 최종 깊이의 후보 3개에 도달합니다. 탐색과 재사용이 같은 실행에 공존하는 사례입니다.
 
 ![ARC-AGI-2 대응 실행의 노드와 깊이 차이를 보여 주는 Figure 5 상세]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure5-arc-detail.png' | relative_url }})
 
-*Figure 5 ARC-AGI-2 열 상세, PDF 13쪽, v1. 원문 열만 크롭했습니다. GPT-5.5의 같은 문제에서 위 Meta-Reasoning 그래프는 노드 22·깊이 3·너비 13, 아래 Direct Control은 노드 10·깊이 2·너비 6입니다. 파란 점은 작업자 산출물, 원 표시는 최종 제출 산출물입니다. 이 한 사례를 평균 그래프 통계로 읽어서는 안 됩니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=13)*
+Figure 5 ARC-AGI-2 열 상세, PDF 13쪽, v1. 원문 열만 크롭했습니다. GPT-5.5의 같은 문제에서 위 Meta-Reasoning 그래프는 노드 22·깊이 3·너비 13, 아래 Direct Control은 노드 10·깊이 2·너비 6입니다. 파란 점은 작업자 산출물, 원 표시는 최종 제출 산출물입니다. 이 한 사례를 평균 그래프 통계로 읽어서는 안 됩니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=13)
+{: .caption}
 
 Direct Control도 이전 산출물을 선택해 작업자에게 전달할 수 있으므로 원리적으로 이런 의존성을 만들 수 있습니다. 관찰된 차이는 그 기능을 실제로 어떻게 사용했는지에 있습니다. 공유 환경의 모든 정보 이동이 간선으로 기록되는 것은 아니라는 §3.4의 조건을 다시 적용해야 합니다.
 
@@ -545,7 +554,8 @@ Direct Control도 이전 산출물을 선택해 작업자에게 전달할 수 �
 
 ![정답 후보 존재 비율, 정오 판별 AUC, frontier 대비 선택 이득을 보여 주는 원문 진단 그림]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure6-diagnostics.png' | relative_url }})
 
-*원문 Figure 6 전체, PDF 14쪽, v1. 그림 영역만 크롭했으며 세 패널과 범례를 보존했습니다. (a)는 coverage, (b)는 monitoring, (c)는 frontier selection gain입니다. IMO coverage는 부분 점수와 다른 이진 정오 기준입니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=14)*
+원문 Figure 6 전체, PDF 14쪽, v1. 그림 영역만 크롭했으며 세 패널과 범례를 보존했습니다. (a)는 coverage, (b)는 monitoring, (c)는 frontier selection gain입니다. IMO coverage는 부분 점수와 다른 이진 정오 기준입니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=14)
+{: .caption}
 
 **Correct answers appear in more runs.** 대부분의 평가 설정에서 coverage가 높아집니다. Gemini에서는 IMO **+20%p**, LongCoT **+10%p**가 큽니다. ARC는 세 모델 모두 개선하며, Opus의 LongCoT는 거의 같습니다. Figure 6(a)의 Opus/LongCoT 표시는 약 **−1%p**여서 모든 셀의 coverage가 증가했다는 주장은 맞지 않습니다. 최종 부분 점수·정확도가 올랐다는 사실과 정답 후보가 존재한 실행 비율은 구분됩니다.
 
@@ -553,13 +563,15 @@ Direct Control도 이전 산출물을 선택해 작업자에게 전달할 수 �
 
 ![작업자 confidence와 컨트롤러 판정의 Type-2 AUC를 확대해서 보여 주는 Figure 6 패널]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure6-monitoring-detail.png' | relative_url }})
 
-*Figure 6(b) 상세, PDF 14쪽, v1. 원문 패널만 크롭했습니다. 회색은 작업자 자기 confidence, 파랑은 Meta-Reasoning 컨트롤러 판정입니다. 0.5 기준선은 순위 판별의 우연 수준이며 보정된 정답 확률이 아닙니다. Direct Control의 컨트롤러 verdict 비교는 없습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=14)*
+Figure 6(b) 상세, PDF 14쪽, v1. 원문 패널만 크롭했습니다. 회색은 작업자 자기 confidence, 파랑은 Meta-Reasoning 컨트롤러 판정입니다. 0.5 기준선은 순위 판별의 우연 수준이며 보정된 정답 확률이 아닙니다. Direct Control의 컨트롤러 verdict 비교는 없습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=14)
+{: .caption}
 
 **The final choice improves in some settings, but not all.** ARC와 LongCoT의 해당 실행 집계에서 약 83%는 deepest terminal artifact에서 답을 제출합니다. 그러나 대략 4분의 3의 실행에서는 그 frontier에 후보가 여러 개여서 여전히 선택 문제가 남습니다. GPT-5.5/ARC의 FSG는 Meta-Reasoning **+11%p**, Direct Control **+3%p**입니다. Opus/ARC와 GPT-5.5/LongCoT도 제안법이 높지만, Opus/LongCoT는 거의 같고 Gemini/LongCoT는 Direct Control이 약간 높습니다.
 
 ![실제 최종 제출이 각 실행의 frontier 무작위 선택보다 얼마나 나은지 보여 주는 Figure 6 상세]({{ '/img/reviews/2026/agentic-meta-reasoning-review/figure6-selection-detail.png' | relative_url }})
 
-*Figure 6(c) 상세, PDF 14쪽, v1. 원문 패널만 크롭했습니다. 회색은 Direct Control, 파랑은 Meta-Reasoning입니다. 정답이 존재한 실행에 조건을 둔 FSG이므로 최종 전체 정확도와 다릅니다. 모델별 자신의 frontier 기준선에서 계산한 값이며, 전역 색 범례는 전체 그림에 보존했습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=14)*
+Figure 6(c) 상세, PDF 14쪽, v1. 원문 패널만 크롭했습니다. 회색은 Direct Control, 파랑은 Meta-Reasoning입니다. 정답이 존재한 실행에 조건을 둔 FSG이므로 최종 전체 정확도와 다릅니다. 모델별 자신의 frontier 기준선에서 계산한 값이며, 전역 색 범례는 전체 그림에 보존했습니다. [원문](https://arxiv.org/pdf/2609.38147v1#page=14)
+{: .caption}
 
 이 순서는 중요한 해석을 만듭니다. 정답이 더 자주 생기고, 정오를 잘 순위화하는 신호가 있어도, 그 신호가 최종 제출을 모든 설정에서 균일하게 개선하는 것은 아닙니다. 좋은 후보를 만드는 계산과 좋은 후보를 고르는 계산을 따로 봐야 합니다.
 

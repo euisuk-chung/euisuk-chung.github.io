@@ -142,11 +142,13 @@ Minki Kang 외 연구진은 생성 모델과 실행 하네스(harness)를 고정
 
 ![기본 에이전트와 Mid-Harness의 연결 및 주요 성능 비교]({{ '/img/reviews/2026/mid-harness-review/figure-1-concept.png' | relative_url }})
 
-*PDF Figure 1, 1쪽. 동일 버전 PDF의 전체 그림 영역 크롭이며 번역·수치 변경은 없습니다. 왼쪽은 여러 후보 중 하나만 실행하는 구조, 오른쪽은 검증과 실행 확대의 결과입니다. [원문](https://arxiv.org/pdf/2609.39982v1#page=1)*
+PDF Figure 1, 1쪽. 동일 버전 PDF의 전체 그림 영역 크롭이며 번역·수치 변경은 없습니다. 왼쪽은 여러 후보 중 하나만 실행하는 구조, 오른쪽은 검증과 실행 확대의 결과입니다. [원문](https://arxiv.org/pdf/2609.39982v1#page=1)
+{: .caption}
 
 ![Figure 1 왼쪽 패널의 후보 생성·검증·실행 흐름 상세]({{ '/img/reviews/2026/mid-harness-review/figure-1-flow-detail.png' | relative_url }})
 
-*PDF Figure 1 왼쪽 패널 상세, 1쪽. 전체 그림을 위에 유지하고 원래 위치의 흐름만 크롭했습니다. 재배열·번역·수치 변경은 없습니다. [원문](https://arxiv.org/pdf/2609.39982v1#page=1)*
+PDF Figure 1 왼쪽 패널 상세, 1쪽. 전체 그림을 위에 유지하고 원래 위치의 흐름만 크롭했습니다. 재배열·번역·수치 변경은 없습니다. [원문](https://arxiv.org/pdf/2609.39982v1#page=1)
+{: .caption}
 
 그림은 npm·make·pytest 등의 대안 중 현재 프로젝트 상태에 맞는 명령을 고르는 개념을 보여줍니다. 특정 명령이 모든 프로젝트에서 우월하다는 규칙은 아닙니다. 후보를 각각 실행해 결과를 비교하는 대신, 실행 전에 하나를 선택한다는 점이 핵심입니다.
 
@@ -268,6 +270,19 @@ Candidate coverage는 후보 안에 유용한 대안이 포함되는지입니다
 
 이는 활용 가능한 대안의 간접 증거입니다. Frontier도 완벽한 oracle이 아니므로 68.03%를 최대 달성 가능 성공률이나 정확한 coverage로 부르면 안 됩니다.
 
+실패 원인을 아직 모르는 가상의 코딩 과제에서 같은 상태로부터 로그 확인, 관련 테스트 실행, 소스 수정이라는 후보가 나왔다고 하겠습니다. 검증기가 현재 문맥에서 적절한 행동 하나를 고릅니다. 선택한 행동을 환경에서 실행하고, 새로 돌아온 관찰을 다음 턴에 사용합니다. 이때 후보 세 개는 현재 상태의 대안 행동을 가리킵니다.
+
+설명용 실행 흐름입니다.
+
+```text
+입력: 현재 실행 상태
+후보: 로그 확인, 관련 테스트 실행, 소스 수정
+검증기로 후보를 비교 → 선택한 행동 하나 실행
+출력: 환경에서 돌아온 새 관찰 → 다음 실행 상태
+```
+
+[원문 방법](https://arxiv.org/html/2609.39982v1#S2)
+
 #### 4.2 Candidate Width and Verification
 
 **1. 약한 검증에서는 폭 확대의 이득이 작습니다**
@@ -276,7 +291,8 @@ Zero-shot listwise의 후보 4→8 확대는 Pass@1 49.32→51.02%, Pass@3 66.33
 
 ![후보 폭과 검증 형식에 따른 Pass@1 및 Pass@3]({{ '/img/reviews/2026/mid-harness-review/figure-2-candidate-width.png' | relative_url }})
 
-*PDF Figure 2, 6쪽. 전체 패널·축·범례를 보존한 크롭입니다. 왼쪽은 평균 실행 성공률, 오른쪽은 세 번 중 성공한 작업 비율입니다. [원문](https://arxiv.org/html/2609.39982v1#S4.F2)*
+PDF Figure 2, 6쪽. 전체 패널·축·범례를 보존한 크롭입니다. 왼쪽은 평균 실행 성공률, 오른쪽은 세 번 중 성공한 작업 비율입니다. [원문](https://arxiv.org/html/2609.39982v1#S4.F2)
+{: .caption}
 
 **2. 평가한 자기 검증 중 pairwise가 가장 높습니다**
 
@@ -346,7 +362,8 @@ PDF Table 1의 결과입니다. 점수·선호가 교사에 가까워졌지만, 
 
 ![실행 단계별 교사 일치도와 명확한 검증 실패로 판정된 불일치 범주]({{ '/img/reviews/2026/mid-harness-review/figure-4-verifier-analysis.png' | relative_url }})
 
-*PDF Figure 4, 8쪽. 전체 패널·축·범례·수치를 보존한 크롭입니다. 오른쪽은 교사 불일치 중 추가 모델이 명확한 검증 실패로 판정한 사례로, 독립적인 행동 정답 라벨은 아닙니다. [원문](https://arxiv.org/html/2609.39982v1#S5.F4)*
+PDF Figure 4, 8쪽. 전체 패널·축·범례·수치를 보존한 크롭입니다. 오른쪽은 교사 불일치 중 추가 모델이 명확한 검증 실패로 판정한 사례로, 독립적인 행동 정답 라벨은 아닙니다. [원문](https://arxiv.org/html/2609.39982v1#S5.F4)
+{: .caption}
 
 **2. 명령 의미와 실행 가능성이 큰 비중을 차지합니다**
 
@@ -387,11 +404,13 @@ PDF Table 2·7의 수치입니다. 환경 실행 수와 추가 후보·검증 �
 
 ![전체 출력·입력 토큰 및 기준 단가 비용에 따른 행동 확대와 실행 확대의 성공률]({{ '/img/reviews/2026/mid-harness-review/figure-5-cost-composition.png' | relative_url }})
 
-*PDF Figure 5, 9쪽. 세 패널과 전체 범례를 보존한 크롭입니다. HTML에서는 Figure 6입니다. 비용은 실제 청구액이 아닌 기준 토큰 가격의 추정치입니다. [원문](https://arxiv.org/html/2609.39982v1#S6.F6.fig2)*
+PDF Figure 5, 9쪽. 세 패널과 전체 범례를 보존한 크롭입니다. HTML에서는 Figure 6입니다. 비용은 실제 청구액이 아닌 기준 토큰 가격의 추정치입니다. [원문](https://arxiv.org/html/2609.39982v1#S6.F6.fig2)
+{: .caption}
 
 ![Figure 5 비용·성공률 패널의 상세]({{ '/img/reviews/2026/mid-harness-review/figure-5-cost-detail.png' | relative_url }})
 
-*PDF Figure 5 오른쪽 비용 패널 상세, 9쪽. 오른쪽 패널만 원래 위치에서 크롭했습니다. 세로축의 Pass@1 눈금과 전체 범례는 위 전체 그림을 함께 참고합니다. 재배열·번역·수치 변경은 없습니다. [원문](https://arxiv.org/pdf/2609.39982v1#page=9)*
+PDF Figure 5 오른쪽 비용 패널 상세, 9쪽. 오른쪽 패널만 원래 위치에서 크롭했습니다. 세로축의 Pass@1 눈금과 전체 범례는 위 전체 그림을 함께 참고합니다. 재배열·번역·수치 변경은 없습니다. [원문](https://arxiv.org/pdf/2609.39982v1#page=9)
+{: .caption}
 
 SR을 1·2·3회로 늘린 성공률은 55.10·56.46·55.78%로 정체됩니다. Distilled N=8은 Best-of-5와 같은 57.14%를 약 3분의 1의 기준 토큰 비용으로 달성합니다. SR·Best-of-3 결합은 각각 60.20·66.33%로 Best-of-7의 59.18%보다 높으면서 비용은 낮습니다.
 

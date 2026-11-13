@@ -140,7 +140,8 @@ LLM 에이전트가 일을 잘하는지는 모델의 지식만으로 결정되�
 
 ![고정된 모델 주위의 문맥 구성·도구 인터페이스·서브에이전트·플러그인으로 나뉜 8개 하네스 구성요소]({{ '/img/reviews/2026/harness2-review/figure-02-components.png' | relative_url }})
 
-*Figure 2, PDF 3쪽. 모델 바깥의 8개 편집 지점입니다. 원본 영역 크롭, 영문·구성 변경 없음. Xu 외, arXiv 2610.14224v1, [버전 고정 PDF](https://arxiv.org/pdf/2610.14224v1#page=3), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Figure 2, PDF 3쪽. 모델 바깥의 8개 편집 지점입니다. 원본 영역 크롭, 영문·구성 변경 없음. Xu 외, arXiv 2610.14224v1, [버전 고정 PDF](https://arxiv.org/pdf/2610.14224v1#page=3), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 | 번호 | 구성요소 | 실행 중의 역할 |
 |---|---|---|
@@ -219,7 +220,8 @@ LLM 에이전트가 일을 잘하는지는 모델의 지식만으로 결정되�
 
 ![기본 실행에서 두 관점의 수정·후보 실행·조합을 거친 뒤 경험 라이브러리를 갱신하는 Harness² 파이프라인]({{ '/img/reviews/2026/harness2-review/figure-03-pipeline.png' | relative_url }})
 
-*Figure 3, PDF 5쪽. 왼쪽은 현재 과제의 개선, 오른쪽은 다음 과제에 남길 경험의 갱신입니다. 원본 영역 크롭, 번역·재구성 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=5), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Figure 3, PDF 5쪽. 왼쪽은 현재 과제의 개선, 오른쪽은 다음 과제에 남길 경험의 갱신입니다. 원본 영역 크롭, 번역·재구성 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=5), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 **Propose**는 현재 하네스로 참조 실행을 얻습니다. 정답 예시가 아니라 현재 시스템의 행동 기록입니다. Editor는 과제, 하네스, 참조 궤적, 이전 기록과 라이브러리를 읽고 두 종류의 실행 가능한 수정안을 만듭니다.
 
@@ -236,7 +238,8 @@ Invariant는 파일을 바꿀 수 없다는 뜻이 아니라 도메인에 걸쳐
 
 ![여러 후보를 한 번에 조합하는 병렬 재귀와 이전 체크포인트를 이어 수정하는 순차 재귀]({{ '/img/reviews/2026/harness2-review/figure-04-recursion.png' | relative_url }})
 
-*Figure 4, PDF 6쪽. (a) 병렬은 후보와 조합의 폭, (b) 순차는 개선의 깊이를 늘립니다. 원본 영역 크롭, 번역·재구성 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=6), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Figure 4, PDF 6쪽. (a) 병렬은 후보와 조합의 폭, (b) 순차는 개선의 깊이를 늘립니다. 원본 영역 크롭, 번역·재구성 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=6), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 **Parallel Recursion**은 기본 하네스의 참조 실행 $`k`$개, invariant와 domain 후보 각각 $`k`$개를 만듭니다. 각 후보를 실행한 뒤 $`k`$개 Composer가 전체 풀을 독립적으로 읽고 후속 하네스를 만듭니다. 구현은 이러한 population update를 한 번 수행합니다. 병렬 $`k=5`$는 5세대 진화가 아닙니다.
 
@@ -245,6 +248,17 @@ Invariant는 파일을 바꿀 수 없다는 뜻이 아니라 도메인에 걸쳐
 **리뷰어의 절차상 계산**으로, 정상 병렬 경로의 executor rollout은 참조 $`k`$회 + 두 관점의 후보 probe $`2k`$회 + 조합 결과 $`k`$회로 총 $`4k`$회입니다. 순차도 초기 참조 $`k`$회와 각 단계의 두 probe·한 후속 실행을 더하면 $`4k`$회입니다. 이는 원문의 절차를 센 값이며 보고된 토큰 비용이나 API 청구 건수가 아닙니다. Editor·Composer·Selector·Reflector의 별도 세션, rollout 안의 여러 모델 호출, 재시도는 별개입니다. $`k=1`$도 기본 하네스를 한 번 실행하는 것과 비용이 같지 않습니다.
 
 **Final Selection**은 $`k>1`$일 때 익명 산출물을 요청과 원자료에 비추어 비교하고 이미 존재하는 결과 하나를 반환합니다. 어느 하네스로 만들었는지 보지 않고 새 내용을 합성하지 않으며 하네스 수정도 추가하지 않습니다. $`k=1`$에서는 선택을 건너뜁니다. 최종 채택의 별표가 정답 보증이 아닌 이유입니다.
+
+긴 로그에서 필요한 구간을 놓쳤다고 가정하겠습니다. 한 수정안은 로그 검색 도구를 더하고, 다른 수정안은 요약 전에 실패 메시지를 따로 저장합니다. 병렬 재귀는 두 후보를 실행해 얻은 증거로 조합을 검토합니다. 순차 재귀는 앞 단계에서 유지한 하네스를 출발점으로 다음 수정을 이어갑니다.
+
+설명용 실행 흐름입니다.
+
+```text
+병렬: 기본 실행 → 여러 수정안 탐색 → 실행 증거를 모아 후속 하네스 구성
+순차: 기본 실행 → 수정·시험·조합 → 이어받은 하네스에서 같은 절차 반복
+```
+
+[원문 방법](https://arxiv.org/html/2610.14224v1#S2.SS2)
 
 #### 2.3 Harnessing-Level Recursion
 
@@ -274,7 +288,8 @@ Invariant는 파일을 바꿀 수 없다는 뜻이 아니라 도메인에 걸쳐
 
 ![두 실행 모델과 두 초기 하네스의 WorkBuddy 영역별 성능 및 executor 단계 수를 비교한 원문 Table 1]({{ '/img/reviews/2026/harness2-review/table-01-workbuddy.png' | relative_url }})
 
-*Table 1, PDF 8쪽. 괄호는 3회 실행의 SD, 파란 행은 단일 단계 대비 재귀의 변화량입니다. 표 영역 크롭, 숫자·주석 기호 변경 없음. 작은 숫자는 아래 대조표로도 제공합니다. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=8), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Table 1, PDF 8쪽. 괄호는 3회 실행의 SD, 파란 행은 단일 단계 대비 재귀의 변화량입니다. 표 영역 크롭, 숫자·주석 기호 변경 없음. 작은 숫자는 아래 대조표로도 제공합니다. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=8), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 저자는 먼저 **기본 하네스 대비 일관된 개선**을 설명합니다. WorkBuddy 평균에서 GLM-5/OpenCode는 64.2→75.7로 11.5점, Gemini/OpenCode는 72.4→77.5로 5.1점 올라갑니다. JobBench 최대 단일 단계 이득 4.5점은 Gemini/OpenCode의 31.5→36.0이고, LAB 최대 11.8%p는 GLM-5/OpenCode의 59.6→71.4입니다. 벤치마크별 최대치를 같은 조합의 공통 수치처럼 묶지 않습니다.
 
@@ -307,7 +322,8 @@ WB-Code와 WB-Office에서 $`k`$를 1부터 5까지 늘리면 병렬·순차 모
 
 ![과제당 전체 계산 토큰과 기본 하네스 대비 성능 상승을 비교하는 두 벤치마크의 Pareto 그래프]({{ '/img/reviews/2026/harness2-review/figure-06-compute.png' | relative_url }})
 
-*Figure 6, PDF 10쪽. 가로축은 과제당 전체 계산량(M tokens), 세로축은 기본 대비 상승입니다. 축·범례·두 패널을 보존한 크롭, 수치 재구성 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=10), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Figure 6, PDF 10쪽. 가로축은 과제당 전체 계산량(M tokens), 세로축은 기본 대비 상승입니다. 축·범례·두 패널을 보존한 크롭, 수치 재구성 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=10), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 최종 산출물 제출 전 사용한 실행·개선 토큰을 함께 셉니다. Gemini/OpenCode에서 $`k=1→5`$로 바꾸면 JobBench의 기본 대비 이득은 4.5→7.5점, WorkBuddy는 5.1→8.4점입니다. 두 Harness² 설정이 관측된 Pareto frontier에 있다는 것은 이 실험에서 같은 수준의 성능을 더 적은 계산으로 얻는 비교 설정이 없었다는 뜻입니다. 모든 모델·가격·업무의 최저 비용을 증명하지는 않습니다.
 
@@ -332,7 +348,8 @@ WorkBuddy에서는 라이브러리 제거 손실 3.1점, JobBench에서는 관�
 
 ![probe 없는 직접 편집에서의 라이브러리 효과와 JobBench 경험의 WorkBuddy 이전을 비교하는 그래프]({{ '/img/reviews/2026/harness2-review/figure-07-library.png' | relative_url }})
 
-*Figure 7, PDF 11쪽. 왼쪽은 추가 실행 증거 없이 직접 편집할 때의 효과, 오른쪽은 JobBench→WorkBuddy 이전입니다. 축·범례·수치·패널 보존 크롭, 번역 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=11), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Figure 7, PDF 11쪽. 왼쪽은 추가 실행 증거 없이 직접 편집할 때의 효과, 오른쪽은 JobBench→WorkBuddy 이전입니다. 축·범례·수치·패널 보존 크롭, 번역 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=11), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 참조 실행·후보 probe·라이브러리 없이 직접 수정하면 Code 73.4→63.2, Web 69.9→65.0으로 떨어집니다. $`k=1`$에서 축적한 라이브러리는 기본 수준을 회복시키고, $`k=5`$ 라이브러리는 기본 대비 Code +0.9·Web +4.4·Office +5.1점의 이득을 지원합니다. 앞서 축적한 탐색 경험이 추가 probe 없는 편집에도 도움이 되는지 보는 분석입니다.
 
@@ -346,7 +363,8 @@ OpenCode, $`k=2`$에서 Editor와 executor를 같은 모델로 맞춥니다. GLM
 
 ![JobBench의 파일 대조 실패와 산출물 재검사 누락을 네 하네스 구성요소로 개선한 사례]({{ '/img/reviews/2026/harness2-review/figure-09-case.png' | relative_url }})
 
-*Figure 9, PDF 12쪽. 색칠한 구성요소는 test time에 작성했고 회색은 기본에서 유지했습니다. 원본 영역 크롭, 코드·수치 보존, 번역 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=12), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+Figure 9, PDF 12쪽. 색칠한 구성요소는 test time에 작성했고 회색은 기본에서 유지했습니다. 원본 영역 크롭, 코드·수치 보존, 번역 없음. Xu 외, arXiv 2610.14224v1, [PDF](https://arxiv.org/pdf/2610.14224v1#page=12), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
 
 JobBench 제작 업무의 기본 점수는 43.1입니다. 일정·인력·예산 파일의 수치를 대조하지 않았고 작성한 파일을 다시 열어 검사하지 않았습니다. 일반 절차 쪽은 모든 입력 목록화·정확한 출처 연결·검증 script로 파일 재읽기를 요구합니다. 도메인 쪽은 일정·장소·노동·예산 대조 skill과 숫자 형식 처리 tool guidance를 만듭니다.
 

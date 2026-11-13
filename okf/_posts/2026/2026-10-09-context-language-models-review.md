@@ -153,7 +153,8 @@ Rulin Shao 등의 **Context Language Models(CLMs)**는 이 문맥 관리 자체�
 
 ![문맥을 파일로 편집하는 CLM과 zero-shot·문맥 내 학습·강화학습의 연결]({{ '/img/reviews/2026/context-language-models-review/figure1-overview.png' | relative_url }})
 
-*PDF Figure 1, 2쪽. CLM의 파일 기반 문맥 전환, 훈련 없는 적용, 자연어 스킬 학습과 강화학습을 연결한 개요입니다. 원문 그림 영역만 크롭했으며 번역·수치 변경은 하지 않았습니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=2), CC BY 4.0.*
+PDF Figure 1, 2쪽. CLM의 파일 기반 문맥 전환, 훈련 없는 적용, 자연어 스킬 학습과 강화학습을 연결한 개요입니다. 원문 그림 영역만 크롭했으며 번역·수치 변경은 하지 않았습니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=2), CC BY 4.0.
+{: .caption}
 
 ## 기술적 세부사항
 
@@ -237,11 +238,13 @@ Prefill은 입력 문맥을 처리하는 계산이고, decode는 새 토큰을 �
 
 ![네 가지 ContextBench 과제와 입력 압력에 따른 방법별 정확도]({{ '/img/reviews/2026/context-language-models-review/figure2-contextbench.png' | relative_url }})
 
-*PDF Figure 2, 4쪽. 위는 과제의 관리 동작, 아래는 입력 압력에 따른 정확도입니다. 모든 과제를 동일한 현실 업무의 성공률로 해석하지 않습니다. 그림 영역만 크롭했으며 축·범례와 패널을 보존했습니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=4), CC BY 4.0.*
+PDF Figure 2, 4쪽. 위는 과제의 관리 동작, 아래는 입력 압력에 따른 정확도입니다. 모든 과제를 동일한 현실 업무의 성공률로 해석하지 않습니다. 그림 영역만 크롭했으며 축·범례와 패널을 보존했습니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=4), CC BY 4.0.
+{: .caption}
 
 ![ContextBench의 Needle Retention 패널 확대: 중요한 줄 보존과 문맥 압력별 정확도]({{ '/img/reviews/2026/context-language-models-review/figure2-needle-detail.png' | relative_url }})
 
-*PDF Figure 2의 왼쪽 Needle Retention 패널 확대, 4쪽. 가로축은 문맥 압력, 세로축은 정확도이며 파란 원형 선이 CLM입니다. 전체 방법의 범례는 위의 전체 그림에 보존되어 있습니다. 모바일에서 과제 동작과 곡선을 살펴볼 수 있도록 해당 패널만 추가 크롭했으며, 수치·배치·색은 바꾸지 않았습니다. [원문](https://arxiv.org/pdf/2609.37725v1#page=4), CC BY 4.0.*
+PDF Figure 2의 왼쪽 Needle Retention 패널 확대, 4쪽. 가로축은 문맥 압력, 세로축은 정확도이며 파란 원형 선이 CLM입니다. 전체 방법의 범례는 위의 전체 그림에 보존되어 있습니다. 모바일에서 과제 동작과 곡선을 살펴볼 수 있도록 해당 패널만 추가 크롭했으며, 수치·배치·색은 바꾸지 않았습니다. [원문](https://arxiv.org/pdf/2609.37725v1#page=4), CC BY 4.0.
+{: .caption}
 
 **챕터의 핵심 기여**: 관리 도구의 존재와 실시간 문맥 편집의 자유가 같지 않음을 보여줍니다. **다음 챕터로의 연결**: 이를 일반화한 CLM의 상태 전환과 학습 방식을 정의합니다. [3절](https://arxiv.org/html/2609.37725v1#S3)
 
@@ -258,6 +261,8 @@ Prefill은 입력 문맥을 처리하는 계산이고, decode는 새 토큰을 �
 셋째, PDF Figure 3의 실제 실행 예시는 관리 전략이 다양함을 보여줍니다. 에이전트 상태를 기록하는 scoreboard를 163번 제자리 갱신하면서 6–8K 토큰을 유지한 사례, `notes` 역할을 만든 사례, 불필요한 검색 결과를 반복문으로 지운 사례가 있습니다. `compact_turns` 함수를 정의하고 37번 호출한 사례는 한 번의 요약보다 재사용 가능한 절차에 가깝습니다. 이들은 zero-shot 평가에서 수집한 정성적 사례이지, 모든 실행의 평균 행동은 아닙니다.
 
 넷째, 저자는 비용에 편집 후 재-prefill을 포함합니다. 문맥의 앞을 자주 고치면 짧아진 입력이라는 이점이 캐시 손실로 상쇄될 수 있습니다. 따라서 편집 횟수나 삭제 토큰량만으로 효율을 평가하지 않습니다.
+
+긴 작업 로그에서 해결한 빌드 오류를 지우고 최신 실패 로그와 재현 명령만 남기는 가상의 턴을 보겠습니다. CLM은 문맥을 파일처럼 편집하므로 다음 호출이 읽는 문맥 자체가 달라집니다. 나중에 두 오류를 비교해야 한다면 첫 번째 로그에만 있던 근거를 편집 시점에 남겨야 합니다. [원문 방법](https://arxiv.org/html/2609.37725v1#S4.SS1)
 
 #### 4.2 In-Context Learning and Reinforcement Learning for CLMs
 
@@ -303,7 +308,8 @@ $`A_i^{\mathrm{out}}`$는 결과 보상의 advantage, $`w_{\mathrm{eff}}`$는 �
 
 ![중간 문맥 편집 뒤 표준 prefix 재사용과 suffix 재사용의 차이]({{ '/img/reviews/2026/context-language-models-review/figure4-suffix-cache.png' | relative_url }})
 
-*PDF Figure 4, 6쪽. 표준 서빙은 B′와 C를 다시 처리하고 SCR은 살아남은 C의 기존 캐시를 재사용합니다. 원문 그림 영역만 크롭했으며 의미를 바꾸지 않았습니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=6), CC BY 4.0.*
+PDF Figure 4, 6쪽. 표준 서빙은 B′와 C를 다시 처리하고 SCR은 살아남은 C의 기존 캐시를 재사용합니다. 원문 그림 영역만 크롭했으며 의미를 바꾸지 않았습니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=6), CC BY 4.0.
+{: .caption}
 
 **챕터의 핵심 기여**: 편집 권한, 지침·가중치 학습, 실제 캐시 비용을 함께 정의합니다. **다음 챕터로의 연결**: 이 설계가 서로 다른 길이의 에이전트 업무에서 어떤 결과를 만드는지 확인합니다. [4절](https://arxiv.org/html/2609.37725v1#S4)
 
@@ -357,7 +363,8 @@ CLM 계열이 네 문제에서 최고값을 얻지만 subagent 변형이 모든 
 
 ![CLM 개요의 강화학습 패널 확대: 성공 조건 효율 advantage와 학습 전후 비교]({{ '/img/reviews/2026/context-language-models-review/figure1-rl-detail.png' | relative_url }})
 
-*PDF Figure 1(d) 확대, 2쪽. 위는 결과 advantage와 성공 조건 효율 advantage의 결합, 아래는 Qwen3.5-9B의 학습 전후 정확도와 질문당 PFLOPs입니다. 앞서 실은 전체 개요에서 해당 패널만 추가 크롭했으며, 회색은 학습 전·파란색은 학습 후를 뜻합니다. 수치·배치·색은 바꾸지 않았습니다. [원문](https://arxiv.org/pdf/2609.37725v1#page=2), CC BY 4.0.*
+PDF Figure 1(d) 확대, 2쪽. 위는 결과 advantage와 성공 조건 효율 advantage의 결합, 아래는 Qwen3.5-9B의 학습 전후 정확도와 질문당 PFLOPs입니다. 앞서 실은 전체 개요에서 해당 패널만 추가 크롭했으며, 회색은 학습 전·파란색은 학습 후를 뜻합니다. 수치·배치·색은 바꾸지 않았습니다. [원문](https://arxiv.org/pdf/2609.37725v1#page=2), CC BY 4.0.
+{: .caption}
 
 #### 5.3 (More) Efficient Serving with Suffix Cache Reuse
 
@@ -367,7 +374,8 @@ Qwen3.6-27B의 BrowseComp-Plus 서빙 비교에서 Standard SGLang과 SCR의 정
 
 ![SGLang과 SCR의 정확도·질문당 계산량 및 prompt token 처리 방식 비교]({{ '/img/reviews/2026/context-language-models-review/figure9-serving-results.png' | relative_url }})
 
-*PDF Figure 9, 9쪽. 두 방법 정확도 60.2%, 질문당 10.98→7.14 PFLOPs와 token 처리 분해를 보여줍니다. 원문 그림만 크롭했으며 축·단위·범례를 보존했습니다. HTML에서는 Figure 11로 표시됩니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=9), CC BY 4.0.*
+PDF Figure 9, 9쪽. 두 방법 정확도 60.2%, 질문당 10.98→7.14 PFLOPs와 token 처리 분해를 보여줍니다. 원문 그림만 크롭했으며 축·단위·범례를 보존했습니다. HTML에서는 Figure 11로 표시됩니다. [고정 버전 원문](https://arxiv.org/pdf/2609.37725v1#page=9), CC BY 4.0.
+{: .caption}
 
 **챕터의 핵심 기여**: 문맥 편집만으로 얻는 효과, 관리 전략을 학습한 효과, 서버 캐시 개선 효과를 분리하여 제시합니다. **다음 챕터로의 연결**: 입력을 직접 수정할 권한이 갖는 안전성과 후속 연구를 논의합니다. [5절](https://arxiv.org/html/2609.37725v1#S5)
 
