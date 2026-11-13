@@ -166,7 +166,8 @@ PhoneHarness는 기기에서 실행되는 에이전트와 호스트에서 요청
 
 ![Android 기기의 에이전트 루프와 호스트의 모델·GUI·MCP 프록시, 벤치마크 검증기의 연결]({{ '/img/reviews/2026/phoneharness-review/figure1-host-device.png' | relative_url }})
 
-*Figure 1. 기기 쪽 서버가 작업을 받고 호스트 프록시가 외부 기능을 연결합니다. [원문 PDF 4쪽](https://arxiv.org/pdf/2606.14832v1#page=4)의 그림 영역을 발췌했습니다.*
+Figure 1. 기기 쪽 서버가 작업을 받고 호스트 프록시가 외부 기능을 연결합니다. [원문 PDF 4쪽](https://arxiv.org/pdf/2606.14832v1#page=4)의 그림 영역을 발췌했습니다.
+{: .caption}
 
 #### 3.3 혼합 행동 공간
 
@@ -174,7 +175,10 @@ PhoneHarness는 기기에서 실행되는 에이전트와 호스트에서 요청
 
 ![폰 에이전트가 하위 작업을 CLI 실행, MCP 호출, GUI 위임에 배정하는 경로]({{ '/img/reviews/2026/phoneharness-review/figure3-action-routing.png' | relative_url }})
 
-*Figure 3. 같은 에이전트 루프에서 명령, 구조화된 도구, 화면 조작을 선택합니다. [원문 PDF 7쪽](https://arxiv.org/pdf/2606.14832v1#page=7)의 그림 영역을 발췌했습니다.*
+Figure 3. 같은 에이전트 루프에서 명령, 구조화된 도구, 화면 조작을 선택합니다. [원문 PDF 7쪽](https://arxiv.org/pdf/2606.14832v1#page=7)의 그림 영역을 발췌했습니다.
+{: .caption}
+
+가상의 업무인 ‘앱에서 보고서를 내려받고, 압축해 지정 폴더에 두기’를 나눠 보면 [§3.3의 행동 선택](https://arxiv.org/html/2606.14832v1#S3.SS3)이 구체적입니다. 내려받기 버튼이 화면에서만 접근 가능하다면 그 부분만 GUI에 맡깁니다. 내려받은 경로가 확인되면 파일 압축과 이동은 지원되는 명령이나 구조화 도구로 처리합니다. **앱을 열었다는 이유로 작업 끝까지 화면을 누를 필요는 없습니다.** GUI가 필요한 범위를 좁히는 것이 이 예의 요점입니다.
 
 #### 3.4 필요한 스킬 지침만 불러오기
 
@@ -235,13 +239,15 @@ AutoGLM-Phone과 Seed2.0-Pro는 독립형 모델 설정이며, MobileClaw와 Pho
 
 ![네 에이전트 설정의 기기·시스템, 단일 앱 GUI, 도구 보조, 앱 간 과제 통과율 막대그래프]({{ '/img/reviews/2026/phoneharness-review/figure4-task-results.png' | relative_url }})
 
-*Figure 4. 통과율 격차의 방향이 과제 유형에 따라 달라집니다. [원문 PDF 9쪽](https://arxiv.org/pdf/2606.14832v1#page=9)의 그래프를 발췌했습니다.*
+Figure 4. 통과율 격차의 방향이 과제 유형에 따라 달라집니다. [원문 PDF 9쪽](https://arxiv.org/pdf/2606.14832v1#page=9)의 그래프를 발췌했습니다.
+{: .caption}
 
 Figure 5의 매물 과제는 이 차이를 구체적으로 보여 줍니다. GUI로 지역과 목록을 탐색한 뒤 매물 가격을 저장하고, Python으로 평균과 그래프를 만들고, MCP를 통해 그래프를 첨부해 발송합니다. 마지막 검증에는 목록, 차트, 이메일이 모두 등장합니다. 스크린샷만으로는 계산과 전송을 확인하기 어려운 사례입니다. [Figure 5 및 예시 실행 기록](https://arxiv.org/pdf/2606.14832v1#page=10)
 
 ![매물 검색 뒤 가격을 저장하고 Python으로 그래프를 생성해 MCP로 발송한 Task 109의 실행 기록]({{ '/img/reviews/2026/phoneharness-review/figure5-task109-trace.png' | relative_url }})
 
-*Figure 5 중 Task 109. GUI, 코드, 메일 도구 뒤에 검증 단계가 이어집니다. [원문 PDF 10쪽](https://arxiv.org/pdf/2606.14832v1#page=10)의 대표 사례 한 행을 발췌했습니다.*
+Figure 5 중 Task 109. GUI, 코드, 메일 도구 뒤에 검증 단계가 이어집니다. [원문 PDF 10쪽](https://arxiv.org/pdf/2606.14832v1#page=10)의 대표 사례 한 행을 발췌했습니다.
+{: .caption}
 
 #### 6.2 행동 경로가 열려 있는 과제
 

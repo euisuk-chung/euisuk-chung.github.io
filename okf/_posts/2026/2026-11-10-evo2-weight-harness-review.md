@@ -135,7 +135,8 @@ visual_sources:
 
 ![왼쪽의 공유 개선 모델이 오른쪽의 하네스 탐색을 이끌고, 하네스 편집과 실행 피드백이 모델 학습으로 돌아오는 흐름]({{ '/img/reviews/2026/evo2-weight-harness-review/figure1-coevolution.png' | relative_url }})
 
-*Figure 1, PDF 2쪽. 원본 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=2) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Figure 1, PDF 2쪽. 원본 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=2) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 **그림에서 보이는 두 방향.** 왼쪽의 공유 가중치는 Proposer와 Reflector의 판단에 쓰이고, 오른쪽의 트리는 실행 가능한 하네스 변형을 저장합니다. 위쪽 화살표는 모델이 편집을 통해 트리를 확장하는 방향입니다. 아래쪽 화살표는 평가된 편집, 궤적, 실행 피드백이 모델 훈련으로 되돌아가는 방향입니다. 트리 안에서의 교차 탐색은 다른 분기의 유용한 전략을 가져올 수 있게 합니다. [Figure 1](https://arxiv.org/html/2610.13025v1#S1.F1)
 
@@ -162,7 +163,8 @@ visual_sources:
 
 ![하네스 풀에서 부모를 뽑아 자율 편집과 평가를 수행한 뒤, 진단에 따라 유지하거나 지시 편집으로 이어지는 탐색과 궤적 복구 도식]({{ '/img/reviews/2026/evo2-weight-harness-review/figure2-search-recovery.png' | relative_url }})
 
-*Figure 2, PDF 4쪽. 원본 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=4) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Figure 2, PDF 4쪽. 원본 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=4) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 그림 위쪽은 부모 후보를 뽑는 풀과 두 역할의 호출 순서를, 아래쪽은 부분 편집의 복구와 분기 간 전략 이동을 보여 줍니다. 두 역할의 가중치를 공유하는 관계와 실행 가능한 후보를 평가하는 관계를 구분하면, 어느 단계에서 학습 데이터가 생기는지 따라갈 수 있습니다. [Figure 2](https://arxiv.org/html/2610.13025v1#S3.F2)
 
@@ -193,6 +195,8 @@ h_1 = \mathrm{Apply}(h_0,e_1).
 $`P_A`$·$`P_B`$·$`R`$은 각 호출의 역할 프롬프트이고, $`z_0`$는 초기 후보의 편집 차이와 실행 피드백입니다. $`\mathcal{S}`$는 다른 분기에서 얻은 기증 전략의 집합입니다. 진단 결과에서 $`m`$은 행동, $`d`$는 편집 지시, $`j`$는 교차 때만 사용하는 기증 전략 식별자입니다. revise 또는 crossover면 지시를 바탕으로 $`e_1`$을 만들고, keep이면 $`h_1=h_0`$입니다. 학습 중 상대 역할 호출에는 §3.3.3의 고정 스냅샷을 사용합니다. [§3.2](https://arxiv.org/html/2610.13025v1#S3.SS2)
 
 **Crossover searching.** $`\mathcal{S}=\{s_j\}`$의 항목에는 평가를 마친 하네스의 메커니즘과 관측 효과, 현재 후보에 이미 있는지 여부를 기록합니다. Reflector가 $`s_j`$를 고르면 Type B가 수신 하네스의 소스와 기존 동작에 맞춰 구현합니다. 그 자식은 수신 하네스를 트리의 부모로 유지하고, 기증 전략을 별도 기록합니다. 후보 전체를 섞는 대신 어떤 메커니즘을 이식했는지 추적할 수 있습니다. [§3.2](https://arxiv.org/html/2610.13025v1#S3.SS2)
+
+어느 편집에 보상을 주는지 가상의 평가값으로 확인해 보겠습니다. 부모가 0.40이고 Type A 편집 뒤 0.44, Reflector의 지시를 Type B가 실행한 뒤 0.43이라면, 첫 편집은 **+0.04**를 만들었고 지시에 따른 추가 편집의 결과는 **−0.01**입니다. 최종본이 부모보다 높다고 해서 Reflector의 수정까지 도움이 된 것은 아닙니다. 이런 차이를 분리하기 위해 [§3.3.2의 식 (2)](https://arxiv.org/html/2610.13025v1#S3.SS3)는 편집 전후에 해당하는 평가값끼리 뺍니다.
 
 #### 3.3 Weight evolution through EvoTIDE
 
@@ -260,7 +264,8 @@ Table 1의 각 열은 그 벤치마크에서 별도로 진화·선택한 하네�
 
 ![Table 1. Qwen3.8-27B 코딩 실험에서 Evo²의 Polyglot 82.1, SWE-bench Verified 48.3, LiveCodeBench 58.0을 비교군과 대조]({{ '/img/reviews/2026/evo2-weight-harness-review/table1-coding.png' | relative_url }})
 
-*Table 1, PDF 8쪽. 원본 표 및 캡션 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=8) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Table 1, PDF 8쪽. 원본 표 및 캡션 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=8) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 | 방법 | Polyglot pass@1 (%) | SWE-bench Verified 해결률 (%) | LiveCodeBench pass@1 (%) |
 | --- | ---: | ---: | ---: |
@@ -318,7 +323,8 @@ LoCoMo에서 가장 높은 비교군 HGM의 56.2보다 4.2점 높고, LongMemEva
 
 ![Table 5. 탐색 절차와 부모 하네스를 고정했을 때 미훈련 개선 모델과 EvoTIDE로 훈련한 개선 모델의 점수]({{ '/img/reviews/2026/evo2-weight-harness-review/table5-weight-evolution.png' | relative_url }})
 
-*Table 5, PDF 10쪽. 원본 표 및 캡션 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=10) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Table 5, PDF 10쪽. 원본 표 및 캡션 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=10) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 | 벤치마크 | 미훈련 (%) | 훈련 (%) | 원문에 보고된 차이와 p값 |
 | --- | ---: | ---: | --- |
@@ -333,7 +339,8 @@ Polyglot 점수 열의 표시값 차이는 16.2점이고 차이 열과 본문은
 
 ![Figure 3. 가로축은 과제당 실행자 출력 토큰 수, 세로축은 LiveCodeBench pass@1이며 Evo²는 3.6K와 58.0% 부근에 표시됨]({{ '/img/reviews/2026/evo2-weight-harness-review/figure3-accuracy-cost.png' | relative_url }})
 
-*Figure 3, PDF 10쪽. 축·단위·모델 표기를 포함한 원본 그래프 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=10) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Figure 3, PDF 10쪽. 축·단위·모델 표기를 포함한 원본 그래프 영역 크롭, 번역·수치 변경 없음. [고정 원문](https://arxiv.org/pdf/2610.13025v1#page=10) · [라이선스 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 **챕터의 핵심 기여와 다음 챕터 연결.** 고정 실행자에서 다른 하네스의 성과를 비교하고, 전이·고정 상용 모델·가중치 학습 여부를 비교한 실험으로 어떤 부분을 바꿨는지 구분했습니다. 결론은 편집 능력과 편집된 코드에 경험이 각각 쌓인다는 설명으로 이 결과를 연결합니다. [§4–5](https://arxiv.org/html/2610.13025v1#S4)
 

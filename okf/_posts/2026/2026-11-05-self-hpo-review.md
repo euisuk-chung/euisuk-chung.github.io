@@ -245,7 +245,8 @@ $`\tau`$는 한 번의 실행 궤적이고, $`y(x,\tau)\in\{0,1\}`$은 최종 �
 
 ![상단 H-step은 정책을 고정한 채 실패를 분석하여 하니스를 선택하고, 하단 P-step은 선택한 하니스를 고정하여 정책과 다음 어려운 과제 집합을 갱신하는 Self-HPO 순환도]({{ '/img/reviews/2026/self-hpo-review/figure2-overview.png' | relative_url }})
 
-*원문 Figure 2, “Overview of Self-HPO”, PDF 3쪽. 동일 v1 PDF에서 그림 전체 영역만 크롭하였으며 내부 문구·배치·색은 번역하거나 수정하지 않았습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=3). 위쪽은 H-step, 아래쪽은 P-step이며 왼쪽 되먹임이 정책과 탐색 과제의 동시 갱신을 나타냅니다.*
+원문 Figure 2, “Overview of Self-HPO”, PDF 3쪽. 동일 v1 PDF에서 그림 전체 영역만 크롭하였으며 내부 문구·배치·색은 번역하거나 수정하지 않았습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=3). 위쪽은 H-step, 아래쪽은 P-step이며 왼쪽 되먹임이 정책과 탐색 과제의 동시 갱신을 나타냅니다.
+{: .caption}
 
 실험은 2,484개의 훈련 과제를 사용하고 H-step마다 후보 6개를 평가하며, P-step마다 RL 업데이트 50회를 수행하는 두 라운드입니다. 각 후보는 탐색 과제마다 한 번 실행됩니다. 결과적으로 정책 학습은 총 100회 업데이트에 해당하지만, 하니스 후보 평가와 학습 롤아웃의 전체 실행량까지 100회라는 뜻은 아닙니다. 주 결과의 **avg@3는 세 번의 전체 평가에서 얻은 해결률 평균**입니다. 한 과제에서 세 번 중 한 번이라도 성공하는 pass@3와 다릅니다. GRPO 학습 목적과 pass@k 계산식은 각각 부록 A·B의 상세 리뷰에서 설명합니다. [근거: §3.1·Appendix A–B](https://arxiv.org/html/2610.22791v1#A1)
 
@@ -281,6 +282,16 @@ Algorithm 1의 순서는 다음과 같습니다. 초기 하니스 $`H_0`$, 정�
 
 재사용하는 것은 과제 ID입니다. 다음 H-step에서는 업데이트된 정책과 현재 하니스로 다시 실행하여 새로운 실패 근거를 만듭니다. 이렇게 해야 이전 정책의 오래된 실패 궤적만 계속 읽는 대신 현재 정책의 실패에 맞춰 수정할 수 있습니다. 리뷰어의 해석으로는, 이는 모델 업데이트가 후보 생성 능력과 평가용 진단 과제를 동시에 바꾸는 구조입니다.
 
+다음 탐색에 넘길 과제는 어떻게 고를까요? 아래는 [§2.2의 기준](https://arxiv.org/html/2610.22791v1#S2.SS2)을 가상의 P-step 기록 세 줄에 적용한 예입니다.
+
+| 과제 | 이번 P-step에서 수집된 결과 | 다음 H-step에 포함? |
+|---|---|---|
+| A | 실패 → 실패 → 실패 | 예. 한 번도 해결하지 못했습니다. |
+| B | 실패 → 성공 → 실패 | 아니요. 마지막 실패보다 중간의 성공 여부가 중요합니다. |
+| C | 성공 → 성공 → 성공 | 아니요. |
+
+다음 라운드에서 A를 새 정책으로 다시 실행합니다. 표의 실패 기록을 새 하니스가 이미 보인 실패처럼 취급하지 않습니다.
+
 #### 2.3 P-step: Policy Optimization under the Optimized Harness
 
 P-step은 선택한 $`H_{t+1}`$ 아래에서 현재 정책이 생성하는 **on-policy 궤적**, 즉 학습 중인 정책 자신이 수집한 실행을 사용합니다. 실행 검증기는 최종 성공 여부에 따른 이진 보상을 제공합니다. 기본 학습기는 GRPO(Group Relative Policy Optimization)와 Orchard의 BAR(Balanced Adaptive Rollout)를 결합합니다. GRPO는 같은 과제의 여러 실행 사이 보상 차이를 이용하여 상대적 이점(advantage)을 만들고, 더 유리한 행동의 생성 확률을 높이는 정책 최적화입니다. [근거: §2.3](https://arxiv.org/html/2610.22791v1#S2.SS3)
@@ -305,7 +316,8 @@ P-step은 선택한 $`H_{t+1}`$ 아래에서 현재 정책이 생성하는 **on-
 
 ![초기 에이전트와 외부 모델 구성 SFT·Meta-Harness·HPO, 자기 개선 구성 RLVR·Self-Harness·Self-HPO의 세 벤치마크 해결률 평균과 표준편차를 비교한 원문 표]({{ '/img/reviews/2026/self-hpo-review/table1-main-results.png' | relative_url }})
 
-*원문 Table 1, “Main results on in-distribution … and out-of-distribution evaluations”, PDF 5쪽. 표와 원문 캡션을 포함하여 크롭하였고 수치·굵은 표시는 원문 그대로입니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=5). 작은 숫자는 아래 전사표에서 읽을 수 있습니다. 표의 ±는 세 번 평가의 표준편차입니다.*
+원문 Table 1, “Main results on in-distribution … and out-of-distribution evaluations”, PDF 5쪽. 표와 원문 캡션을 포함하여 크롭하였고 수치·굵은 표시는 원문 그대로입니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=5). 작은 숫자는 아래 전사표에서 읽을 수 있습니다. 표의 ±는 세 번 평가의 표준편차입니다.
+{: .caption}
 
 | 구성 | 방법 | SWE-Verified (%) | SWE-Multi (%) | SWE-Pro (%) | Avg. (%) |
 |---|---|---:|---:|---:|---:|
@@ -325,7 +337,8 @@ P-step은 선택한 $`H_{t+1}`$ 아래에서 현재 정책이 생성하는 **on-
 
 ![Base, H1, P1, H2, P2 순서로 Self-HPO와 정책만 또는 하니스만 최적화한 비교군의 해결률이 세 벤치마크에서 변하는 원문 그래프]({{ '/img/reviews/2026/self-hpo-review/figure3-trajectories.png' | relative_url }})
 
-*원문 Figure 3, “Optimization trajectories across harness and policy updates”, PDF 6쪽. 세 패널 전체와 공통 범례·축을 보존하여 크롭하였고 번역·재작성하지 않았습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=6). 점선 테두리 마커는 해당 방법이 그 단계에서 업데이트하지 않았음을 표시합니다.*
+원문 Figure 3, “Optimization trajectories across harness and policy updates”, PDF 6쪽. 세 패널 전체와 공통 범례·축을 보존하여 크롭하였고 번역·재작성하지 않았습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=6). 점선 테두리 마커는 해당 방법이 그 단계에서 업데이트하지 않았음을 표시합니다.
+{: .caption}
 
 **Alternating harness and policy optimization drives continued agent improvement.** Figure 3에서 Self-HPO와 Self-Harness는 첫 H-step을 공유합니다. 이후 Self-HPO의 정책 업데이트가 둘의 경로를 갈라 놓습니다. 두 번째 H-step과 뒤이은 P-step은 세 벤치마크 모두에서 Self-HPO를 추가 개선합니다. 반면 Self-Harness는 Multi에서 55.0%에서 54.3%로 내려갑니다. 따라서 하니스 탐색을 더 많이 하는 것만으로 같은 경로를 얻는다고 볼 수 없습니다. Verified의 단계별 수치는 Base 61.0 → 첫 H-step 64.3 → 첫 P-step 67.8 → 둘째 H-step 68.6 → 둘째 P-step 69.5%이며, 부록 B의 후보 수준 곡선이 이를 보완합니다.
 
@@ -361,19 +374,22 @@ P-step은 선택한 $`H_{t+1}`$ 아래에서 현재 정책이 생성하는 **on-
 
 ![원문 Figure 4 전체로, 왼쪽은 pass@k, 가운데는 초기 정책의 난이도별 pass@1, 오른쪽은 RL 학습 중 성공 롤아웃이 없는 그룹 비율을 비교합니다]({{ '/img/reviews/2026/self-hpo-review/figure4-analysis.png' | relative_url }})
 
-*원문 Figure 4, “Pass@k performance on SWE-Bench Verified and RL training signal”, PDF 7쪽. 세 패널 전체를 크롭하였으며 축·범례·패널 표기를 보존했습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=7). 아래에 패널별 상세 이미지와 수치 설명을 덧붙입니다.*
+원문 Figure 4, “Pass@k performance on SWE-Bench Verified and RL training signal”, PDF 7쪽. 세 패널 전체를 크롭하였으며 축·범례·패널 표기를 보존했습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=7). 아래에 패널별 상세 이미지와 수치 설명을 덧붙입니다.
+{: .caption}
 
 **Self-HPO improves reliability (pass@1) and expands the capability frontier (pass@k).** 이 분석은 Verified의 과제마다 **8번 시도**한 별도 평가입니다. Figure 4(a)에서 Self-HPO는 $`k=1,\ldots,8`$ 모두 Base보다 높고, pass@8은 80.0%에서 84.8%로 4.8포인트 증가합니다. pass@1은 한 번 뽑았을 때 성공하는 신뢰성과 관련되고, pass@8은 8회 시도 안에 한 번이라도 성공할 수 있는 과제 범위와 관련됩니다. 부록 B는 해당 pass@k 곡선의 음영을 95% 부트스트랩 신뢰구간으로 설명합니다. 이는 Table 1의 세 번 평가 표준편차와 다른 불확실성 표시입니다.
 
 ![8회 시도 기반 pass@k 상세 그래프로, 모든 k에서 Self-HPO가 높고 pass@8은 Base 80.0%, Self-HPO 84.8%입니다]({{ '/img/reviews/2026/self-hpo-review/figure4a-pass-at-k.png' | relative_url }})
 
-*Figure 4(a) 상세 크롭, PDF 7쪽. 원문 범례·축·음영·끝점 값을 보존하였습니다. [출처](https://arxiv.org/pdf/2610.22791v1#page=7). 추가 크롭이며 원본 전체는 바로 위 Figure 4에 있습니다.*
+Figure 4(a) 상세 크롭, PDF 7쪽. 원문 범례·축·음영·끝점 값을 보존하였습니다. [출처](https://arxiv.org/pdf/2610.22791v1#page=7). 추가 크롭이며 원본 전체는 바로 위 Figure 4에 있습니다.
+{: .caption}
 
 Figure 4(b)는 Base의 8회 시도에서 추정한 성공률 $`p`$로 과제를 나눕니다. Hard는 관측된 성공이 없는 집합이며 수학적으로 절대 풀 수 없는 과제를 뜻하지 않습니다. Medium과 Easy에서의 상승은 이미 가끔 성공하던 과제의 신뢰성 증가를 보여 줍니다. Hard에서도 6.1포인트 상승하지만 Resolved에서는 2.2포인트 하락하여 개선이 과제 전체에서 균일하지 않습니다.
 
 ![초기 정책의 성공률로 나눈 Hard, Medium, Easy, Resolved 집합에서 Self-HPO의 pass@1 변화가 각각 +6.1, +17.2, +12.9, -2.2포인트인 상세 막대그래프]({{ '/img/reviews/2026/self-hpo-review/figure4b-task-difficulty.png' | relative_url }})
 
-*Figure 4(b) 상세 크롭, PDF 7쪽. 범례와 증감 표기를 원문 그대로 보존했습니다. [출처](https://arxiv.org/pdf/2610.22791v1#page=7). 난이도 조건은 아래와 같습니다.*
+Figure 4(b) 상세 크롭, PDF 7쪽. 범례와 증감 표기를 원문 그대로 보존했습니다. [출처](https://arxiv.org/pdf/2610.22791v1#page=7). 난이도 조건은 아래와 같습니다.
+{: .caption}
 
 | Base 성공률 p에 따른 집합 | 원문 정의 | Self-HPO의 pass@1 변화 (포인트) |
 |---|---|---:|
@@ -386,7 +402,8 @@ Figure 4(b)는 Base의 8회 시도에서 추정한 성공률 $`p`$로 과제를 
 
 ![RL 업데이트에 따른 zero-success 그룹 비율 상세 그래프로, 주황색 Self-HPO가 후반에 약 6.5%까지 낮아지고 파란색 RLVR은 주로 11–17%에 머뭅니다]({{ '/img/reviews/2026/self-hpo-review/figure4c-zero-success.png' | relative_url }})
 
-*Figure 4(c) 상세 크롭, PDF 7쪽. 원문 축·범례·점·곡선·음영을 보존했습니다. [출처](https://arxiv.org/pdf/2610.22791v1#page=7). 원문은 이 패널 음영의 계산 방식을 별도로 설명하지 않으므로 (a)의 부트스트랩 신뢰구간 정의를 여기에 임의 적용하지 않습니다.*
+Figure 4(c) 상세 크롭, PDF 7쪽. 원문 축·범례·점·곡선·음영을 보존했습니다. [출처](https://arxiv.org/pdf/2610.22791v1#page=7). 원문은 이 패널 음영의 계산 방식을 별도로 설명하지 않으므로 (a)의 부트스트랩 신뢰구간 정의를 여기에 임의 적용하지 않습니다.
+{: .caption}
 
 #### 3.5 Case Studies
 
@@ -394,7 +411,8 @@ Figure 4(b)는 Base의 8회 시도에서 추정한 성공률 $`p`$로 과제를 
 
 ![왼쪽 초기 에이전트가 놓치는 네 실패와 오른쪽 HPO 하니스가 step 메서드에 추가한 예산 경고·빈 패치 차단·API 대조·패치 대체 검사를 대응시킨 코드 그림]({{ '/img/reviews/2026/self-hpo-review/figure5-harness-controls.png' | relative_url }})
 
-*원문 Figure 5, “Seed versus optimized harness (HPO, second H-step)”, PDF 8쪽. 좌우 코드 패널 전체 크롭이며 색·코드·대응 번호를 보존했습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=8). 작은 코드의 실행 순서는 아래 표와 부록 D의 텍스트 코드에서 다시 설명합니다.*
+원문 Figure 5, “Seed versus optimized harness (HPO, second H-step)”, PDF 8쪽. 좌우 코드 패널 전체 크롭이며 색·코드·대응 번호를 보존했습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=8). 작은 코드의 실행 순서는 아래 표와 부록 D의 텍스트 코드에서 다시 설명합니다.
+{: .caption}
 
 | 개입 순서 | 초기 하니스에서 통과하던 실패 | 진화한 HPO 하니스의 동작 |
 |---|---|---|
@@ -499,7 +517,8 @@ Table 1의 SFT는 RL 훈련 과제에서 수집한 Opus 4.8 궤적 가운데 해
 
 ![첫 여섯 하니스 후보를 공유한 뒤 Self-Harness와 Self-HPO가 갈라지고, Self-HPO의 두 정책 업데이트가 최고 해결률을 추가로 높이는 후보별 탐색 곡선]({{ '/img/reviews/2026/self-hpo-review/figure6-search-frontier.png' | relative_url }})
 
-*원문 Figure 6, “Best-so-far performance during harness evolution on SWE-Bench Verified”, PDF 17쪽. 그래프 전체를 크롭하고 개별 후보 점·별·축·범례를 보존했습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=17). 원은 개별 후보 점수이고 선은 지금까지의 최고값이므로 서로 다릅니다.*
+원문 Figure 6, “Best-so-far performance during harness evolution on SWE-Bench Verified”, PDF 17쪽. 그래프 전체를 크롭하고 개별 후보 점·별·축·범례를 보존했습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=17). 원은 개별 후보 점수이고 선은 지금까지의 최고값이므로 서로 다릅니다.
+{: .caption}
 
 후보 1–6은 두 방법이 공유하고, 7–12는 각각의 가지에 속합니다. 공통 첫 H-step은 64.3%에 도달합니다. 이후 Self-Harness는 하니스만 더 탐색해 최고 65.2%가 되지만, Self-HPO는 첫 정책 학습으로 67.8%에 도달한 뒤 탐색을 재개하여 68.6%, 두 번째 정책 학습 뒤 69.5%가 됩니다. 수직 상승과 별은 P-step이고, 수평 점선은 Base와 최종 RLVR입니다. 이것은 하니스 후보 수준의 변화와 정책 학습의 상승을 한 그림에서 분리하는 근거입니다.
 
@@ -521,7 +540,8 @@ $`\binom{n}{k}`$는 8개 시도에서 $`k`$개를 고르는 경우의 수이고,
 
 ![논문이 인용한 SWE-Bench Verified 리더보드 모델들과 Qwen3.5-35B-A3B의 초기·SFT·Self-Harness·RLVR·Self-HPO 구성을 파라미터 수와 해결률로 비교한 원문 표]({{ '/img/reviews/2026/self-hpo-review/table4-frontier-comparison.png' | relative_url }})
 
-*원문 Table 4, “Comparison with frontier models on SWE-Bench Verified”, PDF 17쪽. 원문 캡션과 표 전체를 크롭하였으며 수치·모델명·파라미터 수를 수정하지 않았습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=17). 현재 시점의 리더보드를 재조회한 결과가 아니라 논문에 수록된 비교입니다. 작은 수치를 읽을 수 있도록 아래에 전체 값을 전사합니다.*
+원문 Table 4, “Comparison with frontier models on SWE-Bench Verified”, PDF 17쪽. 원문 캡션과 표 전체를 크롭하였으며 수치·모델명·파라미터 수를 수정하지 않았습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=17). 현재 시점의 리더보드를 재조회한 결과가 아니라 논문에 수록된 비교입니다. 작은 수치를 읽을 수 있도록 아래에 전체 값을 전사합니다.
+{: .caption}
 
 | 모델·구성 | 하니스 | 전체 / 활성 파라미터 | 해결률 (%) |
 |---|---|---|---:|
@@ -620,7 +640,8 @@ Figure 5의 초기 `step()`은 `execute_actions(query())`를 호출합니다. `q
 
 ![HPO의 두 번째 H-step에서 step 메서드에 추가된 네 검사를 diff로 나타낸 원문 코드로, 예산 경고와 두 번의 일회성 제출 보류 뒤 패치 적용 검사를 수행합니다]({{ '/img/reviews/2026/self-hpo-review/figure8-harness-diff.png' | relative_url }})
 
-*원문 Figure 8, “Harness changes from HPO’s second H-step”, PDF 20쪽. 코드 패널 전체 크롭이며 추가·삭제와 helper 이름을 보존하였습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=20). 코드의 핵심 제어 흐름을 다음 텍스트 블록으로도 제공합니다.*
+원문 Figure 8, “Harness changes from HPO’s second H-step”, PDF 20쪽. 코드 패널 전체 크롭이며 추가·삭제와 helper 이름을 보존하였습니다. [고정 버전 출처](https://arxiv.org/pdf/2610.22791v1#page=20). 코드의 핵심 제어 흐름을 다음 텍스트 블록으로도 제공합니다.
+{: .caption}
 
 다음은 Figure 8의 변경 후 `step()`을 읽기 위해 옮긴 **원문 축약 코드**입니다. 주석은 한국어로 풀었고, 원문 diff의 삭제 행과 `+` 표시는 제외하였습니다. helper의 구현을 보충하거나 새 실행 코드를 만든 것은 아닙니다.
 

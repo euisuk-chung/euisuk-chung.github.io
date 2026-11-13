@@ -165,7 +165,8 @@ u_iW_{\mathrm{gate}}^{(i)}+g_iW_{\mathrm{up}}^{(i)}.
 
 ![희소 MLP와 transcoder 사이에서 입력 및 출력 방향이 같은 뉴런에 정렬되는 뉴런 특징의 정의]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-01-neuron-feature.png' | relative_url }})
 
-*원문 Figure 1, PDF p.1. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=1)의 그림 영역을 크롭했으며 번역·재배열하지 않았습니다. 입력 방향과 출력 방향이 모두 같은 뉴런에 대응해야 한다는 정의를 보여줍니다.*
+원문 Figure 1, PDF p.1. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=1)의 그림 영역을 크롭했으며 번역·재배열하지 않았습니다. 입력 방향과 출력 방향이 모두 같은 뉴런에 대응해야 한다는 정의를 보여줍니다.
+{: .caption}
 
 ### 비교 단위와 평가 축
 
@@ -211,7 +212,8 @@ Top-k는 토큰마다 활성화 절댓값이 큰 뉴런을 층별로 선택하�
 
 ![뉴런 pruning과 보정에 따른 FVU 및 KL 변화와 활성화 표본 방식에 따른 sort eval 정확도]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-03-evaluations.png' | relative_url }})
 
-*원문 Figure 3, PDF p.3. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=3)의 전체 그래프 영역을 크롭했으며 번역하지 않았습니다. 왼쪽·가운데의 낮은 값이 좋은 지표와 오른쪽의 높은 값이 좋은 지표를 구분해야 합니다. 오른쪽은 Gemma 3 4B L22입니다.*
+원문 Figure 3, PDF p.3. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=3)의 전체 그래프 영역을 크롭했으며 번역하지 않았습니다. 왼쪽·가운데의 낮은 값이 좋은 지표와 오른쪽의 높은 값이 좋은 지표를 구분해야 합니다. 오른쪽은 Gemma 3 4B L22입니다.
+{: .caption}
 
 #### 2.3 Sparse probing, bigrams, and concept representation
 
@@ -245,11 +247,23 @@ Sort eval은 특징 A·B의 활성 문맥을 보여주고, 별도의 질의 문�
 
 ![여러 층과 모델의 transcoder 특징에서 encoder와 decoder 정렬도가 함께 높은 집단이 나타나는 전체 산점도]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-04-alignment-full.png' | relative_url }})
 
-*원문 Figure 4, PDF p.6. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=6)의 전체 그림을 크롭했으며 번역하지 않았습니다. 색은 발화 빈도, 각 사분면의 일반 숫자는 사전 비중, 대괄호 속 굵은 숫자는 활성화 비중입니다.*
+원문 Figure 4, PDF p.6. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=6)의 전체 그림을 크롭했으며 번역하지 않았습니다. 색은 발화 빈도, 각 사분면의 일반 숫자는 사전 비중, 대괄호 속 굵은 숫자는 활성화 비중입니다.
+{: .caption}
 
 ![Figure 4의 Gemma 3 4B L22 패널 상세에서 사전 8.9퍼센트의 고정렬 집단이 활성화 약 63퍼센트를 차지하는 모습]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-04-l22-detail.png' | relative_url }})
 
-*같은 Figure 4의 Gemma 3 4B L22 패널 상세 크롭입니다. 원본 픽셀을 늘리지 않고 PDF에서 별도로 렌더링했습니다. 그림의 분리선과 Table 9의 0.7 집계는 조건이 다릅니다.*
+같은 Figure 4의 Gemma 3 4B L22 패널 상세 크롭입니다. 원본 픽셀을 늘리지 않고 PDF에서 별도로 렌더링했습니다. 그림의 분리선과 Table 9의 0.7 집계는 조건이 다릅니다. [출처](https://arxiv.org/pdf/2610.24521v1#page=6)
+{: .caption}
+
+왜 encoder와 decoder를 **같은** 뉴런에서 확인할까요? 기준을 0.8이라고 놓은 가상의 예를 보면 구분이 쉽습니다. 이 숫자는 설명용이며 실제 기준은 transcoder마다 다릅니다.
+
+| 비교 대상 | 입력 방향 cosine | 출력 방향 cosine | 판정 |
+|---|---:|---:|---|
+| 특징 A ↔ 뉴런 1 | 0.93 | 0.46 | 입력 쪽만 통과 |
+| 특징 A ↔ 뉴런 2 | 0.42 | 0.95 | 출력 쪽만 통과 |
+| 특징 B ↔ 뉴런 3 | 0.86 | 0.89 | 양쪽 모두 같은 뉴런에서 통과 |
+
+A는 열마다 높은 값을 골라 합치면 일치하는 것처럼 보이지만 정의상 뉴런 특징이 아닙니다. B는 해당 기준에서 뉴런 특징에 해당합니다. [원문 §3.1](https://arxiv.org/html/2610.24521v1#S3.SS1)
 
 #### 3.2 Prevalence
 
@@ -282,7 +296,8 @@ Gemma 3 4B L22에서 전체 transcoder와 MLP의 정합성은 약 0.3이고 NF�
 
 ![Gemma 3 4B 층별 Jacobian 정합성에서 뉴런 특징만의 곡선과 전체 transcoder 곡선이 겹치는 그래프]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-07-jacobian.png' | relative_url }})
 
-*원문 Figure 7, PDF p.8. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=8)의 Figure 7 전체를 크롭했으며 번역하지 않았습니다. Gemmascope L0-small이며, 각 토큰의 활성 특징 수와 뉴런 수를 맞춥니다. 점선 SVD ceiling은 같은 rank에서 가능한 최적 근사의 기준입니다.*
+원문 Figure 7, PDF p.8. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=8)의 Figure 7 전체를 크롭했으며 번역하지 않았습니다. Gemmascope L0-small이며, 각 토큰의 활성 특징 수와 뉴런 수를 맞춥니다. 점선 SVD ceiling은 같은 rank에서 가능한 최적 근사의 기준입니다.
+{: .caption}
 
 층간 transcoder에 대해서는, encoder의 뉴런 정렬도와 미래 층 decoder 비중 사이에 Pearson 상관 −0.59에서 −0.93이 관찰됩니다. 이는 두 작은 모델의 예비 결과입니다. 특히 이 절의 강한 결론은 주로 JumpReLU의 **1차 미분 정합성**에 관한 것이며, 모든 transcoder의 큰 개입 효과까지 평가한 결과로 확장하면 안 됩니다. [§3.4, 부록 D·Q](https://arxiv.org/html/2610.24521v1#S3.SS4)
 
@@ -310,7 +325,8 @@ Gemma 3 4B L22, 폭 262k, TopK $`k=64`$, 15,000 step 학습에서 초기 encoder
 
 ![초기 encoder 방향과의 cosine을 발화 빈도에 따라 비교한 TopK 및 JumpReLU 결과]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-09-initialization.png' | relative_url }})
 
-*원문 Figure 9, PDF p.10. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=10)의 두 파이프라인 패널과 범례를 포함해 크롭했으며 번역하지 않았습니다. 오른쪽은 초기 norm을 TopK와 맞춘 단일 JumpReLU 실험입니다.*
+원문 Figure 9, PDF p.10. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=10)의 두 파이프라인 패널과 범례를 포함해 크롭했으며 번역하지 않았습니다. 오른쪽은 초기 norm을 TopK와 맞춘 단일 JumpReLU 실험입니다.
+{: .caption}
 
 #### 3.7 Neuron initialization preserves alignment through training
 
@@ -324,7 +340,8 @@ Gemma 3 4B L22, 폭 256k에서 뉴런과 encoder cosine이 0.5를 넘는 특징�
 
 ![문자 수에 따른 transcoder 특징과 뉴런의 정규화 활성화 곡선 및 가중치 비정렬 반례]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-10-linebreaking.png' | relative_url }})
 
-*원문 Figure 10, PDF p.11. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=11)의 Figure 10 전체를 크롭했으며 번역하지 않았습니다. 주황색은 특징, 회색은 뉴런입니다. 오른쪽 아래는 tuning 상관이 높아도 가중치 정렬은 낮은 반례입니다.*
+원문 Figure 10, PDF p.11. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=11)의 Figure 10 전체를 크롭했으며 번역하지 않았습니다. 주황색은 특징, 회색은 뉴런입니다. 오른쪽 아래는 tuning 상관이 높아도 가중치 정렬은 낮은 반례입니다.
+{: .caption}
 
 이 사례는 사전에서 발견된 기능적 곡선이 원래 뉴런에도 있을 수 있음을 보입니다. 전체 peaked 특징 집합의 통계와 같은 뉴런의 특징 분할은 부록 I에서 더 엄격하게 구분합니다. [§3.8](https://arxiv.org/html/2610.24521v1#S3.SS8)
 
@@ -434,7 +451,8 @@ Table 6의 과제 승리는 AUC 차이 0.005 초과로 정의하며 나머지는
 
 ![모델별 초기 여섯 층의 bigram 프로빙 AUC와 최대 활성화 문맥의 목표 구절 일치율을 비교한 원문 표]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/table-07-bigrams.png' | relative_url }})
 
-*원문 Table 7, PDF p.26. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=26)의 표 영역을 크롭했으며 번역하지 않았습니다. 위 AUC 전사와 아래 Match 표를 함께 읽으실 수 있습니다.*
+원문 Table 7, PDF p.26. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=26)의 표 영역을 크롭했으며 번역하지 않았습니다. 위 AUC 전사와 아래 Match 표를 함께 읽으실 수 있습니다.
+{: .caption}
 
 | 모델 | 뉴런/기본 집합 Match | 비교 집합 Match |
 |---|---:|---:|
@@ -541,7 +559,8 @@ Gemma 3 4B와 Qwen 3 4B의 TopK, 별도 코드베이스의 JumpReLU·TopK에서 
 
 ![덧셈 뉴런과 전체 특징 및 부분집합의 제거 강도에 따른 덧셈 정확도 곡선]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-34-arithmetic-ablation.png' | relative_url }})
 
-*원문 Figure 34, PDF p.43. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=43)의 전체 그래프를 크롭했으며 번역하지 않았습니다. 원문 그림의 high 24 범례는 본문 high 63개 서술과 일치하지 않아 그대로 보존했습니다. 전체 87개 제거 결과와 이 부분집합 표기는 구분해야 합니다.*
+원문 Figure 34, PDF p.43. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=43)의 전체 그래프를 크롭했으며 번역하지 않았습니다. 원문 그림의 high 24 범례는 본문 high 63개 서술과 일치하지 않아 그대로 보존했습니다. 전체 87개 제거 결과와 이 부분집합 표기는 구분해야 합니다.
+{: .caption}
 
 선행 연구의 기준 94.6%와 이 실험의 94.3%도 섞지 않습니다. 이 부록은 가중치·활성 패턴·개입 결과를 함께 연결한 사례이며, 다음 부록은 별도의 행동 회로 구성 절차입니다. [부록 K](https://arxiv.org/html/2610.24521v1#A11)
 
@@ -611,11 +630,13 @@ N5039+의 상위 4,096개 문맥을 UMAP으로 시각화하고, 해당 뉴런과
 
 ![뉴런 N5039의 최대 활성화 문맥을 red 및 투명함과 가시성 등 여러 특징으로 나눈 전체 UMAP 그림]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-46-red-full.png' | relative_url }})
 
-*원문 Figure 46, PDF p.56. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=56)의 전체 그림과 범례를 크롭했으며 번역하지 않았습니다. 청록·보라는 두 red 특징, 빨강·초록은 투명함·가시성 등의 다른 특징을 표시합니다.*
+원문 Figure 46, PDF p.56. [v1 PDF](https://arxiv.org/pdf/2610.24521v1#page=56)의 전체 그림과 범례를 크롭했으며 번역하지 않았습니다. 청록·보라는 두 red 특징, 빨강·초록은 투명함·가시성 등의 다른 특징을 표시합니다.
+{: .caption}
 
 ![같은 UMAP에서 red 토큰들이 집중되는 영역의 상세 크롭]({{ '/img/reviews/2026/sparsified-mlps-transcoders-review/figure-46-red-detail.png' | relative_url }})
 
-*Figure 46의 red 밀집 영역 상세 크롭입니다. 색의 범례는 위 전체 그림과 같고, 주변 단어의 일부는 크롭 경계 밖입니다. 원본의 배치와 수치는 바꾸지 않았습니다.*
+Figure 46의 red 밀집 영역 상세 크롭입니다. 색의 범례는 위 전체 그림과 같고, 주변 단어의 일부는 크롭 경계 밖입니다. 원본의 배치와 수치는 바꾸지 않았습니다. [출처](https://arxiv.org/pdf/2610.24521v1#page=56)
+{: .caption}
 
 OMP, 즉 적은 기저를 차례로 골라 방향을 근사하는 방법으로 decoder를 네 뉴런의 조합으로 재구성하면 다음과 같습니다.
 

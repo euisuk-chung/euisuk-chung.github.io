@@ -134,7 +134,8 @@ visual_sources:
 
 ![일곱 평가 설정의 정확도와 장문 입력의 기억 구축 시간을 함께 보여 주는 원문 Figure 1]({{ '/img/reviews/2026/raw-rag-review/figure1-overview.png' | relative_url }})
 
-*Figure 1, PDF 1쪽. 원본 도표 영역 크롭이며 번역·수치 변경은 없습니다. 왼쪽은 설정마다 원점이 잘린 선형 축을 사용하므로 막대 길이의 비율을 그대로 비교하면 안 됩니다. 실제 점수는 아래 표로 확인합니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=1)*
+Figure 1, PDF 1쪽. 원본 도표 영역 크롭이며 번역·수치 변경은 없습니다. 왼쪽은 설정마다 원점이 잘린 선형 축을 사용하므로 막대 길이의 비율을 그대로 비교하면 안 됩니다. 실제 점수는 아래 표로 확인합니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=1)
+{: .caption}
 
 ## 핵심 기여와 혁신성
 
@@ -184,7 +185,8 @@ $`H`$는 사용 가능한 대화 이력, $`c`$는 원문 청크, $`q`$는 질문
 
 ![Mem0의 쓰기 판단 중 갱신·삭제 제안과 실제 저장 변화 비율을 비교한 Figure 2]({{ '/img/reviews/2026/raw-rag-review/figure2-mutations.png' | relative_url }})
 
-*Figure 2, PDF 2쪽. 원본 영역 크롭, 번역 없음. 위는 모든 판단의 분포, 아래는 대화·사례별 비율입니다. 점선은 전체 판단 수로 가중한 평균입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=2)*
+Figure 2, PDF 2쪽. 원본 영역 크롭, 번역 없음. 위는 모든 판단의 분포, 아래는 대화·사례별 비율입니다. 점선은 전체 판단 수로 가중한 평균입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=2)
+{: .caption}
 
 UPDATE를 ADD로, DELETE를 NONE으로 바꾼 ADD/NONE 정책에서는 LoCoMo 전체 점수가 67.36에서 69.42로 2.06퍼센트포인트 올랐습니다. 다중 홉은 63.24→64.66, 시간 질문은 49.74→53.06, 개방형은 53.47→60.42, 단일 홉은 77.05→78.28이었습니다. 이는 이 버전·과제에서 갱신 연산이 반드시 이익을 주지는 않았다는 관찰입니다. 실제 서비스의 삭제 의무를 무시해도 된다는 실험이 아닙니다. 이 예비 실험 점수를 이후 비교표의 다른 Mem0 구성과 합쳐서도 안 됩니다. [Table 1·부록 C.2](https://arxiv.org/html/2610.30755v1#S1.T2.fig1)
 
@@ -202,7 +204,8 @@ Raw-RAG가 분리하려는 것은 **근거에 접근하는 문제와 질의 시�
 
 ![Memora·EverMemOS와 Raw-RAG의 구축·저장·회수 단계를 비교하는 Figure 3]({{ '/img/reviews/2026/raw-rag-review/figure3-pipeline.png' | relative_url }})
 
-*Figure 3, PDF 4쪽. 세 시스템의 흐름을 원래 배치 그대로 크롭했습니다. 번역·도식 재구성은 없습니다. 왼쪽부터 Memora, EverMemOS, Raw-RAG입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=4)*
+Figure 3, PDF 4쪽. 세 시스템의 흐름을 원래 배치 그대로 크롭했습니다. 번역·도식 재구성은 없습니다. 왼쪽부터 Memora, EverMemOS, Raw-RAG입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=4)
+{: .caption}
 
 이 장의 역할은 복잡한 시스템의 내부를 상세 재현하는 것이 아니라, 동일한 장기 기억 문제에도 서로 다른 구축·저장·회수 선택이 존재함을 보여 주는 것입니다. 다음 장은 그중 가장 단순한 원문 기반 경로를 명시합니다.
 
@@ -214,9 +217,21 @@ Raw-RAG는 대화의 시각·화자·내용과 주어진 이미지 캡션을 직
 
 ![Raw-RAG의 원문 청크·벡터 인덱스·상위 후보·재순위화·답변 흐름 상세]({{ '/img/reviews/2026/raw-rag-review/figure3-raw-detail.png' | relative_url }})
 
-*Figure 3 오른쪽 패널 상세, PDF 4쪽. 전체 그림을 위에 보존하고 Raw-RAG 패널을 별도로 크롭했습니다. 원문 문구·화살표를 변경하지 않았습니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=4)*
+Figure 3 오른쪽 패널 상세, PDF 4쪽. 전체 그림을 위에 보존하고 Raw-RAG 패널을 별도로 크롭했습니다. 원문 문구·화살표를 변경하지 않았습니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=4)
+{: .caption}
 
 이 설계는 기억을 미리 현재 상태로 압축하기보다, 질문 시점에 원래 발화와 변화 이력을 reader가 해석하게 만듭니다. 시간순 표시, 발화 전체 확장, 과제별 입력 정책은 결과를 재현할 때 필요한 요소이며 부록 B에서 보완됩니다. 이어지는 4장은 이 경로의 경쟁력과 각 요소의 영향을 평가합니다.
+
+Figure 3의 오른쪽 경로를 실행 순서로 옮기면 아래와 같습니다. 대화가 들어오는 시점과 질문이 들어오는 시점에 하는 일이 다릅니다. [원문 §3](https://arxiv.org/html/2610.30755v1#S3)
+
+```text
+적재: 시간표시와 이미지 캡션을 포함해 대화를 직렬화
+      → 256토큰씩 자르되 32토큰 겹치게 분할 → 임베딩 인덱스에 저장
+질문: 코사인 유사도로 128개 검색 → 질문-구간 쌍을 재채점해 15개 선택
+      → 선택한 원문 구간과 질문을 답변 모델에 전달
+```
+
+예를 들어 ‘결국 어느 도시로 이사했나?’를 답할 때, 인덱스에 최종 도시가 별도 사실로 저장되어 있지는 않습니다. 필요한 구간이 검색되면 답변 모델이 대화의 시각과 변경 내용을 읽고 현재 상태를 판단합니다.
 
 ### 📖 **Chapter 4: RAG Is Stronger Than We Thought**
 
@@ -244,7 +259,8 @@ LoCoMo의 reader 두 가지, LongMemEval의 한 가지, MEME와 MemoryAgentBench
 
 ![기본 검색과 기억 관리 추가 변형의 능력별 점수 및 차이 신뢰구간을 제시한 Table 5]({{ '/img/reviews/2026/raw-rag-review/table5-ablations.png' | relative_url }})
 
-*Table 5, PDF 7쪽. 원본 표 영역 크롭, 번역 없음. 표의 핵심 수치는 아래에 함께 전사합니다. 원문 HTML 본문의 일부 참조번호가 이 표를 Table 6으로 가리키지만, 이 글은 실제 PDF caption의 Table 5를 사용합니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=7)*
+Table 5, PDF 7쪽. 원본 표 영역 크롭, 번역 없음. 표의 핵심 수치는 아래에 함께 전사합니다. 원문 HTML 본문의 일부 참조번호가 이 표를 Table 6으로 가리키지만, 이 글은 실제 PDF caption의 Table 5를 사용합니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=7)
+{: .caption}
 
 | 조건 | 전체 점수 | 기본 대비 차이 | 짝지은 95% 구간 |
 | --- | ---: | ---: | --- |
@@ -262,7 +278,8 @@ LoCoMo의 reader 두 가지, LongMemEval의 한 가지, MEME와 MemoryAgentBench
 
 ![최종 청크 수가 너무 작거나 너무 클 때 성능이 하락하는 Figure 4]({{ '/img/reviews/2026/raw-rag-review/figure4-topk.png' | relative_url }})
 
-*Figure 4, PDF 7쪽. 원본 그래프와 caption 영역 크롭, 번역 없음. 왼쪽 축은 전체 점수, 오른쪽 축은 기본 15개 대비 차이이며 오차막대는 짝지은 95% 구간입니다. 일부 HTML 본문 참조의 Figure 6 대신 실제 PDF 번호를 따릅니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=7)*
+Figure 4, PDF 7쪽. 원본 그래프와 caption 영역 크롭, 번역 없음. 왼쪽 축은 전체 점수, 오른쪽 축은 기본 15개 대비 차이이며 오차막대는 짝지은 95% 구간입니다. 일부 HTML 본문 참조의 Figure 6 대신 실제 PDF 번호를 따릅니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=7)
+{: .caption}
 
 **RQ2 — 기억 관리를 추가하면 좋아지는가.** 평가한 세 변형은 모두 전체 점수를 낮췄습니다. 원자적 사실 추출은 특히 테스트 시 학습을 47.68→15.37로 낮췄습니다. 그러나 세 변형의 의미는 다릅니다. 사실 추출은 원문을 대체하지만, 요약 변형은 원문에 요약을 덧붙이고, 그래프 변형은 원문 노드를 유지하며 검색 후보를 확장합니다. 따라서 모든 하락을 “요약 때문에 원문이 없어졌다”로 설명할 수 없습니다. 정보량·형식·예제 연결·후보 경쟁이 함께 바뀔 수 있습니다. [§4.3·부록 C.3·F](https://arxiv.org/html/2610.30755v1#A3.SS3)
 
@@ -270,7 +287,8 @@ LoCoMo의 reader 두 가지, LongMemEval의 한 가지, MEME와 MemoryAgentBench
 
 ![거의 백만 토큰인 단일 BEAM 대화를 각 메모리 시스템에 입력하는 누적 시간]({{ '/img/reviews/2026/raw-rag-review/figure1-ingestion.png' | relative_url }})
 
-*Figure 1 오른쪽 패널 상세, PDF 1쪽. 원본 영역 크롭, 번역 없음. 축·범례·종료 지점과 배수 표기를 보존했습니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=1)*
+Figure 1 오른쪽 패널 상세, PDF 1쪽. 원본 영역 크롭, 번역 없음. 축·범례·종료 지점과 배수 표기를 보존했습니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=1)
+{: .caption}
 
 확장성 측정은 1,710개 메시지·거의 백만 토큰의 동일한 BEAM 대화 하나를 여섯 시스템에 순차 입력한 것입니다. 완료 시 Raw-RAG는 약 0.33시간, MemOS는 3.25시간, Memora는 26.95시간이었습니다. 대화 하나의 ingestion 측정이므로 다수 대화에서의 평균 정확도나 상용 서비스 처리량 실험으로 확대해서는 안 됩니다. 4장은 경쟁력 있는 점수와 낮은 구축 비용을 확인하고, 5장은 그 이유를 근거 단위로 분석합니다. [부록 A.6·D.6](https://arxiv.org/html/2610.30755v1#A1.SS6)
 
@@ -287,7 +305,8 @@ LoCoMo의 reader 두 가지, LongMemEval의 한 가지, MEME와 MemoryAgentBench
 
 ![MemoryAgentBench와 MEME의 근거 도달률·조건부 활용률을 비교한 원문 Tables 7과 8]({{ '/img/reviews/2026/raw-rag-review/tables7-8-evidence.png' | relative_url }})
 
-*Tables 7–8, PDF 8쪽. 나란한 원본 표 영역을 그대로 크롭했으며 번역은 없습니다. 왼쪽은 의미적 충분성 판정, 오른쪽은 MEME의 결정적 검사 기반 결과입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=8)*
+Tables 7–8, PDF 8쪽. 나란한 원본 표 영역을 그대로 크롭했으며 번역은 없습니다. 왼쪽은 의미적 충분성 판정, 오른쪽은 MEME의 결정적 검사 기반 결과입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=8)
+{: .caption}
 
 | 시스템 | MemoryAgentBench coverage | MemoryAgentBench utilization | MEME coverage | MEME utilization |
 | --- | ---: | ---: | ---: | ---: |
@@ -305,7 +324,8 @@ Raw-RAG는 두 평가에서 근거 도달률이 가장 높지만 활용률이 �
 
 ![MEME에서 결과 값과 실행 가능한 경로가 함께 남는 정도를 비교하는 Table 9]({{ '/img/reviews/2026/raw-rag-review/table9-path.png' | relative_url }})
 
-*Table 9, PDF 9쪽. 원본 표·caption 크롭, 번역 없음. 마지막 열은 결과 값이 있는 경우에 경로도 있는 조건부 비율입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=9)*
+Table 9, PDF 9쪽. 원본 표·caption 크롭, 번역 없음. 마지막 열은 결과 값이 있는 경우에 경로도 있는 조건부 비율입니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=9)
+{: .caption}
 
 Raw-RAG는 결과 coverage 90.53%, 경로 coverage 56.44%, 결과가 있을 때 경로가 있을 비율 62.34%였습니다. MemMachine은 84.85%·48.11%·56.70%, MemU는 59.09%·5.68%·9.62%였습니다. 이는 정답 문자열만 남기는 것과 상태를 재구성할 관계를 함께 남기는 것이 다름을 보여 줍니다. Raw-RAG 역시 결과를 찾은 경우의 약 37.66%에서는 완전한 경로를 확보하지 못했습니다. [Table 9](https://arxiv.org/html/2610.30755v1#S5.T9.fig1)
 
@@ -313,7 +333,8 @@ Raw-RAG는 결과 coverage 90.53%, 경로 coverage 56.44%, 결과가 있을 때 
 
 ![각 시스템의 기본 검색과 전체 저장소에서 정답 정보를 이용해 근거를 고른 진단을 비교한 Figure 5]({{ '/img/reviews/2026/raw-rag-review/figure5-recovery.png' | relative_url }})
 
-*Figure 5, PDF 9쪽. 원본 그래프와 caption 크롭, 번역 없음. 주황 점선은 raw-evidence 대조군 61.60이며, 청록 막대는 전체 기억을 모두 그대로 입력한 것이 아니라 정답 기반으로 선택·포장한 결과입니다. 일부 HTML 참조의 Figure 9 대신 실제 PDF 번호를 사용합니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=9)*
+Figure 5, PDF 9쪽. 원본 그래프와 caption 크롭, 번역 없음. 주황 점선은 raw-evidence 대조군 61.60이며, 청록 막대는 전체 기억을 모두 그대로 입력한 것이 아니라 정답 기반으로 선택·포장한 결과입니다. 일부 HTML 참조의 Figure 9 대신 실제 PDF 번호를 사용합니다. [원본](https://arxiv.org/pdf/2610.30755v1#page=9)
+{: .caption}
 
 | 시스템 | N: 기본 검색 | C: 전체 저장소 진단 | R−C: raw 대조군과의 차이 |
 | --- | ---: | ---: | ---: |

@@ -239,7 +239,8 @@ Algorithm 1은 빈 사례 저장소, 일화 메모리, 재생 버퍼에서 시�
 
 ![사례 메모리와 하위 과제 메모리를 이용하는 계획자, 도구 메모리와 MCP 서버를 이용하는 실행자가 연결된 Memento 구조]({{ '/img/reviews/2026/memento-review/figure-3-architecture.png' | relative_url }})
 
-*원문 Figure 3, PDF 8쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=8)에서 그림 영역만 크롭했습니다. 원문 영문·연결·비율을 보존했으며 번역하지 않았습니다. 왼쪽의 사례 선택 학습과 오른쪽의 도구 실행이 하위 과제와 결과를 주고받습니다.*
+원문 Figure 3, PDF 8쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=8)에서 그림 영역만 크롭했습니다. 원문 영문·연결·비율을 보존했으며 번역하지 않았습니다. 왼쪽의 사례 선택 학습과 오른쪽의 도구 실행이 하위 과제와 결과를 주고받습니다.
+{: .caption}
 
 #### 4.1 Framework
 
@@ -253,7 +254,8 @@ Model Context Protocol(MCP)은 실행자와 여러 도구 서버 사이의 공�
 
 ![Memento의 사례 메모리와 하위 과제 메모리, 계획과 재계획 흐름을 발췌한 상세 그림]({{ '/img/reviews/2026/memento-review/figure-3-planning-detail.png' | relative_url }})
 
-*원문 Figure 3의 계획 영역 상세 발췌, PDF 8쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=8)에서 왼쪽 영역을 크롭했으며 번역·재배열하지 않았습니다. Case Bank의 사례를 Read하여 계획하고, 완료한 경험은 Write하며, Subtask Memory에는 현재 하위 과제와 결과를 남깁니다.*
+원문 Figure 3의 계획 영역 상세 발췌, PDF 8쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=8)에서 왼쪽 영역을 크롭했으며 번역·재배열하지 않았습니다. Case Bank의 사례를 Read하여 계획하고, 완료한 경험은 Write하며, Subtask Memory에는 현재 하위 과제와 결과를 남깁니다.
+{: .caption}
 
 **Memory Storage.** 사례 저장소는 상태·행동·보상 튜플을 계속 추가합니다.
 
@@ -295,11 +297,22 @@ Model Context Protocol(MCP)은 실행자와 여러 도구 서버 사이의 공�
 
 원문 식 (16)입니다. 이 방식에서 변화하는 것은 사례 집합과 사례 유용성 신경망이며, 계획·실행 LLM은 미세조정하지 않습니다. 이 절의 핵심은 메모리의 쓰기와 읽기를 분리하고, 쓰기 때 일어난 학습이 다음 읽기의 우선순위를 바꾸도록 만든 것입니다.
 
+같은 사례 세 개를 놓고 두 검색 방식이 어떻게 달라지는지 가상의 점수로 보겠습니다. 두 열은 서로 다른 종류의 값입니다. 비모수 검색은 과제 설명의 닮은 정도를, 모수 검색은 현재 과제에 참고할 만한지를 학습한 점수를 사용합니다.
+
+| 이전 사례 | 상태 코사인 유사도 | 학습한 Q 점수 |
+|---|---:|---:|
+| A | 0.91 | 0.31 |
+| B | 0.83 | 0.82 |
+| C | 0.77 | 0.68 |
+
+두 개를 읽는다면 비모수 방식은 A·B를, 모수 방식은 B·C를 계획자에게 보냅니다. 여기서 끝나는 것은 **사례 검색**입니다. 계획자가 어떤 행동을 취할지는 검색된 사례와 현재 과제 지시를 함께 읽은 뒤 결정합니다. [원문 §4.1–4.2](https://arxiv.org/html/2508.16153v2#S4)
+
 #### 4.3 Tool Usage
 
 ![Memento 실행자의 도구 메모리와 MCP 프로토콜, 여러 도구 서버 연결을 발췌한 상세 그림]({{ '/img/reviews/2026/memento-review/figure-3-execution-detail.png' | relative_url }})
 
-*원문 Figure 3의 실행 영역 상세 발췌, PDF 8쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=8)에서 오른쪽 영역을 크롭했으며 번역·재배열하지 않았습니다. 실행자는 하위 과제의 Tool Memory를 읽고 호출 결과를 저장하며 MCP를 통해 도구 설명·인수·응답을 주고받습니다.*
+원문 Figure 3의 실행 영역 상세 발췌, PDF 8쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=8)에서 오른쪽 영역을 크롭했으며 번역·재배열하지 않았습니다. 실행자는 하위 과제의 Tool Memory를 읽고 호출 결과를 저장하며 MCP를 통해 도구 설명·인수·응답을 주고받습니다.
+{: .caption}
 
 도구는 외부 정보 획득, 이질적·다중모달 정보 처리, 추론과 계산 순서로 소개됩니다. 먼저 searxng가 Google·Bing·DuckDuckGo·Brave 등의 검색 결과를 모으고 의미 유사도로 후보를 재정렬합니다. Crawl4AI는 선택된 웹 페이지의 본문을 가져옵니다. 검색은 후보 발견, 크롤링은 세부 근거 수집의 역할을 맡습니다.
 
@@ -337,7 +350,8 @@ GAIA는 정규화한 예측 답과 정답의 완전 일치율인 Exact Match(EM)
 
 ![일곱 질의응답 데이터셋에서 프롬프트 기반, 학습 기반, Memento의 F1과 PM을 비교한 원문 표]({{ '/img/reviews/2026/memento-review/table-1-deepresearcher.png' | relative_url }})
 
-*원문 Table 1, PDF 12쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=12)에서 표 영역을 크롭했으며 영문·수치·열 순서를 보존했습니다. 번역하지 않았습니다. 아래 표는 같은 결과를 읽기 쉽도록 일부 재작성한 것입니다.*
+원문 Table 1, PDF 12쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=12)에서 표 영역을 크롭했으며 영문·수치·열 순서를 보존했습니다. 번역하지 않았습니다. 아래 표는 같은 결과를 읽기 쉽도록 일부 재작성한 것입니다.
+{: .caption}
 
 | 데이터셋 | Memento F1 (%) | Memento PM (%) | DeepResearcher F1 (%) | DeepResearcher PM (%) |
 |---|---:|---:|---:|---:|
@@ -396,7 +410,8 @@ Figure 1(c)와 Table 4는 같은 DeepResearcher 환경에서 반복이 늘어날
 
 ![다섯 반복에서 CBR 없는 모델, 비모수 CBR, 모수 CBR의 정확도 곡선을 비교한 그래프]({{ '/img/reviews/2026/memento-review/figure-1c-continual-learning.png' | relative_url }})
 
-*원문 Figure 1(c), PDF 1쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=1)의 해당 패널을 크롭했습니다. 반복 축, 정확도 축, 범례, 패널명을 보존했으며 번역하지 않았습니다.*
+원문 Figure 1(c), PDF 1쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=1)의 해당 패널을 크롭했습니다. 반복 축, 정확도 축, 범례, 패널명을 보존했으며 번역하지 않았습니다.
+{: .caption}
 
 | 설정 | 반복 1 (%) | 반복 2 (%) | 반복 3 (%) | 반복 4 (%) | 반복 5 (%) |
 |---|---:|---:|---:|---:|---:|
@@ -414,7 +429,8 @@ Table 4에서 모수 CBR은 모든 반복에서 가장 높고, 비모수 CBR도 
 
 ![MusiQue, Bamboogle, PopQA에서 CBR 추가 전후의 F1과 PM 및 증가 폭을 비교한 그래프]({{ '/img/reviews/2026/memento-review/figure-1d-ood.png' | relative_url }})
 
-*원문 Figure 1(d), PDF 1쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=1)의 해당 패널을 크롭했습니다. 축·범례·데이터셋과 F1/PM 구분·증가 화살표를 보존했으며 번역하지 않았습니다.*
+원문 Figure 1(d), PDF 1쪽. [Memento v2 PDF](https://arxiv.org/pdf/2508.16153v2#page=1)의 해당 패널을 크롭했습니다. 축·범례·데이터셋과 F1/PM 구분·증가 화살표를 보존했으며 번역하지 않았습니다.
+{: .caption}
 
 그림의 증가 폭은 MusiQue에서 F1 +4.7%p·PM +8.0%p, Bamboogle에서 +7.0%p·+9.6%p, PopQA에서 +5.3%p·+5.5%p입니다. 초록의 “4.7–9.6”은 이 지표별 절대 증가 폭의 범위입니다. 세 데이터셋의 모든 지표가 같은 폭으로 개선되거나 상대 개선율이 그 범위라는 뜻은 아닙니다.
 

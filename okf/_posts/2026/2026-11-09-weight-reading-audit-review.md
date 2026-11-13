@@ -62,6 +62,11 @@ visual_sources:
     page: 10
     caption: "SAT-6 고정확도·저정확도 모델에서 위치별 의미 해석과 확신도 비교 (원문 PDF 영역 크롭, 번역·수치 변경 없음)"
     table: "5"
+  - path: "/img/reviews/2026/weight-reading-audit-review/figure5-reading-vs-meaning.jpg"
+    kind: "paper-figure"
+    source_url: "https://arxiv.org/html/2611.08070v1#S5.F5"
+    figure: "Figure 5"
+    caption: "나무와 관련된 출력에 개구리라는 이름을 붙인 사례를 설명하는 원문 개념도"
   - path: "/img/reviews/2026/weight-reading-audit-review/figure6-reading-scope.png"
     kind: "paper-figure"
     source_url: "https://arxiv.org/pdf/2611.08070v1"
@@ -131,7 +136,8 @@ visual_sources:
 
 ![작은 CNN 훈련에서 가중치 텍스트와 격리된 질의 및 인용값 확인으로 이어지는 실험 흐름]({{ '/img/reviews/2026/weight-reading-audit-review/figure2-pipeline.png' | relative_url }})
 
-*원문 Figure 2, PDF 6쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=6)의 그림·캡션 영역을 크롭했으며 번역·수치 변경은 없습니다. 마지막 단계는 응답에서 찾아 확인할 수 있었던 특정 값의 대조이며, 응답 전체의 진실성 보증은 아닙니다.*
+원문 Figure 2, PDF 6쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=6)의 그림·캡션 영역을 크롭했으며 번역·수치 변경은 없습니다. 마지막 단계는 응답에서 찾아 확인할 수 있었던 특정 값의 대조이며, 응답 전체의 진실성 보증은 아닙니다.
+{: .caption}
 
 분석할 때는 네 종류의 수치를 나누어야 합니다.
 
@@ -186,7 +192,8 @@ Ahmed가 감사 대상으로 삼은 Weight-Space Programming(WSP)은 범용 LLM�
 
 ![가중치를 읽어 가설을 세우는 경로와 가중치를 수정·작성해 실행으로 검증하는 경로]({{ '/img/reviews/2026/weight-space-programming-review/reading-writing.svg' | relative_url }})
 
-*리뷰어 도식. 원 블로그의 읽기·수정·작성과 각각의 검증 방법을 구분했습니다.*
+리뷰어 도식. 원 블로그의 읽기·수정·작성과 각각의 검증 방법을 구분했습니다. [출처](https://rikiyat.github.io/blog/weight-space-programming/)
+{: .caption}
 
 | 실험 | 제공한 정보와 도구 | 원 블로그의 결과 |
 | --- | --- | --- |
@@ -205,7 +212,8 @@ Qwen 편집은 15·19층 MLP가 반복과 관련된 방향을 쓰는 것으로 �
 
 ![평가 호출 예산별 Qwen의 성능과 토큰 상한 도달 비율]({{ '/img/reviews/2026/weight-space-programming-review/qwen-results.svg' | relative_url }})
 
-*리뷰어 재도표화. 원 블로그 실험 8의 보고값을 같은 0–100% 축으로 그렸습니다.*
+리뷰어 재도표화. 원 블로그 실험 8의 보고값을 같은 0–100% 축으로 그렸습니다. [출처](https://rikiyat.github.io/blog/weight-space-programming/)
+{: .caption}
 
 #### 감사 논문이 바꾼 조건
 
@@ -267,6 +275,8 @@ SAT-6 저정확도 모델은 특히 주의가 필요합니다. 24장만 학습�
 
 채점 기준은 처음 두 CIFAR-10 실행을 제외하면 질의 전에 프로젝트 로그에 적었습니다. **공개 사전등록은 아니며**, 독립된 두 번째 평가자도 없습니다. 원 질문에는 pass·partial·neutral·fail을, 수정 질문에는 이미지 유형의 correct·partial·wrong과 클래스의 정확 위치·위치 무관 개수를 사용합니다. 데이터셋 이름은 수정 질문에서 기록만 하고 채점하지 않습니다. 이 장은 다음 결과를 읽을 때 분모와 판정 규칙이 왜 필요한지 설명합니다. [§4.5](https://arxiv.org/html/2611.08070v1#S4.SS5)
 
+출력 세 개를 가진 가상의 분류기로 두 검사를 나눠 보겠습니다. 원래 0번 출력이 ‘고양이’를 가리켰더라도, 출력과 평가용 레이블을 함께 재배열해 0번을 ‘자동차’로 바꾸면 정확도는 그대로일 수 있습니다. 그 상태에서 모델이 “0번과 2번 가중치는 비슷하다”는 통계를 맞히면서 “0번은 고양이”라고 틀릴 수 있습니다. **수치 대조**는 첫 주장을, **레이블 재배열 대조군**은 두 번째 주장을 검사합니다. 아래의 CIFAR-10 실험이 이 구분을 실제로 적용합니다. [원문 §4.5와 §5.1](https://arxiv.org/html/2611.08070v1#S5.SS1)
+
 ### 📖 **Chapter 5: Results**
 
 #### 5.1 CIFAR-10: recognition and label-order dependence
@@ -275,7 +285,8 @@ SAT-6 저정확도 모델은 특히 주의가 필요합니다. 24장만 학습�
 
 ![CIFAR-10 출력층에서 일곱 은닉 유닛의 부호가 차량과 동물의 표준 레이블 순서에 대응하는 히트맵]({{ '/img/reviews/2026/weight-reading-audit-review/figure3-output-signs.png' | relative_url }})
 
-*원문 Figure 3, PDF 7쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=7)의 그림·캡션 크롭이며 번역·수치 변경은 없습니다. 축·출력 번호·색상 범례를 보존했습니다. 군집이 있다는 것과 그 이름을 정당하게 붙였다는 것은 따로 평가합니다.*
+원문 Figure 3, PDF 7쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=7)의 그림·캡션 크롭이며 번역·수치 변경은 없습니다. 축·출력 번호·색상 범례를 보존했습니다. 군집이 있다는 것과 그 이름을 정당하게 붙였다는 것은 따로 평가합니다.
+{: .caption}
 
 이어 Model 1의 최종 출력 순서와 정답 레이블을 함께 재배열했습니다. 이미지 분류 기능은 유지하면서 표준 출력 순서만 깨는 조작입니다. 비교를 위해 각 파라미터 배열 안의 값을 무작위로 섞는 셔플도 수행했습니다. 이 조작은 배열 크기와 값 분포는 유지하지만 연결 구조와 분류 기능을 무너뜨립니다.
 
@@ -291,7 +302,8 @@ SAT-6 저정확도 모델은 특히 주의가 필요합니다. 24장만 학습�
 
 ![재배열된 출력 군집은 제대로 읽었지만 표준 클래스 이름을 붙여 새·사슴·개·말로 잘못 해석한 대조 그림]({{ '/img/reviews/2026/weight-reading-audit-review/figure4-label-permutation.png' | relative_url }})
 
-*원문 Figure 4, PDF 8쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=8)의 그림·캡션 크롭이며 번역·수치 변경은 없습니다. 원문이 보고한 재배열 사례를 설명하는 도식입니다.*
+원문 Figure 4, PDF 8쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=8)의 그림·캡션 크롭이며 번역·수치 변경은 없습니다. 원문이 보고한 재배열 사례를 설명하는 도식입니다.
+{: .caption}
 
 셔플 응답은 훈련된 망의 0.0103보다 작은 0.0031의 출력 대비를 보고도 자연 이미지 데이터셋을 떠올렸습니다. 큰 색상 채널 차이를 가진 필터 수도 훈련 망 3/16 대 셔플 망 2/16으로 강하게 갈리지 않았습니다. 다만 부록 기준에서 **확신도 50% 미만이면 pass**이므로, 45%인 셔플은 pass입니다. 이는 데이터셋 식별 성공이나 셔플 탐지 성공이 아니라 저신뢰 응답이라는 채점 결과입니다. [§5.1·Tables 2·Figure 4](https://arxiv.org/html/2611.08070v1#S5.SS1)
 
@@ -327,7 +339,8 @@ KMNIST Random은 출력 한도에 닿은 뒤 자동 재개되었으나 안전 �
 
 ![SAT-6의 고정확도 CNN은 이미지 유형을 틀리고 저정확도 CNN은 낮은 확신도로 장면을 추측한 원문 표]({{ '/img/reviews/2026/weight-reading-audit-review/table5-sat6.png' | relative_url }})
 
-*원문 Table 5, PDF 10쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=10)의 표·캡션 크롭이며 번역·수치 변경은 없습니다. Any position과 확신도의 분모·의미는 아래에서 구분합니다.*
+원문 Table 5, PDF 10쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=10)의 표·캡션 크롭이며 번역·수치 변경은 없습니다. Any position과 확신도의 분모·의미는 아래에서 구분합니다.
+{: .caption}
 
 | 항목 | SAT-6 M2 high | SAT-6 M2 low |
 |---|---:|---:|
@@ -344,6 +357,11 @@ KMNIST Random은 출력 한도에 닿은 뒤 자동 재개되었으나 안전 �
 
 원문 Table 6은 같은 고정확도 응답의 수치·해석을 더 가깝게 대조합니다. 초록 특징은 실제 초록 정도와 +0.64 상관, 밝기와 −0.01 상관을 보이며 나무 클래스인 출력 4와 연결되는데, 모델은 이를 개구리라고 불렀습니다. 서로 관련된 출력 1·3의 상관 +0.54는 실제 건물·도로였으나 고양이·개로 설명했습니다. 파랑 특징이라고 부른 채널은 실제 파랑 정도와 **−0.44** 상관을 보이며 물에서 평균 이하였는데 새라고 해석했습니다. 계산에서 의미로 넘어갈 때 오류가 생긴 구체적 사례입니다. [§5.4·Tables 5–6](https://arxiv.org/html/2611.08070v1#S5.SS4)
 
+![위성 사진의 나무 영역과 개구리 그림을 나란히 배치해 출력의 수치와 잘못 붙인 의미를 대비한 원문 개념도]({{ '/img/reviews/2026/weight-reading-audit-review/figure5-reading-vs-meaning.jpg' | relative_url }})
+
+Figure 5. 모델은 나무에 해당하는 출력 4를 개구리라고 불렀습니다. 가운데 숫자는 장식입니다. Ahmed, [원문 그림](https://arxiv.org/html/2611.08070v1#S5.F5) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+{: .caption}
+
 #### 5.5 Does the model trace weights?
 
 세션은 입력·출력 가장자리를 자세히 보고 중간층은 표본처럼 살폈다고 서술했습니다. 저자는 이것을 계산 흐름 추적이 제한적이었다는 간접 근거로 다루지만, **자기 보고가 내부 인지 과정의 측정은 아닙니다**. 특정 입력 텐서를 주고 정확한 logits, 즉 최종 클래스 점수를 계산하게 한 직접 검사는 수행하지 않았습니다.
@@ -354,7 +372,8 @@ KMNIST Random은 출력 한도에 닿은 뒤 자동 재개되었으나 안전 �
 
 ![입력 첫 층과 최종 출력층을 자세히 보고 중간층을 드문드문 보았다는 세션 자기 보고의 개념도]({{ '/img/reviews/2026/weight-reading-audit-review/figure6-reading-scope.png' | relative_url }})
 
-*원문 Figure 6, PDF 12쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=12)의 그림·캡션 크롭이며 번역·수치 변경은 없습니다. **실제 LLM 내부 처리나 attention의 측정치가 아닌 개념도**입니다. 본문의 자기 보고·행동 증거를 요약한 이미지로 읽어야 합니다.*
+원문 Figure 6, PDF 12쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=12)의 그림·캡션 크롭이며 번역·수치 변경은 없습니다. **실제 LLM 내부 처리나 attention의 측정치가 아닌 개념도**입니다. 본문의 자기 보고·행동 증거를 요약한 이미지로 읽어야 합니다.
+{: .caption}
 
 이 소절의 기여는 “전부 암기”나 “전부 계산”으로 단순화하지 않고, 국소적 성공과 전체 추적 증거의 부족을 함께 제시한다는 데 있습니다. 다음 소절은 각 설명이 어느 정도 지지되는지 정리합니다. [§5.5](https://arxiv.org/html/2611.08070v1#S5.SS5)
 
@@ -386,7 +405,8 @@ KMNIST를 MNIST로 부른 80–85%, 고정확도 SAT-6를 동물 사진이라고
 
 ![수정 질문의 이미지 유형 확신도와 correct·partial·wrong 판정을 함께 보여 주는 막대그래프]({{ '/img/reviews/2026/weight-reading-audit-review/figure7-confidence.png' | relative_url }})
 
-*원문 Figure 7, PDF 14쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=14)의 그래프·캡션 크롭이며 번역·수치 변경은 없습니다. 가로축은 모델이 말한 이미지 유형 확신도이며 반복 측정한 정답 확률이 아닙니다.*
+원문 Figure 7, PDF 14쪽. [고정 버전 PDF](https://arxiv.org/pdf/2611.08070v1#page=14)의 그래프·캡션 크롭이며 번역·수치 변경은 없습니다. 가로축은 모델이 말한 이미지 유형 확신도이며 반복 측정한 정답 확률이 아닙니다.
+{: .caption}
 
 저자는 샘플이 적어 확신도 보정(calibration), 즉 “70%라고 답한 경우 실제로도 약 70% 맞는가”를 추정할 수 없다고 밝힙니다. 높은 확신의 오답 사례와 전체 모델의 보정 성능 판정은 구분해야 합니다. [§6.4](https://arxiv.org/html/2611.08070v1#S6.SS4)
 

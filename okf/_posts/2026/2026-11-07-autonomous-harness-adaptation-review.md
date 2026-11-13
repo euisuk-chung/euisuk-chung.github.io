@@ -260,6 +260,7 @@ s_\ell=\min\left\{100\left(\frac{b_\ell}{a_\ell}\right)^2,115\right\},\qquad w_\
 ![고정 코딩 부트스트랩으로 초기 하네스와 두 수정본을 만들고 모든 스냅샷을 평가하는 흐름]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-1-workflow.png' | relative_url }})
 
 Figure 1, [v1 PDF 3쪽](https://arxiv.org/pdf/2610.30499v1#page=3). 그림 영역을 크롭했으며 번역·재배열·수치 변경은 없습니다. 두 개발 게임의 실행 검사를 통과한 후보가 동결되고, 5게임 개발 평가는 다음 수정의 근거가 됩니다. 최종 20게임 holdout 화살표는 결과만 산출하며 수정으로 되돌아가지 않습니다.
+{: .caption}
 
 저자들은 네 능력을 순서대로 분리합니다. 실행 가능한 하네스 구성, 인터페이스·수명주기 실패 복구, 실행 근거를 구체적 수정에 연결하는 능력, 그리고 피드백에서 제외된 과제를 개선하는 수정 선택 능력입니다. 앞의 세 가지가 네 번째를 보장하지 않습니다. 기존 동작을 보존하고 근거가 약할 때 수정을 채택하지 않는 능력도 적응에 포함됩니다.
 
@@ -284,6 +285,7 @@ ARC-AGI-3는 정적인 입력·출력 변환이 아니라 낯선 격자 세계�
 ![FT09의 레벨 1과 레벨 7 화면으로 클릭과 패턴 규칙을 추론하는 게임 예시]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-2-ft09.png' | relative_url }})
 
 Figure 2, [v1 PDF 5쪽](https://arxiv.org/pdf/2610.30499v1#page=5). 원문 그림 크롭이며 번역하지 않았습니다. 왼쪽은 Level 1, 오른쪽은 Level 7입니다. 작은 패턴 타일은 기준 색과 같아야 하거나 달라야 하는 이웃을 지정하고, 클릭은 색을 순환시킵니다. 후반에는 여러 타일을 함께 바꾸는 제어가 등장합니다.
+{: .caption}
 
 저자들은 이 화면을 이미지 그대로, 기호 격자, 객체 요약, 전이 차이 또는 이들의 조합으로 모델에 전달할 수 있다고 설명합니다. 행동 하나와 행동 묶음 중 무엇을 요청할지, 발견한 정책을 코드로 실행할지, 계산을 재사용할지도 하네스가 정합니다. RHAE 외에 행동·완료 레벨·종료 상태·모델 추론 비용을 기록하는 이유는 이러한 설계가 점수뿐 아니라 실행 양상도 바꾸기 때문입니다.
 
@@ -299,6 +301,18 @@ Figure 2, [v1 PDF 5쪽](https://arxiv.org/pdf/2610.30499v1#page=5). 원문 그�
 
 **Conditions and uncertainty.** 7개 모델 계열에 9개 모델·노력 조건, 조건당 3회 독립 구성입니다. 전체 계보를 bootstrap해 단계 간 짝을 보존하며, 조건 간 비교는 기술통계입니다. 이 절의 기여는 수정 대상, 자격 기준, 피드백 경계, 통계 단위를 동시에 고정한 것입니다. 다음 절은 이렇게 생성된 모든 계보에서 실제 전이와 비용이 어떻게 달라졌는지 보여줍니다.
 
+[§4.2의 실험 프로토콜](https://arxiv.org/html/2610.30499v1#S4.SS2)을 한 계보만 놓고 그리면, 수정에 쓰는 실행과 마지막에 비교하는 실행의 경계가 선명합니다.
+
+```text
+H0 → 개발 5게임의 실행 기록 → 수정 1 → H1
+H1 → 개발 5게임의 실행 기록 → 수정 2 → H2
+
+H0, H1, H2의 고정본 → 각각 holdout 20게임에서 평가
+                     → 이 점수·기록은 수정과 선택에 제공하지 않음
+```
+
+별도의 smoke 검사는 게임을 정상적으로 실행할 수 있는지 확인합니다. 그 검사를 통과했다는 것만으로 점수가 올랐다고 볼 수는 없습니다.
+
 ### 📖 **Chapter 5: Quantitative Results**
 
 저자들은 먼저 실행 자체의 변동을 제시합니다. 동일한 최종 하네스 하나를 같은 holdout 20게임에서 10회 평가했을 때 표본 표준편차는 3.99점입니다. 모두 해당 계보의 초기 점수보다 높았으므로 그 사례의 큰 향상은 반복되지만, 수점 정도의 단일 관측 차이는 신중하게 읽어야 합니다. 이 진단은 모든 하네스의 잡음을 대표하는 추정이 아닙니다. [§5, 부록 D.1](https://arxiv.org/html/2610.30499v1#S5)
@@ -306,14 +320,17 @@ Figure 2, [v1 PDF 5쪽](https://arxiv.org/pdf/2610.30499v1#page=5). 원문 그�
 ![모델 조건별 holdout 궤적과 개발 향상 대비 holdout 향상을 함께 보여주는 전체 그래프]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-3-transfer.png' | relative_url }})
 
 Figure 3 전체, [v1 PDF 6쪽](https://arxiv.org/pdf/2610.30499v1#page=6). 원문 영역 크롭, 번역 없음. (a)는 조건별 3계보 평균, (b)는 초기 대비 첫째·둘째 수정 변화입니다. 높은 추론 노력은 삼각형으로 표시됩니다.
+{: .caption}
 
 ![Figure 3a의 단계별 holdout 점수 궤적 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-3a-trajectories.png' | relative_url }})
 
-Figure 3(a) 상세 크롭, 같은 PDF 6쪽입니다. 패널 축과 점을 보존했으며 범례는 위 전체 그림과 공통입니다. 초기 성능부터 조건 간 차이가 크므로, 최종 점수와 수정으로 얻은 변화량을 구분해야 합니다.
+Figure 3(a) 상세 크롭, 같은 PDF 6쪽입니다. 패널 축과 점을 보존했으며 범례는 위 전체 그림과 공통입니다. 초기 성능부터 조건 간 차이가 크므로, 최종 점수와 수정으로 얻은 변화량을 구분해야 합니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=6)
+{: .caption}
 
 ![Figure 3b의 개발 향상과 holdout 향상 산점도 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-3b-adaptation-gap.png' | relative_url }})
 
-Figure 3(b) 상세 크롭, 같은 PDF 6쪽입니다. 가로축은 개발 변화, 세로축은 holdout 변화이며 빈 점과 찬 점은 각각 첫째·둘째 수정입니다. 18점은 9조건×2수정의 평균 점들로, 54개 개별 수정의 개수를 뜻하지 않습니다. 우하단의 3점은 개발만 좋아지고 holdout은 낮아진 조건·단계 평균입니다.
+Figure 3(b) 상세 크롭, 같은 PDF 6쪽입니다. 가로축은 개발 변화, 세로축은 holdout 변화이며 빈 점과 찬 점은 각각 첫째·둘째 수정입니다. 18점은 9조건×2수정의 평균 점들로, 54개 개별 수정의 개수를 뜻하지 않습니다. 우하단의 3점은 개발만 좋아지고 holdout은 낮아진 조건·단계 평균입니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=6)
+{: .caption}
 
 **Held-out gains vary substantially across lineages.** 최종 개발 향상은 +8.42점, holdout 향상은 +2.80점이며 후자의 95% 구간은 [−1.44, 7.35]입니다. 엄격한 부호 기준에서는 15계보 향상, 12계보 하락, 동률 0이며 양측 부호검정은 p=.70입니다. ±5점 안을 미결정으로 두면 9향상·3하락·15미결정입니다. 저자들은 이 수를 “수정이 기대 성능을 떨어뜨릴 확률”로 해석하지 않고, 관측된 평가 모음의 결과로 한정합니다.
 
@@ -324,22 +341,27 @@ Figure 3(b) 상세 크롭, 같은 PDF 6쪽입니다. 가로축은 개발 변화,
 ![최종 수정의 점수와 비용 변화를 네 범주로 나눈 전체 막대그래프]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-4-score-cost.png' | relative_url }})
 
 Figure 4 전체, [v1 PDF 7쪽](https://arxiv.org/pdf/2610.30499v1#page=7). 원문 영역 크롭, 번역 없음. 행은 조건·반복 실행이며, 각 범주 안의 두 막대는 RHAE 변화 크기와 게임당 달러 비용 변화 크기입니다. 패널마다 증가·감소 방향을 제목으로 명시하므로 부호를 혼동하지 않아야 합니다.
+{: .caption}
 
 ![점수 향상과 비용 감소를 동시에 얻은 9개 계보의 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-4a-pareto.png' | relative_url }})
 
-Figure 4(a) 상세 크롭, 같은 PDF 7쪽입니다. 점수 상승과 비용 하락을 동시에 달성한 9/27계보를 보여줍니다. 번역·수치 변경은 없습니다.
+Figure 4(a) 상세 크롭, 같은 PDF 7쪽입니다. 점수 상승과 비용 하락을 동시에 달성한 9/27계보를 보여줍니다. 번역·수치 변경은 없습니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=7)
+{: .caption}
 
 ![점수와 비용이 함께 증가한 6개 계보의 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-4b-score-up-cost-up.png' | relative_url }})
 
-Figure 4(b) 상세 크롭, 같은 PDF 7쪽입니다. 6/27계보는 더 높은 추론 지출과 함께 점수가 올랐습니다. 번역·수치 변경은 없습니다.
+Figure 4(b) 상세 크롭, 같은 PDF 7쪽입니다. 6/27계보는 더 높은 추론 지출과 함께 점수가 올랐습니다. 번역·수치 변경은 없습니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=7)
+{: .caption}
 
 ![비용이 감소했지만 점수도 낮아진 9개 계보의 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-4c-cheaper-score-down.png' | relative_url }})
 
-Figure 4(c) 상세 크롭, 같은 PDF 7쪽입니다. 비용이 낮아진 후손 중 절반인 9계보는 성능도 하락했습니다. 번역·수치 변경은 없습니다.
+Figure 4(c) 상세 크롭, 같은 PDF 7쪽입니다. 비용이 낮아진 후손 중 절반인 9계보는 성능도 하락했습니다. 번역·수치 변경은 없습니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=7)
+{: .caption}
 
 ![점수 하락과 비용 증가가 함께 나타난 3개 계보의 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-4d-worse-both.png' | relative_url }})
 
-Figure 4(d) 상세 크롭, 같은 PDF 7쪽입니다. 3/27계보는 두 축 모두 악화되었습니다. 네 상세 그림은 원문의 공통 선형 축과 단위를 유지합니다.
+Figure 4(d) 상세 크롭, 같은 PDF 7쪽입니다. 3/27계보는 두 축 모두 악화되었습니다. 네 상세 그림은 원문의 공통 선형 축과 단위를 유지합니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=7)
+{: .caption}
 
 **Half of the cheaper final harnesses also improve performance.** 배포 비용은 각 스냅샷의 holdout 20게임에 대한 논리적 추론 비용 평균이며, 선택된 실행 안에서 재생된 응답도 가격을 부여합니다. 9계보는 점수·비용 Pareto 개선, 6계보는 점수·비용 동반 증가, 9계보는 비용·점수 동반 감소, 3계보는 둘 다 악화입니다. 비용 변화 평균 −2.72달러와 중앙값 −0.54달러의 차이는 절감 폭이 균등하지 않음을 보여줍니다.
 
@@ -454,6 +476,7 @@ HUIB·SEAGym·Rethinking은 기술·프롬프트·기억·초기 하네스의 �
 ![27계보 각각의 초기·첫 수정·둘째 수정 RHAE와 게임당 비용을 제시한 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-3-trajectories.png' | relative_url }})
 
 Table 3, [v1 PDF 16쪽](https://arxiv.org/pdf/2610.30499v1#page=16). 표·캡션 영역 크롭, 번역 없음. 작은 숫자는 다음 전사표에서 확인할 수 있습니다. 각 셀은 **RHAE / USD·게임⁻¹**이며 비용은 논리적 추론 비용입니다.
+{: .caption}
 
 | 조건 | 반복 | 초기 | 수정 1 | 수정 2 |
 |---|---:|---:|---:|---:|
@@ -496,6 +519,7 @@ Table 3, [v1 PDF 16쪽](https://arxiv.org/pdf/2610.30499v1#page=16). 표·캡션
 ![부모 유지·최종 배포·개발 선택·holdout 오라클을 비교하는 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-5-selection.png' | relative_url }})
 
 Table 5, [v1 PDF 17쪽](https://arxiv.org/pdf/2610.30499v1#page=17). 표·캡션 크롭, 번역 없음. 아래 표를 원문과 대조했습니다.
+{: .caption}
 
 | 배포 정책 | holdout RHAE | 초기 대비 | USD/게임 | 향상/하락/동률 | 초기/수정1/수정2 선택 |
 |---|---:|---:|---:|---:|---:|
@@ -509,6 +533,7 @@ Table 5, [v1 PDF 17쪽](https://arxiv.org/pdf/2610.30499v1#page=17). 표·캡션
 ![구성·자격 검사·새 선택 게임 추론의 단계별 지출 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-8-cost.png' | relative_url }})
 
 Table 8, [v1 PDF 18쪽](https://arxiv.org/pdf/2610.30499v1#page=18). 표·캡션 크롭, 번역 없음. 선택 게임 지출은 새 추론만 집계하며, 비교용 논리적 replay 요금과 구분됩니다.
+{: .caption}
 
 | 지출 구성(USD) | 초기 | 수정 1 | 수정 2 | 합계 |
 |---|---:|---:|---:|---:|
@@ -532,6 +557,7 @@ Table 9의 실용 문턱 민감도는 변화의 절댓값이 문턱 이하일 �
 ![동일 Sol-high 최종 하네스 10회 실행의 점수·행동·완료 결과 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-10-fixed-harness.png' | relative_url }})
 
 Table 10, [v1 PDF 19쪽](https://arxiv.org/pdf/2610.30499v1#page=19). 표·캡션 크롭, 번역 없음. 핵심 RHAE 열은 53.56, 46.86, 43.38, 48.21, 45.32, 55.37, 46.52, 49.23, 52.10, 44.75입니다.
+{: .caption}
 
 10회 평균은 48.53, 표본 표준편차 3.99, 범위 43.38–55.37, 두 평가의 평균 절대 차이는 4.73입니다. 추가 9회만의 평균·표준편차는 47.97·3.79입니다. 원 53.56은 두 번째로 높고 전체 평균보다 5.03점 높지만, 모두 초기 20.38점보다 높습니다. 이 최종 관측 하나만 10회 평균으로 바꾸면 전체 평균 향상은 +2.80→+2.62가 됩니다. 이는 나머지 계보의 오차를 보정한 결과가 아니라 기계적 민감도 점검입니다.
 
@@ -542,6 +568,7 @@ Table 10, [v1 PDF 19쪽](https://arxiv.org/pdf/2610.30499v1#page=19). 표·캡�
 ![단계마다 동일한 540평가의 완료·레벨·행동 수를 보여주는 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-11-completion.png' | relative_url }})
 
 Table 11, [v1 PDF 20쪽](https://arxiv.org/pdf/2610.30499v1#page=20). 표·캡션 크롭, 번역 없음. 분모 540은 27계보×20holdout 게임입니다.
+{: .caption}
 
 | 단계 | RHAE | 완전 완료 게임 | 평균 레벨 완료율 | 평균 계상 행동 |
 |---|---:|---:|---:|---:|
@@ -558,14 +585,17 @@ Table 12는 게임별 변화도 제공합니다. 큰 상승 lp85의 +20.44점에
 ![전체 계보의 Python 코드 크기 변화와 수정량 대비 holdout 변화 산점도]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-5-code-change.png' | relative_url }})
 
 Figure 5 전체, [v1 PDF 21쪽](https://arxiv.org/pdf/2610.30499v1#page=21). 그림 크롭, 번역 없음. (a)는 로그 축 코드 크기와 단계 중앙값, (b)는 추가+삭제 줄 수와 즉시 holdout 변화를 보여줍니다.
+{: .caption}
 
 ![Figure 5a의 코드 크기 증가 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-5a-size.png' | relative_url }})
 
-Figure 5(a) 상세 크롭, 같은 PDF 21쪽입니다. 초록·주황은 최종 관측 향상·하락이고 검은 선은 단계 중앙값입니다. 코드 증가는 두 결과 모두에서 나타납니다.
+Figure 5(a) 상세 크롭, 같은 PDF 21쪽입니다. 초록·주황은 최종 관측 향상·하락이고 검은 선은 단계 중앙값입니다. 코드 증가는 두 결과 모두에서 나타납니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=21)
+{: .caption}
 
 ![Figure 5b의 코드 수정량과 성능 변화 상세]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/figure-5b-churn.png' | relative_url }})
 
-Figure 5(b) 상세 크롭, 같은 PDF 21쪽입니다. 각 점은 선택된 부모→후손 diff이며 가로축은 추가·삭제 줄의 합입니다. 작은 변경과 큰 변경이 모두 0선 양쪽에 있으므로 수정 규모가 개선을 인증하지 않습니다.
+Figure 5(b) 상세 크롭, 같은 PDF 21쪽입니다. 각 점은 선택된 부모→후손 diff이며 가로축은 추가·삭제 줄의 합입니다. 작은 변경과 큰 변경이 모두 0선 양쪽에 있으므로 수정 규모가 개선을 인증하지 않습니다. [출처](https://arxiv.org/pdf/2610.30499v1#page=21)
+{: .caption}
 
 **First revisions reorganize; second revisions diversify.** Table 13은 조건별, Table 14는 27반복 각각의 Preserve/Extend/Reorient 경로를 제시합니다. 첫 수정은 맥락 유지·재생 흐름·모델 호출 간격·배치·예산의 재조직이 대부분이며, 둘째는 능력 확장과 재지향이 각각 12개입니다. 개발자가 “점진적”이라 표현해도 실제로 모델을 부르는 시점과 희소 행동·달러 배분이 달라질 수 있습니다.
 
@@ -588,6 +618,7 @@ Figure 5(b) 상세 크롭, 같은 PDF 21쪽입니다. 각 점은 선택된 부�
 ![12코드의 관측 수·일치율·가중 카파·알파를 제시하는 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-16-reliability.png' | relative_url }})
 
 Table 16, [v1 PDF 23쪽](https://arxiv.org/pdf/2610.30499v1#page=23). 표·캡션 크롭, 번역 없음. `—`는 모든 라벨이 같아 우연 보정 계수가 정의되지 않는 경우입니다.
+{: .caption}
 
 | 코드 | 관측 n | 정확 일치 | 가중 κ | α |
 |---|---:|---:|---:|---:|
@@ -615,6 +646,7 @@ d_{ij}=\left(\frac{i-j}{K-1}\right)^2.
 ![Scope와 결과 후 적응의 탐색적 연관 및 불확실성 원문 표]({{ '/img/reviews/2026/autonomous-harness-adaptation-review/table-17-associations.png' | relative_url }})
 
 Table 17, [v1 PDF 24쪽](https://arxiv.org/pdf/2610.30499v1#page=24). 표·캡션 크롭, 번역 없음. 두 대비 모두 즉시 부모→후손 RHAE 변화에 관한 기술적 연관입니다.
+{: .caption}
 
 | 대비 | n | 가중 κ | 평균 변화 차이 | bootstrap 구간 | p |
 |---|---:|---:|---:|---|---:|
