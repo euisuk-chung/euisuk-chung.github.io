@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/141) — 검토 대기 · PR #141 · `9ca5ca4`
 * 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/140) — 병합 완료 · PR #140 · `d89bf81`
 * 2026-11-13 **Review**: [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/139) — 병합 완료 · PR #139 · `b2b3f40`
 * 2026-11-12 **Review**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/137) — 병합 완료 · PR #137 · `ab295b7`

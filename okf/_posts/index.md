@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/141) — 검토 대기 · 고객사에 배치된 에이전트가 숨은 제약을 찾아 운영 시스템을 개선할 때, 업무 지표와 연락 비용을 FDE-Gym이 어떻게 측정하는지 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](2026/2026-11-13-fde-gym-paper-review.md) - 고객사에 배치된 에이전트가 숨은 제약을 찾아 운영 시스템을 개선할 때, 업무 지표와 연락 비용을 FDE-Gym이 어떻게 측정하는지 살펴봅니다.
