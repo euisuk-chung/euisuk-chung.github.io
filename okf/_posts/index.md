@@ -1,25 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · Weight-Space Programming을 제안한 여덟 실험과 후속 CNN 가중치 읽기 감사를 함께 살펴보며 국소 계산, 의미 추론, 편집 성과를 구분합니다.
-* [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 작은 Qwen3 모델이 계획·검색·선택을 SFT와 강화학습으로 익혀 새 도구 목록과 검색기로 전이하는 원리와 정확 일치 평가의 조건을 분석합니다.
-* [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 검증된 실행 재작성과 critic을 이어받는 강화학습을 결합한 Terminal-RSI의 수식, 보상 보정, 다섯 단계 평가와 전체 부록의 근거를 분석합니다.
-* [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 자신의 실패를 분석해 하니스를 제안하고 강화학습으로 정책을 갱신하는 Self-HPO의 교대 최적화, 코딩 벤치마크 평가와 제출 제어 사례를 살펴봅니다.
-* [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · RelayVSR가 큰 생성 모델의 키프레임 참조를 경량 모델에서 재사용하는 원리와, 화질·처리량·입력 대기 사이의 관계를 분석합니다.
-* [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PhoneHarness가 Android 작업을 GUI·CLI·MCP에 배분하고 상태 변화를 검증하는 방식과 124개 과제에서 나타난 성능 차이를 분석합니다.
-* [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 기반 LLM을 동결한 채 과거 계획과 성공·실패 사례를 검색하고 사례 선택 정책을 학습하는 Memento의 수학적 구조와 심층 조사 평가 조건을 분석합니다.
-* [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 에이전트의 도구와 인수 선택을 결정 모델에 위임할 때 확신도 임계값, 실행 상태 학습, 배포 조건이 성공률과 비용에 어떻게 작용하는지 살펴봅니다.
-* [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 원문 대화 검색과 재순위화만으로 구성한 Raw-RAG의 일곱 평가 설정과 근거 도달률·활용률·경로 보존 진단을 통해 복잡한 에이전트 기억의 효과와 비교 조건을 분석합니다.
-* [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 잠재 벡터와 텍스트를 오가는 HybridAgent의 구조, 자기 조건화 학습과 강화학습, 작업 메모리 보존 및 성능·효율·감사 가능성 평가를 분석합니다.
-* [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · Evo²가 하네스 편집과 진단을 한 정책으로 학습하는 방식, 교차 탐색과 궤적 복구, 코딩·기억 과제의 전이 및 가중치 비교를 분석합니다.
-* [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 생성 메커니즘과 정본 상태에서 불완전한 관측 파일·분석 질문·평가 기준을 함께 합성하는 Data World의 설계와 세계 분리 강화학습 효용을 분석합니다.
-* [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 희소화한 MLP 뉴런과 transcoder를 재구성·예측 보존·개념 분리·Jacobian·초기화 안정성으로 비교하고, 뉴런 특징과 소수 뉴런 조합의 의미를 살펴봅니다.
-* [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · 고정 모델이 ARC-AGI-3 하네스를 구성하고 두 번 수정한 27개 계보를 통해 개발 성능과 수정에 쓰지 않은 게임으로의 전이, 비용, 수정 과정의 신뢰도를 분석합니다.
-* [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · AI-Newton이 46개 모의 역학 실험에서 측정 절차를 개념으로 저장하고 기존 식에 항을 더해 뉴턴 역학의 법칙을 재발견하는 과정을 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 아이디어를 얻어, 닉네임으로 수다를 나누고 게임과 간식 뽑기를 즐기는 온라인 회사 옥상 한숨두숨을 만들었습니다.
