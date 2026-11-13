@@ -204,15 +204,18 @@ $`W_1,W_2`$는 학습하는 선형 투영, $`\sigma`$는 GELU 같은 활성화 �
 
 ![HybridLink와 텍스트·잠재 모드의 통합 생성 구조]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-01-architecture.png' | relative_url }})
 
-*Figure 1, PDF 1쪽. [2610.18861v1 PDF](https://arxiv.org/pdf/2610.18861v1#page=1)의 도식 영역을 크롭했습니다. 원문 영어 표기와 배치를 유지했으며 번역하지 않았습니다. 아래 두 그림은 같은 그림의 왼쪽·오른쪽 패널 상세입니다.*
+Figure 1, PDF 1쪽. [2610.18861v1 PDF](https://arxiv.org/pdf/2610.18861v1#page=1)의 도식 영역을 크롭했습니다. 원문 영어 표기와 배치를 유지했으며 번역하지 않았습니다. 아래 두 그림은 같은 그림의 왼쪽·오른쪽 패널 상세입니다.
+{: .caption}
 
 ![은닉 상태에 두 층 투영과 잔차를 더하는 HybridLink 상세]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-01-hybridlink-detail.png' | relative_url }})
 
-*Figure 1 왼쪽 패널 상세, PDF 1쪽. [동일 버전 출처](https://arxiv.org/pdf/2610.18861v1#page=1)를 패널 크롭했으며 번역하지 않았습니다. 세로 우회 경로가 잔차 연결입니다.*
+Figure 1 왼쪽 패널 상세, PDF 1쪽. [동일 버전 출처](https://arxiv.org/pdf/2610.18861v1#page=1)를 패널 크롭했으며 번역하지 않았습니다. 세로 우회 경로가 잔차 연결입니다.
+{: .caption}
 
 ![잠재 구간에서 HybridLink 출력을 다음 입력으로 넣는 생성 상세]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-01-generation-detail.png' | relative_url }})
 
-*Figure 1 오른쪽 패널 상세, PDF 1쪽. [동일 버전 출처](https://arxiv.org/pdf/2610.18861v1#page=1)를 패널 크롭했으며 번역하지 않았습니다. 텍스트 구간은 LM head와 토큰 임베딩을, 잠재 구간은 HybridLink를 사용합니다.*
+Figure 1 오른쪽 패널 상세, PDF 1쪽. [동일 버전 출처](https://arxiv.org/pdf/2610.18861v1#page=1)를 패널 크롭했으며 번역하지 않았습니다. 텍스트 구간은 LM head와 토큰 임베딩을, 잠재 구간은 HybridLink를 사용합니다.
+{: .caption}
 
 다음으로 모드 전환을 설명합니다. 텍스트 모드에서 `<latent>`가 샘플링되면 다음 계산부터 HybridLink 출력을 되먹입니다. 잠재 모드에서는 일반 토큰을 샘플링하지 않고, 현재 출력 벡터와 어휘 임베딩들의 코사인 유사도를 비교해 종료 앵커를 찾습니다. 식 (5)는 다음 조건입니다.
 
@@ -228,11 +231,13 @@ $`\mathcal V`$는 어휘 집합입니다. 가장 가까운 임베딩이 종료 �
 
 ![잠재 판독의 읽기 쉬움·질문 특이성과 검색 사례]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-02-latent-inspection.png' | relative_url }})
 
-*Figure 2, PDF 4쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=4)의 그림 전체를 크롭했으며 번역하지 않았습니다. 왼쪽의 점 하나는 질문 하나가 아니라 연속된 잠재 구간 하나입니다. 200은 평가 질문 수입니다.*
+Figure 2, PDF 4쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=4)의 그림 전체를 크롭했으며 번역하지 않았습니다. 왼쪽의 점 하나는 질문 하나가 아니라 연속된 잠재 구간 하나입니다. 200은 평가 질문 수입니다.
+{: .caption}
 
 ![검색 전후의 잠재 의사 텍스트와 최종 답을 보여 주는 사례 상세]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-02-readout-detail.png' | relative_url }})
 
-*Figure 2 오른쪽 패널 상세, PDF 4쪽. [동일 버전 출처](https://arxiv.org/pdf/2610.18861v1#page=4)의 패널을 크롭했으며 번역하지 않았습니다. 잠재 구간의 계획·검색 결과 해석을 최근접 토큰으로 읽은 예입니다. 개별 성공 사례와 정량 평가의 범위는 구분해야 합니다.*
+Figure 2 오른쪽 패널 상세, PDF 4쪽. [동일 버전 출처](https://arxiv.org/pdf/2610.18861v1#page=4)의 패널을 크롭했으며 번역하지 않았습니다. 잠재 구간의 계획·검색 결과 해석을 최근접 토큰으로 읽은 예입니다. 개별 성공 사례와 정량 평가의 범위는 구분해야 합니다.
+{: .caption}
 
 **3.2 Multi-Turn Hybrid Generation over Working Memory**는 턴 경계의 문제로 이동합니다. 텍스트 에이전트는 이전 내용을 문자열로 다시 토큰화할 수 있지만, 연속 벡터가 섞인 이력은 그 방식으로 복원할 수 없습니다. HybridAgent는 모든 입력이 같은 표현 공간으로 들어간다는 점을 이용해, 각 위치·각 층의 key와 value를 작업 메모리로 누적합니다. 식 (6)의 초기화와 첫 턴 누적은 다음과 같습니다.
 
@@ -247,9 +252,22 @@ $`\mathcal M^{(0)}`$는 입력 문맥의 KV, $`\oplus`$는 새로 생긴 KV를 �
 
 ![여러 턴의 텍스트·잠재·도구 응답 KV를 누적하는 작업 메모리]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-03-working-memory.png' | relative_url }})
 
-*Figure 3, PDF 5쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=5)의 도식 영역을 크롭했으며 번역하지 않았습니다. 모든 층과 위치에서 생성된 KV를 다음 턴이 재사용합니다.*
+Figure 3, PDF 5쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=5)의 도식 영역을 크롭했으며 번역하지 않았습니다. 모든 층과 위치에서 생성된 KV를 다음 턴이 재사용합니다.
+{: .caption}
 
 이 설계의 핵심은 과거 잠재 사고를 문자열로 재구성하지 않는다는 것입니다. 여기서 “lossless”는 완전한 KV와 동일한 추론 설정을 보존하면 전체 혼합 입력을 다시 계산한 것과 같은 후속 출력을 얻는다는 부록 A의 의미입니다. 기억 내용의 인간적 이해나 요약의 무손실성을 증명한 것은 아닙니다. 이 장이 실행 가능한 구조를 마련했다면, 다음 장은 그 구조를 안정적으로 사용하는 학습을 설명합니다. [원문 §3, 식 (4)–(6)](https://arxiv.org/html/2610.18861v1#S3)
+
+검색을 한 번 호출하는 가상의 턴을 펼치면, 다음 턴에 넘겨야 할 것이 왜 문자열 로그만으로는 부족한지 보입니다. [원문 §3.2와 Figure 3](https://arxiv.org/html/2610.18861v1#S3.SS2)을 따라 간추린 실행 흐름입니다.
+
+```text
+질문을 처리해 KV를 쌓는다.
+  → 잠재 구간: HybridLink 벡터를 다음 입력으로 쓰고 KV를 더한다.
+  → 텍스트 모드 복귀: 검색 호출을 생성한다.
+  → 환경이 돌려준 검색 결과를 임베딩해 같은 KV 이력에 더한다.
+  → 다음 턴은 이 KV를 이어 쓰며 답을 생성한다.
+```
+
+잠재 구간을 읽기 쉽게 바꾼 의사 텍스트는 관찰용입니다. 이를 다시 토큰화해 다음 턴에 넣으면 원래 벡터가 남긴 문맥을 그대로 이어받을 수 없습니다.
 
 ### 📖 **Chapter 4: Learning to Perform Hybrid Reasoning**
 
@@ -280,7 +298,8 @@ $`(x,y)`$는 입력과 정답 시연, $`h_{\mathrm{lat}}`$는 잠재 위치의 �
 
 ![첫 순전파의 잠재 예측을 두 번째 순전파 입력으로 사용하는 HybridSFT]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-04-self-conditioned-sft.png' | relative_url }})
 
-*Figure 4, PDF 6쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=6)의 도식을 크롭했으며 번역하지 않았습니다. “One step ahead”는 첫 패스의 출력이 다음 위치 입력을 예측한다는 뜻입니다.*
+Figure 4, PDF 6쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=6)의 도식을 크롭했으며 번역하지 않았습니다. “One step ahead”는 첫 패스의 출력이 다음 위치 입력을 예측한다는 뜻입니다.
+{: .caption}
 
 **4.2 Scale Reasoning via Hybrid Reinforcement Learning**은 혼합 궤적에서 정책 확률을 정의하는 문제로 시작합니다. PPO·GRPO의 토큰 중요도 비율은 보통 식 (9)처럼 계산합니다.
 
@@ -352,7 +371,8 @@ Table 2는 같은 백본과 학습 예산의 수학·지식 추론 비교입니�
 
 ![4B·8B·14B에서 텍스트 토큰과 전체 생성 단계를 비교한 그래프]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-06-generation-steps.png' | relative_url }})
 
-*Figure 6, PDF 10쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=10)의 그래프를 크롭했으며 번역하지 않았습니다. 짙은 파랑은 텍스트, 옅은 파랑은 잠재 단계입니다. 아래 표는 그림의 반올림 표기를 그대로 옮겼습니다.*
+Figure 6, PDF 10쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=10)의 그래프를 크롭했으며 번역하지 않았습니다. 짙은 파랑은 텍스트, 옅은 파랑은 잠재 단계입니다. 아래 표는 그림의 반올림 표기를 그대로 옮겼습니다.
+{: .caption}
 
 | 백본 규모 | 텍스트 기준 단계 | 혼합 전체 단계 | 전체 단계 감소 | 텍스트 토큰 감소 배수 | 혼합 중 잠재 단계 비율 |
 |---|---:|---:|---:|---:|---:|
@@ -364,7 +384,8 @@ Table 2는 같은 백본과 학습 예산의 수학·지식 추론 비교입니�
 
 ![세 모델 규모를 합친 텍스트·혼합 추론 벽시계 시간 비교]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-07-inference-time.png' | relative_url }})
 
-*Figure 7, PDF 11쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=11)의 그래프를 크롭했으며 번역하지 않았습니다. 원문에 “pooled from 4B · 8B · 14B”라고 명시되어 있습니다.*
+Figure 7, PDF 11쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=11)의 그래프를 크롭했으며 번역하지 않았습니다. 원문에 “pooled from 4B · 8B · 14B”라고 명시되어 있습니다.
+{: .caption}
 
 Figure 7은 세 규모를 합친 텍스트 134초/샘플과 Hybrid 63초/샘플, 약 2.1배 빠른 추론을 보여 줍니다. 그림의 “45%–61% less time”은 초록의 약 1.8–2.6배 범위와 대응하지만 규모별 개별 초 단위 값은 그림에 나열되지 않습니다. 따라서 4B=1.8배, 14B=2.6배처럼 임의로 배정할 수 없습니다. 비용 2.7–3.7배는 별도의 Table 9 추정이며 부록 G.2에서 다룹니다. 이 장은 효용과 효율의 증거를 제시했고, 다음 장은 무엇이 그 결과에 기여했는지 검토합니다. [원문 §5, Tables 1–2·Figures 5–7](https://arxiv.org/html/2610.18861v1#S5)
 
@@ -557,7 +578,8 @@ h_{t-1}=f_\theta(E_{\leq t-1}).
 
 ![단계 분할·모드 할당·가시성 검사·혼합 구성의 데이터 파이프라인]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/figure-12-data-curation.png' | relative_url }})
 
-*Figure 12, PDF 33쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=33)의 도식을 크롭했으며 번역하지 않았습니다. 마지막 가시성 검사는 잠재 후보를 가렸을 때 사라진 핵심 판단을 텍스트로 되돌립니다.*
+Figure 12, PDF 33쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=33)의 도식을 크롭했으며 번역하지 않았습니다. 마지막 가시성 검사는 잠재 후보를 가렸을 때 사라진 핵심 판단을 텍스트로 되돌립니다.
+{: .caption}
 
 둘째 **Mode Assignment**는 원문에 기재된 GPT-6.1-Sol/GPT-5.6-Luna 전문가 판단과 고정된 대상 base 모델의 엔트로피를 함께 사용합니다. 각 단계 $`s`$의 평균 엔트로피는 식 (18)입니다.
 
@@ -620,7 +642,8 @@ HybridSFT는 두 잠재 비교군보다 모두 높지만, Text SFT 대비 MATH50
 
 ![동일 백본 텍스트 에이전트와 HybridAgent의 생성 FLOP 및 비용 추정 표]({{ '/img/reviews/2026/hybrid-reasoning-agents-review/table-09-estimated-cost.png' | relative_url }})
 
-*Table 9, PDF 35쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=35)의 표 본체를 크롭했으며 번역하지 않았습니다. 조건은 본문과 아래 표에서 함께 설명합니다.*
+Table 9, PDF 35쪽. [원문](https://arxiv.org/pdf/2610.18861v1#page=35)의 표 본체를 크롭했으며 번역하지 않았습니다. 조건은 본문과 아래 표에서 함께 설명합니다.
+{: .caption}
 
 | 백본 | Text TFLOP/문제 | Hybrid TFLOP/문제 | Text 비용/100만 문제 | Hybrid 비용/100만 문제 | 비용 감소 배수 |
 |---|---:|---:|---:|---:|---:|

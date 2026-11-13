@@ -88,7 +88,8 @@ You-Le Fang, Dong-Shan Jian, Xiang Li, Yan-Qing Ma의 AI-Newton은 여러 실험
 
 ![실험 베이스에서 실험을 선택하고 이론 베이스의 개념을 불러와 법칙을 탐색한 뒤 새 개념과 법칙을 등록하는 순환 구조]({{ '/img/reviews/2026/ai-newton-paper-review/figure1-discovery-workflow.png' | relative_url }})
 
-*Figure 1. 왼쪽은 실험과 데이터 생성기, 오른쪽은 기호·개념·법칙의 층입니다. 가운데의 탐색 결과가 오른쪽에 돌아가면서 다음 시행의 입력이 됩니다. Fang 외, arXiv v2 PDF 2쪽의 그림 영역을 그대로 크롭했습니다. [원본 그림](https://arxiv.org/pdf/2504.01538v2#page=2) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Figure 1. 왼쪽은 실험과 데이터 생성기, 오른쪽은 기호·개념·법칙의 층입니다. 가운데의 탐색 결과가 오른쪽에 돌아가면서 다음 시행의 입력이 됩니다. Fang 외, arXiv v2 PDF 2쪽의 그림 영역을 그대로 크롭했습니다. [원본 그림](https://arxiv.org/pdf/2504.01538v2#page=2) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 ## 챕터별 상세 리뷰
 
@@ -147,13 +148,16 @@ C_2 := {} & \forall i\text{: Ball},\,\text{Intrinsic}\big[\text{ExpName}(o_1\rig
 
 **추출·갱신.** 한 실험에서 일정하게 유지되는 양을 찾으면 더 넓은 곳에서 활용할 수 있는 개념 후보로 추출합니다. 직접 탐색으로 얻은 특정 법칙이 다른 여러 실험에서도 성립하면 일반 법칙으로 제안합니다. 이렇게 지식 베이스를 갱신하고 다음 시행으로 돌아갑니다. 따라서 일반화의 근거는 한 실험에서 얻은 보존 관계와 다른 실험에서 확인한 관계의 성립 여부에 걸쳐 있습니다. [원문 3쪽](https://arxiv.org/pdf/2504.01538v2#page=3)
 
+예를 들어 두 공이 충돌하는 실험에서 운동에너지 보존식이 맞았다고 합시다. 용수철을 연결한 실험에서는 공의 운동 항만 더하면 일정하지 않을 수 있습니다. AI-Newton은 여기서 기존 식을 버리고 처음부터 찾는 대신, **용수철 변형에 해당하는 후보 항을 더한 식**을 새 데이터에 대입할 수 있습니다. 추가 항을 포함한 관계가 다른 실험에도 맞는지 확인한 뒤에야 일반 법칙 후보가 됩니다. [원문 §3의 예시](https://arxiv.org/pdf/2504.01538v2#page=3)를 순서대로 풀어 쓴 것으로, 실제 재발견 횟수는 다음 장의 실험 결과입니다.
+
 ### 📖 **Chapter 4: Rediscovering Laws of Newtonian Mechanics**
 
 저자들은 공(작은 공과 천체), 용수철, 경사면으로 구성한 46개 실험을 사용합니다. 본문은 ① 공과 용수철 각각의 자유 운동 ② 공끼리의 탄성 충돌 ③ 병진·회전 진동과 진자형 운동을 보이는 결합 계 ④ 포물체와 경사면 운동, 중력을 받는 용수철·공 계 ⑤ 천체 간 중력 상호작용 순으로 실험군을 소개합니다. 물체 수와 공간 차원을 바꾸면서 자유도를 늘렸고, 경사면에 연결된 공 두 개·용수철 두 개의 결합 진동이나 공 네 개·용수철 네 개의 회전 계도 포함했습니다. 모의 궤적은 미분방정식으로 계산한 뒤 가우스 분포 오차를 더했습니다. [원문 3–4쪽](https://arxiv.org/pdf/2504.01538v2#page=3)
 
 ![공·용수철·경사면을 조합한 역학 실험의 도식과 에너지 보존 및 뉴턴 제2법칙의 일반식을 함께 제시한 그림]({{ '/img/reviews/2026/ai-newton-paper-review/figure2-experiments-and-laws.png' | relative_url }})
 
-*Figure 2. 왼쪽은 물체 종류, 가운데는 자유 운동부터 만유인력 계까지의 실험 예시, 오른쪽은 두 일반 법칙입니다. 복잡한 실험 일부는 그림에서 생략되었습니다. Fang 외, arXiv v2 PDF 4쪽의 그림 영역을 그대로 크롭했습니다. [원본 그림](https://arxiv.org/pdf/2504.01538v2#page=4) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Figure 2. 왼쪽은 물체 종류, 가운데는 자유 운동부터 만유인력 계까지의 실험 예시, 오른쪽은 두 일반 법칙입니다. 복잡한 실험 일부는 그림에서 생략되었습니다. Fang 외, arXiv v2 PDF 4쪽의 그림 영역을 그대로 크롭했습니다. [원본 그림](https://arxiv.org/pdf/2504.01538v2#page=4) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 Figure 2의 에너지 보존식은 좌표 방향 $`\kappa\in\{x,y,z\}`$의 운동 항 $`T_\kappa`$과 퍼텐셜 항 $`V_\lambda`$의 합이 일정하다는 형태입니다. $`\lambda\in\{k,g,G\}`$는 탄성, 지표면 근처 중력, 만유인력을 가리킵니다. 실험에 법칙을 구체화할 때 결정하는 스위치 $`\delta_\lambda\in\{0,1\}`$가 해당 퍼텐셜의 포함 여부를 표시합니다. 아래 두 식은 Figure 2의 정규화를 따릅니다. 예를 들어 그 그림의 운동 항은 $`T_\kappa=\sum_i m_i v_{i,\kappa}^{2}`$이며, 통상적인 운동에너지 성분의 두 배입니다. 둘째 식에서 $`a_\kappa`$는 공의 해당 방향 가속도, $`m`$은 그 공의 질량이고, $`\partial V_\lambda/\partial\kappa`$는 해당 좌표 방향의 퍼텐셜 미분입니다. [원문 Figure 2](https://arxiv.org/pdf/2504.01538v2#page=4)
 
@@ -172,7 +176,8 @@ Figure 2의 에너지 보존식은 좌표 방향 $`\kappa\in\{x,y,z\}`$의 운�
 
 ![10회 테스트에서 질량·속도·용수철 상수부터 중력과 만유인력 개념까지의 평균 발견 시행 번호와 표준편차]({{ '/img/reviews/2026/ai-newton-paper-review/figure3-discovery-timing.png' | relative_url }})
 
-*Figure 3. 점은 10회 테스트의 평균 발견 시행 번호, 가로 막대는 표준편차입니다. 배경의 로마 숫자는 시대 제어의 시대를 표시합니다. Fang 외, arXiv v2 PDF 4쪽의 그림 영역을 그대로 크롭했습니다. [원본 그림](https://arxiv.org/pdf/2504.01538v2#page=4) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*
+Figure 3. 점은 10회 테스트의 평균 발견 시행 번호, 가로 막대는 표준편차입니다. 배경의 로마 숫자는 시대 제어의 시대를 표시합니다. Fang 외, arXiv v2 PDF 4쪽의 그림 영역을 그대로 크롭했습니다. [원본 그림](https://arxiv.org/pdf/2504.01538v2#page=4) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+{: .caption}
 
 마지막 사례는 **서로 다른 측정 정의의 연결**입니다. 저자들은 중력 아래 매단 용수철의 정적 늘어남으로 중력 질량 $`m_g`$을, 수평 용수철–공 계의 진동에서 관성 질량 $`m_i`$를 독립적으로 얻었다고 보고합니다. 시스템은 두 정의에서 구한 값의 수치적 동등성을 확인했습니다. 저자들이 약한 등가 원리를 언급하는 근거는 바로 이 모의 실험 안의 동등성입니다. 앞서 본 식 (2)가 단일 측정 절차를 저장하는 방법을 보여줬다면, 이 사례는 그렇게 저장한 두 개념 사이의 관계도 발견할 수 있음을 보여줍니다. [원문 4–5쪽](https://arxiv.org/pdf/2504.01538v2#page=5)
 

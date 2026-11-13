@@ -209,7 +209,8 @@ $`\tau`$는 전체 실행, $`T`$는 상호작용 턴 수, $`\pi_\theta`$는 매�
 
 ![RSR에서 actor만 갱신하고 critic은 우회 전달하는 재귀 학습 구조]({{ '/img/reviews/2026/terminal-rsi-review/figure-2-recursive-loop.png' | relative_url }})
 
-*원문 Figure 2, PDF 3쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=3)의 도식 영역을 추출했으며 번역·재구성하지 않았습니다. 아래쪽 우회선이 RSR 동안 유지되는 critic 가중치입니다.*
+원문 Figure 2, PDF 3쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=3)의 도식 영역을 추출했으며 번역·재구성하지 않았습니다. 아래쪽 우회선이 RSR 동안 유지되는 critic 가중치입니다.
+{: .caption}
 
 **검증된 재작성**은 현재 채택 actor가 여러 harness에서 발견한 성공 궤적에서 시작합니다. planner는 공개 과제와 harness 제어 메시지를 제거한 궤적으로 runbook을 만듭니다. 공개 과제와 runbook만 보는 reviewer는 스키마, 산출물, 호환성 및 누출 조건을 검사합니다. 통과한 runbook은 목표 harness에서 새로 실행하고, 검증과 누출 검사를 통과한 실행만 남깁니다. 이후 비공개 runbook과 reviewer 대화를 제거한 공개 재생 기록의 다중집합에서 균일하게 학습 표본을 추출합니다. 동일한 실행이 여러 번 승인되었다면 그 중복도 표본 분포에 반영됩니다.
 
@@ -237,9 +238,23 @@ $`\theta_k^+`$와 $`\phi_k^+`$는 이전 단계에서 채택한 actor·critic, �
 
 ![재작성의 성공 발견·검증과 RPR의 보상·TB-GAE·단계별 critic 보정]({{ '/img/reviews/2026/terminal-rsi-review/figure-3-single-cycle.png' | relative_url }})
 
-*원문 Figure 3, PDF 4쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=4) 도식 영역 추출, 번역 없음. 위의 행동 학습 경로와 아래의 prior critic 전달 경로를 함께 보셔야 합니다.*
+원문 Figure 3, PDF 4쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=4) 도식 영역 추출, 번역 없음. 위의 행동 학습 경로와 아래의 prior critic 전달 경로를 함께 보셔야 합니다.
+{: .caption}
 
 마지막으로 식 (5)는 가치 예측의 대상을 생성 토큰 위치에서 시작하는 미래 보상 합으로 정의합니다. 반환값에는 이후 정의할 턴별 할인과 실제 종료 마스크가 곱해집니다. 따라서 가치함수는 현재 actor뿐 아니라 단계별 보상에도 의존합니다. 이 점이 보상 전환 후 보정을 두는 이유와 연결됩니다.
+
+검증된 재작성에서 어디서 탈락하는지 [§2.1](https://arxiv.org/html/2610.22192v3#S2.SS1)의 절차를 따라 의사코드로 적으면 다음과 같습니다.
+
+```text
+성공 실행을 발견하지 못했다면: 이 실행에서 학습 사례를 만들지 않는다.
+runbook = 공개 과제와 제어 메시지를 제거한 성공 기록으로 작성
+runbook이 리뷰를 통과하면:
+    목표 하네스에서 같은 actor로 새로 실행
+    전체 검증과 누출 검사를 모두 통과한 기록만 남김
+    비공개 지침·리뷰 대화를 제거하고 생성 결정만 actor 학습에 사용
+```
+
+기존 성공 실행에서 runbook을 얻었다는 사실과, 그 runbook으로 새 실행이 다시 검증을 통과했다는 사실은 다른 증거입니다. RSR은 두 번째 관문까지 통과한 실행을 학습합니다.
 
 #### 2.2 Reward evolution: family calibration and success prioritization
 
@@ -377,7 +392,8 @@ KL 및 엔트로피 항의 계수는 모두 0.00입니다. 따라서 부록 D의
 
 ![채택 단계별 Terminal-Bench 네 묶음·LHTB·SWR100 평가표 원본]({{ '/img/reviews/2026/terminal-rsi-review/table-2-retained-evaluation.png' | relative_url }})
 
-*원문 Table 2, PDF 7쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=7)에서 표 영역 추출, 수치·화살표 변경 없음. 작은 숫자는 아래 전사표와 함께 확인할 수 있습니다.*
+원문 Table 2, PDF 7쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=7)에서 표 영역 추출, 수치·화살표 변경 없음. 작은 숫자는 아래 전사표와 함께 확인할 수 있습니다.
+{: .caption}
 
 | 채택 단계 | TB 4.0 (%) | TB 2.1 (%) | TB 3.0 (%) | TB Hard (%) | LHTB 과정 보상 | SWR100 (%) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -399,7 +415,8 @@ Figure 5의 네 묶음 동일 가중 평균은 20.68 → 34.25 → 44.50 → 48.
 
 ![네 Terminal-Bench에서 채택 경로와 버린 학습 분기가 함께 나타나는 성능 변화]({{ '/img/reviews/2026/terminal-rsi-review/figure-6-checkpoint-branches.png' | relative_url }})
 
-*원문 Figure 6, PDF 9쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=9) 전체 그래프 영역 추출, 축·범례 보존. 아래 두 패널의 세로축 시작점은 각각 40%와 25%입니다.*
+원문 Figure 6, PDF 9쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=9) 전체 그래프 영역 추출, 축·범례 보존. 아래 두 패널의 세로축 시작점은 각각 40%와 25%입니다.
+{: .caption}
 
 RPR-1을 step 20 이후 계속하면 TB 4.0이 16.67%에서 step 35의 11.11%로 내려가는 반면 TB 2.1은 78.95%로 올라갑니다. 일반 FDR RPR-2에서도 TB 4.0이 step 6의 17.46%에서 step 10의 11.11%로 떨어집니다. SPR 분기의 채택 step 18은 일반 RPR-2의 같은 step보다 세 묶음에서 높지만 TB 3.0에서는 0.19%p 낮습니다. SPR도 step 20까지 계속하면 TB 2.1은 유지하지만 TB 3.0·4.0·Hard는 각각 2.66·2.38·3.00%p 하락합니다. 따라서 논문의 성능 개선은 모든 업데이트가 모든 묶음을 개선했다는 뜻이 아닙니다.
 
@@ -418,7 +435,8 @@ $`G`$는 반환 표적, $`V_\phi`$는 critic 예측입니다. 양의 EV는 잔�
 
 ![Warm-Up·RPR-1·RPR-2 critic 설명분산의 원문 곡선]({{ '/img/reviews/2026/terminal-rsi-review/figure-9-critic-ev.png' | relative_url }})
 
-*원문 Figure 9, PDF 10쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=10) 그래프 영역 추출, 보간·평활화 없음. 다른 지표와 같은 표본 수나 시계를 가정하지 않습니다.*
+원문 Figure 9, PDF 10쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=10) 그래프 영역 추출, 보간·평활화 없음. 다른 지표와 같은 표본 수나 시계를 가정하지 않습니다.
+{: .caption}
 
 마지막 두 소주제는 긴 과제와 과학 재구성을 구별합니다. LHTB 과정 보상은 0.21→0.29→0.30→0.31→0.37이며, 엄격 완료 과제의 세 번 실행 평균은 0/46→0/46→2/46→4/46→5/46입니다. 마지막은 10.87%로, 서로 다른 단계에서 푼 과제 집합이 포함 관계라는 뜻은 아닙니다. SWR100은 3→5→6→6→6%로 RPR-1 이후 정체합니다. Base 대비 두 배라는 표현은 3%p 증가이기도 하며, LHTB의 후속 상승과 같은 양상은 아닙니다.
 
@@ -581,7 +599,8 @@ RPR-2 Figure 8은 SPR 보상 16개(step 4–19), FDR 보상 17개(step 4–20), 
 
 ![다섯 단계의 네 터미널 평가와 SWR100·LHTB 보조 결과]({{ '/img/reviews/2026/terminal-rsi-review/figure-14-auxiliary-evaluation.png' | relative_url }})
 
-*원문 Figure 14, PDF 23쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=23) 전체 그래프 영역 추출, 번역 없음. LHTB 막대 높이는 과정 보상이고 막대 안 표시는 평균 엄격 완료 과제 수입니다.*
+원문 Figure 14, PDF 23쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=23) 전체 그래프 영역 추출, 번역 없음. LHTB 막대 높이는 과정 보상이고 막대 안 표시는 평균 엄격 완료 과제 수입니다.
+{: .caption}
 
 마지막 Figure 14는 같은 최종 체크포인트를 기준선으로 삼아 다섯 단계의 보조 평가를 모읍니다. LHTB 과정 보상은 계속 높아지고 SWR100은 마지막 세 단계에서 6%로 같습니다. 특정 묶음의 최고 체크포인트를 따로 골라 모은 막대가 아닙니다. 이 부록의 핵심은 보기 좋은 곡선만이 아니라 관측 수, 원래 시계, 재시작, 라벨 의미를 함께 기록한 데 있습니다.
 
@@ -595,7 +614,8 @@ RPR-2 Figure 8은 SPR 보상 16개(step 4–19), FDR 보상 17개(step 4–20), 
 
 ![Base에서 마지막 모델까지 Rust–C 검사 결과와 선택된 실행 증거]({{ '/img/reviews/2026/terminal-rsi-review/figure-16-rust-c-cases.png' | relative_url }})
 
-*원문 Figure 16, PDF 26쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=26) 전체 도식 영역 추출, 재배열·번역 없음. 초록색은 시험한 출력 동치의 통과이며 native AST나 메모리 안전성의 인증은 아닙니다.*
+원문 Figure 16, PDF 26쪽. [v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=26) 전체 도식 영역 추출, 재배열·번역 없음. 초록색은 시험한 출력 동치의 통과이며 native AST나 메모리 안전성의 인증은 아닙니다.
+{: .caption}
 
 RPR-2는 E1–2에서 audio 도구를 찾고 E10에서 toolchain을 살핀 뒤 E11에서 구현 파일을 작성합니다. C 코드에는 표현식 노드·재귀 평가·해제가 있고 `-fPIC`과 정적 C archive를 쓰며, Rust 외부 함수 선언과 musl 대상 wrapper를 둡니다. 두 번째 실행 E32는 전사에서 얻은 `-fPIC`·musl·`libm` 요구를 보고하지만 선택된 발췌만으로 모든 전사와 최종 linker 명령이 드러나는 것은 아닙니다.
 
@@ -603,7 +623,8 @@ RPR-2는 E1–2에서 audio 도구를 찾고 E10에서 toolchain을 살핀 뒤 E
 
 ![Figure 16 마지막 RPR-2 열의 새 빌드·Python 위임·검증 범위 상세]({{ '/img/reviews/2026/terminal-rsi-review/figure-16-final-stage-detail.png' | relative_url }})
 
-*원문 Figure 16 오른쪽 RPR-2 열 상세, PDF 26쪽. [동일 v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=26)의 해당 열만 추가 추출했습니다. 전체 도식의 작은 글씨를 읽기 위한 부분 보기이며 내용 수정은 없습니다.*
+원문 Figure 16 오른쪽 RPR-2 열 상세, PDF 26쪽. [동일 v3 PDF](https://arxiv.org/pdf/2610.22192v3#page=26)의 해당 열만 추가 추출했습니다. 전체 도식의 작은 글씨를 읽기 위한 부분 보기이며 내용 수정은 없습니다.
+{: .caption}
 
 Figure 15의 드리프트 사례는 마지막 모델이 여섯 모듈을 수리하고 독립적으로 11개 assertion을 통과했음을 보여줍니다. Figure 16의 초록색 역시 오류 없는 전체 이력이나 완전한 명세 충실도가 아니라 검사로 확인된 계약의 범위를 나타냅니다. 이 마지막 부록은 재귀 학습의 결과를 단일 점수로 축약하지 않고, 실제로 어떤 구현과 검증을 거쳤는지까지 연결하며 논문을 마칩니다.
 
