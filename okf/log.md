@@ -24,6 +24,21 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-13 **Review**: [\[Paper Review\] Weight-Space Programming 감사 — 가중치 통계 읽기와 의미 추론의 경계](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Training Small Language Models for Transferable Tool Selection](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Terminal-RSI: 재작성과 가치 전달로 터미널 에이전트를 재귀적으로 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Self-Evolving Coding Agents via Harness-Policy Optimization — 하니스와 정책의 교대 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] RelayVSR — 키프레임을 공유하는 스트리밍 영상 초해상도](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] PhoneHarness — GUI·CLI·MCP로 실행하고 결과를 검증하는 폰 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Memento: Fine-tuning LLM Agents without Fine-tuning LLMs](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] JevAgentHarness: 에이전트의 어떤 결정을 작은 모델에 맡길 수 있을까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Hybrid Reasoning Agents: 잠재 추론과 텍스트 행동을 잇는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Evo²: Evolving the Evolver through Weight-Harness Co-Evolution](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Data World: 생성 메커니즘으로 데이터 에이전트의 환경과 평가 기준을 함께 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Comparing Sparsified MLPs and Transcoders — 뉴런과 학습된 특징은 얼마나 다른가요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
+* 2026-11-13 **Review**: [\[Paper Review\] AI-Newton: 실험마다 다른 식에서 공통 물리 법칙을 찾는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/151) — 검토 대기 · PR #151 · `eb72137`
 * 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/150) — 병합 완료 · PR #150 · `3d12cf7`
 * 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/141) — 병합 완료 · PR #141 · `9ca5ca4`
 * 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/140) — 병합 완료 · PR #140 · `d89bf81`
