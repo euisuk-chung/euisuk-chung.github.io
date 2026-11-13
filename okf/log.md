@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/150) — 검토 대기 · PR #150 · `3d12cf7`
+* 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/150) — 병합 완료 · PR #150 · `3d12cf7`
 * 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/141) — 병합 완료 · PR #141 · `9ca5ca4`
 * 2026-11-13 **Review**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/140) — 병합 완료 · PR #140 · `d89bf81`
 * 2026-11-13 **Review**: [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/139) — 병합 완료 · PR #139 · `b2b3f40`
@@ -135,6 +135,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-13 **Update**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](_posts/2026/2026-11-13-fde-gym-paper-review.md) — `93a3bb1`
 * 2026-11-13 **Update**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `2477dc2`
 * 2026-11-13 **Update**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `b24f4c8`
 * 2026-11-13 **Update**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `585fd17`
