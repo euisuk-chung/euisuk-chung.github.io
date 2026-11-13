@@ -48,19 +48,30 @@ $(document).ready(function() {
         image.parentNode.insertBefore(link, image);
         link.appendChild(image);
     });
-    // A paragraph containing only two images is a paired comparison figure.
-    // Do not group images across paragraphs or absorb captions into the layout.
+    // A standalone image (or group) can have a caption in the next paragraph.
     document.querySelectorAll('.post-container p').forEach(function(paragraph) {
         var panels = Array.from(paragraph.children).filter(function(node) {
             return node.tagName !== 'BR';
         });
-        if (paragraph.textContent.trim() || panels.length !== 2) return;
+        if (paragraph.textContent.trim() || !panels.length) return;
         if (!panels.every(function(node) {
             return node.tagName === 'IMG' ||
                 (node.tagName === 'A' && node.children.length === 1 &&
-                 node.firstElementChild.tagName === 'IMG');
+                 node.firstElementChild.tagName === 'IMG' && !node.textContent.trim());
         })) return;
-        paragraph.classList.add('post-image-pair');
+        if (panels.length === 2) paragraph.classList.add('post-image-pair');
+
+        var caption = paragraph.nextElementSibling;
+        if (!caption || caption.tagName !== 'P') return;
+        // Support explicit captions and legacy paragraphs wrapped entirely in emphasis.
+        var emphasis = caption.firstElementChild;
+        var isEmphasized = emphasis && caption.children.length === 1 &&
+            (emphasis.tagName === 'EM' || emphasis.tagName === 'I') &&
+            !emphasis.querySelector('img, video, iframe') &&
+            caption.textContent.trim() && caption.textContent.trim() === emphasis.textContent.trim();
+        if (!caption.classList.contains('caption') && !isEmphasized) return;
+        paragraph.classList.add('post-image-with-caption');
+        caption.classList.add('caption', 'post-image-caption');
     });
 });
 

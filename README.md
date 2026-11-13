@@ -51,6 +51,19 @@ npm run dev       # watch + jekyll serve 동시 실행
 
 ---
 
+### 이미지 캡션
+
+이미지를 단독 문단에 넣고, 다음 문단에 캡션을 적은 뒤 `{: .caption}`을 붙이면 이미지 아래에 가운데 정렬됩니다. 기존 글에서 이미지 바로 다음 문단 전체를 `*기울임*`으로 감싼 캡션도 같은 모양으로 표시됩니다.
+
+```markdown
+![그림 대체 텍스트](/img/example.png)
+
+그림 설명. 출처: [원본](https://example.com/).
+{: .caption}
+```
+
+---
+
 ### velog 자동 동기화
 
 `.github/workflows/velog-sync.yml`이 **매월 1일 18:00 KST**에 velog 새 글을 크롤링해 `okf/_posts/`에 커밋합니다. 수동 실행은:

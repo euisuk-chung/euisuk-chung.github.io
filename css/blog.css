@@ -1778,6 +1778,16 @@ img::-moz-selection {
 .post-container .post-image-pair img {
   margin: 0 auto;
 }
+.post-container .post-image-with-caption {
+  margin-bottom: 0;
+}
+.post-container .post-image-with-caption img {
+  margin-bottom: 0;
+}
+.post-container .post-image-caption {
+  padding: 8px 0 0;
+  margin: 0 0 1.6em;
+}
 @media print {
   .post-container img,
   .post-container .post-image-pair img {
