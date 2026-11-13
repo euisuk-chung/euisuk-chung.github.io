@@ -2,7 +2,7 @@
 
 ## 2026
 
-* [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 회의 사이 잠깐 들르는 온라인 회사 옥상에서 눈인사를 나누고, 오락실에서 한 판 하거나 매점에서 별빛 쿠키를 모을 수 있습니다.
+* [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 아이디어를 얻어, 닉네임으로 수다를 나누고 게임과 간식 뽑기를 즐기는 온라인 회사 옥상 한숨두숨을 만들었습니다.
 * [[Paper Review] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](2026/2026-11-13-fde-gym-paper-review.md) - 고객사에 배치된 에이전트가 숨은 제약을 찾아 운영 시스템을 개선할 때, 업무 지표와 연락 비용을 FDE-Gym이 어떻게 측정하는지 살펴봅니다.
 * [[Repo Review] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](2026/2026-11-13-collaborative-intelligence-repo-review.md) - Collaborative Intelligence가 같은 과제를 혼자, 평상시 팀, 문제가 생긴 팀으로 나눠 실행하고 대화와 행동 기록을 점수로 바꾸는 과정을 추적합니다.
 * [[Repo Review] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](2026/2026-11-12-single-agent-loop-kit-review.md) - Anthropic의 Single Agent Loop Kit에서 서브에이전트 전환 절차, 스킬과 도구를 호출하는 Python 루프, 고객 지원 예제의 전후 평가를 따라갑니다.
