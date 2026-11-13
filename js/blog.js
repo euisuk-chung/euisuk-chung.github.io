@@ -63,13 +63,16 @@ $(document).ready(function() {
 
         var caption = paragraph.nextElementSibling;
         if (!caption || caption.tagName !== 'P') return;
-        // Support explicit captions and legacy paragraphs wrapped entirely in emphasis.
+        // Legacy captions sometimes place source links outside the emphasized text.
         var emphasis = caption.firstElementChild;
-        var isEmphasized = emphasis && caption.children.length === 1 &&
-            (emphasis.tagName === 'EM' || emphasis.tagName === 'I') &&
-            !emphasis.querySelector('img, video, iframe') &&
-            caption.textContent.trim() && caption.textContent.trim() === emphasis.textContent.trim();
-        if (!caption.classList.contains('caption') && !isEmphasized) return;
+        var hasCaptionText = emphasis && (emphasis.tagName === 'EM' || emphasis.tagName === 'I') &&
+            emphasis.textContent.trim() && !caption.querySelector('img, video, iframe');
+        var hasOnlySourceLinks = hasCaptionText && Array.from(caption.childNodes).every(function(node) {
+            if (node === emphasis) return true;
+            if (node.nodeType === Node.TEXT_NODE) return /^[\s·|,.;:–—()\[\]\-]*$/.test(node.textContent);
+            return node.nodeType === Node.ELEMENT_NODE && node.tagName === 'A' && node.hasAttribute('href');
+        });
+        if (!caption.classList.contains('caption') && !hasOnlySourceLinks) return;
         paragraph.classList.add('post-image-with-caption');
         caption.classList.add('caption', 'post-image-caption');
     });
