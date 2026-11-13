@@ -134,6 +134,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-13 **Creation**: [한숨두숨](_concepts/rooftop-chill.md) — `4dcd6d5`
+* 2026-11-13 **Creation**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `4dcd6d5`
 * 2026-11-13 **Update**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](_posts/2026/2026-11-13-fde-gym-paper-review.md) — `65188da`
 * 2026-11-13 **Creation**: [\[Paper Review\] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](_posts/2026/2026-11-13-fde-gym-paper-review.md) — `58a17b9`
 * 2026-11-13 **Creation**: [\[Repo Review\] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](_posts/2026/2026-11-13-collaborative-intelligence-repo-review.md) — `e02da5f`
