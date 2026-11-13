@@ -1,37 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 여러 실행의 불일치와 공유 오류를 환경 증거로 조사하는 VeriHarness의 검증 구조, 스킬 진화, 업무 벤치마크와 비용을 분석합니다.
-* [\[Paper Review\] VQQA: 질문과 답변으로 영상을 평가하고 프롬프트를 개선하는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 생성 영상의 오류를 질문과 답변으로 진단하고 프롬프트 개선과 전역 선택을 분리하는 VQQA의 구조, 실험 결과, 수렴 조건과 호출 비용을 분석합니다.
-* [\[Paper Review\] Thinking Before Thinking — 에이전트가 다음 계산을 고르는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 에이전트의 다음 계산 선택을 네 단계 메타추론으로 분리하는 하네스를 설명하고, 예산 확장과 정답 발견·판별·제출의 차이를 원문 실험과 구현 조건으로 분석합니다.
-* [\[Paper Review\] SelfSearch: 정답 보상 없이 자기 수정 경험으로 에이전트 하네스 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · SelfSearch의 두 계보 자기 수정, 실행 기록 공유와 고정 런타임을 살펴보고 여섯 평가 설정의 성능·비용·모델 전이 결과를 구분해 분석합니다.
-* [\[Paper Review\] Self-Instructed CoT — 추론 모델은 자기 지시로 생각의 표현을 얼마나 제어할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 자기 지시를 추론 안에 배치한 CoT 제어 평가를 살펴보고, 제약 준수·정답률·다중 턴 유지와 모니터 탐지율의 의미를 원문 실험 조건에 따라 구분합니다.
-* [\[Paper Review\] ScholarEvolve: 연구 문헌으로 고정 모델의 에이전트 하네스를 진화시키기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 모델 가중치를 고정한 채 연구 문헌을 모듈별 구현과 조합 검증으로 연결하는 ScholarEvolve의 설계, 반복 진화 실험과 실패 분석을 살펴봅니다.
-* [\[Paper Review\] OO-Harness — 상속으로 특화하고 실행 근거로 선택하는 에이전트 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 과제 실행 기록에서 특화 하네스 계층을 진화시키는 OO-Harness를 분석하고, 상속·라우팅·기본 결과 재사용의 효과를 세 벤치마크의 지표와 조건에 따라 설명합니다.
-* [\[Paper Review\] Mixture of Self-Improving Branches — 개발 목표와 제안 지침을 함께 진화시키는 하네스 탐색](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 개발 문제의 소속과 분기별 제안 지침을 함께 갱신하는 하네스 탐색을 분석하고, 실행 전 라우팅의 성능과 상보성 및 탐색 비용을 구분해 살펴봅니다.
-* [\[Paper Review\] Mid-Harness: 실행 전 행동 검증으로 터미널 에이전트 개선하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · Mid-Harness의 실행 전 후보 비교와 검증기 증류를 분석하고, 행동·전체 실행 확대의 성능·비용·신뢰구간 및 명령 판단 오류를 함께 살펴봅니다.
-* [\[Paper Review\] MemoryTax: 강한 모델에서도 에이전트 메모리가 필요할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · MemoryTax의 메모리·원문 검색 비교를 통해 모델 능력, 구축비, 캡션 정보 차이와 채점 조건이 에이전트 평가에 미치는 영향을 살펴봅니다.
-* [\[Paper Review\] Memory Attention: 토큰 메모리로 value projection을 대체하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 문맥 key와 층별 토큰 메모리로 value projection을 대체하는 Memory Attention의 원리, CPU offload, 캐시 재구성 분석과 실험의 측정 범위를 살펴봅니다.
-* [\[Paper Review\] MIMESIS: 사람 같은 사용자를 학습해 에이전트의 훈련 환경으로 만들기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 인간의 대화·추론과 13개 행동을 학습한 사용자 시뮬레이터 MIMESIS, 그리고 사후 코칭을 토큰 학습에 활용하는 CSD의 원리와 전이 실험을 분석합니다.
-* [\[Paper Review\] MASS — 협업의 실행 기록으로 같은 모델을 다시 학습하는 자기 개선](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · MASS의 워크플로 검색과 협업 기록 학습을 따라가며, 두 주기의 자기 개선 결과·토큰 효율·평가 통계와 실제 검증 실패의 의미를 분석합니다.
-* [\[Paper Review\] JEV-as-a-Judge: 확신할 때 판정하고 불확실할 때 추론 판정기로 넘기기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 라벨 확률만 반환하는 JEV의 작업별 판정 능력과 확신도 기반 상위 모델 호출을 분석하고, 비용 절감·사람 재판정·사전 고정 검증의 의미를 살펴봅니다.
-* [\[Paper Review\] Harness² — 실행 하네스를 고치고 개선 경험을 축적하는 두 수준의 재귀](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 모델 가중치를 고정한 채 실행 하네스를 대조 실험으로 개선하고 경험을 다음 과제로 이전하는 Harness²의 두 재귀·실험·한계를 원문 순서로 분석합니다.
-* [\[Paper Review\] HarnessSQL — SQL 에이전트는 실행 환경 안에서 어떻게 배워야 할까요?](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 실제 데이터베이스에서 탐색·오류 복구·제출 궤적을 학습하는 HarnessSQL의 설계와 실험을 살펴보고, 공유 DB 평가와 새로운 환경으로의 전이를 구분합니다.
-* [\[Paper Review\] Harness-Aware Distillation — 작은 에이전트에게 하네스를 읽고 행동하는 법을 가르치기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 공유 하네스의 정보를 작은 에이전트가 행동에 반영하도록 가르치는 HAD의 증류 목적, 행동 대비와 유효성 검사, 세 텍스트 환경의 실험을 분석합니다.
-* [\[Paper Review\] Harness Learning Enables Generalizable Test-Time Adaptation — 실행 피드백으로 하네스 적응을 학습하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 고정 언어 모델의 실행 하네스를 피드백으로 수정하는 메타학습을 분석하고, 미학습 추론·질의응답 과제로의 이전과 반복 적응의 평가 조건을 검토합니다.
-* [\[Paper Review\] FinanceHarness — 금융 조사 에이전트의 시간 제약과 평가 계약](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 시간 제약 검색과 기준일 전후 루브릭으로 금융 보고서를 평가하는 FinanceGym의 데이터 구축, FinanceHarness의 계층 설계·절제 실험·계산 사례를 분석합니다.
-* [\[Paper Review\] Context Language Models — 컨텍스트를 직접 편집하는 장기 실행 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 현재 문맥을 파일처럼 편집하는 CLM의 설계와 ContextBench 진단, 스킬 진화·강화학습, Suffix Cache Reuse의 효율과 근사 조건을 원문 순서대로 분석합니다.
-* [\[Paper Review\] Co-Director: 다중 에이전트와 밴딧 탐색으로 영상의 창작 방향을 조율하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · Co-Director의 계층적 에이전트, 창작 방향의 밴딧 탐색, 대본·키프레임 자기 수정과 GenAd-Bench 평가를 원문 본문·부록 순서로 분석합니다.
-* [\[Paper Review\] Cache Engineering for Agents — 대화는 보존하고 KV 캐시는 직접 제어합니다](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 에이전트의 활성 KV를 제어하는 drop·repos 연산과 AKV의 이력 기반 재사용·복원을 분석하고, 과제 점수·환산 비용·서빙 성능을 조건별로 해석합니다.
-* [\[Paper Review\] CANVAS: 이야기의 인물·장소·소품을 기억하는 시각 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 인물 외형·장소·소품 상태를 전역 계획과 시각 메모리로 관리하는 CANVAS의 생성 절차, 연속성 평가, 제거 실험과 영상 확장 결과를 분석합니다.
-* [\[Paper Review\] A²RD: 기억하고 검수하며 만드는 긴 영상](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · A²RD의 멀티모달 메모리, 적응적 외삽·보간, 계층적 검증·수정이 긴 영상의 일관성과 이야기 진행을 개선하는 원리와 평가 조건을 분석합니다.
-* [\[Paper Review\] AutoTailor — 웹 에이전트의 도구를 사용자 수요에 맞게 고르고 다시 구성하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 웹 행동 기록을 MCP 도구로 바꾸고 품질·예상 수요·실행 기록으로 재선택하는 AutoTailor의 구조와, 106개 과제 평가의 효율 및 해석 범위를 분석합니다.
-* [\[Paper Review\] Are Self-Evolving Agents Continual Learners? — 자기진화 에이전트의 학습과 망각](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 자기진화 에이전트가 공유 프롬프트와 외부 기억을 갱신할 때 나타나는 학습·간섭·망각을 네 가지 업무 변화 실험과 가소성·안정성 지표로 분석합니다.
-* [\[Paper Review\] Agensh: 1,024개 에이전트의 자기 조직화와 협업 확장](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 검토 대기 · 중앙 관리자 없이 협업하는 Agensh의 반복 절차와 공유 인프라를 분석하고, ProgramBench의 6시간 평가 및 1,024개 에이전트 확장 결과를 해설합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 아이디어를 얻어, 닉네임으로 수다를 나누고 게임과 간식 뽑기를 즐기는 온라인 회사 옥상 한숨두숨을 만들었습니다.
