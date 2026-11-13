@@ -107,6 +107,16 @@ visual_sources:
     caption: "Dongxu Yang 외, CC BY 4.0. 원 PDF에서 핵심 사실 확보율과 개선도, 모델 사용료와 점수의 관계를 그린 두 패널을 잘라냈습니다."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/zeH9xczyAwE"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=zeH9xczyAwE">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 시추 회사의 임원이 AI 요약 메일과 질의용 챗봇을 요청합니다. 그런데 회사가 매월 놓치는 계약상 보상금은 챗봇의 유무와 관계가 없습니다. 시추 중단의 책임을 잘못 분류하는 기존 코드 때문에 청구에 분쟁이 생기기 때문입니다. 고객 조직 안에서 일하는 공급사 엔지니어, 즉 **FDE(Forward-Deployed Engineer)**는 자료를 살펴보고 담당자에게 확인한 뒤 실제 업무 지표를 개선하는 변경을 배포해야 합니다. FDE-Gym은 이 과정을 18개 산업 분야의 20개 시나리오, 총 95개 과제로 평가합니다. [원문 §1](https://arxiv.org/html/2610.22350v1#S1)
