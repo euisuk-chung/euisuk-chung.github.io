@@ -77,6 +77,16 @@ visual_sources:
     caption: "헤드 출력을 평균으로 교체한 뒤의 10-shot F1, 토큰 손실 ICL 점수, 위치별 NLL 변화. Ferdinand Kapl 외, CC BY 4.0, PDF 영역 크롭, 번역 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/rQKq5xWmlnM"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=rQKq5xWmlnM">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 문자 분류 모델에게 비슷한 글자 두 종류와 그날 정한 번호를 보여 주고, 세 번째 글자의 번호를 묻는다고 해 보겠습니다. 모델은 지금 받은 예시에서 규칙을 읽을 수 있습니다. 같은 글자에 언제나 같은 번호가 붙는 환경이라면 학습 중 가중치에 저장한 대응도 쓸 수 있습니다. Ferdinand Kapl, Kaitlin Maile, Stefan Bauer, Johannes von Oswald는 트랜스포머의 깊이를 만드는 방식이 이 두 풀이의 획득과 유지에 어떤 영향을 주는지 살펴봅니다. 2026년 10월 22일 제출된 arXiv v1을 기준으로 읽었습니다. [arXiv v1](https://arxiv.org/abs/2610.31421v1)
