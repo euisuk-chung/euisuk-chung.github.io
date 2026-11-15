@@ -1,15 +1,10 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/159) — 검토 대기 · 로봇 팔을 직접 움직여 빠른 시연을 기록하고, 손 영역 마스킹과 행동 구간 평활화로 자율 실행까지 연결한 양팔 조작 시스템을 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
 * [같은 11월, 다른 풀이 — 젠슨 황 기사에서 시작한 사주 오빗](2026/2026-11-15-saju-orbit-intro.md) - 젠슨 황 보도에서 떠올린 질문으로 사주 오빗을 만들고, 젠슨 황·리사 수·사티아 나델라의 11월 풀이를 비교했습니다.
+* [[Paper Review] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](2026/2026-11-15-flash-aloha-review.md) - 로봇 팔을 직접 움직여 빠른 시연을 기록하고, 손 영역 마스킹과 행동 구간 평활화로 자율 실행까지 연결한 양팔 조작 시스템을 살펴봅니다.
 * [[Paper Review] How Depth Growth and Looping Shape In-Context Learning in Language Models](2026/2026-11-15-depth-growth-looping-icl-review.md) - 트랜스포머의 층을 학습 중 복제하거나 반복 적용할 때 문맥 활용이 어떻게 달라지는지, 토큰 손실·예시 학습·어텐션 헤드 실험으로 살펴봅니다.
 * [[Paper Review] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](2026/2026-11-14-epi-research-agent-review.md) - Épi가 분기·계층형 기억·고정 검증으로 세션을 잇고, 수학 기록과 알고리즘 설계 성과를 어떤 기준으로 입증하는지 살펴봅니다.
 * [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 아이디어를 얻어, 닉네임으로 수다를 나누고 게임과 간식 뽑기를 즐기는 온라인 회사 옥상 한숨두숨을 만들었습니다.
