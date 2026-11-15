@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/157) — 검토 대기 · 트랜스포머의 층을 학습 중 복제하거나 반복 적용할 때 문맥 활용이 어떻게 달라지는지, 토큰 손실·예시 학습·어텐션 헤드 실험으로 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [같은 11월, 다른 풀이 — 젠슨 황 기사에서 시작한 사주 오빗](2026/2026-11-15-saju-orbit-intro.md) - 젠슨 황 보도에서 떠올린 질문으로 사주 오빗을 만들고, 젠슨 황·리사 수·사티아 나델라의 11월 풀이를 비교했습니다.
