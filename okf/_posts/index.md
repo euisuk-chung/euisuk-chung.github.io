@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/155) — 검토 대기 · Épi가 분기·계층형 기억·고정 검증으로 세션을 잇고, 수학 기록과 알고리즘 설계 성과를 어떤 기준으로 입증하는지 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] How Depth Growth and Looping Shape In-Context Learning in Language Models](2026/2026-11-15-depth-growth-looping-icl-review.md) - 트랜스포머의 층을 학습 중 복제하거나 반복 적용할 때 문맥 활용이 어떻게 달라지는지, 토큰 손실·예시 학습·어텐션 헤드 실험으로 살펴봅니다.
