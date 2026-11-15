@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-15 **Review**: [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/159) — 검토 대기 · PR #159 · `ee03898`
 * 2026-11-15 **Review**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/158) — 병합 완료 · PR #158 · `e381392`
 * 2026-11-15 **Review**: [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/157) — 병합 완료 · PR #157 · `7ba56c1`
 * 2026-11-15 **Review**: [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/155) — 병합 완료 · PR #155 · `c37baae`
