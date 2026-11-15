@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="434" viewBox="0 0 760 434" role="img" aria-labelledby="title desc">
+  <title id="title">이전 예측과 새 예측을 같은 시각에서 혼합</title>
+  <desc id="desc">이전 행동 구간과 새 행동 구간은 짧게 겹칩니다. 겹침에서는 이전 예측의 비중이 낮아지고 새 예측 비중은 높아집니다. 구간 바깥에서는 해당 시각의 단일 예측을 사용합니다.</desc>
+  <rect x="1" y="1" width="758" height="432" rx="24" fill="#f5f8fc" stroke="#cbd5e1" stroke-width="2"/>
+  <g font-family="system-ui, Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+    <text x="380" y="55" font-size="32" font-weight="700" fill="#172743">두 행동 구간이 겹치는 시간</text>
+    <rect x="305" y="76" width="150" height="232" fill="#e3f6ec"/>
+    <path d="M305 78V310m150-232v232" stroke="#359572" stroke-width="2" stroke-dasharray="5 5"/>
+    <rect x="64" y="103" width="390" height="56" rx="12" fill="#dbeafe" stroke="#6b9cd7"/>
+    <text x="259" y="140" font-size="25" font-weight="700" fill="#132c4f">이전 행동 구간</text>
+    <rect x="306" y="178" width="390" height="56" rx="12" fill="#fef3c7" stroke="#c69539"/>
+    <text x="501" y="215" font-size="25" font-weight="700" fill="#5a3512">새 행동 구간</text>
+    <text x="380" y="277" font-size="24" font-weight="700" fill="#145642">겹침 구간</text>
+    <path d="M62 309h644m-10-7 10 7-10 7" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="166" y="349" font-size="22" fill="#163955">이전 예측만</text>
+    <text x="380" y="349" font-size="22" fill="#145642">새 예측 비중 증가</text>
+    <text x="593" y="349" font-size="22" fill="#5a3512">새 예측만</text>
+    <text x="380" y="397" font-size="20" fill="#334155">가로 길이는 실제 실험 설정을 나타내지 않습니다.</text>
+  </g>
+</svg>
