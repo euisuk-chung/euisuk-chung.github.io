@@ -56,6 +56,16 @@ visual_sources:
     caption: "관측·추론·기기 실행 지연 뒤에도 실행할 수 있는 목표를 고르는 과정. 원문 그림 5와 3-B절을 바탕으로 작성한 도식."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/wxxhxjSHCZ8"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=wxxhxjSHCZ8">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 로봇에게 공 던지기를 가르치려면 팔을 어떤 궤적으로 움직였는지와 손을 정확히 언제 열었는지가 함께 필요합니다. 사람이 카메라 앞에서 공을 던지는 영상만 있다면 이 동작을 로봇 명령으로 바꾸기 어렵습니다. 로봇을 직접 원격 조작하면 명령을 남길 수 있지만, 여러 가정과 식당에 로봇을 옮겨 시연을 모으기는 쉽지 않습니다. Universal Manipulation Interface(UMI)는 사람이 로봇 손과 비슷하게 생긴 집게를 들고 직접 시연하게 합니다. 로봇 팔을 현장에 가져가는 대신 집게에 달린 GoPro 한 대로 영상과 관성 데이터를 함께 남깁니다. [arXiv v3, Figure 1과 I절](https://arxiv.org/pdf/2402.10329v3#page=1)
