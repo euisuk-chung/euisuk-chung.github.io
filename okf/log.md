@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-16 **Review**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/161) — 검토 대기 · PR #161 · `84e991a`
 * 2026-11-15 **Review**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/160) — 병합 완료 · PR #160 · `858c10a`
 * 2026-11-15 **Review**: [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/159) — 병합 완료 · PR #159 · `ee03898`
 * 2026-11-15 **Review**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/158) — 병합 완료 · PR #158 · `e381392`

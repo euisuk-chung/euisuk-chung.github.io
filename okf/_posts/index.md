@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/161) — 검토 대기 · 소프트맥스의 반올림이 분류와 지식 증류의 기울기를 어떻게 바꾸는지, 안정적인 계산식과 모듈러 산술 실험을 따라 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
