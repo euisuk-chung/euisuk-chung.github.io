@@ -112,6 +112,16 @@ visual_sources:
     caption: "FrontierOR의 과제별 점수, 모델 비용, 평가 실행 시간. Yue Huang 외, CC BY 4.0. 고정 버전 PDF 영역 크롭, 번역 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/2NTrls_nTmI"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=2NTrls_nTmI">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 연구 에이전트가 세션을 종료하는 순간에도 실험은 끝나지 않을 수 있습니다. 시도한 방법이 여러 개라면 다음 세션은 어느 구현이 어떤 결과를 냈는지, 실패한 접근을 언제 다시 검토할지부터 파악해야 합니다. Épi는 실행 기록과 실험 상태를 세션 밖에 저장하고, 같은 검증 기준 아래 대안을 비교하며 여러 세션에 걸쳐 연구를 이어가는 에이전트입니다. 논문에 보고된 연구에서 모델 가중치는 고정되어 있고, 누적된 증거와 기억을 바탕으로 방법과 코드를 바꿉니다. [원문 §1–3](https://arxiv.org/html/2610.24944v1#S1)
