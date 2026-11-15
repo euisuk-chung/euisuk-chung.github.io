@@ -180,6 +180,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-15 **Creation**: [사주 오빗](_concepts/saju-orbit.md) — `0ab6d30`
+* 2026-11-15 **Creation**: [같은 11월, 다른 풀이 — 젠슨 황 기사에서 시작한 사주 오빗](_posts/2026/2026-11-15-saju-orbit-intro.md) — `0ab6d30`
 * 2026-11-15 **Update**: [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](_posts/2026/2026-11-14-epi-research-agent-review.md) — `3d79dad`
 * 2026-11-15 **Creation**: [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](_posts/2026/2026-11-15-depth-growth-looping-icl-review.md) — `6880d6a`
 * 2026-11-14 **Creation**: [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](_posts/2026/2026-11-14-epi-research-agent-review.md) — `cdbaf65`
