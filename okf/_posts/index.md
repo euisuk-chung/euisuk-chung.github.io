@@ -1,13 +1,8 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/158) — 검토 대기 · 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
 * [같은 11월, 다른 풀이 — 젠슨 황 기사에서 시작한 사주 오빗](2026/2026-11-15-saju-orbit-intro.md) - 젠슨 황 보도에서 떠올린 질문으로 사주 오빗을 만들고, 젠슨 황·리사 수·사티아 나델라의 11월 풀이를 비교했습니다.
 * [[Paper Review] How Depth Growth and Looping Shape In-Context Learning in Language Models](2026/2026-11-15-depth-growth-looping-icl-review.md) - 트랜스포머의 층을 학습 중 복제하거나 반복 적용할 때 문맥 활용이 어떻게 달라지는지, 토큰 손실·예시 학습·어텐션 헤드 실험으로 살펴봅니다.
 * [[Paper Review] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](2026/2026-11-14-epi-research-agent-review.md) - Épi가 분기·계층형 기억·고정 검증으로 세션을 잇고, 수학 기록과 알고리즘 설계 성과를 어떤 기준으로 입증하는지 살펴봅니다.

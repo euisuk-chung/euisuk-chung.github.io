@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-15 **Review**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/158) — 검토 대기 · PR #158 · `e381392`
+* 2026-11-15 **Review**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/158) — 병합 완료 · PR #158 · `e381392`
 * 2026-11-15 **Review**: [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/157) — 병합 완료 · PR #157 · `7ba56c1`
 * 2026-11-15 **Review**: [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/155) — 병합 완료 · PR #155 · `c37baae`
 * 2026-11-15 **Review**: [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/154) — 병합 완료 · PR #154 · `466b869`
@@ -182,6 +182,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-15 **Creation**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](_posts/2026/2026-11-15-universal-manipulation-interface-review.md) — `4342e7b`
 * 2026-11-15 **Update**: [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](_posts/2026/2026-11-15-depth-growth-looping-icl-review.md) — `d7f7bdd`
 * 2026-11-15 **Creation**: [사주 오빗](_concepts/saju-orbit.md) — `0ab6d30`
 * 2026-11-15 **Creation**: [같은 11월, 다른 풀이 — 젠슨 황 기사에서 시작한 사주 오빗](_posts/2026/2026-11-15-saju-orbit-intro.md) — `0ab6d30`
