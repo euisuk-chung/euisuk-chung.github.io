@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="455" viewBox="0 0 720 455" role="img" aria-labelledby="title desc">
+  <title id="title">UMI의 시연·학습·실행</title>
+  <desc id="desc">손에 든 그리퍼의 MP4를 영상·미터 단위 자세·그리퍼 너비로 변환해 정책을 학습하고 로봇의 지연에 맞춰 실행합니다.</desc>
+  <rect width="720" height="455" rx="24" fill="#0b1829"/>
+  <g font-family="system-ui, Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+    <text x="360" y="53" font-size="31" font-weight="700" fill="#eff6ff">시연에서 로봇 실행까지</text>
+    <rect x="42" y="78" width="636" height="94" rx="16" fill="#15304e" stroke="#3eb9c9" stroke-width="2"/>
+    <text x="360" y="115" font-size="26" font-weight="700" fill="#a5f3fc">손에 든 그리퍼로 시연</text>
+    <text x="360" y="147" font-size="21" fill="#eff6ff">손목 영상과 IMU를 GoPro MP4로 기록</text>
+    <rect x="42" y="199" width="636" height="94" rx="16" fill="#15304e" stroke="#60a5fa" stroke-width="2"/>
+    <text x="360" y="236" font-size="26" font-weight="700" fill="#bfdbfe">시연을 학습 데이터로 변환</text>
+    <text x="360" y="268" font-size="21" fill="#eff6ff">영상 + SLAM으로 복원한 자세 + 그리퍼 너비</text>
+    <rect x="42" y="320" width="636" height="97" rx="16" fill="#15304e" stroke="#f6c971" stroke-width="2"/>
+    <text x="360" y="357" font-size="26" font-weight="700" fill="#fde6a8">로봇에서 Diffusion Policy 실행</text>
+    <text x="360" y="390" font-size="21" fill="#eff6ff">관측 시각을 맞추고 로봇별 지연만큼 먼저 명령</text>
+  </g>
+  <path d="M360 177v15m-6-6 6 6 6-6M360 298v15m-6-6 6 6 6-6" stroke="#e2e8f0" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

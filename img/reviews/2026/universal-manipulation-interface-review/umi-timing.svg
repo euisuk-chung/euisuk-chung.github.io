@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="424" viewBox="0 0 720 424" role="img" aria-labelledby="title desc">
+  <title id="title">UMI가 보정하는 관측·추론·실행 지연</title>
+  <desc id="desc">촬영 시각, 추론 입력 시각, 결과 확정 시각, 실제 실행 가능 시각의 순서와 지나간 목표 및 남은 목표를 구분해 표시합니다. 간격은 수치를 표현하지 않습니다.</desc>
+  <rect width="720" height="424" rx="24" fill="#0b1829"/>
+  <g font-family="system-ui, Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#eff6ff" text-anchor="middle">
+    <text x="360" y="54" font-size="31" font-weight="700">실행할 수 있는 목표 시각 찾기</text>
+    <text x="104" y="115" font-size="24" fill="#a5f3fc">촬영</text>
+    <text x="259" y="115" font-size="24" fill="#bfdbfe">추론 시작</text>
+    <text x="438" y="115" font-size="24" fill="#bfdbfe">추론 종료</text>
+    <text x="599" y="115" font-size="24" fill="#fde6a8">실행 가능</text>
+    <text x="182" y="216" font-size="21" fill="#a5f3fc">관측 지연</text>
+    <text x="349" y="216" font-size="21" fill="#bfdbfe">추론 지연</text>
+    <text x="518" y="216" font-size="21" fill="#fde6a8">실행 지연</text>
+    <text x="327" y="325" font-size="25" fill="#fda4af">이미 늦은 목표는 건너뜀</text>
+    <text x="623" y="325" font-size="23" fill="#86efac">남은 목표</text>
+    <text x="360" y="387" font-size="20" fill="#cbd5e1">시간축의 간격은 예시입니다.</text>
+  </g>
+  <path d="M70 162h586l-10-7m10 7-10 7" stroke="#a9bbd3" stroke-width="3" fill="none"/>
+  <g fill="#0b1829" stroke-width="4">
+    <circle cx="104" cy="162" r="9" stroke="#67e8f9"/>
+    <circle cx="259" cy="162" r="9" stroke="#93c5fd"/>
+    <circle cx="438" cy="162" r="9" stroke="#93c5fd"/>
+    <circle cx="599" cy="162" r="9" stroke="#fcd34d"/>
+  </g>
+  <path d="M599 181v101" stroke="#fcd34d" stroke-width="2" stroke-dasharray="5 6"/>
+  <path d="M104 266h485" stroke="#fb7185" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 10"/>
+  <path d="M610 266h54" stroke="#86efac" stroke-width="5" stroke-linecap="round"/>
+</svg>
