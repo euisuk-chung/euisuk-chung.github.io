@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/160) — 검토 대기 · 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
