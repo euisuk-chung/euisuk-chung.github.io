@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-15 **Review**: [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/155) — 검토 대기 · PR #155 · `c37baae`
 * 2026-11-15 **Review**: [\[Paper Review\] How Depth Growth and Looping Shape In-Context Learning in Language Models](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/154) — 병합 완료 · PR #154 · `466b869`
 * 2026-11-14 **Review**: [\[Paper Review\] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/153) — 병합 완료 · PR #153 · `09a88ca`
 * 2026-11-14 **Review**: [\[Paper Review\] VeriHarness: 같은 모델로 불일치를 해결하고 합의를 의심하는 검증 하네스](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/152) — 병합 완료 · PR #152 · `e1929ca`
