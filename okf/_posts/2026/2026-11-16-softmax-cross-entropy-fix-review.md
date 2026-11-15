@@ -114,16 +114,20 @@ Google DeepMind의 Jonathan T. Barron, Dan Gnanapragasam, Michael Tschannen은 l
 클래스가 $`K`$개라면 $`z_k`$는 클래스 $`k`$의 로짓입니다. 기존 계산은 최대 로짓만큼 전체 점수를 옮긴 뒤 정규화합니다. 식 (1)에서 $`\tilde z_k`$는 옮긴 점수이고, 지수 항을 모두 더한 분모가 각 클래스 확률의 크기를 결정합니다.
 
 ```math
-\tilde z_k=z_k-z_{\max},\qquad
-q_k=\frac{\exp(\tilde z_k)}{\sum_j \exp(\tilde z_j)},\qquad
-\mathcal L(\mathbf z,\mathbf p)=-\sum_k p_k\log q_k.
+\begin{aligned}
+\tilde z_k & = z_k-z_{\max}, \\
+q_k & = \frac{\exp(\tilde z_k)}{\sum_j \exp(\tilde z_j)}, \\
+\mathcal L(\mathbf z,\mathbf p) & = -\sum_k p_k\log q_k.
+\end{aligned}
 ```
 
 정답 $`t`$가 최대 로짓일 때는 $`\exp(\tilde z_t)=1`$입니다. 나머지 클래스의 지수 항 합은 식 (2)의 마진 $`m`$을 사용해 $`\exp(-m)`$으로 쓸 수 있습니다. 마진이 크다는 말은 정답 로짓이 다른 로짓 하나보다 높다는 뜻을 넘어, **다른 클래스 전체의 로그 합**보다 높다는 뜻입니다.
 
 ```math
-m=z_t-\log\left(\sum_{j\ne t}\exp(z_j)\right),\qquad
-\exp(-m)=\sum_{j\ne t}\exp(z_j-z_t).
+\begin{aligned}
+m & = z_t-\log\left(\sum_{j\ne t}\exp(z_j)\right), \\
+\exp(-m) & = \sum_{j\ne t}\exp(z_j-z_t).
+\end{aligned}
 ```
 
 ![왼쪽은 마진 증가에 따라 0으로 떨어지는 정답 기울기, 오른쪽은 학생과 교사의 로짓 차이가 줄어도 남는 기울기 크기]({{ '/img/reviews/2026/softmax-cross-entropy-fix-review/figure-01-collapse-cancellation.png' | relative_url }})
@@ -138,9 +142,11 @@ m=z_t-\log\left(\sum_{j\ne t}\exp(z_j)\right),\qquad
 정답 분류의 손실을 미분하면 정답의 경우 $`q_t-1`$, 다른 클래스의 경우 $`q_j`$입니다. 식 (3)은 정답 기울기의 두 동치 표현을 나란히 놓습니다. 첫 번째는 분모가 1로 반올림되는 순간 0이 되고, 두 번째는 분자에 작은 항이 남아 같은 순간에도 음수입니다.
 
 ```math
-g_t=\frac{1}{1+\exp(-m)}-1
-   =-\frac{\exp(-m)}{1+\exp(-m)},\qquad
-g_j=\frac{\exp(z_j-z_t)}{1+\exp(-m)}\quad(j\ne t).
+\begin{aligned}
+g_t & = \frac{1}{1+\exp(-m)}-1 \\
+    & = -\frac{\exp(-m)}{1+\exp(-m)}, \\
+g_j & = \frac{\exp(z_j-z_t)}{1+\exp(-m)}\quad(j\ne t).
+\end{aligned}
 ```
 
 정답 외의 지수 항은 분자에서 직접 평가하므로 해당 크기를 표현할 수 있는 동안 양수입니다. 따라서 표준 방식에서 정답 기울기만 지워지면 식 (4)처럼 합이 양수가 됩니다. 원문은 소프트맥스 확률 자체를 미분할 때도 비슷한 문제가 발생하며, 최대 클래스 확률의 미분에서 같은 작은 차이가 사라질 수 있다고 설명합니다. [원문 §2, 식 (3)–(4)](https://arxiv.org/html/2610.31642v3#S2)
@@ -167,8 +173,10 @@ print(np.log1p(r), -r / denominator, rivals / denominator)
 유한한 최댓값이 있는 로짓에서 정답이 주어지는 교차 엔트로피는 $`t`$를 기준으로 옮깁니다. 정답이 최대인지는 따로 찾을 필요가 없습니다. 식 (6)의 손실은 $`\mathrm{softplus}(-m)=\log(1+\exp(-m))`$입니다. v3 코드에서는 $`b=\max(0,\max_{j\ne t}(z_j-z_t))`$를 사용해 지수 입력이 양수가 되지 않게 합니다. $`s`$에 정답 외의 옮긴 지수 항을 모으면 아래 계산이 됩니다. $`b=0`$인 높은 확신 구간에서는 `log1p(s)`가 작은 손실을 보전합니다.
 
 ```math
-s=\sum_{j\ne t}\exp(z_j-z_t-b),\qquad
-\mathcal L=b+\mathrm{log1p}\big(s+\mathrm{expm1}(-b)\big).
+\begin{aligned}
+s & = \sum_{j\ne t}\exp(z_j-z_t-b), \\
+\mathcal L & = b+\mathrm{log1p}\big(s+\mathrm{expm1}(-b)\big).
+\end{aligned}
 ```
 
 정답 자리를 상수로 마스킹하면 $`z_t`$는 오직 다른 클래스와의 차이에만 들어갑니다. 각 비정답 항의 미분은 $`\exp(z_j-z_t-\mathcal L)`$이고, $`z_t`$로 미분할 때 이 항들이 반대 부호로 합해집니다. 즉 식 (7)의 $`g_t=-\sum_{j\ne t}g_j`$가 별도의 기울기 보정 없이 자동 미분에서 나옵니다. 첫째 오류를 바로잡은 뒤 저자들은 정답이 확률분포로 주어지는 경우를 다룹니다. [원문 §2, 식 (6)–(7)과 JAX 구현](https://arxiv.org/html/2610.31642v3#S2)
@@ -180,9 +188,11 @@ s=\sum_{j\ne t}\exp(z_j-z_t-b),\qquad
 이를 피하기 위해 식 (9)는 원본 로짓에서 차이 $`\delta_k=z_{S,k}-z_{T,k}`$를 먼저 얻습니다. 교사 확률로 가중 평균을 내서 빼면 $`d_k`$의 교사 가중 평균은 0입니다. 어떤 클래스에 대해서도 로짓이 동일하게 움직이는 성분은 이 단계에서 사라집니다. 다음으로 로그 확률비 $`s_k`$를 구해, 확률비에서 1을 뺀 값을 $`p_k`$에 곱하는 식으로 차이를 되돌립니다.
 
 ```math
-d_k=\delta_k-\sum_i p_i\delta_i,\qquad
-s_k=d_k-\mathrm{log1p}\!\left(\sum_i p_i\,\mathrm{expm1}(d_i)\right),\qquad
-u_k=p_k\,\mathrm{expm1}(s_k).
+\begin{aligned}
+d_k & = \delta_k-\sum_i p_i\delta_i, \\
+s_k & = d_k-\mathrm{log1p}\!\left(\sum_i p_i\,\mathrm{expm1}(d_i)\right), \\
+u_k & = p_k\,\mathrm{expm1}(s_k).
+\end{aligned}
 ```
 
 여기서 `expm1(x)`는 $`e^x-1`$을, `log1p(x)`는 $`\log(1+x)`$를 작은 $`x`$에서 정밀하게 계산합니다. $`s_k=\log(q_k/p_k)`$이므로 $`u_k`$는 이론상 $`q_k-p_k`$입니다. 원문은 $`\lvert s_k\rvert\ge1`$이면 직접 $`q_k-p_k`$를 택합니다. 교사 확률이 0으로 반올림된 항의 `expm1` 결과가 넘칠 때 $`0\times\infty`$가 들어가는 것을 막는 분기입니다. 마지막으로 $`g_k=u_k-q_k\sum_i u_i`$로 남은 기울기 합의 오차를 제거합니다. [원문 §3, 식 (9) 및 코드](https://arxiv.org/html/2610.31642v3#S3)
