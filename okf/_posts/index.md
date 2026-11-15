@@ -1,13 +1,8 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/161) — 검토 대기 · 소프트맥스의 반올림이 분류와 지식 증류의 기울기를 어떻게 바꾸는지, 안정적인 계산식과 모듈러 산술 실험을 따라 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Paper Review] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](2026/2026-11-16-softmax-cross-entropy-fix-review.md) - 소프트맥스의 반올림이 분류와 지식 증류의 기울기를 어떻게 바꾸는지, 안정적인 계산식과 모듈러 산술 실험을 따라 살펴봅니다.
 * [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
 * [같은 11월, 다른 풀이 — 젠슨 황 기사에서 시작한 사주 오빗](2026/2026-11-15-saju-orbit-intro.md) - 젠슨 황 보도에서 떠올린 질문으로 사주 오빗을 만들고, 젠슨 황·리사 수·사티아 나델라의 11월 풀이를 비교했습니다.
 * [[Paper Review] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](2026/2026-11-15-flash-aloha-review.md) - 로봇 팔을 직접 움직여 빠른 시연을 기록하고, 손 영역 마스킹과 행동 구간 평활화로 자율 실행까지 연결한 양팔 조작 시스템을 살펴봅니다.
