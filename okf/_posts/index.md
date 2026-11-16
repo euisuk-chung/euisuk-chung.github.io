@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/167) — 검토 대기 · 멀티모달 모델에서 시각 사전학습, 전용 파라미터, 융합 전 배치를 분리하고 동일 연산량에서 시각 이해와 응답 지연을 비교합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) - 멀티모달 모델에서 시각 사전학습, 전용 파라미터, 융합 전 배치를 분리하고 동일 연산량에서 시각 이해와 응답 지연을 비교합니다.

@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-16 **Review**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/167) — 검토 대기 · PR #167 · `aacdc1b`
+* 2026-11-16 **Review**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/167) — 병합 완료 · PR #167 · `aacdc1b`
 * 2026-11-16 **Review**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/166) — 병합 완료 · PR #166 · `957f375`
 * 2026-11-16 **Review**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/164) — 병합 완료 · PR #164 · `86cdea2`
 * 2026-11-16 **Review**: [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/163) — 병합 완료 · PR #163 · `179ceb7`
@@ -189,6 +189,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-16 **Update**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](_posts/2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) — `55f011d`
 * 2026-11-16 **Update**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](_posts/2026/2026-11-16-softmax-cross-entropy-fix-review.md) — `ad680b8`
 * 2026-11-16 **Update**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `deb95d2`
 * 2026-11-16 **Creation**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](_posts/2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) — `4f056c0`
