@@ -73,6 +73,16 @@ visual_sources:
     caption: "교사와 동일한 가중치에서 시작한 학생의 KL 발산과 테스트 정확도. Jonathan T. Barron 외, CC BY 4.0, PDF 영역 크롭, 번역 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ii6RmgYuH-w"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=ii6RmgYuH-w">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 분류 모델이 정답에 거의 100%의 확률을 줄 때도 교차 엔트로피가 돌려줘야 할 기울기는 작지만 남아 있습니다. 문제는 컴퓨터에 저장된 정답 확률이 정확히 1로 반올림되면, 다른 클래스의 기울기가 남아 있는 동안 정답 쪽 기울기만 0이 될 수 있다는 점입니다. 교사 모델의 확률을 따라가는 지식 증류에서는 반대로 학생과 교사가 같아도 미세한 기울기가 남을 수 있습니다. 두 경우 모두 학습에 전달되는 신호가 달라집니다. [원문 초록과 §1](https://arxiv.org/html/2610.31642v3#S1)
