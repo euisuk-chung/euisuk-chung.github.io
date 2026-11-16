@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/163) — 검토 대기 · 로봇 팔을 직접 움직여 빠른 시연을 기록하고, 손 영역 마스킹과 행동 구간 평활화로 자율 실행까지 연결한 양팔 조작 시스템을 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](2026/2026-11-16-softmax-cross-entropy-fix-review.md) - 소프트맥스의 반올림이 분류와 지식 증류의 기울기를 어떻게 바꾸는지, 안정적인 계산식과 모듈러 산술 실험을 따라 살펴봅니다.
