@@ -185,6 +185,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-16 **Update**: [관심 있는 기업인의 사주를 찾아보는 서비스, 사주 오빗](_posts/2026/2026-11-15-saju-orbit-intro.md) — `c2e73d5`
 * 2026-11-16 **Creation**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](_posts/2026/2026-11-16-softmax-cross-entropy-fix-review.md) — `e11aa82`
 * 2026-11-15 **Update**: [\[Paper Review\] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](_posts/2026/2026-11-15-universal-manipulation-interface-review.md) — `8dc942b`
 * 2026-11-15 **Creation**: [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](_posts/2026/2026-11-15-flash-aloha-review.md) — `4a8604d`
