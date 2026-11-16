@@ -90,6 +90,16 @@ visual_sources:
     caption: "1.7B 백본에서 시각 파라미터 예산과 첫 토큰 지연의 관계."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/qWriExkfb_Q"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=qWriExkfb_Q">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 이미지 속 막대그래프에 질문하면 멀티모달 모델은 픽셀을 토큰으로 바꾸고, 그 토큰에서 숫자와 눈금의 관계를 읽어야 합니다. 흔한 설계는 이 과정의 일부를 별도로 사전학습한 비전 트랜스포머에 맡깁니다. 그런데 이 인코더를 붙이는 순간 세 가지가 함께 바뀝니다. 이미지에 관한 지식을 미리 학습하고, 시각 토큰만 쓰는 파라미터가 생기고, 이미지가 텍스트와 만나기 전에 처리됩니다. 성능이 좋아졌다면 이 셋 중 어디에서 차이가 났을까요?
