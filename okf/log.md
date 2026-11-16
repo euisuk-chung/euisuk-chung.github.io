@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-16 **Review**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/167) — 검토 대기 · PR #167 · `aacdc1b`
 * 2026-11-16 **Review**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/166) — 병합 완료 · PR #166 · `957f375`
 * 2026-11-16 **Review**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/164) — 병합 완료 · PR #164 · `86cdea2`
 * 2026-11-16 **Review**: [\[Paper Review\] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/163) — 병합 완료 · PR #163 · `179ceb7`
