@@ -65,7 +65,7 @@ visual_sources:
 
 옆에 누가 오면 **눈인사** 버튼으로 고개를 까딱할 수 있게 했습니다. 처음 보는 사람에게 대뜸 채팅을 걸기는 어색해도, 고개 한 번 까딱하는 건 좀 쉽잖아요. 조금 더 얘기하고 싶으면 수다방에 “오늘도 수고했어요” 하고 한마디 남겨도 좋고요. [옥상 수다 열기](https://rooftop-chill.lovable.app/vent)
 
-![비 오는 옥상 옆에 수다방이 열려 있고, 입력창에 인사말 예시가 적힌 화면]({{ '/img/reviews/2026/rooftop-chill-intro/rooftop-chat.jpg' | relative_url }})
+![비 오는 옥상 위로 열린 수다방과 입력창에 적힌 인사말 예시]({{ '/img/reviews/2026/rooftop-chill-intro/rooftop-chat.jpg' | relative_url }})
 
 비 오는 옥상에서 연 수다방. 아래 인사말은 입력 예시입니다. [한숨두숨 화면](https://rooftop-chill.lovable.app/)
 {: .caption}
