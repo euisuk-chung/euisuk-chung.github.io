@@ -48,6 +48,16 @@ visual_sources:
     caption: "이전 행동 구간과 새 행동 구간의 겹친 시각을 섞는 독립 도식입니다. 원문 IV절과 그림 5를 바탕으로 작성했습니다."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/hhYcZS53hXE"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=hhYcZS53hXE">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 한쪽 로봇 팔이 던진 공을 다른 쪽 팔이 받으려면 손을 벌리는 타이밍과 공을 향해 움직이는 속도가 모두 맞아야 합니다. 원격 조작으로 이런 시연을 모으는 사람은 화면 너머에서 로봇을 제어하며, 조작 장치가 제공하는 시야와 감각에 맞춰 움직입니다. Flash ALOHA의 저자들은 **실제로 배포할 로봇 팔의 그리퍼에 손잡이를 달고, 사람이 그 팔을 잡아 움직여** 빠른 시연을 기록합니다. 그러면 빠른 동작의 관절 위치를 로봇 엔코더로 직접 읽을 수 있고, 시연자는 물체에 닿는 감각을 손으로 느낄 수 있습니다. [원문 초록·I절, PDF 1–2쪽](https://johnyao93.github.io/static/files/flash-aloha.pdf?v=2#page=1)
