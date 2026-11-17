@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/168) — 검토 대기 · 비동기 에이전트가 Git에 코드와 실패 기록을 남기고 다른 분기의 근거를 재사용하는 방식을 프로그램 복원·수학 증명·아키텍처 연구 결과로 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) - 멀티모달 모델에서 시각 사전학습, 전용 파라미터, 융합 전 배치를 분리하고 동일 연산량에서 시각 이해와 응답 지연을 비교합니다.
