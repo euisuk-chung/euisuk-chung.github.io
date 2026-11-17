@@ -1,13 +1,8 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/172) — 검토 대기 · MCP 도구 호출에 실험적으로 장애를 주입하는 방법을 살펴보고, 에이전트의 완료율과 답변 품질이 모델 크기와 실행 스택에 따라 어떻게 달라졌는지 분석합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Paper Review] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](2026/2026-11-18-mcp-injector-agent-fault-tolerance-review.md) - MCP 도구 호출에 실험적으로 장애를 주입하는 방법을 살펴보고, 에이전트의 완료율과 답변 품질이 모델 크기와 실행 스택에 따라 어떻게 달라졌는지 분석합니다.
 * [[Repo Review] Awesome Agent Harness, YAML 한 파일에서 만드는 두 언어의 기술 목록](2026/2026-11-18-awesome-agent-harness-catalog-review.md) - Awesome Agent Harness의 단일 YAML 목록이 GitHub 메타데이터 갱신과 다국어 README 생성을 거쳐 검증 보고서로 이어지는 과정을 추적합니다.
 * [[Paper Review] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](2026/2026-11-17-mmaudio-video-to-audio-review.md) - MMAudio가 영상·오디오·텍스트를 공동 학습하고 프레임별 동기화 조건으로 소리의 종류와 타이밍을 맞추는 과정을 생성 수식과 실험으로 살펴봅니다.
 * [[Paper Review] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](2026/2026-11-17-gitswarm-compounding-inference-review.md) - 비동기 에이전트가 Git에 코드와 실패 기록을 남기고 다른 분기의 근거를 재사용하는 방식을 프로그램 복원·수학 증명·아키텍처 연구 결과로 살펴봅니다.
