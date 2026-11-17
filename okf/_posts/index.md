@@ -1,15 +1,10 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/170) — 검토 대기 · 공개 기술 산출물 138개를 분류한 서베이를 따라 에이전트 하네스의 일곱 계층과 실행 실패를 진단하는 평가·거버넌스 절차를 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](2026/2026-11-17-mmaudio-video-to-audio-review.md) - MMAudio가 영상·오디오·텍스트를 공동 학습하고 프레임별 동기화 조건으로 소리의 종류와 타이밍을 맞추는 과정을 생성 수식과 실험으로 살펴봅니다.
 * [[Paper Review] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](2026/2026-11-17-gitswarm-compounding-inference-review.md) - 비동기 에이전트가 Git에 코드와 실패 기록을 남기고 다른 분기의 근거를 재사용하는 방식을 프로그램 복원·수학 증명·아키텍처 연구 결과로 살펴봅니다.
+* [[Paper Review] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](2026/2026-11-17-agent-harness-engineering-survey-review.md) - 공개 기술 산출물 138개를 분류한 서베이를 따라 에이전트 하네스의 일곱 계층과 실행 실패를 진단하는 평가·거버넌스 절차를 살펴봅니다.
 * [[Paper Review] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) - 멀티모달 모델에서 시각 사전학습, 전용 파라미터, 융합 전 배치를 분리하고 동일 연산량에서 시각 이해와 응답 지연을 비교합니다.
 * [[Paper Review] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](2026/2026-11-16-softmax-cross-entropy-fix-review.md) - 소프트맥스의 반올림이 분류와 지식 증류의 기울기를 어떻게 바꾸는지, 안정적인 계산식과 모듈러 산술 실험을 따라 살펴봅니다.
 * [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
