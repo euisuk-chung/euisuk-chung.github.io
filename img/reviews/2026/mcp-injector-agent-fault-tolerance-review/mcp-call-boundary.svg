@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
+  <title id="title">MCP-Injector at the tool-call boundary</title>
+  <desc id="desc">The agent client exchanges tool requests and results with a real MCP server through a fault-injection proxy. The proxy uses profile rules and records each fired fault.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="560" height="420" rx="18" fill="#f8fafc"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="84" y="18" width="392" height="54" rx="10" fill="#e0f2fe" stroke="#0369a1"/>
+    <text x="280" y="51" font-size="22" font-weight="700" fill="#0c4a6e">Agent / MCP client</text>
+    <rect x="28" y="132" width="504" height="140" rx="13" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+    <text x="280" y="162" font-size="24" font-weight="700" fill="#312e81">MCP-Injector proxy</text>
+    <text x="280" y="199" font-size="18" fill="#1e1b4b">Observe the call · Select a rule</text>
+    <text x="280" y="226" font-size="18" fill="#1e1b4b">Apply it to the request or response</text>
+    <text x="280" y="253" font-size="18" fill="#1e1b4b">Record any injected fault</text>
+    <rect x="84" y="344" width="392" height="54" rx="10" fill="#dcfce7" stroke="#15803d"/>
+    <text x="280" y="377" font-size="22" font-weight="700" fill="#14532d">Real MCP server</text>
+    <g fill="#334155" font-size="16">
+      <text x="169" y="109">Tool request</text>
+      <text x="405" y="109">Result or error</text>
+      <text x="166" y="302">Forward unless</text>
+      <text x="166" y="322">short-circuited</text>
+      <text x="395" y="313">Server response</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#arrow)">
+    <path d="M250 74V129"/>
+    <path d="M310 130V75"/>
+    <path d="M250 275V340"/>
+    <path d="M310 341V275"/>
+  </g>
+</svg>
