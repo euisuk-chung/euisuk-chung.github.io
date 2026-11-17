@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/170) — 검토 대기 · 공개 기술 산출물 138개를 분류한 서베이를 따라 에이전트 하네스의 일곱 계층과 실행 실패를 진단하는 평가·거버넌스 절차를 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](2026/2026-11-17-mmaudio-video-to-audio-review.md) - MMAudio가 영상·오디오·텍스트를 공동 학습하고 프레임별 동기화 조건으로 소리의 종류와 타이밍을 맞추는 과정을 생성 수식과 실험으로 살펴봅니다.
