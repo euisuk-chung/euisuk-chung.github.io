@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/169) — 검토 대기 · MMAudio가 영상·오디오·텍스트를 공동 학습하고 프레임별 동기화 조건으로 소리의 종류와 타이밍을 맞추는 과정을 생성 수식과 실험으로 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](2026/2026-11-17-gitswarm-compounding-inference-review.md) - 비동기 에이전트가 Git에 코드와 실패 기록을 남기고 다른 분기의 근거를 재사용하는 방식을 프로그램 복원·수학 증명·아키텍처 연구 결과로 살펴봅니다.
