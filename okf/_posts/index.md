@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] Awesome Agent Harness, YAML 한 파일에서 만드는 두 언어의 기술 목록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/171) — 검토 대기 · Awesome Agent Harness의 단일 YAML 목록이 GitHub 메타데이터 갱신과 다국어 README 생성을 거쳐 검증 보고서로 이어지는 과정을 추적합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](2026/2026-11-17-mmaudio-video-to-audio-review.md) - MMAudio가 영상·오디오·텍스트를 공동 학습하고 프레임별 동기화 조건으로 소리의 종류와 타이밍을 맞추는 과정을 생성 수식과 실험으로 살펴봅니다.

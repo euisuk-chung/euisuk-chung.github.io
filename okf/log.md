@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-18 **Review**: [\[Repo Review\] Awesome Agent Harness, YAML 한 파일에서 만드는 두 언어의 기술 목록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/171) — 검토 대기 · PR #171 · `8142cd1`
 * 2026-11-17 **Review**: [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/170) — 병합 완료 · PR #170 · `b1ed6b0`
 * 2026-11-17 **Review**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/169) — 병합 완료 · PR #169 · `e434f59`
 * 2026-11-17 **Review**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/168) — 병합 완료 · PR #168 · `2b2640f`
