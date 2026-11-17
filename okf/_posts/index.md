@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/172) — 검토 대기 · MCP 도구 호출에 실험적으로 장애를 주입하는 방법을 살펴보고, 에이전트의 완료율과 답변 품질이 모델 크기와 실행 스택에 따라 어떻게 달라졌는지 분석합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] Awesome Agent Harness, YAML 한 파일에서 만드는 두 언어의 기술 목록](2026/2026-11-18-awesome-agent-harness-catalog-review.md) - Awesome Agent Harness의 단일 YAML 목록이 GitHub 메타데이터 갱신과 다국어 README 생성을 거쳐 검증 보고서로 이어지는 과정을 추적합니다.
