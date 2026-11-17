@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-17 **Review**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/169) — 검토 대기 · PR #169 · `e434f59`
+* 2026-11-17 **Review**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/169) — 병합 완료 · PR #169 · `e434f59`
 * 2026-11-17 **Review**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/168) — 병합 완료 · PR #168 · `2b2640f`
 * 2026-11-16 **Review**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/167) — 병합 완료 · PR #167 · `aacdc1b`
 * 2026-11-16 **Review**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/166) — 병합 완료 · PR #166 · `957f375`
@@ -191,6 +191,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-17 **Creation**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](_posts/2026/2026-11-17-mmaudio-video-to-audio-review.md) — `896f10b`
 * 2026-11-17 **Creation**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](_posts/2026/2026-11-17-gitswarm-compounding-inference-review.md) — `f6e27f0`
 * 2026-11-16 **Update**: [\[Paper Review\] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](_posts/2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) — `55f011d`
 * 2026-11-16 **Update**: [\[Paper Review\] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](_posts/2026/2026-11-16-softmax-cross-entropy-fix-review.md) — `ad680b8`
