@@ -141,6 +141,16 @@ visual_sources:
     height: 1014
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/M4KvoexAkps"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=M4KvoexAkps">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 무음 영상에서 드러머가 북을 네 번 칩니다. 북소리를 만들어도 채가 닿는 순간보다 먼저 들리거나, 연주가 멈춘 뒤 계속 울리면 장면과 어긋납니다. MMAudio는 이처럼 영상에 맞는 **소리의 종류**와 **소리가 나는 시점**을 함께 학습합니다. 연구 대상은 영상에 붙이는 환경음과 효과음, 즉 이 논문에서 말하는 **폴리(Foley)**입니다.
