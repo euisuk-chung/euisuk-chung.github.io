@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/173) — 검토 대기 · 비동기 에이전트가 Git에 코드와 실패 기록을 남기고 다른 분기의 근거를 재사용하는 방식을 프로그램 복원·수학 증명·아키텍처 연구 결과로 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](2026/2026-11-18-mcp-injector-agent-fault-tolerance-review.md) - MCP 도구 호출에 실험적으로 장애를 주입하는 방법을 살펴보고, 에이전트의 완료율과 답변 품질이 모델 크기와 실행 스택에 따라 어떻게 달라졌는지 분석합니다.
