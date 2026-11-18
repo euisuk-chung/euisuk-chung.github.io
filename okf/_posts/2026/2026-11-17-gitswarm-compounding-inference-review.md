@@ -111,6 +111,16 @@ visual_sources:
     caption: "후보 생성, 기능 확장, 수리, 합성, 지명 등이 예산 소진 과정에서 차지하는 비중입니다."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/qpNxFtVLfwA"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=qpNxFtVLfwA">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 프로그램 복원에 실패한 에이전트라도 재현용 테스트나 반례를 남길 수 있습니다. 다음 에이전트가 그 기록을 읽고 문제의 범위를 좁힌다면, 두 번의 실행은 같은 문제를 처음부터 푼 두 번의 시도와 달라집니다. GitSwarm의 저자들은 이렇게 중간 작업을 남겨 다음 추론에서 확인하고, 수정하고, 합칠 수 있게 하는 방식을 **누적 추론(compounding inference)**이라고 부릅니다. [arXiv:2610.04862v1](https://arxiv.org/abs/2610.04862v1)
