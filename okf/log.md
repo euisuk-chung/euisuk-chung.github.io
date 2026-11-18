@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-18 **Review**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/174) — 검토 대기 · PR #174 · `935f033`
 * 2026-11-18 **Review**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/173) — 병합 완료 · PR #173 · `4ea1d51`
 * 2026-11-18 **Review**: [\[Paper Review\] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/172) — 병합 완료 · PR #172 · `ed63cd1`
 * 2026-11-18 **Review**: [\[Repo Review\] Awesome Agent Harness, YAML 한 파일에서 만드는 두 언어의 기술 목록](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/171) — 병합 완료 · PR #171 · `8142cd1`
