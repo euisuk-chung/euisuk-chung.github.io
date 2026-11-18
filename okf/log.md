@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-19 **Review**: [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/175) — 검토 대기 · PR #175 · `a309317`
 * 2026-11-18 **Review**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/174) — 병합 완료 · PR #174 · `935f033`
 * 2026-11-18 **Review**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/173) — 병합 완료 · PR #173 · `4ea1d51`
 * 2026-11-18 **Review**: [\[Paper Review\] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/172) — 병합 완료 · PR #172 · `ed63cd1`
