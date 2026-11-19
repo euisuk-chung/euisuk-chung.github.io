@@ -3,11 +3,12 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Paper Review\] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/178) — 검토 대기 · HERMES가 파일별 추론 역할과 직접 메시지, 실행 진단을 연결하는 방법을 살펴보고, 역할별 모델 배정과 비용·성능 및 구성요소 대조 실험을 분석합니다.
+* [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/179) — 검토 대기 · ECC의 도구 이벤트 처리와 세션 복원, 선택적 패턴 추출 및 Memory Vault를 고정 코드로 따라가며 지침과 실제 실행의 경계를 살펴봅니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
+* [[Paper Review] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](2026/2026-11-20-hermes-dev-primitives-review.md) - HERMES가 파일별 추론 역할과 직접 메시지, 실행 진단을 연결하는 방법을 살펴보고, 역할별 모델 배정과 비용·성능 및 구성요소 대조 실험을 분석합니다.
 * [[Paper Review] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](2026/2026-11-19-self-direction-lasting-lessons-review.md) - Self-Direction이 실패한 실행에서 교정 예제를 만들고 저랭크 어댑터로 저장한 뒤 재사용하는 과정을, 반복 실패·전이·보존 실험과 함께 분석합니다.
 * [[Paper Review] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](2026/2026-11-18-mcp-injector-agent-fault-tolerance-review.md) - MCP 도구 호출에 실험적으로 장애를 주입하는 방법을 살펴보고, 에이전트의 완료율과 답변 품질이 모델 크기와 실행 스택에 따라 어떻게 달라졌는지 분석합니다.
 * [[Repo Review] Awesome Agent Harness, YAML 한 파일에서 만드는 두 언어의 기술 목록](2026/2026-11-18-awesome-agent-harness-catalog-review.md) - Awesome Agent Harness의 단일 YAML 목록이 GitHub 메타데이터 갱신과 다국어 README 생성을 거쳐 검증 보고서로 이어지는 과정을 추적합니다.
