@@ -46,6 +46,16 @@ visual_sources:
     caption: "호출과 결과가 MCP 프록시를 지나는 위치와 장애 주입 및 기록 흐름입니다."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ilJImHvlPlQ"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=ilJImHvlPlQ">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 도구를 쓰는 LLM 에이전트는 검색 결과나 계산값을 받아 답변을 작성합니다. 서버가 오류를 내거나, 예상과 다른 타입을 보내거나, 형식은 정상인데 값이 틀린 결과를 돌려줄 수도 있습니다. 에이전트가 답변을 작성하고 종료했더라도 작업에 필요한 근거를 얻었는지는 따로 확인해야 합니다. 저자들은 에이전트와 서버 사이에서 MCP(Model Context Protocol) 도구 호출을 가로채는 **MCP-Injector**를 만들어 이 차이를 실험했습니다. [논문 §1][s1]
