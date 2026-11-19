@@ -98,6 +98,16 @@ visual_sources:
     modification: "Cropped to the figure region."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/JesELS-6Up0"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=JesELS-6Up0">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 코딩 에이전트가 같은 모델로 같은 이슈를 받아도 결과는 달라질 수 있습니다. 한 실행에서는 의존성이 준비된 작업공간에서 패치를 작성하고 테스트까지 통과합니다. 다른 실행에서는 테스트 도구를 찾지 못하거나, 재시작 후 어디까지 작업했는지 잊거나, 실패한 테스트를 통과로 표시할 수 있습니다. Li 외의 *Agent Harness Engineering: A Survey*는 이 차이를 설명하기 위해 모델을 둘러싼 실행 환경, 도구, 상태, 검증, 권한을 하나의 시스템으로 살펴봅니다. 저자가 말하는 **에이전트 하네스**는 모델의 제안을 실제 행동으로 옮기고, 그 결과를 관찰해 다음 행동에 반영하는 장치들의 조합입니다. [저자 공개본 §1][p4]
