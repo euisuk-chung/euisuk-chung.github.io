@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="440" viewBox="0 0 680 440" role="img" aria-labelledby="title desc">
+<title id="title">ECC 관찰 기록에서 다음 세션 문맥까지</title><desc id="desc">도구 이벤트는 조건을 통과하면 관찰 파일에 저장됩니다. 별도로 활성화한 observer가 패턴을 instinct로 만들고 다음 SessionStart가 신뢰도와 범위에 따라 선별합니다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#45637c"/></marker></defs>
+<rect width="680" height="440" rx="14" fill="#f5f8fc"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#17354d">
+<text x="340" y="36" font-size="25" font-weight="700">기록과 패턴 추출은 별도 단계입니다</text>
+<rect x="40" y="60" width="600" height="65" rx="10" fill="#dceafc" stroke="#7ba6d4"/><text x="340" y="88" font-size="23" font-weight="700">PreToolUse / PostToolUse</text><text x="340" y="114" font-size="20">프로필 · 자동 세션 제외 · Bash / Python 조건</text>
+<path d="M340 125 V150" stroke="#45637c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="155" width="600" height="60" rx="10" fill="#fff" stroke="#94aabd"/><text x="340" y="180" font-size="23" font-weight="700">프로젝트별 observations.jsonl</text><text x="340" y="205" font-size="20">도구 입력·출력의 알려진 비밀 패턴 제거 후 기록</text>
+<path d="M340 215 V240" stroke="#45637c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="245" width="600" height="70" rx="10" fill="#fff1d8" stroke="#d1aa60"/><text x="340" y="273" font-size="23" font-weight="700">Observer → 프로젝트 instinct</text><text x="340" y="301" font-size="20">기본 비활성 · 활성화 시 Claude 분석 서브프로세스</text>
+<path d="M340 315 V340" stroke="#45637c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="345" width="600" height="70" rx="10" fill="#e3f3e9" stroke="#7eb093"/><text x="340" y="374" font-size="23" font-weight="700">다음 SessionStart 문맥</text><text x="340" y="401" font-size="20">기본 신뢰도 0.7 이상 · 최대 6개 · 전체 문자 상한</text>
+</g></svg>

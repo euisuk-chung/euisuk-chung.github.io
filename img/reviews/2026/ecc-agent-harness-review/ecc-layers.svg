@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="440" viewBox="0 0 680 440" role="img" aria-labelledby="title desc">
+<title id="title">ECC의 지침, 실행, 기억 경계</title><desc id="desc">에이전트 호스트가 지침을 읽고 도구 이벤트를 발생시키면, ECC의 훅이 프로필에 따라 동작하며 기억을 파일로 저장하거나 다음 문맥으로 돌려줍니다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#45637c"/></marker></defs>
+<rect width="680" height="440" rx="14" fill="#f5f8fc"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#17354d">
+<text x="340" y="37" font-size="25" font-weight="700">호스트가 실행하고, ECC가 보조합니다</text>
+<rect x="30" y="64" width="620" height="72" rx="12" fill="#dceafc" stroke="#7ba6d4"/>
+<text x="340" y="94" font-size="24" font-weight="700">Claude Code 등 에이전트 호스트</text><text x="340" y="121" font-size="21">모델 호출 · 도구 실행 · 이벤트 전달</text>
+<path d="M180 136 V166 M500 136 V166" fill="none" stroke="#45637c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="30" y="170" width="300" height="100" rx="12" fill="#fff" stroke="#94aabd"/>
+<text x="180" y="202" font-size="23" font-weight="700">지침 계층</text><text x="180" y="231" font-size="21">skills · agents · rules</text><text x="180" y="257" font-size="20">모델이 읽고 판단할 작업 절차</text>
+<rect x="350" y="170" width="300" height="100" rx="12" fill="#fff" stroke="#94aabd"/>
+<text x="500" y="202" font-size="23" font-weight="700">실행 계층</text><text x="500" y="231" font-size="21">도구 매칭 → 프로필 게이트</text><text x="500" y="257" font-size="20">검사 · 관찰 · 세션 저장</text>
+<path d="M500 270 V300" fill="none" stroke="#45637c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="30" y="305" width="620" height="100" rx="12" fill="#e3f3e9" stroke="#7eb093"/>
+<text x="340" y="338" font-size="24" font-weight="700">지속 상태</text><text x="340" y="368" font-size="21">세션 요약 · 관찰 / instinct · Memory Vault</text><text x="340" y="394" font-size="20">서로 다른 저장 경로와 읽기 조건을 가진 자료</text>
+</g></svg>
