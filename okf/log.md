@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-20 **Review**: [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/179) — 검토 대기 · PR #179 · `25c4775`
+* 2026-11-20 **Review**: [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/179) — 병합 완료 · PR #179 · `25c4775`
 * 2026-11-20 **Review**: [\[Paper Review\] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/178) — 병합 완료 · PR #178 · `8284ba1`
 * 2026-11-19 **Review**: [\[Paper Review\] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/177) — 병합 완료 · PR #177 · `cf9cf51`
 * 2026-11-19 **Review**: [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/176) — 병합 완료 · PR #176 · `2e07c77`
@@ -201,6 +201,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-20 **Creation**: [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](_posts/2026/2026-11-20-ecc-agent-harness-review.md) — `c9ba62f`
 * 2026-11-20 **Creation**: [\[Paper Review\] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](_posts/2026/2026-11-20-hermes-dev-primitives-review.md) — `3d037c5`
 * 2026-11-19 **Update**: [\[Paper Review\] MCP-Injector — 도구가 고장 나면 LLM 에이전트는 얼마나 버틸까](_posts/2026/2026-11-18-mcp-injector-agent-fault-tolerance-review.md) — `87af775`
 * 2026-11-19 **Update**: [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](_posts/2026/2026-11-17-agent-harness-engineering-survey-review.md) — `86b0568`
