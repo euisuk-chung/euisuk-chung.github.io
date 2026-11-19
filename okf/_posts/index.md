@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/176) — 검토 대기 · 공개 기술 산출물 138개를 분류한 서베이를 따라 에이전트 하네스의 일곱 계층과 실행 실패를 진단하는 평가·거버넌스 절차를 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](2026/2026-11-19-self-direction-lasting-lessons-review.md) - Self-Direction이 실패한 실행에서 교정 예제를 만들고 저랭크 어댑터로 저장한 뒤 재사용하는 과정을, 반복 실패·전이·보존 실험과 함께 분석합니다.

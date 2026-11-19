@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-19 **Review**: [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/176) — 검토 대기 · PR #176 · `2e07c77`
+* 2026-11-19 **Review**: [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/176) — 병합 완료 · PR #176 · `2e07c77`
 * 2026-11-19 **Review**: [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/175) — 병합 완료 · PR #175 · `a309317`
 * 2026-11-18 **Review**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/174) — 병합 완료 · PR #174 · `935f033`
 * 2026-11-18 **Review**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/173) — 병합 완료 · PR #173 · `4ea1d51`
@@ -198,6 +198,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-19 **Update**: [\[Paper Review\] Agent Harness Engineering: A Survey — 에이전트 실행을 구성하는 일곱 계층](_posts/2026/2026-11-17-agent-harness-engineering-survey-review.md) — `86b0568`
 * 2026-11-19 **Creation**: [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](_posts/2026/2026-11-19-self-direction-lasting-lessons-review.md) — `e278427`
 * 2026-11-18 **Update**: [\[Paper Review\] MMAudio — 영상에서 어떤 소리가 언제 나야 하는지 배우기](_posts/2026/2026-11-17-mmaudio-video-to-audio-review.md) — `aaee978`
 * 2026-11-18 **Update**: [\[Paper Review\] GitSwarm — Git으로 에이전트의 추론을 누적하는 방법](_posts/2026/2026-11-17-gitswarm-compounding-inference-review.md) — `24be3a0`
