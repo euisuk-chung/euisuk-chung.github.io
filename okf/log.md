@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-21 **Review**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/182) — 검토 대기 · PR #182 · `5a1f885`
 * 2026-11-20 **Review**: [\[Paper Review\] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/181) — 병합 완료 · PR #181 · `4bd6d37`
 * 2026-11-20 **Review**: [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/180) — 병합 완료 · PR #180 · `ff23e6f`
 * 2026-11-20 **Review**: [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/179) — 병합 완료 · PR #179 · `25c4775`
