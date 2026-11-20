@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/180) — 검토 대기 · Self-Direction이 실패한 실행에서 교정 예제를 만들고 저랭크 어댑터로 저장한 뒤 재사용하는 과정을, 반복 실패·전이·보존 실험과 함께 분석합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](2026/2026-11-20-hermes-dev-primitives-review.md) - HERMES가 파일별 추론 역할과 직접 메시지, 실행 진단을 연결하는 방법을 살펴보고, 역할별 모델 배정과 비용·성능 및 구성요소 대조 실험을 분석합니다.
