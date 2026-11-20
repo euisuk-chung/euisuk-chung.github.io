@@ -62,6 +62,16 @@ visual_sources:
     modifications: "원문 그림 부분 상세 영역 크롭, 내용과 라벨 변경 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/q2IRdpNn-Ac"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=q2IRdpNn-Ac">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 코딩 에이전트가 함수 하나를 고쳤는데, 그 함수를 부르는 코드와 설정 파일, 테스트는 그대로라면 작업이 끝났다고 보기 어렵습니다. 저장소가 커질수록 에이전트는 여러 파일에 흩어진 상태와 의존성을 다시 읽고 연결해야 합니다. **HERMES**는 이 부담을 하나의 긴 대화에 모으는 대신, 각 파일에 그 파일을 읽고 수정하는 추론 역할을 붙입니다. 논문은 이 단위를 **Dev-Primitive**, 즉 개발 구성요소에 결합된 실행 가능한 추론 인터페이스라고 부릅니다. [§1][s1]
