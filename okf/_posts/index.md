@@ -1,13 +1,8 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/182) — 검토 대기 · 에이전트 위임 실패를 MANDATE의 23개 유형으로 구분하고, Reddit 보고·73명 사용자 연구·연구 성숙도 분석을 통해 결과의 성공과 수행 방식의 차이를 살펴봅니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Paper Review] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](2026/2026-11-21-babysitting-ai-agents-review.md) - 에이전트 위임 실패를 MANDATE의 23개 유형으로 구분하고, Reddit 보고·73명 사용자 연구·연구 성숙도 분석을 통해 결과의 성공과 수행 방식의 차이를 살펴봅니다.
 * [[Paper Review] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](2026/2026-11-20-hermes-dev-primitives-review.md) - HERMES가 파일별 추론 역할과 직접 메시지, 실행 진단을 연결하는 방법을 살펴보고, 역할별 모델 배정과 비용·성능 및 구성요소 대조 실험을 분석합니다.
 * [[Repo Review] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](2026/2026-11-20-ecc-agent-harness-review.md) - ECC의 도구 이벤트 처리와 세션 복원, 선택적 패턴 추출 및 Memory Vault를 고정 코드로 따라가며 지침과 실제 실행의 경계를 살펴봅니다.
 * [[Paper Review] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](2026/2026-11-19-self-direction-lasting-lessons-review.md) - Self-Direction이 실패한 실행에서 교정 예제를 만들고 저랭크 어댑터로 저장한 뒤 재사용하는 과정을, 반복 실패·전이·보존 실험과 함께 분석합니다.

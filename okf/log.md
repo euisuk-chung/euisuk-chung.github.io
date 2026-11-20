@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-21 **Review**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/182) — 검토 대기 · PR #182 · `5a1f885`
+* 2026-11-21 **Review**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/182) — 병합 완료 · PR #182 · `5a1f885`
 * 2026-11-20 **Review**: [\[Paper Review\] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/181) — 병합 완료 · PR #181 · `4bd6d37`
 * 2026-11-20 **Review**: [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/180) — 병합 완료 · PR #180 · `ff23e6f`
 * 2026-11-20 **Review**: [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/179) — 병합 완료 · PR #179 · `25c4775`
@@ -204,6 +204,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-21 **Creation**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](_posts/2026/2026-11-21-babysitting-ai-agents-review.md) — `545ee8f`
 * 2026-11-20 **Update**: [\[Paper Review\] HERMES — 파일별 추론과 실행 진단으로 코딩 에이전트를 연결하기](_posts/2026/2026-11-20-hermes-dev-primitives-review.md) — `bf7908f`
 * 2026-11-20 **Update**: [\[Paper Review\] Self-Direction — 에이전트의 실수를 어댑터에 저장하고 다시 쓰는 방법](_posts/2026/2026-11-19-self-direction-lasting-lessons-review.md) — `8c710a3`
 * 2026-11-20 **Creation**: [\[Repo Review\] ECC — 스킬과 훅, 기억을 연결하는 코딩 에이전트의 작업 환경](_posts/2026/2026-11-20-ecc-agent-harness-review.md) — `c9ba62f`
