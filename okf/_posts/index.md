@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/184) — 검토 대기 · TrustGraph의 온톨로지 기반 지식 추출과 그래프 탐색, 노드별 조회 정책 및 출처 기록이 연결되는 과정을 고정 커밋의 코드로 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](2026/2026-11-21-babysitting-ai-agents-review.md) - 에이전트 위임 실패를 MANDATE의 23개 유형으로 구분하고, Reddit 보고·73명 사용자 연구·연구 성숙도 분석을 통해 결과의 성공과 수행 방식의 차이를 살펴봅니다.
