@@ -72,6 +72,16 @@ visual_sources:
     modifications: "원문 그림 영역 크롭, 내용·라벨 변경 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/qRtqwWHDKAs"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=qRtqwWHDKAs">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 에이전트가 코드를 완성했다고 말했는데 실제 파일은 비어 있거나, 수정할 곳을 정확히 지정했는데 관계없는 파일까지 고친 경험이 있을 수 있습니다. 최종 결과물이 그럴듯하더라도 사용자는 변경 내역을 확인하고, 권한을 다시 설명하고, 끝나지 않는 실행을 중단해야 합니다. **Babysitting AI Agents**는 이런 상황을 모델의 정답률과 다른 문제로 다룹니다. 사용자가 일을 맡기면서 기대했던 **수행 방식**을 에이전트가 어기는 현상을 *agentic delegation failure*, 즉 에이전트 위임 실패라고 정의합니다. [§1][s1]
