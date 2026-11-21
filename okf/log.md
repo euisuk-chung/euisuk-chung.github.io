@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/185) — 검토 대기 · PR #185 · `3788502`
 * 2026-11-22 **Review**: [\[Repo Review\] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/184) — 병합 완료 · PR #184 · `54cc82c`
 * 2026-11-21 **Review**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/183) — 병합 완료 · PR #183 · `8ba3273`
 * 2026-11-21 **Review**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/182) — 병합 완료 · PR #182 · `5a1f885`

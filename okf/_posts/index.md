@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/185) — 검토 대기 · 기억 시스템이 원문 RAG보다 새로 맞힌 질문과 놓친 질문을 분리하고, 정보 보존·접근성·백본 변화 및 원문 복구 실험으로 기억의 순가치를 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](2026/2026-11-22-trustgraph-review.md) - TrustGraph의 온톨로지 기반 지식 추출과 그래프 탐색, 노드별 조회 정책 및 출처 기록이 연결되는 과정을 고정 커밋의 코드로 살펴봅니다.
