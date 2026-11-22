@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-23 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/192) — 검토 대기 · PR #192 · `866e44d`
+* 2026-11-23 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/192) — 병합 완료 · PR #192 · `866e44d`
 * 2026-11-23 **Review**: [\[Repo Review\] Cua — AI에게 컴퓨터를 건네기 전에 필요한 실행 환경과 좌표의 약속](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/191) — 병합 완료 · PR #191 · `4173613`
 * 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/186) — 병합 완료 · PR #186 · `662aea1`
 * 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/185) — 병합 완료 · PR #185 · `3788502`
@@ -210,6 +210,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-23 **Creation**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](_posts/2026/2026-11-23-memoproagent-review.md) — `195e9bd`
 * 2026-11-23 **Creation**: [\[Repo Review\] Cua — AI에게 컴퓨터를 건네기 전에 필요한 실행 환경과 좌표의 약속](_posts/2026/2026-11-23-cua-review.md) — `4c0e7a7`
 * 2026-11-22 **Update**: [\[개념\] P=NP가 증명되면 무슨 일이 생길까요 — Y와 N, 그리고 암호의 운명](_posts/2026/2026-11-22-p-versus-np-explained.md) — `3c4579c`
 * 2026-11-22 **Update**: [\[개념\] 리만 가설이 풀리면 무엇이 달라질까요 — 소수의 불규칙함에 생긴 보장](_posts/2026/2026-11-22-riemann-hypothesis-explained.md) — `ed870bc`
