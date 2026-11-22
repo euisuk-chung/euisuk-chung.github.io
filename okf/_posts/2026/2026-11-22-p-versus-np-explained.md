@@ -41,6 +41,16 @@ visual_sources:
     caption: "P=NP와P≠NP의 두 가정에 따른 집합 관계. 실제 결론을 확정한 그림 아님."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/v7M7GrMdtsk"
+    title="개념 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=v7M7GrMdtsk">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 답을 확인하기 쉽다면, 답을 찾기도 쉬울까요
 
 [리만 가설의 증명 소식](/2026/11/22/riemann-hypothesis-explained/)을 접하고 나면 이런 질문이 따라옵니다. “오랫동안 풀리지 않던 문제가 해결됐다면, P=NP도 증명되는 것 아닐까? 그러면 암호가 전부 깨지는 걸까?”
