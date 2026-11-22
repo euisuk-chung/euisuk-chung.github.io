@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-23 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/192) — 검토 대기 · PR #192 · `866e44d`
 * 2026-11-23 **Review**: [\[Repo Review\] Cua — AI에게 컴퓨터를 건네기 전에 필요한 실행 환경과 좌표의 약속](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/191) — 병합 완료 · PR #191 · `4173613`
 * 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/186) — 병합 완료 · PR #186 · `662aea1`
 * 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/185) — 병합 완료 · PR #185 · `3788502`
