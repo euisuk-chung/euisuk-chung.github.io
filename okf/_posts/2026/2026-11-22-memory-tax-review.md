@@ -103,6 +103,16 @@ visual_sources:
     modifications: "원문 해당 패널 상세 크롭, 전체 그림은 별도로 유지, 내용·라벨 변경 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/2tgQCjs_CdU"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=2tgQCjs_CdU">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 에이전트가 예전 대화를 기억하게 만들 때 흔히 원문을 요약하거나, 중요한 사실만 추출하거나, 관계를 그래프로 연결합니다. 그런데 정리한 기억을 읽게 한 에이전트가 원래 대화를 검색한 에이전트보다 더 자주 틀린다면, 그 정리는 어떤 가치를 만든 것일까요? **Memory Tax**는 기억 시스템의 성능을 다른 기억 시스템과 비교하는 데서 한 걸음 더 들어가, **원문을 직접 검색하는 기준선에 무엇을 더하고 무엇을 잃었는지** 묻습니다.
