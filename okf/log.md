@@ -208,6 +208,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-22 **Creation**: [\[개념\] 리만 가설이 풀리면 무엇이 달라질까요 — 소수의 불규칙함에 생긴 보장](_posts/2026/2026-11-22-riemann-hypothesis-explained.md) — `496314f`
 * 2026-11-22 **Update**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](_posts/2026/2026-11-22-memory-tax-review.md) — `7a4e2e3`
 * 2026-11-22 **Creation**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](_posts/2026/2026-11-22-memory-tax-review.md) — `ebd8080`
 * 2026-11-22 **Creation**: [\[Repo Review\] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](_posts/2026/2026-11-22-trustgraph-review.md) — `f204cba`
