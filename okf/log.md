@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/186) — 검토 대기 · PR #186 · `662aea1`
+* 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/186) — 병합 완료 · PR #186 · `662aea1`
 * 2026-11-22 **Review**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/185) — 병합 완료 · PR #185 · `3788502`
 * 2026-11-22 **Review**: [\[Repo Review\] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/184) — 병합 완료 · PR #184 · `54cc82c`
 * 2026-11-21 **Review**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/183) — 병합 완료 · PR #183 · `8ba3273`
@@ -208,6 +208,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-22 **Update**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](_posts/2026/2026-11-22-memory-tax-review.md) — `7a4e2e3`
 * 2026-11-22 **Creation**: [\[Paper Review\] Memory Tax — 기억을 만들면서 무엇을 얻고 잃을까요](_posts/2026/2026-11-22-memory-tax-review.md) — `ebd8080`
 * 2026-11-22 **Creation**: [\[Repo Review\] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](_posts/2026/2026-11-22-trustgraph-review.md) — `f204cba`
 * 2026-11-21 **Update**: [\[Paper Review\] Babysitting AI Agents — 일을 맡겼는데 왜 계속 지켜봐야 할까요](_posts/2026/2026-11-21-babysitting-ai-agents-review.md) — `b2c5570`
