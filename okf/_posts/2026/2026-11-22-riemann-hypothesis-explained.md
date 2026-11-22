@@ -39,6 +39,16 @@ visual_sources:
     caption: "임계선과 설명용 영점 배치. 실제 영점 데이터 아님."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/7wasivDJoh4"
+    title="개념 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=7wasivDJoh4">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 리만 가설이 풀리면, 소수에 대해 무엇을 알게 될까요
 
 “167년 동안 풀리지 않던 리만 가설이 증명됐다.” 소식은 큰데, 정작 무엇을 알아낸 것인지 설명하려고 하면 금방 막힙니다. 소수의 비밀을 전부 알아냈다는 뜻일까요? 앞으로는 다음 소수를 바로 찾을 수 있을까요?
