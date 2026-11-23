@@ -25,10 +25,10 @@ sources:
 status: "stable"
 year: "2026"
 visual_sources:
-  - path: "/img/reviews/2026/rooftop-chill-intro/rooftop-home-current.jpg"
+  - path: "/img/reviews/2026/rooftop-chill-intro/rooftop-home-20261123.jpg"
     kind: "service-screenshot"
     source_url: "https://rooftop-chill.lovable.app/"
-    caption: "픽셀 캐릭터와 난간, 자판기, 눈인사와 기지개 버튼이 있는 메인 옥상."
+    caption: "쉼터 이동과 꾸미기, 작은 창 버튼이 있는 현재 메인 옥상. 2026년 11월 23일 캡처."
   - path: "/img/reviews/2026/rooftop-chill-intro/sansa-courtyard.jpg"
     kind: "service-screenshot"
     source_url: "https://sansatemple.com/"
@@ -55,7 +55,7 @@ visual_sources:
 
 처음 소개한 뒤 쉬어 갈 장소와 게임, 꾸미기를 더했습니다. **2026년 11월 23일 기준**으로 현재 서비스에 맞춰 내용을 보충했습니다.
 
-![노을이 지는 옥상의 캐릭터와 자판기, 화면 아래의 난간 기대기·눈인사·기지개 버튼]({{ '/img/reviews/2026/rooftop-chill-intro/rooftop-home-current.jpg' | relative_url }})
+![노을이 지는 옥상과 캐릭터, 쉼터 이동·작은 창·꾸미기 버튼, 화면 아래의 쉬는 시간 조작부]({{ '/img/reviews/2026/rooftop-chill-intro/rooftop-home-20261123.jpg' | relative_url }})
 
 난간 너머로 노을이 보이는 한숨두숨의 메인 옥상. [옥상에 올라가기](https://rooftop-chill.lovable.app/)
 {: .caption}

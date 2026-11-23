@@ -26,10 +26,10 @@ visual_sources:
     kind: "service-screenshot"
     source_url: "https://saju-insights.lovable.app/?lang=ko"
     caption: "50개 기업 디렉터리와 운의 흐름·기록 메뉴가 있는 첫 화면. 2026년 11월 22일 캡처."
-  - path: "/img/reviews/2026/saju-orbit-intro/lisa-november.jpg"
+  - path: "/img/reviews/2026/saju-orbit-intro/lisa-november-20261123.jpg"
     kind: "service-screenshot"
     source_url: "https://saju-insights.lovable.app/?edition=period&view=month&year=2026&month=11&leader=amd&lang=ko"
-    caption: "리사 수의 2026년 11월 월운. 입동을 기준으로 두 구간을 보여 줍니다."
+    caption: "리사 수의 2026년 11월 월운. 오르비 해설 작성일과 입동 전후 구간. 2026년 11월 23일 캡처."
   - path: "/img/reviews/2026/saju-orbit-intro/luck-trend-20261122.jpg"
     kind: "service-screenshot"
     source_url: "https://saju-insights.lovable.app/?edition=period&view=month&year=2026&month=11&leader=nvda&lang=ko"
@@ -67,9 +67,9 @@ visual_sources:
 
 예를 들어 리사 수의 2026년 11월 월운은 입동 전 **식신**을 ‘익힌 것을 결과로 내놓는 시기’로 풉니다. 일·커리어운에는 시제품을 팀이 이어서 운영할 수 있게 다듬는 장면이 나옵니다. 입동 후에는 **상관**으로 바뀌고, 기존 절차를 점검하고 작은 시연으로 새 방식을 보여 주는 이야기가 이어집니다.
 
-![리사 수의 2026년 11월 월운에서 입동 전 식신과 입동 후 상관, 일·커리어 해설을 보여 주는 화면]({{ '/img/reviews/2026/saju-orbit-intro/lisa-november.jpg' | relative_url }})
+![리사 수의 2026년 11월 월운에 표시된 오르비 해설 작성일과 입동 전 식신·입동 후 상관 구간]({{ '/img/reviews/2026/saju-orbit-intro/lisa-november-20261123.jpg' | relative_url }})
 
-리사 수의 11월 월운. 입동 전후의 구간과 월초 해설을 한 화면에서 볼 수 있습니다. [리사 수 월운 열기](https://saju-insights.lovable.app/?edition=period&view=month&year=2026&month=11&leader=amd&lang=ko)
+리사 수의 11월 월운. 오르비 해설 작성일과 입동 전후 구간을 확인할 수 있습니다. [리사 수 월운 열기](https://saju-insights.lovable.app/?edition=period&view=month&year=2026&month=11&leader=amd&lang=ko)
 {: .caption}
 
 여기에 AI 해설가 **오르비**의 글을 더했습니다. 계산에 따라 준비한 기본 해설 위에 월간·연간·향후 3년 총운과 고전 심층 해설을 한국어와 영어로 미리 써 두는 방식입니다. 매달 10일에 이번 달과 다음 달 해설 등을 갱신하도록 구성했습니다. 그달의 절입이 지난 뒤에 새 월운을 반영하려는 일정입니다. 해설에 등장하는 간지와 구간을 계산 결과와 대조하고, 해당 기간에 준비된 오르비 글이 없으면 기본 풀이를 보여 줍니다. 새 글을 생성하는 버튼을 누르거나 기다릴 필요 없이 준비된 풀이를 읽습니다. [기본 풀이와 오르비 해설의 구분](https://saju-insights.lovable.app/methodology?lang=ko)
