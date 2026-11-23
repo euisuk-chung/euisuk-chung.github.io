@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-24 **Review**: [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/195) — 검토 대기 · PR #195 · `3d2d18a`
+* 2026-11-24 **Review**: [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/195) — 병합 완료 · PR #195 · `3d2d18a`
 * 2026-11-24 **Review**: [\[Repo Review\] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/194) — 병합 완료 · PR #194 · `22cfcb5`
 * 2026-11-23 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/192) — 병합 완료 · PR #192 · `866e44d`
 * 2026-11-23 **Review**: [\[Repo Review\] Cua — AI에게 컴퓨터를 건네기 전에 필요한 실행 환경과 좌표의 약속](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/191) — 병합 완료 · PR #191 · `4173613`
@@ -212,6 +212,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-24 **Creation**: [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](_posts/2026/2026-11-24-system-one-rerankers-review.md) — `54f6e63`
 * 2026-11-24 **Creation**: [\[Repo Review\] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](_posts/2026/2026-11-24-claude-code-security-review.md) — `09589bb`
 * 2026-11-23 **Update**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `eaa567d`
 * 2026-11-23 **Update**: [관심 있는 기업인의 사주를 찾아보는 서비스, 사주 오빗](_posts/2026/2026-11-15-saju-orbit-intro.md) — `eaa567d`
