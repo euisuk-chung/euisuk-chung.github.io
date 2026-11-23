@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/194) — 검토 대기 · Claude Code Security Reviewer가 PR 변경을 분석하고 규칙·API 필터를 거쳐 댓글을 만드는 경로를 추적하며, 발견 건수와 분석 완료·CI 상태를 구분합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](2026/2026-11-23-memoproagent-review.md) - 긴 개인 기억에서 알림 근거를 찾는 그래프와 개입 필요를 거르는 게이트를 결합해, 내용·시점·반복을 함께 평가하는 선제적 보조 에이전트를 살펴봅니다.
