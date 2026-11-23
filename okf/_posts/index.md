@@ -3,11 +3,12 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Repo Review\] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/194) — 검토 대기 · Claude Code Security Reviewer가 PR 변경을 분석하고 규칙·API 필터를 거쳐 댓글을 만드는 경로를 추적하며, 발견 건수와 분석 완료·CI 상태를 구분합니다.
+* [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/195) — 검토 대기 · 같은 Qwen 기반의 판단 모델과 전용 리랭커를 비교하며, 검색 순위·확률 보정·문서 선택이 왜 서로 다른 평가인지 실험 조건과 함께 살펴봅니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
+* [[Repo Review] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](2026/2026-11-24-claude-code-security-review.md) - Claude Code Security Reviewer가 PR 변경을 분석하고 규칙·API 필터를 거쳐 댓글을 만드는 경로를 추적하며, 발견 건수와 분석 완료·CI 상태를 구분합니다.
 * [[Paper Review] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](2026/2026-11-23-memoproagent-review.md) - 긴 개인 기억에서 알림 근거를 찾는 그래프와 개입 필요를 거르는 게이트를 결합해, 내용·시점·반복을 함께 평가하는 선제적 보조 에이전트를 살펴봅니다.
 * [[Repo Review] Cua — AI에게 컴퓨터를 건네기 전에 필요한 실행 환경과 좌표의 약속](2026/2026-11-23-cua-review.md) - Cua의 실행 환경 생성부터 MCP 대상 선택, 화면 좌표 변환과 입력 전달까지를 고정 커밋으로 추적하고 SDK·Spaces·Driver의 역할과 라이선스 경계를 살펴봅니다.
 * [[Repo Review] TrustGraph — 문서의 관계를 읽고, 답변의 근거와 열람 범위를 나누기](2026/2026-11-22-trustgraph-review.md) - TrustGraph의 온톨로지 기반 지식 추출과 그래프 탐색, 노드별 조회 정책 및 출처 기록이 연결되는 과정을 고정 커밋의 코드로 살펴봅니다.
