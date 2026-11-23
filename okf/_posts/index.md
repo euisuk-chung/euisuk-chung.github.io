@@ -20,11 +20,11 @@
 * [[Paper Review] Unbundling Multimodal Vision Encoding — 시각 전용 연산은 어디에 둘까](2026/2026-11-16-unbundling-multimodal-vision-encoding-review.md) - 멀티모달 모델에서 시각 사전학습, 전용 파라미터, 융합 전 배치를 분리하고 동일 연산량에서 시각 이해와 응답 지연을 비교합니다.
 * [[Paper Review] 확신이 커질 때 사라지는 기울기 — Softmax와 Cross-Entropy의 수치 오류](2026/2026-11-16-softmax-cross-entropy-fix-review.md) - 소프트맥스의 반올림이 분류와 지식 증류의 기울기를 어떻게 바꾸는지, 안정적인 계산식과 모듈러 산술 실험을 따라 살펴봅니다.
 * [[Paper Review] Universal Manipulation Interface — 손에 든 그리퍼의 시연을 로봇에게 옮기는 법](2026/2026-11-15-universal-manipulation-interface-review.md) - 손에 든 그리퍼로 수집한 영상과 동작을 로봇 정책에 옮기는 UMI의 설계와, 투척·양팔 조작·새 환경 평가에서 각 설계가 만든 차이를 살펴봅니다.
-* [관심 있는 기업인의 사주를 찾아보는 서비스, 사주 오빗](2026/2026-11-15-saju-orbit-intro.md) - 사주 오빗을 만든 계기와 공개 출생 자료로 기업인의 월간·연간 풀이를 구성한 방법을 소개합니다.
+* [관심 있는 기업인의 사주를 찾아보는 서비스, 사주 오빗](2026/2026-11-15-saju-orbit-intro.md) - 사주 오빗을 만든 계기부터 50개 기업 디렉터리, 다섯 고전 해설과 운의 흐름 그래프, 사건을 돌아보는 기록까지 소개합니다.
 * [[Paper Review] Flash ALOHA — 사람 손으로 가르친 속도를 로봇이 따라가는 법](2026/2026-11-15-flash-aloha-review.md) - 로봇 팔을 직접 움직여 빠른 시연을 기록하고, 손 영역 마스킹과 행동 구간 평활화로 자율 실행까지 연결한 양팔 조작 시스템을 살펴봅니다.
 * [[Paper Review] How Depth Growth and Looping Shape In-Context Learning in Language Models](2026/2026-11-15-depth-growth-looping-icl-review.md) - 트랜스포머의 층을 학습 중 복제하거나 반복 적용할 때 문맥 활용이 어떻게 달라지는지, 토큰 손실·예시 학습·어텐션 헤드 실험으로 살펴봅니다.
 * [[Paper Review] Épi: 세션을 이어가며 검증 가능한 연구 결과를 만드는 에이전트](2026/2026-11-14-epi-research-agent-review.md) - Épi가 분기·계층형 기억·고정 검증으로 세션을 잇고, 수학 기록과 알고리즘 설계 성과를 어떤 기준으로 입증하는지 살펴봅니다.
-* [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 아이디어를 얻어, 닉네임으로 수다를 나누고 게임과 간식 뽑기를 즐기는 온라인 회사 옥상 한숨두숨을 만들었습니다.
+* [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](2026/2026-11-13-rooftop-chill-intro.md) - 온라인 절 산사에서 떠올린 회사 옥상 한숨두숨에 쉼터와 기록형 게임, 간식·펫·꾸미기 뽑기를 더한 모습을 소개합니다.
 * [[Paper Review] FDE-Gym: 고객의 요청을 구현한 뒤 무엇을 평가해야 할까요?](2026/2026-11-13-fde-gym-paper-review.md) - 고객사에 배치된 에이전트가 숨은 제약을 찾아 운영 시스템을 개선할 때, 업무 지표와 연락 비용을 FDE-Gym이 어떻게 측정하는지 살펴봅니다.
 * [[Repo Review] Collaborative Intelligence, 혼자 풀 수 있는 문제에서 팀워크를 어떻게 채점할까?](2026/2026-11-13-collaborative-intelligence-repo-review.md) - Collaborative Intelligence가 같은 과제를 혼자, 평상시 팀, 문제가 생긴 팀으로 나눠 실행하고 대화와 행동 기록을 점수로 바꾸는 과정을 추적합니다.
 * [[Repo Review] Single Agent Loop Kit, 서브에이전트의 역할을 옮기고 회귀를 확인하는 법](2026/2026-11-12-single-agent-loop-kit-review.md) - Anthropic의 Single Agent Loop Kit에서 서브에이전트 전환 절차, 스킬과 도구를 호출하는 Python 루프, 고객 지원 예제의 전후 평가를 따라갑니다.

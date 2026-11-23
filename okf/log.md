@@ -210,6 +210,8 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-23 **Update**: [잠깐 옥상 갈래요? 직장인을 위한 온라인 쉼터 한숨두숨](_posts/2026/2026-11-13-rooftop-chill-intro.md) — `eaa567d`
+* 2026-11-23 **Update**: [관심 있는 기업인의 사주를 찾아보는 서비스, 사주 오빗](_posts/2026/2026-11-15-saju-orbit-intro.md) — `eaa567d`
 * 2026-11-23 **Creation**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](_posts/2026/2026-11-23-memoproagent-review.md) — `195e9bd`
 * 2026-11-23 **Creation**: [\[Repo Review\] Cua — AI에게 컴퓨터를 건네기 전에 필요한 실행 환경과 좌표의 약속](_posts/2026/2026-11-23-cua-review.md) — `4c0e7a7`
 * 2026-11-22 **Update**: [\[개념\] P=NP가 증명되면 무슨 일이 생길까요 — Y와 N, 그리고 암호의 운명](_posts/2026/2026-11-22-p-versus-np-explained.md) — `3c4579c`
