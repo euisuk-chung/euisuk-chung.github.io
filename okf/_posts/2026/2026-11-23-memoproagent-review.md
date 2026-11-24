@@ -63,6 +63,16 @@ visual_sources:
     modifications: "기술적 비평에 필요한 핵심 도식 하나의 영역만 크롭 인용; 라벨·구조 변경 없음"
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/d0re9oJgjWM"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=d0re9oJgjWM">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 마트에서 탄산수를 보고 있다고 해 보겠습니다. 집에 탄산수가 있는지 물었다면, AI는 과거 기록을 찾아 답하면 됩니다. 그런데 아무것도 묻지 않았는데 AI가 먼저 “어제 마지막 병을 마셨으니 지금 보충하세요”라고 알려 주려면 어떨까요? 탄산수가 보인다는 사실만으로는 부족합니다. 집에 남은 양을 기억해야 하고, 지금 말을 걸어도 되는지 판단해야 하며, 같은 말을 반복하지도 않아야 합니다.
