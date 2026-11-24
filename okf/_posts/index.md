@@ -3,11 +3,12 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/198) — 검토 대기 · Trivy의 이미지 분석·OS별 취약점 매칭·필터·보고 흐름을 따라가며, 패키지 식별과 알려진 취약점 판정 및 종료 코드의 차이를 설명합니다.
+* [\[Paper Review\] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/199) — 검토 대기 · 혼합 업무에서 경험의 기억 방식과 공유 클러스터를 함께 고르는 Routed CL을 살펴보고, 정규화 보상·비용·반복 실행의 조건을 구분합니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
+* [[Repo Review] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](2026/2026-11-25-trivy-review.md) - Trivy의 이미지 분석·OS별 취약점 매칭·필터·보고 흐름을 따라가며, 패키지 식별과 알려진 취약점 판정 및 종료 코드의 차이를 설명합니다.
 * [[Paper Review] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](2026/2026-11-24-system-one-rerankers-review.md) - 같은 Qwen 기반의 판단 모델과 전용 리랭커를 비교하며, 검색 순위·확률 보정·문서 선택이 왜 서로 다른 평가인지 실험 조건과 함께 살펴봅니다.
 * [[Repo Review] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](2026/2026-11-24-claude-code-security-review.md) - Claude Code Security Reviewer가 PR 변경을 분석하고 규칙·API 필터를 거쳐 댓글을 만드는 경로를 추적하며, 발견 건수와 분석 완료·CI 상태를 구분합니다.
 * [[Paper Review] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](2026/2026-11-23-memoproagent-review.md) - 긴 개인 기억에서 알림 근거를 찾는 그래프와 개입 필요를 거르는 게이트를 결합해, 내용·시점·반복을 함께 평가하는 선제적 보조 에이전트를 살펴봅니다.
