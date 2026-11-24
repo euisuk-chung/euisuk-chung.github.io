@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/198) — 검토 대기 · Trivy의 이미지 분석·OS별 취약점 매칭·필터·보고 흐름을 따라가며, 패키지 식별과 알려진 취약점 판정 및 종료 코드의 차이를 설명합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](2026/2026-11-24-system-one-rerankers-review.md) - 같은 Qwen 기반의 판단 모델과 전용 리랭커를 비교하며, 검색 순위·확률 보정·문서 선택이 왜 서로 다른 평가인지 실험 조건과 함께 살펴봅니다.

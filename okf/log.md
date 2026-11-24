@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-25 **Review**: [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/198) — 검토 대기 · PR #198 · `5b4e855`
 * 2026-11-24 **Review**: [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/197) — 병합 완료 · PR #197 · `c32e3ed`
 * 2026-11-24 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/196) — 병합 완료 · PR #196 · `a6d41ad`
 * 2026-11-24 **Review**: [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/195) — 병합 완료 · PR #195 · `3d2d18a`
