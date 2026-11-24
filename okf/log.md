@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-24 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/196) — 검토 대기 · PR #196 · `a6d41ad`
 * 2026-11-24 **Review**: [\[Paper Review\] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/195) — 병합 완료 · PR #195 · `3d2d18a`
 * 2026-11-24 **Review**: [\[Repo Review\] Claude Code Security Reviewer — 보안 후보가 PR 댓글이 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/194) — 병합 완료 · PR #194 · `22cfcb5`
 * 2026-11-23 **Review**: [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/192) — 병합 완료 · PR #192 · `866e44d`

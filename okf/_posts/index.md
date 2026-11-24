@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Paper Review\] MemoProAgent — 기억을 찾는 AI가 언제 말을 걸어야 할까요](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/196) — 검토 대기 · 긴 개인 기억에서 알림 근거를 찾는 그래프와 개입 필요를 거르는 게이트를 결합해, 내용·시점·반복을 함께 평가하는 선제적 보조 에이전트를 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](2026/2026-11-24-system-one-rerankers-review.md) - 같은 Qwen 기반의 판단 모델과 전용 리랭커를 비교하며, 검색 순위·확률 보정·문서 선택이 왜 서로 다른 평가인지 실험 조건과 함께 살펴봅니다.
