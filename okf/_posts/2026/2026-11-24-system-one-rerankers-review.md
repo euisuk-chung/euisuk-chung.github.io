@@ -52,6 +52,16 @@ visual_sources:
     modifications: "3·4·6절의 평가 관계를 리뷰어가 재작성. 측정값 없음."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/wmNmTriOqcE"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=wmNmTriOqcE">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 검색 결과 100개를 가져온 뒤, 그중 질문에 가장 잘 답하는 문서를 위로 올리는 모델을 **리랭커(reranker)**라고 합니다. RAG에서 검색한 자료를 답변 모델에 넘기기 전에 거치는 정리 단계입니다. 그런데 어떤 모델이 문서마다 “이 문서가 답일 확률은 90%”처럼 숫자를 준다면, 그 숫자로 정렬해도 좋은 리랭커가 될까요?
