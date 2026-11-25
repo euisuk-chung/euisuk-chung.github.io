@@ -3,11 +3,12 @@
 <!-- okf-review-index:start -->
 ## 검토 중인 리뷰
 
-* [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/202) — 검토 대기 · ClamAV의 DB 준비·파일 및 압축 재귀 검사·결과 집계를 따라가며, 탐지 판정과 처리 오류 및 종료 코드의 차이를 설명합니다.
+* [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/203) — 검토 대기 · 에이전트의 쓰기와 업무 포기 직전에 기록 기반 코드 검사와 확률 판단을 결합하는 JevAct를 살펴보고, 반복 성공률·수정 예산·실험 조건의 의미를 구분합니다.
 <!-- okf-review-index:end -->
 
 ## 2026
 
+* [[Repo Review] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](2026/2026-11-26-clamav-review.md) - ClamAV의 DB 준비·파일 및 압축 재귀 검사·결과 집계를 따라가며, 탐지 판정과 처리 오류 및 종료 코드의 차이를 설명합니다.
 * [[Repo Review] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](2026/2026-11-25-trivy-review.md) - Trivy의 이미지 분석·OS별 취약점 매칭·필터·보고 흐름을 따라가며, 패키지 식별과 알려진 취약점 판정 및 종료 코드의 차이를 설명합니다.
 * [[Paper Review] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](2026/2026-11-25-routed-continual-learning-review.md) - 혼합 업무에서 경험의 기억 방식과 공유 클러스터를 함께 고르는 Routed CL을 살펴보고, 정규화 보상·비용·반복 실행의 조건을 구분합니다.
 * [[Paper Review] System One 모델은 더 좋은 리랭커일까요 — 순위와 확률을 나눠 본 비교](2026/2026-11-24-system-one-rerankers-review.md) - 같은 Qwen 기반의 판단 모델과 전용 리랭커를 비교하며, 검색 순위·확률 보정·문서 선택이 왜 서로 다른 평가인지 실험 조건과 함께 살펴봅니다.
