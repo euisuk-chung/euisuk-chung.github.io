@@ -56,6 +56,16 @@ visual_sources:
     modifications: "PDF6쪽 Figure1그림영역 크롭, 라벨·화살표 원본 보존. 비평에 필요한 최소 인용."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/P2lC0rMwu2s"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=P2lC0rMwu2s">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 AI 에이전트가 지난번에 배운 내용을 다음 작업에서 활용하려면 무엇을 남겨야 할까요? 코딩 작업에는 저장소 구조와 명령 기록이 유용할 수 있지만, 매출 예측에는 숫자와 시간에 따른 변화가 더 중요할 수 있습니다. 두 경험을 하나의 긴 대화 기록에 넣는다고 필요한 지식이 저절로 정리되지는 않습니다.
