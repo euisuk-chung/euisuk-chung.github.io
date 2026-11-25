@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-26 **Review**: [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/201) — 검토 대기 · PR #201 · `30458c9`
 * 2026-11-25 **Review**: [\[Paper Review\] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/200) — 병합 완료 · PR #200 · `a34a8c3`
 * 2026-11-25 **Review**: [\[Paper Review\] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/199) — 병합 완료 · PR #199 · `58fa20a`
 * 2026-11-25 **Review**: [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/198) — 병합 완료 · PR #198 · `5b4e855`
