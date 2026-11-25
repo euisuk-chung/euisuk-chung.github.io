@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/203) — 검토 대기 · PR #203 · `2cbc318`
+* 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/203) — 병합 완료 · PR #203 · `2cbc318`
 * 2026-11-26 **Review**: [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/202) — 병합 완료 · PR #202 · `4d8d0ab`
 * 2026-11-26 **Review**: [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/201) — 병합 완료 · PR #201 · `30458c9`
 * 2026-11-25 **Review**: [\[Paper Review\] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/200) — 병합 완료 · PR #200 · `a34a8c3`
@@ -220,6 +220,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-26 **Creation**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](_posts/2026/2026-11-26-jevact-decision-gate-review.md) — `3f5639f`
 * 2026-11-26 **Creation**: [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](_posts/2026/2026-11-26-clamav-review.md) — `b0d73be`
 * 2026-11-26 **Update**: [\[Repo Review\] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](_posts/2026/2026-11-25-trivy-review.md) — `c3386ea`
 * 2026-11-25 **Update**: [\[Paper Review\] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](_posts/2026/2026-11-25-routed-continual-learning-review.md) — `4dde41a`
