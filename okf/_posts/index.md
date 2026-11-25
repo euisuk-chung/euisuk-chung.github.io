@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] Routed Continual Learning — 경험을 누구와 어떤 형태로 나눌지 고르는 기억](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/200) — 검토 대기 · 혼합 업무에서 경험의 기억 방식과 공유 클러스터를 함께 고르는 Routed CL을 살펴보고, 정규화 보상·비용·반복 실행의 조건을 구분합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Repo Review] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](2026/2026-11-25-trivy-review.md) - Trivy의 이미지 분석·OS별 취약점 매칭·필터·보고 흐름을 따라가며, 패키지 식별과 알려진 취약점 판정 및 종료 코드의 차이를 설명합니다.
