@@ -34,6 +34,16 @@ visual_sources:
     caption: "필터 후 발견 여부와 프로세스 종료 코드의 조건. 리뷰어 작성, 분석 커밋 기준."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/NU_tLyLwcdY"
+    title="레포 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=NU_tLyLwcdY">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 들어가며: 취약점 목록은 어디서 나올까요
 
 Trivy의 취약점 보고서에는 패키지 이름, CVE 번호, 설치된 버전과 수정 버전 등이 담깁니다. 이 목록은 소스 코드를 읽고 새로운 버그를 추론해서 만든 것일까요? 아니면 이미지 안의 구성 요소를 찾아 이미 알려진 보안 정보와 대조한 것일까요?
