@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/202) — 검토 대기 · ClamAV의 DB 준비·파일 및 압축 재귀 검사·결과 집계를 따라가며, 탐지 판정과 처리 오류 및 종료 코드의 차이를 설명합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Repo Review] Trivy — 이미지 속 패키지가 취약점 보고서가 되기까지](2026/2026-11-25-trivy-review.md) - Trivy의 이미지 분석·OS별 취약점 매칭·필터·보고 흐름을 따라가며, 패키지 식별과 알려진 취약점 판정 및 종료 코드의 차이를 설명합니다.
