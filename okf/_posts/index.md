@@ -1,13 +1,8 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/206) — 검토 대기 · 긴 작업 이력과 긴 원문을 짧은 작업 문맥으로 다루는 압축·선택적 읽기 실험을 따라가며, 정확도 예외와 실제 API 비용·가상 최적화 가격의 차이를 분석합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
+* [[Paper Review] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](2026/2026-11-27-short-context-compaction-review.md) - 긴 작업 이력과 긴 원문을 짧은 작업 문맥으로 다루는 압축·선택적 읽기 실험을 따라가며, 정확도 예외와 실제 API 비용·가상 최적화 가격의 차이를 분석합니다.
 * [[Repo Review] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](2026/2026-11-27-cloudflare-security-audit-skill-review.md) - Cloudflare security-audit-skill의 범위 장부·독립 검증·JSON 검사기를 따라가며, 기록의 일관성과 실제 취약점 실증의 경계를 설명합니다.
 * [[Paper Review] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](2026/2026-11-26-jevact-decision-gate-review.md) - 에이전트의 쓰기와 업무 포기 직전에 기록 기반 코드 검사와 확률 판단을 결합하는 JevAct를 살펴보고, 반복 성공률·수정 예산·실험 조건의 의미를 구분합니다.
 * [[Repo Review] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](2026/2026-11-26-clamav-review.md) - ClamAV의 DB 준비·파일 및 압축 재귀 검사·결과 집계를 따라가며, 탐지 판정과 처리 오류 및 종료 코드의 차이를 설명합니다.
