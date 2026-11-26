@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="470" viewBox="0 0 600 470" role="img" aria-labelledby="title desc">
+<title id="title">FHA, EoCC, SAC가 다음 행동에 넘기는 정보</title><desc id="desc">전체 이력을 누적하거나 임계값에서 압축하거나 매 행동 뒤 상태를 갱신하는 세 방식의 차이입니다. 파일과 환경은 대화창 바깥에 남습니다.</desc>
+<rect width="600" height="470" rx="18" fill="#f6f8fc"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#17243a">
+<text x="28" y="43" font-size="27" font-weight="700">다음 행동에 무엇을 넘길까요?</text>
+<rect x="24" y="66" width="552" height="91" rx="12" fill="#e7eefc"/>
+<text x="42" y="97" font-size="25" font-weight="700">FHA · 전부 누적</text>
+<text x="42" y="131" font-size="23">과제 + 이전 행동·관찰 전체 → 다음 행동</text>
+<rect x="24" y="172" width="552" height="106" rx="12" fill="#e1f2ed"/>
+<text x="42" y="205" font-size="25" font-weight="700">EoCC · 임계값에서 압축</text>
+<text x="42" y="240" font-size="23">과제 + 실행용 메모 → 새 대화에서 재개</text>
+<text x="42" y="266" font-size="19">임계값 전까지는 행동·관찰을 계속 누적합니다.</text>
+<rect x="24" y="293" width="552" height="106" rx="12" fill="#fff0d9"/>
+<text x="42" y="326" font-size="25" font-weight="700">SAC · 매 행동 뒤 갱신</text>
+<text x="42" y="361" font-size="23">과제 + 현재 상태 → 행동 1회 → 상태 갱신</text>
+<text x="42" y="387" font-size="19">새 대화는 갱신된 상태를 받아 이어갑니다.</text>
+<text x="28" y="435" font-size="22">대화가 바뀌어도 파일·작업 환경은 남습니다.</text>
+</g></svg>
