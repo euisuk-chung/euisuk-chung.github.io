@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+<style>text{font-family:Apple SD Gothic Neo,Noto Sans KR,sans-serif;fill:#17304b}.h{font-size:27px;font-weight:700}.m{font-size:24px;font-weight:700}.s{font-size:21px}.arrow{stroke:#34566f;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#34566f"/></marker></defs>
+<rect width="640" height="440" rx="18" fill="#f4f7fb"/>
+<title id="title">security-audit의 여섯 단계</title><desc id="desc">범위 장부를 만든 뒤 분담 조사하고, 후보를 독립 검증해 JSON으로 기록합니다. 최종 기록을 재검증한 뒤 보고서를 만듭니다. quick은 두 검증을 합칩니다.</desc>
+<text x="32" y="45" class="h">발견에서 보고까지, 역할을 나눕니다</text>
+<rect x="30" y="69" width="580" height="91" rx="12" fill="#e1edf9"/>
+<text x="50" y="105" class="m">1 지형 파악  →  2 분담 조사</text>
+<text x="50" y="137" class="s">아키텍처 · 범위 장부 · 조사 기록</text>
+<path d="M320 162V184" class="arrow"/>
+<rect x="30" y="190" width="580" height="91" rx="12" fill="#e1f3ed"/>
+<text x="50" y="226" class="m">3 후보 검증  →  4 JSON 기록</text>
+<text x="50" y="258" class="s">새 검증자가 반박 · 판정별 형식 검사</text>
+<path d="M320 283V305" class="arrow"/>
+<rect x="30" y="311" width="580" height="91" rx="12" fill="#eee7fa"/>
+<text x="50" y="347" class="m">5 기록 재검증  →  6 보고서</text>
+<text x="50" y="379" class="s">standard/deep은 별도 검증 · quick은 통합</text>
+<text x="32" y="428" font-size="18">문서가 정한 작업 절차 · 하나의 자동 스캐너 호출이 아닙니다</text>
+</svg>
