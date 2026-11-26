@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/205) — 검토 대기 · Cloudflare security-audit-skill의 범위 장부·독립 검증·JSON 검사기를 따라가며, 기록의 일관성과 실제 취약점 실증의 경계를 설명합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](2026/2026-11-26-jevact-decision-gate-review.md) - 에이전트의 쓰기와 업무 포기 직전에 기록 기반 코드 검사와 확률 판단을 결합하는 JevAct를 살펴보고, 반복 성공률·수정 예산·실험 조건의 의미를 구분합니다.

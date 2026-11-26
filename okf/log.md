@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-27 **Review**: [\[Repo Review\] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/205) — 검토 대기 · PR #205 · `4af6181`
 * 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/204) — 병합 완료 · PR #204 · `4b465e1`
 * 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/203) — 병합 완료 · PR #203 · `2cbc318`
 * 2026-11-26 **Review**: [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/202) — 병합 완료 · PR #202 · `4d8d0ab`
