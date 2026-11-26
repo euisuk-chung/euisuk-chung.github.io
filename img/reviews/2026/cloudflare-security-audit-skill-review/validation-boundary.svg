@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+<style>text{font-family:Apple SD Gothic Neo,Noto Sans KR,sans-serif;fill:#17304b}.h{font-size:27px;font-weight:700}.m{font-size:24px;font-weight:700}.s{font-size:21px}.arrow{stroke:#34566f;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#34566f"/></marker></defs>
+<rect width="640" height="440" rx="18" fill="#f4f7fb"/>
+<title id="title">기록 검사와 취약점 확인의 경계</title><desc id="desc">JSON 검사 코드는 입력을 읽어 필드, 상태, 경로 형태를 검사하고 PASS 또는 FAIL을 반환합니다. 실제 취약점 확인은 별도 검증자가 소스와 제한된 로컬 관찰을 대조하는 절차입니다.</desc>
+<text x="32" y="45" class="h">검사 성공은 무엇을 뜻할까요?</text>
+<rect x="30" y="68" width="580" height="145" rx="12" fill="#e1edf9"/>
+<text x="50" y="104" class="m">JSON 검사: 코드의 책임</text>
+<text x="50" y="141" class="s">입력 읽기 → 필드·상태·경로 규칙</text>
+<text x="50" y="178" class="s">일관성 검사 → PASS / FAIL · 종료 코드</text>
+<path d="M32 236H608" stroke="#8193a6" stroke-dasharray="7 6" stroke-width="2"/>
+<rect x="30" y="258" width="580" height="145" rx="12" fill="#fff0dc"/>
+<text x="50" y="294" class="m">취약점 확인: 별도 검증의 책임</text>
+<text x="50" y="331" class="s">현재 소스 경로 · 방어 제어 다시 읽기</text>
+<text x="50" y="368" class="s">격리된 관찰 결과 · 영향 · 수정안 대조</text>
+<text x="32" y="428" font-size="18">레코드에 결과가 적혀 있다는 것 ≠ 그 결과가 참이라는 것</text>
+</svg>
