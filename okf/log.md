@@ -24,7 +24,8 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-27 **Review**: [\[Repo Review\] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/205) — 검토 대기 · PR #205 · `4af6181`
+* 2026-11-27 **Review**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/206) — 검토 대기 · PR #206 · `d709c1d`
+* 2026-11-27 **Review**: [\[Repo Review\] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/205) — 병합 완료 · PR #205 · `4af6181`
 * 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/204) — 병합 완료 · PR #204 · `4b465e1`
 * 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/203) — 병합 완료 · PR #203 · `2cbc318`
 * 2026-11-26 **Review**: [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/202) — 병합 완료 · PR #202 · `4d8d0ab`
@@ -222,6 +223,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-27 **Creation**: [\[Repo Review\] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](_posts/2026/2026-11-27-cloudflare-security-audit-skill-review.md) — `94f8a26`
 * 2026-11-26 **Update**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](_posts/2026/2026-11-26-jevact-decision-gate-review.md) — `a87083e`
 * 2026-11-26 **Creation**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](_posts/2026/2026-11-26-jevact-decision-gate-review.md) — `3f5639f`
 * 2026-11-26 **Creation**: [\[Repo Review\] ClamAV — 파일을 열고, 안을 살피고, 판정을 돌려주기까지](_posts/2026/2026-11-26-clamav-review.md) — `b0d73be`
