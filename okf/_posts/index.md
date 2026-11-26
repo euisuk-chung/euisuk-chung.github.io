@@ -1,11 +1,5 @@
 # Posts
 
-<!-- okf-review-index:start -->
-## 검토 중인 리뷰
-
-* [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/204) — 검토 대기 · 에이전트의 쓰기와 업무 포기 직전에 기록 기반 코드 검사와 확률 판단을 결합하는 JevAct를 살펴보고, 반복 성공률·수정 예산·실험 조건의 의미를 구분합니다.
-<!-- okf-review-index:end -->
-
 ## 2026
 
 * [[Paper Review] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](2026/2026-11-26-jevact-decision-gate-review.md) - 에이전트의 쓰기와 업무 포기 직전에 기록 기반 코드 검사와 확률 판단을 결합하는 JevAct를 살펴보고, 반복 성공률·수정 예산·실험 조건의 의미를 구분합니다.
