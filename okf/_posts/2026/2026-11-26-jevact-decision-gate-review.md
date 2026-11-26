@@ -61,6 +61,16 @@ visual_sources:
     modifications: "PDF4쪽 그림영역만 크롭. 원본 영문 라벨·화살표·구조 보존."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/KB6rQifSWGg"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=KB6rQifSWGg">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 예약을 취소하는 에이전트가 그럴듯한 도구 호출을 만들었다고 해서, 그 예약을 지금 취소해도 되는 것은 아닙니다. 사용자가 취소를 요청했는지, 취소 조건을 만족하는지, 세부 내용을 설명하고 확인을 받았는지는 별개의 문제입니다. **JevAct는 에이전트가 제안한 행동과 실제 실행 사이에서 이 조건들을 검사하는 하네스**입니다. 하네스란 모델 주변에서 도구 호출과 실행 순서를 관리하는 장치를 뜻합니다.
