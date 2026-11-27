@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc"><title id="title">예산 변경의 의존성 전파</title><desc id="desc">예산 조건은 숙소 후보, 숙소 선택, 합계에 영향을 주고 출장지만 참조하는 기차 선택은 유지됩니다.</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs><rect width="640" height="480" fill="#f8fafc"/><style>text{font-family:Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;fill:#0f172a}.h{font-size:25px;font-weight:700}.l{font-size:21px;font-weight:700}.s{font-size:18px}.line{fill:none;stroke:#475569;stroke-width:2.5;marker-end:url(#arrow)}.box{fill:#fff;stroke:#94a3b8;stroke-width:1.5}</style>
+<text class="h" x="30" y="40">예산이 바뀌었을 때</text>
+<rect x="30" y="65" width="260" height="75" rx="12" fill="#ede9fe" stroke="#8b5cf6"/><text class="l" x="50" y="96">constraint.budget</text><text class="s" x="50" y="123">새 조건을 적용</text>
+<rect x="350" y="65" width="260" height="75" rx="12" fill="#e2e8f0" stroke="#94a3b8"/><text class="l" x="370" y="96">plan.train · 유지</text><text class="s" x="370" y="123">trip.city에만 의존</text>
+<path class="line" d="M160 140 V174"/>
+<rect x="30" y="182" width="260" height="75" rx="12" fill="#fff7ed" stroke="#fb923c"/><text class="l" x="50" y="213">hotel.candidates</text><text class="s" x="50" y="240">무효화 후 재계산</text>
+<path class="line" d="M290 219 H343"/><rect x="350" y="182" width="260" height="75" rx="12" fill="#fff7ed" stroke="#fb923c"/><text class="l" x="370" y="213">plan.hotel</text><text class="s" x="370" y="240">후보에 의존 → 재선택</text>
+<path class="line" d="M480 257 V298 H320 V326"/>
+<path class="line" d="M610 103 H626 V300 H350 V326"/>
+<rect x="170" y="334" width="300" height="75" rx="12" fill="#fff7ed" stroke="#fb923c"/><text class="l" x="190" y="365">plan.total</text><text class="s" x="190" y="392">기차 + 숙소 + 조건 반영</text>
+<text class="s" x="30" y="453">화살표: 원인이 된 값 → 그 값을 참조하는 결과</text></svg>
