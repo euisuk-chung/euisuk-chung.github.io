@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] Git Ontology Agent — 대화 중 바뀐 조건을 어디까지 다시 계산할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/209) — 검토 대기 · 요청을 Git 브랜치로 나누고 의존성에 따라 결과를 다시 계산하는 Git Ontology Agent의 상태 전이·병합·답변 출처를 코드로 살펴봅니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](2026/2026-11-27-short-context-compaction-review.md) - 긴 작업 이력과 긴 원문을 짧은 작업 문맥으로 다루는 압축·선택적 읽기 실험을 따라가며, 정확도 예외와 실제 API 비용·가상 최적화 가격의 차이를 분석합니다.

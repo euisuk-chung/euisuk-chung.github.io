@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-28 **Review**: [\[Repo Review\] Git Ontology Agent — 대화 중 바뀐 조건을 어디까지 다시 계산할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/209) — 검토 대기 · PR #209 · `4c1e626`
 * 2026-11-27 **Review**: [\[Repo Review\] 2DSD — 루프형 언어모델의 두 방향 추측 디코딩](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/208) — 병합 완료 · PR #208 · `9eb652a`
 * 2026-11-27 **Review**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/207) — 병합 완료 · PR #207 · `1c95ed8`
 * 2026-11-27 **Review**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/206) — 병합 완료 · PR #206 · `d709c1d`
