@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="490" viewBox="0 0 600 490" role="img" aria-labelledby="title desc">
+<style>text{font-family:Apple SD Gothic Neo,Noto Sans KR,sans-serif;fill:#172e46}.h{font-size:26px;font-weight:700}.m{font-size:23px;font-weight:700}.s{font-size:21px}.arrow{stroke:#496b88;stroke-width:3;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#496b88"/></marker></defs>
+<title id="title">초안이 곧 출력은 아닙니다</title><desc id="desc">초안은 얕은 반복에서 검토하고 거절된 꼬리도 남깁니다. 깊은 반복에서 승격 또는 분기한 뒤 최종 반복의 분포로 다음 토큰을 확정합니다.</desc>
+<rect width="600" height="490" rx="16" fill="#f5f8fc"/>
+<text x="26" y="40" class="h">초안이 곧 출력은 아닙니다</text>
+<rect x="24" y="61" width="552" height="76" rx="11" fill="#e4eefc"/>
+<text x="42" y="91" class="m">1 · 앵커 + 뒤의 k−1개 초안</text>
+<text x="42" y="120" class="s">기존 토큰이 계산되는 동안 다음 블록 준비</text>
+<line x1="300" y1="140" x2="300" y2="151" class="arrow"/>
+<rect x="24" y="154" width="552" height="76" rx="11" fill="#def2ed"/>
+<text x="42" y="184" class="m">2 · r₁ 검토 → 첫 거절에서 분리</text>
+<text x="42" y="213" class="s">새 앵커로 진행 · 거절된 꼬리도 최종 검증 대기</text>
+<line x1="300" y1="233" x2="300" y2="244" class="arrow"/>
+<rect x="24" y="247" width="552" height="76" rx="11" fill="#fff0dc"/>
+<text x="42" y="277" class="m">3 · r₂ 예측이 다르면 대안 준비</text>
+<text x="42" y="306" class="s">남긴 꼬리를 승격하거나 새 갈래를 생성</text>
+<line x1="300" y1="326" x2="300" y2="337" class="arrow"/>
+<rect x="24" y="340" width="552" height="76" rx="11" fill="#ece6fa"/>
+<text x="42" y="370" class="m">4 · 직전 토큰의 R 분포로 확정</text>
+<text x="42" y="399" class="s">main → frozen → fork 검증 · 맞지 않는 가지 정리</text>
+<text x="26" y="460" class="s">greedy는 일치 검사 · sampling은 거절 후 분포 보정</text>
+</svg>
