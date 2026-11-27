@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="490" viewBox="0 0 600 490" role="img" aria-labelledby="title desc">
+<style>text{font-family:Apple SD Gothic Neo,Noto Sans KR,sans-serif;fill:#172e46}.h{font-size:26px;font-weight:700}.m{font-size:23px;font-weight:700}.s{font-size:21px}.arrow{stroke:#496b88;stroke-width:3;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#496b88"/></marker></defs>
+<title id="title">입력부터 생성 결과까지</title><desc id="desc">CLI가 모델 설정을 해석하고 TwoDSD API가 worker에 RPC를 보냅니다. 전용 executor가 후보 트리와 KV를 관리해 결과를 돌려줍니다.</desc>
+<rect width="600" height="490" rx="16" fill="#f5f8fc"/>
+<text x="26" y="40" class="h">입력부터 생성 결과까지</text>
+<rect x="24" y="61" width="552" height="76" rx="11" fill="#e4eefc"/>
+<text x="42" y="91" class="m">1 · CLI + 모델 레지스트리</text>
+<text x="42" y="120" class="s">프롬프트 · target · drafter · 반복 수 해석</text>
+<line x1="300" y1="140" x2="300" y2="151" class="arrow"/>
+<rect x="24" y="154" width="552" height="76" rx="11" fill="#def2ed"/>
+<text x="42" y="184" class="m">2 · TwoDSD → worker RPC</text>
+<text x="42" y="213" class="s">vLLM은 가중치 로드 · 요청은 순서대로 처리</text>
+<line x1="300" y1="233" x2="300" y2="244" class="arrow"/>
+<rect x="24" y="247" width="552" height="76" rx="11" fill="#fff0dc"/>
+<text x="42" y="277" class="m">3 · 전용 executor + runner</text>
+<text x="42" y="306" class="s">후보 트리 · 단계 진행 · 자체 prefix/tree KV</text>
+<line x1="300" y1="326" x2="300" y2="337" class="arrow"/>
+<rect x="24" y="340" width="552" height="76" rx="11" fill="#ece6fa"/>
+<text x="42" y="370" class="m">4 · 결과와 측정값 반환</text>
+<text x="42" y="399" class="s">output_ids · prefill_seconds · decode_seconds</text>
+<text x="26" y="460" class="s">vLLM 기본 스케줄러·paged KV를 쓰는 경로와 구분</text>
+</svg>
