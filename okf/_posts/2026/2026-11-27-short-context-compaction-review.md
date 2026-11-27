@@ -52,6 +52,16 @@ visual_sources:
     caption: "Belcak 외, arXiv 2611.05306v1 Figure 3의 SAC 상태 갱신·다음 대화 부분, PDF 7쪽에서 크롭한 해설용 인용."
 ---
 
+<!-- paper-video:start -->
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 1rem;">
+  <iframe src="https://www.youtube-nocookie.com/embed/C4_IF56w1c0"
+    title="논문 리뷰 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=C4_IF56w1c0">YouTube에서 영상 보기</a></p>
+<!-- paper-video:end -->
+
 ## 논문 개요와 전체 구조
 
 코딩 에이전트가 오래 일할수록 이전 대화도 길어집니다. 그렇다면 오래 일하는 능력은 긴 대화창을 한꺼번에 읽는 능력과 같은 것일까요? **「You don't need long context」는 두 능력을 분리합니다.** 작업 파일과 필요한 원문은 바깥에 보관하고, 다음 행동에 필요한 정보만 짧은 문맥에 담으면 긴 작업을 이어갈 수 있는지 실험합니다. 여기서 문맥(context)은 모델이 한 번의 추론에서 받는 토큰 묶음입니다. 문맥 압축(compaction)은 그 묶음을 다음 실행에 필요한 메모로 바꾸는 과정입니다.
