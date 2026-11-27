@@ -24,7 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
-* 2026-11-28 **Review**: [\[Paper Review\] Skill++ — 스킬이 늘어날수록 이름과 설명을 다듬어야 하는 이유](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/210) — 검토 대기 · PR #210 · `fdafcc6`
+* 2026-11-28 **Review**: [\[Paper Review\] Skill++ — 스킬이 늘어날수록 이름과 설명을 다듬어야 하는 이유](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/210) — 병합 완료 · PR #210 · `fdafcc6`
 * 2026-11-28 **Review**: [\[Repo Review\] Git Ontology Agent — 대화 중 바뀐 조건을 어디까지 다시 계산할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/209) — 병합 완료 · PR #209 · `4c1e626`
 * 2026-11-27 **Review**: [\[Repo Review\] 2DSD — 루프형 언어모델의 두 방향 추측 디코딩](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/208) — 병합 완료 · PR #208 · `9eb652a`
 * 2026-11-27 **Review**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/207) — 병합 완료 · PR #207 · `1c95ed8`
@@ -227,6 +227,7 @@
 * 2026-09-11 **Review**: [\[Repo Review\] Superpowers 코드 리뷰: 코딩 에이전트의 개발 절차를 스킬과 파일로 구성하는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/4) — 병합 완료 · PR #4 · `0a69c78`
 * 2026-09-10 **Review**: [\[Repo Review\] llmfit 코드 리뷰: 내 하드웨어에 맞는 로컬 LLM을 어떻게 추천할까](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/3) — 병합 완료 · PR #3 · `184c1ae`
 * 2026-09-10 **Review**: [\[Paper Review\] Show-Harness 논문 리뷰: 의미 기반 행동 인터페이스로 VLM과 로봇을 연결하기](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/2) — 병합 완료 · PR #2 · `2e038f5`
+* 2026-11-28 **Creation**: [\[Paper Review\] Skill++ — 스킬이 늘어날수록 이름과 설명을 다듬어야 하는 이유](_posts/2026/2026-11-28-skill-plus-plus-review.md) — `7c7cddf`
 * 2026-11-28 **Creation**: [\[Repo Review\] Git Ontology Agent — 대화 중 바뀐 조건을 어디까지 다시 계산할까](_posts/2026/2026-11-28-git-ontology-agent-review.md) — `7b64759`
 * 2026-11-27 **Creation**: [\[Repo Review\] 2DSD — 루프형 언어모델의 두 방향 추측 디코딩](_posts/2026/2026-11-27-2dsd-review.md) — `62dd672`
 * 2026-11-27 **Update**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](_posts/2026/2026-11-27-short-context-compaction-review.md) — `3f2c9cc`
