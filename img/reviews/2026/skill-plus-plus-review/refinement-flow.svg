@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="620" viewBox="0 0 480 620" role="img" aria-labelledby="title desc">
+<title id="title">Skill++의 세 정제 과정과 두 저장소</title><desc id="desc">원본 기록을 참조하여 설명 차별화, 범위 제외, 충돌 시 이름 명확화를 수행합니다. 라이브러리에는 정제본을 저장하고 비교 기록에는 원본을 저장합니다.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#54657a"/></marker></defs>
+<rect width="480" height="620" rx="16" fill="#f7f9fc"/>
+<g font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172c45">
+<text x="22" y="37" font-size="25" font-weight="700">추가 시점에 한 번 정제</text>
+<rect x="22" y="59" width="204" height="83" rx="9" fill="#e4edfa"/><text x="36" y="88" font-size="23" font-weight="700">새 스킬</text><text x="36" y="116" font-size="20">이름·설명·본문</text>
+<rect x="250" y="59" width="208" height="83" rx="9" fill="#ede9fa"/><text x="264" y="88" font-size="23" font-weight="700">원본 기록 H</text><text x="264" y="116" font-size="20">기존 스킬 원본</text>
+<path d="M124 144V162H354V144M239 162V180" fill="none" stroke="#54657a" stroke-width="2" marker-end="url(#a)"/>
+<g fill="#fff" stroke="#9eacbd"><rect x="22" y="191" width="436" height="76" rx="9"/><rect x="22" y="281" width="436" height="76" rx="9"/><rect x="22" y="371" width="436" height="76" rx="9"/></g>
+<text x="38" y="221" font-size="23" font-weight="700">설명 차별화</text><text x="38" y="250" font-size="21">가장 비슷한 원본과 본문 기반 비교</text>
+<text x="38" y="311" font-size="23" font-weight="700">범위 제외</text><text x="38" y="340" font-size="21">관련 스킬 최대 3개의 담당 범위 제외</text>
+<text x="38" y="401" font-size="23" font-weight="700">이름 명확화</text><text x="38" y="430" font-size="21">기존 이름 머리와 충돌할 때만 변경</text>
+<path d="M240 449V470" fill="none" stroke="#54657a" stroke-width="2" marker-end="url(#a)"/>
+<rect x="22" y="483" width="436" height="58" rx="9" fill="#e4f2eb"/><text x="38" y="518" font-size="22">길이 초과 시 제외 구문부터 제거</text>
+<text x="26" y="575" font-size="22" font-weight="700">L ← 정제한 이름·설명 + 원래 본문</text><text x="26" y="605" font-size="22" font-weight="700">H ← 수정 전 원본 (다음 비교용)</text>
+</g></svg>
