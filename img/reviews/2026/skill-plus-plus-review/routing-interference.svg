@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="558" viewBox="0 0 480 558" role="img" aria-labelledby="title desc">
+<title id="title">스킬을 잊지 않았어도 선택에서 밀려납니다</title><desc id="desc">AI 논문 작성을 요청했는데 같은 이름의 생물학 논문 스킬이 새로 들어오면 혼동할 수 있습니다. 새 스킬의 이름과 설명을 구체화하면 둘을 구별할 수 있습니다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#54657a"/></marker></defs>
+<rect width="480" height="558" rx="16" fill="#f7f9fc"/>
+<g font-family="Arial, Apple SD Gothic Neo, sans-serif" fill="#172c45">
+<text x="24" y="39" font-size="24" font-weight="700">기억의 삭제보다 입구의 혼동</text>
+<rect x="24" y="65" width="432" height="66" rx="10" fill="#e4edfa"/><text x="40" y="105" font-size="23">요청: AI 논문 작성 스킬 선택</text>
+<rect x="24" y="155" width="432" height="112" rx="10" fill="#fff" stroke="#4675b8" stroke-width="2"/><text x="40" y="188" font-size="24" font-weight="700">기존 스킬</text><text x="40" y="218" font-size="22">이름·설명: 논문 작성</text><text x="40" y="248" font-size="22">본문: AI 논문을 다룸</text>
+<rect x="24" y="288" width="432" height="112" rx="10" fill="#fff" stroke="#c47b35" stroke-width="2"/><text x="40" y="321" font-size="24" font-weight="700">새로 들어온 스킬</text><text x="40" y="351" font-size="22">이름·설명: 논문 작성</text><text x="40" y="381" font-size="22">본문: 생물학 논문을 다룸</text>
+<path d="M240 404V432" stroke="#54657a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="24" y="447" width="432" height="88" rx="10" fill="#e4f2eb"/><text x="40" y="481" font-size="23" font-weight="700">Skill++: 새 이름·설명만 수정</text><text x="40" y="514" font-size="21">생물학이라는 차이와 담당 범위 명시</text>
+</g></svg>
