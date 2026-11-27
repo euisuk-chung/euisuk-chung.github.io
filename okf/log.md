@@ -24,6 +24,7 @@
 <!-- okf-metadata:start -->
 ## 리뷰 작성 및 콘텐츠 변경 기록
 
+* 2026-11-27 **Review**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/207) — 검토 대기 · PR #207 · `1c95ed8`
 * 2026-11-27 **Review**: [\[Paper Review\] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/206) — 병합 완료 · PR #206 · `d709c1d`
 * 2026-11-27 **Review**: [\[Repo Review\] security-audit-skill — AI가 찾은 취약점을 보고서에 올리기까지](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/205) — 병합 완료 · PR #205 · `4af6181`
 * 2026-11-26 **Review**: [\[Paper Review\] JevAct — 실행 직전의 판단을 검사하는 에이전트 게이트](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/204) — 병합 완료 · PR #204 · `4b465e1`
