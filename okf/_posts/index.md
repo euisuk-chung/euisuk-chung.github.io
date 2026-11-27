@@ -1,5 +1,11 @@
 # Posts
 
+<!-- okf-review-index:start -->
+## 검토 중인 리뷰
+
+* [\[Repo Review\] 2DSD — 루프형 언어모델의 두 방향 추측 디코딩](https://github.com/euisuk-chung/euisuk-chung.github.io/pull/208) — 검토 대기 · 2DSD 논문과 구현을 함께 읽으며 토큰·깊이 방향의 추측, 최종 분포 검증, KV 공유와 성능 평가 조건을 연결합니다.
+<!-- okf-review-index:end -->
+
 ## 2026
 
 * [[Paper Review] You don't need long context — 긴 작업을 짧은 문맥으로 이어가는 방법](2026/2026-11-27-short-context-compaction-review.md) - 긴 작업 이력과 긴 원문을 짧은 작업 문맥으로 다루는 압축·선택적 읽기 실험을 따라가며, 정확도 예외와 실제 API 비용·가상 최적화 가격의 차이를 분석합니다.
